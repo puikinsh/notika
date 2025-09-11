@@ -1,0 +1,76 @@
+🔍 BOOTSTRAP 3 GRID CLASSES
+=============================
+Searching for col-xs-* classes (need to become col-*):
+  Found: 655
+Searching for col-*-offset-* classes (deprecated):
+  Found: 0
+Searching for .no-gutters classes (now .g-0):
+  Found: 0
+
+🧩 DEPRECATED COMPONENT CLASSES
+=================================
+Searching for .btn-block classes (now .d-grid):
+  Found: 8
+Searching for .badge-* color classes (now .bg-*):
+  Found: 0
+Searching for .font-weight-* classes (now .fw-*):
+  Found: 0
+Searching for .media components:
+  Found: 0
+
+📚 JAVASCRIPT DEPENDENCIES
+============================
+Searching for jQuery usage ($()):
+  Found: 3
+Searching for Bootstrap 3 modal JS calls:
+  Found: 0
+Searching for Bootstrap 3 tooltip JS calls:
+  Found: 0
+
+📄 DETAILED FILE BREAKDOWN
+============================
+Files with col-xs-* classes:
+accordion.html
+alert.html
+analytics.html
+animations.html
+area-charts.html
+bar-charts.html
+buttons.html
+code-editor.html
+color.html
+compose-email.html
+contact.html
+data-map.html
+data-table.html
+dialog.html
+dropdown.html
+flot-charts.html
+form-components.html
+form-elements.html
+form-examples.html
+google-map.html
+image-cropper.html
+inbox.html
+index-2.html
+index-3.html
+index-4.html
+index.html
+invoice.html
+line-charts.html
+modals.html
+normal-table.html
+notification.html
+popovers.html
+tabs.html
+tooltips.html
+typography.html
+view-email.html
+widgets.html
+wizard.html
+
+Files with .btn-block classes:
+index-2.html
+index-3.html
+index-4.html
+index.html
