@@ -1,0 +1,7 @@
+<svg width="100" height="32" viewBox="0 0 100 32" xmlns="http://www.w3.org/2000/svg">
+  <!-- Simple modern text logo -->
+  <text x="0" y="22" fill="#00c292" font-family="Arial, sans-serif" font-size="24" font-weight="700">Notika</text>
+  
+  <!-- Clean accent dot -->
+  <circle cx="90" cy="16" r="3" fill="#ff5722"/>
+</svg>

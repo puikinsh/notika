@@ -21,7 +21,10 @@
                 <!-- Logo Section -->
                 <div class="col-lg-4 col-md-6 col-8">
                     <div class="notika-brand">
-                        <a href="#"><img src="notika/green-horizotal/img/logo/logo.png" alt="Notika" /></a>
+                        <a href="#">
+                            <img src="notika/green-horizotal/img/logo/notika-logo-horizontal.svg" alt="Notika Admin Template" class="logo-light" />
+                            <img src="notika/green-horizotal/img/logo/notika-logo-dark.svg" alt="Notika Admin Template" class="logo-dark" />
+                        </a>
                     </div>
                 </div>
                 
@@ -161,29 +164,58 @@
 
     <!-- Demo content to test positioning -->
     <div class="container mt-5">
-        <div class="alert alert-info">
-            <h4>🧪 Clean Header Test</h4>
+        <div class="alert alert-success">
+            <h4>🎨 New Notika Logo & Clean Header Test</h4>
             <p><strong>What was fixed:</strong></p>
             <ul class="mb-0">
+                <li>✅ <strong>NEW LOGO:</strong> Visible on white background with brand colors</li>
                 <li>✅ Removed conflicting animations and transforms</li>
                 <li>✅ Let Bootstrap 5 handle all dropdown positioning</li>
                 <li>✅ Used `dropdown-menu-end` for proper right alignment</li>
                 <li>✅ Simplified HTML structure with clean dropdown classes</li>
                 <li>✅ Removed custom positioning that caused jumping</li>
-                <li>✅ Changed buttons from onclick to proper anchor links</li>
             </ul>
         </div>
         
-        <div class="card">
-            <div class="card-body">
-                <h5>Test Instructions</h5>
-                <ol>
-                    <li>Click each dropdown icon in the header</li>
-                    <li>Verify dropdowns open smoothly without jumping</li>
-                    <li>Check that dropdowns stay in place once opened</li>
-                    <li>Test search input focus functionality</li>
-                    <li>Verify hover effects work smoothly</li>
-                </ol>
+        <div class="row">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-body">
+                        <h5>Header Test Instructions</h5>
+                        <ol>
+                            <li><strong>Logo Test:</strong> Logo should be clearly visible (green/dark colors)</li>
+                            <li><strong>Dropdown Test:</strong> Click each dropdown icon - no jumping!</li>
+                            <li><strong>Search Test:</strong> Clean search input with auto-focus</li>
+                            <li><strong>Mobile Test:</strong> Resize to see mobile logo variant</li>
+                            <li><strong>Hover Test:</strong> Smooth icon hover effects</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header">
+                        <h6>Logo Variants Created</h6>
+                    </div>
+                    <div class="card-body text-center">
+                        <div class="mb-3">
+                            <img src="notika/green-horizotal/img/logo/notika-logo-horizontal.svg" alt="Horizontal" style="max-width: 100%;">
+                            <small class="d-block text-muted">Horizontal (Default)</small>
+                        </div>
+                        <div class="mb-3 p-3" style="background: #343a40; border-radius: 8px;">
+                            <img src="notika/green-horizotal/img/logo/notika-logo-dark.svg" alt="Dark Theme" style="max-width: 100%;">
+                            <small class="d-block text-light">Dark Theme</small>
+                        </div>
+                        <div class="mb-3">
+                            <img src="notika/green-horizotal/img/logo/notika-logo-mobile.svg" alt="Mobile" width="32" height="32">
+                            <small class="d-block text-muted">Mobile Compact</small>
+                        </div>
+                        <div>
+                            <img src="notika/green-horizotal/img/logo/notika-logo-simple.svg" alt="Simple" style="max-width: 100%;">
+                            <small class="d-block text-muted">Simple Text</small>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

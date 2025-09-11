@@ -11,6 +11,40 @@
 .notika-brand img {
     height: 40px;
     width: auto;
+    transition: all 0.2s ease;
+}
+
+.notika-brand:hover img {
+    transform: scale(1.02);
+}
+
+/* Logo variants for different themes */
+.notika-brand .logo-light {
+    display: block;
+}
+
+.notika-brand .logo-dark {
+    display: none;
+}
+
+/* Dark theme logo switching */
+@media (prefers-color-scheme: dark) {
+    .notika-brand .logo-light {
+        display: none;
+    }
+    
+    .notika-brand .logo-dark {
+        display: block;
+    }
+}
+
+/* Custom dark mode class */
+.dark-theme .notika-brand .logo-light {
+    display: none;
+}
+
+.dark-theme .notika-brand .logo-dark {
+    display: block;
 }
 
 .notika-nav {
@@ -237,7 +271,7 @@
     border-radius: 50%;
 }
 
-/* Mobile Responsive */
+/* Mobile Responsive with Logo Variants */
 @media (max-width: 768px) {
     .notika-nav {
         gap: 8px;
@@ -280,5 +314,26 @@
         font-size: 10px;
         top: 6px;
         right: 6px;
+    }
+    
+    /* Switch to mobile logo on small screens */
+    .notika-brand .logo-light,
+    .notika-brand .logo-dark {
+        display: none;
+    }
+    
+    .notika-brand {
+        background-image: url('../img/logo/notika-logo-mobile.svg');
+        background-repeat: no-repeat;
+        background-size: 32px 32px;
+        width: 32px;
+        height: 32px;
+    }
+    
+    .notika-brand a {
+        display: block;
+        width: 32px;
+        height: 32px;
+        text-indent: -9999px;
     }
 }
