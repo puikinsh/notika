@@ -56,56 +56,10 @@
     <link rel="stylesheet" href="css/responsive.css">
     <!-- Modern Header CSS
 		============================================ -->
-    <link rel="stylesheet" href="css/header-modern.css">
-    <!-- Bootstrap 5 navbar fix CSS (legacy)
-		============================================ -->
-    <style>
-        /* Bootstrap 5 Header Navigation Fix */
-        .header-top-menu .nav.navbar-nav.notika-top-nav {
-            display: flex !important;
-            flex-direction: row !important;
-            align-items: center !important;
-            justify-content: flex-end !important;
-            margin: 0 !important;
-            padding: 0 !important;
-            list-style: none !important;
-            flex-wrap: nowrap !important;
-        }
-        
-        .header-top-menu .nav.navbar-nav.notika-top-nav .nav-item {
-            display: flex !important;
-            align-items: center !important;
-            margin-left: 10px !important;
-        }
-        
-        .header-top-menu .nav.navbar-nav.notika-top-nav .nav-link {
-            display: flex !important;
-            align-items: center !important;
-            padding: 0.5rem 0.75rem !important;
-            text-decoration: none !important;
-        }
-        
-        .header-top-menu .nav.navbar-nav.notika-top-nav .dropdown-menu {
-            position: absolute !important;
-            top: 100% !important;
-            left: 0 !important;
-            z-index: 1000 !important;
-        }
-        
-        .header-top-area .row {
-            align-items: center !important;
-        }
-        
-        .header-top-menu {
-            display: flex !important;
-            justify-content: flex-end !important;
-            align-items: center !important;
-        }
-    </style>
+    <link rel="stylesheet" href="css/header-modern-clean.css">
     <!-- modernizr JS
 		============================================ -->
     <script src="js/vendor/modernizr-2.8.3.min.js"></script>
-    <link rel="stylesheet" href="css/bootstrap5-navbar-fix.css">
 </head>
 
 <body>
@@ -128,11 +82,11 @@
                     <div class="notika-nav justify-content-end">
                         
                         <!-- Search -->
-                        <div class="notika-nav-item dropdown">
-                            <button class="notika-nav-link" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <div class="dropdown">
+                            <button class="notika-nav-link" type="button" data-bs-toggle="dropdown" data-bs-auto-close="outside">
                                 <i class="notika-icon notika-search"></i>
                             </button>
-                            <div class="dropdown-menu notika-dropdown search-dropdown">
+                            <div class="dropdown-menu dropdown-menu-end notika-dropdown search-dropdown">
                                 <div class="search-input-group">
                                     <input type="text" placeholder="Search anything..." class="form-control">
                                     <i class="notika-icon notika-search search-icon"></i>
@@ -141,37 +95,37 @@
                         </div>
                         
                         <!-- Messages -->
-                        <div class="notika-nav-item dropdown">
-                            <button class="notika-nav-link" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <div class="dropdown">
+                            <button class="notika-nav-link" type="button" data-bs-toggle="dropdown">
                                 <i class="notika-icon notika-mail"></i>
                                 <span class="notika-badge">5</span>
                             </button>
-                            <div class="dropdown-menu notika-dropdown">
+                            <div class="dropdown-menu dropdown-menu-end notika-dropdown">
                                 <div class="notika-dropdown-header">
                                     Messages
                                 </div>
                                 <div class="notika-dropdown-body">
-                                    <button class="notika-dropdown-item" onclick="location.href='view-email.html'">
+                                    <a class="notika-dropdown-item" href="view-email.html">
                                         <img src="img/post/1.jpg" alt="User">
                                         <div class="notika-dropdown-content">
                                             <h6>David Belle</h6>
                                             <p>Hey! How's the project going? Need any help?</p>
                                         </div>
-                                    </button>
-                                    <button class="notika-dropdown-item" onclick="location.href='view-email.html'">
+                                    </a>
+                                    <a class="notika-dropdown-item" href="view-email.html">
                                         <img src="img/post/2.jpg" alt="User">
                                         <div class="notika-dropdown-content">
                                             <h6>Sarah Wilson</h6>
                                             <p>The new design looks amazing!</p>
                                         </div>
-                                    </button>
-                                    <button class="notika-dropdown-item" onclick="location.href='view-email.html'">
+                                    </a>
+                                    <a class="notika-dropdown-item" href="view-email.html">
                                         <img src="img/post/4.jpg" alt="User">
                                         <div class="notika-dropdown-content">
                                             <h6>Mike Johnson</h6>
                                             <p>Thanks for the quick dashboard fix!</p>
                                         </div>
-                                    </button>
+                                    </a>
                                 </div>
                                 <div class="notika-dropdown-footer">
                                     <a href="inbox.html">View All Messages</a>
@@ -180,17 +134,17 @@
                         </div>
                         
                         <!-- Notifications -->
-                        <div class="notika-nav-item dropdown">
-                            <button class="notika-nav-link" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <div class="dropdown">
+                            <button class="notika-nav-link" type="button" data-bs-toggle="dropdown">
                                 <i class="notika-icon notika-alarm"></i>
-                                <span class="notika-badge pulse">3</span>
+                                <span class="notika-badge">3</span>
                             </button>
-                            <div class="dropdown-menu notika-dropdown">
+                            <div class="dropdown-menu dropdown-menu-end notika-dropdown">
                                 <div class="notika-dropdown-header">
                                     Notifications
                                 </div>
                                 <div class="notika-dropdown-body">
-                                    <button class="notika-dropdown-item" onclick="location.href='notification.html'">
+                                    <a class="notika-dropdown-item" href="notification.html">
                                         <div class="bg-success text-white rounded-circle d-flex align-items-center justify-content-center" style="width: 35px; height: 35px; margin-right: 12px;">
                                             <i class="notika-icon notika-success" style="font-size: 14px;"></i>
                                         </div>
@@ -198,8 +152,8 @@
                                             <h6>Task Completed</h6>
                                             <p>Bootstrap 5 migration completed successfully.</p>
                                         </div>
-                                    </button>
-                                    <button class="notika-dropdown-item" onclick="location.href='notification.html'">
+                                    </a>
+                                    <a class="notika-dropdown-item" href="notification.html">
                                         <div class="bg-warning text-white rounded-circle d-flex align-items-center justify-content-center" style="width: 35px; height: 35px; margin-right: 12px;">
                                             <i class="notika-icon notika-alarm" style="font-size: 14px;"></i>
                                         </div>
@@ -207,8 +161,8 @@
                                             <h6>Server Alert</h6>
                                             <p>Response time higher than usual.</p>
                                         </div>
-                                    </button>
-                                    <button class="notika-dropdown-item" onclick="location.href='notification.html'">
+                                    </a>
+                                    <a class="notika-dropdown-item" href="notification.html">
                                         <div class="bg-info text-white rounded-circle d-flex align-items-center justify-content-center" style="width: 35px; height: 35px; margin-right: 12px;">
                                             <i class="notika-icon notika-chat" style="font-size: 14px;"></i>
                                         </div>
@@ -216,7 +170,7 @@
                                             <h6>New Message</h6>
                                             <p>You have 2 unread messages.</p>
                                         </div>
-                                    </button>
+                                    </a>
                                 </div>
                                 <div class="notika-dropdown-footer">
                                     <a href="notification.html">View All Notifications</a>
@@ -225,12 +179,12 @@
                         </div>
                         
                         <!-- Tasks -->
-                        <div class="notika-nav-item dropdown">
-                            <button class="notika-nav-link" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <div class="dropdown">
+                            <button class="notika-nav-link" type="button" data-bs-toggle="dropdown">
                                 <i class="notika-icon notika-menus"></i>
                                 <span class="notika-badge">2</span>
                             </button>
-                            <div class="dropdown-menu notika-dropdown" style="min-width: 280px;">
+                            <div class="dropdown-menu dropdown-menu-end notika-dropdown" style="min-width: 280px;">
                                 <div class="notika-dropdown-header">
                                     Active Tasks
                                 </div>
@@ -270,16 +224,16 @@
                         </div>
                         
                         <!-- Chat -->
-                        <div class="notika-nav-item dropdown">
-                            <button class="notika-nav-link" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <div class="dropdown">
+                            <button class="notika-nav-link" type="button" data-bs-toggle="dropdown">
                                 <i class="notika-icon notika-chat"></i>
                             </button>
-                            <div class="dropdown-menu notika-dropdown">
+                            <div class="dropdown-menu dropdown-menu-end notika-dropdown">
                                 <div class="notika-dropdown-header">
                                     Team Chat
                                 </div>
                                 <div class="notika-dropdown-body">
-                                    <button class="notika-dropdown-item" onclick="location.href='compose-email.html'">
+                                    <a class="notika-dropdown-item" href="compose-email.html">
                                         <div style="position: relative;">
                                             <img src="img/post/1.jpg" alt="User">
                                             <div class="chat-status"></div>
@@ -288,8 +242,8 @@
                                             <h6>John Doe</h6>
                                             <p>Online - Available</p>
                                         </div>
-                                    </button>
-                                    <button class="notika-dropdown-item" onclick="location.href='compose-email.html'">
+                                    </a>
+                                    <a class="notika-dropdown-item" href="compose-email.html">
                                         <div style="position: relative;">
                                             <img src="img/post/2.jpg" alt="User">
                                         </div>
@@ -297,8 +251,8 @@
                                             <h6>Sarah Smith</h6>
                                             <p>Last seen 2 hours ago</p>
                                         </div>
-                                    </button>
-                                    <button class="notika-dropdown-item" onclick="location.href='compose-email.html'">
+                                    </a>
+                                    <a class="notika-dropdown-item" href="compose-email.html">
                                         <div style="position: relative;">
                                             <img src="img/post/4.jpg" alt="User">
                                         </div>
@@ -306,7 +260,7 @@
                                             <h6>Mike Johnson</h6>
                                             <p>Away - Back in 10 min</p>
                                         </div>
-                                    </button>
+                                    </a>
                                 </div>
                                 <div class="notika-dropdown-footer">
                                     <a href="compose-email.html">Open Chat</a>
@@ -1162,58 +1116,28 @@
 		============================================ -->
     <script src="js/tawk-chat.js"></script>
     
-    <!-- Modern Header JavaScript -->
+    <!-- Clean Header JavaScript -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // Auto-focus search input when dropdown opens
-            document.querySelectorAll('[data-bs-toggle="dropdown"]').forEach(trigger => {
-                trigger.addEventListener('shown.bs.dropdown', function() {
-                    const searchInput = this.nextElementSibling.querySelector('input[type="text"]');
-                    if (searchInput) {
-                        setTimeout(() => searchInput.focus(), 100);
-                    }
-                });
-            });
-            
-            // Enhanced search functionality
+            // Simple search focus functionality
             const searchInput = document.querySelector('.search-dropdown input');
             if (searchInput) {
+                // Focus search when dropdown opens
+                const searchTrigger = searchInput.closest('.dropdown').querySelector('[data-bs-toggle="dropdown"]');
+                if (searchTrigger) {
+                    searchTrigger.addEventListener('shown.bs.dropdown', function() {
+                        setTimeout(() => searchInput.focus(), 150);
+                    });
+                }
+                
+                // Basic search functionality
                 searchInput.addEventListener('keypress', function(e) {
-                    if (e.key === 'Enter') {
-                        // Simulate search action
+                    if (e.key === 'Enter' && this.value.trim()) {
                         console.log('Searching for:', this.value);
                         // Add your search logic here
                     }
                 });
-                
-                // Clear search on escape
-                searchInput.addEventListener('keydown', function(e) {
-                    if (e.key === 'Escape') {
-                        this.value = '';
-                        this.blur();
-                    }
-                });
             }
-            
-            // Add keyboard navigation for dropdown items
-            document.querySelectorAll('.notika-dropdown').forEach(dropdown => {
-                dropdown.addEventListener('keydown', function(e) {
-                    if (e.key === 'Escape') {
-                        const trigger = this.previousElementSibling;
-                        bootstrap.Dropdown.getInstance(trigger).hide();
-                        trigger.focus();
-                    }
-                });
-            });
-            
-            // Add notification badge pulse animation
-            document.querySelectorAll('.notika-badge.pulse').forEach(badge => {
-                // Add subtle pulse animation to notification badges
-                setInterval(() => {
-                    badge.style.animation = 'none';
-                    setTimeout(() => badge.style.animation = 'pulse 2s infinite', 10);
-                }, 5000);
-            });
         });
     </script>
 </body>

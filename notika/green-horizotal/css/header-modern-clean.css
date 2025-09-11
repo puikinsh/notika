@@ -1,22 +1,16 @@
-/* Modern Bootstrap 5 Header Styles for Notika */
+/* Clean Modern Bootstrap 5 Header Styles for Notika */
+/* Simple, stable implementation without positioning conflicts */
 
 .notika-header {
     background: #fff;
     padding: 15px 0;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    position: relative;
-    z-index: 1030;
     border-bottom: 1px solid #e9ecef;
 }
 
 .notika-brand img {
     height: 40px;
     width: auto;
-    transition: all 0.2s ease;
-}
-
-.notika-brand:hover img {
-    transform: scale(1.05);
 }
 
 .notika-nav {
@@ -26,10 +20,7 @@
     margin: 0;
     padding: 0;
     list-style: none;
-}
-
-.notika-nav-item {
-    position: relative;
+    justify-content: flex-end;
 }
 
 .notika-nav-link {
@@ -51,17 +42,11 @@
 .notika-nav-link:hover {
     background: #f8f9fa;
     color: #00c292;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
 .notika-nav-link:focus {
     box-shadow: 0 0 0 3px rgba(0, 194, 146, 0.2);
     outline: none;
-}
-
-.notika-nav-link:active {
-    transform: translateY(0);
 }
 
 /* Badge for notifications */
@@ -80,18 +65,16 @@
     font-size: 11px;
     font-weight: 600;
     line-height: 1;
-    box-shadow: 0 2px 6px rgba(255, 87, 34, 0.3);
 }
 
-/* Modern Dropdown Styles */
+/* Simple Modern Dropdown Styles - Let Bootstrap handle positioning */
 .notika-dropdown {
-    border: none;
     border-radius: 12px;
     box-shadow: 0 10px 40px rgba(0,0,0,0.15);
     padding: 0;
     overflow: hidden;
     min-width: 320px;
-    /* Let Bootstrap handle positioning */
+    border: none;
 }
 
 .notika-dropdown-header {
@@ -109,26 +92,13 @@
     overflow-y: auto;
 }
 
-.notika-dropdown-body::-webkit-scrollbar {
-    width: 4px;
-}
-
-.notika-dropdown-body::-webkit-scrollbar-track {
-    background: #f1f1f1;
-}
-
-.notika-dropdown-body::-webkit-scrollbar-thumb {
-    background: #00c292;
-    border-radius: 4px;
-}
-
 .notika-dropdown-item {
     padding: 12px 20px;
     display: flex;
     align-items: center;
     text-decoration: none;
     color: #333;
-    transition: all 0.2s ease;
+    transition: background-color 0.15s ease;
     border: none;
     width: 100%;
     background: none;
@@ -139,7 +109,6 @@
 .notika-dropdown-item:hover {
     background: #f8f9fa;
     color: #00c292;
-    /* Remove transform that causes jumping */
 }
 
 .notika-dropdown-item img {
@@ -181,7 +150,6 @@
     text-decoration: none;
     font-weight: 500;
     font-size: 14px;
-    transition: color 0.2s ease;
 }
 
 .notika-dropdown-footer a:hover {
@@ -189,7 +157,7 @@
     text-decoration: underline;
 }
 
-/* Search Dropdown Special Styling */
+/* Search Dropdown */
 .search-dropdown {
     min-width: 300px;
     padding: 16px;
@@ -205,7 +173,7 @@
     padding: 12px 40px 12px 16px;
     font-size: 14px;
     width: 100%;
-    transition: all 0.2s ease;
+    transition: border-color 0.2s ease;
 }
 
 .search-input-group input:focus {
@@ -224,7 +192,7 @@
     pointer-events: none;
 }
 
-/* Tasks Progress Styling */
+/* Tasks Progress */
 .task-progress {
     margin: 8px 0 4px 0;
 }
@@ -239,7 +207,6 @@
 .task-progress .progress-bar {
     border-radius: 3px;
     background: linear-gradient(90deg, #00c292, #00a085);
-    transition: width 0.3s ease;
 }
 
 .task-item {
@@ -258,7 +225,7 @@
     font-weight: 500;
 }
 
-/* Chat Status Indicator */
+/* Chat Status */
 .chat-status {
     position: absolute;
     bottom: 2px;
@@ -268,15 +235,6 @@
     background: #4caf50;
     border: 2px solid white;
     border-radius: 50%;
-    box-shadow: 0 0 0 1px rgba(76, 175, 80, 0.3);
-}
-
-.chat-status.offline {
-    background: #9e9e9e;
-}
-
-.chat-status.away {
-    background: #ff9800;
 }
 
 /* Mobile Responsive */
@@ -322,56 +280,5 @@
         font-size: 10px;
         top: 6px;
         right: 6px;
-    }
-}
-
-/* Pulse animation for notification badges */
-@keyframes pulse {
-    0% { 
-        transform: scale(1);
-        box-shadow: 0 2px 6px rgba(255, 87, 34, 0.3);
-    }
-    50% { 
-        transform: scale(1.1);
-        box-shadow: 0 2px 12px rgba(255, 87, 34, 0.5);
-    }
-    100% { 
-        transform: scale(1);
-        box-shadow: 0 2px 6px rgba(255, 87, 34, 0.3);
-    }
-}
-
-.notika-badge.pulse {
-    animation: pulse 2s infinite;
-}
-
-/* Dark mode support */
-@media (prefers-color-scheme: dark) {
-    .notika-header {
-        background: #343a40;
-        border-bottom-color: #495057;
-    }
-    
-    .notika-nav-link {
-        color: #adb5bd;
-    }
-    
-    .notika-nav-link:hover {
-        background: #495057;
-        color: #00c292;
-    }
-    
-    .notika-dropdown {
-        background: #343a40;
-        border: 1px solid #495057;
-    }
-    
-    .notika-dropdown-item {
-        color: #adb5bd;
-    }
-    
-    .notika-dropdown-item:hover {
-        background: #495057;
-        color: #00c292;
     }
 }
