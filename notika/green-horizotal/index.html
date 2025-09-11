@@ -54,9 +54,55 @@
     <!-- responsive CSS
 		============================================ -->
     <link rel="stylesheet" href="css/responsive.css">
+    <!-- Bootstrap 5 navbar fix CSS
+		============================================ -->
+    <style>
+        /* Bootstrap 5 Header Navigation Fix */
+        .header-top-menu .nav.navbar-nav.notika-top-nav {
+            display: flex !important;
+            flex-direction: row !important;
+            align-items: center !important;
+            justify-content: flex-end !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            list-style: none !important;
+            flex-wrap: nowrap !important;
+        }
+        
+        .header-top-menu .nav.navbar-nav.notika-top-nav .nav-item {
+            display: flex !important;
+            align-items: center !important;
+            margin-left: 10px !important;
+        }
+        
+        .header-top-menu .nav.navbar-nav.notika-top-nav .nav-link {
+            display: flex !important;
+            align-items: center !important;
+            padding: 0.5rem 0.75rem !important;
+            text-decoration: none !important;
+        }
+        
+        .header-top-menu .nav.navbar-nav.notika-top-nav .dropdown-menu {
+            position: absolute !important;
+            top: 100% !important;
+            left: 0 !important;
+            z-index: 1000 !important;
+        }
+        
+        .header-top-area .row {
+            align-items: center !important;
+        }
+        
+        .header-top-menu {
+            display: flex !important;
+            justify-content: flex-end !important;
+            align-items: center !important;
+        }
+    </style>
     <!-- modernizr JS
 		============================================ -->
     <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap5-navbar-fix.css">
 </head>
 
 <body>
