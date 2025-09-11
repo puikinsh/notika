@@ -1,0 +1,285 @@
+/* Consistent Widget System - All Headers Full Width, Uniform Spacing */
+
+:root {
+    --widget-padding: 24px;
+    --widget-header-padding: 20px 24px;
+    --widget-content-padding: 24px;
+    --widget-radius: 12px;
+    --widget-header-bg: #f8f9fa;
+    --widget-border: 1px solid rgba(0,0,0,0.06);
+    --widget-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+
+/* Reset all widget containers to consistent base */
+.wb-traffic-inner,
+.sale-statistic-inner,
+.statistic-right-area,
+.email-statis-inner,
+.recent-post-wrapper,
+.recent-items-wp,
+.realtime-wrap,
+.add-todo-list,
+.notika-chat-list {
+    background: #fff;
+    border-radius: var(--widget-radius);
+    box-shadow: var(--widget-shadow);
+    border: var(--widget-border);
+    padding: 0;
+    margin-bottom: 0;
+    overflow: hidden;
+    transition: all 0.2s ease;
+}
+
+.wb-traffic-inner:hover,
+.sale-statistic-inner:hover,
+.statistic-right-area:hover,
+.email-statis-inner:hover,
+.recent-post-wrapper:hover,
+.recent-items-wp:hover,
+.realtime-wrap:hover,
+.add-todo-list:hover,
+.notika-chat-list:hover {
+    box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+    transform: translateY(-2px);
+}
+
+/* FORCE ALL HEADERS TO FULL WIDTH - CONSISTENT STRUCTURE */
+
+/* Method 1: Reset all existing header containers */
+.curved-inner-pro,
+.email-ctn-round,
+.recent-post-ctn,
+.rc-it-ltd,
+.realtime-ctn {
+    padding: 0;
+    margin: 0;
+    background: none;
+}
+
+/* Method 2: Create consistent full-width headers */
+.curved-ctn,
+.past-day-statis,
+.email-rdn-hd,
+.recent-post-title,
+.recent-items-title,
+.realtime-title {
+    width: 100% !important;
+    padding: var(--widget-header-padding) !important;
+    background: var(--widget-header-bg) !important;
+    border-bottom: 1px solid #e9ecef !important;
+    margin: 0 !important;
+}
+
+/* Consistent header typography */
+.curved-ctn h2,
+.past-day-statis h2,
+.email-rdn-hd h2,
+.recent-post-title h2,
+.recent-items-title h2,
+.realtime-title h2 {
+    font-size: 18px !important;
+    font-weight: 600 !important;
+    color: #2c3e50 !important;
+    margin: 0 0 8px 0 !important;
+    line-height: 1.3 !important;
+}
+
+.curved-ctn p,
+.past-day-statis p {
+    font-size: 14px !important;
+    color: #6c757d !important;
+    margin: 0 !important;
+    line-height: 1.4 !important;
+}
+
+/* Widget content areas - consistent padding */
+.flot-chart-sts,
+.flot-chart,
+.email-statis-wrap,
+.past-statistic-an,
+.recent-post-items,
+.recent-items-inn,
+.realtime-visitor-ctn,
+.realtime-map,
+.realtime-country-ctn,
+.card-box,
+.todoapp,
+.chat-conversation,
+.widgets-chat-scrollbar {
+    padding: var(--widget-content-padding);
+    margin: 0;
+}
+
+/* Statistics widgets special handling */
+.website-traffic-ctn {
+    padding: var(--widget-header-padding);
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    text-align: center;
+    border-bottom: none;
+}
+
+.website-traffic-ctn h2 {
+    font-size: 28px;
+    font-weight: 700;
+    color: white;
+    margin: 0 0 4px 0;
+}
+
+.website-traffic-ctn p {
+    font-size: 13px;
+    color: rgba(255,255,255,0.9);
+    margin: 0;
+}
+
+/* Chart areas consistent */
+.sparkline-bar-stats1,
+.sparkline-bar-stats2, 
+.sparkline-bar-stats3,
+.sparkline-bar-stats4 {
+    padding: 16px var(--widget-content-padding);
+    text-align: center;
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Table styling consistency */
+.table-inner {
+    margin: 0;
+}
+
+.table-inner th {
+    background: #f8f9fa;
+    border-bottom: 2px solid #dee2e6;
+    padding: 12px 16px;
+    font-weight: 600;
+    font-size: 13px;
+    color: #495057;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.table-inner td {
+    padding: 12px 16px;
+    border-bottom: 1px solid #f8f9fa;
+    font-size: 14px;
+    vertical-align: middle;
+}
+
+.table-inner tbody tr:hover {
+    background: #f8f9fa;
+}
+
+/* List items consistency */
+.recent-post-signle,
+.conversation-list li {
+    padding: 16px var(--widget-content-padding);
+    border-bottom: 1px solid #f8f9fa;
+    transition: all 0.15s ease;
+}
+
+.recent-post-signle:hover,
+.conversation-list li:hover {
+    background: #f8f9fa;
+}
+
+.recent-post-signle:last-child,
+.conversation-list li:last-child {
+    border-bottom: none;
+}
+
+/* Remove inconsistent spacing classes */
+.sm-res-mg-t-30,
+.tb-res-mg-t-30,
+.dk-res-mg-t-30,
+.sm-res-mg-t-0,
+.mg-tb-30,
+.mg-t-30,
+.tb-res-ds-n,
+.dk-res-ds,
+.sm-res-ds-n {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* Progress bars modern styling */
+.progress {
+    height: 8px;
+    border-radius: 4px;
+    background: #f1f2f6;
+    overflow: hidden;
+    margin: 8px 0;
+}
+
+.progress-bar {
+    background: linear-gradient(90deg, #00c292, #00a085);
+    border-radius: 4px;
+}
+
+/* Forms inside widgets */
+.form-control {
+    border: 2px solid #e9ecef;
+    border-radius: 6px;
+    padding: 10px 12px;
+    font-size: 14px;
+}
+
+.form-control:focus {
+    border-color: #00c292;
+    box-shadow: 0 0 0 3px rgba(0, 194, 146, 0.1);
+}
+
+/* Buttons consistency */
+.btn {
+    border-radius: 6px;
+    font-weight: 500;
+    padding: 8px 16px;
+    font-size: 14px;
+}
+
+.btn-primary {
+    background: #00c292;
+    border-color: #00c292;
+}
+
+.btn-primary:hover {
+    background: #00a085;
+    border-color: #00a085;
+    transform: translateY(-1px);
+}
+
+/* Mobile responsive widgets */
+@media (max-width: 768px) {
+    :root {
+        --widget-padding: 16px;
+        --widget-header-padding: 16px;
+        --widget-content-padding: 16px;
+    }
+    
+    .curved-ctn h2,
+    .past-day-statis h2,
+    .email-rdn-hd h2,
+    .recent-post-title h2,
+    .recent-items-title h2,
+    .realtime-title h2 {
+        font-size: 16px !important;
+    }
+    
+    .website-traffic-ctn h2 {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 576px) {
+    :root {
+        --widget-padding: 12px;
+        --widget-header-padding: 12px;
+        --widget-content-padding: 12px;
+    }
+    
+    .website-traffic-ctn h2 {
+        font-size: 20px;
+    }
+}
