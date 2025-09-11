@@ -80,16 +80,31 @@
     font-size: 18px !important;
     font-weight: 600 !important;
     color: #2c3e50 !important;
-    margin: 0 0 8px 0 !important;
+    margin: 0 !important;
     line-height: 1.3 !important;
 }
 
+/* Headers with descriptions */
 .curved-ctn p,
 .past-day-statis p {
     font-size: 14px !important;
     color: #6c757d !important;
-    margin: 0 !important;
+    margin: 8px 0 0 0 !important;
     line-height: 1.4 !important;
+}
+
+/* Headers without descriptions - adjust padding to remove extra space */
+.email-rdn-hd,
+.recent-post-title,
+.recent-items-title,
+.realtime-title {
+    padding: 16px 24px 16px 24px !important; /* Equal top/bottom padding */
+}
+
+/* Headers with descriptions - keep extra bottom space */
+.curved-ctn,
+.past-day-statis {
+    padding: 20px 24px 20px 24px !important; /* More space for description */
 }
 
 /* Widget content areas - consistent padding */

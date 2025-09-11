@@ -6,7 +6,7 @@ export default defineConfig({
   // Root directory where index.html is located
   root: './notika/green-horizotal',
   
-  // Build configuration
+  // Build configuration for Vite 7.x
   build: {
     outDir: '../../dist',
     emptyOutDir: true,
@@ -24,13 +24,15 @@ export default defineConfig({
         manualChunks: {
           vendor: ['chart.js', 'swiper', 'bootstrap'],
           charts: ['chart.js'],
-          ui: ['tom-select', 'flatpickr', 'nouidslider']
+          ui: ['tom-select', 'flatpickr', 'nouislider'],
+          utils: ['dayjs', 'aos']
         }
       }
     },
-    target: 'es2020',
-    minify: 'terser',
-    sourcemap: true
+    target: 'es2022',
+    minify: 'esbuild',
+    sourcemap: true,
+    reportCompressedSize: true
   },
   
   // Development server
