@@ -12,11 +12,10 @@
     padding: 0;
     border-bottom: 1px solid #e9ecef;
     box-shadow: 0 2px 4px rgba(0,0,0,0.04);
-    margin-bottom: var(--notika-spacing-md); /* Smaller, consistent gap */
+    margin-bottom: var(--notika-spacing-md); /* Keep perfect 24px gap after navigation */
 }
 
-/* Reset all inconsistent margins and apply uniform spacing */
-.notika-status-area,
+/* Smaller gaps between content sections (not from navigation) */
 .sale-statistic-area,
 .notika-email-post-area,
 .realtime-statistic-area,
@@ -28,7 +27,14 @@
 .mg-t-30 {
     margin-top: 0 !important;
     padding-top: 0 !important;
-    margin-bottom: var(--notika-spacing-md) !important; /* Consistent 24px gaps */
+    margin-bottom: var(--notika-spacing-sm) !important; /* Smaller 16px gaps between content */
+}
+
+/* First content section keeps navigation gap */
+.notika-status-area {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+    margin-bottom: var(--notika-spacing-sm) !important;
 }
 
 /* Override legacy spacing classes */
