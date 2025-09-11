@@ -6,7 +6,7 @@
   <text x="20" y="28" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="20" font-weight="bold">N</text>
   
   <!-- Main "otika" text -->
-  <text x="45" y="16" fill="#333333" font-family="Arial, sans-serif" font-size="18" font-weight="600">otika</text>
+  <text x="45" y="18" fill="#333333" font-family="Arial, sans-serif" font-size="18" font-weight="600">otika</text>
   
   <!-- Subtle subtitle -->
   <text x="45" y="30" fill="#666666" font-family="Arial, sans-serif" font-size="10">ADMIN TEMPLATE</text>
