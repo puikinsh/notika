@@ -13,10 +13,17 @@
             return;
         }
 
-        // Configure Chart.js defaults
+        // Configure Chart.js 4.x defaults (latest API)
         Chart.defaults.responsive = true;
         Chart.defaults.maintainAspectRatio = false;
         Chart.defaults.plugins.legend.position = 'bottom';
+        Chart.defaults.plugins.tooltip.enabled = true;
+        Chart.defaults.plugins.tooltip.mode = 'index';
+        Chart.defaults.plugins.tooltip.intersect = false;
+        Chart.defaults.animation.duration = 750;
+        Chart.defaults.elements.line.borderWidth = 2;
+        Chart.defaults.elements.point.radius = 3;
+        Chart.defaults.elements.point.hoverRadius = 6;
         
         // Modern color palette
         const colors = {
@@ -41,7 +48,18 @@
         // 1. Sales Statistics Chart (curved line chart)
         const salesChart = document.getElementById('curved-line-chart');
         if (salesChart) {
-            const ctx = salesChart.getContext('2d');
+            // Create canvas if element is not a canvas
+            let ctx;
+            if (salesChart.tagName === 'CANVAS') {
+                ctx = salesChart.getContext('2d');
+            } else {
+                // Create canvas element
+                const canvas = document.createElement('canvas');
+                canvas.style.width = '100%';
+                canvas.style.height = '300px';
+                salesChart.appendChild(canvas);
+                ctx = canvas.getContext('2d');
+            }
             const gradient = createGradient(ctx, 'rgba(0, 194, 146, 0.8)', 'rgba(0, 194, 146, 0.1)');
             
             new Chart(ctx, {
@@ -121,7 +139,18 @@
         // 2. Recent Items Chart (small area chart)
         const recentItemsChart = document.getElementById('recent-items-chart');
         if (recentItemsChart) {
-            const ctx = recentItemsChart.getContext('2d');
+            // Create canvas if element is not a canvas
+            let ctx;
+            if (recentItemsChart.tagName === 'CANVAS') {
+                ctx = recentItemsChart.getContext('2d');
+            } else {
+                // Create canvas element
+                const canvas = document.createElement('canvas');
+                canvas.style.width = '100%';
+                canvas.style.height = '150px';
+                recentItemsChart.appendChild(canvas);
+                ctx = canvas.getContext('2d');
+            }
             const gradient = createGradient(ctx, 'rgba(3, 169, 243, 0.6)', 'rgba(3, 169, 243, 0.1)');
             
             new Chart(ctx, {
@@ -184,15 +213,18 @@
                 
                 if (element) {
                     // Create canvas if it doesn't exist
+                    let canvasElement;
                     if (element.tagName !== 'CANVAS') {
                         const canvas = document.createElement('canvas');
                         canvas.style.width = '100%';
                         canvas.style.height = '50px';
                         element.appendChild(canvas);
-                        element = canvas;
+                        canvasElement = canvas;
+                    } else {
+                        canvasElement = element;
                     }
 
-                    const ctx = element.getContext('2d');
+                    const ctx = canvasElement.getContext('2d');
                     new Chart(ctx, {
                         type: 'line',
                         data: {

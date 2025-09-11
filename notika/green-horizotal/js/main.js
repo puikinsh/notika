@@ -20,9 +20,25 @@
             $(this).closest(".panel").find(".panel-heading").addClass("active")
         }));
 		/*----------------------------
-		 jQuery tooltip
+		 Bootstrap 5 tooltip
 		------------------------------ */
-		$('[data-toggle="tooltip"]').tooltip();
+		// Initialize Bootstrap 5 tooltips
+		if (typeof bootstrap !== 'undefined') {
+			var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+			var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+				return new bootstrap.Tooltip(tooltipTriggerEl);
+			});
+		}
+		// Fallback for old data-toggle syntax
+		if (document.querySelectorAll('[data-toggle="tooltip"]').length > 0) {
+			var oldTooltips = [].slice.call(document.querySelectorAll('[data-toggle="tooltip"]'));
+			oldTooltips.forEach(function(el) {
+				el.setAttribute('data-bs-toggle', 'tooltip');
+				if (typeof bootstrap !== 'undefined') {
+					new bootstrap.Tooltip(el);
+				}
+			});
+		}
 		/*--------------------------
 		 popover
 		---------------------------- */	
@@ -100,21 +116,57 @@
 	 new WOW().init();
 	 
 	/*----------------------------
-	 owl active
+	 Swiper active (modern replacement for owl)
 	------------------------------ */  
-	$("#owl-demo").owlCarousel({
-      autoPlay: false, 
-	  slideSpeed:2000,
-	  pagination:false,
-	  navigation:true,	  
-      items : 4,
-	  /* transitionStyle : "fade", */    /* [This code for animation ] */
-	  navigationText:["<i class='fa fa-angle-left'></i>","<i class='fa fa-angle-right'></i>"],
-      itemsDesktop : [1199,4],
-	  itemsDesktopSmall : [980,3],
-	  itemsTablet: [768,2],
-	  itemsMobile : [479,1],
-	});
+	if (typeof Swiper !== 'undefined') {
+		// Initialize Swiper for elements with owl-demo id or class
+		const owlElements = document.querySelectorAll('#owl-demo, .owl-demo');
+		owlElements.forEach(element => {
+			// Convert to swiper structure if needed
+			if (!element.classList.contains('swiper')) {
+				element.classList.add('swiper');
+				const wrapper = document.createElement('div');
+				wrapper.className = 'swiper-wrapper';
+				while (element.firstElementChild) {
+					const slide = element.firstElementChild;
+					slide.classList.add('swiper-slide');
+					wrapper.appendChild(slide);
+				}
+				element.appendChild(wrapper);
+				
+				// Add navigation
+				const nextBtn = document.createElement('div');
+				nextBtn.className = 'swiper-button-next';
+				nextBtn.innerHTML = '<i class="fa fa-angle-right"></i>';
+				
+				const prevBtn = document.createElement('div');
+				prevBtn.className = 'swiper-button-prev';
+				prevBtn.innerHTML = '<i class="fa fa-angle-left"></i>';
+				
+				element.appendChild(nextBtn);
+				element.appendChild(prevBtn);
+			}
+			
+			// Initialize Swiper with responsive breakpoints
+			new Swiper(element, {
+				slidesPerView: 4,
+				spaceBetween: 20,
+				speed: 800,
+				navigation: {
+					nextEl: '.swiper-button-next',
+					prevEl: '.swiper-button-prev',
+				},
+				breakpoints: {
+					479: { slidesPerView: 1, spaceBetween: 10 },
+					768: { slidesPerView: 2, spaceBetween: 15 },
+					980: { slidesPerView: 3, spaceBetween: 20 },
+					1199: { slidesPerView: 4, spaceBetween: 20 }
+				}
+			});
+		});
+	} else {
+		console.warn('Swiper not loaded - carousel functionality disabled');
+	}
 
 	/*----------------------------
 	 price-slider active
