@@ -1,0 +1,175 @@
+/* Stable Bootstrap 5 Navbar System - No Content Shifting */
+
+.notika-navbar {
+    background: #fff;
+    padding: 0;
+    border-bottom: 1px solid #e9ecef;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+}
+
+.notika-navbar .navbar-nav {
+    gap: 0;
+}
+
+.notika-navbar .nav-item {
+    position: relative;
+}
+
+.notika-navbar .nav-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 16px 20px;
+    color: #666;
+    font-weight: 500;
+    font-size: 14px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    border-bottom: 3px solid transparent;
+}
+
+.notika-navbar .nav-link:hover,
+.notika-navbar .nav-link:focus {
+    color: #00c292;
+    background: rgba(0, 194, 146, 0.05);
+    border-bottom-color: #00c292;
+}
+
+.notika-navbar .nav-link.active {
+    color: #00c292;
+    background: rgba(0, 194, 146, 0.08);
+    border-bottom-color: #00c292;
+    font-weight: 600;
+}
+
+.notika-navbar .nav-link i {
+    font-size: 16px;
+    opacity: 0.8;
+}
+
+.notika-navbar .nav-link.active i,
+.notika-navbar .nav-link:hover i {
+    opacity: 1;
+}
+
+/* Modern Dropdown Menu */
+.notika-navbar .dropdown-menu {
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    padding: 8px;
+    margin-top: 0;
+    min-width: 220px;
+}
+
+.notika-navbar .dropdown-item {
+    padding: 10px 16px;
+    border-radius: 6px;
+    color: #333;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.15s ease;
+    margin-bottom: 2px;
+}
+
+.notika-navbar .dropdown-item:hover,
+.notika-navbar .dropdown-item:focus {
+    background: #00c292;
+    color: white;
+    transform: translateX(4px);
+}
+
+.notika-navbar .dropdown-item:last-child {
+    margin-bottom: 0;
+}
+
+/* Dropdown toggle indicator */
+.notika-navbar .dropdown-toggle::after {
+    margin-left: 6px;
+    border-top: 0.3em solid;
+    border-right: 0.3em solid transparent;
+    border-left: 0.3em solid transparent;
+    transition: transform 0.2s ease;
+}
+
+.notika-navbar .dropdown-toggle[aria-expanded="true"]::after {
+    transform: rotate(180deg);
+}
+
+/* Mobile responsive navbar */
+@media (max-width: 991px) {
+    .notika-navbar {
+        padding: 8px 0;
+    }
+    
+    .notika-navbar .navbar-nav {
+        flex-direction: row;
+        overflow-x: auto;
+        overflow-y: hidden;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+        padding-bottom: 8px;
+    }
+    
+    .notika-navbar .navbar-nav::-webkit-scrollbar {
+        display: none;
+    }
+    
+    .notika-navbar .nav-link {
+        padding: 12px 16px;
+        white-space: nowrap;
+        min-width: auto;
+    }
+    
+    .notika-navbar .dropdown-menu {
+        position: absolute;
+        max-width: calc(100vw - 40px);
+    }
+}
+
+@media (max-width: 576px) {
+    .notika-navbar .nav-link {
+        padding: 10px 12px;
+        font-size: 13px;
+    }
+    
+    .notika-navbar .nav-link i {
+        font-size: 14px;
+    }
+    
+    .notika-navbar .dropdown-menu {
+        min-width: 180px;
+        font-size: 13px;
+    }
+}
+
+/* Smooth animations for dropdown */
+.notika-navbar .dropdown-menu {
+    animation: slideDown 0.2s ease-out;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Active page highlighting */
+.notika-navbar .nav-item[data-current-page] .nav-link {
+    color: #00c292;
+    background: rgba(0, 194, 146, 0.08);
+    border-bottom-color: #00c292;
+    font-weight: 600;
+}
+
+/* Navbar brand spacing */
+.notika-navbar .navbar-brand {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-right: auto;
+}
