@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dashboard One | Notika - Modern Admin Template</title>
+    <meta name="description" content="Modern Notika Admin Template with Vite 7.1.5">
+    
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+    
+    <!-- Vite will inject CSS here automatically -->
+</head>
+
+<body>
+    <!-- Modern Bootstrap 5 Header -->
+    <header class="notika-header">
+        <div class="container">
+            <div class="row align-items-center">
+                <!-- Logo Section -->
+                <div class="col-lg-4 col-md-6 col-8">
+                    <div class="notika-brand">
+                        <a href="index.html">
+                            <img src="img/logo/notika-logo-horizontal.svg" alt="Notika Admin Template" class="logo-light" />
+                            <img src="img/logo/notika-logo-dark.svg" alt="Notika Admin Template" class="logo-dark" />
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Navigation Section -->
+                <div class="col-lg-8 col-md-6 col-4">
+                    <div class="notika-nav justify-content-end">
+                        
+                        <!-- Search -->
+                        <div class="dropdown">
+                            <button class="notika-nav-link" type="button" data-bs-toggle="dropdown" data-bs-auto-close="outside">
+                                <i class="fas fa-search"></i>
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-end notika-dropdown search-dropdown">
+                                <div class="search-input-group">
+                                    <input type="text" placeholder="Search anything..." class="form-control">
+                                    <i class="fas fa-search search-icon"></i>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Messages -->
+                        <div class="dropdown">
+                            <button class="notika-nav-link" type="button" data-bs-toggle="dropdown">
+                                <i class="fas fa-envelope"></i>
+                                <span class="notika-badge">5</span>
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-end notika-dropdown">
+                                <div class="notika-dropdown-header">Messages</div>
+                                <div class="notika-dropdown-body">
+                                    <a class="notika-dropdown-item" href="view-email.html">
+                                        <img src="img/post/1.jpg" alt="User">
+                                        <div class="notika-dropdown-content">
+                                            <h6>David Belle</h6>
+                                            <p>Hey! How's the project going? Need any help?</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="notika-dropdown-footer">
+                                    <a href="inbox.html">View All Messages</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Notifications -->
+                        <div class="dropdown">
+                            <button class="notika-nav-link" type="button" data-bs-toggle="dropdown">
+                                <i class="fas fa-bell"></i>
+                                <span class="notika-badge">3</span>
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-end notika-dropdown">
+                                <div class="notika-dropdown-header">Notifications</div>
+                                <div class="notika-dropdown-body">
+                                    <a class="notika-dropdown-item" href="notification.html">
+                                        <div class="bg-success text-white rounded-circle d-flex align-items-center justify-content-center" style="width: 35px; height: 35px; margin-right: 12px;">
+                                            <i class="fas fa-check" style="font-size: 14px;"></i>
+                                        </div>
+                                        <div class="notika-dropdown-content">
+                                            <h6>Task Completed</h6>
+                                            <p>Vite 7.1.5 migration completed successfully.</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Modern Navigation -->
+    <nav class="navbar navbar-expand-lg notika-navbar">
+        <div class="container">
+            <ul class="navbar-nav w-100 justify-content-center">
+                
+                <!-- Home Dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fas fa-home"></i>
+                        <span>Home</span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="index.html">Dashboard One</a></li>
+                        <li><a class="dropdown-item" href="analytics.html">Analytics</a></li>
+                        <li><a class="dropdown-item" href="widgets.html">Widgets</a></li>
+                    </ul>
+                </li>
+
+                <!-- Charts Dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fas fa-chart-bar"></i>
+                        <span>Charts</span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="bar-charts.html">Bar Charts</a></li>
+                        <li><a class="dropdown-item" href="line-charts.html">Line Charts</a></li>
+                        <li><a class="dropdown-item" href="area-charts.html">Area Charts</a></li>
+                    </ul>
+                </li>
+
+                <!-- Tables Dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fas fa-table"></i>
+                        <span>Tables</span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="normal-table.html">Normal Table</a></li>
+                        <li><a class="dropdown-item" href="data-table.html">Data Table</a></li>
+                    </ul>
+                </li>
+
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Dashboard Content -->
+    <div class="notika-status-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+                    <div class="wb-traffic-inner notika-shadow sm-res-mg-t-30 tb-res-mg-t-30" data-aos="fade-up">
+                        <div class="website-traffic-ctn">
+                            <h2><span class="counter">50000</span></h2>
+                            <p>Total Website Traffic</p>
+                        </div>
+                        <div class="sparkline-bar-stats1"></div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+                    <div class="wb-traffic-inner notika-shadow sm-res-mg-t-30 tb-res-mg-t-30" data-aos="fade-up" data-aos-delay="100">
+                        <div class="website-traffic-ctn">
+                            <h2><span class="counter">90000</span>k</h2>
+                            <p>Website Impressions</p>
+                        </div>
+                        <div class="sparkline-bar-stats2"></div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+                    <div class="wb-traffic-inner notika-shadow sm-res-mg-t-30 tb-res-mg-t-30" data-aos="fade-up" data-aos-delay="200">
+                        <div class="website-traffic-ctn">
+                            <h2>$<span class="counter">40000</span></h2>
+                            <p>Total Online Sales</p>
+                        </div>
+                        <div class="sparkline-bar-stats3"></div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+                    <div class="wb-traffic-inner notika-shadow sm-res-mg-t-30 tb-res-mg-t-30" data-aos="fade-up" data-aos-delay="300">
+                        <div class="website-traffic-ctn">
+                            <h2><span class="counter">1000</span></h2>
+                            <p>Total Support Tickets</p>
+                        </div>
+                        <div class="sparkline-bar-stats4"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sales Statistics -->
+    <div class="sale-statistic-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-9 col-md-8 col-sm-7 col-12">
+                    <div class="sale-statistic-inner notika-shadow mg-tb-30" data-aos="fade-right">
+                        <div class="curved-inner-pro">
+                            <div class="curved-ctn">
+                                <h2>Sales Statistics</h2>
+                                <p>Modern charts powered by Chart.js 4.5.0</p>
+                            </div>
+                        </div>
+                        <div id="curved-line-chart" class="chart-container"></div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-4 col-sm-5 col-12">
+                    <div class="statistic-right-area notika-shadow mg-tb-30" data-aos="fade-left">
+                        <div class="past-day-statis">
+                            <h2>For The Past 30 Days</h2>
+                            <p>Performance metrics powered by modern analytics.</p>
+                        </div>
+                        <div class="past-statistic-an">
+                            <div class="past-statistic-ctn">
+                                <h3><span class="counter">320000</span></h3>
+                                <p>Page Views</p>
+                            </div>
+                            <div class="past-statistic-graph">
+                                <div class="stats-bar"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Email Statistics with Modern Knob Charts -->
+    <div class="notika-email-post-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+                    <div class="email-statis-inner notika-shadow" data-aos="zoom-in">
+                        <div class="email-ctn-round">
+                            <div class="email-rdn-hd">
+                                <h2>Email Statistics</h2>
+                            </div>
+                            <div class="email-statis-wrap">
+                                <div class="email-round-nock">
+                                    <input type="text" class="knob" value="0" data-rel="55" data-width="130" data-bgcolor="#E4E4E4" data-fgcolor="#00c292" readonly>
+                                </div>
+                                <div class="email-ctn-nock">
+                                    <p>Total Emails Sent</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer-copyright-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="footer-copy-right">
+                        <p>Copyright © 2024 Notika Modern. Built with Vite 7.1.5 🚀</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Vite will automatically inject the modern JavaScript here -->
+    <script type="module" src="/src/js/main.js"></script>
+</body>
+</html>

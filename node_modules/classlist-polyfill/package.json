@@ -1,0 +1,32 @@
+{
+  "name": "classlist-polyfill",
+  "version": "1.2.0",
+  "description": "Cross-browser JavaScript shim that fully implements element.classList (referenced on MDN)",
+  "main": "src/index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "bash ./script/test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yola/classlist-polyfill.git"
+  },
+  "keywords": [
+    "classList",
+    "polyfill",
+    "shim",
+    "cross-browser"
+  ],
+  "author": "Eli Grey <me@eligrey.com>",
+  "contributors": [
+    "Eli Grey <me@eligrey.com>",
+    "Yola Engineering <engineers@yola.com> (https://www.yola.com/)"
+  ],
+  "license": "Unlicense",
+  "bugs": {
+    "url": "https://github.com/eligrey/classList.js/issues"
+  },
+  "homepage": "https://github.com/yola/classlist-polyfill"
+}

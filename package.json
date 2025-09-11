@@ -25,15 +25,17 @@
   },
   "devDependencies": {
     "vite": "^7.1.5",
-    "sass": "^1.81.0",
+    "sass": "^1.81.0", 
     "postcss": "^8.4.49",
     "autoprefixer": "^10.4.20",
     "cssnano": "^7.0.6",
-    "@vitejs/plugin-legacy": "^6.1.0",
+    "vite-plugin-legacy": "^2.0.1",
     "rollup-plugin-copy": "^3.5.0",
     "eslint": "^9.15.0",
     "prettier": "^3.3.3",
-    "typescript": "^5.6.3"
+    "typescript": "^5.6.3",
+    "@types/node": "^22.9.1",
+    "vite-plugin-eslint": "^1.8.1"
   },
   "browserslist": [
     "> 1%",

@@ -298,3 +298,30 @@
         font-size: 20px;
     }
 }
+
+/* Email Statistics Widget Specific Fixes */
+.email-statis-inner .email-statis-wrap {
+    padding: var(--widget-content-padding) !important;
+    padding-bottom: calc(var(--widget-content-padding) + 12px) !important; /* Extra bottom space */
+}
+
+.email-round-gp {
+    margin-bottom: 16px !important; /* Add space below chart groups */
+    padding-bottom: 8px !important; /* Extra padding at bottom */
+}
+
+.email-round-pro {
+    margin-bottom: 12px !important; /* Space between individual chart items */
+}
+
+.email-round-pro:last-child {
+    margin-bottom: 0 !important; /* Remove margin from last chart item */
+}
+
+.email-signle-gp {
+    margin-bottom: 8px !important; /* Space below chart elements */
+}
+
+.email-ctn-nock {
+    margin-bottom: 8px !important; /* Space below chart labels */
+}

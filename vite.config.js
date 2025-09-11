@@ -1,6 +1,6 @@
 import { defineConfig } from 'vite'
-import legacy from '@vitejs/plugin-legacy'
 import { resolve } from 'path'
+import eslint from 'vite-plugin-eslint'
 
 export default defineConfig({
   // Root directory where index.html is located
@@ -59,10 +59,10 @@ export default defineConfig({
     }
   },
   
-  // Plugins
+  // Plugins for Vite 7.x
   plugins: [
-    legacy({
-      targets: ['defaults', 'not IE 11']
+    eslint({
+      include: ['src/**/*.js', 'src/**/*.ts']
     })
   ],
   
