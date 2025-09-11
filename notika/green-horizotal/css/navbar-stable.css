@@ -1,10 +1,10 @@
 /* Stable Bootstrap 5 Navbar System - No Content Shifting */
 
 :root {
-    --notika-spacing-sm: 20px;
-    --notika-spacing-md: 30px;
-    --notika-spacing-lg: 40px;
-    --notika-spacing-xl: 60px;
+    --notika-spacing-xs: 8px;
+    --notika-spacing-sm: 16px;
+    --notika-spacing-md: 24px;
+    --notika-spacing-lg: 32px;
 }
 
 .notika-navbar {
@@ -12,20 +12,33 @@
     padding: 0;
     border-bottom: 1px solid #e9ecef;
     box-shadow: 0 2px 4px rgba(0,0,0,0.04);
-    margin-bottom: var(--notika-spacing-lg); /* Consistent gap after navigation */
+    margin-bottom: var(--notika-spacing-md); /* Smaller, consistent gap */
 }
 
-/* Consistent spacing system for all content sections */
+/* Reset all inconsistent margins and apply uniform spacing */
 .notika-status-area,
 .sale-statistic-area,
 .notika-email-post-area,
 .realtime-statistic-area,
 .visitor-sv-tm-area,
 .search-engine-area,
-.breadcomb-area {
-    margin-top: 0 !important; /* Remove conflicting margins */
-    padding-top: 0 !important; /* Let navbar margin handle spacing */
-    margin-bottom: var(--notika-spacing-md) !important; /* Consistent bottom spacing */
+.breadcomb-area,
+.main-menu-area,
+.mg-tb-40,
+.mg-t-30 {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+    margin-bottom: var(--notika-spacing-md) !important; /* Consistent 24px gaps */
+}
+
+/* Override legacy spacing classes */
+.mg-tb-40 {
+    margin-top: 0 !important;
+    margin-bottom: var(--notika-spacing-md) !important;
+}
+
+.mg-t-30 {
+    margin-top: 0 !important;
 }
 
 /* Add proper section spacing */
@@ -130,7 +143,7 @@
 @media (max-width: 991px) {
     .notika-navbar {
         padding: 8px 0;
-        margin-bottom: var(--notika-spacing-md); /* Smaller gap on mobile */
+        margin-bottom: var(--notika-spacing-sm); /* Compact gap on mobile */
     }
     
     .notika-navbar .navbar-nav {
@@ -160,7 +173,7 @@
 
 @media (max-width: 576px) {
     .notika-navbar {
-        margin-bottom: var(--notika-spacing-sm); /* Even smaller gap on small mobile */
+        margin-bottom: var(--notika-spacing-xs); /* Minimal gap on small mobile */
     }
     
     .notika-navbar .nav-link {
