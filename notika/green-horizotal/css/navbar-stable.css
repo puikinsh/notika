@@ -1,10 +1,40 @@
 /* Stable Bootstrap 5 Navbar System - No Content Shifting */
 
+:root {
+    --notika-spacing-sm: 20px;
+    --notika-spacing-md: 30px;
+    --notika-spacing-lg: 40px;
+    --notika-spacing-xl: 60px;
+}
+
 .notika-navbar {
     background: #fff;
     padding: 0;
     border-bottom: 1px solid #e9ecef;
     box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+    margin-bottom: var(--notika-spacing-lg); /* Consistent gap after navigation */
+}
+
+/* Consistent spacing system for all content sections */
+.notika-status-area,
+.sale-statistic-area,
+.notika-email-post-area,
+.realtime-statistic-area,
+.visitor-sv-tm-area,
+.search-engine-area,
+.breadcomb-area {
+    margin-top: 0 !important; /* Remove conflicting margins */
+    padding-top: 0 !important; /* Let navbar margin handle spacing */
+    margin-bottom: var(--notika-spacing-md) !important; /* Consistent bottom spacing */
+}
+
+/* Add proper section spacing */
+.notika-content-section {
+    margin-bottom: var(--notika-spacing-lg);
+}
+
+.notika-content-section:last-child {
+    margin-bottom: 0;
 }
 
 .notika-navbar .navbar-nav {
@@ -100,6 +130,7 @@
 @media (max-width: 991px) {
     .notika-navbar {
         padding: 8px 0;
+        margin-bottom: var(--notika-spacing-md); /* Smaller gap on mobile */
     }
     
     .notika-navbar .navbar-nav {
@@ -128,6 +159,10 @@
 }
 
 @media (max-width: 576px) {
+    .notika-navbar {
+        margin-bottom: var(--notika-spacing-sm); /* Even smaller gap on small mobile */
+    }
+    
     .notika-navbar .nav-link {
         padding: 10px 12px;
         font-size: 13px;
