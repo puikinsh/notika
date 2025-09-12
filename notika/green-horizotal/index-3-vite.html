@@ -1,0 +1,1278 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dashboard Three | Notika - Modern Vite Template</title>
+    <meta name="description" content="Modern Notika Admin Template powered by Vite 7.1.5">
+    
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700,900" rel="stylesheet">
+    
+    <!-- Font Awesome and all other CSS imported via Vite -->
+    <!-- ONLY Vite entry point - everything else bundled -->
+</head>
+
+<body>
+    <!-- Modern Bootstrap 5 Header -->
+    <header class="notika-header">
+        <div class="container">
+            <div class="row align-items-center">
+                <!-- Logo Section -->
+                <div class="col-lg-4 col-md-6 col-8">
+                    <div class="notika-brand">
+                        <a href="index-vite.html">
+                            <img src="/logo/notika-logo-horizontal.svg" alt="Notika Admin Template" class="logo-light" />
+                            <img src="/logo/notika-logo-dark.svg" alt="Notika Admin Template" class="logo-dark" />
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Navigation Section -->
+                <div class="col-lg-8 col-md-6 col-4">
+                    <div class="notika-nav justify-content-end">
+                        
+                        <!-- Search -->
+                        <div class="dropdown">
+                            <button class="notika-nav-link" type="button" data-bs-toggle="dropdown" data-bs-auto-close="outside">
+                                <i class="notika-icon notika-search"></i>
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-end notika-dropdown search-dropdown">
+                                <div class="search-input-group">
+                                    <input type="text" placeholder="Search anything..." class="form-control">
+                                    <i class="notika-icon notika-search search-icon"></i>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Messages -->
+                        <div class="dropdown">
+                            <button class="notika-nav-link" type="button" data-bs-toggle="dropdown">
+                                <i class="notika-icon notika-mail"></i>
+                                <span class="notika-badge">5</span>
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-end notika-dropdown">
+                                <div class="notika-dropdown-header">
+                                    Messages
+                                </div>
+                                <div class="notika-dropdown-body">
+                                    <a class="notika-dropdown-item" href="view-email.html">
+                                        <img src="/post/1.jpg" alt="User">
+                                        <div class="notika-dropdown-content">
+                                            <h6>David Belle</h6>
+                                            <p>Hey! How's the project going? Need any help?</p>
+                                        </div>
+                                    </a>
+                                    <a class="notika-dropdown-item" href="view-email.html">
+                                        <img src="/post/2.jpg" alt="User">
+                                        <div class="notika-dropdown-content">
+                                            <h6>Sarah Wilson</h6>
+                                            <p>The new design looks amazing!</p>
+                                        </div>
+                                    </a>
+                                    <a class="notika-dropdown-item" href="view-email.html">
+                                        <img src="/post/4.jpg" alt="User">
+                                        <div class="notika-dropdown-content">
+                                            <h6>Mike Johnson</h6>
+                                            <p>Thanks for the quick dashboard fix!</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="notika-dropdown-footer">
+                                    <a href="inbox.html">View All Messages</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Notifications -->
+                        <div class="dropdown">
+                            <button class="notika-nav-link" type="button" data-bs-toggle="dropdown">
+                                <i class="notika-icon notika-alarm"></i>
+                                <span class="notika-badge">3</span>
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-end notika-dropdown">
+                                <div class="notika-dropdown-header">
+                                    Notifications
+                                </div>
+                                <div class="notika-dropdown-body">
+                                    <a class="notika-dropdown-item" href="notification.html">
+                                        <div class="bg-success text-white rounded-circle d-flex align-items-center justify-content-center" style="width: 35px; height: 35px; margin-right: 12px;">
+                                            <i class="notika-icon notika-success" style="font-size: 14px;"></i>
+                                        </div>
+                                        <div class="notika-dropdown-content">
+                                            <h6>Task Completed</h6>
+                                            <p>Bootstrap 5 migration completed successfully.</p>
+                                        </div>
+                                    </a>
+                                    <a class="notika-dropdown-item" href="notification.html">
+                                        <div class="bg-warning text-white rounded-circle d-flex align-items-center justify-content-center" style="width: 35px; height: 35px; margin-right: 12px;">
+                                            <i class="notika-icon notika-alarm" style="font-size: 14px;"></i>
+                                        </div>
+                                        <div class="notika-dropdown-content">
+                                            <h6>Server Alert</h6>
+                                            <p>Response time higher than usual.</p>
+                                        </div>
+                                    </a>
+                                    <a class="notika-dropdown-item" href="notification.html">
+                                        <div class="bg-info text-white rounded-circle d-flex align-items-center justify-content-center" style="width: 35px; height: 35px; margin-right: 12px;">
+                                            <i class="notika-icon notika-chat" style="font-size: 14px;"></i>
+                                        </div>
+                                        <div class="notika-dropdown-content">
+                                            <h6>New Message</h6>
+                                            <p>You have 2 unread messages.</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="notika-dropdown-footer">
+                                    <a href="notification.html">View All Notifications</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Tasks -->
+                        <div class="dropdown">
+                            <button class="notika-nav-link" type="button" data-bs-toggle="dropdown">
+                                <i class="notika-icon notika-menus"></i>
+                                <span class="notika-badge">2</span>
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-end notika-dropdown" style="min-width: 280px;">
+                                <div class="notika-dropdown-header">
+                                    Active Tasks
+                                </div>
+                                <div class="notika-dropdown-body">
+                                    <div class="task-item px-3">
+                                        <div class="task-title">Website Redesign</div>
+                                        <div class="task-progress">
+                                            <div class="progress">
+                                                <div class="progress-bar" style="width: 85%"></div>
+                                            </div>
+                                            <small class="text-muted">85% Complete</small>
+                                        </div>
+                                    </div>
+                                    <div class="task-item px-3">
+                                        <div class="task-title">API Integration</div>
+                                        <div class="task-progress">
+                                            <div class="progress">
+                                                <div class="progress-bar" style="width: 65%"></div>
+                                            </div>
+                                            <small class="text-muted">65% Complete</small>
+                                        </div>
+                                    </div>
+                                    <div class="task-item px-3">
+                                        <div class="task-title">Database Optimization</div>
+                                        <div class="task-progress">
+                                            <div class="progress">
+                                                <div class="progress-bar" style="width: 95%"></div>
+                                            </div>
+                                            <small class="text-muted">95% Complete</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="notika-dropdown-footer">
+                                    <a href="widgets.html">View All Tasks</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Chat -->
+                        <div class="dropdown">
+                            <button class="notika-nav-link" type="button" data-bs-toggle="dropdown">
+                                <i class="notika-icon notika-chat"></i>
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-end notika-dropdown">
+                                <div class="notika-dropdown-header">
+                                    Team Chat
+                                </div>
+                                <div class="notika-dropdown-body">
+                                    <a class="notika-dropdown-item" href="compose-email.html">
+                                        <div style="position: relative;">
+                                            <img src="/post/1.jpg" alt="User">
+                                            <div class="chat-status"></div>
+                                        </div>
+                                        <div class="notika-dropdown-content">
+                                            <h6>John Doe</h6>
+                                            <p>Online - Available</p>
+                                        </div>
+                                    </a>
+                                    <a class="notika-dropdown-item" href="compose-email.html">
+                                        <div style="position: relative;">
+                                            <img src="/post/2.jpg" alt="User">
+                                        </div>
+                                        <div class="notika-dropdown-content">
+                                            <h6>Sarah Smith</h6>
+                                            <p>Last seen 2 hours ago</p>
+                                        </div>
+                                    </a>
+                                    <a class="notika-dropdown-item" href="compose-email.html">
+                                        <div style="position: relative;">
+                                            <img src="/post/4.jpg" alt="User">
+                                        </div>
+                                        <div class="notika-dropdown-content">
+                                            <h6>Mike Johnson</h6>
+                                            <p>Away - Back in 10 min</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="notika-dropdown-footer">
+                                    <a href="compose-email.html">Open Chat</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- End Modern Header -->
+    <!-- Mobile Menu start -->
+    <div class="mobile-menu-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                    <div class="mobile-menu">
+                        <nav id="dropdown">
+                            <ul class="mobile-menu-nav">
+                                <li><a data-bs-toggle="collapse" data-bs-target="#Charts" href="#">Home</a>
+                                    <ul class="collapse dropdown-header-top">
+                                        <li><a href="index.html">Dashboard Three</a></li>
+                                        <li><a href="index-2.html">Dashboard Two</a></li>
+                                        <li><a href="index-3.html">Dashboard Three</a></li>
+                                        <li><a href="index-4.html">Dashboard Four</a></li>
+                                        <li><a href="analytics.html">Analytics</a></li>
+                                        <li><a href="widgets.html">Widgets</a></li>
+                                    </ul>
+                                </li>
+                                <li><a data-bs-toggle="collapse" data-bs-target="#demoevent" href="#">Email</a>
+                                    <ul id="demoevent" class="collapse dropdown-header-top">
+                                        <li><a href="inbox.html">Inbox</a></li>
+                                        <li><a href="view-email.html">View Email</a></li>
+                                        <li><a href="compose-email.html">Compose Email</a></li>
+                                    </ul>
+                                </li>
+                                <li><a data-bs-toggle="collapse" data-bs-target="#democrou" href="#">Interface</a>
+                                    <ul id="democrou" class="collapse dropdown-header-top">
+                                        <li><a href="animations.html">Animations</a></li>
+                                        <li><a href="google-map.html">Google Map</a></li>
+                                        <li><a href="data-map.html">Data Maps</a></li>
+                                        <li><a href="code-editor.html">Code Editor</a></li>
+                                        <li><a href="image-cropper.html">Images Cropper</a></li>
+                                        <li><a href="wizard.html">Wizard</a></li>
+                                    </ul>
+                                </li>
+                                <li><a data-bs-toggle="collapse" data-bs-target="#demolibra" href="#">Charts</a>
+                                    <ul id="demolibra" class="collapse dropdown-header-top">
+                                        <li><a href="flot-charts.html">Flot Charts</a></li>
+                                        <li><a href="bar-charts.html">Bar Charts</a></li>
+                                        <li><a href="line-charts.html">Line Charts</a></li>
+                                        <li><a href="area-charts.html">Area Charts</a></li>
+                                    </ul>
+                                </li>
+                                <li><a data-bs-toggle="collapse" data-bs-target="#demodepart" href="#">Tables</a>
+                                    <ul id="demodepart" class="collapse dropdown-header-top">
+                                        <li><a href="normal-table.html">Normal Table</a></li>
+                                        <li><a href="data-table.html">Data Table</a></li>
+                                    </ul>
+                                </li>
+                                <li><a data-bs-toggle="collapse" data-bs-target="#demo" href="#">Forms</a>
+                                    <ul id="demo" class="collapse dropdown-header-top">
+                                        <li><a href="form-elements.html">Form Elements</a></li>
+                                        <li><a href="form-components.html">Form Components</a></li>
+                                        <li><a href="form-examples.html">Form Examples</a></li>
+                                    </ul>
+                                </li>
+                                <li><a data-bs-toggle="collapse" data-bs-target="#Miscellaneousmob" href="#">App views</a>
+                                    <ul id="Miscellaneousmob" class="collapse dropdown-header-top">
+                                        <li><a href="notification.html">Notifications</a>
+                                        </li>
+                                        <li><a href="alert.html">Alerts</a>
+                                        </li>
+                                        <li><a href="modals.html">Modals</a>
+                                        </li>
+                                        <li><a href="buttons.html">Buttons</a>
+                                        </li>
+                                        <li><a href="tabs.html">Tabs</a>
+                                        </li>
+                                        <li><a href="accordion.html">Accordion</a>
+                                        </li>
+                                        <li><a href="dialog.html">Dialogs</a>
+                                        </li>
+                                        <li><a href="popovers.html">Popovers</a>
+                                        </li>
+                                        <li><a href="tooltips.html">Tooltips</a>
+                                        </li>
+                                        <li><a href="dropdown.html">Dropdowns</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li><a data-bs-toggle="collapse" data-bs-target="#Pagemob" href="#">Pages</a>
+                                    <ul id="Pagemob" class="collapse dropdown-header-top">
+                                        <li><a href="contact.html">Contact</a>
+                                        </li>
+                                        <li><a href="invoice.html">Invoice</a>
+                                        </li>
+                                        <li><a href="typography.html">Typography</a>
+                                        </li>
+                                        <li><a href="color.html">Color</a>
+                                        </li>
+                                        <li><a href="login-register.html">Login Register</a>
+                                        </li>
+                                        <li><a href="404.html">404 Page</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Mobile Menu end -->
+    <!-- Stable Bootstrap 5 Navbar -->
+    <nav class="navbar navbar-expand-lg notika-navbar">
+        <div class="container">
+            <ul class="navbar-nav w-100 justify-content-center">
+                
+                <!-- Home Dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="notika-icon notika-house"></i>
+                        <span>Home</span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="index.html">Dashboard Three</a></li>
+                        <li><a class="dropdown-item" href="index-2.html">Dashboard Two</a></li>
+                        <li><a class="dropdown-item" href="index-3.html">Dashboard Three</a></li>
+                        <li><a class="dropdown-item" href="index-4.html">Dashboard Four</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="analytics.html">Analytics</a></li>
+                        <li><a class="dropdown-item" href="widgets.html">Widgets</a></li>
+                    </ul>
+                </li>
+
+                <!-- Email Dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="notika-icon notika-mail"></i>
+                        <span>Email</span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="inbox.html">Inbox</a></li>
+                        <li><a class="dropdown-item" href="view-email.html">View Email</a></li>
+                        <li><a class="dropdown-item" href="compose-email.html">Compose Email</a></li>
+                    </ul>
+                </li>
+
+                <!-- Interface Dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="notika-icon notika-edit"></i>
+                        <span>Interface</span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="animations.html">Animations</a></li>
+                        <li><a class="dropdown-item" href="google-map.html">Google Map</a></li>
+                        <li><a class="dropdown-item" href="data-map.html">Data Maps</a></li>
+                        <li><a class="dropdown-item" href="code-editor.html">Code Editor</a></li>
+                        <li><a class="dropdown-item" href="image-cropper.html">Images Cropper</a></li>
+                        <li><a class="dropdown-item" href="wizard.html">Wizard</a></li>
+                    </ul>
+                </li>
+
+                <!-- Charts Dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="notika-icon notika-bar-chart"></i>
+                        <span>Charts</span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="flot-charts.html">Flot Charts</a></li>
+                        <li><a class="dropdown-item" href="bar-charts.html">Bar Charts</a></li>
+                        <li><a class="dropdown-item" href="line-charts.html">Line Charts</a></li>
+                        <li><a class="dropdown-item" href="area-charts.html">Area Charts</a></li>
+                    </ul>
+                </li>
+
+                <!-- Tables Dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="notika-icon notika-windows"></i>
+                        <span>Tables</span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="normal-table.html">Normal Table</a></li>
+                        <li><a class="dropdown-item" href="data-table.html">Data Table</a></li>
+                    </ul>
+                </li>
+
+                <!-- Forms Dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="notika-icon notika-form"></i>
+                        <span>Forms</span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="form-elements.html">Form Elements</a></li>
+                        <li><a class="dropdown-item" href="form-components.html">Form Components</a></li>
+                        <li><a class="dropdown-item" href="form-examples.html">Form Examples</a></li>
+                    </ul>
+                </li>
+
+                <!-- Components Dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="notika-icon notika-app"></i>
+                        <span>Components</span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="notification.html">Notifications</a></li>
+                        <li><a class="dropdown-item" href="alert.html">Alerts</a></li>
+                        <li><a class="dropdown-item" href="modals.html">Modals</a></li>
+                        <li><a class="dropdown-item" href="buttons.html">Buttons</a></li>
+                        <li><a class="dropdown-item" href="tabs.html">Tabs</a></li>
+                        <li><a class="dropdown-item" href="accordion.html">Accordion</a></li>
+                        <li><a class="dropdown-item" href="dialog.html">Dialogs</a></li>
+                        <li><a class="dropdown-item" href="popovers.html">Popovers</a></li>
+                        <li><a class="dropdown-item" href="tooltips.html">Tooltips</a></li>
+                        <li><a class="dropdown-item" href="dropdown.html">Dropdowns</a></li>
+                    </ul>
+                </li>
+
+                <!-- Pages Dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="notika-icon notika-support"></i>
+                        <span>Pages</span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="contact.html">Contact</a></li>
+                        <li><a class="dropdown-item" href="invoice.html">Invoice</a></li>
+                        <li><a class="dropdown-item" href="typography.html">Typography</a></li>
+                        <li><a class="dropdown-item" href="color.html">Color</a></li>
+                        <li><a class="dropdown-item" href="login-register.html">Login Register</a></li>
+                        <li><a class="dropdown-item" href="404.html">404 Page</a></li>
+                    </ul>
+                </li>
+
+            </ul>
+        </div>
+    </nav>
+    <!-- End Stable Navigation -->
+
+    <!-- Start Status area -->
+    <div class="notika-status-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+                    <div class="wb-traffic-inner notika-shadow sm-res-mg-t-30 tb-res-mg-t-30">
+                        <div class="website-traffic-ctn">
+                            <h2><span class="counter">50,000</span></h2>
+                            <p>Total Website Traffics</p>
+                        </div>
+                        <div class="sparkline-bar-stats1"></div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+                    <div class="wb-traffic-inner notika-shadow sm-res-mg-t-30 tb-res-mg-t-30">
+                        <div class="website-traffic-ctn">
+                            <h2><span class="counter">90,000</span>k</h2>
+                            <p>Website Impressions</p>
+                        </div>
+                        <div class="sparkline-bar-stats2"></div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+                    <div class="wb-traffic-inner notika-shadow sm-res-mg-t-30 tb-res-mg-t-30 dk-res-mg-t-30">
+                        <div class="website-traffic-ctn">
+                            <h2>$<span class="counter">40,000</span></h2>
+                            <p>Total Online Sales</p>
+                        </div>
+                        <div class="sparkline-bar-stats3"></div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+                    <div class="wb-traffic-inner notika-shadow sm-res-mg-t-30 tb-res-mg-t-30 dk-res-mg-t-30">
+                        <div class="website-traffic-ctn">
+                            <h2><span class="counter">1,000</span></h2>
+                            <p>Total Support Tickets</p>
+                        </div>
+                        <div class="sparkline-bar-stats4"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Status area-->
+    <!-- Start Sale Statistic area-->
+    <div class="sale-statistic-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-9 col-md-8 col-sm-7 col-12">
+                    <div class="sale-statistic-inner notika-shadow mg-tb-30">
+                        <div class="curved-inner-pro">
+                            <div class="curved-ctn">
+                                <h2>Sales Statistics</h2>
+                                <p>Vestibulum purus quam scelerisque, mollis nonummy metus</p>
+                            </div>
+                        </div>
+                        <div id="curved-line-chart" class="flot-chart-sts flot-chart"></div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-5 col-12">
+                    <div class="statistic-right-area notika-shadow mg-tb-30 sm-res-mg-t-0">
+                        <div class="past-day-statis">
+                            <h2>For The Past 30 Days</h2>
+                            <p>Performance metrics and insights for the past 30 days.</p>
+                        </div>
+						<div class="dash-widget-visits"></div>
+                        <div class="past-statistic-an">
+                            <div class="past-statistic-ctn">
+                                <h3><span class="counter">3,20,000</span></h3>
+                                <p>Page Views</p>
+                            </div>
+                            <div class="past-statistic-graph">
+                                <div class="stats-bar"></div>
+                            </div>
+                        </div>
+                        <div class="past-statistic-an">
+                            <div class="past-statistic-ctn">
+                                <h3><span class="counter">1,03,000</span></h3>
+                                <p>Total Clicks</p>
+                            </div>
+                            <div class="past-statistic-graph">
+                                <div class="stats-line"></div>
+                            </div>
+                        </div>
+                        <div class="past-statistic-an">
+                            <div class="past-statistic-ctn">
+                                <h3><span class="counter">24,00,000</span></h3>
+                                <p>Site Visitors</p>
+                            </div>
+                            <div class="past-statistic-graph">
+                                <div class="stats-bar-2"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Sale Statistic area-->
+    <!-- Start Email Statistic area-->
+    <div class="notika-email-post-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+                    <div class="email-statis-inner notika-shadow">
+                        <div class="email-ctn-round">
+                            <div class="email-rdn-hd">
+								<h2>Email Statistics</h2>
+							</div>
+                            <div class="email-statis-wrap">
+                                <div class="email-round-nock">
+                                    <input type="text" class="knob" value="0" data-rel="55" data-linecap="round" data-width="130" data-bgcolor="#E4E4E4" data-fgcolor="#00c292" data-thickness=".10" data-readonly="true">
+                                </div>
+                                <div class="email-ctn-nock">
+                                    <p>Total Emails Sent</p>
+                                </div>
+                            </div>
+                            <div class="email-round-gp">
+                                <div class="email-round-pro">
+                                    <div class="email-signle-gp">
+                                        <input type="text" class="knob" value="0" data-rel="75" data-linecap="round" data-width="90" data-bgcolor="#E4E4E4" data-fgcolor="#00c292" data-thickness=".10" data-readonly="true" disabled>
+                                    </div>
+                                    <div class="email-ctn-nock">
+                                        <p>Bounce Rate</p>
+                                    </div>
+                                </div>
+                                <div class="email-round-pro">
+                                    <div class="email-signle-gp">
+                                        <input type="text" class="knob" value="0" data-rel="35" data-linecap="round" data-width="90" data-bgcolor="#E4E4E4" data-fgcolor="#00c292" data-thickness=".10" data-readonly="true" disabled>
+                                    </div>
+                                    <div class="email-ctn-nock">
+                                        <p>Total Opened</p>
+                                    </div>
+                                </div>
+                                <div class="email-round-pro sm-res-ds-n lg-res-mg-bl">
+                                    <div class="email-signle-gp">
+                                        <input type="text" class="knob" value="0" data-rel="45" data-linecap="round" data-width="90" data-bgcolor="#E4E4E4" data-fgcolor="#00c292" data-thickness=".10" data-readonly="true" disabled>
+                                    </div>
+                                    <div class="email-ctn-nock">
+                                        <p>Total Ignored</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+                    <div class="recent-post-wrapper notika-shadow sm-res-mg-t-30 tb-res-ds-n dk-res-ds">
+                        <div class="recent-post-ctn">
+                            <div class="recent-post-title">
+                                <h2>Recent Posts</h2>
+                            </div>
+                        </div>
+                        <div class="recent-post-items">
+                            <div class="recent-post-signle rct-pt-mg-wp">
+                                <a href="#">
+                                    <div class="recent-post-flex">
+                                        <div class="recent-post-img">
+                                            <img src="/post/2.jpg" alt="" />
+                                        </div>
+                                        <div class="recent-post-it-ctn">
+                                            <h2>Smith</h2>
+                                            <p>Nunc quis diam diamurabitur at dolor elementum, dictum turpis vel</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="recent-post-signle">
+                                <a href="#">
+                                    <div class="recent-post-flex rct-pt-mg">
+                                        <div class="recent-post-img">
+                                            <img src="/post/1.jpg" alt="" />
+                                        </div>
+                                        <div class="recent-post-it-ctn">
+                                            <h2>John Deo</h2>
+                                            <p>Nunc quis diam diamurabitur at dolor elementum, dictum turpis vel</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="recent-post-signle">
+                                <a href="#">
+                                    <div class="recent-post-flex rct-pt-mg">
+                                        <div class="recent-post-img">
+                                            <img src="/post/4.jpg" alt="" />
+                                        </div>
+                                        <div class="recent-post-it-ctn">
+                                            <h2>Malika</h2>
+                                            <p>Nunc quis diam diamurabitur at dolor elementum, dictum turpis vel</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="recent-post-signle">
+                                <a href="#">
+                                    <div class="recent-post-flex rct-pt-mg">
+                                        <div class="recent-post-img">
+                                            <img src="/post/2.jpg" alt="" />
+                                        </div>
+                                        <div class="recent-post-it-ctn">
+                                            <h2>Smith</h2>
+                                            <p>Nunc quis diam diamurabitur at dolor elementum, dictum turpis vel</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="recent-post-signle">
+                                <a href="#">
+                                    <div class="recent-post-flex rct-pt-mg">
+                                        <div class="recent-post-img">
+                                            <img src="/post/1.jpg" alt="" />
+                                        </div>
+                                        <div class="recent-post-it-ctn">
+                                            <h2>John Deo</h2>
+                                            <p>Nunc quis diam diamurabitur at dolor elementum, dictum turpis vel</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="recent-post-signle">
+                                <a href="#">
+                                    <div class="recent-post-flex rc-ps-vw">
+                                        <div class="recent-post-line rct-pt-mg">
+                                            <p>View All</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+                    <div class="recent-items-wp notika-shadow sm-res-mg-t-30">
+                        <div class="rc-it-ltd">
+                            <div class="recent-items-ctn">
+                                <div class="recent-items-title">
+                                    <h2>Recent Items</h2>
+                                </div>
+                            </div>
+                            <div class="recent-items-inn">
+                                <table class="table table-inner table-vmiddle">
+                                    <thead>
+                                        <tr>
+                                            <th>ID</th>
+                                            <th>Name</th>
+                                            <th style="width: 60px">Price</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="f-500 c-cyan">4555</td>
+                                            <td>Samsung Galaxy Mega</td>
+                                            <td class="f-500 c-cyan">$921</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="f-500 c-cyan">4556</td>
+                                            <td>Huawei Ascend P6</td>
+                                            <td class="f-500 c-cyan">$240</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="f-500 c-cyan">8778</td>
+                                            <td>HTC One M8</td>
+                                            <td class="f-500 c-cyan">$400</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="f-500 c-cyan">5667</td>
+                                            <td>Samsung Galaxy Alpha</td>
+                                            <td class="f-500 c-cyan">$870</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="f-500 c-cyan">7886</td>
+                                            <td>LG G3</td>
+                                            <td class="f-500 c-cyan">$790</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+							<div id="recent-items-chart" class="flot-chart-items flot-chart vt-ct-it tb-rc-it-res"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Email Statistic area-->
+    <!-- Start Realtime sts area-->
+    <div class="realtime-statistic-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+                    <div class="realtime-wrap notika-shadow mg-t-30 h-100">
+                        <div class="realtime-ctn">
+                            <div class="realtime-title">
+                                <h2>Realtime Visitors</h2>
+                            </div>
+                        </div>
+                        <div class="card-box">
+                            <!-- Stats Row -->
+                            <div class="row g-3 mb-4">
+                                <div class="col-6">
+                                    <div class="text-center p-3 bg-light rounded">
+                                        <h4 class="mb-1 text-success fw-bold"><span class="counter">435,456</span></h4>
+                                        <small class="text-muted">Last 24h</small>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="text-center p-3 bg-light rounded">
+                                        <h4 class="mb-1 text-info fw-bold"><span class="counter">4,566</span></h4>
+                                        <small class="text-muted">Last 30m</small>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- World Map -->
+                            <div class="world-map-container mb-4" style="height: 160px; background: #f8f9fa; border-radius: 8px; position: relative;">
+                                <div id="world-map" style="height: 100%; width: 100%;"></div>
+                            </div>
+                            
+                            <!-- Recent Activity -->
+                            <div class="recent-visitors">
+                                <h6 class="text-muted mb-3">Recent Activity</h6>
+                                
+                                <div class="visitor-item d-flex align-items-center mb-3 p-2 border rounded">
+                                    <img src="/country/1.png" alt="US" class="me-2" style="width: 20px; height: 15px;">
+                                    <div class="flex-grow-1">
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <span class="small fw-medium">United States</span>
+                                            <span class="badge bg-success-subtle text-success">2m ago</span>
+                                        </div>
+                                        <div class="small text-muted">Firefox • Mac OSX</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="visitor-item d-flex align-items-center mb-3 p-2 border rounded">
+                                    <img src="/country/2.png" alt="AU" class="me-2" style="width: 20px; height: 15px;">
+                                    <div class="flex-grow-1">
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <span class="small fw-medium">Australia</span>
+                                            <span class="badge bg-info-subtle text-info">5m ago</span>
+                                        </div>
+                                        <div class="small text-muted">Chrome • Windows</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="visitor-item d-flex align-items-center p-2 border rounded">
+                                    <img src="/country/3.png" alt="BR" class="me-2" style="width: 20px; height: 15px;">
+                                    <div class="flex-grow-1">
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <span class="small fw-medium">Brazil</span>
+                                            <span class="badge bg-warning-subtle text-warning">10m ago</span>
+                                        </div>
+                                        <div class="small text-muted">Safari • iOS</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+                    <div class="add-todo-list notika-shadow mg-t-30 h-100">
+                        <div class="realtime-ctn">
+                            <div class="realtime-title">
+                                <h2>Add Todo</h2>
+                            </div>
+                        </div>
+                        <div class="card-box d-flex flex-column">
+                            <!-- Todo Controls -->
+                            <div class="d-flex justify-content-end align-items-center mb-3">
+                                <button class="btn btn-outline-secondary btn-sm" id="btn-archive">
+                                    <i class="fa-solid fa-archive me-1"></i>Archive
+                                </button>
+                            </div>
+                            <!-- Todo Stats -->
+                            <div class="alert alert-light border mb-3" role="alert">
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <span class="fw-medium">
+                                        <i class="fa-solid fa-clock text-warning me-1"></i>
+                                        <span id="todo-remaining">0</span> of <span id="todo-total">0</span> remaining
+                                    </span>
+                                    <div class="progress" style="width: 100px; height: 8px;">
+                                        <div class="progress-bar bg-success" role="progressbar" style="width: 0%" id="todo-progress"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Todo List -->
+                            <div class="flex-grow-1" style="max-height: 350px; overflow-y: auto;">
+                                <ul class="list-group list-group-flush" id="todo-list"></ul>
+                            </div>
+                            
+                            <!-- Add Todo Form -->
+                            <div class="mt-auto pt-3 border-top">
+                                <div class="input-group">
+                                    <input type="text" id="todo-input-text" class="form-control" placeholder="Add new todo item..." aria-label="New todo">
+                                    <button class="btn btn-primary" type="button" id="todo-btn-submit">
+                                        <i class="fa-solid fa-plus me-1"></i>Add
+                                    </button>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+                    <div class="notika-chat-list notika-shadow mg-t-30 tb-res-ds-n dk-res-ds h-100">
+                        <div class="realtime-ctn">
+                            <div class="realtime-title">
+                                <h2>Chat Box</h2>
+                            </div>
+                        </div>
+                        <div class="card-box d-flex flex-column p-0" style="height: 100%;">
+                            <!-- Chat Messages -->
+                            <div class="chat-messages p-3" style="flex: 1; max-height: 480px; overflow-y: auto;" id="chat-messages">
+                                <div class="conversation-list">
+                                    <!-- Message 1 -->
+                                    <div class="d-flex mb-3">
+                                        <img src="/post/1.jpg" alt="John" class="rounded-circle me-2" style="width: 35px; height: 35px; object-fit: cover;">
+                                        <div class="flex-grow-1">
+                                            <div class="d-flex align-items-baseline mb-1">
+                                                <span class="fw-medium small me-2">John Deo</span>
+                                                <span class="text-muted small">10:00</span>
+                                            </div>
+                                            <div class="bg-light p-2 rounded">
+                                                <p class="mb-0 small">Hello! How's everyone doing today?</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Message 2 -->
+                                    <div class="d-flex mb-3 justify-content-end">
+                                        <div class="me-2 text-end">
+                                            <div class="d-flex align-items-baseline justify-content-end mb-1">
+                                                <span class="text-muted small me-2">10:01</span>
+                                                <span class="fw-medium small">You</span>
+                                            </div>
+                                            <div class="bg-primary text-white p-2 rounded">
+                                                <p class="mb-0 small">Hi! Doing great. What about our next meeting?</p>
+                                            </div>
+                                        </div>
+                                        <img src="/post/2.jpg" alt="You" class="rounded-circle" style="width: 35px; height: 35px; object-fit: cover;">
+                                    </div>
+                                    
+                                    <!-- Message 3 -->
+                                    <div class="d-flex mb-3">
+                                        <img src="/post/1.jpg" alt="John" class="rounded-circle me-2" style="width: 35px; height: 35px; object-fit: cover;">
+                                        <div class="flex-grow-1">
+                                            <div class="d-flex align-items-baseline mb-1">
+                                                <span class="fw-medium small me-2">John Deo</span>
+                                                <span class="text-muted small">10:02</span>
+                                            </div>
+                                            <div class="bg-light p-2 rounded">
+                                                <p class="mb-0 small">Perfect! Everything looks good on my end.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Message 4 -->
+                                    <div class="d-flex mb-3 justify-content-end">
+                                        <div class="me-2 text-end">
+                                            <div class="d-flex align-items-baseline justify-content-end mb-1">
+                                                <span class="text-muted small me-2">10:02</span>
+                                                <span class="fw-medium small">You</span>
+                                            </div>
+                                            <div class="bg-primary text-white p-2 rounded">
+                                                <p class="mb-0 small">Awesome! Looking forward to it.</p>
+                                            </div>
+                                        </div>
+                                        <img src="/post/2.jpg" alt="You" class="rounded-circle" style="width: 35px; height: 35px; object-fit: cover;">
+                                    </div>
+                                    
+                                    <!-- Message 5 -->
+                                    <div class="d-flex mb-3">
+                                        <img src="/post/4.jpg" alt="Sarah" class="rounded-circle me-2" style="width: 35px; height: 35px; object-fit: cover;">
+                                        <div class="flex-grow-1">
+                                            <div class="d-flex align-items-baseline mb-1">
+                                                <span class="fw-medium small me-2">Sarah Wilson</span>
+                                                <span class="text-muted small">10:15</span>
+                                            </div>
+                                            <div class="bg-light p-2 rounded">
+                                                <p class="mb-0 small">Just finished reviewing the latest designs. They look fantastic!</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Message 6 -->
+                                    <div class="d-flex mb-3 justify-content-end">
+                                        <div class="me-2 text-end">
+                                            <div class="d-flex align-items-baseline justify-content-end mb-1">
+                                                <span class="text-muted small me-2">10:16</span>
+                                                <span class="fw-medium small">You</span>
+                                            </div>
+                                            <div class="bg-primary text-white p-2 rounded">
+                                                <p class="mb-0 small">Thanks Sarah! We put a lot of effort into the new UI.</p>
+                                            </div>
+                                        </div>
+                                        <img src="/post/2.jpg" alt="You" class="rounded-circle" style="width: 35px; height: 35px; object-fit: cover;">
+                                    </div>
+                                    
+                                    <!-- Message 7 -->
+                                    <div class="d-flex mb-3">
+                                        <img src="/post/1.jpg" alt="John" class="rounded-circle me-2" style="width: 35px; height: 35px; object-fit: cover;">
+                                        <div class="flex-grow-1">
+                                            <div class="d-flex align-items-baseline mb-1">
+                                                <span class="fw-medium small me-2">John Deo</span>
+                                                <span class="text-muted small">10:18</span>
+                                            </div>
+                                            <div class="bg-light p-2 rounded">
+                                                <p class="mb-0 small">The performance metrics are looking great too. Load times improved by 40%!</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Chat Input -->
+                            <div class="p-3 border-top bg-light" style="margin-top: 20px;">
+                                <div class="d-flex gap-2 align-items-end">
+                                    <div class="flex-grow-1">
+                                        <input type="text" class="form-control chat-input border-0 shadow-sm" placeholder="Type your message..." aria-label="Chat message" style="border-radius: 20px; padding: 12px 16px;">
+                                    </div>
+                                    <button class="btn btn-primary notika-chat-btn d-flex align-items-center justify-content-center" type="button" style="width: 44px; height: 44px; border-radius: 50%; padding: 0; border: none;">
+                                        <i class="fa-solid fa-paper-plane" style="font-size: 16px;"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Realtime sts area-->
+    <!-- Start System Overview area-->
+    <div class="system-overview-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-md-8 col-sm-12 col-12">
+                    <div class="system-performance-inner notika-shadow mg-t-30">
+                        <div class="curved-inner-pro">
+                            <div class="curved-ctn">
+                                <h2>System Performance Overview</h2>
+                                <p>Real-time monitoring of server metrics and performance indicators</p>
+                            </div>
+                        </div>
+                        <div class="system-perf-content">
+                            <!-- Performance Metrics Grid -->
+                            <div class="perf-metrics-grid">
+                                <div class="perf-metric-card">
+                                    <div class="metric-icon">
+                                        <i class="fa-solid fa-microchip"></i>
+                                    </div>
+                                    <div class="metric-content">
+                                        <h4><span class="counter">78</span>%</h4>
+                                        <p>CPU Usage</p>
+                                        <div class="metric-trend positive">↗ +2.4%</div>
+                                    </div>
+                                    <div class="metric-chart">
+                                        <div class="stats-cpu-line"></div>
+                                    </div>
+                                </div>
+                                
+                                <div class="perf-metric-card">
+                                    <div class="metric-icon">
+                                        <i class="fa-solid fa-memory"></i>
+                                    </div>
+                                    <div class="metric-content">
+                                        <h4><span class="counter">45</span>%</h4>
+                                        <p>Memory</p>
+                                        <div class="metric-trend negative">↘ -1.2%</div>
+                                    </div>
+                                    <div class="metric-chart">
+                                        <div class="stats-memory-bar"></div>
+                                    </div>
+                                </div>
+                                
+                                <div class="perf-metric-card">
+                                    <div class="metric-icon">
+                                        <i class="fa-solid fa-hdd"></i>
+                                    </div>
+                                    <div class="metric-content">
+                                        <h4><span class="counter">67</span>%</h4>
+                                        <p>Disk Usage</p>
+                                        <div class="metric-trend neutral">→ 0.0%</div>
+                                    </div>
+                                    <div class="metric-chart">
+                                        <div class="stats-disk-area"></div>
+                                    </div>
+                                </div>
+                                
+                                <div class="perf-metric-card">
+                                    <div class="metric-icon">
+                                        <i class="fa-solid fa-wifi"></i>
+                                    </div>
+                                    <div class="metric-content">
+                                        <h4><span class="counter">2.4</span>GB</h4>
+                                        <p>Bandwidth</p>
+                                        <div class="metric-trend positive">↗ +5.8%</div>
+                                    </div>
+                                    <div class="metric-chart">
+                                        <div class="stats-bandwidth-area"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- System Status Indicators -->
+                            <div class="system-status-row">
+                                <div class="status-indicator">
+                                    <div class="status-dot status-online"></div>
+                                    <span>Database: Online</span>
+                                </div>
+                                <div class="status-indicator">
+                                    <div class="status-dot status-online"></div>
+                                    <span>API: Healthy</span>
+                                </div>
+                                <div class="status-indicator">
+                                    <div class="status-dot status-warning"></div>
+                                    <span>Cache: High Load</span>
+                                </div>
+                                <div class="status-indicator">
+                                    <div class="status-dot status-online"></div>
+                                    <span>Storage: Normal</span>
+                                </div>
+                            </div>
+                            
+                            <!-- Additional Performance Data -->
+                            <div class="system-additional-metrics">
+                                <div class="additional-metric-row">
+                                    <div class="additional-metric-item">
+                                        <div class="metric-label">Response Time</div>
+                                        <div class="metric-value">
+                                            <span class="metric-number">245</span>
+                                            <span class="metric-unit">ms</span>
+                                        </div>
+                                        <div class="metric-trend positive">↓ -12ms</div>
+                                    </div>
+                                    
+                                    <div class="additional-metric-item">
+                                        <div class="metric-label">Requests/sec</div>
+                                        <div class="metric-value">
+                                            <span class="metric-number">1,247</span>
+                                            <span class="metric-unit">req/s</span>
+                                        </div>
+                                        <div class="metric-trend positive">↗ +23</div>
+                                    </div>
+                                    
+                                    <div class="additional-metric-item">
+                                        <div class="metric-label">Error Rate</div>
+                                        <div class="metric-value">
+                                            <span class="metric-number">0.12</span>
+                                            <span class="metric-unit">%</span>
+                                        </div>
+                                        <div class="metric-trend positive">↓ -0.03%</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="server-uptime-section">
+                                    <div class="uptime-header">
+                                        <h4>System Uptime</h4>
+                                        <span class="uptime-value">99.8%</span>
+                                    </div>
+                                    <div class="uptime-details">
+                                        <div class="uptime-item">
+                                            <span class="uptime-label">Current Session:</span>
+                                            <span class="uptime-time">14d 8h 32m</span>
+                                        </div>
+                                        <div class="uptime-item">
+                                            <span class="uptime-label">Last Restart:</span>
+                                            <span class="uptime-time">Mar 15, 2024</span>
+                                        </div>
+                                        <div class="uptime-item">
+                                            <span class="uptime-label">Next Maintenance:</span>
+                                            <span class="uptime-time">Apr 1, 2024</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-4 col-sm-12 col-12">
+                    <div class="activity-overview-inner notika-shadow mg-t-30">
+                        <div class="curved-inner-pro">
+                            <div class="curved-ctn">
+                                <h2>Activity Overview</h2>
+                                <p>User engagement and system interactions</p>
+                            </div>
+                        </div>
+                        <div class="activity-over-content">
+                            <!-- Activity Chart -->
+                            <div class="activity-chart-container">
+                                <div id="user-activity-chart" class="activity-chart"></div>
+                            </div>
+                            
+                            <!-- Activity Stats -->
+                            <div class="activity-stats-list">
+                                <div class="activity-stat-row">
+                                    <div class="stat-icon">
+                                        <i class="fa-solid fa-users" style="color: #00c292;"></i>
+                                    </div>
+                                    <div class="stat-info">
+                                        <h5><span class="counter">12,450</span></h5>
+                                        <p>Active Users</p>
+                                    </div>
+                                    <div class="stat-change positive">+12%</div>
+                                </div>
+                                
+                                <div class="activity-stat-row">
+                                    <div class="stat-icon">
+                                        <i class="fa-solid fa-mouse-pointer" style="color: #03a9f3;"></i>
+                                    </div>
+                                    <div class="stat-info">
+                                        <h5><span class="counter">8,760</span></h5>
+                                        <p>Page Views</p>
+                                    </div>
+                                    <div class="stat-change positive">+8%</div>
+                                </div>
+                                
+                                <div class="activity-stat-row">
+                                    <div class="stat-icon">
+                                        <i class="fa-solid fa-clock" style="color: #ffc107;"></i>
+                                    </div>
+                                    <div class="stat-info">
+                                        <h5><span class="counter">4</span>:32</h5>
+                                        <p>Avg. Session</p>
+                                    </div>
+                                    <div class="stat-change negative">-3%</div>
+                                </div>
+                                
+                                <div class="activity-stat-row">
+                                    <div class="stat-icon">
+                                        <i class="fa-solid fa-chart-line" style="color: #e91e63;"></i>
+                                    </div>
+                                    <div class="stat-info">
+                                        <h5><span class="counter">23</span>%</h5>
+                                        <p>Bounce Rate</p>
+                                    </div>
+                                    <div class="stat-change positive">-5%</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End System Overview area-->
+
+    <!-- Start Footer area-->
+    <div class="footer-copyright-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                    <div class="footer-copy-right">
+                        <p>Copyright © 2025 
+. All rights reserved. Template by <a href="https://colorlib.com">Colorlib</a>.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Footer area-->
+
+    <!-- ONLY VITE ENTRY POINT - Everything else bundled by Vite -->
+    <script type="module" src="/src/js/pages/index-3.js"></script>
+    
+    <!-- Clean Navigation JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Search functionality
+            const searchInput = document.querySelector('.search-dropdown input');
+            if (searchInput) {
+                const searchTrigger = searchInput.closest('.dropdown').querySelector('[data-bs-toggle="dropdown"]');
+                if (searchTrigger) {
+                    searchTrigger.addEventListener('shown.bs.dropdown', function() {
+                        setTimeout(() => searchInput.focus(), 100);
+                    });
+                }
+                
+                searchInput.addEventListener('keypress', function(e) {
+                    if (e.key === 'Enter' && this.value.trim()) {
+                        console.log('Searching for:', this.value);
+                    }
+                });
+            }
+            
+            // Simple navbar dropdown enhancements
+            const navDropdowns = document.querySelectorAll('.notika-navbar .dropdown');
+            
+            navDropdowns.forEach(dropdown => {
+                const toggle = dropdown.querySelector('.dropdown-toggle');
+                
+                // Add subtle click feedback
+                if (toggle) {
+                    toggle.addEventListener('click', function(e) {
+                        // Don't navigate away, just toggle dropdown
+                        e.preventDefault();
+                        
+                        // Quick visual feedback
+                        this.style.transform = 'scale(0.98)';
+                        setTimeout(() => {
+                            this.style.transform = '';
+                        }, 100);
+                    });
+                }
+            });
+            
+            console.log('✅ Stable navigation system initialized');
+        });
+    </script>
+</body>
+</html>

@@ -13,7 +13,17 @@ export default defineConfig({
     emptyOutDir: true,
     rollupOptions: {
       input: {
-        main: resolve(process.cwd(), 'notika/green-horizotal/index-vite.html')
+        main: resolve(process.cwd(), 'notika/green-horizotal/index-vite.html'),
+        analytics: resolve(process.cwd(), 'notika/green-horizotal/analytics-vite.html'),
+        'index-2': resolve(process.cwd(), 'notika/green-horizotal/index-2-vite.html'),
+        'index-3': resolve(process.cwd(), 'notika/green-horizotal/index-3-vite.html'),
+        'index-4': resolve(process.cwd(), 'notika/green-horizotal/index-4-vite.html'),
+        'bar-charts': resolve(process.cwd(), 'notika/green-horizotal/bar-charts-vite.html'),
+        'line-charts': resolve(process.cwd(), 'notika/green-horizotal/line-charts-vite.html'),
+        'area-charts': resolve(process.cwd(), 'notika/green-horizotal/area-charts-vite.html'),
+        'form-elements': resolve(process.cwd(), 'notika/green-horizotal/form-elements-vite.html'),
+        'form-components': resolve(process.cwd(), 'notika/green-horizotal/form-components-vite.html'),
+        'form-examples': resolve(process.cwd(), 'notika/green-horizotal/form-examples-vite.html')
       },
       output: {
         manualChunks: {

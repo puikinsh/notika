@@ -42,9 +42,12 @@ import {
   faMemory,
   faHdd,
   faWifi,
-  faMousePointer
+  faMousePointer,
+  faArrowTrendUp,
+  faArrowTrendDown,
+  faShieldHalved
 } from '@fortawesome/free-solid-svg-icons'
-import { faBootstrap } from '@fortawesome/free-brands-svg-icons'
+import { faBootstrap, faGoogle, faMicrosoft } from '@fortawesome/free-brands-svg-icons'
 
 // Add only the icons we use to the library
 library.add(
@@ -80,7 +83,12 @@ library.add(
   faMemory,
   faHdd,
   faWifi,
-  faMousePointer
+  faMousePointer,
+  faArrowTrendUp,
+  faArrowTrendDown,
+  faShieldHalved,
+  faGoogle,
+  faMicrosoft
 )
 
 // Replace any <i> tags with SVG automatically
@@ -91,7 +99,7 @@ import '../../css/swiper.min.css'
 import '../../css/owl.theme.css'
 import '../../css/owl.transitions.css'
 import '../../css/meanmenu/meanmenu.min.css'
-import '../../css/animations.css'
+// Removed animate.css v3.4.0 (656 redundant vendor prefixes from 2015)
 import '../../css/reset.css'
 import '../../css/notika-custom-icon.css'
 import '../../css/wave/waves.min.css'
@@ -1031,6 +1039,80 @@ class NotikaApp {
 
     // Add styles for new dashboard widgets to match Notika design
     const dashboardStyles = `
+      
+      /* Reusable Widget Components - No More Inline Styles */
+      .analytics-chart-container {
+        padding: 20px;
+        width: 100% !important;
+        min-height: 280px !important;
+      }
+      
+      .analytics-chart-container canvas {
+        width: 100% !important;
+        height: 280px !important;
+        max-width: none !important;
+        display: block !important;
+      }
+      
+      /* Force chart containers to full width and proper aspect ratio */
+      #visit-server-time,
+      #dynamic-chart, 
+      #visit-over-time {
+        width: 100% !important;
+        height: 280px !important;
+        min-height: 280px !important;
+        min-width: 350px !important;
+      }
+      
+      /* Force chart parent containers to allow wider charts */
+      .analytics-chart-container {
+        padding: 20px;
+        width: 100% !important;
+        min-height: 280px !important;
+        overflow: visible !important;
+      }
+      
+      /* Override any width constraints from original CSS */
+      .visitor-sv-tm-ch,
+      .visitor-st-ch,
+      .flot-chart {
+        width: 100% !important;
+        min-width: 350px !important;
+        max-width: none !important;
+      }
+      
+      .notification-icon {
+        width: 35px;
+        height: 35px;
+        margin-right: 12px;
+      }
+      
+      .notification-icon i {
+        font-size: 14px;
+      }
+      
+      .task-dropdown {
+        min-width: 280px;
+      }
+      
+      .progress-bar-85 {
+        width: 85%;
+      }
+      
+      .progress-bar-65 {
+        width: 65%;
+      }
+      
+      .progress-bar-95 {
+        width: 95%;
+      }
+      
+      .widget-padding {
+        padding: 0 30px 30px 30px;
+      }
+      
+      /* Let original Notika CSS handle widget styling - no overrides needed */
+      /* Just add our reusable components */
       
       /* Chat and Todo Input Styling - consistent design */
       .input-group .btn {
