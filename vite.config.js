@@ -1,6 +1,7 @@
 import { defineConfig } from 'vite'
 import { resolve } from 'path'
-import eslint from 'vite-plugin-eslint'
+import autoprefixer from 'autoprefixer'
+import cssnano from 'cssnano'
 
 export default defineConfig({
   // Root directory where index.html is located
@@ -12,20 +13,13 @@ export default defineConfig({
     emptyOutDir: true,
     rollupOptions: {
       input: {
-        main: resolve(__dirname, 'notika/green-horizotal/index.html'),
-        analytics: resolve(__dirname, 'notika/green-horizotal/analytics.html'),
-        charts: resolve(__dirname, 'notika/green-horizotal/flot-charts.html'),
-        tables: resolve(__dirname, 'notika/green-horizotal/data-table.html'),
-        forms: resolve(__dirname, 'notika/green-horizotal/form-elements.html'),
-        email: resolve(__dirname, 'notika/green-horizotal/inbox.html'),
-        login: resolve(__dirname, 'notika/green-horizotal/login-register.html')
+        main: resolve(process.cwd(), 'notika/green-horizotal/index-modern.html')
       },
       output: {
         manualChunks: {
-          vendor: ['chart.js', 'swiper', 'bootstrap'],
+          vendor: ['bootstrap'],
           charts: ['chart.js'],
-          ui: ['tom-select', 'flatpickr', 'nouislider'],
-          utils: ['dayjs', 'aos']
+          ui: ['swiper', 'aos']
         }
       }
     },
@@ -39,32 +33,26 @@ export default defineConfig({
   server: {
     port: 3000,
     open: true,
-    cors: true
+    cors: true,
+    host: true
   },
   
   // CSS preprocessing
   css: {
     preprocessorOptions: {
       scss: {
-        additionalData: `@import "./src/styles/variables.scss";`
+        api: 'modern-compiler'
       }
     },
     postcss: {
       plugins: [
-        require('autoprefixer'),
-        require('cssnano')({
+        autoprefixer(),
+        cssnano({
           preset: 'default'
         })
       ]
     }
   },
-  
-  // Plugins for Vite 7.x
-  plugins: [
-    eslint({
-      include: ['src/**/*.js', 'src/**/*.ts']
-    })
-  ],
   
   // Asset handling
   assetsInclude: ['**/*.woff', '**/*.woff2', '**/*.ttf', '**/*.eot'],
@@ -78,16 +66,11 @@ export default defineConfig({
   // Resolve aliases
   resolve: {
     alias: {
-      '@': resolve(__dirname, './src'),
-      '@css': resolve(__dirname, './notika/green-horizotal/css'),
-      '@js': resolve(__dirname, './notika/green-horizotal/js'),
-      '@img': resolve(__dirname, './notika/green-horizotal/img')
+      '@': resolve(process.cwd(), './src'),
+      '@css': resolve(process.cwd(), './notika/green-horizotal/css'),
+      '@js': resolve(process.cwd(), './notika/green-horizotal/js'),
+      '@img': resolve(process.cwd(), './notika/green-horizotal/img')
     }
-  },
-  
-  // Environment variables
-  define: {
-    __APP_VERSION__: JSON.stringify(process.env.npm_package_version || '2.0.0')
   },
   
   // Optimization
@@ -97,13 +80,13 @@ export default defineConfig({
       'chart.js', 
       'swiper',
       'dayjs',
-      'tom-select'
+      'aos'
     ],
-    exclude: [
-      // Exclude problematic legacy libraries
-      'jquery-ui',
-      'moment',
-      'datatables'
-    ]
+    exclude: []
+  },
+  
+  // Environment variables
+  define: {
+    __APP_VERSION__: JSON.stringify('2.0.0')
   }
 })

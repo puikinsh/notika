@@ -126,13 +126,30 @@
     margin: 0;
 }
 
-/* Statistics widgets special handling */
+/* Statistics widgets special handling - Match Notika brand colors */
 .website-traffic-ctn {
     padding: var(--widget-header-padding);
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #00c292 0%, #00a085 100%);
     color: white;
     text-align: center;
     border-bottom: none;
+}
+
+/* Individual card color variations using brand palette */
+.col-lg-3:nth-child(1) .website-traffic-ctn {
+    background: linear-gradient(135deg, #00c292 0%, #00a085 100%); /* Primary green */
+}
+
+.col-lg-3:nth-child(2) .website-traffic-ctn {
+    background: linear-gradient(135deg, #00a085 0%, #008f72 100%); /* Darker green */
+}
+
+.col-lg-3:nth-child(3) .website-traffic-ctn {
+    background: linear-gradient(135deg, #28a745 0%, #20c997 100%); /* Success green */
+}
+
+.col-lg-3:nth-child(4) .website-traffic-ctn {
+    background: linear-gradient(135deg, #17a2b8 0%, #138496 100%); /* Complementary teal */
 }
 
 .website-traffic-ctn h2 {
