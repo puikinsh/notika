@@ -13,7 +13,7 @@ export default defineConfig({
     emptyOutDir: true,
     rollupOptions: {
       input: {
-        main: resolve(process.cwd(), 'notika/green-horizotal/index-modern.html')
+        main: resolve(process.cwd(), 'notika/green-horizotal/index-vite.html')
       },
       output: {
         manualChunks: {
