@@ -93,7 +93,6 @@ import '../../css/owl.transitions.css'
 import '../../css/meanmenu/meanmenu.min.css'
 import '../../css/animations.css'
 import '../../css/reset.css'
-// Removed jQuery scrollbar dependency - using modern CSS scrollbars
 import '../../css/notika-custom-icon.css'
 import '../../css/wave/waves.min.css'
 import '../../css/main.css'
@@ -1032,90 +1031,6 @@ class NotikaApp {
 
     // Add styles for new dashboard widgets to match Notika design
     const dashboardStyles = `
-      /* FORCE OS DEFAULT SCROLLBARS - Override ALL custom scrollbar CSS */
-      * {
-        scrollbar-width: auto !important;
-        scrollbar-color: initial !important;
-      }
-      
-      *::-webkit-scrollbar {
-        all: revert !important;
-        -webkit-appearance: scrollbar !important;
-      }
-      
-      *::-webkit-scrollbar-track,
-      *::-webkit-scrollbar-thumb,
-      *::-webkit-scrollbar-corner,
-      *::-webkit-scrollbar-button {
-        all: revert !important;
-      }
-      
-      /* Override mCustomScrollbar specifically */
-      .mCustomScrollBox *::-webkit-scrollbar {
-        all: revert !important;
-      }
-      
-      /* Force visible OS default scrollbars */
-      .notika-todo-scrollbar,
-      .widgets-chat-scrollbar,
-      .chat-messages,
-      .recent-post-items,
-      div[style*="overflow-y: auto"],
-      div[style*="overflow-x: auto"] {
-        scrollbar-width: auto !important;
-        scrollbar-color: initial !important;
-        overflow-y: scroll !important;
-      }
-      
-      .notika-todo-scrollbar::-webkit-scrollbar,
-      .widgets-chat-scrollbar::-webkit-scrollbar,
-      .chat-messages::-webkit-scrollbar,
-      .recent-post-items::-webkit-scrollbar,
-      div[style*="overflow-y: auto"]::-webkit-scrollbar,
-      div[style*="overflow-x: auto"]::-webkit-scrollbar {
-        width: initial !important;
-        height: initial !important;
-        display: block !important;
-        -webkit-appearance: scrollbar !important;
-      }
-      
-      .notika-todo-scrollbar::-webkit-scrollbar-track,
-      .widgets-chat-scrollbar::-webkit-scrollbar-track,
-      .chat-messages::-webkit-scrollbar-track,
-      .recent-post-items::-webkit-scrollbar-track,
-      div[style*="overflow-y: auto"]::-webkit-scrollbar-track,
-      div[style*="overflow-x: auto"]::-webkit-scrollbar-track {
-        all: revert !important;
-      }
-      
-      .notika-todo-scrollbar::-webkit-scrollbar-thumb,
-      .widgets-chat-scrollbar::-webkit-scrollbar-thumb,
-      .chat-messages::-webkit-scrollbar-thumb,
-      .recent-post-items::-webkit-scrollbar-thumb,
-      div[style*="overflow-y: auto"]::-webkit-scrollbar-thumb,
-      div[style*="overflow-x: auto"]::-webkit-scrollbar-thumb {
-        all: revert !important;
-      }
-      
-      /* Remove custom scrollbars for main content area - use native OS default */
-      body, 
-      html {
-        scrollbar-width: auto !important;
-        scrollbar-color: initial !important;
-      }
-      
-      body::-webkit-scrollbar, 
-      html::-webkit-scrollbar,
-      body::-webkit-scrollbar-track,
-      html::-webkit-scrollbar-track,
-      body::-webkit-scrollbar-thumb,
-      html::-webkit-scrollbar-thumb {
-        all: revert !important;
-        width: auto !important;
-        height: auto !important;
-        background: initial !important;
-        border-radius: initial !important;
-      }
       
       /* Chat and Todo Input Styling - consistent design */
       .input-group .btn {
@@ -1637,7 +1552,52 @@ class NotikaApp {
     styleSheet.textContent = dashboardStyles
     document.head.appendChild(styleSheet)
 
+    // Remove all webkit scrollbar CSS rules to restore native scrollbars
+    this.removeAllScrollbarRules()
+    
     console.log('✅ Font Awesome 7.0.1 icons ready (tree-shaken, only used icons bundled)')
+  }
+  
+  removeAllScrollbarRules() {
+    // Remove all ::-webkit-scrollbar related CSS rules from all stylesheets
+    const stylesheets = document.styleSheets
+    
+    for (let i = 0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i]
+      try {
+        const rules = stylesheet.cssRules || stylesheet.rules
+        if (rules) {
+          // Go backwards to avoid index issues when deleting
+          for (let j = rules.length - 1; j >= 0; j--) {
+            const rule = rules[j]
+            if (rule.selectorText && (
+              rule.selectorText.includes('::-webkit-scrollbar') ||
+              rule.selectorText.includes('scrollbar') && rule.style && rule.style.display === 'none'
+            )) {
+              try {
+                stylesheet.deleteRule(j)
+              } catch (e) {
+                // Ignore CORS errors for external stylesheets
+              }
+            }
+          }
+        }
+      } catch (e) {
+        // Ignore CORS errors for external stylesheets
+        console.log('Skipped external stylesheet (CORS)')
+      }
+    }
+    
+    // Force redraw of scrollable elements
+    const scrollableElements = document.querySelectorAll('[style*="overflow"], .chat-messages, #todo-list, .recent-post-items')
+    scrollableElements.forEach(el => {
+      const originalOverflow = el.style.overflow
+      el.style.overflow = 'hidden'
+      el.offsetHeight // Force reflow
+      el.style.overflow = originalOverflow || 'auto'
+    })
+    
+    console.log('✅ All webkit scrollbar CSS rules removed - native scrollbars restored')
   }
   
   handleAction(action, element) {
