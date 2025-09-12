@@ -165,17 +165,27 @@
     margin: 0;
 }
 
-/* Chart areas consistent */
+/* Chart areas consistent - Larger charts for better space utilization */
 .sparkline-bar-stats1,
 .sparkline-bar-stats2, 
 .sparkline-bar-stats3,
 .sparkline-bar-stats4 {
-    padding: 16px var(--widget-content-padding);
+    padding: 20px var(--widget-content-padding) 24px var(--widget-content-padding);
     text-align: center;
-    min-height: 50px;
+    min-height: 80px; /* Increased from 50px to 80px */
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+/* Make the actual chart canvases larger */
+.sparkline-bar-stats1 canvas,
+.sparkline-bar-stats2 canvas,
+.sparkline-bar-stats3 canvas,
+.sparkline-bar-stats4 canvas {
+    width: 80px !important; /* Increased from default smaller size */
+    height: 50px !important; /* Increased height for better visibility */
+    max-width: 100%;
 }
 
 /* Table styling consistency */
