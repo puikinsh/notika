@@ -4,68 +4,147 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is the **Notika** admin dashboard template - a free Bootstrap-based admin template created by Colorlib. It's a static HTML/CSS/JS project designed for web admin interfaces.
+This is the **Notika** admin dashboard template - originally a Bootstrap-based template from Colorlib, now fully modernized with Vite 7.x build system, Bootstrap 5.3.8, and ES6 modules.
+
+## Common Development Commands
+
+```bash
+# Development server (with hot reload)
+npm run dev
+
+# Production build
+npm run build
+
+# Preview production build
+npm run preview
+
+# Lint JavaScript/TypeScript files
+npm run lint
+
+# Type checking
+npm run type-check
+```
+
+## Project Architecture
+
+The project has been **modernized from a static template** to a **full Vite-based application**:
+
+- **Build System**: Vite 7.1.5 with ES6 modules and bundling
+- **Frontend Framework**: Bootstrap 5.3.8 with modern CSS/SCSS
+- **JavaScript**: ES6 modules replacing jQuery dependencies
+- **Charts**: Chart.js 4.5.0 with modern API
+- **Icons**: Font Awesome 7.0.1 (tree-shaken, only used icons)
+- **CSS Processing**: SCSS, PostCSS with autoprefixer and cssnano
+- **Development**: Hot module replacement, TypeScript support
 
 ## Project Structure
 
 ```
 notika/
-├── documentation/          # Complete documentation with file structure
-├── notika/green-horizotal/ # Main template files
-│   ├── css/               # All stylesheets organized by feature
-│   ├── js/                # JavaScript files organized by plugin/feature
-│   ├── img/               # Images and assets
-│   ├── fonts/             # Font files (FontAwesome, custom icons)
-│   └── *.html             # 40+ HTML template pages
-└── README.md              # Basic project info
+├── notika/green-horizotal/        # Main template source
+│   ├── src/                       # Modern ES6 source files
+│   │   ├── js/
+│   │   │   ├── main.js           # Main application entry point
+│   │   │   ├── modules/          # Reusable ES6 modules
+│   │   │   │   ├── charts.js     # Chart.js wrapper classes
+│   │   │   │   └── ui.js         # UI components and interactions
+│   │   │   └── pages/            # Page-specific JavaScript
+│   │   └── css/
+│   │       └── modern.scss       # Modern SCSS styles
+│   ├── *-vite.html               # Vite-enabled HTML pages
+│   ├── *.html                    # Original template pages
+│   ├── css/                      # Original CSS files (legacy)
+│   └── js/                       # Original JS files (legacy)
+├── package.json                  # NPM dependencies and scripts
+├── vite.config.js               # Vite configuration
+└── dist/                        # Built files (created after build)
 ```
 
-## Architecture
+## Key Files and Entry Points
 
-This is a **static frontend template** with no build system or package management:
+### Main Application Entry
+- `notika/green-horizotal/src/js/main.js` - Main application class (`NotikaApp`)
+- Handles initialization, chart setup, UI components, and modern interactions
 
-- **Frontend Framework**: Bootstrap 3.x with custom styling
-- **JavaScript**: jQuery-based with multiple specialized plugins
-- **No build tools**: Direct HTML/CSS/JS files, no compilation needed
-- **No dependencies management**: All libraries included directly
+### Module System
+- `src/js/modules/charts.js` - Chart.js wrapper (`NotikaCharts` class)
+- `src/js/modules/ui.js` - UI components and Bootstrap integration (`NotikaUI` class)
+- Page-specific modules in `src/js/pages/` for individual template pages
 
-## Key Template Pages
+### Build Configuration
+- `vite.config.js` - Complete Vite setup with multi-page configuration
+- `package.json` - Modern dependencies and npm scripts
 
-The main template directory (`notika/green-horizotal/`) contains 40+ HTML pages including:
+## Template Pages
 
-- `index.html` - Main dashboard (4 variants: index.html through index-4.html)
-- `analytics.html` - Analytics dashboard
-- `data-table.html` - Data tables with sorting/filtering
-- `form-*.html` - Various form components and examples
-- `charts/` - Multiple chart implementations (Chart.js, Flot, etc.)
-- `login-register.html` - Authentication pages
+The template includes both **legacy** and **modernized** versions:
 
-## Included Libraries & Plugins
+### Vite-Enabled Pages (Modern)
+- `index-vite.html` - Main dashboard with Vite bundling
+- `analytics-vite.html` - Analytics with Chart.js 4.5.0
+- `*-vite.html` - Various modernized pages
 
-Key JavaScript libraries (all in `js/` subdirectories):
-- **Charts**: Chart.js, Flot Charts, Sparklines
-- **Maps**: Google Maps, jVectorMap, DataMaps
-- **Forms**: Chosen, iCheck, TouchSpin, Summernote editor
-- **UI**: Bootstrap components, MetisMenu, custom scrollbar
-- **Other**: Cropper.js, DataTables, notification systems
+### Legacy Pages (Original)
+- `index.html` through `index-4.html` - Original dashboard variants
+- Various form, chart, and component pages (40+ pages total)
 
-## Working with this Template
+## Development Workflow
 
-### Viewing the Template
-- Open any `.html` file directly in browser (no server required)
-- Start with `notika/green-horizotal/index.html` for main dashboard
+### Starting Development
+```bash
+npm run dev  # Starts Vite dev server on port 3000
+```
 
-### Customization
-- **Styling**: Edit `css/main.css` for custom styles
-- **Assets**: Replace images in `img/` directory
-- **Content**: Modify HTML files directly
-- **Features**: Enable/disable plugins by including/excluding their JS/CSS files
+### Building for Production
+```bash
+npm run build  # Creates optimized build in dist/
+```
 
-### File Organization
-- CSS files are organized by feature in subdirectories
-- JavaScript follows the same organizational pattern
-- Each plugin has its corresponding activation file (e.g., `chart-active.js`)
+### Code Quality
+```bash
+npm run lint      # ESLint checking
+npm run type-check # TypeScript checking
+```
+
+## Key Dependencies
+
+### Core Framework
+- **Bootstrap**: 5.3.8 (modern CSS framework)
+- **Chart.js**: 4.5.0 (charts and data visualization)
+- **Vite**: 7.1.5 (build tool and dev server)
+
+### Modern Replacements
+- **Font Awesome**: 7.0.1 (replacing old icon fonts)
+- **Leaflet**: 1.9.4 (replacing old map libraries)
+- **AOS**: 2.3.4 (animation library)
+- **Dayjs**: 1.11.18 (date manipulation)
+
+## Working with the Modernized Template
+
+### Adding New Features
+1. Create ES6 modules in `src/js/modules/`
+2. Import and use in `main.js` or page-specific files
+3. Update Vite configuration if needed for new entry points
+
+### Customizing Styles
+- Edit `src/css/modern.scss` for new styles
+- Original CSS files in `css/` are still included for compatibility
+
+### Chart Integration
+- Use the `NotikaCharts` class from `src/js/modules/charts.js`
+- Chart.js 4.5.0 with modern configuration options
+
+### UI Components
+- Bootstrap 5.3.8 components via the `NotikaUI` class
+- Modern JavaScript replacing jQuery dependencies
+
+## Migration Status
+
+The project exists in a **hybrid state**:
+- **Legacy files**: Original template files maintained for reference
+- **Modern implementation**: Vite-based architecture with ES6 modules
+- **Dual compatibility**: Both old and new approaches work side-by-side
 
 ## License
 
-MIT License - Template by Colorlib, free for commercial and personal use.
+MIT License - Original template by Colorlib, modernization work maintains same license.

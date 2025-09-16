@@ -1,14 +1,14 @@
 <!doctype html>
-<html lang="en" data-page-module="index-2">
+<html lang="en" data-page-module="color">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Dashboard Two | Notika - Modern Vite Template</title>
+    <title>Colors | Notika - Modern Vite Template</title>
     <meta name="description" content="Modern Notika Admin Template powered by Vite 7.1.5">
-    
+
     <!-- Favicon -->
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
-    
+
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700,900" rel="stylesheet">
 
@@ -36,11 +36,11 @@
                         </a>
                     </div>
                 </div>
-                
+
                 <!-- Navigation Section -->
                 <div class="col-lg-8 col-md-6 col-4">
                     <div class="notika-nav justify-content-end">
-                        
+
                         <!-- Search -->
                         <div class="dropdown">
                             <button class="notika-nav-link" type="button" data-bs-toggle="dropdown" data-bs-auto-close="outside">
@@ -53,7 +53,7 @@
                                 </div>
                             </div>
                         </div>
-                        
+
                         <!-- Messages -->
                         <div class="dropdown">
                             <button class="notika-nav-link" type="button" data-bs-toggle="dropdown">
@@ -92,7 +92,7 @@
                                 </div>
                             </div>
                         </div>
-                        
+
                         <!-- Notifications -->
                         <div class="dropdown">
                             <button class="notika-nav-link" type="button" data-bs-toggle="dropdown">
@@ -137,7 +137,7 @@
                                 </div>
                             </div>
                         </div>
-                        
+
                         <!-- Tasks -->
                         <div class="dropdown">
                             <button class="notika-nav-link" type="button" data-bs-toggle="dropdown">
@@ -149,85 +149,78 @@
                                     Active Tasks
                                 </div>
                                 <div class="notika-dropdown-body">
-                                    <div class="task-item px-3">
-                                        <div class="task-title">Website Redesign</div>
-                                        <div class="task-progress">
-                                            <div class="progress">
-                                                <div class="progress-bar" style="width: 85%"></div>
-                                            </div>
-                                            <small class="text-muted">85% Complete</small>
+                                    <div class="notika-task-item">
+                                        <h6>HTML5 Validation Report</h6>
+                                        <div class="progress">
+                                            <div class="progress-bar bg-success" style="width: 95%">95%</div>
                                         </div>
                                     </div>
-                                    <div class="task-item px-3">
-                                        <div class="task-title">API Integration</div>
-                                        <div class="task-progress">
-                                            <div class="progress">
-                                                <div class="progress-bar" style="width: 65%"></div>
-                                            </div>
-                                            <small class="text-muted">65% Complete</small>
+                                    <div class="notika-task-item">
+                                        <h6>Google Chrome Extension</h6>
+                                        <div class="progress">
+                                            <div class="progress-bar bg-info" style="width: 85%">85%</div>
                                         </div>
                                     </div>
-                                    <div class="task-item px-3">
-                                        <div class="task-title">Database Optimization</div>
-                                        <div class="task-progress">
-                                            <div class="progress">
-                                                <div class="progress-bar" style="width: 95%"></div>
-                                            </div>
-                                            <small class="text-muted">95% Complete</small>
+                                    <div class="notika-task-item">
+                                        <h6>Social Internet Projects</h6>
+                                        <div class="progress">
+                                            <div class="progress-bar bg-warning" style="width: 93%">93%</div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="notika-dropdown-footer">
-                                    <a href="widgets.html">View All Tasks</a>
+                                    <a href="todo-list.html">View All Tasks</a>
                                 </div>
                             </div>
                         </div>
-                        
+
                         <!-- Chat -->
                         <div class="dropdown">
                             <button class="notika-nav-link" type="button" data-bs-toggle="dropdown">
                                 <i class="notika-icon notika-chat"></i>
                             </button>
-                            <div class="dropdown-menu dropdown-menu-end notika-dropdown">
+                            <div class="dropdown-menu dropdown-menu-end notika-dropdown" style="min-width: 300px;">
                                 <div class="notika-dropdown-header">
-                                    Team Chat
+                                    Chat
                                 </div>
                                 <div class="notika-dropdown-body">
-                                    <a class="notika-dropdown-item" href="compose-email.html">
-                                        <div style="position: relative;">
+                                    <div class="search-input-group mb-3">
+                                        <input type="text" placeholder="Search people..." class="form-control">
+                                        <i class="notika-icon notika-search search-icon"></i>
+                                    </div>
+                                    <a class="notika-dropdown-item" href="chat.html">
+                                        <div class="position-relative">
                                             <img src="/post/1.jpg" alt="User">
-                                            <div class="chat-status"></div>
+                                            <span class="online-indicator bg-success"></span>
                                         </div>
                                         <div class="notika-dropdown-content">
-                                            <h6>John Doe</h6>
-                                            <p>Online - Available</p>
+                                            <h6>David Belle</h6>
+                                            <p class="text-success">Available</p>
                                         </div>
                                     </a>
-                                    <a class="notika-dropdown-item" href="compose-email.html">
-                                        <div style="position: relative;">
-                                            <img src="/post/2.jpg" alt="User">
-                                        </div>
+                                    <a class="notika-dropdown-item" href="chat.html">
+                                        <img src="/post/2.jpg" alt="User">
                                         <div class="notika-dropdown-content">
-                                            <h6>Sarah Smith</h6>
-                                            <p>Last seen 2 hours ago</p>
+                                            <h6>Jonathan Morris</h6>
+                                            <p>Last seen 3 hours ago</p>
                                         </div>
                                     </a>
-                                    <a class="notika-dropdown-item" href="compose-email.html">
-                                        <div style="position: relative;">
+                                    <a class="notika-dropdown-item" href="chat.html">
+                                        <div class="position-relative">
                                             <img src="/post/4.jpg" alt="User">
+                                            <span class="online-indicator bg-success"></span>
                                         </div>
                                         <div class="notika-dropdown-content">
-                                            <h6>Mike Johnson</h6>
-                                            <p>Away - Back in 10 min</p>
+                                            <h6>Fredric Mitchell</h6>
+                                            <p class="text-success">Available</p>
                                         </div>
                                     </a>
                                 </div>
                                 <div class="notika-dropdown-footer">
-                                    <a href="compose-email.html">Open Chat</a>
+                                    <a href="chat.html">View All Contacts</a>
                                 </div>
                             </div>
                         </div>
-                        
                     </div>
                 </div>
             </div>
@@ -244,7 +237,7 @@
                             <ul class="mobile-menu-nav">
                                 <li><a data-bs-toggle="collapse" data-bs-target="#Charts" href="#">Home</a>
                                     <ul class="collapse dropdown-header-top">
-                                        <li><a href="index.html">Dashboard Two</a></li>
+                                        <li><a href="index.html">Dashboard One</a></li>
                                         <li><a href="index-2.html">Dashboard Two</a></li>
                                         <li><a href="index-3.html">Dashboard Three</a></li>
                                         <li><a href="index-4.html">Dashboard Four</a></li>
@@ -342,15 +335,15 @@
     <nav class="navbar navbar-expand-lg notika-navbar">
         <div class="container">
             <ul class="navbar-nav w-100 justify-content-center">
-                
+
                 <!-- Home Dropdown -->
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         <i class="notika-icon notika-house"></i>
                         <span>Home</span>
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="index.html">Dashboard Two</a></li>
+                        <li><a class="dropdown-item" href="index.html">Dashboard One</a></li>
                         <li><a class="dropdown-item" href="index-2.html">Dashboard Two</a></li>
                         <li><a class="dropdown-item" href="index-3.html">Dashboard Three</a></li>
                         <li><a class="dropdown-item" href="index-4.html">Dashboard Four</a></li>
@@ -428,11 +421,11 @@
                     </ul>
                 </li>
 
-                <!-- Components Dropdown -->
+                <!-- App Views Dropdown -->
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         <i class="notika-icon notika-app"></i>
-                        <span>Components</span>
+                        <span>App views</span>
                     </a>
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="notification.html">Notifications</a></li>
@@ -448,9 +441,9 @@
                     </ul>
                 </li>
 
-                <!-- Pages Dropdown -->
+                <!-- Pages Dropdown - Active -->
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         <i class="notika-icon notika-support"></i>
                         <span>Pages</span>
                     </a>
@@ -458,7 +451,7 @@
                         <li><a class="dropdown-item" href="contact.html">Contact</a></li>
                         <li><a class="dropdown-item" href="invoice.html">Invoice</a></li>
                         <li><a class="dropdown-item" href="typography.html">Typography</a></li>
-                        <li><a class="dropdown-item" href="color.html">Color</a></li>
+                        <li><a class="dropdown-item active" href="color.html">Color</a></li>
                         <li><a class="dropdown-item" href="login-register.html">Login Register</a></li>
                         <li><a class="dropdown-item" href="404.html">404 Page</a></li>
                     </ul>
@@ -467,324 +460,28 @@
             </ul>
         </div>
     </nav>
-    <!-- End Stable Navigation -->
 
-    <!-- Start Project Management Dashboard -->
-    <div class="notika-status-area">
+    <!-- Breadcomb area Start-->
+    <div class="breadcomb-area">
         <div class="container">
             <div class="row">
-                <div class="col-lg-3 col-md-6 col-sm-6 col-12">
-                    <div class="wb-traffic-inner notika-shadow sm-res-mg-t-30 tb-res-mg-t-30 h-100">
-                        <div class="website-traffic-ctn">
-                            <h2><span class="counter">24</span></h2>
-                            <p>Active Projects</p>
-                        </div>
-                        <div class="sparkline-bar-stats1"></div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6 col-12">
-                    <div class="wb-traffic-inner notika-shadow sm-res-mg-t-30 tb-res-mg-t-30 h-100">
-                        <div class="website-traffic-ctn">
-                            <h2><span class="counter">156</span></h2>
-                            <p>Completed Tasks</p>
-                        </div>
-                        <div class="sparkline-bar-stats2"></div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6 col-12">
-                    <div class="wb-traffic-inner notika-shadow sm-res-mg-t-30 tb-res-mg-t-30 dk-res-mg-t-30 h-100">
-                        <div class="website-traffic-ctn">
-                            <h2><span class="counter">12</span></h2>
-                            <p>Team Members</p>
-                        </div>
-                        <div class="sparkline-bar-stats3"></div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6 col-12">
-                    <div class="wb-traffic-inner notika-shadow sm-res-mg-t-30 tb-res-mg-t-30 dk-res-mg-t-30 h-100">
-                        <div class="website-traffic-ctn">
-                            <h2><span class="counter">89</span>%</h2>
-                            <p>Project Success Rate</p>
-                        </div>
-                        <div class="sparkline-bar-stats4"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- End Status area-->
-
-    <!-- Start Project Analytics area-->
-    <div class="sale-statistic-area">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-md-7 col-sm-6 col-12">
-                    <div class="sale-statistic-inner notika-shadow mg-tb-30">
-                        <div class="curved-inner-pro">
-                            <div class="curved-ctn">
-                                <h2>Project Timeline Analytics</h2>
-                                <p>Track project completion rates and team productivity over time</p>
-                            </div>
-                        </div>
-                        <div id="curved-line-chart" class="flot-chart-sts flot-chart"></div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-5 col-sm-6 col-12">
-                    <div class="statistic-right-area notika-shadow mg-tb-30 sm-res-mg-t-0">
-                        <div class="past-day-statis">
-                            <h2>Team Performance</h2>
-                            <p>Real-time metrics for your development team's productivity and efficiency.</p>
-                        </div>
-                        <div class="dash-widget-visits"></div>
-                        <div class="past-statistic-an">
-                            <div class="past-statistic-ctn">
-                                <h3><span class="counter">47</span></h3>
-                                <p>Issues Resolved</p>
-                            </div>
-                            <div class="past-statistic-graph">
-                                <div class="stats-bar"></div>
-                            </div>
-                        </div>
-                        <div class="past-statistic-an">
-                            <div class="past-statistic-ctn">
-                                <h3><span class="counter">892</span></h3>
-                                <p>Code Commits</p>
-                            </div>
-                            <div class="past-statistic-graph">
-                                <div class="stats-line"></div>
-                            </div>
-                        </div>
-                        <div class="past-statistic-an">
-                            <div class="past-statistic-ctn">
-                                <h3><span class="counter">98</span>%</h3>
-                                <p>Uptime</p>
-                            </div>
-                            <div class="past-statistic-graph">
-                                <div class="stats-bar-2"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- End Project Analytics area-->
-
-    <!-- Start Team & Resources area-->
-    <div class="notika-email-post-area">
-        <div class="container">
-            <div class="row">
-                <!-- Team Members Widget -->
-                <div class="col-lg-4 col-md-6 col-sm-6 col-12">
-                    <div class="recent-post-wrapper notika-shadow mg-t-30">
-                        <div class="recent-post-ctn">
-                            <div class="recent-post-title">
-                                <h2>Team Members</h2>
-                                <p>Active development team members and their current status</p>
-                            </div>
-                        </div>
-                        <div class="recent-post-items analytics-chart-container">
-                            <div class="team-member-item d-flex align-items-center mb-3">
-                                <img src="/post/1.jpg" alt="Team Member" class="rounded-circle me-3" style="width: 45px; height: 45px; object-fit: cover;">
-                                <div class="flex-grow-1">
-                                    <h6 class="mb-1 fw-bold">Sarah Johnson</h6>
-                                    <small class="text-muted">Frontend Developer</small>
-                                    <div class="d-flex align-items-center mt-1">
-                                        <span class="badge bg-success me-2">Online</span>
-                                        <small class="text-success">Working on UI Components</small>
+                <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                    <div class="breadcomb-list">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-12">
+                                <div class="breadcomb-wp">
+                                    <div class="breadcomb-icon">
+                                        <i class="notika-icon notika-support"></i>
+                                    </div>
+                                    <div class="breadcomb-ctn">
+                                        <h2>Color</h2>
+                                        <p>Welcome to Notika <span class="bread-ntd">Admin Template</span></p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="team-member-item d-flex align-items-center mb-3">
-                                <img src="/post/2.jpg" alt="Team Member" class="rounded-circle me-3" style="width: 45px; height: 45px; object-fit: cover;">
-                                <div class="flex-grow-1">
-                                    <h6 class="mb-1 fw-bold">Mike Chen</h6>
-                                    <small class="text-muted">Backend Developer</small>
-                                    <div class="d-flex align-items-center mt-1">
-                                        <span class="badge bg-warning me-2">Away</span>
-                                        <small class="text-warning">API Integration</small>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="team-member-item d-flex align-items-center mb-3">
-                                <img src="/post/4.jpg" alt="Team Member" class="rounded-circle me-3" style="width: 45px; height: 45px; object-fit: cover;">
-                                <div class="flex-grow-1">
-                                    <h6 class="mb-1 fw-bold">Alex Rivera</h6>
-                                    <small class="text-muted">DevOps Engineer</small>
-                                    <div class="d-flex align-items-center mt-1">
-                                        <span class="badge bg-success me-2">Online</span>
-                                        <small class="text-success">Deploy Pipeline</small>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="team-member-item d-flex align-items-center">
-                                <img src="/post/1.jpg" alt="Team Member" class="rounded-circle me-3" style="width: 45px; height: 45px; object-fit: cover;">
-                                <div class="flex-grow-1">
-                                    <h6 class="mb-1 fw-bold">Emma Davis</h6>
-                                    <small class="text-muted">QA Specialist</small>
-                                    <div class="d-flex align-items-center mt-1">
-                                        <span class="badge bg-info me-2">In Meeting</span>
-                                        <small class="text-info">Testing Sprint Review</small>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project Progress Widget -->
-                <div class="col-lg-4 col-md-6 col-sm-6 col-12">
-                    <div class="recent-post-wrapper notika-shadow mg-t-30">
-                        <div class="recent-post-ctn">
-                            <div class="recent-post-title">
-                                <h2>Project Progress</h2>
-                                <p>Current status of active development projects</p>
-                            </div>
-                        </div>
-                        <div class="recent-post-items analytics-chart-container">
-                            <div class="project-item mb-4">
-                                <div class="d-flex justify-content-between align-items-center mb-2">
-                                    <h6 class="mb-0 fw-bold">E-commerce Platform</h6>
-                                    <span class="badge bg-primary">75%</span>
-                                </div>
-                                <div class="progress mb-2" style="height: 8px;">
-                                    <div class="progress-bar bg-primary" style="width: 75%"></div>
-                                </div>
-                                <small class="text-muted">Due: Dec 15, 2025</small>
-                            </div>
-                            <div class="project-item mb-4">
-                                <div class="d-flex justify-content-between align-items-center mb-2">
-                                    <h6 class="mb-0 fw-bold">Mobile App</h6>
-                                    <span class="badge bg-success">90%</span>
-                                </div>
-                                <div class="progress mb-2" style="height: 8px;">
-                                    <div class="progress-bar bg-success" style="width: 90%"></div>
-                                </div>
-                                <small class="text-muted">Due: Oct 30, 2025</small>
-                            </div>
-                            <div class="project-item mb-4">
-                                <div class="d-flex justify-content-between align-items-center mb-2">
-                                    <h6 class="mb-0 fw-bold">API Documentation</h6>
-                                    <span class="badge bg-warning">45%</span>
-                                </div>
-                                <div class="progress mb-2" style="height: 8px;">
-                                    <div class="progress-bar bg-warning" style="width: 45%"></div>
-                                </div>
-                                <small class="text-muted">Due: Nov 20, 2025</small>
-                            </div>
-                            <div class="project-item">
-                                <div class="d-flex justify-content-between align-items-center mb-2">
-                                    <h6 class="mb-0 fw-bold">Security Audit</h6>
-                                    <span class="badge bg-info">60%</span>
-                                </div>
-                                <div class="progress mb-2" style="height: 8px;">
-                                    <div class="progress-bar bg-info" style="width: 60%"></div>
-                                </div>
-                                <small class="text-muted">Due: Dec 5, 2025</small>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Resource Allocation Widget -->
-                <div class="col-lg-4 col-md-6 col-sm-6 col-12">
-                    <div class="recent-post-wrapper notika-shadow mg-t-30">
-                        <div class="recent-post-ctn">
-                            <div class="recent-post-title">
-                                <h2>Resource Allocation</h2>
-                                <p>Server resources and budget allocation breakdown</p>
-                            </div>
-                        </div>
-                        <div class="recent-post-items analytics-chart-container">
-                            <div id="resource-allocation-chart"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Second Row: Sprint Overview and Recent Activity -->
-            <div class="row" style="margin-top: 40px;">
-                <!-- Sprint Overview Widget -->
-                <div class="col-lg-6 col-md-6 col-sm-6 col-12">
-                    <div class="recent-post-wrapper notika-shadow mg-t-30">
-                        <div class="recent-post-ctn">
-                            <div class="recent-post-title">
-                                <h2>Current Sprint Overview</h2>
-                                <p>Sprint 23 progress and upcoming milestones</p>
-                            </div>
-                        </div>
-                        <div class="recent-post-items analytics-chart-container">
-                            <div class="sprint-stats-grid mb-4">
-                                <div class="row">
-                                    <div class="col-6">
-                                        <div class="text-center">
-                                            <h4 class="text-primary fw-bold">8</h4>
-                                            <small class="text-muted">Days Remaining</small>
-                                        </div>
-                                    </div>
-                                    <div class="col-6">
-                                        <div class="text-center">
-                                            <h4 class="text-success fw-bold">67%</h4>
-                                            <small class="text-muted">Completed</small>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="sprint-chart-container">
-                                <canvas id="sprint-burndown-chart" height="180"></canvas>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Recent Activity Widget -->
-                <div class="col-lg-6 col-md-6 col-sm-6 col-12">
-                    <div class="recent-post-wrapper notika-shadow mg-t-30">
-                        <div class="recent-post-ctn">
-                            <div class="recent-post-title">
-                                <h2>Recent Activity</h2>
-                                <p>Latest team activities and code changes</p>
-                            </div>
-                        </div>
-                        <div class="recent-post-items analytics-chart-container">
-                            <div class="activity-item d-flex align-items-start mb-3">
-                                <div class="activity-icon bg-success text-white rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 35px; height: 35px; min-width: 35px;">
-                                    <i class="fa-solid fa-code" style="font-size: 14px;"></i>
-                                </div>
-                                <div class="flex-grow-1">
-                                    <h6 class="mb-1 fw-bold">Sarah pushed new feature</h6>
-                                    <p class="mb-1 text-muted small">Added user authentication system with JWT tokens</p>
-                                    <small class="text-muted">2 minutes ago</small>
-                                </div>
-                            </div>
-                            <div class="activity-item d-flex align-items-start mb-3">
-                                <div class="activity-icon bg-info text-white rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 35px; height: 35px; min-width: 35px;">
-                                    <i class="fa-solid fa-bug" style="font-size: 14px;"></i>
-                                </div>
-                                <div class="flex-grow-1">
-                                    <h6 class="mb-1 fw-bold">Bug fix deployed</h6>
-                                    <p class="mb-1 text-muted small">Fixed responsive layout issue on mobile devices</p>
-                                    <small class="text-muted">15 minutes ago</small>
-                                </div>
-                            </div>
-                            <div class="activity-item d-flex align-items-start mb-3">
-                                <div class="activity-icon bg-warning text-white rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 35px; height: 35px; min-width: 35px;">
-                                    <i class="fa-solid fa-users" style="font-size: 14px;"></i>
-                                </div>
-                                <div class="flex-grow-1">
-                                    <h6 class="mb-1 fw-bold">Sprint planning meeting</h6>
-                                    <p class="mb-1 text-muted small">Team estimated 23 story points for next sprint</p>
-                                    <small class="text-muted">1 hour ago</small>
-                                </div>
-                            </div>
-                            <div class="activity-item d-flex align-items-start">
-                                <div class="activity-icon bg-danger text-white rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 35px; height: 35px; min-width: 35px;">
-                                    <i class="fa-solid fa-shield-halved" style="font-size: 14px;"></i>
-                                </div>
-                                <div class="flex-grow-1">
-                                    <h6 class="mb-1 fw-bold">Security scan completed</h6>
-                                    <p class="mb-1 text-muted small">No vulnerabilities found in latest codebase scan</p>
-                                    <small class="text-muted">3 hours ago</small>
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-3">
+                                <div class="breadcomb-report">
+                                    <button data-bs-toggle="tooltip" data-placement="left" title="Download Report" class="btn"><i class="notika-icon notika-sent"></i></button>
                                 </div>
                             </div>
                         </div>
@@ -793,7 +490,266 @@
             </div>
         </div>
     </div>
-    <!-- End Team & Resources area-->
+    <!-- Breadcomb area End-->
+    <!-- Color area Start-->
+    <div class="colr-area">
+        <div class="container">
+            <!-- Color Description -->
+            <div class="row pt-3">
+                <div class="col-12">
+                    <div class="recent-post-wrapper notika-shadow">
+                        <div class="recent-post-ctn">
+                            <div class="recent-post-title">
+                                <h2>Colors from Material Design</h2>
+                                <p>These colors are inspired by bold color statements juxtaposed with muted environments, taking cues from contemporary architecture, road signs, pavement marking tape, and sports courts. Emphasize bold shadows and highlights. Introduce unexpected and vibrant colors. (Taken by Google's color page)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- First Row of Colors -->
+            <div class="row mt-4">
+                <div class="col-lg-3 col-md-6 col-12">
+                    <div class="recent-post-wrapper notika-shadow">
+                        <div class="recent-post-items">
+                            <div class="color-single nk-red">
+                                <h2>RED</h2>
+                                <p>#F44336</p>
+                                <span>.nk-red</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12">
+                    <div class="recent-post-wrapper notika-shadow">
+                        <div class="recent-post-items">
+                            <div class="color-single nk-pink">
+                                <h2>PINK</h2>
+                                <p>#E91E63</p>
+                                <span>.nk-pink</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12">
+                    <div class="recent-post-wrapper notika-shadow">
+                        <div class="recent-post-items">
+                            <div class="color-single nk-purple">
+                                <h2>PURPLE</h2>
+                                <p>#9C27B0</p>
+                                <span>.nk-purple</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12">
+                    <div class="recent-post-wrapper notika-shadow">
+                        <div class="recent-post-items">
+                            <div class="color-single nk-deep-purple">
+                                <h2>Deep Purple</h2>
+                                <p>#673AB7</p>
+                                <span>.nk-deep-purple</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Second Row of Colors -->
+            <div class="row mt-4">
+                <div class="col-lg-3 col-md-6 col-12">
+                    <div class="recent-post-wrapper notika-shadow">
+                        <div class="recent-post-items">
+                            <div class="color-single nk-indigo">
+                                <h2>Indigo</h2>
+                                <p>#3F51B5</p>
+                                <span>.nk-indigo</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12">
+                    <div class="recent-post-wrapper notika-shadow">
+                        <div class="recent-post-items">
+                            <div class="color-single nk-blue">
+                                <h2>Blue</h2>
+                                <p>#2196F3</p>
+                                <span>.nk-blue</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12">
+                    <div class="recent-post-wrapper notika-shadow">
+                        <div class="recent-post-items">
+                            <div class="color-single nk-light-blue">
+                                <h2>Light Blue</h2>
+                                <p>#03A9F4</p>
+                                <span>.nk-light-blue</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12">
+                    <div class="recent-post-wrapper notika-shadow">
+                        <div class="recent-post-items">
+                            <div class="color-single nk-cyan">
+                                <h2>Cyan</h2>
+                                <p>#00BCD4</p>
+                                <span>.nk-cyan</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Third Row of Colors -->
+            <div class="row mt-4">
+                <div class="col-lg-3 col-md-6 col-12">
+                    <div class="recent-post-wrapper notika-shadow">
+                        <div class="recent-post-items">
+                            <div class="color-single nk-teal">
+                                <h2>Teal</h2>
+                                <p>#009688</p>
+                                <span>.nk-teal</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12">
+                    <div class="recent-post-wrapper notika-shadow">
+                        <div class="recent-post-items">
+                            <div class="color-single nk-green">
+                                <h2>Green</h2>
+                                <p>#4CAF50</p>
+                                <span>.nk-green</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12">
+                    <div class="recent-post-wrapper notika-shadow">
+                        <div class="recent-post-items">
+                            <div class="color-single nk-light-green">
+                                <h2>Light Green</h2>
+                                <p>#8BC34A</p>
+                                <span>.nk-light-green</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12">
+                    <div class="recent-post-wrapper notika-shadow">
+                        <div class="recent-post-items">
+                            <div class="color-single nk-lime">
+                                <h2>Lime</h2>
+                                <p>#CDDC39</p>
+                                <span>.nk-lime</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Fourth Row of Colors -->
+            <div class="row mt-4">
+                <div class="col-lg-3 col-md-6 col-12">
+                    <div class="recent-post-wrapper notika-shadow">
+                        <div class="recent-post-items">
+                            <div class="color-single nk-yellow">
+                                <h2>Yellow</h2>
+                                <p>#FFEB3B</p>
+                                <span>.nk-yellow</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12">
+                    <div class="recent-post-wrapper notika-shadow">
+                        <div class="recent-post-items">
+                            <div class="color-single nk-amber">
+                                <h2>Amber</h2>
+                                <p>#FFC107</p>
+                                <span>.nk-amber</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12">
+                    <div class="recent-post-wrapper notika-shadow">
+                        <div class="recent-post-items">
+                            <div class="color-single nk-orange">
+                                <h2>Orange</h2>
+                                <p>#FF9800</p>
+                                <span>.nk-orange</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12">
+                    <div class="recent-post-wrapper notika-shadow">
+                        <div class="recent-post-items">
+                            <div class="color-single nk-deep-orange">
+                                <h2>Deep Orange</h2>
+                                <p>#FF5722</p>
+                                <span>.nk-deep-orange</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Fifth Row of Colors -->
+            <div class="row mt-4">
+                <div class="col-lg-3 col-md-6 col-12">
+                    <div class="recent-post-wrapper notika-shadow">
+                        <div class="recent-post-items">
+                            <div class="color-single nk-brown">
+                                <h2>Brown</h2>
+                                <p>#795548</p>
+                                <span>.nk-brown</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12">
+                    <div class="recent-post-wrapper notika-shadow">
+                        <div class="recent-post-items">
+                            <div class="color-single nk-gray">
+                                <h2>Gray</h2>
+                                <p>#9E9E9E</p>
+                                <span>.nk-gray</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12">
+                    <div class="recent-post-wrapper notika-shadow">
+                        <div class="recent-post-items">
+                            <div class="color-single nk-blue-gray">
+                                <h2>Blue Gray</h2>
+                                <p>#607D8B</p>
+                                <span>.nk-blue-gray</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12">
+                    <div class="recent-post-wrapper notika-shadow">
+                        <div class="recent-post-items">
+                            <div class="color-single nk-black">
+                                <h2>Black</h2>
+                                <p>#000000</p>
+                                <span>.nk-black</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Color area End-->
 
     <!-- Start Footer area-->
     <div class="footer-copyright-area">
@@ -801,7 +757,7 @@
             <div class="row">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-12">
                     <div class="footer-copy-right">
-                        <p>Copyright © 2025 
+                        <p>Copyright © 2025
 . All rights reserved. Template by <a href="https://colorlib.com">Colorlib</a>.</p>
                     </div>
                 </div>
@@ -811,8 +767,8 @@
     <!-- End Footer area-->
 
     <!-- ONLY VITE ENTRY POINT - Everything else bundled by Vite -->
-    <script type="module" src="/src/js/pages/index-2.js"></script>
-    
+    <script type="module" src="/src/js/pages/color.js"></script>
+
     <!-- Clean Navigation JavaScript -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
@@ -825,26 +781,26 @@
                         setTimeout(() => searchInput.focus(), 100);
                     });
                 }
-                
+
                 searchInput.addEventListener('keypress', function(e) {
                     if (e.key === 'Enter' && this.value.trim()) {
                         console.log('Searching for:', this.value);
                     }
                 });
             }
-            
+
             // Simple navbar dropdown enhancements
             const navDropdowns = document.querySelectorAll('.notika-navbar .dropdown');
-            
+
             navDropdowns.forEach(dropdown => {
                 const toggle = dropdown.querySelector('.dropdown-toggle');
-                
+
                 // Add subtle click feedback
                 if (toggle) {
                     toggle.addEventListener('click', function(e) {
                         // Don't navigate away, just toggle dropdown
                         e.preventDefault();
-                        
+
                         // Quick visual feedback
                         this.style.transform = 'scale(0.98)';
                         setTimeout(() => {
@@ -853,7 +809,7 @@
                     });
                 }
             });
-            
+
             console.log('✅ Stable navigation system initialized');
         });
     </script>

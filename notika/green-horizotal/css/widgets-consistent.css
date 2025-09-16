@@ -12,7 +12,6 @@
 }
 
 /* Reset all widget containers to consistent base */
-.wb-traffic-inner,
 .sale-statistic-inner,
 .statistic-right-area,
 .email-statis-inner,
@@ -31,7 +30,47 @@
     transition: all 0.2s ease;
 }
 
-.wb-traffic-inner:hover,
+/* Special handling for status widgets */
+.notika-status-area .wb-traffic-inner {
+    background: #fff;
+    border-radius: var(--widget-radius);
+    box-shadow: var(--widget-shadow);
+    border: var(--widget-border);
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    padding: 20px !important;
+    margin-bottom: 0;
+    transition: all 0.2s ease;
+}
+
+/* Fix left side spacing for widget content */
+.notika-status-area .website-traffic-ctn {
+    flex: 1;
+}
+
+/* Consistent sparkline sizes - Override all other styles */
+.notika-status-area .sparkline-bar-stats1,
+.notika-status-area .sparkline-bar-stats2,
+.notika-status-area .sparkline-bar-stats3,
+.notika-status-area .sparkline-bar-stats4 {
+    width: 80px !important;
+    height: 50px !important;
+    margin-left: 15px !important;
+    padding: 0 !important;
+    display: block !important;
+    flex-shrink: 0;
+}
+
+.notika-status-area .sparkline-bar-stats1 canvas,
+.notika-status-area .sparkline-bar-stats2 canvas,
+.notika-status-area .sparkline-bar-stats3 canvas,
+.notika-status-area .sparkline-bar-stats4 canvas {
+    width: 80px !important;
+    height: 50px !important;
+}
+
+.notika-status-area .wb-traffic-inner:hover,
 .sale-statistic-inner:hover,
 .statistic-right-area:hover,
 .email-statis-inner:hover,
@@ -239,7 +278,6 @@
 .dk-res-mg-t-30,
 .sm-res-mg-t-0,
 .mg-tb-30,
-.mg-t-30,
 .tb-res-ds-n,
 .dk-res-ds,
 .sm-res-ds-n {

@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-page-module="form-elements">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,7 +11,13 @@
     
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700,900" rel="stylesheet">
-    
+
+    <!-- Essential Notika Template CSS -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/notika-custom-icon.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
     <!-- Font Awesome and all other CSS imported via Vite -->
     <!-- ONLY Vite entry point - everything else bundled -->
 </head>
@@ -463,815 +469,309 @@
     </nav>
     <!-- End Stable Navigation -->
 
-    <!-- Start Status area -->
-    <div class="notika-status-area">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-3 col-md-6 col-sm-6 col-12">
-                    <div class="wb-traffic-inner notika-shadow sm-res-mg-t-30 tb-res-mg-t-30">
-                        <div class="website-traffic-ctn">
-                            <h2><span class="counter">50,000</span></h2>
-                            <p>Total Website Traffics</p>
-                        </div>
-                        <div class="sparkline-bar-stats1"></div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6 col-12">
-                    <div class="wb-traffic-inner notika-shadow sm-res-mg-t-30 tb-res-mg-t-30">
-                        <div class="website-traffic-ctn">
-                            <h2><span class="counter">90,000</span>k</h2>
-                            <p>Website Impressions</p>
-                        </div>
-                        <div class="sparkline-bar-stats2"></div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6 col-12">
-                    <div class="wb-traffic-inner notika-shadow sm-res-mg-t-30 tb-res-mg-t-30 dk-res-mg-t-30">
-                        <div class="website-traffic-ctn">
-                            <h2>$<span class="counter">40,000</span></h2>
-                            <p>Total Online Sales</p>
-                        </div>
-                        <div class="sparkline-bar-stats3"></div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6 col-12">
-                    <div class="wb-traffic-inner notika-shadow sm-res-mg-t-30 tb-res-mg-t-30 dk-res-mg-t-30">
-                        <div class="website-traffic-ctn">
-                            <h2><span class="counter">1,000</span></h2>
-                            <p>Total Support Tickets</p>
-                        </div>
-                        <div class="sparkline-bar-stats4"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- End Status area-->
-    <!-- Start Sale Statistic area-->
-    <div class="sale-statistic-area">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-9 col-md-8 col-sm-7 col-12">
-                    <div class="sale-statistic-inner notika-shadow mg-tb-30">
-                        <div class="curved-inner-pro">
-                            <div class="curved-ctn">
-                                <h2>Sales Statistics</h2>
-                                <p>Vestibulum purus quam scelerisque, mollis nonummy metus</p>
-                            </div>
-                        </div>
-                        <div id="curved-line-chart" class="flot-chart-sts flot-chart"></div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-5 col-12">
-                    <div class="statistic-right-area notika-shadow mg-tb-30 sm-res-mg-t-0">
-                        <div class="past-day-statis">
-                            <h2>For The Past 30 Days</h2>
-                            <p>Performance metrics and insights for the past 30 days.</p>
-                        </div>
-						<div class="dash-widget-visits"></div>
-                        <div class="past-statistic-an">
-                            <div class="past-statistic-ctn">
-                                <h3><span class="counter">3,20,000</span></h3>
-                                <p>Page Views</p>
-                            </div>
-                            <div class="past-statistic-graph">
-                                <div class="stats-bar"></div>
-                            </div>
-                        </div>
-                        <div class="past-statistic-an">
-                            <div class="past-statistic-ctn">
-                                <h3><span class="counter">1,03,000</span></h3>
-                                <p>Total Clicks</p>
-                            </div>
-                            <div class="past-statistic-graph">
-                                <div class="stats-line"></div>
-                            </div>
-                        </div>
-                        <div class="past-statistic-an">
-                            <div class="past-statistic-ctn">
-                                <h3><span class="counter">24,00,000</span></h3>
-                                <p>Site Visitors</p>
-                            </div>
-                            <div class="past-statistic-graph">
-                                <div class="stats-bar-2"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- End Sale Statistic area-->
-    <!-- Start Email Statistic area-->
-    <div class="notika-email-post-area">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 col-md-6 col-sm-6 col-12">
-                    <div class="email-statis-inner notika-shadow">
-                        <div class="email-ctn-round">
-                            <div class="email-rdn-hd">
-								<h2>Email Statistics</h2>
+	<!-- Breadcomb area Start-->
+	<div class="breadcomb-area">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 col-md-12 col-sm-12 col-12">
+					<div class="breadcomb-list">
+						<div class="row">
+							<div class="col-lg-6 col-md-6 col-sm-6 col-12">
+								<div class="breadcomb-wp">
+									<div class="breadcomb-icon">
+										<i class="notika-icon notika-form"></i>
+									</div>
+									<div class="breadcomb-ctn">
+										<h2>Form Elements</h2>
+										<p>Welcome to Notika <span class="bread-ntd">Admin Template</span></p>
+									</div>
+								</div>
 							</div>
-                            <div class="email-statis-wrap">
-                                <div class="email-round-nock">
-                                    <input type="text" class="knob" value="0" data-rel="55" data-linecap="round" data-width="130" data-bgcolor="#E4E4E4" data-fgcolor="#00c292" data-thickness=".10" data-readonly="true">
-                                </div>
-                                <div class="email-ctn-nock">
-                                    <p>Total Emails Sent</p>
-                                </div>
-                            </div>
-                            <div class="email-round-gp">
-                                <div class="email-round-pro">
-                                    <div class="email-signle-gp">
-                                        <input type="text" class="knob" value="0" data-rel="75" data-linecap="round" data-width="90" data-bgcolor="#E4E4E4" data-fgcolor="#00c292" data-thickness=".10" data-readonly="true" disabled>
-                                    </div>
-                                    <div class="email-ctn-nock">
-                                        <p>Bounce Rate</p>
-                                    </div>
-                                </div>
-                                <div class="email-round-pro">
-                                    <div class="email-signle-gp">
-                                        <input type="text" class="knob" value="0" data-rel="35" data-linecap="round" data-width="90" data-bgcolor="#E4E4E4" data-fgcolor="#00c292" data-thickness=".10" data-readonly="true" disabled>
-                                    </div>
-                                    <div class="email-ctn-nock">
-                                        <p>Total Opened</p>
-                                    </div>
-                                </div>
-                                <div class="email-round-pro sm-res-ds-n lg-res-mg-bl">
-                                    <div class="email-signle-gp">
-                                        <input type="text" class="knob" value="0" data-rel="45" data-linecap="round" data-width="90" data-bgcolor="#E4E4E4" data-fgcolor="#00c292" data-thickness=".10" data-readonly="true" disabled>
-                                    </div>
-                                    <div class="email-ctn-nock">
-                                        <p>Total Ignored</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-6 col-12">
-                    <div class="recent-post-wrapper notika-shadow sm-res-mg-t-30 tb-res-ds-n dk-res-ds">
+							<div class="col-lg-6 col-md-6 col-sm-6 col-3">
+								<div class="breadcomb-report">
+									<button data-bs-toggle="tooltip" data-placement="left" title="Download Report" class="btn"><i class="notika-icon notika-sent"></i></button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Breadcomb area End-->
+    <!-- Form Element area Start-->
+    <div class="form-element-area">
+        <div class="container">
+            <!-- First Row: Basic Inputs and Input Groups -->
+            <div class="row">
+                <!-- Basic Input Elements Card -->
+                <div class="col-lg-6 col-md-6 col-sm-6 col-12">
+                    <div class="recent-post-wrapper notika-shadow mg-t-30" id="basic-inputs">
                         <div class="recent-post-ctn">
                             <div class="recent-post-title">
-                                <h2>Recent Posts</h2>
+                                <h2>Basic Input Elements</h2>
+                                <p>Text inputs with different sizes and character counters</p>
                             </div>
                         </div>
-                        <div class="recent-post-items">
-                            <div class="recent-post-signle rct-pt-mg-wp">
-                                <a href="#">
-                                    <div class="recent-post-flex">
-                                        <div class="recent-post-img">
-                                            <img src="/post/2.jpg" alt="" />
-                                        </div>
-                                        <div class="recent-post-it-ctn">
-                                            <h2>Smith</h2>
-                                            <p>Nunc quis diam diamurabitur at dolor elementum, dictum turpis vel</p>
-                                        </div>
-                                    </div>
-                                </a>
+                        <div class="recent-post-items analytics-chart-container">
+                            <div class="form-group mb-3">
+                                <label class="form-label">Small Input</label>
+                                <input type="text" class="form-control form-control-sm" placeholder="Small input with counter" maxlength="50">
                             </div>
-                            <div class="recent-post-signle">
-                                <a href="#">
-                                    <div class="recent-post-flex rct-pt-mg">
-                                        <div class="recent-post-img">
-                                            <img src="/post/1.jpg" alt="" />
-                                        </div>
-                                        <div class="recent-post-it-ctn">
-                                            <h2>John Deo</h2>
-                                            <p>Nunc quis diam diamurabitur at dolor elementum, dictum turpis vel</p>
-                                        </div>
-                                    </div>
-                                </a>
+                            <div class="form-group mb-3">
+                                <label class="form-label">Default Input</label>
+                                <input type="text" class="form-control" placeholder="Default input with counter" maxlength="100">
                             </div>
-                            <div class="recent-post-signle">
-                                <a href="#">
-                                    <div class="recent-post-flex rct-pt-mg">
-                                        <div class="recent-post-img">
-                                            <img src="/post/4.jpg" alt="" />
-                                        </div>
-                                        <div class="recent-post-it-ctn">
-                                            <h2>Malika</h2>
-                                            <p>Nunc quis diam diamurabitur at dolor elementum, dictum turpis vel</p>
-                                        </div>
-                                    </div>
-                                </a>
+                            <div class="form-group mb-3">
+                                <label class="form-label">Large Input</label>
+                                <input type="text" class="form-control form-control-lg" placeholder="Large input with counter" maxlength="150">
                             </div>
-                            <div class="recent-post-signle">
-                                <a href="#">
-                                    <div class="recent-post-flex rct-pt-mg">
-                                        <div class="recent-post-img">
-                                            <img src="/post/2.jpg" alt="" />
-                                        </div>
-                                        <div class="recent-post-it-ctn">
-                                            <h2>Smith</h2>
-                                            <p>Nunc quis diam diamurabitur at dolor elementum, dictum turpis vel</p>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="recent-post-signle">
-                                <a href="#">
-                                    <div class="recent-post-flex rct-pt-mg">
-                                        <div class="recent-post-img">
-                                            <img src="/post/1.jpg" alt="" />
-                                        </div>
-                                        <div class="recent-post-it-ctn">
-                                            <h2>John Deo</h2>
-                                            <p>Nunc quis diam diamurabitur at dolor elementum, dictum turpis vel</p>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="recent-post-signle">
-                                <a href="#">
-                                    <div class="recent-post-flex rc-ps-vw">
-                                        <div class="recent-post-line rct-pt-mg">
-                                            <p>View All</p>
-                                        </div>
-                                    </div>
-                                </a>
+                            <div class="form-group">
+                                <label class="form-label">Password</label>
+                                <input type="password" class="form-control" placeholder="Password with strength indicator" maxlength="50">
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 col-sm-6 col-12">
-                    <div class="recent-items-wp notika-shadow sm-res-mg-t-30">
-                        <div class="rc-it-ltd">
-                            <div class="recent-items-ctn">
-                                <div class="recent-items-title">
-                                    <h2>Recent Items</h2>
-                                </div>
-                            </div>
-                            <div class="recent-items-inn">
-                                <table class="table table-inner table-vmiddle">
-                                    <thead>
-                                        <tr>
-                                            <th>ID</th>
-                                            <th>Name</th>
-                                            <th style="width: 60px">Price</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td class="f-500 c-cyan">4555</td>
-                                            <td>Samsung Galaxy Mega</td>
-                                            <td class="f-500 c-cyan">$921</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="f-500 c-cyan">4556</td>
-                                            <td>Huawei Ascend P6</td>
-                                            <td class="f-500 c-cyan">$240</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="f-500 c-cyan">8778</td>
-                                            <td>HTC One M8</td>
-                                            <td class="f-500 c-cyan">$400</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="f-500 c-cyan">5667</td>
-                                            <td>Samsung Galaxy Alpha</td>
-                                            <td class="f-500 c-cyan">$870</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="f-500 c-cyan">7886</td>
-                                            <td>LG G3</td>
-                                            <td class="f-500 c-cyan">$790</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-							<div id="recent-items-chart" class="flot-chart-items flot-chart vt-ct-it tb-rc-it-res"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- End Email Statistic area-->
-    <!-- Start Realtime sts area-->
-    <div class="realtime-statistic-area">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 col-md-6 col-sm-6 col-12">
-                    <div class="realtime-wrap notika-shadow mg-t-30 h-100">
-                        <div class="realtime-ctn">
-                            <div class="realtime-title">
-                                <h2>Realtime Visitors</h2>
+
+                <!-- Input Groups Card -->
+                <div class="col-lg-6 col-md-6 col-sm-6 col-12">
+                    <div class="recent-post-wrapper notika-shadow mg-t-30" id="input-groups">
+                        <div class="recent-post-ctn">
+                            <div class="recent-post-title">
+                                <h2>Input Groups</h2>
+                                <p>Interactive input groups with buttons and addons</p>
                             </div>
                         </div>
-                        <div class="card-box">
-                            <!-- Stats Row -->
-                            <div class="row g-3 mb-4">
-                                <div class="col-6">
-                                    <div class="text-center p-3 bg-light rounded">
-                                        <h4 class="mb-1 text-success fw-bold"><span class="counter">435,456</span></h4>
-                                        <small class="text-muted">Last 24h</small>
-                                    </div>
-                                </div>
-                                <div class="col-6">
-                                    <div class="text-center p-3 bg-light rounded">
-                                        <h4 class="mb-1 text-info fw-bold"><span class="counter">4,566</span></h4>
-                                        <small class="text-muted">Last 30m</small>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <!-- World Map -->
-                            <div class="world-map-container mb-4" style="height: 160px; background: #f8f9fa; border-radius: 8px; position: relative;">
-                                <div id="world-map" style="height: 100%; width: 100%;"></div>
-                            </div>
-                            
-                            <!-- Recent Activity -->
-                            <div class="recent-visitors">
-                                <h6 class="text-muted mb-3">Recent Activity</h6>
-                                
-                                <div class="visitor-item d-flex align-items-center mb-3 p-2 border rounded">
-                                    <img src="/country/1.png" alt="US" class="me-2" style="width: 20px; height: 15px;">
-                                    <div class="flex-grow-1">
-                                        <div class="d-flex justify-content-between align-items-center">
-                                            <span class="small fw-medium">United States</span>
-                                            <span class="badge bg-success-subtle text-success">2m ago</span>
-                                        </div>
-                                        <div class="small text-muted">Firefox • Mac OSX</div>
-                                    </div>
-                                </div>
-                                
-                                <div class="visitor-item d-flex align-items-center mb-3 p-2 border rounded">
-                                    <img src="/country/2.png" alt="AU" class="me-2" style="width: 20px; height: 15px;">
-                                    <div class="flex-grow-1">
-                                        <div class="d-flex justify-content-between align-items-center">
-                                            <span class="small fw-medium">Australia</span>
-                                            <span class="badge bg-info-subtle text-info">5m ago</span>
-                                        </div>
-                                        <div class="small text-muted">Chrome • Windows</div>
-                                    </div>
-                                </div>
-                                
-                                <div class="visitor-item d-flex align-items-center p-2 border rounded">
-                                    <img src="/country/3.png" alt="BR" class="me-2" style="width: 20px; height: 15px;">
-                                    <div class="flex-grow-1">
-                                        <div class="d-flex justify-content-between align-items-center">
-                                            <span class="small fw-medium">Brazil</span>
-                                            <span class="badge bg-warning-subtle text-warning">10m ago</span>
-                                        </div>
-                                        <div class="small text-muted">Safari • iOS</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-6 col-12">
-                    <div class="add-todo-list notika-shadow mg-t-30 h-100">
-                        <div class="realtime-ctn">
-                            <div class="realtime-title">
-                                <h2>Add Todo</h2>
-                            </div>
-                        </div>
-                        <div class="card-box d-flex flex-column">
-                            <!-- Todo Controls -->
-                            <div class="d-flex justify-content-end align-items-center mb-3">
-                                <button class="btn btn-outline-secondary btn-sm" id="btn-archive">
-                                    <i class="fa-solid fa-archive me-1"></i>Archive
-                                </button>
-                            </div>
-                            <!-- Todo Stats -->
-                            <div class="alert alert-light border mb-3" role="alert">
-                                <div class="d-flex align-items-center justify-content-between">
-                                    <span class="fw-medium">
-                                        <i class="fa-solid fa-clock text-warning me-1"></i>
-                                        <span id="todo-remaining">0</span> of <span id="todo-total">0</span> remaining
-                                    </span>
-                                    <div class="progress" style="width: 100px; height: 8px;">
-                                        <div class="progress-bar bg-success" role="progressbar" style="width: 0%" id="todo-progress"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <!-- Todo List -->
-                            <div class="flex-grow-1" style="max-height: 350px; overflow-y: auto;">
-                                <ul class="list-group list-group-flush" id="todo-list"></ul>
-                            </div>
-                            
-                            <!-- Add Todo Form -->
-                            <div class="mt-auto pt-3 border-top">
+                        <div class="recent-post-items analytics-chart-container">
+                            <div class="form-group mb-3">
+                                <label class="form-label">Search Input</label>
                                 <div class="input-group">
-                                    <input type="text" id="todo-input-text" class="form-control" placeholder="Add new todo item..." aria-label="New todo">
-                                    <button class="btn btn-primary" type="button" id="todo-btn-submit">
-                                        <i class="fa-solid fa-plus me-1"></i>Add
+                                    <input type="text" class="form-control" placeholder="Type to search...">
+                                    <button class="btn btn-primary" type="button">
+                                        <i class="fa-solid fa-magnifying-glass"></i>
                                     </button>
                                 </div>
                             </div>
-                            
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-6 col-12">
-                    <div class="notika-chat-list notika-shadow mg-t-30 tb-res-ds-n dk-res-ds h-100">
-                        <div class="realtime-ctn">
-                            <div class="realtime-title">
-                                <h2>Chat Box</h2>
-                            </div>
-                        </div>
-                        <div class="card-box d-flex flex-column p-0" style="height: 100%;">
-                            <!-- Chat Messages -->
-                            <div class="chat-messages p-3" style="flex: 1; max-height: 480px; overflow-y: auto;" id="chat-messages">
-                                <div class="conversation-list">
-                                    <!-- Message 1 -->
-                                    <div class="d-flex mb-3">
-                                        <img src="/post/1.jpg" alt="John" class="rounded-circle me-2" style="width: 35px; height: 35px; object-fit: cover;">
-                                        <div class="flex-grow-1">
-                                            <div class="d-flex align-items-baseline mb-1">
-                                                <span class="fw-medium small me-2">John Deo</span>
-                                                <span class="text-muted small">10:00</span>
-                                            </div>
-                                            <div class="bg-light p-2 rounded">
-                                                <p class="mb-0 small">Hello! How's everyone doing today?</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    
-                                    <!-- Message 2 -->
-                                    <div class="d-flex mb-3 justify-content-end">
-                                        <div class="me-2 text-end">
-                                            <div class="d-flex align-items-baseline justify-content-end mb-1">
-                                                <span class="text-muted small me-2">10:01</span>
-                                                <span class="fw-medium small">You</span>
-                                            </div>
-                                            <div class="bg-primary text-white p-2 rounded">
-                                                <p class="mb-0 small">Hi! Doing great. What about our next meeting?</p>
-                                            </div>
-                                        </div>
-                                        <img src="/post/2.jpg" alt="You" class="rounded-circle" style="width: 35px; height: 35px; object-fit: cover;">
-                                    </div>
-                                    
-                                    <!-- Message 3 -->
-                                    <div class="d-flex mb-3">
-                                        <img src="/post/1.jpg" alt="John" class="rounded-circle me-2" style="width: 35px; height: 35px; object-fit: cover;">
-                                        <div class="flex-grow-1">
-                                            <div class="d-flex align-items-baseline mb-1">
-                                                <span class="fw-medium small me-2">John Deo</span>
-                                                <span class="text-muted small">10:02</span>
-                                            </div>
-                                            <div class="bg-light p-2 rounded">
-                                                <p class="mb-0 small">Perfect! Everything looks good on my end.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    
-                                    <!-- Message 4 -->
-                                    <div class="d-flex mb-3 justify-content-end">
-                                        <div class="me-2 text-end">
-                                            <div class="d-flex align-items-baseline justify-content-end mb-1">
-                                                <span class="text-muted small me-2">10:02</span>
-                                                <span class="fw-medium small">You</span>
-                                            </div>
-                                            <div class="bg-primary text-white p-2 rounded">
-                                                <p class="mb-0 small">Awesome! Looking forward to it.</p>
-                                            </div>
-                                        </div>
-                                        <img src="/post/2.jpg" alt="You" class="rounded-circle" style="width: 35px; height: 35px; object-fit: cover;">
-                                    </div>
-                                    
-                                    <!-- Message 5 -->
-                                    <div class="d-flex mb-3">
-                                        <img src="/post/4.jpg" alt="Sarah" class="rounded-circle me-2" style="width: 35px; height: 35px; object-fit: cover;">
-                                        <div class="flex-grow-1">
-                                            <div class="d-flex align-items-baseline mb-1">
-                                                <span class="fw-medium small me-2">Sarah Wilson</span>
-                                                <span class="text-muted small">10:15</span>
-                                            </div>
-                                            <div class="bg-light p-2 rounded">
-                                                <p class="mb-0 small">Just finished reviewing the latest designs. They look fantastic!</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    
-                                    <!-- Message 6 -->
-                                    <div class="d-flex mb-3 justify-content-end">
-                                        <div class="me-2 text-end">
-                                            <div class="d-flex align-items-baseline justify-content-end mb-1">
-                                                <span class="text-muted small me-2">10:16</span>
-                                                <span class="fw-medium small">You</span>
-                                            </div>
-                                            <div class="bg-primary text-white p-2 rounded">
-                                                <p class="mb-0 small">Thanks Sarah! We put a lot of effort into the new UI.</p>
-                                            </div>
-                                        </div>
-                                        <img src="/post/2.jpg" alt="You" class="rounded-circle" style="width: 35px; height: 35px; object-fit: cover;">
-                                    </div>
-                                    
-                                    <!-- Message 7 -->
-                                    <div class="d-flex mb-3">
-                                        <img src="/post/1.jpg" alt="John" class="rounded-circle me-2" style="width: 35px; height: 35px; object-fit: cover;">
-                                        <div class="flex-grow-1">
-                                            <div class="d-flex align-items-baseline mb-1">
-                                                <span class="fw-medium small me-2">John Deo</span>
-                                                <span class="text-muted small">10:18</span>
-                                            </div>
-                                            <div class="bg-light p-2 rounded">
-                                                <p class="mb-0 small">The performance metrics are looking great too. Load times improved by 40%!</p>
-                                            </div>
-                                        </div>
-                                    </div>
+                            <div class="form-group mb-3">
+                                <label class="form-label">Email Subscription</label>
+                                <div class="input-group">
+                                    <span class="input-group-text">@</span>
+                                    <input type="email" class="form-control" placeholder="Email address">
+                                    <button class="btn btn-success" type="button">Subscribe</button>
                                 </div>
                             </div>
-                            
-                            <!-- Chat Input -->
-                            <div class="p-3 border-top bg-light" style="margin-top: 20px;">
-                                <div class="d-flex gap-2 align-items-end">
-                                    <div class="flex-grow-1">
-                                        <input type="text" class="form-control chat-input border-0 shadow-sm" placeholder="Type your message..." aria-label="Chat message" style="border-radius: 20px; padding: 12px 16px;">
-                                    </div>
-                                    <button class="btn btn-primary notika-chat-btn d-flex align-items-center justify-content-center" type="button" style="width: 44px; height: 44px; border-radius: 50%; padding: 0; border: none;">
-                                        <i class="fa-solid fa-paper-plane" style="font-size: 16px;"></i>
-                                    </button>
+                            <div class="form-group mb-3">
+                                <label class="form-label">Price Input</label>
+                                <div class="input-group">
+                                    <span class="input-group-text">$</span>
+                                    <input type="number" class="form-control" placeholder="0.00">
+                                    <span class="input-group-text">USD</span>
                                 </div>
                             </div>
-                            
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- End Realtime sts area-->
-    <!-- Start System Overview area-->
-    <div class="system-overview-area">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-md-8 col-sm-12 col-12">
-                    <div class="system-performance-inner notika-shadow mg-t-30">
-                        <div class="curved-inner-pro">
-                            <div class="curved-ctn">
-                                <h2>System Performance Overview</h2>
-                                <p>Real-time monitoring of server metrics and performance indicators</p>
-                            </div>
-                        </div>
-                        <div class="system-perf-content">
-                            <!-- Performance Metrics Grid -->
-                            <div class="perf-metrics-grid">
-                                <div class="perf-metric-card">
-                                    <div class="metric-icon">
-                                        <i class="fa-solid fa-microchip"></i>
-                                    </div>
-                                    <div class="metric-content">
-                                        <h4><span class="counter">78</span>%</h4>
-                                        <p>CPU Usage</p>
-                                        <div class="metric-trend positive">↗ +2.4%</div>
-                                    </div>
-                                    <div class="metric-chart">
-                                        <div class="stats-cpu-line"></div>
-                                    </div>
-                                </div>
-                                
-                                <div class="perf-metric-card">
-                                    <div class="metric-icon">
-                                        <i class="fa-solid fa-memory"></i>
-                                    </div>
-                                    <div class="metric-content">
-                                        <h4><span class="counter">45</span>%</h4>
-                                        <p>Memory</p>
-                                        <div class="metric-trend negative">↘ -1.2%</div>
-                                    </div>
-                                    <div class="metric-chart">
-                                        <div class="stats-memory-bar"></div>
-                                    </div>
-                                </div>
-                                
-                                <div class="perf-metric-card">
-                                    <div class="metric-icon">
-                                        <i class="fa-solid fa-hdd"></i>
-                                    </div>
-                                    <div class="metric-content">
-                                        <h4><span class="counter">67</span>%</h4>
-                                        <p>Disk Usage</p>
-                                        <div class="metric-trend neutral">→ 0.0%</div>
-                                    </div>
-                                    <div class="metric-chart">
-                                        <div class="stats-disk-area"></div>
-                                    </div>
-                                </div>
-                                
-                                <div class="perf-metric-card">
-                                    <div class="metric-icon">
-                                        <i class="fa-solid fa-wifi"></i>
-                                    </div>
-                                    <div class="metric-content">
-                                        <h4><span class="counter">2.4</span>GB</h4>
-                                        <p>Bandwidth</p>
-                                        <div class="metric-trend positive">↗ +5.8%</div>
-                                    </div>
-                                    <div class="metric-chart">
-                                        <div class="stats-bandwidth-area"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <!-- System Status Indicators -->
-                            <div class="system-status-row">
-                                <div class="status-indicator">
-                                    <div class="status-dot status-online"></div>
-                                    <span>Database: Online</span>
-                                </div>
-                                <div class="status-indicator">
-                                    <div class="status-dot status-online"></div>
-                                    <span>API: Healthy</span>
-                                </div>
-                                <div class="status-indicator">
-                                    <div class="status-dot status-warning"></div>
-                                    <span>Cache: High Load</span>
-                                </div>
-                                <div class="status-indicator">
-                                    <div class="status-dot status-online"></div>
-                                    <span>Storage: Normal</span>
-                                </div>
-                            </div>
-                            
-                            <!-- Additional Performance Data -->
-                            <div class="system-additional-metrics">
-                                <div class="additional-metric-row">
-                                    <div class="additional-metric-item">
-                                        <div class="metric-label">Response Time</div>
-                                        <div class="metric-value">
-                                            <span class="metric-number">245</span>
-                                            <span class="metric-unit">ms</span>
-                                        </div>
-                                        <div class="metric-trend positive">↓ -12ms</div>
-                                    </div>
-                                    
-                                    <div class="additional-metric-item">
-                                        <div class="metric-label">Requests/sec</div>
-                                        <div class="metric-value">
-                                            <span class="metric-number">1,247</span>
-                                            <span class="metric-unit">req/s</span>
-                                        </div>
-                                        <div class="metric-trend positive">↗ +23</div>
-                                    </div>
-                                    
-                                    <div class="additional-metric-item">
-                                        <div class="metric-label">Error Rate</div>
-                                        <div class="metric-value">
-                                            <span class="metric-number">0.12</span>
-                                            <span class="metric-unit">%</span>
-                                        </div>
-                                        <div class="metric-trend positive">↓ -0.03%</div>
-                                    </div>
-                                </div>
-                                
-                                <div class="server-uptime-section">
-                                    <div class="uptime-header">
-                                        <h4>System Uptime</h4>
-                                        <span class="uptime-value">99.8%</span>
-                                    </div>
-                                    <div class="uptime-details">
-                                        <div class="uptime-item">
-                                            <span class="uptime-label">Current Session:</span>
-                                            <span class="uptime-time">14d 8h 32m</span>
-                                        </div>
-                                        <div class="uptime-item">
-                                            <span class="uptime-label">Last Restart:</span>
-                                            <span class="uptime-time">Mar 15, 2024</span>
-                                        </div>
-                                        <div class="uptime-item">
-                                            <span class="uptime-label">Next Maintenance:</span>
-                                            <span class="uptime-time">Apr 1, 2024</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-lg-4 col-md-4 col-sm-12 col-12">
-                    <div class="activity-overview-inner notika-shadow mg-t-30">
-                        <div class="curved-inner-pro">
-                            <div class="curved-ctn">
-                                <h2>Activity Overview</h2>
-                                <p>User engagement and system interactions</p>
-                            </div>
-                        </div>
-                        <div class="activity-over-content">
-                            <!-- Activity Chart -->
-                            <div class="activity-chart-container">
-                                <div id="user-activity-chart" class="activity-chart"></div>
-                            </div>
-                            
-                            <!-- Activity Stats -->
-                            <div class="activity-stats-list">
-                                <div class="activity-stat-row">
-                                    <div class="stat-icon">
-                                        <i class="fa-solid fa-users" style="color: #00c292;"></i>
-                                    </div>
-                                    <div class="stat-info">
-                                        <h5><span class="counter">12,450</span></h5>
-                                        <p>Active Users</p>
-                                    </div>
-                                    <div class="stat-change positive">+12%</div>
-                                </div>
-                                
-                                <div class="activity-stat-row">
-                                    <div class="stat-icon">
-                                        <i class="fa-solid fa-mouse-pointer" style="color: #03a9f3;"></i>
-                                    </div>
-                                    <div class="stat-info">
-                                        <h5><span class="counter">8,760</span></h5>
-                                        <p>Page Views</p>
-                                    </div>
-                                    <div class="stat-change positive">+8%</div>
-                                </div>
-                                
-                                <div class="activity-stat-row">
-                                    <div class="stat-icon">
-                                        <i class="fa-solid fa-clock" style="color: #ffc107;"></i>
-                                    </div>
-                                    <div class="stat-info">
-                                        <h5><span class="counter">4</span>:32</h5>
-                                        <p>Avg. Session</p>
-                                    </div>
-                                    <div class="stat-change negative">-3%</div>
-                                </div>
-                                
-                                <div class="activity-stat-row">
-                                    <div class="stat-icon">
-                                        <i class="fa-solid fa-chart-line" style="color: #e91e63;"></i>
-                                    </div>
-                                    <div class="stat-info">
-                                        <h5><span class="counter">23</span>%</h5>
-                                        <p>Bounce Rate</p>
-                                    </div>
-                                    <div class="stat-change positive">-5%</div>
+                            <div class="form-group">
+                                <label class="form-label">Website URL</label>
+                                <div class="input-group">
+                                    <span class="input-group-text">https://</span>
+                                    <input type="text" class="form-control" placeholder="example.com">
+                                    <button class="btn btn-info" type="button">Visit</button>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-    <!-- End System Overview area-->
 
-    <!-- Start Footer area-->
-    <div class="footer-copyright-area">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 col-md-12 col-sm-12 col-12">
-                    <div class="footer-copy-right">
-                        <p>Copyright © 2025 
-. All rights reserved. Template by <a href="https://colorlib.com">Colorlib</a>.</p>
+            <!-- Second Row: Form Validation and Select Elements -->
+            <div class="row" style="margin-top: 40px;">
+                <!-- Form Validation Card -->
+                <div class="col-lg-6 col-md-6 col-sm-6 col-12">
+                    <div class="recent-post-wrapper notika-shadow mg-t-30">
+                        <div class="recent-post-ctn">
+                            <div class="recent-post-title">
+                                <h2>Form Validation</h2>
+                                <p>Real-time validation with Bootstrap feedback</p>
+                            </div>
+                        </div>
+                        <div class="recent-post-items analytics-chart-container">
+                            <form id="validation-form" novalidate>
+                                <div class="form-group mb-3">
+                                    <label class="form-label">Full Name *</label>
+                                    <input type="text" class="form-control" required minlength="2" placeholder="Enter your full name">
+                                </div>
+                                <div class="form-group mb-3">
+                                    <label class="form-label">Email Address *</label>
+                                    <input type="email" class="form-control" required placeholder="user@example.com">
+                                </div>
+                                <div class="form-group mb-3">
+                                    <label class="form-label">Phone Number</label>
+                                    <input type="tel" class="form-control" placeholder="+1-234-567-8900">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Message *</label>
+                                    <textarea class="form-control" required minlength="10" rows="3" placeholder="Your message here..."></textarea>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Select Elements Card -->
+                <div class="col-lg-6 col-md-6 col-sm-6 col-12">
+                    <div class="recent-post-wrapper notika-shadow mg-t-30" id="select-elements">
+                        <div class="recent-post-ctn">
+                            <div class="recent-post-title">
+                                <h2>Select Elements</h2>
+                                <p>Dropdown selects with enhanced functionality</p>
+                            </div>
+                        </div>
+                        <div class="recent-post-items analytics-chart-container">
+                            <div class="form-group mb-3">
+                                <label class="form-label">Country</label>
+                                <select class="form-select">
+                                    <option value="">Select a country</option>
+                                    <option value="us">United States</option>
+                                    <option value="ca">Canada</option>
+                                    <option value="uk">United Kingdom</option>
+                                    <option value="au">Australia</option>
+                                    <option value="de">Germany</option>
+                                </select>
+                            </div>
+                            <div class="form-group mb-3">
+                                <label class="form-label">Priority Level</label>
+                                <select class="form-select">
+                                    <option value="">Choose priority</option>
+                                    <option value="low">Low Priority</option>
+                                    <option value="medium" selected>Medium Priority</option>
+                                    <option value="high">High Priority</option>
+                                    <option value="urgent">Urgent</option>
+                                </select>
+                            </div>
+                            <div class="form-group mb-3">
+                                <label class="form-label">Multiple Select</label>
+                                <select class="form-select" multiple size="4">
+                                    <option value="html">HTML</option>
+                                    <option value="css">CSS</option>
+                                    <option value="js" selected>JavaScript</option>
+                                    <option value="php">PHP</option>
+                                    <option value="python" selected>Python</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Size Variants</label>
+                                <select class="form-select form-select-sm">
+                                    <option>Small select</option>
+                                    <option>Option 2</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Third Row: Checkboxes/Radios and Textarea Elements -->
+            <div class="row" style="margin-top: 40px;">
+                <!-- Checkboxes and Radios Card -->
+                <div class="col-lg-6 col-md-6 col-sm-6 col-12">
+                    <div class="recent-post-wrapper notika-shadow mg-t-30" id="checkbox-radio">
+                        <div class="recent-post-ctn">
+                            <div class="recent-post-title">
+                                <h2>Checkboxes & Radios</h2>
+                                <p>Interactive checkbox and radio button groups</p>
+                            </div>
+                        </div>
+                        <div class="recent-post-items analytics-chart-container">
+                            <div class="form-group mb-3">
+                                <label class="form-label d-block mb-2">Preferences</label>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="newsletter" value="newsletter">
+                                    <label class="form-check-label" for="newsletter">Subscribe to Newsletter</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="notifications" value="notifications" checked>
+                                    <label class="form-check-label" for="notifications">Enable Notifications</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="analytics" value="analytics">
+                                    <label class="form-check-label" for="analytics">Share Analytics Data</label>
+                                </div>
+                            </div>
+                            <div class="form-group mb-3">
+                                <label class="form-label d-block mb-2">Account Type</label>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="accountType" id="basic" value="basic" checked>
+                                    <label class="form-check-label" for="basic">Basic Account</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="accountType" id="premium" value="premium">
+                                    <label class="form-check-label" for="premium">Premium Account</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="accountType" id="enterprise" value="enterprise">
+                                    <label class="form-check-label" for="enterprise">Enterprise Account</label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" role="switch" id="darkMode">
+                                    <label class="form-check-label" for="darkMode">Enable Dark Mode</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Textarea Elements Card -->
+                <div class="col-lg-6 col-md-6 col-sm-6 col-12">
+                    <div class="recent-post-wrapper notika-shadow mg-t-30" id="textarea-elements">
+                        <div class="recent-post-ctn">
+                            <div class="recent-post-title">
+                                <h2>Textarea Elements</h2>
+                                <p>Multi-line text inputs with auto-resize and word count</p>
+                            </div>
+                        </div>
+                        <div class="recent-post-items analytics-chart-container">
+                            <div class="form-group mb-3">
+                                <label class="form-label">Basic Textarea</label>
+                                <textarea class="form-control" rows="4" placeholder="Enter your message here..."></textarea>
+                            </div>
+                            <div class="form-group mb-3">
+                                <label class="form-label">Auto-Resize Textarea</label>
+                                <textarea class="form-control" rows="2" placeholder="Start typing to see auto-resize in action..."></textarea>
+                            </div>
+                            <div class="form-group mb-3">
+                                <label class="form-label">Small Textarea</label>
+                                <textarea class="form-control form-control-sm" rows="3" placeholder="Small textarea..."></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Large Textarea</label>
+                                <textarea class="form-control form-control-lg" rows="3" placeholder="Large textarea..."></textarea>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- End Footer area-->
+    <!-- Form Element area End-->
 
-    <!-- ONLY VITE ENTRY POINT - Everything else bundled by Vite -->
-    <script type="module" src="/src/js/pages/form-elements.js"></script>
-    
-    <!-- Clean Navigation JavaScript -->
+    <!-- Vite JavaScript Entry Point -->
+    <script type="module" src="src/js/pages/form-elements.js"></script>
+
+    <!-- Navigation Enhancement Script -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // Search functionality
-            const searchInput = document.querySelector('.search-dropdown input');
-            if (searchInput) {
-                const searchTrigger = searchInput.closest('.dropdown').querySelector('[data-bs-toggle="dropdown"]');
-                if (searchTrigger) {
-                    searchTrigger.addEventListener('shown.bs.dropdown', function() {
-                        setTimeout(() => searchInput.focus(), 100);
-                    });
-                }
-                
-                searchInput.addEventListener('keypress', function(e) {
-                    if (e.key === 'Enter' && this.value.trim()) {
-                        console.log('Searching for:', this.value);
-                    }
+            const navLinks = document.querySelectorAll('.nav-link');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    this.style.transform = 'scale(0.98)';
+                    setTimeout(() => {
+                        this.style.transform = '';
+                    }, 100);
                 });
             }
-            
-            // Simple navbar dropdown enhancements
-            const navDropdowns = document.querySelectorAll('.notika-navbar .dropdown');
-            
-            navDropdowns.forEach(dropdown => {
-                const toggle = dropdown.querySelector('.dropdown-toggle');
-                
-                // Add subtle click feedback
-                if (toggle) {
-                    toggle.addEventListener('click', function(e) {
-                        // Don't navigate away, just toggle dropdown
-                        e.preventDefault();
-                        
-                        // Quick visual feedback
-                        this.style.transform = 'scale(0.98)';
-                        setTimeout(() => {
-                            this.style.transform = '';
-                        }, 100);
-                    });
-                }
-            });
-            
-            console.log('✅ Stable navigation system initialized');
+
+            console.log('✅ Form Elements page navigation initialized');
         });
     </script>
 </body>

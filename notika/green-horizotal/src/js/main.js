@@ -8,6 +8,8 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import 'aos/dist/aos.css'
 import 'leaflet/dist/leaflet.css'
 
+// Note: Notika template CSS files are loaded via <link> tags in HTML head for better compatibility
+
 // Font Awesome - Tree-shakable approach (only icons we use)
 import { library, dom } from '@fortawesome/fontawesome-svg-core'
 import { 
@@ -47,7 +49,15 @@ import {
   faArrowTrendDown,
   faShieldHalved
 } from '@fortawesome/free-solid-svg-icons'
-import { faBootstrap, faGoogle, faMicrosoft } from '@fortawesome/free-brands-svg-icons'
+import { 
+  faBootstrap, 
+  faGoogle, 
+  faMicrosoft, 
+  faGithub, 
+  faStackOverflow, 
+  faReddit, 
+  faLinkedin 
+} from '@fortawesome/free-brands-svg-icons'
 
 // Add only the icons we use to the library
 library.add(
@@ -88,7 +98,11 @@ library.add(
   faArrowTrendDown,
   faShieldHalved,
   faGoogle,
-  faMicrosoft
+  faMicrosoft,
+  faGithub,
+  faStackOverflow,
+  faReddit,
+  faLinkedin
 )
 
 // Replace any <i> tags with SVG automatically
@@ -117,13 +131,16 @@ import '../css/modern.scss'
 
 // Import ALL JavaScript through Vite bundling
 import { Chart, registerables } from 'chart.js'
-import { Toast, Modal, Tooltip, Popover } from 'bootstrap'
+import * as bootstrap from 'bootstrap'
 import AOS from 'aos'
 import { toast } from 'sonner'
 import L from 'leaflet'
 
 // Register Chart.js components
 Chart.register(...registerables)
+
+// Make Bootstrap globally available
+window.bootstrap = bootstrap
 
 /**
  * Modern Notika Application Class - Pure Vite 7.1.5 Architecture
@@ -1039,46 +1056,164 @@ class NotikaApp {
 
     // Add styles for new dashboard widgets to match Notika design
     const dashboardStyles = `
-      
-      /* Reusable Widget Components - No More Inline Styles */
-      .analytics-chart-container {
-        padding: 20px;
+
+      /* GLOBAL WIDGET SPACING FIX - Add small margin below widget headers */
+      .recent-post-wrapper .recent-post-title {
+        margin-bottom: 8px !important;
+      }
+
+      .recent-post-wrapper .recent-post-items,
+      .recent-post-wrapper .analytics-chart-container {
+        padding-top: 8px !important;
+      }
+
+      /* Ensure consistent spacing for all modernized cards */
+      .form-element-wrapper,
+      .chart-wrapper {
+        padding-top: 25px !important;
+      }
+
+      /* Dashboard pages need proper top spacing after navigation */
+      .notika-status-area {
+        margin-top: 30px !important;
+      }
+
+      .sale-statistic-area,
+      .notika-email-post-area {
+        margin-top: 20px !important;
+      }
+
+      /* REMOVE ALL INTERFERENCE with Resource Allocation chart */
+      #resource-allocation-chart {
+        all: unset !important;
+        display: block !important;
+        width: auto !important;
+        height: auto !important;
+      }
+
+      /* Force sparkline charts to fill their containers properly */
+      .sparkline-bar-stats1,
+      .sparkline-bar-stats2,
+      .sparkline-bar-stats3,
+      .sparkline-bar-stats4 {
         width: 100% !important;
-        min-height: 280px !important;
+        height: 60px !important;
+        background: transparent !important;
+        padding: 10px !important;
+        display: block !important;
+      }
+
+      .sparkline-bar-stats1 canvas,
+      .sparkline-bar-stats2 canvas,
+      .sparkline-bar-stats3 canvas,
+      .sparkline-bar-stats4 canvas {
+        width: 100% !important;
+        height: 60px !important;
+        display: block !important;
+      }
+
+      /* Proper Chart Container Sizing - Good Aspect Ratios */
+      .analytics-chart-container {
+        width: 100%;
+        position: relative;
       }
       
       .analytics-chart-container canvas {
         width: 100% !important;
-        height: 280px !important;
         max-width: none !important;
         display: block !important;
+        height: auto !important;
+        min-height: 400px !important;
+      }
+
+      /* Perfect card heights - fit content without scrolling */
+      .recent-post-wrapper {
+        height: auto !important;
+        min-height: auto !important;
+      }
+
+      .recent-post-items {
+        height: auto !important;
+        min-height: auto !important;
+        padding: 20px !important;
+        overflow: visible !important;
+      }
+
+      /* Chart containers sized to fit content perfectly */
+      .analytics-chart-container {
+        height: auto !important;
+        min-height: auto !important;
+        padding: 15px !important;
+        overflow: visible !important;
+      }
+
+      /* Remove any max-height constraints that cause scrolling */
+      .recent-post-wrapper,
+      .recent-post-items,
+      .analytics-chart-container {
+        max-height: none !important;
+        overflow: visible !important;
+      }
+
+      /* Fix Date Picker overlapping - aggressive containment */
+      .recent-post-wrapper {
+        position: relative !important;
+        overflow: visible !important;
+      }
+
+      /* Specifically target the Date Picker card */
+      .recent-post-wrapper:has(input[type="date"]),
+      .recent-post-wrapper:has(input[type="datetime-local"]) {
+        overflow: hidden !important;
+        clip-path: inset(0 round 8px) !important;
+        contain: layout style paint !important;
+        isolation: isolate !important;
+      }
+
+      .recent-post-wrapper:has(input[type="date"]) .recent-post-items,
+      .recent-post-wrapper:has(input[type="datetime-local"]) .recent-post-items {
+        overflow: hidden !important;
+        position: relative !important;
+        z-index: 1 !important;
+        border-radius: 8px !important;
+      }
+
+      /* Date picker specific fixes */
+      input[type="date"]::-webkit-calendar-picker-indicator {
+        cursor: pointer;
+      }
+
+      /* Ensure date inputs fit properly in their containers */
+      input[type="date"],
+      input[type="datetime-local"],
+      input[type="color"] {
+        height: 45px !important;
+        width: 100% !important;
+        position: relative !important;
+        z-index: 1 !important;
+      }
+
+      /* Force date picker popup to stay within viewport */
+      input[type="date"]::-webkit-datetime-edit,
+      input[type="date"]::-webkit-calendar-picker-indicator {
+        position: relative !important;
       }
       
-      /* Force chart containers to full width and proper aspect ratio */
+      /* Chart containers with proper proportions */
       #visit-server-time,
       #dynamic-chart, 
       #visit-over-time {
         width: 100% !important;
-        height: 280px !important;
-        min-height: 280px !important;
-        min-width: 350px !important;
+        position: relative !important;
       }
       
-      /* Force chart parent containers to allow wider charts */
-      .analytics-chart-container {
-        padding: 20px;
-        width: 100% !important;
-        min-height: 280px !important;
-        overflow: visible !important;
-      }
-      
-      /* Override any width constraints from original CSS */
+      /* Remove any fixed width constraints */
       .visitor-sv-tm-ch,
       .visitor-st-ch,
       .flot-chart {
         width: 100% !important;
-        min-width: 350px !important;
         max-width: none !important;
+        position: relative !important;
       }
       
       .notification-icon {
@@ -1109,6 +1244,50 @@ class NotikaApp {
       
       .widget-padding {
         padding: 0 30px 30px 30px;
+      }
+      
+      /* Fix Bootstrap Dropdown Positioning Issues */
+      .notika-header {
+        position: relative !important;
+        z-index: 1050 !important;
+      }
+      
+      .notika-nav {
+        position: relative !important;
+      }
+      
+      .notika-nav .dropdown {
+        position: static !important;
+      }
+      
+      .notika-nav .dropdown-menu {
+        position: absolute !important;
+        z-index: 1055 !important;
+        margin-top: 0 !important;
+        transform: translate3d(0px, 18px, 0px) !important;
+        top: auto !important;
+        left: auto !important;
+      }
+      
+      .notika-nav .dropdown-menu.dropdown-menu-end {
+        right: 0 !important;
+        left: auto !important;
+        transform: translate3d(-20px, 18px, 0px) !important;
+      }
+      
+      /* Ensure dropdown triggers have proper positioning context */
+      .notika-nav-link {
+        position: relative !important;
+        transform: none !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+      }
+      
+      /* Prevent any CSS from interfering with dropdown positioning */
+      .notika-nav .dropdown:hover,
+      .notika-nav .dropdown.show {
+        transform: none !important;
       }
       
       /* Let original Notika CSS handle widget styling - no overrides needed */
@@ -1700,13 +1879,16 @@ class NotikaApp {
   }
 }
 
-// Initialize when DOM is ready - Vite will handle the timing
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', () => {
+// Initialize when DOM is ready - ONLY if no page-specific module will handle initialization
+// Check if we're being used directly (via script tag) or imported by a page module
+if (!document.documentElement.hasAttribute('data-page-module')) {
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', () => {
+      window.Notika = new NotikaApp()
+    })
+  } else {
     window.Notika = new NotikaApp()
-  })
-} else {
-  window.Notika = new NotikaApp()
+  }
 }
 
 // Log that we're properly using Vite bundling

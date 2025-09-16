@@ -22,9 +22,7 @@
 .visitor-sv-tm-area,
 .search-engine-area,
 .breadcomb-area,
-.main-menu-area,
-.mg-tb-40,
-.mg-t-30 {
+.main-menu-area {
     margin-top: 0 !important;
     padding-top: 0 !important;
     margin-bottom: var(--notika-spacing-sm) !important; /* Smaller 16px gaps between content */
@@ -37,14 +35,10 @@
     margin-bottom: var(--notika-spacing-sm) !important;
 }
 
-/* Override legacy spacing classes */
+/* Override legacy spacing classes - but preserve card spacing */
 .mg-tb-40 {
     margin-top: 0 !important;
     margin-bottom: var(--notika-spacing-md) !important;
-}
-
-.mg-t-30 {
-    margin-top: 0 !important;
 }
 
 /* Add proper section spacing */

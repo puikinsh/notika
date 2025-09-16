@@ -13,7 +13,7 @@ export default defineConfig({
     emptyOutDir: true,
     rollupOptions: {
       input: {
-        main: resolve(process.cwd(), 'notika/green-horizotal/index-vite.html'),
+        main: resolve(process.cwd(), 'notika/green-horizotal/index.html'),
         analytics: resolve(process.cwd(), 'notika/green-horizotal/analytics-vite.html'),
         'index-2': resolve(process.cwd(), 'notika/green-horizotal/index-2-vite.html'),
         'index-3': resolve(process.cwd(), 'notika/green-horizotal/index-3-vite.html'),
@@ -23,7 +23,13 @@ export default defineConfig({
         'area-charts': resolve(process.cwd(), 'notika/green-horizotal/area-charts-vite.html'),
         'form-elements': resolve(process.cwd(), 'notika/green-horizotal/form-elements-vite.html'),
         'form-components': resolve(process.cwd(), 'notika/green-horizotal/form-components-vite.html'),
-        'form-examples': resolve(process.cwd(), 'notika/green-horizotal/form-examples-vite.html')
+        'form-examples': resolve(process.cwd(), 'notika/green-horizotal/form-examples-vite.html'),
+        'widgets': resolve(process.cwd(), 'notika/green-horizotal/widgets-vite.html'),
+        'buttons': resolve(process.cwd(), 'notika/green-horizotal/buttons-vite.html'),
+        'typography': resolve(process.cwd(), 'notika/green-horizotal/typography-vite.html'),
+        'color': resolve(process.cwd(), 'notika/green-horizotal/color-vite.html'),
+        'modals': resolve(process.cwd(), 'notika/green-horizotal/modals-vite.html'),
+        'notification': resolve(process.cwd(), 'notika/green-horizotal/notification-vite.html')
       },
       output: {
         manualChunks: {
@@ -42,6 +48,14 @@ export default defineConfig({
   // Development server
   server: {
     port: 3000,
+    open: true,
+    cors: true,
+    host: true
+  },
+
+  // Preview server configuration
+  preview: {
+    port: 4173,
     open: true,
     cors: true,
     host: true

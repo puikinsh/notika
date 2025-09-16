@@ -134,16 +134,14 @@ class AnalyticsPage extends NotikaApp {
     const chartElement = document.getElementById('visit-server-time')
     if (!chartElement) return
     
-    // Force container dimensions
+    // Set proper container dimensions with good aspect ratio
     chartElement.style.width = '100%'
-    chartElement.style.height = '280px'
+    chartElement.style.height = '220px'
     chartElement.style.position = 'relative'
     
     const canvas = document.createElement('canvas')
-    canvas.width = 400
-    canvas.height = 280
     canvas.style.width = '100%'
-    canvas.style.height = '280px'
+    canvas.style.height = '220px'
     chartElement.appendChild(canvas)
     
     const ctx = canvas.getContext('2d')
@@ -190,16 +188,14 @@ class AnalyticsPage extends NotikaApp {
     const chartElement = document.getElementById('dynamic-chart')
     if (!chartElement) return
     
-    // Force container dimensions
+    // Set proper container dimensions for doughnut chart
     chartElement.style.width = '100%'
-    chartElement.style.height = '280px'
+    chartElement.style.height = '240px'
     chartElement.style.position = 'relative'
     
     const canvas = document.createElement('canvas')
-    canvas.width = 400
-    canvas.height = 280
     canvas.style.width = '100%'
-    canvas.style.height = '280px'
+    canvas.style.height = '240px'
     chartElement.appendChild(canvas)
     
     const ctx = canvas.getContext('2d')
@@ -235,20 +231,18 @@ class AnalyticsPage extends NotikaApp {
     const chartElement = document.getElementById('visit-over-time')
     if (!chartElement) return
     
-    // Force container dimensions
+    // Set proper container dimensions with good aspect ratio
     chartElement.style.width = '100%'
-    chartElement.style.height = '280px'
+    chartElement.style.height = '220px'
     chartElement.style.position = 'relative'
     
     const canvas = document.createElement('canvas')
-    canvas.width = 400
-    canvas.height = 280
     canvas.style.width = '100%'  
-    canvas.style.height = '280px'
+    canvas.style.height = '220px'
     chartElement.appendChild(canvas)
     
     const ctx = canvas.getContext('2d')
-    const gradient = ctx.createLinearGradient(0, 0, 0, 280)
+    const gradient = ctx.createLinearGradient(0, 0, 0, 220)
     gradient.addColorStop(0, 'rgba(3, 169, 243, 0.8)')
     gradient.addColorStop(1, 'rgba(3, 169, 243, 0.1)')
     

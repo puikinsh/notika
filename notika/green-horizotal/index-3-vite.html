@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-page-module="index-3">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Dashboard Three | Notika - Modern Vite Template</title>
+    <title>Social Media Analytics | Notika - Modern Vite Template</title>
     <meta name="description" content="Modern Notika Admin Template powered by Vite 7.1.5">
     
     <!-- Favicon -->
@@ -11,7 +11,13 @@
     
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700,900" rel="stylesheet">
-    
+
+    <!-- Essential Notika Template CSS -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/notika-custom-icon.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
     <!-- Font Awesome and all other CSS imported via Vite -->
     <!-- ONLY Vite entry point - everything else bundled -->
 </head>
@@ -238,9 +244,9 @@
                             <ul class="mobile-menu-nav">
                                 <li><a data-bs-toggle="collapse" data-bs-target="#Charts" href="#">Home</a>
                                     <ul class="collapse dropdown-header-top">
-                                        <li><a href="index.html">Dashboard Three</a></li>
+                                        <li><a href="index.html">Dashboard One</a></li>
                                         <li><a href="index-2.html">Dashboard Two</a></li>
-                                        <li><a href="index-3.html">Dashboard Three</a></li>
+                                        <li><a href="index-3.html">Social Media Dashboard</a></li>
                                         <li><a href="index-4.html">Dashboard Four</a></li>
                                         <li><a href="analytics.html">Analytics</a></li>
                                         <li><a href="widgets.html">Widgets</a></li>
@@ -344,9 +350,9 @@
                         <span>Home</span>
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="index.html">Dashboard Three</a></li>
+                        <li><a class="dropdown-item" href="index.html">Dashboard One</a></li>
                         <li><a class="dropdown-item" href="index-2.html">Dashboard Two</a></li>
-                        <li><a class="dropdown-item" href="index-3.html">Dashboard Three</a></li>
+                        <li><a class="dropdown-item" href="index-3.html">Social Media Dashboard</a></li>
                         <li><a class="dropdown-item" href="index-4.html">Dashboard Four</a></li>
                         <li><hr class="dropdown-divider"></li>
                         <li><a class="dropdown-item" href="analytics.html">Analytics</a></li>
@@ -463,15 +469,46 @@
     </nav>
     <!-- End Stable Navigation -->
 
-    <!-- Start Status area -->
+	<!-- Breadcomb area Start-->
+	<div class="breadcomb-area">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 col-md-12 col-sm-12 col-12">
+					<div class="breadcomb-list">
+						<div class="row">
+							<div class="col-lg-6 col-md-6 col-sm-6 col-12">
+								<div class="breadcomb-wp">
+									<div class="breadcomb-icon">
+										<i class="notika-icon notika-analytics"></i>
+									</div>
+									<div class="breadcomb-ctn">
+										<h2>Social Media Dashboard</h2>
+										<p>Welcome to Notika <span class="bread-ntd">Admin Template</span></p>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-6 col-md-6 col-sm-6 col-3">
+								<div class="breadcomb-report">
+									<button data-bs-toggle="tooltip" data-placement="left" title="Download Report" class="btn"><i class="notika-icon notika-sent"></i></button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Breadcomb area End-->
+
+    <!-- Start Social Media Stats area -->
     <div class="notika-status-area">
         <div class="container">
             <div class="row">
                 <div class="col-lg-3 col-md-6 col-sm-6 col-12">
                     <div class="wb-traffic-inner notika-shadow sm-res-mg-t-30 tb-res-mg-t-30">
                         <div class="website-traffic-ctn">
-                            <h2><span class="counter">50,000</span></h2>
-                            <p>Total Website Traffics</p>
+                            <h2><span class="counter">127.5</span>K</h2>
+                            <p>Total Followers</p>
                         </div>
                         <div class="sparkline-bar-stats1"></div>
                     </div>
@@ -479,8 +516,8 @@
                 <div class="col-lg-3 col-md-6 col-sm-6 col-12">
                     <div class="wb-traffic-inner notika-shadow sm-res-mg-t-30 tb-res-mg-t-30">
                         <div class="website-traffic-ctn">
-                            <h2><span class="counter">90,000</span>k</h2>
-                            <p>Website Impressions</p>
+                            <h2><span class="counter">8.4</span>%</h2>
+                            <p>Engagement Rate</p>
                         </div>
                         <div class="sparkline-bar-stats2"></div>
                     </div>
@@ -488,8 +525,8 @@
                 <div class="col-lg-3 col-md-6 col-sm-6 col-12">
                     <div class="wb-traffic-inner notika-shadow sm-res-mg-t-30 tb-res-mg-t-30 dk-res-mg-t-30">
                         <div class="website-traffic-ctn">
-                            <h2>$<span class="counter">40,000</span></h2>
-                            <p>Total Online Sales</p>
+                            <h2><span class="counter">2.1</span>M</h2>
+                            <p>Monthly Reach</p>
                         </div>
                         <div class="sparkline-bar-stats3"></div>
                     </div>
@@ -497,8 +534,8 @@
                 <div class="col-lg-3 col-md-6 col-sm-6 col-12">
                     <div class="wb-traffic-inner notika-shadow sm-res-mg-t-30 tb-res-mg-t-30 dk-res-mg-t-30">
                         <div class="website-traffic-ctn">
-                            <h2><span class="counter">1,000</span></h2>
-                            <p>Total Support Tickets</p>
+                            <h2><span class="counter">445.2</span>K</h2>
+                            <p>Content Views</p>
                         </div>
                         <div class="sparkline-bar-stats4"></div>
                     </div>
@@ -506,54 +543,96 @@
             </div>
         </div>
     </div>
-    <!-- End Status area-->
-    <!-- Start Sale Statistic area-->
+    <!-- End Social Media Stats area-->
+
+    <!-- Start Engagement Analytics area-->
     <div class="sale-statistic-area">
         <div class="container">
             <div class="row">
-                <div class="col-lg-9 col-md-8 col-sm-7 col-12">
-                    <div class="sale-statistic-inner notika-shadow mg-tb-30">
-                        <div class="curved-inner-pro">
-                            <div class="curved-ctn">
-                                <h2>Sales Statistics</h2>
-                                <p>Vestibulum purus quam scelerisque, mollis nonummy metus</p>
+                <div class="col-lg-8 col-md-8 col-sm-7 col-12">
+                    <div class="recent-post-wrapper notika-shadow mg-t-30">
+                        <div class="recent-post-ctn">
+                            <div class="recent-post-title">
+                                <h2>Engagement Analytics</h2>
+                                <p>Multi-platform engagement trends across all social media channels</p>
                             </div>
                         </div>
-                        <div id="curved-line-chart" class="flot-chart-sts flot-chart"></div>
+                        <div class="recent-post-items analytics-chart-container">
+                            <canvas id="engagement-chart"></canvas>
+                        </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-4 col-sm-5 col-12">
-                    <div class="statistic-right-area notika-shadow mg-tb-30 sm-res-mg-t-0">
-                        <div class="past-day-statis">
-                            <h2>For The Past 30 Days</h2>
-                            <p>Performance metrics and insights for the past 30 days.</p>
-                        </div>
-						<div class="dash-widget-visits"></div>
-                        <div class="past-statistic-an">
-                            <div class="past-statistic-ctn">
-                                <h3><span class="counter">3,20,000</span></h3>
-                                <p>Page Views</p>
-                            </div>
-                            <div class="past-statistic-graph">
-                                <div class="stats-bar"></div>
+                <div class="col-lg-4 col-md-4 col-sm-5 col-12">
+                    <div class="recent-post-wrapper notika-shadow mg-t-30">
+                        <div class="recent-post-ctn">
+                            <div class="recent-post-title">
+                                <h2>Platform Performance</h2>
+                                <p>Breakdown of followers and engagement by platform</p>
                             </div>
                         </div>
-                        <div class="past-statistic-an">
-                            <div class="past-statistic-ctn">
-                                <h3><span class="counter">1,03,000</span></h3>
-                                <p>Total Clicks</p>
+                        <div class="recent-post-items">
+                            <div class="platform-item d-flex align-items-center mb-3 p-3 border rounded">
+                                <div class="platform-icon me-3" style="width: 40px; height: 40px; background: linear-gradient(45deg, #E4405F, #F56040); border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                                    <i class="fa-brands fa-instagram" style="color: white; font-size: 18px;"></i>
+                                </div>
+                                <div class="flex-grow-1">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="fw-bold">Instagram</span>
+                                        <span class="text-success fw-bold">45.2K</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <small class="text-muted">Engagement: 12.3%</small>
+                                        <span class="badge" style="background-color: #00c292; color: white;">+8.2%</span>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="past-statistic-graph">
-                                <div class="stats-line"></div>
+
+                            <div class="platform-item d-flex align-items-center mb-3 p-3 border rounded">
+                                <div class="platform-icon me-3" style="width: 40px; height: 40px; background: linear-gradient(45deg, #1DA1F2, #0084B4); border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                                    <i class="fa-brands fa-twitter" style="color: white; font-size: 18px;"></i>
+                                </div>
+                                <div class="flex-grow-1">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="fw-bold">Twitter</span>
+                                        <span class="text-success fw-bold">38.7K</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <small class="text-muted">Engagement: 6.8%</small>
+                                        <span class="badge" style="background-color: #00c292; color: white;">+5.1%</span>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="past-statistic-an">
-                            <div class="past-statistic-ctn">
-                                <h3><span class="counter">24,00,000</span></h3>
-                                <p>Site Visitors</p>
+
+                            <div class="platform-item d-flex align-items-center mb-3 p-3 border rounded">
+                                <div class="platform-icon me-3" style="width: 40px; height: 40px; background: linear-gradient(45deg, #ff0050, #25f4ee); border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                                    <i class="fa-brands fa-tiktok" style="color: white; font-size: 18px;"></i>
+                                </div>
+                                <div class="flex-grow-1">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="fw-bold">TikTok</span>
+                                        <span class="text-success fw-bold">28.9K</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <small class="text-muted">Engagement: 15.7%</small>
+                                        <span class="badge" style="background-color: #00c292; color: white;">+12.4%</span>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="past-statistic-graph">
-                                <div class="stats-bar-2"></div>
+
+                            <div class="platform-item d-flex align-items-center p-3 border rounded">
+                                <div class="platform-icon me-3" style="width: 40px; height: 40px; background: linear-gradient(45deg, #FF0000, #CC0000); border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                                    <i class="fa-brands fa-youtube" style="color: white; font-size: 18px;"></i>
+                                </div>
+                                <div class="flex-grow-1">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="fw-bold">YouTube</span>
+                                        <span class="text-success fw-bold">14.7K</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <small class="text-muted">Engagement: 9.2%</small>
+                                        <span class="badge" style="background-color: #ffc107; color: white;">+2.1%</span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -561,59 +640,18 @@
             </div>
         </div>
     </div>
-    <!-- End Sale Statistic area-->
-    <!-- Start Email Statistic area-->
+    <!-- End Engagement Analytics area-->
+
+    <!-- Start Content Performance area-->
     <div class="notika-email-post-area">
         <div class="container">
             <div class="row">
-                <div class="col-lg-4 col-md-6 col-sm-6 col-12">
-                    <div class="email-statis-inner notika-shadow">
-                        <div class="email-ctn-round">
-                            <div class="email-rdn-hd">
-								<h2>Email Statistics</h2>
-							</div>
-                            <div class="email-statis-wrap">
-                                <div class="email-round-nock">
-                                    <input type="text" class="knob" value="0" data-rel="55" data-linecap="round" data-width="130" data-bgcolor="#E4E4E4" data-fgcolor="#00c292" data-thickness=".10" data-readonly="true">
-                                </div>
-                                <div class="email-ctn-nock">
-                                    <p>Total Emails Sent</p>
-                                </div>
-                            </div>
-                            <div class="email-round-gp">
-                                <div class="email-round-pro">
-                                    <div class="email-signle-gp">
-                                        <input type="text" class="knob" value="0" data-rel="75" data-linecap="round" data-width="90" data-bgcolor="#E4E4E4" data-fgcolor="#00c292" data-thickness=".10" data-readonly="true" disabled>
-                                    </div>
-                                    <div class="email-ctn-nock">
-                                        <p>Bounce Rate</p>
-                                    </div>
-                                </div>
-                                <div class="email-round-pro">
-                                    <div class="email-signle-gp">
-                                        <input type="text" class="knob" value="0" data-rel="35" data-linecap="round" data-width="90" data-bgcolor="#E4E4E4" data-fgcolor="#00c292" data-thickness=".10" data-readonly="true" disabled>
-                                    </div>
-                                    <div class="email-ctn-nock">
-                                        <p>Total Opened</p>
-                                    </div>
-                                </div>
-                                <div class="email-round-pro sm-res-ds-n lg-res-mg-bl">
-                                    <div class="email-signle-gp">
-                                        <input type="text" class="knob" value="0" data-rel="45" data-linecap="round" data-width="90" data-bgcolor="#E4E4E4" data-fgcolor="#00c292" data-thickness=".10" data-readonly="true" disabled>
-                                    </div>
-                                    <div class="email-ctn-nock">
-                                        <p>Total Ignored</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-6 col-12">
-                    <div class="recent-post-wrapper notika-shadow sm-res-mg-t-30 tb-res-ds-n dk-res-ds">
+                <div class="col-lg-6 col-md-6 col-sm-6 col-12">
+                    <div class="recent-post-wrapper notika-shadow mg-t-30">
                         <div class="recent-post-ctn">
                             <div class="recent-post-title">
-                                <h2>Recent Posts</h2>
+                                <h2>Recent Posts Performance</h2>
+                                <p>Latest content performance across all platforms</p>
                             </div>
                         </div>
                         <div class="recent-post-items">
@@ -621,11 +659,16 @@
                                 <a href="#">
                                     <div class="recent-post-flex">
                                         <div class="recent-post-img">
-                                            <img src="/post/2.jpg" alt="" />
+                                            <img src="/post/2.jpg" alt="Post 1" />
                                         </div>
                                         <div class="recent-post-it-ctn">
-                                            <h2>Smith</h2>
-                                            <p>Nunc quis diam diamurabitur at dolor elementum, dictum turpis vel</p>
+                                            <h6>Summer Collection Launch</h6>
+                                            <p>Instagram • Photo • 2 hours ago</p>
+                                            <div class="d-flex gap-3 text-muted small">
+                                                <span><i class="fa-regular fa-heart"></i> 2.4K</span>
+                                                <span><i class="fa-regular fa-comment"></i> 186</span>
+                                                <span><i class="fa-solid fa-share"></i> 92</span>
+                                            </div>
                                         </div>
                                     </div>
                                 </a>
@@ -634,11 +677,16 @@
                                 <a href="#">
                                     <div class="recent-post-flex rct-pt-mg">
                                         <div class="recent-post-img">
-                                            <img src="/post/1.jpg" alt="" />
+                                            <img src="/post/1.jpg" alt="Post 2" />
                                         </div>
                                         <div class="recent-post-it-ctn">
-                                            <h2>John Deo</h2>
-                                            <p>Nunc quis diam diamurabitur at dolor elementum, dictum turpis vel</p>
+                                            <h6>Marketing Tips Video</h6>
+                                            <p>TikTok • Video • 5 hours ago</p>
+                                            <div class="d-flex gap-3 text-muted small">
+                                                <span><i class="fa-regular fa-heart"></i> 8.7K</span>
+                                                <span><i class="fa-regular fa-comment"></i> 342</span>
+                                                <span><i class="fa-solid fa-share"></i> 156</span>
+                                            </div>
                                         </div>
                                     </div>
                                 </a>
@@ -647,11 +695,16 @@
                                 <a href="#">
                                     <div class="recent-post-flex rct-pt-mg">
                                         <div class="recent-post-img">
-                                            <img src="/post/4.jpg" alt="" />
+                                            <img src="/post/4.jpg" alt="Post 3" />
                                         </div>
                                         <div class="recent-post-it-ctn">
-                                            <h2>Malika</h2>
-                                            <p>Nunc quis diam diamurabitur at dolor elementum, dictum turpis vel</p>
+                                            <h6>Behind the Scenes Story</h6>
+                                            <p>Instagram • Story • 8 hours ago</p>
+                                            <div class="d-flex gap-3 text-muted small">
+                                                <span><i class="fa-regular fa-eye"></i> 1.2K</span>
+                                                <span><i class="fa-regular fa-comment"></i> 45</span>
+                                                <span><i class="fa-solid fa-share"></i> 23</span>
+                                            </div>
                                         </div>
                                     </div>
                                 </a>
@@ -660,24 +713,16 @@
                                 <a href="#">
                                     <div class="recent-post-flex rct-pt-mg">
                                         <div class="recent-post-img">
-                                            <img src="/post/2.jpg" alt="" />
+                                            <img src="/post/2.jpg" alt="Post 4" />
                                         </div>
                                         <div class="recent-post-it-ctn">
-                                            <h2>Smith</h2>
-                                            <p>Nunc quis diam diamurabitur at dolor elementum, dictum turpis vel</p>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="recent-post-signle">
-                                <a href="#">
-                                    <div class="recent-post-flex rct-pt-mg">
-                                        <div class="recent-post-img">
-                                            <img src="/post/1.jpg" alt="" />
-                                        </div>
-                                        <div class="recent-post-it-ctn">
-                                            <h2>John Deo</h2>
-                                            <p>Nunc quis diam diamurabitur at dolor elementum, dictum turpis vel</p>
+                                            <h6>Product Announcement Tweet</h6>
+                                            <p>Twitter • Text • 12 hours ago</p>
+                                            <div class="d-flex gap-3 text-muted small">
+                                                <span><i class="fa-regular fa-heart"></i> 892</span>
+                                                <span><i class="fa-regular fa-comment"></i> 67</span>
+                                                <span><i class="fa-solid fa-retweet"></i> 124</span>
+                                            </div>
                                         </div>
                                     </div>
                                 </a>
@@ -686,7 +731,7 @@
                                 <a href="#">
                                     <div class="recent-post-flex rc-ps-vw">
                                         <div class="recent-post-line rct-pt-mg">
-                                            <p>View All</p>
+                                            <p>View All Posts</p>
                                         </div>
                                     </div>
                                 </a>
@@ -694,514 +739,289 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 col-sm-6 col-12">
-                    <div class="recent-items-wp notika-shadow sm-res-mg-t-30">
-                        <div class="rc-it-ltd">
-                            <div class="recent-items-ctn">
-                                <div class="recent-items-title">
-                                    <h2>Recent Items</h2>
+                <div class="col-lg-6 col-md-6 col-sm-6 col-12">
+                    <div class="recent-post-wrapper notika-shadow mg-t-30">
+                        <div class="recent-post-ctn">
+                            <div class="recent-post-title">
+                                <h2>Audience Demographics</h2>
+                                <p>Age groups, geography, and interests breakdown</p>
+                            </div>
+                        </div>
+                        <div class="recent-post-items">
+                            <div class="mb-4">
+                                <h6 class="text-muted mb-3">Age Groups</h6>
+                                <div class="mb-2">
+                                    <div class="d-flex justify-content-between">
+                                        <span class="small">18-24</span>
+                                        <span class="small fw-bold">32%</span>
+                                    </div>
+                                    <div class="progress" style="height: 6px;">
+                                        <div class="progress-bar" style="width: 32%; background-color: #03a9f3;"></div>
+                                    </div>
+                                </div>
+                                <div class="mb-2">
+                                    <div class="d-flex justify-content-between">
+                                        <span class="small">25-34</span>
+                                        <span class="small fw-bold">28%</span>
+                                    </div>
+                                    <div class="progress" style="height: 6px;">
+                                        <div class="progress-bar" style="width: 28%; background-color: #00c292;"></div>
+                                    </div>
+                                </div>
+                                <div class="mb-2">
+                                    <div class="d-flex justify-content-between">
+                                        <span class="small">35-44</span>
+                                        <span class="small fw-bold">23%</span>
+                                    </div>
+                                    <div class="progress" style="height: 6px;">
+                                        <div class="progress-bar" style="width: 23%; background-color: #ffc107;"></div>
+                                    </div>
+                                </div>
+                                <div class="mb-2">
+                                    <div class="d-flex justify-content-between">
+                                        <span class="small">45+</span>
+                                        <span class="small fw-bold">17%</span>
+                                    </div>
+                                    <div class="progress" style="height: 6px;">
+                                        <div class="progress-bar" style="width: 17%; background-color: #9c27b0;"></div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="recent-items-inn">
-                                <table class="table table-inner table-vmiddle">
-                                    <thead>
-                                        <tr>
-                                            <th>ID</th>
-                                            <th>Name</th>
-                                            <th style="width: 60px">Price</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td class="f-500 c-cyan">4555</td>
-                                            <td>Samsung Galaxy Mega</td>
-                                            <td class="f-500 c-cyan">$921</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="f-500 c-cyan">4556</td>
-                                            <td>Huawei Ascend P6</td>
-                                            <td class="f-500 c-cyan">$240</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="f-500 c-cyan">8778</td>
-                                            <td>HTC One M8</td>
-                                            <td class="f-500 c-cyan">$400</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="f-500 c-cyan">5667</td>
-                                            <td>Samsung Galaxy Alpha</td>
-                                            <td class="f-500 c-cyan">$870</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="f-500 c-cyan">7886</td>
-                                            <td>LG G3</td>
-                                            <td class="f-500 c-cyan">$790</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+
+                            <div class="mb-4">
+                                <h6 class="text-muted mb-3">Top Countries</h6>
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <div class="d-flex align-items-center">
+                                        <img src="/country/1.png" alt="US" class="me-2" style="width: 20px; height: 15px;">
+                                        <span class="small">United States</span>
+                                    </div>
+                                    <span class="small fw-bold">45%</span>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <div class="d-flex align-items-center">
+                                        <img src="/country/2.png" alt="UK" class="me-2" style="width: 20px; height: 15px;">
+                                        <span class="small">United Kingdom</span>
+                                    </div>
+                                    <span class="small fw-bold">18%</span>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <div class="d-flex align-items-center">
+                                        <img src="/country/3.png" alt="CA" class="me-2" style="width: 20px; height: 15px;">
+                                        <span class="small">Canada</span>
+                                    </div>
+                                    <span class="small fw-bold">12%</span>
+                                </div>
                             </div>
-							<div id="recent-items-chart" class="flot-chart-items flot-chart vt-ct-it tb-rc-it-res"></div>
+
+                            <div>
+                                <h6 class="text-muted mb-3">Top Interests</h6>
+                                <div class="d-flex flex-wrap gap-1">
+                                    <span class="badge" style="background-color: #03a9f3; color: white;">Fashion</span>
+                                    <span class="badge" style="background-color: #00c292; color: white;">Technology</span>
+                                    <span class="badge" style="background-color: #ffc107; color: white;">Lifestyle</span>
+                                    <span class="badge" style="background-color: #9c27b0; color: white;">Travel</span>
+                                    <span class="badge" style="background-color: #6c757d; color: white;">Food</span>
+                                    <span class="badge" style="background-color: #212529; color: white;">Business</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- End Email Statistic area-->
-    <!-- Start Realtime sts area-->
+    <!-- End Content Performance area-->
+
+    <!-- Start Social Media Tools area-->
     <div class="realtime-statistic-area">
         <div class="container">
             <div class="row">
                 <div class="col-lg-4 col-md-6 col-sm-6 col-12">
-                    <div class="realtime-wrap notika-shadow mg-t-30 h-100">
-                        <div class="realtime-ctn">
-                            <div class="realtime-title">
-                                <h2>Realtime Visitors</h2>
+                    <div class="recent-post-wrapper notika-shadow mg-t-30">
+                        <div class="recent-post-ctn">
+                            <div class="recent-post-title">
+                                <h2>Trending Hashtags</h2>
+                                <p>Popular hashtags with usage counts</p>
                             </div>
                         </div>
-                        <div class="card-box">
-                            <!-- Stats Row -->
-                            <div class="row g-3 mb-4">
-                                <div class="col-6">
-                                    <div class="text-center p-3 bg-light rounded">
-                                        <h4 class="mb-1 text-success fw-bold"><span class="counter">435,456</span></h4>
-                                        <small class="text-muted">Last 24h</small>
-                                    </div>
+                        <div class="recent-post-items">
+                            <div class="hashtag-item d-flex justify-content-between align-items-center mb-3 p-2 border rounded">
+                                <div>
+                                    <span class="fw-bold text-primary">#SocialMediaMarketing</span>
+                                    <div class="small text-muted">Trending in Marketing</div>
                                 </div>
-                                <div class="col-6">
-                                    <div class="text-center p-3 bg-light rounded">
-                                        <h4 class="mb-1 text-info fw-bold"><span class="counter">4,566</span></h4>
-                                        <small class="text-muted">Last 30m</small>
-                                    </div>
-                                </div>
+                                <span class="badge" style="background-color: #00c292; color: white;">1.2K</span>
                             </div>
-                            
-                            <!-- World Map -->
-                            <div class="world-map-container mb-4" style="height: 160px; background: #f8f9fa; border-radius: 8px; position: relative;">
-                                <div id="world-map" style="height: 100%; width: 100%;"></div>
+
+                            <div class="hashtag-item d-flex justify-content-between align-items-center mb-3 p-2 border rounded">
+                                <div>
+                                    <span class="fw-bold text-primary">#DigitalTransformation</span>
+                                    <div class="small text-muted">Trending in Technology</div>
+                                </div>
+                                <span class="badge" style="background-color: #00c292; color: white;">856</span>
                             </div>
-                            
-                            <!-- Recent Activity -->
-                            <div class="recent-visitors">
-                                <h6 class="text-muted mb-3">Recent Activity</h6>
-                                
-                                <div class="visitor-item d-flex align-items-center mb-3 p-2 border rounded">
-                                    <img src="/country/1.png" alt="US" class="me-2" style="width: 20px; height: 15px;">
-                                    <div class="flex-grow-1">
-                                        <div class="d-flex justify-content-between align-items-center">
-                                            <span class="small fw-medium">United States</span>
-                                            <span class="badge bg-success-subtle text-success">2m ago</span>
-                                        </div>
-                                        <div class="small text-muted">Firefox • Mac OSX</div>
-                                    </div>
+
+                            <div class="hashtag-item d-flex justify-content-between align-items-center mb-3 p-2 border rounded">
+                                <div>
+                                    <span class="fw-bold text-primary">#ContentCreation</span>
+                                    <div class="small text-muted">Trending in Creative</div>
                                 </div>
-                                
-                                <div class="visitor-item d-flex align-items-center mb-3 p-2 border rounded">
-                                    <img src="/country/2.png" alt="AU" class="me-2" style="width: 20px; height: 15px;">
-                                    <div class="flex-grow-1">
-                                        <div class="d-flex justify-content-between align-items-center">
-                                            <span class="small fw-medium">Australia</span>
-                                            <span class="badge bg-info-subtle text-info">5m ago</span>
-                                        </div>
-                                        <div class="small text-muted">Chrome • Windows</div>
-                                    </div>
+                                <span class="badge" style="background-color: #ffc107; color: white;">642</span>
+                            </div>
+
+                            <div class="hashtag-item d-flex justify-content-between align-items-center mb-3 p-2 border rounded">
+                                <div>
+                                    <span class="fw-bold text-primary">#InfluencerMarketing</span>
+                                    <div class="small text-muted">Trending in Influencers</div>
                                 </div>
-                                
-                                <div class="visitor-item d-flex align-items-center p-2 border rounded">
-                                    <img src="/country/3.png" alt="BR" class="me-2" style="width: 20px; height: 15px;">
-                                    <div class="flex-grow-1">
-                                        <div class="d-flex justify-content-between align-items-center">
-                                            <span class="small fw-medium">Brazil</span>
-                                            <span class="badge bg-warning-subtle text-warning">10m ago</span>
-                                        </div>
-                                        <div class="small text-muted">Safari • iOS</div>
-                                    </div>
+                                <span class="badge" style="background-color: #9c27b0; color: white;">523</span>
+                            </div>
+
+                            <div class="hashtag-item d-flex justify-content-between align-items-center p-2 border rounded">
+                                <div>
+                                    <span class="fw-bold text-primary">#BrandAwareness</span>
+                                    <div class="small text-muted">Trending in Branding</div>
                                 </div>
+                                <span class="badge" style="background-color: #6c757d; color: white;">387</span>
                             </div>
                         </div>
                     </div>
                 </div>
+
                 <div class="col-lg-4 col-md-6 col-sm-6 col-12">
-                    <div class="add-todo-list notika-shadow mg-t-30 h-100">
-                        <div class="realtime-ctn">
-                            <div class="realtime-title">
-                                <h2>Add Todo</h2>
+                    <div class="recent-post-wrapper notika-shadow mg-t-30">
+                        <div class="recent-post-ctn">
+                            <div class="recent-post-title">
+                                <h2>Content Calendar</h2>
+                                <p>Upcoming scheduled posts</p>
                             </div>
                         </div>
-                        <div class="card-box d-flex flex-column">
-                            <!-- Todo Controls -->
-                            <div class="d-flex justify-content-end align-items-center mb-3">
-                                <button class="btn btn-outline-secondary btn-sm" id="btn-archive">
-                                    <i class="fa-solid fa-archive me-1"></i>Archive
-                                </button>
-                            </div>
-                            <!-- Todo Stats -->
-                            <div class="alert alert-light border mb-3" role="alert">
-                                <div class="d-flex align-items-center justify-content-between">
-                                    <span class="fw-medium">
-                                        <i class="fa-solid fa-clock text-warning me-1"></i>
-                                        <span id="todo-remaining">0</span> of <span id="todo-total">0</span> remaining
-                                    </span>
-                                    <div class="progress" style="width: 100px; height: 8px;">
-                                        <div class="progress-bar bg-success" role="progressbar" style="width: 0%" id="todo-progress"></div>
+                        <div class="recent-post-items">
+                            <div class="calendar-item d-flex align-items-center mb-3 p-3 border rounded">
+                                <div class="calendar-date me-3" style="width: 50px; text-align: center;">
+                                    <div class="fw-bold text-primary" style="font-size: 18px;">16</div>
+                                    <div class="small text-muted">SEP</div>
+                                </div>
+                                <div class="flex-grow-1">
+                                    <div class="fw-bold">Product Tutorial Video</div>
+                                    <div class="small text-muted">YouTube • 2:00 PM</div>
+                                    <div class="small">
+                                        <span class="badge me-1" style="background-color: #ffc107; color: white;">Scheduled</span>
+                                        <span class="badge bg-outline-secondary">Tutorial</span>
                                     </div>
                                 </div>
                             </div>
-                            
-                            <!-- Todo List -->
-                            <div class="flex-grow-1" style="max-height: 350px; overflow-y: auto;">
-                                <ul class="list-group list-group-flush" id="todo-list"></ul>
-                            </div>
-                            
-                            <!-- Add Todo Form -->
-                            <div class="mt-auto pt-3 border-top">
-                                <div class="input-group">
-                                    <input type="text" id="todo-input-text" class="form-control" placeholder="Add new todo item..." aria-label="New todo">
-                                    <button class="btn btn-primary" type="button" id="todo-btn-submit">
-                                        <i class="fa-solid fa-plus me-1"></i>Add
-                                    </button>
+
+                            <div class="calendar-item d-flex align-items-center mb-3 p-3 border rounded">
+                                <div class="calendar-date me-3" style="width: 50px; text-align: center;">
+                                    <div class="fw-bold text-primary" style="font-size: 18px;">17</div>
+                                    <div class="small text-muted">SEP</div>
+                                </div>
+                                <div class="flex-grow-1">
+                                    <div class="fw-bold">Monday Motivation Quote</div>
+                                    <div class="small text-muted">Instagram • 9:00 AM</div>
+                                    <div class="small">
+                                        <span class="badge me-1" style="background-color: #00c292; color: white;">Ready</span>
+                                        <span class="badge bg-outline-secondary">Quote</span>
+                                    </div>
                                 </div>
                             </div>
-                            
+
+                            <div class="calendar-item d-flex align-items-center mb-3 p-3 border rounded">
+                                <div class="calendar-date me-3" style="width: 50px; text-align: center;">
+                                    <div class="fw-bold text-primary" style="font-size: 18px;">18</div>
+                                    <div class="small text-muted">SEP</div>
+                                </div>
+                                <div class="flex-grow-1">
+                                    <div class="fw-bold">Company Culture Story</div>
+                                    <div class="small text-muted">LinkedIn • 12:00 PM</div>
+                                    <div class="small">
+                                        <span class="badge me-1" style="background-color: #9c27b0; color: white;">Draft</span>
+                                        <span class="badge bg-outline-secondary">Culture</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="calendar-item d-flex align-items-center p-3 border rounded">
+                                <div class="calendar-date me-3" style="width: 50px; text-align: center;">
+                                    <div class="fw-bold text-primary" style="font-size: 18px;">19</div>
+                                    <div class="small text-muted">SEP</div>
+                                </div>
+                                <div class="flex-grow-1">
+                                    <div class="fw-bold">Weekly Analytics Report</div>
+                                    <div class="small text-muted">Twitter • 5:00 PM</div>
+                                    <div class="small">
+                                        <span class="badge me-1" style="background-color: #6c757d; color: white;">Planned</span>
+                                        <span class="badge bg-outline-secondary">Analytics</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
+
                 <div class="col-lg-4 col-md-6 col-sm-6 col-12">
-                    <div class="notika-chat-list notika-shadow mg-t-30 tb-res-ds-n dk-res-ds h-100">
-                        <div class="realtime-ctn">
-                            <div class="realtime-title">
-                                <h2>Chat Box</h2>
+                    <div class="recent-post-wrapper notika-shadow mg-t-30">
+                        <div class="recent-post-ctn">
+                            <div class="recent-post-title">
+                                <h2>Influencer Collaborations</h2>
+                                <p>Active partnerships and campaign performance</p>
                             </div>
                         </div>
-                        <div class="card-box d-flex flex-column p-0" style="height: 100%;">
-                            <!-- Chat Messages -->
-                            <div class="chat-messages p-3" style="flex: 1; max-height: 480px; overflow-y: auto;" id="chat-messages">
-                                <div class="conversation-list">
-                                    <!-- Message 1 -->
-                                    <div class="d-flex mb-3">
-                                        <img src="/post/1.jpg" alt="John" class="rounded-circle me-2" style="width: 35px; height: 35px; object-fit: cover;">
-                                        <div class="flex-grow-1">
-                                            <div class="d-flex align-items-baseline mb-1">
-                                                <span class="fw-medium small me-2">John Deo</span>
-                                                <span class="text-muted small">10:00</span>
-                                            </div>
-                                            <div class="bg-light p-2 rounded">
-                                                <p class="mb-0 small">Hello! How's everyone doing today?</p>
-                                            </div>
-                                        </div>
+                        <div class="recent-post-items">
+                            <div class="influencer-item d-flex align-items-center mb-3 p-3 border rounded">
+                                <img src="/post/1.jpg" alt="Influencer 1" class="rounded-circle me-3" style="width: 45px; height: 45px; object-fit: cover;">
+                                <div class="flex-grow-1">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="fw-bold">@fashionista_sarah</span>
+                                        <span class="badge" style="background-color: #00c292; color: white;">Active</span>
                                     </div>
-                                    
-                                    <!-- Message 2 -->
-                                    <div class="d-flex mb-3 justify-content-end">
-                                        <div class="me-2 text-end">
-                                            <div class="d-flex align-items-baseline justify-content-end mb-1">
-                                                <span class="text-muted small me-2">10:01</span>
-                                                <span class="fw-medium small">You</span>
-                                            </div>
-                                            <div class="bg-primary text-white p-2 rounded">
-                                                <p class="mb-0 small">Hi! Doing great. What about our next meeting?</p>
-                                            </div>
-                                        </div>
-                                        <img src="/post/2.jpg" alt="You" class="rounded-circle" style="width: 35px; height: 35px; object-fit: cover;">
-                                    </div>
-                                    
-                                    <!-- Message 3 -->
-                                    <div class="d-flex mb-3">
-                                        <img src="/post/1.jpg" alt="John" class="rounded-circle me-2" style="width: 35px; height: 35px; object-fit: cover;">
-                                        <div class="flex-grow-1">
-                                            <div class="d-flex align-items-baseline mb-1">
-                                                <span class="fw-medium small me-2">John Deo</span>
-                                                <span class="text-muted small">10:02</span>
-                                            </div>
-                                            <div class="bg-light p-2 rounded">
-                                                <p class="mb-0 small">Perfect! Everything looks good on my end.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    
-                                    <!-- Message 4 -->
-                                    <div class="d-flex mb-3 justify-content-end">
-                                        <div class="me-2 text-end">
-                                            <div class="d-flex align-items-baseline justify-content-end mb-1">
-                                                <span class="text-muted small me-2">10:02</span>
-                                                <span class="fw-medium small">You</span>
-                                            </div>
-                                            <div class="bg-primary text-white p-2 rounded">
-                                                <p class="mb-0 small">Awesome! Looking forward to it.</p>
-                                            </div>
-                                        </div>
-                                        <img src="/post/2.jpg" alt="You" class="rounded-circle" style="width: 35px; height: 35px; object-fit: cover;">
-                                    </div>
-                                    
-                                    <!-- Message 5 -->
-                                    <div class="d-flex mb-3">
-                                        <img src="/post/4.jpg" alt="Sarah" class="rounded-circle me-2" style="width: 35px; height: 35px; object-fit: cover;">
-                                        <div class="flex-grow-1">
-                                            <div class="d-flex align-items-baseline mb-1">
-                                                <span class="fw-medium small me-2">Sarah Wilson</span>
-                                                <span class="text-muted small">10:15</span>
-                                            </div>
-                                            <div class="bg-light p-2 rounded">
-                                                <p class="mb-0 small">Just finished reviewing the latest designs. They look fantastic!</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    
-                                    <!-- Message 6 -->
-                                    <div class="d-flex mb-3 justify-content-end">
-                                        <div class="me-2 text-end">
-                                            <div class="d-flex align-items-baseline justify-content-end mb-1">
-                                                <span class="text-muted small me-2">10:16</span>
-                                                <span class="fw-medium small">You</span>
-                                            </div>
-                                            <div class="bg-primary text-white p-2 rounded">
-                                                <p class="mb-0 small">Thanks Sarah! We put a lot of effort into the new UI.</p>
-                                            </div>
-                                        </div>
-                                        <img src="/post/2.jpg" alt="You" class="rounded-circle" style="width: 35px; height: 35px; object-fit: cover;">
-                                    </div>
-                                    
-                                    <!-- Message 7 -->
-                                    <div class="d-flex mb-3">
-                                        <img src="/post/1.jpg" alt="John" class="rounded-circle me-2" style="width: 35px; height: 35px; object-fit: cover;">
-                                        <div class="flex-grow-1">
-                                            <div class="d-flex align-items-baseline mb-1">
-                                                <span class="fw-medium small me-2">John Deo</span>
-                                                <span class="text-muted small">10:18</span>
-                                            </div>
-                                            <div class="bg-light p-2 rounded">
-                                                <p class="mb-0 small">The performance metrics are looking great too. Load times improved by 40%!</p>
-                                            </div>
-                                        </div>
+                                    <div class="small text-muted">Fashion Campaign</div>
+                                    <div class="small">
+                                        <span class="text-success fw-bold">2.3K</span> <span class="text-muted">engagement</span>
                                     </div>
                                 </div>
                             </div>
-                            
-                            <!-- Chat Input -->
-                            <div class="p-3 border-top bg-light" style="margin-top: 20px;">
-                                <div class="d-flex gap-2 align-items-end">
-                                    <div class="flex-grow-1">
-                                        <input type="text" class="form-control chat-input border-0 shadow-sm" placeholder="Type your message..." aria-label="Chat message" style="border-radius: 20px; padding: 12px 16px;">
+
+                            <div class="influencer-item d-flex align-items-center mb-3 p-3 border rounded">
+                                <img src="/post/2.jpg" alt="Influencer 2" class="rounded-circle me-3" style="width: 45px; height: 45px; object-fit: cover;">
+                                <div class="flex-grow-1">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="fw-bold">@tech_reviewer_mike</span>
+                                        <span class="badge" style="background-color: #ffc107; color: white;">Pending</span>
                                     </div>
-                                    <button class="btn btn-primary notika-chat-btn d-flex align-items-center justify-content-center" type="button" style="width: 44px; height: 44px; border-radius: 50%; padding: 0; border: none;">
-                                        <i class="fa-solid fa-paper-plane" style="font-size: 16px;"></i>
-                                    </button>
-                                </div>
-                            </div>
-                            
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- End Realtime sts area-->
-    <!-- Start System Overview area-->
-    <div class="system-overview-area">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-md-8 col-sm-12 col-12">
-                    <div class="system-performance-inner notika-shadow mg-t-30">
-                        <div class="curved-inner-pro">
-                            <div class="curved-ctn">
-                                <h2>System Performance Overview</h2>
-                                <p>Real-time monitoring of server metrics and performance indicators</p>
-                            </div>
-                        </div>
-                        <div class="system-perf-content">
-                            <!-- Performance Metrics Grid -->
-                            <div class="perf-metrics-grid">
-                                <div class="perf-metric-card">
-                                    <div class="metric-icon">
-                                        <i class="fa-solid fa-microchip"></i>
-                                    </div>
-                                    <div class="metric-content">
-                                        <h4><span class="counter">78</span>%</h4>
-                                        <p>CPU Usage</p>
-                                        <div class="metric-trend positive">↗ +2.4%</div>
-                                    </div>
-                                    <div class="metric-chart">
-                                        <div class="stats-cpu-line"></div>
-                                    </div>
-                                </div>
-                                
-                                <div class="perf-metric-card">
-                                    <div class="metric-icon">
-                                        <i class="fa-solid fa-memory"></i>
-                                    </div>
-                                    <div class="metric-content">
-                                        <h4><span class="counter">45</span>%</h4>
-                                        <p>Memory</p>
-                                        <div class="metric-trend negative">↘ -1.2%</div>
-                                    </div>
-                                    <div class="metric-chart">
-                                        <div class="stats-memory-bar"></div>
-                                    </div>
-                                </div>
-                                
-                                <div class="perf-metric-card">
-                                    <div class="metric-icon">
-                                        <i class="fa-solid fa-hdd"></i>
-                                    </div>
-                                    <div class="metric-content">
-                                        <h4><span class="counter">67</span>%</h4>
-                                        <p>Disk Usage</p>
-                                        <div class="metric-trend neutral">→ 0.0%</div>
-                                    </div>
-                                    <div class="metric-chart">
-                                        <div class="stats-disk-area"></div>
-                                    </div>
-                                </div>
-                                
-                                <div class="perf-metric-card">
-                                    <div class="metric-icon">
-                                        <i class="fa-solid fa-wifi"></i>
-                                    </div>
-                                    <div class="metric-content">
-                                        <h4><span class="counter">2.4</span>GB</h4>
-                                        <p>Bandwidth</p>
-                                        <div class="metric-trend positive">↗ +5.8%</div>
-                                    </div>
-                                    <div class="metric-chart">
-                                        <div class="stats-bandwidth-area"></div>
+                                    <div class="small text-muted">Product Review Campaign</div>
+                                    <div class="small">
+                                        <span class="text-info fw-bold">1.8K</span> <span class="text-muted">expected reach</span>
                                     </div>
                                 </div>
                             </div>
-                            
-                            <!-- System Status Indicators -->
-                            <div class="system-status-row">
-                                <div class="status-indicator">
-                                    <div class="status-dot status-online"></div>
-                                    <span>Database: Online</span>
-                                </div>
-                                <div class="status-indicator">
-                                    <div class="status-dot status-online"></div>
-                                    <span>API: Healthy</span>
-                                </div>
-                                <div class="status-indicator">
-                                    <div class="status-dot status-warning"></div>
-                                    <span>Cache: High Load</span>
-                                </div>
-                                <div class="status-indicator">
-                                    <div class="status-dot status-online"></div>
-                                    <span>Storage: Normal</span>
-                                </div>
-                            </div>
-                            
-                            <!-- Additional Performance Data -->
-                            <div class="system-additional-metrics">
-                                <div class="additional-metric-row">
-                                    <div class="additional-metric-item">
-                                        <div class="metric-label">Response Time</div>
-                                        <div class="metric-value">
-                                            <span class="metric-number">245</span>
-                                            <span class="metric-unit">ms</span>
-                                        </div>
-                                        <div class="metric-trend positive">↓ -12ms</div>
+
+                            <div class="influencer-item d-flex align-items-center mb-3 p-3 border rounded">
+                                <img src="/post/4.jpg" alt="Influencer 3" class="rounded-circle me-3" style="width: 45px; height: 45px; object-fit: cover;">
+                                <div class="flex-grow-1">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="fw-bold">@lifestyle_emma</span>
+                                        <span class="badge" style="background-color: #9c27b0; color: white;">Completed</span>
                                     </div>
-                                    
-                                    <div class="additional-metric-item">
-                                        <div class="metric-label">Requests/sec</div>
-                                        <div class="metric-value">
-                                            <span class="metric-number">1,247</span>
-                                            <span class="metric-unit">req/s</span>
-                                        </div>
-                                        <div class="metric-trend positive">↗ +23</div>
-                                    </div>
-                                    
-                                    <div class="additional-metric-item">
-                                        <div class="metric-label">Error Rate</div>
-                                        <div class="metric-value">
-                                            <span class="metric-number">0.12</span>
-                                            <span class="metric-unit">%</span>
-                                        </div>
-                                        <div class="metric-trend positive">↓ -0.03%</div>
-                                    </div>
-                                </div>
-                                
-                                <div class="server-uptime-section">
-                                    <div class="uptime-header">
-                                        <h4>System Uptime</h4>
-                                        <span class="uptime-value">99.8%</span>
-                                    </div>
-                                    <div class="uptime-details">
-                                        <div class="uptime-item">
-                                            <span class="uptime-label">Current Session:</span>
-                                            <span class="uptime-time">14d 8h 32m</span>
-                                        </div>
-                                        <div class="uptime-item">
-                                            <span class="uptime-label">Last Restart:</span>
-                                            <span class="uptime-time">Mar 15, 2024</span>
-                                        </div>
-                                        <div class="uptime-item">
-                                            <span class="uptime-label">Next Maintenance:</span>
-                                            <span class="uptime-time">Apr 1, 2024</span>
-                                        </div>
+                                    <div class="small text-muted">Brand Partnership</div>
+                                    <div class="small">
+                                        <span class="text-success fw-bold">4.1K</span> <span class="text-muted">total engagement</span>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-lg-4 col-md-4 col-sm-12 col-12">
-                    <div class="activity-overview-inner notika-shadow mg-t-30">
-                        <div class="curved-inner-pro">
-                            <div class="curved-ctn">
-                                <h2>Activity Overview</h2>
-                                <p>User engagement and system interactions</p>
-                            </div>
-                        </div>
-                        <div class="activity-over-content">
-                            <!-- Activity Chart -->
-                            <div class="activity-chart-container">
-                                <div id="user-activity-chart" class="activity-chart"></div>
-                            </div>
-                            
-                            <!-- Activity Stats -->
-                            <div class="activity-stats-list">
-                                <div class="activity-stat-row">
-                                    <div class="stat-icon">
-                                        <i class="fa-solid fa-users" style="color: #00c292;"></i>
+
+                            <div class="influencer-item d-flex align-items-center p-3 border rounded">
+                                <img src="/post/1.jpg" alt="Influencer 4" class="rounded-circle me-3" style="width: 45px; height: 45px; object-fit: cover;">
+                                <div class="flex-grow-1">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="fw-bold">@fitness_coach_alex</span>
+                                        <span class="badge" style="background-color: #6c757d; color: white;">Negotiating</span>
                                     </div>
-                                    <div class="stat-info">
-                                        <h5><span class="counter">12,450</span></h5>
-                                        <p>Active Users</p>
+                                    <div class="small text-muted">Wellness Campaign</div>
+                                    <div class="small">
+                                        <span class="text-primary fw-bold">5.2K</span> <span class="text-muted">potential reach</span>
                                     </div>
-                                    <div class="stat-change positive">+12%</div>
-                                </div>
-                                
-                                <div class="activity-stat-row">
-                                    <div class="stat-icon">
-                                        <i class="fa-solid fa-mouse-pointer" style="color: #03a9f3;"></i>
-                                    </div>
-                                    <div class="stat-info">
-                                        <h5><span class="counter">8,760</span></h5>
-                                        <p>Page Views</p>
-                                    </div>
-                                    <div class="stat-change positive">+8%</div>
-                                </div>
-                                
-                                <div class="activity-stat-row">
-                                    <div class="stat-icon">
-                                        <i class="fa-solid fa-clock" style="color: #ffc107;"></i>
-                                    </div>
-                                    <div class="stat-info">
-                                        <h5><span class="counter">4</span>:32</h5>
-                                        <p>Avg. Session</p>
-                                    </div>
-                                    <div class="stat-change negative">-3%</div>
-                                </div>
-                                
-                                <div class="activity-stat-row">
-                                    <div class="stat-icon">
-                                        <i class="fa-solid fa-chart-line" style="color: #e91e63;"></i>
-                                    </div>
-                                    <div class="stat-info">
-                                        <h5><span class="counter">23</span>%</h5>
-                                        <p>Bounce Rate</p>
-                                    </div>
-                                    <div class="stat-change positive">-5%</div>
                                 </div>
                             </div>
                         </div>
@@ -1210,7 +1030,7 @@
             </div>
         </div>
     </div>
-    <!-- End System Overview area-->
+    <!-- End Social Media Tools area-->
 
     <!-- Start Footer area-->
     <div class="footer-copyright-area">
