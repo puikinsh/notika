@@ -10,7 +10,7 @@ class NotificationPage extends NotikaApp {
     super()
     this.pageType = 'NOTIFICATION'
     this.ui = new NotikaUI()
-    this.toastContainer = null
+    this.toastContainers = {}
     this.activeToasts = []
     console.log('🚀 Notification page initializing...')
   }
@@ -18,25 +18,56 @@ class NotificationPage extends NotikaApp {
   async init() {
     await super.init()
     await this.ui.init()
-    this.initializeToastContainer()
+
+    // Ensure native scrollbars are restored
+    this.removeAllScrollbarRules()
+
+    this.initializeToastContainers()
     this.initializeNotificationButtons()
     this.initializeCustomNotification()
     console.log('✅ Notification functionality ready')
   }
 
-  initializeToastContainer() {
-    // Create a container for toasts if it doesn't exist
-    if (!document.getElementById('toast-container')) {
-      const container = document.createElement('div')
-      container.id = 'toast-container'
-      container.style.position = 'fixed'
-      container.style.zIndex = '9999'
-      container.style.pointerEvents = 'none'
-      document.body.appendChild(container)
-      this.toastContainer = container
-    } else {
-      this.toastContainer = document.getElementById('toast-container')
+  initializeToastContainers() {
+    // Create containers for each position
+    const positions = [
+      'top-left', 'top-center', 'top-right',
+      'bottom-left', 'bottom-center', 'bottom-right'
+    ]
+
+    positions.forEach(position => {
+      if (!document.getElementById(`toast-container-${position}`)) {
+        const container = document.createElement('div')
+        container.id = `toast-container-${position}`
+        container.className = 'toast-container'
+        container.style.position = 'fixed'
+        container.style.zIndex = '9999'
+        container.style.pointerEvents = 'none'
+
+        // Set position for each container
+        const positionStyles = this.getContainerPosition(position)
+        Object.keys(positionStyles).forEach(key => {
+          container.style[key] = positionStyles[key]
+        })
+
+        document.body.appendChild(container)
+        this.toastContainers[position] = container
+      } else {
+        this.toastContainers[position] = document.getElementById(`toast-container-${position}`)
+      }
+    })
+  }
+
+  getContainerPosition(position) {
+    const positions = {
+      'top-left': { top: '80px', left: '20px', right: 'auto', bottom: 'auto' },
+      'top-center': { top: '80px', left: '50%', right: 'auto', bottom: 'auto', transform: 'translateX(-50%)' },
+      'top-right': { top: '80px', right: '20px', left: 'auto', bottom: 'auto' },
+      'bottom-left': { bottom: '20px', left: '20px', right: 'auto', top: 'auto' },
+      'bottom-center': { bottom: '20px', left: '50%', right: 'auto', top: 'auto', transform: 'translateX(-50%)' },
+      'bottom-right': { bottom: '20px', right: '20px', left: 'auto', top: 'auto' }
     }
+    return positions[position] || positions['top-right']
   }
 
   initializeNotificationButtons() {
@@ -128,6 +159,9 @@ class NotificationPage extends NotikaApp {
       animation = 'fade'
     } = options
 
+    // Get the correct container for this position
+    const container = this.toastContainers[position] || this.toastContainers['top-right']
+
     // Create toast element
     const toast = document.createElement('div')
     toast.className = `toast align-items-center text-white border-0 show`
@@ -160,17 +194,15 @@ class NotificationPage extends NotikaApp {
       </div>
     `
 
-    // Position the container
-    this.setContainerPosition(position)
-
     // Add animation class
     this.addAnimation(toast, animation)
 
-    // Append to container
+    // Append to the correct container
+    // For bottom positions, add at the beginning; for top positions, add at the end
     if (position.includes('bottom')) {
-      this.toastContainer.prepend(toast)
+      container.prepend(toast)
     } else {
-      this.toastContainer.appendChild(toast)
+      container.appendChild(toast)
     }
 
     // Track active toast
@@ -192,41 +224,8 @@ class NotificationPage extends NotikaApp {
     }
   }
 
-  setContainerPosition(position) {
-    const positions = {
-      'top-left': { top: '20px', left: '20px', right: 'auto', bottom: 'auto' },
-      'top-center': { top: '20px', left: '50%', right: 'auto', bottom: 'auto', transform: 'translateX(-50%)' },
-      'top-right': { top: '20px', right: '20px', left: 'auto', bottom: 'auto' },
-      'bottom-left': { bottom: '20px', left: '20px', right: 'auto', top: 'auto' },
-      'bottom-center': { bottom: '20px', left: '50%', right: 'auto', top: 'auto', transform: 'translateX(-50%)' },
-      'bottom-right': { bottom: '20px', right: '20px', left: 'auto', top: 'auto' }
-    }
-
-    const pos = positions[position] || positions['top-right']
-    Object.keys(pos).forEach(key => {
-      this.toastContainer.style[key] = pos[key]
-    })
-  }
-
   addAnimation(toast, animation) {
-    const animations = {
-      fade: 'animate__fadeIn',
-      slide: 'animate__slideInDown',
-      bounce: 'animate__bounceIn',
-      flip: 'animate__flipInX',
-      rotate: 'animate__rotateIn',
-      zoom: 'animate__zoomIn'
-    }
-
-    // Add animate.css classes if available, otherwise use CSS transitions
-    if (animations[animation]) {
-      toast.classList.add('animate__animated', animations[animation])
-    } else {
-      // Fallback CSS animation
-      toast.style.animation = `${animation}In 0.5s ease-in-out`
-    }
-
-    // Define fallback keyframes
+    // Add keyframe animations if not already defined
     if (!document.querySelector('#notification-animations')) {
       const style = document.createElement('style')
       style.id = 'notification-animations'
@@ -257,10 +256,23 @@ class NotificationPage extends NotikaApp {
           from { transform: scale(0); opacity: 0; }
           to { transform: scale(1); opacity: 1; }
         }
-        .toast { transition: all 0.3s ease-in-out; }
+        .toast { transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out; }
       `
       document.head.appendChild(style)
     }
+
+    // Apply the correct animation based on type
+    const animationMap = {
+      fade: 'fadeIn',
+      slide: 'slideIn',
+      bounce: 'bounceIn',
+      flip: 'flipIn',
+      rotate: 'rotateIn',
+      zoom: 'zoomIn'
+    }
+
+    const animationName = animationMap[animation] || 'fadeIn'
+    toast.style.animation = `${animationName} 0.5s ease-in-out`
   }
 
   removeToast(toast) {

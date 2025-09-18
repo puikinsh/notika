@@ -12,9 +12,6 @@
     
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700,900" rel="stylesheet">
-
-    <!-- Mobile Menu CSS -->
-    <link rel="stylesheet" href="css/mobile-menu.css">
     
     <!-- Font Awesome and all other CSS imported via Vite -->
     <!-- ONLY Vite entry point - everything else bundled -->
@@ -229,7 +226,7 @@
                         </div>
 
                         <!-- Mobile Menu Toggle -->
-                        <button class="notika-nav-link d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileNavOffcanvas" aria-controls="mobileNavOffcanvas">
+                        <button class="notika-nav-link d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenuOffcanvas" aria-controls="mobileMenuOffcanvas">
                             <i class="notika-icon notika-menus"></i>
                         </button>
                     </div>
@@ -239,12 +236,17 @@
     </header>
     <!-- End Modern Header -->
 
-    <!-- Desktop Navigation -->
-    <nav class="navbar navbar-expand-lg notika-navbar d-none d-lg-block">
+    <!-- Unified Responsive Navigation -->
+    <nav class="navbar navbar-expand-lg notika-navbar">
         <div class="container">
-            <div class="navbar-collapse">
-                <ul class="navbar-nav w-100 justify-content-center">
+            <!-- Mobile Toggle Button -->
+            <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavigation" aria-controls="mainNavigation" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
+            <!-- Collapsible Navigation -->
+            <div class="collapse navbar-collapse" id="mainNavigation">
+                <ul class="navbar-nav w-100 justify-content-center">
                     <!-- Home Dropdown -->
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -262,268 +264,279 @@
                         </ul>
                     </li>
 
-                    <!-- Email Dropdown -->
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <i class="notika-icon notika-mail"></i>
-                            <span>Email</span>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="inbox.html">Inbox</a></li>
-                            <li><a class="dropdown-item" href="view-email.html">View Email</a></li>
-                            <li><a class="dropdown-item" href="compose-email.html">Compose Email</a></li>
-                        </ul>
-                    </li>
+                    <!-- Email -->
+                    <div class="accordion-item border-0">
+                        <h2 class="accordion-header" id="mobileEmail">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEmail" aria-expanded="false" aria-controls="collapseEmail">
+                                <i class="notika-icon notika-mail me-2"></i> Email
+                            </button>
+                        </h2>
+                        <div id="collapseEmail" class="accordion-collapse collapse" aria-labelledby="mobileEmail" data-bs-parent="#mobileMenuAccordion">
+                            <div class="accordion-body">
+                                <div class="list-group list-group-flush">
+                                    <a href="inbox.html" class="list-group-item list-group-item-action">Inbox</a>
+                                    <a href="view-email.html" class="list-group-item list-group-item-action">View Email</a>
+                                    <a href="compose-email.html" class="list-group-item list-group-item-action">Compose Email</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-                    <!-- Interface Dropdown -->
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <i class="notika-icon notika-edit"></i>
-                            <span>Interface</span>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="animations.html">Animations</a></li>
-                            <li><a class="dropdown-item" href="google-map.html">Google Map</a></li>
-                            <li><a class="dropdown-item" href="data-map.html">Data Maps</a></li>
-                            <li><a class="dropdown-item" href="code-editor.html">Code Editor</a></li>
-                            <li><a class="dropdown-item" href="image-cropper.html">Images Cropper</a></li>
-                            <li><a class="dropdown-item" href="wizard.html">Wizard</a></li>
-                        </ul>
-                    </li>
+                    <!-- Interface -->
+                    <div class="accordion-item border-0">
+                        <h2 class="accordion-header" id="mobileInterface">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInterface" aria-expanded="false" aria-controls="collapseInterface">
+                                <i class="notika-icon notika-edit me-2"></i> Interface
+                            </button>
+                        </h2>
+                        <div id="collapseInterface" class="accordion-collapse collapse" aria-labelledby="mobileInterface" data-bs-parent="#mobileMenuAccordion">
+                            <div class="accordion-body">
+                                <div class="list-group list-group-flush">
+                                    <a href="animations.html" class="list-group-item list-group-item-action">Animations</a>
+                                    <a href="google-map.html" class="list-group-item list-group-item-action">Google Map</a>
+                                    <a href="data-map.html" class="list-group-item list-group-item-action">Data Maps</a>
+                                    <a href="code-editor.html" class="list-group-item list-group-item-action">Code Editor</a>
+                                    <a href="image-cropper.html" class="list-group-item list-group-item-action">Images Cropper</a>
+                                    <a href="wizard.html" class="list-group-item list-group-item-action">Wizard</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-                    <!-- Charts Dropdown -->
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <i class="notika-icon notika-bar-chart"></i>
-                            <span>Charts</span>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="flot-charts.html">Flot Charts</a></li>
-                            <li><a class="dropdown-item" href="bar-charts-vite.html">Bar Charts</a></li>
-                            <li><a class="dropdown-item" href="line-charts-vite.html">Line Charts</a></li>
-                            <li><a class="dropdown-item" href="area-charts-vite.html">Area Charts</a></li>
-                        </ul>
-                    </li>
+                    <!-- Charts -->
+                    <div class="accordion-item border-0">
+                        <h2 class="accordion-header" id="mobileCharts">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCharts" aria-expanded="false" aria-controls="collapseCharts">
+                                <i class="notika-icon notika-bar-chart me-2"></i> Charts
+                            </button>
+                        </h2>
+                        <div id="collapseCharts" class="accordion-collapse collapse" aria-labelledby="mobileCharts" data-bs-parent="#mobileMenuAccordion">
+                            <div class="accordion-body">
+                                <div class="list-group list-group-flush">
+                                    <a href="flot-charts.html" class="list-group-item list-group-item-action">Flot Charts</a>
+                                    <a href="bar-charts-vite.html" class="list-group-item list-group-item-action">Bar Charts</a>
+                                    <a href="line-charts-vite.html" class="list-group-item list-group-item-action">Line Charts</a>
+                                    <a href="area-charts-vite.html" class="list-group-item list-group-item-action">Area Charts</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-                    <!-- Tables Dropdown -->
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <i class="notika-icon notika-windows"></i>
-                            <span>Tables</span>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="normal-table.html">Normal Table</a></li>
-                            <li><a class="dropdown-item" href="data-table-vite.html">Data Table</a></li>
-                        </ul>
-                    </li>
+                    <!-- Tables -->
+                    <div class="accordion-item border-0">
+                        <h2 class="accordion-header" id="mobileTables">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTables" aria-expanded="false" aria-controls="collapseTables">
+                                <i class="notika-icon notika-windows me-2"></i> Tables
+                            </button>
+                        </h2>
+                        <div id="collapseTables" class="accordion-collapse collapse" aria-labelledby="mobileTables" data-bs-parent="#mobileMenuAccordion">
+                            <div class="accordion-body">
+                                <div class="list-group list-group-flush">
+                                    <a href="normal-table.html" class="list-group-item list-group-item-action">Normal Table</a>
+                                    <a href="data-table-vite.html" class="list-group-item list-group-item-action">Data Table</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-                    <!-- Forms Dropdown -->
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <i class="notika-icon notika-form"></i>
-                            <span>Forms</span>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="form-elements-vite.html">Form Elements</a></li>
-                            <li><a class="dropdown-item" href="form-components-vite.html">Form Components</a></li>
-                            <li><a class="dropdown-item" href="form-examples-vite.html">Form Examples</a></li>
-                        </ul>
-                    </li>
+                    <!-- Forms -->
+                    <div class="accordion-item border-0">
+                        <h2 class="accordion-header" id="mobileForms">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseForms" aria-expanded="false" aria-controls="collapseForms">
+                                <i class="notika-icon notika-form me-2"></i> Forms
+                            </button>
+                        </h2>
+                        <div id="collapseForms" class="accordion-collapse collapse" aria-labelledby="mobileForms" data-bs-parent="#mobileMenuAccordion">
+                            <div class="accordion-body">
+                                <div class="list-group list-group-flush">
+                                    <a href="form-elements-vite.html" class="list-group-item list-group-item-action">Form Elements</a>
+                                    <a href="form-components-vite.html" class="list-group-item list-group-item-action">Form Components</a>
+                                    <a href="form-examples-vite.html" class="list-group-item list-group-item-action">Form Examples</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-                    <!-- Components Dropdown -->
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <i class="notika-icon notika-app"></i>
-                            <span>Components</span>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="notification-vite.html">Notifications</a></li>
-                            <li><a class="dropdown-item" href="alert.html">Alerts</a></li>
-                            <li><a class="dropdown-item" href="modals-vite.html">Modals</a></li>
-                            <li><a class="dropdown-item" href="buttons-vite.html">Buttons</a></li>
-                            <li><a class="dropdown-item" href="tabs.html">Tabs</a></li>
-                            <li><a class="dropdown-item" href="accordion.html">Accordion</a></li>
-                            <li><a class="dropdown-item" href="dialog.html">Dialogs</a></li>
-                            <li><a class="dropdown-item" href="popovers.html">Popovers</a></li>
-                            <li><a class="dropdown-item" href="tooltips.html">Tooltips</a></li>
-                            <li><a class="dropdown-item" href="dropdown.html">Dropdowns</a></li>
-                        </ul>
-                    </li>
+                    <!-- App Views -->
+                    <div class="accordion-item border-0">
+                        <h2 class="accordion-header" id="mobileAppViews">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAppViews" aria-expanded="false" aria-controls="collapseAppViews">
+                                <i class="notika-icon notika-app me-2"></i> App Views
+                            </button>
+                        </h2>
+                        <div id="collapseAppViews" class="accordion-collapse collapse" aria-labelledby="mobileAppViews" data-bs-parent="#mobileMenuAccordion">
+                            <div class="accordion-body">
+                                <div class="list-group list-group-flush">
+                                    <a href="notification-vite.html" class="list-group-item list-group-item-action">Notifications</a>
+                                    <a href="alert.html" class="list-group-item list-group-item-action">Alerts</a>
+                                    <a href="modals-vite.html" class="list-group-item list-group-item-action">Modals</a>
+                                    <a href="buttons-vite.html" class="list-group-item list-group-item-action">Buttons</a>
+                                    <a href="tabs.html" class="list-group-item list-group-item-action">Tabs</a>
+                                    <a href="accordion.html" class="list-group-item list-group-item-action">Accordion</a>
+                                    <a href="dialog.html" class="list-group-item list-group-item-action">Dialogs</a>
+                                    <a href="popovers.html" class="list-group-item list-group-item-action">Popovers</a>
+                                    <a href="tooltips.html" class="list-group-item list-group-item-action">Tooltips</a>
+                                    <a href="dropdown.html" class="list-group-item list-group-item-action">Dropdowns</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-                    <!-- Pages Dropdown -->
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <i class="notika-icon notika-more"></i>
-                            <span>Pages</span>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="contact.html">Contact</a></li>
-                            <li><a class="dropdown-item" href="invoice.html">Invoice</a></li>
-                            <li><a class="dropdown-item" href="typography-vite.html">Typography</a></li>
-                            <li><a class="dropdown-item" href="color-vite.html">Color</a></li>
-                            <li><a class="dropdown-item" href="login-register.html">Login Register</a></li>
-                            <li><a class="dropdown-item" href="404.html">404 Page</a></li>
-                        </ul>
-                    </li>
-
-                </ul>
+                    <!-- Pages -->
+                    <div class="accordion-item border-0">
+                        <h2 class="accordion-header" id="mobilePages">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
+                                <i class="notika-icon notika-file me-2"></i> Pages
+                            </button>
+                        </h2>
+                        <div id="collapsePages" class="accordion-collapse collapse" aria-labelledby="mobilePages" data-bs-parent="#mobileMenuAccordion">
+                            <div class="accordion-body">
+                                <div class="list-group list-group-flush">
+                                    <a href="contact.html" class="list-group-item list-group-item-action">Contact</a>
+                                    <a href="invoice.html" class="list-group-item list-group-item-action">Invoice</a>
+                                    <a href="typography-vite.html" class="list-group-item list-group-item-action">Typography</a>
+                                    <a href="color-vite.html" class="list-group-item list-group-item-action">Color</a>
+                                    <a href="login-register.html" class="list-group-item list-group-item-action">Login Register</a>
+                                    <a href="404.html" class="list-group-item list-group-item-action">404 Page</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    </nav>
-    <!-- End Desktop Navigation -->
-
-    <!-- Mobile Offcanvas Navigation -->
-    <div class="offcanvas offcanvas-start" tabindex="-1" id="mobileNavOffcanvas" aria-labelledby="mobileNavOffcanvasLabel">
-        <div class="offcanvas-header border-bottom">
-            <h5 class="offcanvas-title" id="mobileNavOffcanvasLabel">
-                <img src="/logo/notika-logo-horizontal.svg" alt="Notika" style="height: 30px;">
-            </h5>
-            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        </div>
-        <div class="offcanvas-body p-0">
-            <!-- Mobile Menu List -->
-            <nav class="navbar-nav flex-column">
-
-                <!-- Home Section -->
-                <div class="nav-item border-bottom">
-                    <a class="nav-link d-flex align-items-center justify-content-between px-3 py-2" data-bs-toggle="collapse" href="#mobileHomeMenu" role="button" aria-expanded="false">
-                        <span><i class="notika-icon notika-house me-2"></i> Home</span>
-                        <i class="fa fa-chevron-down small"></i>
-                    </a>
-                    <div class="collapse" id="mobileHomeMenu">
-                        <div class="nav flex-column ps-4">
-                            <a class="nav-link py-1" href="index.html">Dashboard One</a>
-                            <a class="nav-link py-1" href="index-2-vite.html">Dashboard Two</a>
-                            <a class="nav-link py-1" href="index-3-vite.html">Dashboard Three</a>
-                            <a class="nav-link py-1" href="index-4-vite.html">Dashboard Four</a>
-                            <a class="nav-link py-1" href="analytics-vite.html">Analytics</a>
-                            <a class="nav-link py-1" href="widgets-vite.html">Widgets</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Email Section -->
-                <div class="nav-item border-bottom">
-                    <a class="nav-link d-flex align-items-center justify-content-between px-3 py-2" data-bs-toggle="collapse" href="#mobileEmailMenu" role="button" aria-expanded="false">
-                        <span><i class="notika-icon notika-mail me-2"></i> Email</span>
-                        <i class="fa fa-chevron-down small"></i>
-                    </a>
-                    <div class="collapse" id="mobileEmailMenu">
-                        <div class="nav flex-column ps-4">
-                            <a class="nav-link py-1" href="inbox.html">Inbox</a>
-                            <a class="nav-link py-1" href="view-email.html">View Email</a>
-                            <a class="nav-link py-1" href="compose-email.html">Compose Email</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Interface Section -->
-                <div class="nav-item border-bottom">
-                    <a class="nav-link d-flex align-items-center justify-content-between px-3 py-2" data-bs-toggle="collapse" href="#mobileInterfaceMenu" role="button" aria-expanded="false">
-                        <span><i class="notika-icon notika-edit me-2"></i> Interface</span>
-                        <i class="fa fa-chevron-down small"></i>
-                    </a>
-                    <div class="collapse" id="mobileInterfaceMenu">
-                        <div class="nav flex-column ps-4">
-                            <a class="nav-link py-1" href="animations.html">Animations</a>
-                            <a class="nav-link py-1" href="google-map.html">Google Map</a>
-                            <a class="nav-link py-1" href="data-map.html">Data Maps</a>
-                            <a class="nav-link py-1" href="code-editor.html">Code Editor</a>
-                            <a class="nav-link py-1" href="image-cropper.html">Images Cropper</a>
-                            <a class="nav-link py-1" href="wizard.html">Wizard</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Charts Section -->
-                <div class="nav-item border-bottom">
-                    <a class="nav-link d-flex align-items-center justify-content-between px-3 py-2" data-bs-toggle="collapse" href="#mobileChartsMenu" role="button" aria-expanded="false">
-                        <span><i class="notika-icon notika-bar-chart me-2"></i> Charts</span>
-                        <i class="fa fa-chevron-down small"></i>
-                    </a>
-                    <div class="collapse" id="mobileChartsMenu">
-                        <div class="nav flex-column ps-4">
-                            <a class="nav-link py-1" href="flot-charts.html">Flot Charts</a>
-                            <a class="nav-link py-1" href="bar-charts-vite.html">Bar Charts</a>
-                            <a class="nav-link py-1" href="line-charts-vite.html">Line Charts</a>
-                            <a class="nav-link py-1" href="area-charts-vite.html">Area Charts</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Tables Section -->
-                <div class="nav-item border-bottom">
-                    <a class="nav-link d-flex align-items-center justify-content-between px-3 py-2" data-bs-toggle="collapse" href="#mobileTablesMenu" role="button" aria-expanded="false">
-                        <span><i class="notika-icon notika-windows me-2"></i> Tables</span>
-                        <i class="fa fa-chevron-down small"></i>
-                    </a>
-                    <div class="collapse" id="mobileTablesMenu">
-                        <div class="nav flex-column ps-4">
-                            <a class="nav-link py-1" href="normal-table.html">Normal Table</a>
-                            <a class="nav-link py-1" href="data-table-vite.html">Data Table</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Forms Section -->
-                <div class="nav-item border-bottom">
-                    <a class="nav-link d-flex align-items-center justify-content-between px-3 py-2" data-bs-toggle="collapse" href="#mobileFormsMenu" role="button" aria-expanded="false">
-                        <span><i class="notika-icon notika-form me-2"></i> Forms</span>
-                        <i class="fa fa-chevron-down small"></i>
-                    </a>
-                    <div class="collapse" id="mobileFormsMenu">
-                        <div class="nav flex-column ps-4">
-                            <a class="nav-link py-1" href="form-elements-vite.html">Form Elements</a>
-                            <a class="nav-link py-1" href="form-components-vite.html">Form Components</a>
-                            <a class="nav-link py-1" href="form-examples-vite.html">Form Examples</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Components Section -->
-                <div class="nav-item border-bottom">
-                    <a class="nav-link d-flex align-items-center justify-content-between px-3 py-2" data-bs-toggle="collapse" href="#mobileComponentsMenu" role="button" aria-expanded="false">
-                        <span><i class="notika-icon notika-app me-2"></i> Components</span>
-                        <i class="fa fa-chevron-down small"></i>
-                    </a>
-                    <div class="collapse" id="mobileComponentsMenu">
-                        <div class="nav flex-column ps-4">
-                            <a class="nav-link py-1" href="notification-vite.html">Notifications</a>
-                            <a class="nav-link py-1" href="alert.html">Alerts</a>
-                            <a class="nav-link py-1" href="modals-vite.html">Modals</a>
-                            <a class="nav-link py-1" href="buttons-vite.html">Buttons</a>
-                            <a class="nav-link py-1" href="tabs.html">Tabs</a>
-                            <a class="nav-link py-1" href="accordion.html">Accordion</a>
-                            <a class="nav-link py-1" href="dialog.html">Dialogs</a>
-                            <a class="nav-link py-1" href="popovers.html">Popovers</a>
-                            <a class="nav-link py-1" href="tooltips.html">Tooltips</a>
-                            <a class="nav-link py-1" href="dropdown.html">Dropdowns</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Pages Section -->
-                <div class="nav-item border-bottom">
-                    <a class="nav-link d-flex align-items-center justify-content-between px-3 py-2" data-bs-toggle="collapse" href="#mobilePagesMenu" role="button" aria-expanded="false">
-                        <span><i class="notika-icon notika-more me-2"></i> Pages</span>
-                        <i class="fa fa-chevron-down small"></i>
-                    </a>
-                    <div class="collapse" id="mobilePagesMenu">
-                        <div class="nav flex-column ps-4">
-                            <a class="nav-link py-1" href="contact.html">Contact</a>
-                            <a class="nav-link py-1" href="invoice.html">Invoice</a>
-                            <a class="nav-link py-1" href="typography-vite.html">Typography</a>
-                            <a class="nav-link py-1" href="color-vite.html">Color</a>
-                            <a class="nav-link py-1" href="login-register.html">Login Register</a>
-                            <a class="nav-link py-1" href="404.html">404 Page</a>
-                        </div>
-                    </div>
-                </div>
-
-            </nav>
-        </div>
     </div>
-    <!-- End Mobile Offcanvas Navigation -->
+    <!-- Mobile Menu end -->
+    <!-- Stable Bootstrap 5 Navbar - Desktop Only -->
+    <nav class="navbar navbar-expand-lg notika-navbar d-none d-lg-block">
+        <div class="container">
+            <ul class="navbar-nav w-100 justify-content-center">
+                
+                <!-- Home Dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="notika-icon notika-house"></i>
+                        <span>Home</span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="index.html">Dashboard One</a></li>
+                        <li><a class="dropdown-item" href="index-2.html">Dashboard Two</a></li>
+                        <li><a class="dropdown-item" href="index-3.html">Dashboard Three</a></li>
+                        <li><a class="dropdown-item" href="index-4.html">Dashboard Four</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="analytics.html">Analytics</a></li>
+                        <li><a class="dropdown-item" href="widgets.html">Widgets</a></li>
+                    </ul>
+                </li>
+
+                <!-- Email Dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="notika-icon notika-mail"></i>
+                        <span>Email</span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="inbox.html">Inbox</a></li>
+                        <li><a class="dropdown-item" href="view-email.html">View Email</a></li>
+                        <li><a class="dropdown-item" href="compose-email.html">Compose Email</a></li>
+                    </ul>
+                </li>
+
+                <!-- Interface Dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="notika-icon notika-edit"></i>
+                        <span>Interface</span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="animations.html">Animations</a></li>
+                        <li><a class="dropdown-item" href="google-map.html">Google Map</a></li>
+                        <li><a class="dropdown-item" href="data-map.html">Data Maps</a></li>
+                        <li><a class="dropdown-item" href="code-editor.html">Code Editor</a></li>
+                        <li><a class="dropdown-item" href="image-cropper.html">Images Cropper</a></li>
+                        <li><a class="dropdown-item" href="wizard.html">Wizard</a></li>
+                    </ul>
+                </li>
+
+                <!-- Charts Dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="notika-icon notika-bar-chart"></i>
+                        <span>Charts</span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="flot-charts.html">Flot Charts</a></li>
+                        <li><a class="dropdown-item" href="bar-charts.html">Bar Charts</a></li>
+                        <li><a class="dropdown-item" href="line-charts.html">Line Charts</a></li>
+                        <li><a class="dropdown-item" href="area-charts.html">Area Charts</a></li>
+                    </ul>
+                </li>
+
+                <!-- Tables Dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="notika-icon notika-windows"></i>
+                        <span>Tables</span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="normal-table.html">Normal Table</a></li>
+                        <li><a class="dropdown-item" href="data-table.html">Data Table</a></li>
+                    </ul>
+                </li>
+
+                <!-- Forms Dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="notika-icon notika-form"></i>
+                        <span>Forms</span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="form-elements.html">Form Elements</a></li>
+                        <li><a class="dropdown-item" href="form-components.html">Form Components</a></li>
+                        <li><a class="dropdown-item" href="form-examples.html">Form Examples</a></li>
+                    </ul>
+                </li>
+
+                <!-- Components Dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="notika-icon notika-app"></i>
+                        <span>Components</span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="notification.html">Notifications</a></li>
+                        <li><a class="dropdown-item" href="alert.html">Alerts</a></li>
+                        <li><a class="dropdown-item" href="modals.html">Modals</a></li>
+                        <li><a class="dropdown-item" href="buttons.html">Buttons</a></li>
+                        <li><a class="dropdown-item" href="tabs.html">Tabs</a></li>
+                        <li><a class="dropdown-item" href="accordion.html">Accordion</a></li>
+                        <li><a class="dropdown-item" href="dialog.html">Dialogs</a></li>
+                        <li><a class="dropdown-item" href="popovers.html">Popovers</a></li>
+                        <li><a class="dropdown-item" href="tooltips.html">Tooltips</a></li>
+                        <li><a class="dropdown-item" href="dropdown.html">Dropdowns</a></li>
+                    </ul>
+                </li>
+
+                <!-- Pages Dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="notika-icon notika-support"></i>
+                        <span>Pages</span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="contact.html">Contact</a></li>
+                        <li><a class="dropdown-item" href="invoice.html">Invoice</a></li>
+                        <li><a class="dropdown-item" href="typography.html">Typography</a></li>
+                        <li><a class="dropdown-item" href="color.html">Color</a></li>
+                        <li><a class="dropdown-item" href="login-register.html">Login Register</a></li>
+                        <li><a class="dropdown-item" href="404.html">404 Page</a></li>
+                    </ul>
+                </li>
+
+            </ul>
+        </div>
+    </nav>
+    <!-- End Stable Navigation -->
 
     <!-- Start Status area -->
     <div class="notika-status-area">

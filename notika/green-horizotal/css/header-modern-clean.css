@@ -317,23 +317,5 @@
     }
     
     /* Switch to mobile logo on small screens */
-    .notika-brand .logo-light,
-    .notika-brand .logo-dark {
-        display: none;
-    }
-    
-    .notika-brand {
-        background-image: url('../img/logo/notika-logo-mobile.svg');
-        background-repeat: no-repeat;
-        background-size: 32px 32px;
-        width: 32px;
-        height: 32px;
-    }
-    
-    .notika-brand a {
-        display: block;
-        width: 32px;
-        height: 32px;
-        text-indent: -9999px;
-    }
+    /* Logo is handled by responsive img tags in HTML - no CSS overrides needed */
 }

@@ -30,44 +30,85 @@
     transition: all 0.2s ease;
 }
 
-/* Special handling for status widgets */
+/* Special handling for status widgets - Clean, no padding design */
 .notika-status-area .wb-traffic-inner {
     background: #fff;
     border-radius: var(--widget-radius);
     box-shadow: var(--widget-shadow);
     border: var(--widget-border);
     display: flex !important;
-    align-items: center !important;
+    align-items: stretch !important;
     justify-content: space-between !important;
-    padding: 20px !important;
+    padding: 0 !important;
     margin-bottom: 0;
     transition: all 0.2s ease;
+    height: 120px !important;
+    overflow: hidden;
 }
 
-/* Fix left side spacing for widget content */
+/* Left content area - takes most space */
 .notika-status-area .website-traffic-ctn {
     flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-/* Consistent sparkline sizes - Override all other styles */
+.notika-status-area .website-traffic-ctn h2 {
+    margin: 0 0 6px 0;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1;
+    color: #fff !important;
+}
+
+.notika-status-area .website-traffic-ctn p {
+    margin: 0;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.95) !important;
+    line-height: 1.3;
+}
+
+/* Sparkline area - right side with background */
 .notika-status-area .sparkline-bar-stats1,
 .notika-status-area .sparkline-bar-stats2,
 .notika-status-area .sparkline-bar-stats3,
 .notika-status-area .sparkline-bar-stats4 {
-    width: 80px !important;
-    height: 50px !important;
-    margin-left: 15px !important;
-    padding: 0 !important;
-    display: block !important;
+    width: 120px !important;
+    height: 120px !important;
+    padding: 30px 20px !important;
+    margin: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
     flex-shrink: 0;
+    background: rgba(0, 194, 146, 0.05);
+    border-left: 1px solid rgba(0, 194, 146, 0.1);
 }
 
 .notika-status-area .sparkline-bar-stats1 canvas,
 .notika-status-area .sparkline-bar-stats2 canvas,
 .notika-status-area .sparkline-bar-stats3 canvas,
 .notika-status-area .sparkline-bar-stats4 canvas {
-    width: 80px !important;
+    width: 70px !important;
     height: 50px !important;
+}
+
+/* Different sparkline background colors */
+.notika-status-area .sparkline-bar-stats2 {
+    background: rgba(3, 169, 243, 0.05);
+    border-left-color: rgba(3, 169, 243, 0.1);
+}
+
+.notika-status-area .sparkline-bar-stats3 {
+    background: rgba(255, 193, 7, 0.05);
+    border-left-color: rgba(255, 193, 7, 0.1);
+}
+
+.notika-status-area .sparkline-bar-stats4 {
+    background: rgba(233, 30, 99, 0.05);
+    border-left-color: rgba(233, 30, 99, 0.1);
 }
 
 .notika-status-area .wb-traffic-inner:hover,

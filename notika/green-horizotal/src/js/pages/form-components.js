@@ -16,6 +16,10 @@ class FormComponentsPage extends NotikaApp {
   async init() {
     await super.init()
     await this.ui.init()
+
+    // Ensure native scrollbars are restored
+    this.removeAllScrollbarRules()
+
     this.initializeFormFeatures()
     console.log('✅ Form Components functionality ready')
   }

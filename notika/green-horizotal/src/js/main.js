@@ -47,7 +47,8 @@ import {
   faMousePointer,
   faArrowTrendUp,
   faArrowTrendDown,
-  faShieldHalved
+  faShieldHalved,
+  faChevronDown
 } from '@fortawesome/free-solid-svg-icons'
 import { 
   faBootstrap, 
@@ -97,6 +98,7 @@ library.add(
   faArrowTrendUp,
   faArrowTrendDown,
   faShieldHalved,
+  faChevronDown,
   faGoogle,
   faMicrosoft,
   faGithub,
@@ -124,6 +126,7 @@ import '../../css/header-modern-clean.css'
 import '../../css/navbar-stable.css'
 import '../../css/widgets-consistent.css'
 import '../../css/email-widget-fix.css'
+import '../../css/mobile-menu.css'
 
 // Import Google Fonts and Font Awesome via CDN (already in HTML)
 // Import custom modern SCSS
@@ -160,27 +163,28 @@ class NotikaApp {
       // Show we're using PROPER Vite bundling
       console.log('✅ All dependencies bundled by Vite 7.1.5')
       console.log('✅ Bootstrap 5.3.8 imported as module')
-      console.log('✅ Chart.js 4.5.0 imported as module') 
+      console.log('✅ Chart.js 4.5.0 imported as module')
       console.log('✅ All CSS processed by Vite')
-      
+
       // Initialize modern libraries properly
       this.initializeCharts()
       this.initializeUI()
       this.initializeAnimations()
       this.setupModernFeatures()
-      
+      this.preventMobileMenuOnDesktop()
+
       // Update bundle status in demo
       const bundleStatus = document.getElementById('bundle-status')
       if (bundleStatus) {
         bundleStatus.textContent = '✅ Properly bundled by Vite 7.1.5'
         bundleStatus.style.color = '#00c292'
       }
-      
+
       // Add modern Font Awesome icons where appropriate
       this.updateIconsToLatestFA()
-      
+
       console.log('🎉 Notika Template fully modernized with Font Awesome 7.0.1 (tree-shaken) + Vite bundling!')
-      
+
     } catch (error) {
       console.error('❌ Initialization error:', error)
     }
@@ -1876,6 +1880,66 @@ class NotikaApp {
       default:
         console.log('Unknown action:', action)
     }
+  }
+
+  preventMobileMenuOnDesktop() {
+    // Prevent mobile offcanvas menu from opening on desktop
+    const offcanvasElement = document.getElementById('mobileNavOffcanvas')
+    if (!offcanvasElement) return
+
+    // Check if we're on desktop (Bootstrap's large breakpoint is 992px)
+    const isDesktop = () => window.innerWidth >= 992
+
+    // Get the offcanvas Bootstrap instance or create one
+    const offcanvas = bootstrap.Offcanvas.getOrCreateInstance(offcanvasElement)
+
+    // Prevent opening on desktop
+    offcanvasElement.addEventListener('show.bs.offcanvas', (e) => {
+      if (isDesktop()) {
+        e.preventDefault()
+        e.stopPropagation()
+        console.log('Mobile menu blocked on desktop')
+        return false
+      }
+    })
+
+    // Also handle the toggle button
+    const toggleButton = document.querySelector('[data-bs-target="#mobileNavOffcanvas"]')
+    if (toggleButton) {
+      toggleButton.addEventListener('click', (e) => {
+        if (isDesktop()) {
+          e.preventDefault()
+          e.stopPropagation()
+          console.log('Mobile menu toggle blocked on desktop')
+          return false
+        }
+      })
+
+      // Hide/show toggle button based on screen size
+      const updateToggleVisibility = () => {
+        if (isDesktop()) {
+          toggleButton.style.display = 'none'
+          // Also force-close the offcanvas if it's open
+          if (offcanvasElement.classList.contains('show')) {
+            offcanvas.hide()
+          }
+        } else {
+          toggleButton.style.display = ''
+        }
+      }
+
+      // Initial check
+      updateToggleVisibility()
+
+      // Update on resize
+      let resizeTimer
+      window.addEventListener('resize', () => {
+        clearTimeout(resizeTimer)
+        resizeTimer = setTimeout(updateToggleVisibility, 250)
+      })
+    }
+
+    console.log('✅ Mobile menu desktop prevention initialized')
   }
 }
 

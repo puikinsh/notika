@@ -1,0 +1,80 @@
+/* Mobile Offcanvas Menu Styles */
+#mobileNavOffcanvas {
+    width: 280px;
+    max-width: 85vw;
+}
+
+/* Hide offcanvas and hamburger menu completely on desktop */
+@media (min-width: 992px) {
+    #mobileNavOffcanvas,
+    #mobileNavOffcanvas.show,
+    .offcanvas-backdrop,
+    [data-bs-target="#mobileNavOffcanvas"] {
+        display: none !important;
+    }
+
+    /* Ensure body doesn't get offcanvas styles on desktop */
+    body.modal-open {
+        overflow: auto !important;
+        padding-right: 0 !important;
+    }
+}
+
+#mobileNavOffcanvas .nav-link {
+    color: #333;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+#mobileNavOffcanvas .nav-link:hover {
+    background-color: #f8f9fa;
+    color: #00c292;
+}
+
+#mobileNavOffcanvas .nav-item {
+    position: relative;
+}
+
+#mobileNavOffcanvas .collapse .nav-link {
+    font-size: 14px;
+    color: #666;
+    padding-left: 2.5rem;
+}
+
+#mobileNavOffcanvas .collapse .nav-link:hover {
+    color: #00c292;
+    background-color: rgba(0, 194, 146, 0.05);
+}
+
+/* Chevron rotation for expanded items */
+#mobileNavOffcanvas .nav-link[aria-expanded="true"] .fa-chevron-down {
+    transform: rotate(180deg);
+    transition: transform 0.3s ease;
+}
+
+#mobileNavOffcanvas .fa-chevron-down {
+    transition: transform 0.3s ease;
+    font-size: 12px;
+    color: #999;
+}
+
+/* Active state */
+#mobileNavOffcanvas .nav-link.active {
+    color: #00c292;
+    background-color: rgba(0, 194, 146, 0.1);
+}
+
+/* Ensure proper spacing */
+#mobileNavOffcanvas .nav-item:last-child {
+    border-bottom: none !important;
+}
+
+/* Smooth collapse animation */
+#mobileNavOffcanvas .collapse {
+    transition: all 0.35s ease;
+}
+
+/* Offcanvas overlay */
+.offcanvas-backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+}

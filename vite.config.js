@@ -29,7 +29,8 @@ export default defineConfig({
         'typography': resolve(process.cwd(), 'notika/green-horizotal/typography-vite.html'),
         'color': resolve(process.cwd(), 'notika/green-horizotal/color-vite.html'),
         'modals': resolve(process.cwd(), 'notika/green-horizotal/modals-vite.html'),
-        'notification': resolve(process.cwd(), 'notika/green-horizotal/notification-vite.html')
+        'notification': resolve(process.cwd(), 'notika/green-horizotal/notification-vite.html'),
+        'data-table': resolve(process.cwd(), 'notika/green-horizotal/data-table-vite.html')
       },
       output: {
         manualChunks: {
