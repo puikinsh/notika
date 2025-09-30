@@ -9,13 +9,13 @@ This is the **Notika** admin dashboard template - originally a Bootstrap-based t
 ## Common Development Commands
 
 ```bash
-# Development server (with hot reload)
+# Development server (with hot reload on port 3000)
 npm run dev
 
 # Production build
 npm run build
 
-# Preview production build
+# Preview production build (port 4173)
 npm run preview
 
 # Lint JavaScript/TypeScript files
@@ -64,15 +64,27 @@ notika/
 
 ### Main Application Entry
 - `notika/green-horizotal/src/js/main.js` - Main application class (`NotikaApp`)
-- Handles initialization, chart setup, UI components, and modern interactions
+  - Automatically initializes on DOMContentLoaded unless `data-page-module` attribute is set
+  - Handles Font Awesome 7.x icon loading (tree-shaken imports)
+  - Initializes charts, UI components, animations, and widgets
+  - Exports `NotikaApp` class for page-specific modules
 
 ### Module System
-- `src/js/modules/charts.js` - Chart.js wrapper (`NotikaCharts` class)
-- `src/js/modules/ui.js` - UI components and Bootstrap integration (`NotikaUI` class)
-- Page-specific modules in `src/js/pages/` for individual template pages
+- `src/js/modules/charts.js` - Chart.js 4.5.0 wrapper (`NotikaCharts` class)
+  - Manages all Chart.js instances via a Map
+  - Provides methods: `createGradient()`, `refreshAll()`, `getChart(id)`, `destroyAll()`
+- `src/js/modules/ui.js` - Bootstrap 5.3.8 UI components (`NotikaUI` class)
+  - Handles tooltips, popovers, modals, counters
+  - Provides notification API: `showSuccess()`, `showError()`, `showWarning()`, `showInfo()`
+- `src/js/pages/` - Page-specific initialization modules
+  - Each page can have its own module that imports and extends main.js functionality
 
 ### Build Configuration
-- `vite.config.js` - Complete Vite setup with multi-page configuration
+- `vite.config.js` - Multi-page Vite 7.x configuration
+  - Root: `./notika/green-horizotal`
+  - All HTML entry points defined in `rollupOptions.input`
+  - Manual chunks: vendor (Bootstrap), charts (Chart.js), ui (Swiper, AOS)
+  - Handlebars plugin for template partials
 - `package.json` - Modern dependencies and npm scripts
 
 ## Template Pages
@@ -121,29 +133,67 @@ npm run type-check # TypeScript checking
 
 ## Working with the Modernized Template
 
+### Adding New Pages
+1. Create HTML file with `-vite.html` suffix (e.g., `newpage-vite.html`)
+2. Add entry point to `vite.config.js` in `rollupOptions.input`
+3. Import main.js: `<script type="module" src="/src/js/main.js"></script>`
+4. Optionally create page-specific module in `src/js/pages/newpage.js`
+
 ### Adding New Features
-1. Create ES6 modules in `src/js/modules/`
+1. Create ES6 modules in `src/js/modules/` for reusable functionality
 2. Import and use in `main.js` or page-specific files
-3. Update Vite configuration if needed for new entry points
+3. Page modules should set `data-page-module` attribute to prevent double initialization
 
 ### Customizing Styles
 - Edit `src/css/modern.scss` for new styles
 - Original CSS files in `css/` are still included for compatibility
+- Avoid overriding Notika's original widget styles (defined in `css/main.css`, `style.css`)
 
 ### Chart Integration
 - Use the `NotikaCharts` class from `src/js/modules/charts.js`
+- Access specific chart: `window.Notika.charts.get('chart-id')`
 - Chart.js 4.5.0 with modern configuration options
+- All Chart.js components registered globally
 
 ### UI Components
 - Bootstrap 5.3.8 components via the `NotikaUI` class
 - Modern JavaScript replacing jQuery dependencies
+- Bootstrap is globally available via `window.bootstrap`
 
 ## Migration Status
 
-The project exists in a **hybrid state**:
-- **Legacy files**: Original template files maintained for reference
-- **Modern implementation**: Vite-based architecture with ES6 modules
-- **Dual compatibility**: Both old and new approaches work side-by-side
+The project uses a **clean, production-ready structure**:
+- **Modern files**: Clean filenames (e.g., `index.html`, `buttons.html`) using Bootstrap 5.3.8 + Vite
+- **Legacy archive**: Original Bootstrap 3 files preserved in `_legacy/` folder for reference
+- **Temporary files**: Work-in-progress files archived in `_archive/` folder
+- **Progress**: 18 pages modernized (30.5%), 23 pages remaining
+
+## Important Conventions
+
+### File Structure
+- **Modern pages**: Root of `notika/green-horizotal/` (clean names like `analytics.html`)
+- **Modern source**: `src/` directory contains ES6 modules
+- **Legacy archive**: `_legacy/` folder contains original Bootstrap 3 files (for reference only)
+- **Temporary archive**: `_archive/` folder contains backup files (can be deleted after testing)
+- **Legacy CSS/JS**: Root-level `js/` and `css/` directories (kept for compatibility)
+- **Vite root**: `./notika/green-horizotal`, not project root
+
+### Module Initialization
+- `main.js` exports `NotikaApp` class and auto-initializes
+- Page-specific modules prevent auto-init by setting `data-page-module` attribute
+- Font Awesome 7.x uses tree-shaking - only add icons to library that are actually used
+
+### Widget Architecture
+- Todo widget: Self-contained initialization in `main.js` (`initializeTodo()`)
+- Chat widget: Self-contained initialization in `main.js` (`initializeChat()`)
+- World map: Uses Leaflet 1.9.4, initialized in `initializeWorldMap()`
+- Charts: Managed through `NotikaCharts` class, stored in Map for easy access
+
+### Known Quirks
+- Mobile menu offcanvas is programmatically disabled on desktop (≥992px width)
+- Webkit scrollbar CSS rules are removed to restore native scrollbars
+- Date picker inputs need containment CSS to prevent calendar overflow
+- Bootstrap dropdowns require specific positioning context in header
 
 ## License
 

@@ -2,10 +2,49 @@ import { defineConfig } from 'vite'
 import { resolve } from 'path'
 import autoprefixer from 'autoprefixer'
 import cssnano from 'cssnano'
+import handlebars from 'vite-plugin-handlebars'
 
 export default defineConfig({
   // Root directory where index.html is located
   root: './notika/green-horizotal',
+
+  // Plugins
+  plugins: [
+    handlebars({
+      partialDirectory: resolve(process.cwd(), 'notika/green-horizotal/src/partials'),
+      context: (pagePath) => {
+        // Extract page name from path
+        const pageName = pagePath.split('/').pop()?.replace('.html', '') || ''
+
+        // Default context for all pages
+        return {
+          title: 'Notika Admin Template',
+          pageTitle: pageName.charAt(0).toUpperCase() + pageName.slice(1).replace('-', ' '),
+          searchPlaceholder: pageName.replace('-', ' '),
+          year: new Date().getFullYear(),
+          // Navigation active states based on page name
+          isComponents: ['tabs', 'accordion', 'alert', 'modals', 'buttons', 'notification', 'dialog', 'tooltips', 'popovers', 'dropdown'].some(p => pageName.includes(p)),
+          isHome: ['index', 'analytics', 'widgets'].some(p => pageName.includes(p)),
+          isCharts: ['bar-charts', 'line-charts', 'area-charts', 'flot-charts'].some(p => pageName.includes(p)),
+          isForms: ['form-'].some(p => pageName.includes(p)),
+          isTables: ['table'].some(p => pageName.includes(p)),
+          isPages: ['typography', 'color', 'contact', 'invoice', '404', 'login'].some(p => pageName.includes(p)),
+          isEmail: ['inbox', 'compose-email', 'view-email'].some(p => pageName.includes(p)),
+          isInterface: ['animations', 'google-map', 'data-map', 'code-editor', 'image-cropper', 'wizard'].some(p => pageName.includes(p)),
+          // Specific page flags
+          activePage: {
+            [pageName.replace('-vite', '')]: true
+          },
+          // Breadcrumb icon based on section
+          breadcrumbIcon: pageName.includes('tabs') ? 'notika-app' :
+                          pageName.includes('form') ? 'notika-form' :
+                          pageName.includes('chart') ? 'notika-bar-chart' :
+                          pageName.includes('table') ? 'notika-windows' :
+                          'notika-house'
+        }
+      }
+    })
+  ],
   
   // Build configuration for Vite 7.x
   build: {
@@ -14,23 +53,25 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(process.cwd(), 'notika/green-horizotal/index.html'),
-        analytics: resolve(process.cwd(), 'notika/green-horizotal/analytics-vite.html'),
-        'index-2': resolve(process.cwd(), 'notika/green-horizotal/index-2-vite.html'),
-        'index-3': resolve(process.cwd(), 'notika/green-horizotal/index-3-vite.html'),
-        'index-4': resolve(process.cwd(), 'notika/green-horizotal/index-4-vite.html'),
-        'bar-charts': resolve(process.cwd(), 'notika/green-horizotal/bar-charts-vite.html'),
-        'line-charts': resolve(process.cwd(), 'notika/green-horizotal/line-charts-vite.html'),
-        'area-charts': resolve(process.cwd(), 'notika/green-horizotal/area-charts-vite.html'),
-        'form-elements': resolve(process.cwd(), 'notika/green-horizotal/form-elements-vite.html'),
-        'form-components': resolve(process.cwd(), 'notika/green-horizotal/form-components-vite.html'),
-        'form-examples': resolve(process.cwd(), 'notika/green-horizotal/form-examples-vite.html'),
-        'widgets': resolve(process.cwd(), 'notika/green-horizotal/widgets-vite.html'),
-        'buttons': resolve(process.cwd(), 'notika/green-horizotal/buttons-vite.html'),
-        'typography': resolve(process.cwd(), 'notika/green-horizotal/typography-vite.html'),
-        'color': resolve(process.cwd(), 'notika/green-horizotal/color-vite.html'),
-        'modals': resolve(process.cwd(), 'notika/green-horizotal/modals-vite.html'),
-        'notification': resolve(process.cwd(), 'notika/green-horizotal/notification-vite.html'),
-        'data-table': resolve(process.cwd(), 'notika/green-horizotal/data-table-vite.html')
+        analytics: resolve(process.cwd(), 'notika/green-horizotal/analytics.html'),
+        'index-2': resolve(process.cwd(), 'notika/green-horizotal/index-2.html'),
+        'index-3': resolve(process.cwd(), 'notika/green-horizotal/index-3.html'),
+        'index-4': resolve(process.cwd(), 'notika/green-horizotal/index-4.html'),
+        'bar-charts': resolve(process.cwd(), 'notika/green-horizotal/bar-charts.html'),
+        'line-charts': resolve(process.cwd(), 'notika/green-horizotal/line-charts.html'),
+        'area-charts': resolve(process.cwd(), 'notika/green-horizotal/area-charts.html'),
+        'form-elements': resolve(process.cwd(), 'notika/green-horizotal/form-elements.html'),
+        'form-components': resolve(process.cwd(), 'notika/green-horizotal/form-components.html'),
+        'form-examples': resolve(process.cwd(), 'notika/green-horizotal/form-examples.html'),
+        widgets: resolve(process.cwd(), 'notika/green-horizotal/widgets.html'),
+        buttons: resolve(process.cwd(), 'notika/green-horizotal/buttons.html'),
+        typography: resolve(process.cwd(), 'notika/green-horizotal/typography.html'),
+        color: resolve(process.cwd(), 'notika/green-horizotal/color.html'),
+        modals: resolve(process.cwd(), 'notika/green-horizotal/modals.html'),
+        notification: resolve(process.cwd(), 'notika/green-horizotal/notification.html'),
+        'data-table': resolve(process.cwd(), 'notika/green-horizotal/data-table.html'),
+        tabs: resolve(process.cwd(), 'notika/green-horizotal/tabs.html'),
+        'tabs-hbs': resolve(process.cwd(), 'notika/green-horizotal/tabs-hbs.html')
       },
       output: {
         manualChunks: {
@@ -48,7 +89,7 @@ export default defineConfig({
   
   // Development server
   server: {
-    port: 3000,
+    port: 3100,
     open: true,
     cors: true,
     host: true

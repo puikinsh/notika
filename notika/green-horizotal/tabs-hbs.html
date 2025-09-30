@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en" data-page-module="tabs">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{pageTitle}} | Notika - Modern Vite Template</title>
+    <meta name="description" content="Modern Notika Admin Template powered by Vite 7.1.5">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700,900" rel="stylesheet">
+
+    <!-- Essential Notika Template CSS -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/notika-custom-icon.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+    {{> header}}
+    {{> navbar}}
+    {{> breadcrumb pageTitle="Tabs" breadcrumbIcon="notika-app"}}
+
+    <!-- Tabs Content Area Start -->
+    <div class="tabs-info-area">
+        <div class="container">
+            <!-- Basic Tabs -->
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                    <div class="recent-post-wrapper notika-shadow mg-t-30">
+                        <div class="recent-post-ctn">
+                            <div class="recent-post-title">
+                                <h2>Basic Tabs</h2>
+                                <p>Add quick, dynamic tab functionality to transition through panes of local content.</p>
+                            </div>
+                        </div>
+                        <div class="recent-post-items">
+                            <ul class="nav nav-tabs" id="basicTabs" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab">Tab Menu 1</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab">Tab Menu 2</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab">Tab Menu 3</button>
+                                </li>
+                            </ul>
+                            <div class="tab-content" id="basicTabsContent">
+                                <div class="tab-pane fade show active" id="home" role="tabpanel">
+                                    <div class="tab-ctn">
+                                        <p>Duis arcu tortor, suscipit eget, imperdiet nec, imperdiet iaculis, ipsum. Vestibulum purus quam, scelerisque ut, mollis sed, nonummy id, metus.</p>
+                                        <p class="tab-mg-b-0">In hac habitasse platea dictumst. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos.</p>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="profile" role="tabpanel">
+                                    <div class="tab-ctn">
+                                        <p>Vestibulum purus quam, scelerisque ut, mollis sed, nonummy id, metus. Duis arcu tortor, suscipit eget, imperdiet nec, imperdiet iaculis, ipsum.</p>
+                                        <p class="tab-mg-b-0">Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. In hac habitasse platea dictumst.</p>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="contact" role="tabpanel">
+                                    <div class="tab-ctn">
+                                        <p>Praesent ac the massa at ligula laoreet iaculis. Duis arcu tortor, suscipit eget, imperdiet nec, imperdiet iaculis, ipsum.</p>
+                                        <p class="tab-mg-b-0">Nam eget dui. In ac felis quis tortor malesuadan of pretium. In hac habitasse platea dictumst.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tabs Right Aligned -->
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                    <div class="recent-post-wrapper notika-shadow mg-t-30">
+                        <div class="recent-post-ctn">
+                            <div class="recent-post-title">
+                                <h2>Tabs Right Aligned</h2>
+                                <p>Simply include the class <code>.justify-content-end</code> to align the tab header to right side.</p>
+                            </div>
+                        </div>
+                        <div class="recent-post-items">
+                            <ul class="nav nav-tabs justify-content-end" id="rightTabs" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link active" id="right-home-tab" data-bs-toggle="tab" data-bs-target="#right-home" type="button" role="tab">Tab Menu 1</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="right-profile-tab" data-bs-toggle="tab" data-bs-target="#right-profile" type="button" role="tab">Tab Menu 2</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="right-contact-tab" data-bs-toggle="tab" data-bs-target="#right-contact" type="button" role="tab">Tab Menu 3</button>
+                                </li>
+                            </ul>
+                            <div class="tab-content" id="rightTabsContent">
+                                <div class="tab-pane fade show active" id="right-home" role="tabpanel">
+                                    <div class="tab-ctn">
+                                        <p>Duis arcu tortor, suscipit eget, imperdiet nec, imperdiet iaculis, ipsum.</p>
+                                        <p class="tab-mg-b-0">In hac habitasse platea dictumst. Class aptent taciti sociosqu ad litora torquent.</p>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="right-profile" role="tabpanel">
+                                    <div class="tab-ctn">
+                                        <p>Vestibulum purus quam, scelerisque ut, mollis sed, nonummy id, metus.</p>
+                                        <p class="tab-mg-b-0">Class aptent taciti sociosqu ad litora torquent per conubia nostra.</p>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="right-contact" role="tabpanel">
+                                    <div class="tab-ctn">
+                                        <p>Praesent ac the massa at ligula laoreet iaculis. Duis arcu tortor, suscipit eget.</p>
+                                        <p class="tab-mg-b-0">Nam eget dui. In ac felis quis tortor malesuadan of pretium.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Tabs Content Area End -->
+
+    {{> footer}}
+
+    <!-- ONLY VITE ENTRY POINT - Everything else bundled by Vite -->
+    <script type="module" src="/src/js/pages/tabs.js"></script>
+
+    <!-- Clean Navigation JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Search functionality
+            const searchInput = document.querySelector('.search-dropdown input');
+            if (searchInput) {
+                const searchTrigger = searchInput.closest('.dropdown').querySelector('[data-bs-toggle="dropdown"]');
+                if (searchTrigger) {
+                    searchTrigger.addEventListener('shown.bs.dropdown', function() {
+                        setTimeout(() => searchInput.focus(), 100);
+                    });
+                }
+
+                searchInput.addEventListener('keypress', function(e) {
+                    if (e.key === 'Enter' && this.value.trim()) {
+                        console.log('Searching for:', this.value);
+                    }
+                });
+            }
+
+            // Simple navbar dropdown enhancements
+            const navDropdowns = document.querySelectorAll('.notika-navbar .dropdown');
+
+            navDropdowns.forEach(dropdown => {
+                const toggle = dropdown.querySelector('.dropdown-toggle');
+
+                if (toggle) {
+                    toggle.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        this.style.transform = 'scale(0.98)';
+                        setTimeout(() => {
+                            this.style.transform = '';
+                        }, 100);
+                    });
+                }
+            });
+
+            console.log('✅ Tabs navigation system initialized');
+        });
+    </script>
+</body>
+</html>

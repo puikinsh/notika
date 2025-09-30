@@ -1,758 +1,502 @@
 <!doctype html>
-<html class="no-js" lang="ca">
-
+<html lang="en" data-page-module="tabs">
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Tabs | Notika - Notika Admin Template</title>
-    <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- favicon
-		============================================ -->
-    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
-    <!-- Google Fonts
-		============================================ -->
+    <title>Tabs | Notika - Modern Vite Template</title>
+    <meta name="description" content="Modern Notika Admin Template powered by Vite 7.1.5">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700,900" rel="stylesheet">
-    <!-- Bootstrap CSS
-		============================================ -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <!-- font awesome CSS
-		============================================ -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-    <!-- owl.carousel CSS
-		============================================ -->
-    <link rel="stylesheet" href="css/swiper.min.css">
-    <link rel="stylesheet" href="css/owl.theme.css">
-    <link rel="stylesheet" href="css/owl.transitions.css">
-    <!-- meanmenu CSS
-		============================================ -->
-    <link rel="stylesheet" href="css/meanmenu/meanmenu.min.css">
-    <!-- Notika icon CSS
-		============================================ -->
-    <link rel="stylesheet" href="css/notika-custom-icon.css">
-    <!-- mCustomScrollbar CSS
-		============================================ -->
-    <link rel="stylesheet" href="css/scrollbar/jquery.mCustomScrollbar.min.css">
-    <!-- animate CSS
-		============================================ -->
-    <link rel="stylesheet" href="css/animations.css">
-    <!-- normalize CSS
-		============================================ -->
-    <link rel="stylesheet" href="css/reset.css">
-	<!-- wave CSS
-		============================================ -->
-    <link rel="stylesheet" href="css/wave/waves.min.css">
-    <link rel="stylesheet" href="css/wave/button.css">
-    <!-- main CSS
-		============================================ -->
+
+    <!-- Essential Notika Template CSS -->
     <link rel="stylesheet" href="css/main.css">
-    <!-- style CSS
-		============================================ -->
+    <link rel="stylesheet" href="css/notika-custom-icon.css">
     <link rel="stylesheet" href="style.css">
-    <!-- responsive CSS
-		============================================ -->
     <link rel="stylesheet" href="css/responsive.css">
-		============================================ -->
-    <link rel="stylesheet" href="css/bootstrap5-navbar-fix.css">
+
+    <!-- Font Awesome and all other CSS imported via Vite -->
+    <!-- ONLY Vite entry point - everything else bundled -->
 </head>
 
 <body>
-    <!-- Start Header Top Area -->
-    <div class="header-top-area">
+    <!-- Modern Bootstrap 5 Header -->
+    <header class="notika-header">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-4 col-md-4 col-sm-12 col-12">
-                    <div class="logo-area">
-                        <a href="#"><img src="img/logo/logo.png" alt="" /></a>
+            <div class="row align-items-center">
+                <!-- Logo Section -->
+                <div class="col-lg-4 col-md-6 col-8">
+                    <div class="notika-brand">
+                        <a href="index.html">
+                            <img src="/logo/notika-logo-horizontal.svg" alt="Notika Admin Template" class="logo-light" />
+                            <img src="/logo/notika-logo-dark.svg" alt="Notika Admin Template" class="logo-dark" />
+                        </a>
                     </div>
                 </div>
-                <div class="col-lg-8 col-md-8 col-sm-12 col-12">
-                    <div class="header-top-menu">
-                        <ul class="nav navbar-nav notika-top-nav">
-                            <li class="nav-item dropdown">
-                                <a href="#" data-bs-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle"><span><i class="notika-icon notika-search"></i></span></a>
-                                <div role="menu" class="dropdown-menu search-dd animated flipInX">
-                                    <div class="search-input">
-                                        <i class="notika-icon notika-left-arrow"></i>
-                                        <input type="text" />
-                                    </div>
+
+                <!-- Navigation Section -->
+                <div class="col-lg-8 col-md-6 col-4">
+                    <div class="notika-nav justify-content-end">
+
+                        <!-- Search -->
+                        <div class="dropdown">
+                            <button class="notika-nav-link" type="button" data-bs-toggle="dropdown" data-bs-auto-close="outside">
+                                <i class="notika-icon notika-search"></i>
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-end notika-dropdown search-dropdown">
+                                <div class="search-input-group">
+                                    <input type="text" placeholder="Search tabs..." class="form-control">
+                                    <i class="notika-icon notika-search search-icon"></i>
                                 </div>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a href="#" data-bs-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle"><span><i class="notika-icon notika-mail"></i></span></a>
-                                <div role="menu" class="dropdown-menu message-dd animated zoomIn">
-                                    <div class="hd-mg-tt">
-                                        <h2>Messages</h2>
-                                    </div>
-                                    <div class="hd-message-info">
-                                        <a href="#">
-                                            <div class="hd-message-sn">
-                                                <div class="hd-message-img">
-                                                    <img src="img/post/1.jpg" alt="" />
-                                                </div>
-                                                <div class="hd-mg-ctn">
-                                                    <h3>David Belle</h3>
-                                                    <p>Cum sociis natoque penatibus et magnis dis parturient montes</p>
-                                                </div>
-                                            </div>
-                                        </a>
-                                        <a href="#">
-                                            <div class="hd-message-sn">
-                                                <div class="hd-message-img">
-                                                    <img src="img/post/2.jpg" alt="" />
-                                                </div>
-                                                <div class="hd-mg-ctn">
-                                                    <h3>Jonathan Morris</h3>
-                                                    <p>Cum sociis natoque penatibus et magnis dis parturient montes</p>
-                                                </div>
-                                            </div>
-                                        </a>
-                                        <a href="#">
-                                            <div class="hd-message-sn">
-                                                <div class="hd-message-img">
-                                                    <img src="img/post/4.jpg" alt="" />
-                                                </div>
-                                                <div class="hd-mg-ctn">
-                                                    <h3>Fredric Mitchell</h3>
-                                                    <p>Cum sociis natoque penatibus et magnis dis parturient montes</p>
-                                                </div>
-                                            </div>
-                                        </a>
-                                        <a href="#">
-                                            <div class="hd-message-sn">
-                                                <div class="hd-message-img">
-                                                    <img src="img/post/1.jpg" alt="" />
-                                                </div>
-                                                <div class="hd-mg-ctn">
-                                                    <h3>David Belle</h3>
-                                                    <p>Cum sociis natoque penatibus et magnis dis parturient montes</p>
-                                                </div>
-                                            </div>
-                                        </a>
-                                        <a href="#">
-                                            <div class="hd-message-sn">
-                                                <div class="hd-message-img">
-                                                    <img src="img/post/2.jpg" alt="" />
-                                                </div>
-                                                <div class="hd-mg-ctn">
-                                                    <h3>Glenn Jecobs</h3>
-                                                    <p>Cum sociis natoque penatibus et magnis dis parturient montes</p>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="hd-mg-va">
-                                        <a href="#">View All</a>
-                                    </div>
+                            </div>
+                        </div>
+
+                        <!-- Messages -->
+                        <div class="dropdown">
+                            <button class="notika-nav-link" type="button" data-bs-toggle="dropdown">
+                                <i class="notika-icon notika-mail"></i>
+                                <span class="notika-badge">5</span>
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-end notika-dropdown">
+                                <div class="notika-dropdown-header">
+                                    Messages
                                 </div>
-                            </li>
-                            <li class="nav-item nc-al"><a href="#" data-bs-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle"><span><i class="notika-icon notika-alarm"></i></span><div class="spinner4 spinner-4"></div><div class="ntd-ctn"><span>3</span></div></a>
-                                <div role="menu" class="dropdown-menu message-dd notification-dd animated zoomIn">
-                                    <div class="hd-mg-tt">
-                                        <h2>Notification</h2>
-                                    </div>
-                                    <div class="hd-message-info">
-                                        <a href="#">
-                                            <div class="hd-message-sn">
-                                                <div class="hd-message-img">
-                                                    <img src="img/post/1.jpg" alt="" />
-                                                </div>
-                                                <div class="hd-mg-ctn">
-                                                    <h3>David Belle</h3>
-                                                    <p>Cum sociis natoque penatibus et magnis dis parturient montes</p>
-                                                </div>
-                                            </div>
-                                        </a>
-                                        <a href="#">
-                                            <div class="hd-message-sn">
-                                                <div class="hd-message-img">
-                                                    <img src="img/post/2.jpg" alt="" />
-                                                </div>
-                                                <div class="hd-mg-ctn">
-                                                    <h3>Jonathan Morris</h3>
-                                                    <p>Cum sociis natoque penatibus et magnis dis parturient montes</p>
-                                                </div>
-                                            </div>
-                                        </a>
-                                        <a href="#">
-                                            <div class="hd-message-sn">
-                                                <div class="hd-message-img">
-                                                    <img src="img/post/4.jpg" alt="" />
-                                                </div>
-                                                <div class="hd-mg-ctn">
-                                                    <h3>Fredric Mitchell</h3>
-                                                    <p>Cum sociis natoque penatibus et magnis dis parturient montes</p>
-                                                </div>
-                                            </div>
-                                        </a>
-                                        <a href="#">
-                                            <div class="hd-message-sn">
-                                                <div class="hd-message-img">
-                                                    <img src="img/post/1.jpg" alt="" />
-                                                </div>
-                                                <div class="hd-mg-ctn">
-                                                    <h3>David Belle</h3>
-                                                    <p>Cum sociis natoque penatibus et magnis dis parturient montes</p>
-                                                </div>
-                                            </div>
-                                        </a>
-                                        <a href="#">
-                                            <div class="hd-message-sn">
-                                                <div class="hd-message-img">
-                                                    <img src="img/post/2.jpg" alt="" />
-                                                </div>
-                                                <div class="hd-mg-ctn">
-                                                    <h3>Glenn Jecobs</h3>
-                                                    <p>Cum sociis natoque penatibus et magnis dis parturient montes</p>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="hd-mg-va">
-                                        <a href="#">View All</a>
-                                    </div>
+                                <div class="notika-dropdown-body">
+                                    <a class="notika-dropdown-item" href="view-email.html">
+                                        <img src="/post/1.jpg" alt="User">
+                                        <div class="notika-dropdown-content">
+                                            <h6>David Belle</h6>
+                                            <p>Great work on the tab components!</p>
+                                        </div>
+                                    </a>
+                                    <a class="notika-dropdown-item" href="view-email.html">
+                                        <img src="/post/2.jpg" alt="User">
+                                        <div class="notika-dropdown-content">
+                                            <h6>Sarah Wilson</h6>
+                                            <p>New tab animations look smooth.</p>
+                                        </div>
+                                    </a>
                                 </div>
-                            </li>
-                            <li class="nav-item"><a href="#" data-bs-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle"><span><i class="notika-icon notika-menus"></i></span><div class="spinner4 spinner-4"></div><div class="ntd-ctn"><span>2</span></div></a>
-                                <div role="menu" class="dropdown-menu message-dd task-dd animated zoomIn">
-                                    <div class="hd-mg-tt">
-                                        <h2>Tasks</h2>
-                                    </div>
-                                    <div class="hd-message-info hd-task-info">
-                                        <div class="skill">
+                                <div class="notika-dropdown-footer">
+                                    <a href="inbox.html">View All Messages</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Notifications -->
+                        <div class="dropdown">
+                            <button class="notika-nav-link" type="button" data-bs-toggle="dropdown">
+                                <i class="notika-icon notika-alarm"></i>
+                                <span class="notika-badge">3</span>
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-end notika-dropdown">
+                                <div class="notika-dropdown-header">
+                                    Notifications
+                                </div>
+                                <div class="notika-dropdown-body">
+                                    <a class="notika-dropdown-item" href="notification.html">
+                                        <div class="bg-success text-white rounded-circle d-flex align-items-center justify-content-center" style="width: 35px; height: 35px; margin-right: 12px;">
+                                            <i class="notika-icon notika-success" style="font-size: 14px;"></i>
+                                        </div>
+                                        <div class="notika-dropdown-content">
+                                            <h6>Tabs Updated</h6>
+                                            <p>All tab components modernized.</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="notika-dropdown-footer">
+                                    <a href="notification.html">View All Notifications</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Tasks -->
+                        <div class="dropdown">
+                            <button class="notika-nav-link" type="button" data-bs-toggle="dropdown">
+                                <i class="notika-icon notika-menus"></i>
+                                <span class="notika-badge">2</span>
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-end notika-dropdown" style="min-width: 280px;">
+                                <div class="notika-dropdown-header">
+                                    Active Tasks
+                                </div>
+                                <div class="notika-dropdown-body">
+                                    <div class="task-item px-3">
+                                        <div class="task-title">Tab Animation Update</div>
+                                        <div class="task-progress">
                                             <div class="progress">
-                                                <div class="lead-content">
-                                                    <p>HTML5 Validation Report</p>
-                                                </div>
-                                                <div class="progress-bar wow fadeInLeft" data-progress="95%" style="width: 95%;" data-wow-duration="1.5s" data-wow-delay="1.2s"> <span>95%</span>
-                                                </div>
+                                                <div class="progress-bar" style="width: 100%"></div>
                                             </div>
-                                            <div class="progress">
-                                                <div class="lead-content">
-                                                    <p>Google Chrome Extension</p>
-                                                </div>
-                                                <div class="progress-bar wow fadeInLeft" data-progress="85%" style="width: 85%;" data-wow-duration="1.5s" data-wow-delay="1.2s"><span>85%</span> </div>
-                                            </div>
-                                            <div class="progress">
-                                                <div class="lead-content">
-                                                    <p>Social Internet Projects</p>
-                                                </div>
-                                                <div class="progress-bar wow fadeInLeft" data-progress="93%" style="width: 93%;" data-wow-duration="1.5s" data-wow-delay="1.2s"><span>93%</span> </div>
-                                            </div>
-                                            <div class="progress">
-                                                <div class="lead-content">
-                                                    <p>Bootstrap Admin Template</p>
-                                                </div>
-                                                <div class="progress-bar wow fadeInLeft" data-progress="93%" style="width: 93%;" data-wow-duration="1.5s" data-wow-delay="1.2s"><span>93%</span> </div>
-                                            </div>
-                                            <div class="progress progress-bt">
-                                                <div class="lead-content">
-                                                    <p>Youtube Client App</p>
-                                                </div>
-                                                <div class="progress-bar wow fadeInLeft" data-progress="93%" style="width: 93%;" data-wow-duration="1.5s" data-wow-delay="1.2s"><span>93%</span> </div>
-                                            </div>
+                                            <small class="text-muted">Complete</small>
                                         </div>
                                     </div>
-                                    <div class="hd-mg-va">
-                                        <a href="#">View All</a>
-                                    </div>
                                 </div>
-                            </li>
-                            <li class="nav-item"><a href="#" data-bs-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle"><span><i class="notika-icon notika-chat"></i></span></a>
-                                <div role="menu" class="dropdown-menu message-dd chat-dd animated zoomIn">
-                                    <div class="hd-mg-tt">
-                                        <h2>Chat</h2>
-                                    </div>
-                                    <div class="search-people">
-                                        <i class="notika-icon notika-left-arrow"></i>
-                                        <input type="text" placeholder="Search People" />
-                                    </div>
-                                    <div class="hd-message-info">
-                                        <a href="#">
-                                            <div class="hd-message-sn">
-                                                <div class="hd-message-img chat-img">
-                                                    <img src="img/post/1.jpg" alt="" />
-                                                    <div class="chat-avaible"><i class="notika-icon notika-dot"></i></div>
-                                                </div>
-                                                <div class="hd-mg-ctn">
-                                                    <h3>David Belle</h3>
-                                                    <p>Available</p>
-                                                </div>
-                                            </div>
-                                        </a>
-                                        <a href="#">
-                                            <div class="hd-message-sn">
-                                                <div class="hd-message-img chat-img">
-                                                    <img src="img/post/2.jpg" alt="" />
-                                                </div>
-                                                <div class="hd-mg-ctn">
-                                                    <h3>Jonathan Morris</h3>
-                                                    <p>Last seen 3 hours ago</p>
-                                                </div>
-                                            </div>
-                                        </a>
-                                        <a href="#">
-                                            <div class="hd-message-sn">
-                                                <div class="hd-message-img chat-img">
-                                                    <img src="img/post/4.jpg" alt="" />
-                                                </div>
-                                                <div class="hd-mg-ctn">
-                                                    <h3>Fredric Mitchell</h3>
-                                                    <p>Last seen 2 minutes ago</p>
-                                                </div>
-                                            </div>
-                                        </a>
-                                        <a href="#">
-                                            <div class="hd-message-sn">
-                                                <div class="hd-message-img chat-img">
-                                                    <img src="img/post/1.jpg" alt="" />
-                                                    <div class="chat-avaible"><i class="notika-icon notika-dot"></i></div>
-                                                </div>
-                                                <div class="hd-mg-ctn">
-                                                    <h3>David Belle</h3>
-                                                    <p>Available</p>
-                                                </div>
-                                            </div>
-                                        </a>
-                                        <a href="#">
-                                            <div class="hd-message-sn">
-                                                <div class="hd-message-img chat-img">
-                                                    <img src="img/post/2.jpg" alt="" />
-                                                    <div class="chat-avaible"><i class="notika-icon notika-dot"></i></div>
-                                                </div>
-                                                <div class="hd-mg-ctn">
-                                                    <h3>Glenn Jecobs</h3>
-                                                    <p>Available</p>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="hd-mg-va">
-                                        <a href="#">View All</a>
-                                    </div>
+                                <div class="notika-dropdown-footer">
+                                    <a href="widgets.html">View All Tasks</a>
                                 </div>
-                            </li>
-                        </ul>
+                            </div>
+                        </div>
+
+                        <!-- Chat -->
+                        <div class="dropdown">
+                            <button class="notika-nav-link" type="button" data-bs-toggle="dropdown">
+                                <i class="notika-icon notika-chat"></i>
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-end notika-dropdown">
+                                <div class="notika-dropdown-header">
+                                    Team Chat
+                                </div>
+                                <div class="notika-dropdown-body">
+                                    <a class="notika-dropdown-item" href="compose-email.html">
+                                        <div style="position: relative;">
+                                            <img src="/post/1.jpg" alt="User">
+                                            <div class="chat-status"></div>
+                                        </div>
+                                        <div class="notika-dropdown-content">
+                                            <h6>David Belle</h6>
+                                            <p>Available</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="notika-dropdown-footer">
+                                    <a href="inbox.html">View All Chats</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Mobile Menu Toggle -->
+                        <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
+                            <i class="notika-icon notika-menu-hamburger"></i>
+                        </button>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- End Header Top Area -->
-    <!-- Mobile Menu start -->
-    <div class="mobile-menu-area">
+    </header>
+
+    <!-- Modern Navbar -->
+    <nav class="notika-navbar">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12 col-md-12 col-sm-12 col-12">
-                    <div class="mobile-menu">
-                        <nav id="dropdown">
-                            <ul class="mobile-menu-nav">
-                                <li><a data-bs-toggle="collapse" data-bs-target="#Charts" href="#">Home</a>
-                                    <ul class="collapse dropdown-header-top">
-                                        <li><a href="index.html">Dashboard One</a></li>
-                                        <li><a href="index-2.html">Dashboard Two</a></li>
-                                        <li><a href="index-3.html">Dashboard Three</a></li>
-                                        <li><a href="index-4.html">Dashboard Four</a></li>
-                                        <li><a href="analytics.html">Analytics</a></li>
-                                        <li><a href="widgets.html">Widgets</a></li>
-                                    </ul>
-                                </li>
-                                <li><a data-bs-toggle="collapse" data-bs-target="#demoevent" href="#">Email</a>
-                                    <ul id="demoevent" class="collapse dropdown-header-top">
-                                        <li><a href="inbox.html">Inbox</a></li>
-                                        <li><a href="view-email.html">View Email</a></li>
-                                        <li><a href="compose-email.html">Compose Email</a></li>
-                                    </ul>
-                                </li>
-                                <li><a data-bs-toggle="collapse" data-bs-target="#democrou" href="#">Interface</a>
-                                    <ul id="democrou" class="collapse dropdown-header-top">
-                                        <li><a href="animations.html">Animations</a></li>
-                                        <li><a href="google-map.html">Google Map</a></li>
-                                        <li><a href="data-map.html">Data Maps</a></li>
-                                        <li><a href="code-editor.html">Code Editor</a></li>
-                                        <li><a href="image-cropper.html">Images Cropper</a></li>
-                                        <li><a href="wizard.html">Wizard</a></li>
-                                    </ul>
-                                </li>
-                                <li><a data-bs-toggle="collapse" data-bs-target="#demolibra" href="#">Charts</a>
-                                    <ul id="demolibra" class="collapse dropdown-header-top">
-                                        <li><a href="flot-charts.html">Flot Charts</a></li>
-                                        <li><a href="bar-charts.html">Bar Charts</a></li>
-                                        <li><a href="line-charts.html">Line Charts</a></li>
-                                        <li><a href="area-charts.html">Area Charts</a></li>
-                                    </ul>
-                                </li>
-                                <li><a data-bs-toggle="collapse" data-bs-target="#demodepart" href="#">Tables</a>
-                                    <ul id="demodepart" class="collapse dropdown-header-top">
-                                        <li><a href="normal-table.html">Normal Table</a></li>
-                                        <li><a href="data-table.html">Data Table</a></li>
-                                    </ul>
-                                </li>
-                                <li><a data-bs-toggle="collapse" data-bs-target="#demo" href="#">Forms</a>
-                                    <ul id="demo" class="collapse dropdown-header-top">
-                                        <li><a href="form-elements.html">Form Elements</a></li>
-                                        <li><a href="form-components.html">Form Components</a></li>
-                                        <li><a href="form-examples.html">Form Examples</a></li>
-                                    </ul>
-                                </li>
-                                <li><a data-bs-toggle="collapse" data-bs-target="#Miscellaneousmob" href="#">App views</a>
-                                    <ul id="Miscellaneousmob" class="collapse dropdown-header-top">
-                                        <li><a href="notification.html">Notifications</a>
-                                        </li>
-                                        <li><a href="alert.html">Alerts</a>
-                                        </li>
-                                        <li><a href="modals.html">Modals</a>
-                                        </li>
-                                        <li><a href="buttons.html">Buttons</a>
-                                        </li>
-                                        <li><a href="tabs.html">Tabs</a>
-                                        </li>
-                                        <li><a href="accordion.html">Accordion</a>
-                                        </li>
-                                        <li><a href="dialog.html">Dialogs</a>
-                                        </li>
-                                        <li><a href="popovers.html">Popovers</a>
-                                        </li>
-                                        <li><a href="tooltips.html">Tooltips</a>
-                                        </li>
-                                        <li><a href="dropdown.html">Dropdowns</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li><a data-bs-toggle="collapse" data-bs-target="#Pagemob" href="#">Pages</a>
-                                    <ul id="Pagemob" class="collapse dropdown-header-top">
-                                        <li><a href="contact.html">Contact</a>
-                                        </li>
-                                        <li><a href="invoice.html">Invoice</a>
-                                        </li>
-                                        <li><a href="typography.html">Typography</a>
-                                        </li>
-                                        <li><a href="color.html">Color</a>
-                                        </li>
-                                        <li><a href="login-register.html">Login Register</a>
-                                        </li>
-                                        <li><a href="404.html">404 Page</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </nav>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Mobile Menu end -->
-    <!-- Main Menu area start-->
-    <div class="main-menu-area mg-tb-40">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 col-md-12 col-sm-12 col-12">
-                    <ul class="nav nav-tabs notika-menu-wrap menu-it-icon-pro">
-                        <li><a data-bs-toggle="tab" href="#Home"><i class="notika-icon notika-house"></i> Home</a>
+                <div class="col-12">
+                    <ul class="nav nav-pills notika-menu-wrap">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button">
+                                <i class="notika-icon notika-house"></i>
+                                <span>Home</span>
+                            </a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="index.html">Dashboard One</a>
+                                <a class="dropdown-item" href="index-2.html">Dashboard Two</a>
+                                <a class="dropdown-item" href="index-3.html">Dashboard Three</a>
+                                <a class="dropdown-item" href="index-4.html">Dashboard Four</a>
+                                <a class="dropdown-item" href="analytics.html">Analytics</a>
+                                <a class="dropdown-item" href="widgets.html">Widgets</a>
+                            </div>
                         </li>
-                        <li><a data-bs-toggle="tab" href="#mailbox"><i class="notika-icon notika-mail"></i> Email</a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button">
+                                <i class="notika-icon notika-mail"></i>
+                                <span>Email</span>
+                            </a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="inbox.html">Inbox</a>
+                                <a class="dropdown-item" href="view-email.html">View Email</a>
+                                <a class="dropdown-item" href="compose-email.html">Compose Email</a>
+                            </div>
                         </li>
-                        <li><a data-bs-toggle="tab" href="#Interface"><i class="notika-icon notika-edit"></i> Interface</a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button">
+                                <i class="notika-icon notika-edit"></i>
+                                <span>Interface</span>
+                            </a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="animations.html">Animations</a>
+                                <a class="dropdown-item" href="google-map.html">Google Map</a>
+                                <a class="dropdown-item" href="data-map.html">Data Maps</a>
+                                <a class="dropdown-item" href="code-editor.html">Code Editor</a>
+                                <a class="dropdown-item" href="image-cropper.html">Images Cropper</a>
+                                <a class="dropdown-item" href="wizard.html">Wizard</a>
+                            </div>
                         </li>
-                        <li><a data-bs-toggle="tab" href="#Charts"><i class="notika-icon notika-bar-chart"></i> Charts</a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button">
+                                <i class="notika-icon notika-bar-chart"></i>
+                                <span>Charts</span>
+                            </a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="flot-charts.html">Flot Charts</a>
+                                <a class="dropdown-item" href="bar-charts.html">Bar Charts</a>
+                                <a class="dropdown-item" href="line-charts.html">Line Charts</a>
+                                <a class="dropdown-item" href="area-charts.html">Area Charts</a>
+                            </div>
                         </li>
-                        <li><a data-bs-toggle="tab" href="#Tables"><i class="notika-icon notika-windows"></i> Tables</a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button">
+                                <i class="notika-icon notika-windows"></i>
+                                <span>Tables</span>
+                            </a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="normal-table.html">Normal Table</a>
+                                <a class="dropdown-item" href="data-table.html">Data Table</a>
+                            </div>
                         </li>
-                        <li><a data-bs-toggle="tab" href="#Forms"><i class="notika-icon notika-form"></i> Forms</a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button">
+                                <i class="notika-icon notika-form"></i>
+                                <span>Forms</span>
+                            </a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="form-elements.html">Form Elements</a>
+                                <a class="dropdown-item" href="form-components.html">Form Components</a>
+                                <a class="dropdown-item" href="form-examples.html">Form Examples</a>
+                            </div>
                         </li>
-                        <li class="active"><a data-bs-toggle="tab" href="#Appviews"><i class="notika-icon notika-app"></i> App views</a>
+                        <li class="nav-item dropdown active">
+                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button">
+                                <i class="notika-icon notika-app"></i>
+                                <span>App views</span>
+                            </a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="notification.html">Notifications</a>
+                                <a class="dropdown-item" href="alert.html">Alerts</a>
+                                <a class="dropdown-item" href="modals.html">Modals</a>
+                                <a class="dropdown-item" href="buttons.html">Buttons</a>
+                                <a class="dropdown-item active" href="tabs.html">Tabs</a>
+                                <a class="dropdown-item" href="accordion.html">Accordion</a>
+                                <a class="dropdown-item" href="dialog.html">Dialogs</a>
+                                <a class="dropdown-item" href="popovers.html">Popovers</a>
+                                <a class="dropdown-item" href="tooltips.html">Tooltips</a>
+                                <a class="dropdown-item" href="dropdown.html">Dropdowns</a>
+                            </div>
                         </li>
-                        <li><a data-bs-toggle="tab" href="#Page"><i class="notika-icon notika-support"></i> Pages</a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button">
+                                <i class="notika-icon notika-support"></i>
+                                <span>Pages</span>
+                            </a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="contact.html">Contact</a>
+                                <a class="dropdown-item" href="invoice.html">Invoice</a>
+                                <a class="dropdown-item" href="typography.html">Typography</a>
+                                <a class="dropdown-item" href="color.html">Color</a>
+                                <a class="dropdown-item" href="login-register.html">Login Register</a>
+                                <a class="dropdown-item" href="404.html">404 Page</a>
+                            </div>
                         </li>
                     </ul>
-                    <div class="tab-content custom-menu-content">
-                        <div id="Home" class="tab-pane in notika-tab-menu-bg animated flipInX">
-                            <ul class="notika-main-menu-dropdown">
-                                <li><a href="index.html">Dashboard One</a>
-                                </li>
-                                <li><a href="index-2.html">Dashboard Two</a>
-                                </li>
-                                <li><a href="index-3.html">Dashboard Three</a>
-                                </li>
-                                <li><a href="index-4.html">Dashboard Four</a>
-                                </li>
-                                <li><a href="analytics.html">Analytics</a>
-                                </li>
-                                <li><a href="widgets.html">Widgets</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div id="mailbox" class="tab-pane notika-tab-menu-bg animated flipInX">
-                            <ul class="notika-main-menu-dropdown">
-                                <li><a href="inbox.html">Inbox</a>
-                                </li>
-                                <li><a href="view-email.html">View Email</a>
-                                </li>
-                                <li><a href="compose-email.html">Compose Email</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div id="Interface" class="tab-pane notika-tab-menu-bg animated flipInX">
-                            <ul class="notika-main-menu-dropdown">
-                                <li><a href="animations.html">Animations</a>
-                                </li>
-                                <li><a href="google-map.html">Google Map</a>
-                                </li>
-                                <li><a href="data-map.html">Data Maps</a>
-                                </li>
-                                <li><a href="code-editor.html">Code Editor</a>
-                                </li>
-                                <li><a href="image-cropper.html">Images Cropper</a>
-                                </li>
-                                <li><a href="wizard.html">Wizard</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div id="Charts" class="tab-pane notika-tab-menu-bg animated flipInX">
-                            <ul class="notika-main-menu-dropdown">
-                                <li><a href="flot-charts.html">Flot Charts</a>
-                                </li>
-                                <li><a href="bar-charts.html">Bar Charts</a>
-                                </li>
-                                <li><a href="line-charts.html">Line Charts</a>
-                                </li>
-                                <li><a href="area-charts.html">Area Charts</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div id="Tables" class="tab-pane notika-tab-menu-bg animated flipInX">
-                            <ul class="notika-main-menu-dropdown">
-                                <li><a href="normal-table.html">Normal Table</a>
-                                </li>
-                                <li><a href="data-table.html">Data Table</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div id="Forms" class="tab-pane notika-tab-menu-bg animated flipInX">
-                            <ul class="notika-main-menu-dropdown">
-                                <li><a href="form-elements.html">Form Elements</a>
-                                </li>
-                                <li><a href="form-components.html">Form Components</a>
-                                </li>
-                                <li><a href="form-examples.html">Form Examples</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div id="Appviews" class="tab-pane active notika-tab-menu-bg animated flipInX">
-                            <ul class="notika-main-menu-dropdown">
-                                <li><a href="notification.html">Notifications</a>
-                                </li>
-                                <li><a href="alert.html">Alerts</a>
-                                </li>
-                                <li><a href="modals.html">Modals</a>
-                                </li>
-                                <li><a href="buttons.html">Buttons</a>
-                                </li>
-                                <li><a href="tabs.html">Tabs</a>
-                                </li>
-                                <li><a href="accordion.html">Accordion</a>
-                                </li>
-                                <li><a href="dialog.html">Dialogs</a>
-                                </li>
-                                <li><a href="popovers.html">Popovers</a>
-                                </li>
-                                <li><a href="tooltips.html">Tooltips</a>
-                                </li>
-                                <li><a href="dropdown.html">Dropdowns</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div id="Page" class="tab-pane notika-tab-menu-bg animated flipInX">
-                            <ul class="notika-main-menu-dropdown">
-                                <li><a href="contact.html">Contact</a>
-                                </li>
-                                <li><a href="invoice.html">Invoice</a>
-                                </li>
-                                <li><a href="typography.html">Typography</a>
-                                </li>
-                                <li><a href="color.html">Color</a>
-                                </li>
-                                <li><a href="login-register.html">Login Register</a>
-                                </li>
-                                <li><a href="404.html">404 Page</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- Main Menu area End-->
-	<!-- Breadcomb area Start-->
-	<div class="breadcomb-area">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-12 col-md-12 col-sm-12 col-12">
-					<div class="breadcomb-list">
-						<div class="row">
-							<div class="col-lg-6 col-md-6 col-sm-6 col-12">
-								<div class="breadcomb-wp">
-									<div class="breadcomb-icon">
-										<i class="notika-icon notika-app"></i>
-									</div>
-									<div class="breadcomb-ctn">
-										<h2>Tabs</h2>
-										<p>Welcome to Notika <span class="bread-ntd">Admin Template</span></p>
-									</div>
-								</div>
-							</div>
-							<div class="col-lg-6 col-md-6 col-sm-6 col-3">
-								<div class="breadcomb-report">
-									<button data-bs-toggle="tooltip" data-placement="left" title="Download Report" class="btn"><i class="notika-icon notika-sent"></i></button>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- Breadcomb area End-->
-    <!-- Start tabs area-->
-    <div class="tabs-info-area">
+    </nav>
+
+    <!-- Breadcomb area Start-->
+    <div class="breadcomb-area">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-12">
-                    <div class="widget-tabs-int">
-                        <div class="tab-hd">
-                            <h2>Tabs</h2>
-                            <p>Add quick, dynamic tab functionality to transition through panes of local content, even via dropdown menus.</p>
-                        </div>
-                        <div class="widget-tabs-list">
-                            <ul class="nav nav-tabs">
-                                <li class="active"><a data-bs-toggle="tab" href="#home">Tab Menu 1</a></li>
-                                <li><a data-bs-toggle="tab" href="#menu1">Tab Menu 2</a></li>
-                                <li><a data-bs-toggle="tab" href="#menu2">Tab Menu 3</a></li>
-                            </ul>
-                            <div class="tab-content tab-custom-st">
-                                <div id="home" class="tab-pane fade in active">
-                                    <div class="tab-ctn">
-                                        <p>Duis arcu tortor, suscipit eget, imperdiet nec, imperdiet iaculis, ipsum. Vestibulum purus quam, scelerisque ut, mollis sed, nonummy id, metus. Nulla sit amet est. Praesent ac the massa at ligula laoreet iaculis. Vivamus aliquet elit ac nisl. Nulla porta dolor. Cras dapibus. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.</p>
-                                        <p class="tab-mg-b-0">In hac habitasse platea dictumst. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Nam eget dui. In ac felis quis tortor malesuadan of pretium. Phasellus consectetuer vestibulum elit. Duis lobortis massa imperdiet quam. Pellentesque commodo eros a enim. Vestibulum ante ipsum primis in faucibus orci the luctus et ultrices posuere cubilia Curae; In ac dui quis mi consectetuer lacinia. Phasellus a est. Pellentesque commodo eros a enim. Cras ultricies mi eu turpis hendrerit of fringilla. Donec mollis hendrerit risus. Vestibulum turpis sem, aliquet eget, lobortis pellentesque, rutrum eu, nisl. Praesent egestas neque eu enim. In hac habitasse plat.</p>
-                                    </div>
-                                </div>
-                                <div id="menu1" class="tab-pane fade">
-                                    <div class="tab-ctn">
-                                        <p>Duis arcu tortor, suscipit eget, imperdiet nec, imperdiet iaculis, ipsum. Vestibulum purus quam, scelerisque ut, mollis sed, nonummy id, metus. Nulla sit amet est. Praesent ac the massa at ligula laoreet iaculis. Vivamus aliquet elit ac nisl. Nulla porta dolor. Cras dapibus. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.</p>
-                                        <p class="tab-mg-b-0">In hac habitasse platea dictumst. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Nam eget dui. In ac felis quis tortor malesuadan of pretium. Phasellus consectetuer vestibulum elit. Duis lobortis massa imperdiet quam. Pellentesque commodo eros a enim. Vestibulum ante ipsum primis in faucibus orci the luctus et ultrices posuere cubilia Curae; In ac dui quis mi consectetuer lacinia. Phasellus a est. Pellentesque commodo eros a enim. Cras ultricies mi eu turpis hendrerit of fringilla. Donec mollis hendrerit risus. Vestibulum turpis sem, aliquet eget, lobortis pellentesque, rutrum eu, nisl. Praesent egestas neque eu enim. In hac habitasse plat.</p>
-                                    </div>
-                                </div>
-                                <div id="menu2" class="tab-pane fade">
-                                    <div class="tab-ctn">
-                                        <p>Duis arcu tortor, suscipit eget, imperdiet nec, imperdiet iaculis, ipsum. Vestibulum purus quam, scelerisque ut, mollis sed, nonummy id, metus. Nulla sit amet est. Praesent ac the massa at ligula laoreet iaculis. Vivamus aliquet elit ac nisl. Nulla porta dolor. Cras dapibus. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.</p>
-                                        <p class="tab-mg-b-0">In hac habitasse platea dictumst. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Nam eget dui. In ac felis quis tortor malesuadan of pretium. Phasellus consectetuer vestibulum elit. Duis lobortis massa imperdiet quam. Pellentesque commodo eros a enim. Vestibulum ante ipsum primis in faucibus orci the luctus et ultrices posuere cubilia Curae; In ac dui quis mi consectetuer lacinia. Phasellus a est. Pellentesque commodo eros a enim. Cras ultricies mi eu turpis hendrerit of fringilla. Donec mollis hendrerit risus. Vestibulum turpis sem, aliquet eget, lobortis pellentesque, rutrum eu, nisl. Praesent egestas neque eu enim. In hac habitasse plat.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12 col-md-12 col-sm-12 col-12">
-                    <div class="widget-tabs-int tab-ctm-wp mg-t-30">
-                        <div class="tab-hd">
-                            <h2>Tabs Right Aligned</h2>
-                            <p>Simply include the class <code>.tab-nav-right</code> to align the tab header to right side.</p>
-                        </div>
-                        <div class="widget-tabs-list">
-                            <ul class="nav nav-tabs tab-nav-right">
-                                <li class="active"><a data-bs-toggle="tab" href="#home2">Tab Menu 1</a></li>
-                                <li><a data-bs-toggle="tab" href="#menu12">Tab Menu 2</a></li>
-                                <li><a data-bs-toggle="tab" href="#menu22">Tab Menu 3</a></li>
-                            </ul>
-                            <div class="tab-content tab-custom-st tab-ctn-right">
-                                <div id="home2" class="tab-pane fade in active">
-                                    <div class="tab-ctn">
-                                        <p>Duis arcu tortor, suscipit eget, imperdiet nec, imperdiet iaculis, ipsum. Vestibulum purus quam, scelerisque ut, mollis sed, nonummy id, metus. Nulla sit amet est. Praesent ac the massa at ligula laoreet iaculis. Vivamus aliquet elit ac nisl. Nulla porta dolor. Cras dapibus. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.</p>
-                                        <p class="tab-mg-b-0">In hac habitasse platea dictumst. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Nam eget dui. In ac felis quis tortor malesuadan of pretium. Phasellus consectetuer vestibulum elit. Duis lobortis massa imperdiet quam. Pellentesque commodo eros a enim. Vestibulum ante ipsum primis in faucibus orci the luctus et ultrices posuere cubilia Curae; In ac dui quis mi consectetuer lacinia. Phasellus a est. Pellentesque commodo eros a enim. Cras ultricies mi eu turpis hendrerit of fringilla. Donec mollis hendrerit risus. Vestibulum turpis sem, aliquet eget, lobortis pellentesque, rutrum eu, nisl. Praesent egestas neque eu enim. In hac habitasse plat.</p>
-                                    </div>
-                                </div>
-                                <div id="menu12" class="tab-pane fade">
-                                    <div class="tab-ctn">
-                                        <p>Duis arcu tortor, suscipit eget, imperdiet nec, imperdiet iaculis, ipsum. Vestibulum purus quam, scelerisque ut, mollis sed, nonummy id, metus. Nulla sit amet est. Praesent ac the massa at ligula laoreet iaculis. Vivamus aliquet elit ac nisl. Nulla porta dolor. Cras dapibus. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.</p>
-                                        <p class="tab-mg-b-0">In hac habitasse platea dictumst. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Nam eget dui. In ac felis quis tortor malesuadan of pretium. Phasellus consectetuer vestibulum elit. Duis lobortis massa imperdiet quam. Pellentesque commodo eros a enim. Vestibulum ante ipsum primis in faucibus orci the luctus et ultrices posuere cubilia Curae; In ac dui quis mi consectetuer lacinia. Phasellus a est. Pellentesque commodo eros a enim. Cras ultricies mi eu turpis hendrerit of fringilla. Donec mollis hendrerit risus. Vestibulum turpis sem, aliquet eget, lobortis pellentesque, rutrum eu, nisl. Praesent egestas neque eu enim. In hac habitasse plat.</p>
-                                    </div>
-                                </div>
-                                <div id="menu22" class="tab-pane fade">
-                                    <div class="tab-ctn">
-                                        <p>Duis arcu tortor, suscipit eget, imperdiet nec, imperdiet iaculis, ipsum. Vestibulum purus quam, scelerisque ut, mollis sed, nonummy id, metus. Nulla sit amet est. Praesent ac the massa at ligula laoreet iaculis. Vivamus aliquet elit ac nisl. Nulla porta dolor. Cras dapibus. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.</p>
-                                        <p class="tab-mg-b-0">In hac habitasse platea dictumst. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Nam eget dui. In ac felis quis tortor malesuadan of pretium. Phasellus consectetuer vestibulum elit. Duis lobortis massa imperdiet quam. Pellentesque commodo eros a enim. Vestibulum ante ipsum primis in faucibus orci the luctus et ultrices posuere cubilia Curae; In ac dui quis mi consectetuer lacinia. Phasellus a est. Pellentesque commodo eros a enim. Cras ultricies mi eu turpis hendrerit of fringilla. Donec mollis hendrerit risus. Vestibulum turpis sem, aliquet eget, lobortis pellentesque, rutrum eu, nisl. Praesent egestas neque eu enim. In hac habitasse plat.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12 col-md-12 col-sm-12 col-12">
-                    <div class="widget-tabs-int mg-t-30">
-                        <div class="tab-hd">
-                            <h2>Tabs With animations</h2>
-                            <p>You may add optional animation classes to animate the tab panes when switching. Please refer the Animations page to get all the available classes <a target="_blank" href="https://daneden.github.io/animate.css/">Click Here</a>.</p>
-                        </div>
+                    <div class="breadcomb-list">
                         <div class="row">
-                            <div class="col-lg-6">
-                                <div class="widget-tabs-list tab-pt-mg">
-                                    <ul class="nav nav-tabs tab-nav-center">
-                                        <li class="active"><a data-bs-toggle="tab" href="#home3">Tab Menu 1</a></li>
-                                        <li><a data-bs-toggle="tab" href="#menu13">Tab Menu 2</a></li>
-                                        <li><a data-bs-toggle="tab" href="#menu23">Tab Menu 3</a></li>
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-12">
+                                <div class="breadcomb-wp">
+                                    <div class="breadcomb-icon">
+                                        <i class="notika-icon notika-app"></i>
+                                    </div>
+                                    <div class="breadcomb-ctn">
+                                        <h2>Tabs</h2>
+                                        <p>Welcome to Notika <span class="bread-ntd">Admin Template</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-3">
+                                <div class="breadcomb-report">
+                                    <button data-bs-toggle="tooltip" data-bs-placement="left" title="Download Report" class="btn"><i class="notika-icon notika-sent"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Breadcomb area End-->
+
+    <!-- Tabs Content Area Start -->
+    <div class="tabs-info-area">
+        <div class="container">
+            <!-- Basic Tabs -->
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                    <div class="recent-post-wrapper notika-shadow mg-t-30">
+                        <div class="recent-post-ctn">
+                            <div class="recent-post-title">
+                                <h2>Basic Tabs</h2>
+                                <p>Add quick, dynamic tab functionality to transition through panes of local content.</p>
+                            </div>
+                        </div>
+                        <div class="recent-post-items">
+                            <ul class="nav nav-tabs" id="basicTabs" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Tab Menu 1</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Tab Menu 2</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">Tab Menu 3</button>
+                                </li>
+                            </ul>
+                            <div class="tab-content" id="basicTabsContent">
+                                <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                    <div class="tab-ctn">
+                                        <p>Duis arcu tortor, suscipit eget, imperdiet nec, imperdiet iaculis, ipsum. Vestibulum purus quam, scelerisque ut, mollis sed, nonummy id, metus. Nulla sit amet est. Praesent ac the massa at ligula laoreet iaculis. Vivamus aliquet elit ac nisl. Nulla porta dolor. Cras dapibus. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.</p>
+                                        <p class="tab-mg-b-0">In hac habitasse platea dictumst. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Nam eget dui. In ac felis quis tortor malesuadan of pretium. Phasellus consectetuer vestibulum elit. Duis lobortis massa imperdiet quam. Pellentesque commodo eros a enim. Vestibulum ante ipsum primis in faucibus orci the luctus et ultrices posuere cubilia Curae; In ac dui quis mi consectetuer lacinia. Phasellus a est. Pellentesque commodo eros a enim. Cras ultricies mi eu turpis hendrerit of fringilla. Donec mollis hendrerit risus. Vestibulum turpis sem, aliquet eget, lobortis pellentesque, rutrum eu, nisl. Praesent egestas neque eu enim. In hac habitasse plat.</p>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                                    <div class="tab-ctn">
+                                        <p>Vestibulum purus quam, scelerisque ut, mollis sed, nonummy id, metus. Duis arcu tortor, suscipit eget, imperdiet nec, imperdiet iaculis, ipsum. Nulla sit amet est. Praesent ac the massa at ligula laoreet iaculis. Vivamus aliquet elit ac nisl. Nulla porta dolor. Cras dapibus. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.</p>
+                                        <p class="tab-mg-b-0">Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. In hac habitasse platea dictumst. Nam eget dui. In ac felis quis tortor malesuadan of pretium. Phasellus consectetuer vestibulum elit. Duis lobortis massa imperdiet quam. Pellentesque commodo eros a enim. Vestibulum ante ipsum primis in faucibus orci the luctus et ultrices posuere cubilia Curae; In ac dui quis mi consectetuer lacinia. Phasellus a est. Pellentesque commodo eros a enim. Cras ultricies mi eu turpis hendrerit of fringilla. Donec mollis hendrerit risus. Vestibulum turpis sem, aliquet eget, lobortis pellentesque, rutrum eu, nisl. Praesent egestas neque eu enim. In hac habitasse plat.</p>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+                                    <div class="tab-ctn">
+                                        <p>Praesent ac the massa at ligula laoreet iaculis. Duis arcu tortor, suscipit eget, imperdiet nec, imperdiet iaculis, ipsum. Vestibulum purus quam, scelerisque ut, mollis sed, nonummy id, metus. Nulla sit amet est. Vivamus aliquet elit ac nisl. Nulla porta dolor. Cras dapibus. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.</p>
+                                        <p class="tab-mg-b-0">Nam eget dui. In ac felis quis tortor malesuadan of pretium. In hac habitasse platea dictumst. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Phasellus consectetuer vestibulum elit. Duis lobortis massa imperdiet quam. Pellentesque commodo eros a enim. Vestibulum ante ipsum primis in faucibus orci the luctus et ultrices posuere cubilia Curae; In ac dui quis mi consectetuer lacinia. Phasellus a est. Pellentesque commodo eros a enim. Cras ultricies mi eu turpis hendrerit of fringilla. Donec mollis hendrerit risus. Vestibulum turpis sem, aliquet eget, lobortis pellentesque, rutrum eu, nisl. Praesent egestas neque eu enim. In hac habitasse plat.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tabs Right Aligned -->
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                    <div class="recent-post-wrapper notika-shadow mg-t-30">
+                        <div class="recent-post-ctn">
+                            <div class="recent-post-title">
+                                <h2>Tabs Right Aligned</h2>
+                                <p>Simply include the class <code>.justify-content-end</code> to align the tab header to right side.</p>
+                            </div>
+                        </div>
+                        <div class="recent-post-items">
+                            <ul class="nav nav-tabs justify-content-end" id="rightTabs" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link active" id="right-home-tab" data-bs-toggle="tab" data-bs-target="#right-home" type="button" role="tab" aria-controls="right-home" aria-selected="true">Tab Menu 1</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="right-profile-tab" data-bs-toggle="tab" data-bs-target="#right-profile" type="button" role="tab" aria-controls="right-profile" aria-selected="false">Tab Menu 2</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="right-contact-tab" data-bs-toggle="tab" data-bs-target="#right-contact" type="button" role="tab" aria-controls="right-contact" aria-selected="false">Tab Menu 3</button>
+                                </li>
+                            </ul>
+                            <div class="tab-content" id="rightTabsContent">
+                                <div class="tab-pane fade show active" id="right-home" role="tabpanel" aria-labelledby="right-home-tab">
+                                    <div class="tab-ctn">
+                                        <p>Duis arcu tortor, suscipit eget, imperdiet nec, imperdiet iaculis, ipsum. Vestibulum purus quam, scelerisque ut, mollis sed, nonummy id, metus. Nulla sit amet est. Praesent ac the massa at ligula laoreet iaculis. Vivamus aliquet elit ac nisl. Nulla porta dolor. Cras dapibus. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.</p>
+                                        <p class="tab-mg-b-0">In hac habitasse platea dictumst. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Nam eget dui. In ac felis quis tortor malesuadan of pretium. Phasellus consectetuer vestibulum elit. Duis lobortis massa imperdiet quam. Pellentesque commodo eros a enim. Vestibulum ante ipsum primis in faucibus orci the luctus et ultrices posuere cubilia Curae; In ac dui quis mi consectetuer lacinia. Phasellus a est. Pellentesque commodo eros a enim. Cras ultricies mi eu turpis hendrerit of fringilla. Donec mollis hendrerit risus. Vestibulum turpis sem, aliquet eget, lobortis pellentesque, rutrum eu, nisl. Praesent egestas neque eu enim. In hac habitasse plat.</p>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="right-profile" role="tabpanel" aria-labelledby="right-profile-tab">
+                                    <div class="tab-ctn">
+                                        <p>Vestibulum purus quam, scelerisque ut, mollis sed, nonummy id, metus. Duis arcu tortor, suscipit eget, imperdiet nec, imperdiet iaculis, ipsum. Nulla sit amet est. Praesent ac the massa at ligula laoreet iaculis. Vivamus aliquet elit ac nisl. Nulla porta dolor. Cras dapibus. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.</p>
+                                        <p class="tab-mg-b-0">Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. In hac habitasse platea dictumst. Nam eget dui. In ac felis quis tortor malesuadan of pretium. Phasellus consectetuer vestibulum elit. Duis lobortis massa imperdiet quam. Pellentesque commodo eros a enim. Vestibulum ante ipsum primis in faucibus orci the luctus et ultrices posuere cubilia Curae; In ac dui quis mi consectetuer lacinia. Phasellus a est. Pellentesque commodo eros a enim. Cras ultricies mi eu turpis hendrerit of fringilla. Donec mollis hendrerit risus. Vestibulum turpis sem, aliquet eget, lobortis pellentesque, rutrum eu, nisl. Praesent egestas neque eu enim. In hac habitasse plat.</p>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="right-contact" role="tabpanel" aria-labelledby="right-contact-tab">
+                                    <div class="tab-ctn">
+                                        <p>Praesent ac the massa at ligula laoreet iaculis. Duis arcu tortor, suscipit eget, imperdiet nec, imperdiet iaculis, ipsum. Vestibulum purus quam, scelerisque ut, mollis sed, nonummy id, metus. Nulla sit amet est. Vivamus aliquet elit ac nisl. Nulla porta dolor. Cras dapibus. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.</p>
+                                        <p class="tab-mg-b-0">Nam eget dui. In ac felis quis tortor malesuadan of pretium. In hac habitasse platea dictumst. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Phasellus consectetuer vestibulum elit. Duis lobortis massa imperdiet quam. Pellentesque commodo eros a enim. Vestibulum ante ipsum primis in faucibus orci the luctus et ultrices posuere cubilia Curae; In ac dui quis mi consectetuer lacinia. Phasellus a est. Pellentesque commodo eros a enim. Cras ultricies mi eu turpis hendrerit of fringilla. Donec mollis hendrerit risus. Vestibulum turpis sem, aliquet eget, lobortis pellentesque, rutrum eu, nisl. Praesent egestas neque eu enim. In hac habitasse plat.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tabs With Animations -->
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                    <div class="recent-post-wrapper notika-shadow mg-t-30">
+                        <div class="recent-post-ctn">
+                            <div class="recent-post-title">
+                                <h2>Tabs With Animations</h2>
+                                <p>Add smooth animation effects when switching between tab panes.</p>
+                            </div>
+                        </div>
+                        <div class="recent-post-items">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <h5 class="mb-3">Slide Animation</h5>
+                                    <ul class="nav nav-tabs justify-content-center" id="slideTabs" role="tablist">
+                                        <li class="nav-item" role="presentation">
+                                            <button class="nav-link active" id="slide-home-tab" data-bs-toggle="tab" data-bs-target="#slide-home" type="button" role="tab" aria-controls="slide-home" aria-selected="true">Tab Menu 1</button>
+                                        </li>
+                                        <li class="nav-item" role="presentation">
+                                            <button class="nav-link" id="slide-profile-tab" data-bs-toggle="tab" data-bs-target="#slide-profile" type="button" role="tab" aria-controls="slide-profile" aria-selected="false">Tab Menu 2</button>
+                                        </li>
+                                        <li class="nav-item" role="presentation">
+                                            <button class="nav-link" id="slide-contact-tab" data-bs-toggle="tab" data-bs-target="#slide-contact" type="button" role="tab" aria-controls="slide-contact" aria-selected="false">Tab Menu 3</button>
+                                        </li>
                                     </ul>
-                                    <div class="tab-content tab-custom-st">
-                                        <div id="home3" class="tab-pane in active animated zoomInLeft">
+                                    <div class="tab-content animated-tabs" id="slideTabsContent" data-animation="slide">
+                                        <div class="tab-pane fade show active" id="slide-home" role="tabpanel" aria-labelledby="slide-home-tab">
                                             <div class="tab-ctn">
                                                 <p>Duis arcu tortor, suscipit eget, imperdiet nec, imperdiet iaculis, ipsum. Vestibulum of purus quam, scelerisque ut, mollis sed, nonummy id, metus. Nulla sit amet este. Praesent ac massa at ligula laoreet iaculis. Vivamus aliquet elit ac nisl. Nulla theportan dolor. Cras dapibus. Aliquam lorem ante, dapibus in, viverra quy, crydesfeugiat a, tellus.</p>
                                                 <p class="tab-mg-b-0">In hac habitasse platea dictumst. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Nam eget dui. In ac felis quis tortor malesuada pretium. Phasellus consectetuer vestibulum elit. Duis lobortis massantesan imperdiet quam. Pellentesque commodo eros a enim.</p>
                                             </div>
                                         </div>
-                                        <div id="menu13" class="tab-pane animated zoomInLeft">
+                                        <div class="tab-pane fade" id="slide-profile" role="tabpanel" aria-labelledby="slide-profile-tab">
                                             <div class="tab-ctn">
-                                                <p>Duis arcu tortor, suscipit eget, imperdiet nec, imperdiet iaculis, ipsum. Vestibulum of purus quam, scelerisque ut, mollis sed, nonummy id, metus. Nulla sit amet este. Praesent ac massa at ligula laoreet iaculis. Vivamus aliquet elit ac nisl. Nulla theportan dolor. Cras dapibus. Aliquam lorem ante, dapibus in, viverra quy, crydesfeugiat a, tellus.</p>
-                                                <p class="tab-mg-b-0">In hac habitasse platea dictumst. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Nam eget dui. In ac felis quis tortor malesuada pretium. Phasellus consectetuer vestibulum elit. Duis lobortis massantesan imperdiet quam. Pellentesque commodo eros a enim.</p>
+                                                <p>Vestibulum purus quam, scelerisque ut, mollis sed, nonummy id, metus. Duis arcu tortor, suscipit eget, imperdiet nec, imperdiet iaculis, ipsum. Nulla sit amet est. Praesent ac the massa at ligula laoreet iaculis. Vivamus aliquet elit ac nisl. Nulla porta dolor. Cras dapibus. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.</p>
+                                                <p class="tab-mg-b-0">Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. In hac habitasse platea dictumst. Nam eget dui. In ac felis quis tortor malesuada pretium. Phasellus consectetuer vestibulum elit. Duis lobortis massantesan imperdiet quam. Pellentesque commodo eros a enim.</p>
                                             </div>
                                         </div>
-                                        <div id="menu23" class="tab-pane animated zoomInLeft">
+                                        <div class="tab-pane fade" id="slide-contact" role="tabpanel" aria-labelledby="slide-contact-tab">
                                             <div class="tab-ctn">
-                                                <p>Duis arcu tortor, suscipit eget, imperdiet nec, imperdiet iaculis, ipsum. Vestibulum of purus quam, scelerisque ut, mollis sed, nonummy id, metus. Nulla sit amet este. Praesent ac massa at ligula laoreet iaculis. Vivamus aliquet elit ac nisl. Nulla theportan dolor. Cras dapibus. Aliquam lorem ante, dapibus in, viverra quy, crydesfeugiat a, tellus.</p>
-                                                <p class="tab-mg-b-0">In hac habitasse platea dictumst. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Nam eget dui. In ac felis quis tortor malesuada pretium. Phasellus consectetuer vestibulum elit. Duis lobortis massantesan imperdiet quam. Pellentesque commodo eros a enim.</p>
+                                                <p>Praesent ac the massa at ligula laoreet iaculis. Duis arcu tortor, suscipit eget, imperdiet nec, imperdiet iaculis, ipsum. Vestibulum purus quam, scelerisque ut, mollis sed, nonummy id, metus. Nulla sit amet est. Vivamus aliquet elit ac nisl. Nulla porta dolor. Cras dapibus. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.</p>
+                                                <p class="tab-mg-b-0">Nam eget dui. In ac felis quis tortor malesuadan of pretium. In hac habitasse platea dictumst. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Phasellus consectetuer vestibulum elit. Duis lobortis massantesan imperdiet quam. Pellentesque commodo eros a enim.</p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="widget-tabs-list tab-pt-mg sm-res-mg-t-30 tb-res-mg-t-30">
-                                    <ul class="nav nav-tabs tab-nav-center">
-                                        <li class="active"><a data-bs-toggle="tab" href="#home4">Tab Menu 1</a></li>
-                                        <li><a data-bs-toggle="tab" href="#menu14">Tab Menu 2</a></li>
-                                        <li><a data-bs-toggle="tab" href="#menu24">Tab Menu 3</a></li>
+                                <div class="col-lg-6">
+                                    <h5 class="mb-3">Fade Animation</h5>
+                                    <ul class="nav nav-tabs justify-content-center" id="fadeTabs" role="tablist">
+                                        <li class="nav-item" role="presentation">
+                                            <button class="nav-link active" id="fade-home-tab" data-bs-toggle="tab" data-bs-target="#fade-home" type="button" role="tab" aria-controls="fade-home" aria-selected="true">Tab Menu 1</button>
+                                        </li>
+                                        <li class="nav-item" role="presentation">
+                                            <button class="nav-link" id="fade-profile-tab" data-bs-toggle="tab" data-bs-target="#fade-profile" type="button" role="tab" aria-controls="fade-profile" aria-selected="false">Tab Menu 2</button>
+                                        </li>
+                                        <li class="nav-item" role="presentation">
+                                            <button class="nav-link" id="fade-contact-tab" data-bs-toggle="tab" data-bs-target="#fade-contact" type="button" role="tab" aria-controls="fade-contact" aria-selected="false">Tab Menu 3</button>
+                                        </li>
                                     </ul>
-                                    <div class="tab-content tab-custom-st">
-                                        <div id="home4" class="tab-pane in active animated zoomInRight">
+                                    <div class="tab-content animated-tabs" id="fadeTabsContent" data-animation="fade-scale">
+                                        <div class="tab-pane fade show active" id="fade-home" role="tabpanel" aria-labelledby="fade-home-tab">
                                             <div class="tab-ctn">
                                                 <p>Duis arcu tortor, suscipit eget, imperdiet nec, imperdiet iaculis, ipsum. Vestibulum of purus quam, scelerisque ut, mollis sed, nonummy id, metus. Nulla sit amet este. Praesent ac massa at ligula laoreet iaculis. Vivamus aliquet elit ac nisl. Nulla theportan dolor. Cras dapibus. Aliquam lorem ante, dapibus in, viverra quy, crydesfeugiat a, tellus.</p>
                                                 <p class="tab-mg-b-0">In hac habitasse platea dictumst. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Nam eget dui. In ac felis quis tortor malesuada pretium. Phasellus consectetuer vestibulum elit. Duis lobortis massantesan imperdiet quam. Pellentesque commodo eros a enim.</p>
                                             </div>
                                         </div>
-                                        <div id="menu14" class="tab-pane animated zoomInRight">
+                                        <div class="tab-pane fade" id="fade-profile" role="tabpanel" aria-labelledby="fade-profile-tab">
                                             <div class="tab-ctn">
-                                                <p>Duis arcu tortor, suscipit eget, imperdiet nec, imperdiet iaculis, ipsum. Vestibulum of purus quam, scelerisque ut, mollis sed, nonummy id, metus. Nulla sit amet este. Praesent ac massa at ligula laoreet iaculis. Vivamus aliquet elit ac nisl. Nulla theportan dolor. Cras dapibus. Aliquam lorem ante, dapibus in, viverra quy, crydesfeugiat a, tellus.</p>
-                                                <p class="tab-mg-b-0">In hac habitasse platea dictumst. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Nam eget dui. In ac felis quis tortor malesuada pretium. Phasellus consectetuer vestibulum elit. Duis lobortis massantesan imperdiet quam. Pellentesque commodo eros a enim.</p>
+                                                <p>Vestibulum purus quam, scelerisque ut, mollis sed, nonummy id, metus. Duis arcu tortor, suscipit eget, imperdiet nec, imperdiet iaculis, ipsum. Nulla sit amet est. Praesent ac the massa at ligula laoreet iaculis. Vivamus aliquet elit ac nisl. Nulla porta dolor. Cras dapibus. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.</p>
+                                                <p class="tab-mg-b-0">Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. In hac habitasse platea dictumst. Nam eget dui. In ac felis quis tortor malesuada pretium. Phasellus consectetuer vestibulum elit. Duis lobortis massantesan imperdiet quam. Pellentesque commodo eros a enim.</p>
                                             </div>
                                         </div>
-                                        <div id="menu24" class="tab-pane animated zoomInRight">
+                                        <div class="tab-pane fade" id="fade-contact" role="tabpanel" aria-labelledby="fade-contact-tab">
                                             <div class="tab-ctn">
-                                                <p>Duis arcu tortor, suscipit eget, imperdiet nec, imperdiet iaculis, ipsum. Vestibulum of purus quam, scelerisque ut, mollis sed, nonummy id, metus. Nulla sit amet este. Praesent ac massa at ligula laoreet iaculis. Vivamus aliquet elit ac nisl. Nulla theportan dolor. Cras dapibus. Aliquam lorem ante, dapibus in, viverra quy, crydesfeugiat a, tellus.</p>
-                                                <p class="tab-mg-b-0">In hac habitasse platea dictumst. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Nam eget dui. In ac felis quis tortor malesuada pretium. Phasellus consectetuer vestibulum elit. Duis lobortis massantesan imperdiet quam. Pellentesque commodo eros a enim.</p>
+                                                <p>Praesent ac the massa at ligula laoreet iaculis. Duis arcu tortor, suscipit eget, imperdiet nec, imperdiet iaculis, ipsum. Vestibulum purus quam, scelerisque ut, mollis sed, nonummy id, metus. Nulla sit amet est. Vivamus aliquet elit ac nisl. Nulla porta dolor. Cras dapibus. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.</p>
+                                                <p class="tab-mg-b-0">Nam eget dui. In ac felis quis tortor malesuadan of pretium. In hac habitasse platea dictumst. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Phasellus consectetuer vestibulum elit. Duis lobortis massantesan imperdiet quam. Pellentesque commodo eros a enim.</p>
                                             </div>
                                         </div>
                                     </div>
@@ -764,77 +508,68 @@
             </div>
         </div>
     </div>
-    <!-- End tabs area-->
+    <!-- Tabs Content Area End -->
+
     <!-- Start Footer area-->
     <div class="footer-copyright-area">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-12">
                     <div class="footer-copy-right">
-                        <p>Copyright © 2018 
-. All rights reserved. Template by <a href="https://colorlib.com">Colorlib</a>.</p>
+                        <p>Copyright © 2025. All rights reserved. Template by <a href="https://colorlib.com">Colorlib</a>. Modernized with Vite.</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <!-- End Footer area-->
-    <!-- jquery
-		============================================ -->
-    <script src="js/vendor/jquery-3.7.1.min.js"></script>
-    <!-- bootstrap JS
-		============================================ -->
-    <script src="js/bootstrap.min.js"></script>
-    <!-- wow JS
-		============================================ -->
-    <script src="js/wow.min.js"></script>
-    <!-- price-slider JS
-		============================================ -->
-    <script src="js/jquery-price-slider.js"></script>
-    <!-- owl.carousel JS
-		============================================ -->
-    <script src="js/swiper.min.js"></script>
-    <script src="js/swiper-init.js"></script>
-    <!-- scrollUp JS
-		============================================ -->
-    <script src="js/jquery.scrollUp.min.js"></script>
-    <!-- meanmenu JS
-		============================================ -->
-    <script src="js/meanmenu/jquery.meanmenu.js"></script>
-    <!-- counterup JS
-		============================================ -->
-    <script src="js/counterup/counterup-modern.js"></script>
-    <script src="js/counterup/waypoints.min.js"></script>
-    <script src="js/counterup/counterup-active.js"></script>
-    <!-- sparkline JS
-		============================================ -->
-    <script src="js/sparkline/jquery.sparkline.min.js"></script>
-    <script src="js/sparkline/sparkline-active.js"></script>
-    <!-- knob JS
-		============================================ -->
-    <script src="js/knob/jquery.knob.js"></script>
-    <script src="js/knob/jquery.appear.js"></script>
-    <script src="js/knob/knob-active.js"></script>
-    <!-- mCustomScrollbar JS
-		============================================ -->
-    <script src="js/scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
-    <!-- flot JS
-		============================================ -->
-    <script src="js/flot/flot-widget-anatic-active.js"></script>
-    <script src="js/flot/chart-tooltips.js"></script>
-	<!--  wave JS
-		============================================ -->
-    <script src="js/wave/waves.min.js"></script>
-    <script src="js/wave/wave-active.js"></script>
-    <!-- plugins JS
-		============================================ -->
-    <script src="js/plugins.js"></script>
-    <!-- main JS
-		============================================ -->
-    <script src="js/main.js"></script>
-	<!-- tawk chat JS
-		============================================ -->
-    <script src="js/tawk-chat.js"></script>
-</body>
 
+    <!-- ONLY VITE ENTRY POINT - Everything else bundled by Vite -->
+    <script type="module" src="/src/js/pages/tabs.js"></script>
+
+    <!-- Clean Navigation JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Search functionality
+            const searchInput = document.querySelector('.search-dropdown input');
+            if (searchInput) {
+                const searchTrigger = searchInput.closest('.dropdown').querySelector('[data-bs-toggle="dropdown"]');
+                if (searchTrigger) {
+                    searchTrigger.addEventListener('shown.bs.dropdown', function() {
+                        setTimeout(() => searchInput.focus(), 100);
+                    });
+                }
+
+                searchInput.addEventListener('keypress', function(e) {
+                    if (e.key === 'Enter' && this.value.trim()) {
+                        console.log('Searching for:', this.value);
+                    }
+                });
+            }
+
+            // Simple navbar dropdown enhancements
+            const navDropdowns = document.querySelectorAll('.notika-navbar .dropdown');
+
+            navDropdowns.forEach(dropdown => {
+                const toggle = dropdown.querySelector('.dropdown-toggle');
+
+                // Add subtle click feedback
+                if (toggle) {
+                    toggle.addEventListener('click', function(e) {
+                        // Don't navigate away, just toggle dropdown
+                        e.preventDefault();
+
+                        // Quick visual feedback
+                        this.style.transform = 'scale(0.98)';
+                        setTimeout(() => {
+                            this.style.transform = '';
+                        }, 100);
+                    });
+                }
+            });
+
+            console.log('✅ Tabs navigation system initialized');
+        });
+    </script>
+</body>
 </html>
