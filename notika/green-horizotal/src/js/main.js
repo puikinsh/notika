@@ -1890,7 +1890,7 @@ class NotikaApp {
     // Check if we're on desktop (Bootstrap's large breakpoint is 992px)
     const isDesktop = () => window.innerWidth >= 992
 
-    // Get the offcanvas Bootstrap instance or create one
+    // Get the offcanvas Bootstrap instance
     const offcanvas = bootstrap.Offcanvas.getOrCreateInstance(offcanvasElement)
 
     // Prevent opening on desktop
@@ -1898,48 +1898,57 @@ class NotikaApp {
       if (isDesktop()) {
         e.preventDefault()
         e.stopPropagation()
-        console.log('Mobile menu blocked on desktop')
         return false
       }
     })
 
-    // Also handle the toggle button
-    const toggleButton = document.querySelector('[data-bs-target="#mobileNavOffcanvas"]')
-    if (toggleButton) {
-      toggleButton.addEventListener('click', (e) => {
-        if (isDesktop()) {
-          e.preventDefault()
-          e.stopPropagation()
-          console.log('Mobile menu toggle blocked on desktop')
-          return false
-        }
-      })
-
-      // Hide/show toggle button based on screen size
-      const updateToggleVisibility = () => {
-        if (isDesktop()) {
-          toggleButton.style.display = 'none'
-          // Also force-close the offcanvas if it's open
-          if (offcanvasElement.classList.contains('show')) {
-            offcanvas.hide()
-          }
-        } else {
-          toggleButton.style.display = ''
-        }
+    // Close offcanvas when resizing from mobile to desktop
+    const handleResize = () => {
+      if (isDesktop() && offcanvasElement.classList.contains('show')) {
+        offcanvas.hide()
       }
-
-      // Initial check
-      updateToggleVisibility()
-
-      // Update on resize
-      let resizeTimer
-      window.addEventListener('resize', () => {
-        clearTimeout(resizeTimer)
-        resizeTimer = setTimeout(updateToggleVisibility, 250)
-      })
     }
 
-    console.log('✅ Mobile menu desktop prevention initialized')
+    window.addEventListener('resize', handleResize)
+
+    // Fix collapse animation flash issue
+    this.fixMobileMenuCollapseFlash()
+  }
+
+  fixMobileMenuCollapseFlash() {
+    // Simple fade animation without height resizing
+    const offcanvasElement = document.getElementById('mobileNavOffcanvas')
+    if (!offcanvasElement) return
+
+    // Get all collapse elements in the mobile menu
+    const collapseElements = offcanvasElement.querySelectorAll('.collapse')
+
+    collapseElements.forEach(element => {
+      // Disable Bootstrap's default height animation
+      element.style.transition = 'none'
+
+      // Use simple show/hide with fade
+      element.addEventListener('show.bs.collapse', function(e) {
+        e.preventDefault()
+        this.style.display = 'block'
+        this.classList.add('show')
+
+        // Force reflow to trigger CSS animation
+        void this.offsetWidth
+      })
+
+      element.addEventListener('hide.bs.collapse', function(e) {
+        e.preventDefault()
+        this.classList.remove('show')
+
+        // Hide after fade completes
+        setTimeout(() => {
+          if (!this.classList.contains('show')) {
+            this.style.display = 'none'
+          }
+        }, 150)
+      })
+    })
   }
 }
 

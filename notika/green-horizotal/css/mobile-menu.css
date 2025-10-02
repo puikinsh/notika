@@ -11,12 +11,45 @@
     .offcanvas-backdrop,
     [data-bs-target="#mobileNavOffcanvas"] {
         display: none !important;
+        visibility: hidden !important;
+        pointer-events: none !important;
     }
 
     /* Ensure body doesn't get offcanvas styles on desktop */
     body.modal-open {
         overflow: auto !important;
         padding-right: 0 !important;
+    }
+}
+
+/* Prevent FOUC (Flash of Unstyled Content) on mobile menu */
+#mobileNavOffcanvas .collapse {
+    visibility: visible;
+}
+
+/* Simple fade animation - no height resizing! */
+#mobileNavOffcanvas .collapse:not(.show) {
+    display: none;
+}
+
+#mobileNavOffcanvas .collapse.show {
+    display: block;
+    animation: simpleFadeIn 0.15s ease-out;
+}
+
+/* Instant expand, just fade in - much cleaner */
+#mobileNavOffcanvas .collapse.collapsing {
+    display: block;
+    opacity: 0;
+    transition: opacity 0.15s ease-out;
+}
+
+@keyframes simpleFadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
     }
 }
 
@@ -69,10 +102,7 @@
     border-bottom: none !important;
 }
 
-/* Smooth collapse animation */
-#mobileNavOffcanvas .collapse {
-    transition: all 0.35s ease;
-}
+/* Remove redundant transition (handled by .collapsing state) */
 
 /* Offcanvas overlay */
 .offcanvas-backdrop {
