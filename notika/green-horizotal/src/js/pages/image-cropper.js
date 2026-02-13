@@ -163,6 +163,11 @@ class ImageCropperPage extends NotikaApp {
       .cropper-area .btn * {
         animation: none !important;
       }
+      /* Prevent AOS fade-in on cropper elements */
+      .cropper-area [data-aos] {
+        opacity: 1 !important;
+        transform: none !important;
+      }
     `
     document.head.appendChild(css)
   }
