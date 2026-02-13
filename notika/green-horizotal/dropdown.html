@@ -15,9 +15,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 
-    <!-- Mobile Menu CSS -->
-    <link rel="stylesheet" href="css/mobile-menu.css">
-
     <!-- Font Awesome and all other CSS imported via Vite -->
     <!-- ONLY Vite entry point - everything else bundled -->
 </head>
@@ -561,436 +558,385 @@
     <!-- Dropdown area start-->
     <div class="dropdown-area">
         <div class="container">
+
+            <!-- Section 1: Button Dropdowns -->
             <div class="row">
-                <div class="col-lg-12 col-md-12 col-sm-12 col-12">
-                    <div class="dropdown-list">
-                        <div class="dropdown-trig-hd">
-                            <h2>Dropdown Basic Previews (After triggering)</h2>
-                            <p>Toggleable, contextual menu for displaying lists of links. Please refer the Colors page for all the available color options </p>
-                        </div>
-                        <div class="row">
-                            <div class="col-lg-12 col-md-12 col-sm-12 col-12">
-                                <div class="dropdown-trig-list">
-                                    <div class="dropdown-trig-sing">
-                                        <ul class="dropdown-menu" role="menu">
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a></li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another action</a>
-                                            </li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Something else
-													here</a></li>
-                                            <li class="divider"></li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Separated link</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="dropdown-trig-sing sm-res-mg-t-30">
-                                        <ul class="dropdown-menu nk-blue" role="menu">
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a></li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another action</a>
-                                            </li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Something else
-													here</a></li>
-                                            <li class="divider"></li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Separated link</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="dropdown-trig-sing sm-res-mg-t-30">
-                                        <ul class="dropdown-menu nk-light-blue" role="menu">
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a></li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another action</a>
-                                            </li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Something else
-													here</a></li>
-                                            <li class="divider"></li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Separated link</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="dropdown-trig-sing sm-res-mg-t-30 tb-res-mg-t-30">
-                                        <ul class="dropdown-menu nk-indigo" role="menu">
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a></li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another action</a>
-                                            </li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Something else
-													here</a></li>
-                                            <li class="divider"></li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Separated link</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="dropdown-trig-sing sm-res-mg-t-30 tb-res-mg-t-30 dk-res-mg-t-30">
-                                        <ul class="dropdown-menu nk-cyan" role="menu">
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a></li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another action</a>
-                                            </li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Something else
-													here</a></li>
-                                            <li class="divider"></li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Separated link</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
+                <div class="col-12">
+                    <div class="dd-demo-card">
+                        <h5 class="dd-demo-title">Button Dropdowns</h5>
+                        <p class="dd-demo-desc">Standard dropdown buttons in different color variants.</p>
+                        <div class="d-flex flex-wrap gap-2">
+                            <div class="dropdown">
+                                <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown">Primary</button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Dashboard</a></li>
+                                    <li><a class="dropdown-item" href="#">Settings</a></li>
+                                    <li><a class="dropdown-item" href="#">Profile</a></li>
+                                    <li><hr class="dropdown-divider"></li>
+                                    <li><a class="dropdown-item" href="#">Sign out</a></li>
+                                </ul>
                             </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-lg-12 col-md-12 col-sm-12 col-12">
-                                <div class="dropdown-trig-list">
-                                    <div class="dropdown-trig-sing mg-t-30">
-                                        <ul class="dropdown-menu nk-teal" role="menu">
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a></li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another action</a>
-                                            </li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Something else
-													here</a></li>
-                                            <li class="divider"></li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Separated link</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="dropdown-trig-sing mg-t-30">
-                                        <ul class="dropdown-menu nk-green" role="menu">
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a></li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another action</a>
-                                            </li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Something else
-													here</a></li>
-                                            <li class="divider"></li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Separated link</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="dropdown-trig-sing mg-t-30">
-                                        <ul class="dropdown-menu nk-lime" role="menu">
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a></li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another action</a>
-                                            </li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Something else
-													here</a></li>
-                                            <li class="divider"></li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Separated link</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="dropdown-trig-sing mg-t-30">
-                                        <ul class="dropdown-menu nk-amber" role="menu">
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a></li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another action</a>
-                                            </li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Something else
-													here</a></li>
-                                            <li class="divider"></li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Separated link</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="dropdown-trig-sing mg-t-30">
-                                        <ul class="dropdown-menu nk-brown" role="menu">
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a></li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another action</a>
-                                            </li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Something else
-													here</a></li>
-                                            <li class="divider"></li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Separated link</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
+                            <div class="dropdown">
+                                <button class="btn btn-success dropdown-toggle" type="button" data-bs-toggle="dropdown">Success</button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Approve</a></li>
+                                    <li><a class="dropdown-item" href="#">Mark as done</a></li>
+                                    <li><a class="dropdown-item" href="#">Archive</a></li>
+                                </ul>
+                            </div>
+                            <div class="dropdown">
+                                <button class="btn btn-danger dropdown-toggle" type="button" data-bs-toggle="dropdown">Danger</button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Delete</a></li>
+                                    <li><a class="dropdown-item" href="#">Remove all</a></li>
+                                    <li><a class="dropdown-item" href="#">Reset</a></li>
+                                </ul>
+                            </div>
+                            <div class="dropdown">
+                                <button class="btn btn-warning dropdown-toggle" type="button" data-bs-toggle="dropdown">Warning</button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Review</a></li>
+                                    <li><a class="dropdown-item" href="#">Flag</a></li>
+                                    <li><a class="dropdown-item" href="#">Report</a></li>
+                                </ul>
+                            </div>
+                            <div class="dropdown">
+                                <button class="btn btn-info dropdown-toggle" type="button" data-bs-toggle="dropdown">Info</button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Details</a></li>
+                                    <li><a class="dropdown-item" href="#">Help</a></li>
+                                    <li><a class="dropdown-item" href="#">About</a></li>
+                                </ul>
+                            </div>
+                            <div class="dropdown">
+                                <button class="btn btn-dark dropdown-toggle" type="button" data-bs-toggle="dropdown">Dark</button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                    <li><a class="dropdown-item" href="#">Something else</a></li>
+                                </ul>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-lg-12 col-md-12 col-sm-12 col-12">
-                    <div class="dropdown-list mg-t-30">
-                        <div class="dropdown-trig-hd">
-                            <h2>Toggle Animations</h2>
-                            <p>Toggle animations are relies on basic 3 attributes, Animations In, Animation Out and Animation Duration. Make sure to give these values in the data-animation data attribute.</p>
-                        </div>
-                        <div class="row">
-                            <div class="col-lg-12">
-                                <div class="dropdown-trig-an-list">
-                                    <div class="dropdown-trig-sgn">
-                                        <button class="btn triger-fadeIn" data-bs-toggle="dropdown">Fade In</button>
-                                        <ul class="dropdown-menu triger-fadeIn-dp">
-                                            <li><a href="#">Action</a></li>
-                                            <li><a href="#">Another action</a></li>
-                                            <li><a href="#">Something else here</a></li>
-                                            <li class="divider"></li>
-                                            <li><a href="#">Separated link</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="dropdown-trig-sgn">
-                                        <button class="btn triger-fadeInUp" data-bs-toggle="dropdown">fade In Up</button>
-                                        <ul class="dropdown-menu triger-fadeInUp-dp">
-                                            <li><a href="#">Action</a></li>
-                                            <li><a href="#">Another action</a></li>
-                                            <li><a href="#">Something else here</a></li>
-                                            <li class="divider"></li>
-                                            <li><a href="#">Separated link</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="dropdown-trig-sgn">
-                                        <button class="btn triger-fadeInLeft" data-bs-toggle="dropdown">fade In Left</button>
-                                        <ul class="dropdown-menu triger-fadeInLeft-dp">
-                                            <li><a href="#">Action</a></li>
-                                            <li><a href="#">Another action</a></li>
-                                            <li><a href="#">Something else here</a></li>
-                                            <li class="divider"></li>
-                                            <li><a href="#">Separated link</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="dropdown-trig-sgn">
-                                        <button class="btn triger-shake" data-bs-toggle="dropdown">shake</button>
-                                        <ul class="dropdown-menu triger-shake-dp">
-                                            <li><a href="#">Action</a></li>
-                                            <li><a href="#">Another action</a></li>
-                                            <li><a href="#">Something else here</a></li>
-                                            <li class="divider"></li>
-                                            <li><a href="#">Separated link</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="dropdown-trig-sgn">
-                                        <button class="btn triger-swing" data-bs-toggle="dropdown">swing</button>
-                                        <ul class="dropdown-menu triger-swing-dp">
-                                            <li><a href="#">Action</a></li>
-                                            <li><a href="#">Another action</a></li>
-                                            <li><a href="#">Something else here</a></li>
-                                            <li class="divider"></li>
-                                            <li><a href="#">Separated link</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="dropdown-trig-sgn">
-                                        <button class="btn triger-jello" data-bs-toggle="dropdown">jello</button>
-                                        <ul class="dropdown-menu triger-jello-dp">
-                                            <li><a href="#">Action</a></li>
-                                            <li><a href="#">Another action</a></li>
-                                            <li><a href="#">Something else here</a></li>
-                                            <li class="divider"></li>
-                                            <li><a href="#">Separated link</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="dropdown-trig-sgn">
-                                        <button class="btn triger-bounceIn" data-bs-toggle="dropdown">bounceIn</button>
-                                        <ul class="dropdown-menu triger-bounceIn-dp">
-                                            <li><a href="#">Action</a></li>
-                                            <li><a href="#">Another action</a></li>
-                                            <li><a href="#">Something else here</a></li>
-                                            <li class="divider"></li>
-                                            <li><a href="#">Separated link</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="dropdown-trig-sgn">
-                                        <button class="btn triger-bounceInUp" data-bs-toggle="dropdown">bounceInUp</button>
-                                        <ul class="dropdown-menu triger-bounceInUp-dp">
-                                            <li><a href="#">Action</a></li>
-                                            <li><a href="#">Another action</a></li>
-                                            <li><a href="#">Something else here</a></li>
-                                            <li class="divider"></li>
-                                            <li><a href="#">Separated link</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="dropdown-trig-sgn">
-                                        <button class="btn triger-flip" data-bs-toggle="dropdown">flip</button>
-                                        <ul class="dropdown-menu triger-flip-dp">
-                                            <li><a href="#">Action</a></li>
-                                            <li><a href="#">Another action</a></li>
-                                            <li><a href="#">Something else here</a></li>
-                                            <li class="divider"></li>
-                                            <li><a href="#">Separated link</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="dropdown-trig-sgn">
-                                        <button class="btn triger-flipInX" data-bs-toggle="dropdown">flipInX</button>
-                                        <ul class="dropdown-menu triger-flipInX-dp">
-                                            <li><a href="#">Action</a></li>
-                                            <li><a href="#">Another action</a></li>
-                                            <li><a href="#">Something else here</a></li>
-                                            <li class="divider"></li>
-                                            <li><a href="#">Separated link</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="dropdown-trig-sgn">
-                                        <button class="btn triger-flipInY" data-bs-toggle="dropdown">flipInY</button>
-                                        <ul class="dropdown-menu triger-flipInY-dp">
-                                            <li><a href="#">Action</a></li>
-                                            <li><a href="#">Another action</a></li>
-                                            <li><a href="#">Something else here</a></li>
-                                            <li class="divider"></li>
-                                            <li><a href="#">Separated link</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="dropdown-trig-sgn">
-                                        <button class="btn triger-rotateIn" data-bs-toggle="dropdown">rotateIn</button>
-                                        <ul class="dropdown-menu triger-rotateIn-dp">
-                                            <li><a href="#">Action</a></li>
-                                            <li><a href="#">Another action</a></li>
-                                            <li><a href="#">Something else here</a></li>
-                                            <li class="divider"></li>
-                                            <li><a href="#">Separated link</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="dropdown-trig-sgn">
-                                        <button class="btn triger-zoomIn" data-bs-toggle="dropdown">zoomIn</button>
-                                        <ul class="dropdown-menu triger-zoomIn-dp">
-                                            <li><a href="#">Action</a></li>
-                                            <li><a href="#">Another action</a></li>
-                                            <li><a href="#">Something else here</a></li>
-                                            <li class="divider"></li>
-                                            <li><a href="#">Separated link</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
+
+            <!-- Section 2: Split Button Dropdowns -->
+            <div class="row mt-4">
+                <div class="col-12">
+                    <div class="dd-demo-card">
+                        <h5 class="dd-demo-title">Split Button Dropdowns</h5>
+                        <p class="dd-demo-desc">Separate the toggle from the action with a split button group.</p>
+                        <div class="d-flex flex-wrap gap-2">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-primary">Actions</button>
+                                <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown">
+                                    <span class="visually-hidden">Toggle Dropdown</span>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Edit</a></li>
+                                    <li><a class="dropdown-item" href="#">Duplicate</a></li>
+                                    <li><hr class="dropdown-divider"></li>
+                                    <li><a class="dropdown-item text-danger" href="#">Delete</a></li>
+                                </ul>
+                            </div>
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-success">Export</button>
+                                <button type="button" class="btn btn-success dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown">
+                                    <span class="visually-hidden">Toggle Dropdown</span>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Export as PDF</a></li>
+                                    <li><a class="dropdown-item" href="#">Export as CSV</a></li>
+                                    <li><a class="dropdown-item" href="#">Export as Excel</a></li>
+                                </ul>
+                            </div>
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-outline-secondary">More</button>
+                                <button type="button" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown">
+                                    <span class="visually-hidden">Toggle Dropdown</span>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Share</a></li>
+                                    <li><a class="dropdown-item" href="#">Print</a></li>
+                                    <li><a class="dropdown-item" href="#">Download</a></li>
+                                </ul>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-lg-12 col-md-12 col-sm-12 col-12">
-                    <div class="dropdown-list mg-t-30">
-                        <div class="dropdown-trig-hd">
-                            <h2>Dropdown links with icon</h2>
-                            <p>Toggleable, contextual menu for displaying lists of links. Using notika custom icon here.</p>
-                        </div>
-                        <div class="row">
-                            <div class="col-lg-12">
-                                <div class="dropdown-trig-list">
-                                    <div class="dropdown-trig-sing">
-                                        <ul class="dropdown-menu" role="menu">
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#"><i class="fa-solid fa-house"></i> Action</a></li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#"><i class="fa-solid fa-star"></i> Another action</a>
-                                            </li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#"><i class="fa-solid fa-chevron-right"></i> Something else
-													here</a></li>
-                                            <li class="divider"></li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#"><i class="fa-solid fa-map"></i> Separated link</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="dropdown-trig-sing sm-res-mg-t-30">
-                                        <ul class="dropdown-menu nk-blue" role="menu">
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#"><i class="fa-solid fa-house"></i> Action</a></li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#"><i class="fa-solid fa-star"></i> Another action</a>
-                                            </li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#"><i class="fa-solid fa-chevron-right"></i> Something else
-													here</a></li>
-                                            <li class="divider"></li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#"><i class="fa-solid fa-map"></i> Separated link</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="dropdown-trig-sing sm-res-mg-t-30">
-                                        <ul class="dropdown-menu nk-light-blue" role="menu">
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#"><i class="fa-solid fa-house"></i> Action</a></li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#"><i class="fa-solid fa-star"></i> Another action</a>
-                                            </li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#"><i class="fa-solid fa-chevron-right"></i> Something else
-													here</a></li>
-                                            <li class="divider"></li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#"><i class="fa-solid fa-map"></i> Separated link</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="dropdown-trig-sing sm-res-mg-t-30 tb-res-mg-t-30">
-                                        <ul class="dropdown-menu nk-indigo" role="menu">
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#"><i class="fa-solid fa-house"></i> Action</a></li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#"><i class="fa-solid fa-star"></i> Another action</a>
-                                            </li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#"><i class="fa-solid fa-chevron-right"></i> Something else
-													here</a></li>
-                                            <li class="divider"></li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#"><i class="fa-solid fa-map"></i> Separated link</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="dropdown-trig-sing sm-res-mg-t-30 tb-res-mg-t-30 dk-res-mg-t-30">
-                                        <ul class="dropdown-menu nk-cyan" role="menu">
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#"><i class="fa-solid fa-house"></i> Action</a></li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#"><i class="fa-solid fa-star"></i> Another action</a>
-                                            </li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#"><i class="fa-solid fa-chevron-right"></i> Something else
-													here</a></li>
-                                            <li class="divider"></li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#"><i class="fa-solid fa-map"></i> Separated link</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
+
+            <!-- Section 3: Dropdown Directions -->
+            <div class="row mt-4">
+                <div class="col-12">
+                    <div class="dd-demo-card">
+                        <h5 class="dd-demo-title">Dropdown Directions</h5>
+                        <p class="dd-demo-desc">Control which direction the menu appears.</p>
+                        <div class="d-flex flex-wrap gap-2 align-items-center">
+                            <div class="dropdown">
+                                <button class="btn btn-outline-primary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                                    <i class="fa-solid fa-chevron-down me-1"></i> Dropdown
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                </ul>
                             </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-lg-12 col-md-12 col-sm-12 col-12">
-                                <div class="dropdown-trig-list">
-                                    <div class="dropdown-trig-sing mg-t-30">
-                                        <ul class="dropdown-menu nk-teal" role="menu">
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#"><i class="fa-solid fa-house"></i> Action</a></li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#"><i class="fa-solid fa-star"></i> Another action</a>
-                                            </li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#"><i class="fa-solid fa-chevron-right"></i> Something else
-													here</a></li>
-                                            <li class="divider"></li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#"><i class="fa-solid fa-map"></i> Separated link</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="dropdown-trig-sing mg-t-30">
-                                        <ul class="dropdown-menu nk-green" role="menu">
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#"><i class="fa-solid fa-house"></i> Action</a></li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#"><i class="fa-solid fa-star"></i> Another action</a>
-                                            </li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#"><i class="fa-solid fa-chevron-right"></i> Something else
-													here</a></li>
-                                            <li class="divider"></li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#"><i class="fa-solid fa-map"></i> Separated link</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="dropdown-trig-sing mg-t-30">
-                                        <ul class="dropdown-menu nk-lime" role="menu">
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#"><i class="fa-solid fa-house"></i> Action</a></li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#"><i class="fa-solid fa-star"></i> Another action</a>
-                                            </li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#"><i class="fa-solid fa-chevron-right"></i> Something else
-													here</a></li>
-                                            <li class="divider"></li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#"><i class="fa-solid fa-map"></i> Separated link</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="dropdown-trig-sing mg-t-30">
-                                        <ul class="dropdown-menu nk-amber" role="menu">
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#"><i class="fa-solid fa-house"></i> Action</a></li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#"><i class="fa-solid fa-star"></i> Another action</a>
-                                            </li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#"><i class="fa-solid fa-chevron-right"></i> Something else
-													here</a></li>
-                                            <li class="divider"></li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#"><i class="fa-solid fa-map"></i> Separated link</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="dropdown-trig-sing mg-t-30">
-                                        <ul class="dropdown-menu nk-brown" role="menu">
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#"><i class="fa-solid fa-house"></i> Action</a></li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#"><i class="fa-solid fa-star"></i> Another action</a>
-                                            </li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#"><i class="fa-solid fa-chevron-right"></i> Something else
-													here</a></li>
-                                            <li class="divider"></li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#"><i class="fa-solid fa-map"></i> Separated link</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
+                            <div class="dropup">
+                                <button class="btn btn-outline-primary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                                    <i class="fa-solid fa-chevron-up me-1"></i> Dropup
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                </ul>
+                            </div>
+                            <div class="dropend">
+                                <button class="btn btn-outline-primary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                                    Dropend <i class="fa-solid fa-chevron-right ms-1"></i>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                </ul>
+                            </div>
+                            <div class="dropstart">
+                                <button class="btn btn-outline-primary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                                    <i class="fa-solid fa-chevron-left me-1"></i> Dropstart
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                </ul>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+
+            <!-- Section 4: Sizing -->
+            <div class="row mt-4">
+                <div class="col-lg-6 col-12">
+                    <div class="dd-demo-card">
+                        <h5 class="dd-demo-title">Dropdown Sizes</h5>
+                        <p class="dd-demo-desc">Large, default, and small button sizes.</p>
+                        <div class="d-flex flex-wrap gap-2 align-items-center">
+                            <div class="dropdown">
+                                <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" data-bs-toggle="dropdown">Large</button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                </ul>
+                            </div>
+                            <div class="dropdown">
+                                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">Default</button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                </ul>
+                            </div>
+                            <div class="dropdown">
+                                <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown">Small</button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section 5: Auto Close Behavior -->
+                <div class="col-lg-6 col-12 mt-4 mt-lg-0">
+                    <div class="dd-demo-card">
+                        <h5 class="dd-demo-title">Auto Close Behavior</h5>
+                        <p class="dd-demo-desc">Control when the dropdown closes.</p>
+                        <div class="d-flex flex-wrap gap-2">
+                            <div class="dropdown">
+                                <button class="btn btn-outline-dark dropdown-toggle" type="button" data-bs-toggle="dropdown" data-bs-auto-close="true">Default</button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Closes on click anywhere</a></li>
+                                    <li><a class="dropdown-item" href="#">This is the default</a></li>
+                                </ul>
+                            </div>
+                            <div class="dropdown">
+                                <button class="btn btn-outline-dark dropdown-toggle" type="button" data-bs-toggle="dropdown" data-bs-auto-close="inside">Inside</button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Click inside to close</a></li>
+                                    <li><a class="dropdown-item" href="#">Outside click won't close</a></li>
+                                </ul>
+                            </div>
+                            <div class="dropdown">
+                                <button class="btn btn-outline-dark dropdown-toggle" type="button" data-bs-toggle="dropdown" data-bs-auto-close="outside">Outside</button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Click outside to close</a></li>
+                                    <li><a class="dropdown-item" href="#">Inside click won't close</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 6: Menu Content Features -->
+            <div class="row mt-4">
+                <div class="col-lg-6 col-12">
+                    <div class="dd-demo-card">
+                        <h5 class="dd-demo-title">Rich Menu Content</h5>
+                        <p class="dd-demo-desc">Headers, dividers, icons, disabled and active states.</p>
+                        <div class="d-flex flex-wrap gap-2">
+                            <div class="dropdown">
+                                <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                                    <i class="fa-solid fa-gear me-1"></i> Options
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><h6 class="dropdown-header">Account</h6></li>
+                                    <li><a class="dropdown-item" href="#"><i class="fa-solid fa-user me-2"></i>Profile</a></li>
+                                    <li><a class="dropdown-item" href="#"><i class="fa-solid fa-gear me-2"></i>Settings</a></li>
+                                    <li><a class="dropdown-item" href="#"><i class="fa-solid fa-bell me-2"></i>Notifications <span class="badge bg-danger ms-auto">3</span></a></li>
+                                    <li><hr class="dropdown-divider"></li>
+                                    <li><h6 class="dropdown-header">Actions</h6></li>
+                                    <li><a class="dropdown-item active" href="#"><i class="fa-solid fa-circle-check me-2"></i>Active item</a></li>
+                                    <li><a class="dropdown-item disabled" href="#"><i class="fa-solid fa-ban me-2"></i>Disabled item</a></li>
+                                    <li><hr class="dropdown-divider"></li>
+                                    <li><a class="dropdown-item text-danger" href="#"><i class="fa-solid fa-arrow-right-from-bracket me-2"></i>Sign out</a></li>
+                                </ul>
+                            </div>
+                            <div class="dropdown">
+                                <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                                    <i class="fa-solid fa-share-nodes me-1"></i> Share
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#"><i class="fa-solid fa-envelope me-2"></i>Email</a></li>
+                                    <li><a class="dropdown-item" href="#"><i class="fa-solid fa-link me-2"></i>Copy link</a></li>
+                                    <li><hr class="dropdown-divider"></li>
+                                    <li><span class="dropdown-item-text text-muted small">Or share via social</span></li>
+                                    <li><a class="dropdown-item" href="#"><i class="fa-brands fa-x-twitter me-2"></i>X (Twitter)</a></li>
+                                    <li><a class="dropdown-item" href="#"><i class="fa-brands fa-linkedin me-2"></i>LinkedIn</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section 7: Dark & Aligned Dropdowns -->
+                <div class="col-lg-6 col-12 mt-4 mt-lg-0">
+                    <div class="dd-demo-card">
+                        <h5 class="dd-demo-title">Dark & Alignment</h5>
+                        <p class="dd-demo-desc">Dark theme menu and end-aligned positioning.</p>
+                        <div class="d-flex flex-wrap gap-2">
+                            <div class="dropdown">
+                                <button class="btn btn-dark dropdown-toggle" type="button" data-bs-toggle="dropdown">Dark Menu</button>
+                                <ul class="dropdown-menu dropdown-menu-dark">
+                                    <li><a class="dropdown-item" href="#">Dashboard</a></li>
+                                    <li><a class="dropdown-item" href="#">Settings</a></li>
+                                    <li><hr class="dropdown-divider"></li>
+                                    <li><a class="dropdown-item" href="#">Sign out</a></li>
+                                </ul>
+                            </div>
+                            <div class="dropdown">
+                                <button class="btn btn-outline-dark dropdown-toggle" type="button" data-bs-toggle="dropdown">End-Aligned</button>
+                                <ul class="dropdown-menu dropdown-menu-end">
+                                    <li><a class="dropdown-item" href="#">This menu</a></li>
+                                    <li><a class="dropdown-item" href="#">aligns to the end</a></li>
+                                    <li><a class="dropdown-item" href="#">of the button</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 8: Form Dropdown & Text -->
+            <div class="row mt-4">
+                <div class="col-lg-6 col-12">
+                    <div class="dd-demo-card">
+                        <h5 class="dd-demo-title">Form in Dropdown</h5>
+                        <p class="dd-demo-desc">Embed a login form inside a dropdown menu.</p>
+                        <div class="dropdown">
+                            <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" data-bs-auto-close="outside">
+                                <i class="fa-solid fa-arrow-right-to-bracket me-1"></i> Sign in
+                            </button>
+                            <div class="dropdown-menu p-4" style="min-width: 280px;">
+                                <form>
+                                    <div class="mb-3">
+                                        <label class="form-label">Email address</label>
+                                        <input type="email" class="form-control form-control-sm" placeholder="email@example.com">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label">Password</label>
+                                        <input type="password" class="form-control form-control-sm" placeholder="Password">
+                                    </div>
+                                    <div class="form-check mb-3">
+                                        <input type="checkbox" class="form-check-input" id="ddRemember">
+                                        <label class="form-check-label" for="ddRemember">Remember me</label>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary btn-sm w-100">Sign in</button>
+                                </form>
+                                <div class="dropdown-divider mt-3"></div>
+                                <a class="small" href="#">Forgot password?</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section 9: Text & Notification Menu -->
+                <div class="col-lg-6 col-12 mt-4 mt-lg-0">
+                    <div class="dd-demo-card">
+                        <h5 class="dd-demo-title">Notification Menu</h5>
+                        <p class="dd-demo-desc">A styled dropdown mimicking notification panels.</p>
+                        <div class="dropdown">
+                            <button class="btn btn-outline-primary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                                <i class="fa-solid fa-bell me-1"></i> Notifications
+                                <span class="badge bg-danger ms-1">4</span>
+                            </button>
+                            <ul class="dropdown-menu" style="min-width: 300px;">
+                                <li><h6 class="dropdown-header">Recent Notifications</h6></li>
+                                <li>
+                                    <a class="dropdown-item d-flex align-items-start gap-2 py-2" href="#">
+                                        <span class="dd-notif-dot bg-success"></span>
+                                        <div>
+                                            <strong class="small">Build Passed</strong>
+                                            <div class="text-muted small">Production deploy completed</div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item d-flex align-items-start gap-2 py-2" href="#">
+                                        <span class="dd-notif-dot bg-warning"></span>
+                                        <div>
+                                            <strong class="small">High CPU Usage</strong>
+                                            <div class="text-muted small">Server #3 at 92% capacity</div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item d-flex align-items-start gap-2 py-2" href="#">
+                                        <span class="dd-notif-dot bg-info"></span>
+                                        <div>
+                                            <strong class="small">New Comment</strong>
+                                            <div class="text-muted small">Sarah replied to your review</div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item d-flex align-items-start gap-2 py-2" href="#">
+                                        <span class="dd-notif-dot bg-danger"></span>
+                                        <div>
+                                            <strong class="small">Payment Failed</strong>
+                                            <div class="text-muted small">Invoice #1042 requires attention</div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item text-center small text-primary" href="#">View all notifications</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
     <!-- Dropdown area End-->

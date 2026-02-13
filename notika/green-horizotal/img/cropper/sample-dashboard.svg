@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 635">
+  <defs>
+    <linearGradient id="cbg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="1000" height="635" fill="url(#cbg)"/>
+  <!-- Dashboard mockup -->
+  <rect x="40" y="30" width="920" height="575" rx="16" fill="white" opacity="0.95"/>
+  <!-- Header bar -->
+  <rect x="40" y="30" width="920" height="60" rx="16" fill="#f8f9fa"/>
+  <rect x="56" y="30" width="920" height="60" fill="#f8f9fa"/>
+  <rect x="940" y="30" width="20" height="60" rx="16" fill="#f8f9fa"/>
+  <circle cx="80" cy="60" r="14" fill="#00c292"/>
+  <rect x="105" y="52" width="80" height="8" rx="4" fill="#00c292" opacity="0.6"/>
+  <rect x="105" y="64" width="50" height="5" rx="2.5" fill="#ccc"/>
+  <!-- Nav items -->
+  <rect x="700" y="50" width="50" height="8" rx="4" fill="#666"/>
+  <rect x="770" y="50" width="60" height="8" rx="4" fill="#666"/>
+  <rect x="850" y="50" width="45" height="8" rx="4" fill="#666"/>
+  <circle cx="930" cy="55" r="15" fill="#e0e0e0"/>
+  <!-- Stat cards row -->
+  <rect x="70" y="115" width="200" height="100" rx="12" fill="white" stroke="#e9ecef" stroke-width="1"/>
+  <rect x="90" y="135" width="60" height="6" rx="3" fill="#00c292"/>
+  <text x="90" y="170" font-family="sans-serif" font-size="28" font-weight="700" fill="#333">$48.2K</text>
+  <rect x="90" y="185" width="80" height="5" rx="2.5" fill="#ccc"/>
+  <rect x="295" y="115" width="200" height="100" rx="12" fill="white" stroke="#e9ecef" stroke-width="1"/>
+  <rect x="315" y="135" width="60" height="6" rx="3" fill="#03a9f3"/>
+  <text x="315" y="170" font-family="sans-serif" font-size="28" font-weight="700" fill="#333">12,847</text>
+  <rect x="315" y="185" width="80" height="5" rx="2.5" fill="#ccc"/>
+  <rect x="520" y="115" width="200" height="100" rx="12" fill="white" stroke="#e9ecef" stroke-width="1"/>
+  <rect x="540" y="135" width="60" height="6" rx="3" fill="#ffc107"/>
+  <text x="540" y="170" font-family="sans-serif" font-size="28" font-weight="700" fill="#333">94.3%</text>
+  <rect x="540" y="185" width="80" height="5" rx="2.5" fill="#ccc"/>
+  <rect x="745" y="115" width="200" height="100" rx="12" fill="white" stroke="#e9ecef" stroke-width="1"/>
+  <rect x="765" y="135" width="60" height="6" rx="3" fill="#e91e63"/>
+  <text x="765" y="170" font-family="sans-serif" font-size="28" font-weight="700" fill="#333">1.2s</text>
+  <rect x="765" y="185" width="80" height="5" rx="2.5" fill="#ccc"/>
+  <!-- Chart area -->
+  <rect x="70" y="240" width="580" height="340" rx="12" fill="white" stroke="#e9ecef" stroke-width="1"/>
+  <rect x="90" y="260" width="100" height="8" rx="4" fill="#333"/>
+  <rect x="90" y="275" width="60" height="5" rx="2.5" fill="#ccc"/>
+  <!-- Chart line -->
+  <polyline points="100,500 160,460 220,480 280,420 340,440 400,380 460,350 520,370 580,320 620,340"
+    stroke="#00c292" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <polygon points="100,500 160,460 220,480 280,420 340,440 400,380 460,350 520,370 580,320 620,340 620,540 100,540"
+    fill="#00c292" opacity="0.08"/>
+  <!-- Sidebar cards -->
+  <rect x="680" y="240" width="265" height="160" rx="12" fill="white" stroke="#e9ecef" stroke-width="1"/>
+  <circle cx="810" cy="320" r="50" fill="none" stroke="#03a9f3" stroke-width="10" stroke-dasharray="200 115" opacity="0.8"/>
+  <circle cx="810" cy="320" r="50" fill="none" stroke="#ffc107" stroke-width="10" stroke-dasharray="60 255" stroke-dashoffset="-200" opacity="0.8"/>
+  <text x="810" y="327" font-family="sans-serif" font-size="18" font-weight="700" fill="#333" text-anchor="middle">64%</text>
+  <rect x="680" y="420" width="265" height="160" rx="12" fill="white" stroke="#e9ecef" stroke-width="1"/>
+  <rect x="700" y="440" width="100" height="6" rx="3" fill="#333"/>
+  <!-- List items -->
+  <rect x="700" y="465" width="225" height="30" rx="6" fill="#f8f9fa"/>
+  <rect x="700" y="502" width="225" height="30" rx="6" fill="#f8f9fa"/>
+  <rect x="700" y="539" width="225" height="30" rx="6" fill="#f8f9fa"/>
+</svg>

@@ -326,7 +326,6 @@
  
 /* small mobile :320px. */
 @media (max-width: 767px) {
-	.container {width:300px}
 	.main-menu-area{
 		display:none;
 	}
@@ -640,7 +639,6 @@
  
 /* Large Mobile :480px. */
 @media only screen and (min-width: 480px) and (max-width: 767px) {
-	.container {width:450px}
 	.main-menu-area{
 		display:none;
 	}

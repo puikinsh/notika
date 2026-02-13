@@ -72,7 +72,27 @@ export default defineConfig({
         'data-table': resolve(process.cwd(), 'notika/green-horizotal/data-table.html'),
         tabs: resolve(process.cwd(), 'notika/green-horizotal/tabs.html'),
         'tabs-hbs': resolve(process.cwd(), 'notika/green-horizotal/tabs-hbs.html'),
-        animations: resolve(process.cwd(), 'notika/green-horizotal/animations.html')
+        animations: resolve(process.cwd(), 'notika/green-horizotal/animations.html'),
+        'google-map': resolve(process.cwd(), 'notika/green-horizotal/google-map.html'),
+        'data-map': resolve(process.cwd(), 'notika/green-horizotal/data-map.html'),
+        'code-editor': resolve(process.cwd(), 'notika/green-horizotal/code-editor.html'),
+        'image-cropper': resolve(process.cwd(), 'notika/green-horizotal/image-cropper.html'),
+        wizard: resolve(process.cwd(), 'notika/green-horizotal/wizard.html'),
+        'flot-charts': resolve(process.cwd(), 'notika/green-horizotal/flot-charts.html'),
+        accordion: resolve(process.cwd(), 'notika/green-horizotal/accordion.html'),
+        alert: resolve(process.cwd(), 'notika/green-horizotal/alert.html'),
+        'compose-email': resolve(process.cwd(), 'notika/green-horizotal/compose-email.html'),
+        contact: resolve(process.cwd(), 'notika/green-horizotal/contact.html'),
+        dialog: resolve(process.cwd(), 'notika/green-horizotal/dialog.html'),
+        dropdown: resolve(process.cwd(), 'notika/green-horizotal/dropdown.html'),
+        inbox: resolve(process.cwd(), 'notika/green-horizotal/inbox.html'),
+        invoice: resolve(process.cwd(), 'notika/green-horizotal/invoice.html'),
+        'login-register': resolve(process.cwd(), 'notika/green-horizotal/login-register.html'),
+        'normal-table': resolve(process.cwd(), 'notika/green-horizotal/normal-table.html'),
+        popovers: resolve(process.cwd(), 'notika/green-horizotal/popovers.html'),
+        tooltips: resolve(process.cwd(), 'notika/green-horizotal/tooltips.html'),
+        'view-email': resolve(process.cwd(), 'notika/green-horizotal/view-email.html'),
+        '404': resolve(process.cwd(), 'notika/green-horizotal/404.html')
       },
       output: {
         manualChunks: {

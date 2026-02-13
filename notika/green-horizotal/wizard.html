@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-page-module="wizard">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -14,10 +14,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-
-    <!-- Mobile Menu CSS -->
-    <link rel="stylesheet" href="css/mobile-menu.css">
-
     <!-- Font Awesome and all other CSS imported via Vite -->
     <!-- ONLY Vite entry point - everything else bundled -->
 </head>
@@ -564,69 +560,212 @@
             <div class="row">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-12">
                     <div class="wizard-wrap-int">
-                        <div class="wizard-hd">
-                            <h2>Wizard</h2>
-                            <p>This twitter bootstrap plugin builds a wizard out of a formatter tabable structure. It allows to build a wizard functionality using buttons to go through the different wizard steps and using events allows to hook into each
-                                step individually.</p>
-                        </div>
-                        <div id="rootwizard">
-                            <div class="navbar">
-                                <div class="navbar-inner">
-                                    <div class="container-pro wizard-cts-st">
-                                        <ul>
-                                            <li><a href="#tab1" data-bs-toggle="tab">First</a></li>
-                                            <li><a href="#tab2" data-bs-toggle="tab">Second</a></li>
-                                            <li><a href="#tab3" data-bs-toggle="tab">Third</a></li>
-                                            <li><a href="#tab4" data-bs-toggle="tab">Forth</a></li>
-                                            <li><a href="#tab5" data-bs-toggle="tab">Fifth</a></li>
-                                            <li><a href="#tab6" data-bs-toggle="tab">Sixth</a></li>
-                                            <li><a href="#tab7" data-bs-toggle="tab">Seventh</a></li>
-                                        </ul>
+                        <div id="rootwizard" class="wz">
+                            <!-- Step indicator -->
+                            <div class="wz-steps">
+                                <div class="wz-step active" data-step="0">
+                                    <div class="wz-step-circle">1</div>
+                                    <div class="wz-step-label">Account</div>
+                                </div>
+                                <div class="wz-step" data-step="1">
+                                    <div class="wz-step-circle">2</div>
+                                    <div class="wz-step-label">Profile</div>
+                                </div>
+                                <div class="wz-step" data-step="2">
+                                    <div class="wz-step-circle">3</div>
+                                    <div class="wz-step-label">Settings</div>
+                                </div>
+                                <div class="wz-step" data-step="3">
+                                    <div class="wz-step-circle">4</div>
+                                    <div class="wz-step-label">Confirm</div>
+                                </div>
+                            </div>
+
+                            <!-- Progress bar -->
+                            <div class="wz-progress">
+                                <div class="wz-progress-bar"></div>
+                            </div>
+
+                            <!-- Step panels -->
+                            <div class="wz-panels">
+                                <!-- Step 1: Account -->
+                                <div class="wz-panel active" id="wz-panel-0">
+                                    <h5 class="wz-panel-title">Account Information</h5>
+                                    <p class="wz-panel-desc">Enter your account credentials to get started.</p>
+                                    <div class="row g-3">
+                                        <div class="col-md-6">
+                                            <label class="form-label">First Name</label>
+                                            <input type="text" class="form-control" placeholder="John">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="form-label">Last Name</label>
+                                            <input type="text" class="form-control" placeholder="Doe">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="form-label">Email Address</label>
+                                            <input type="email" class="form-control" placeholder="john@example.com">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="form-label">Username</label>
+                                            <input type="text" class="form-control" placeholder="johndoe">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="form-label">Password</label>
+                                            <input type="password" class="form-control" placeholder="Create a password">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="form-label">Confirm Password</label>
+                                            <input type="password" class="form-control" placeholder="Repeat password">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Step 2: Profile -->
+                                <div class="wz-panel" id="wz-panel-1">
+                                    <h5 class="wz-panel-title">Profile Details</h5>
+                                    <p class="wz-panel-desc">Tell us a bit more about yourself.</p>
+                                    <div class="row g-3">
+                                        <div class="col-md-6">
+                                            <label class="form-label">Phone Number</label>
+                                            <input type="tel" class="form-control" placeholder="+1 (555) 123-4567">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="form-label">Date of Birth</label>
+                                            <input type="date" class="form-control">
+                                        </div>
+                                        <div class="col-12">
+                                            <label class="form-label">Address</label>
+                                            <input type="text" class="form-control" placeholder="123 Main Street">
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label class="form-label">City</label>
+                                            <input type="text" class="form-control" placeholder="New York">
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label class="form-label">State</label>
+                                            <input type="text" class="form-control" placeholder="NY">
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label class="form-label">Zip Code</label>
+                                            <input type="text" class="form-control" placeholder="10001">
+                                        </div>
+                                        <div class="col-12">
+                                            <label class="form-label">Bio</label>
+                                            <textarea class="form-control" rows="3" placeholder="A short description about yourself..."></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Step 3: Settings -->
+                                <div class="wz-panel" id="wz-panel-2">
+                                    <h5 class="wz-panel-title">Preferences</h5>
+                                    <p class="wz-panel-desc">Customize your experience with these options.</p>
+                                    <div class="row g-3">
+                                        <div class="col-md-6">
+                                            <label class="form-label">Language</label>
+                                            <select class="form-select">
+                                                <option selected>English</option>
+                                                <option>Spanish</option>
+                                                <option>French</option>
+                                                <option>German</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="form-label">Timezone</label>
+                                            <select class="form-select">
+                                                <option selected>UTC-05:00 Eastern</option>
+                                                <option>UTC-06:00 Central</option>
+                                                <option>UTC-07:00 Mountain</option>
+                                                <option>UTC-08:00 Pacific</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-12">
+                                            <label class="form-label d-block mb-2">Notifications</label>
+                                            <div class="form-check mb-2">
+                                                <input class="form-check-input" type="checkbox" id="notifEmail" checked>
+                                                <label class="form-check-label" for="notifEmail">Email notifications</label>
+                                            </div>
+                                            <div class="form-check mb-2">
+                                                <input class="form-check-input" type="checkbox" id="notifSms">
+                                                <label class="form-check-label" for="notifSms">SMS notifications</label>
+                                            </div>
+                                            <div class="form-check mb-2">
+                                                <input class="form-check-input" type="checkbox" id="notifPush" checked>
+                                                <label class="form-check-label" for="notifPush">Push notifications</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <label class="form-label d-block mb-2">Privacy</label>
+                                            <div class="form-check form-switch mb-2">
+                                                <input class="form-check-input" type="checkbox" id="privProfile" checked>
+                                                <label class="form-check-label" for="privProfile">Public profile</label>
+                                            </div>
+                                            <div class="form-check form-switch mb-2">
+                                                <input class="form-check-input" type="checkbox" id="privActivity">
+                                                <label class="form-check-label" for="privActivity">Show activity status</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Step 4: Confirm -->
+                                <div class="wz-panel" id="wz-panel-3">
+                                    <h5 class="wz-panel-title">Review & Confirm</h5>
+                                    <p class="wz-panel-desc">Review your information before submitting.</p>
+                                    <div class="wz-review">
+                                        <div class="wz-review-section">
+                                            <h6><i class="fa-solid fa-user me-2"></i>Account</h6>
+                                            <div class="wz-review-row">
+                                                <span class="wz-review-label">Name</span>
+                                                <span class="wz-review-value" data-review="name">Not provided</span>
+                                            </div>
+                                            <div class="wz-review-row">
+                                                <span class="wz-review-label">Email</span>
+                                                <span class="wz-review-value" data-review="email">Not provided</span>
+                                            </div>
+                                            <div class="wz-review-row">
+                                                <span class="wz-review-label">Username</span>
+                                                <span class="wz-review-value" data-review="username">Not provided</span>
+                                            </div>
+                                        </div>
+                                        <div class="wz-review-section">
+                                            <h6><i class="fa-solid fa-id-card me-2"></i>Profile</h6>
+                                            <div class="wz-review-row">
+                                                <span class="wz-review-label">Phone</span>
+                                                <span class="wz-review-value" data-review="phone">Not provided</span>
+                                            </div>
+                                            <div class="wz-review-row">
+                                                <span class="wz-review-label">Location</span>
+                                                <span class="wz-review-value" data-review="location">Not provided</span>
+                                            </div>
+                                        </div>
+                                        <div class="wz-review-section">
+                                            <h6><i class="fa-solid fa-gear me-2"></i>Settings</h6>
+                                            <div class="wz-review-row">
+                                                <span class="wz-review-label">Language</span>
+                                                <span class="wz-review-value" data-review="language">English</span>
+                                            </div>
+                                            <div class="wz-review-row">
+                                                <span class="wz-review-label">Notifications</span>
+                                                <span class="wz-review-value" data-review="notifications">Email, Push</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-check mt-3">
+                                        <input class="form-check-input" type="checkbox" id="termsAgree">
+                                        <label class="form-check-label" for="termsAgree">I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></label>
                                     </div>
                                 </div>
                             </div>
-                            <div class="tab-content">
-                                <div class="tab-pane wizard-ctn" id="tab1">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus purus sapien, cursus et egestas at, volutpat sed dolor. Aliquam sollicitudin dui ac euismod hendrerit. Phasellus quis lobortis dolor. Sed massa massa, sagittis nec fermentum eu, volutpat non lectus. Nullam vitae tristique nunc. Aenean vel placerat augue. Aliquam pharetra mauris neque, sitan amet egestas risus semper non. Proin egestas egestas ex sed gravida. Suspendisse commodo nisl sit amet risus volutpat volutpat. Phasellus vitae turpis a elit tinciduntansan ornare. Praesent non libero quis libero scelerisque eleifend. Ut eleifend laoreet vulputate.</p>
-                                    <p class="wizard-mg-ctn">Duis eu eros vitae risus sollicitudin blandit in non nisi. Phasellus rhoncus ullamcorper pretium. Etiam et viverra neque, aliquam imperdiet velit. Nam a scelerisque justo, id tristique diam. Aenean ut vestibulum velit, vel ornare augue. Nullam eu est malesuada, vehicula ex in, maximus massa. Sed sit amet massa venenatis, tristique orci sed, eleifend arcu.</p>
-                                </div>
-                                <div class="tab-pane wizard-ctn" id="tab2">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus purus sapien, cursus et egestas at, volutpat sed dolor. Aliquam sollicitudin dui ac euismod hendrerit. Phasellus quis lobortis dolor. Sed massa massa, sagittis nec fermentum eu, volutpat non lectus. Nullam vitae tristique nunc. Aenean vel placerat augue. Aliquam pharetra mauris neque, sitan amet egestas risus semper non. Proin egestas egestas ex sed gravida. Suspendisse commodo nisl sit amet risus volutpat volutpat. Phasellus vitae turpis a elit tinciduntansan ornare. Praesent non libero quis libero scelerisque eleifend. Ut eleifend laoreet vulputate.</p>
-                                    <p class="wizard-mg-ctn">Duis eu eros vitae risus sollicitudin blandit in non nisi. Phasellus rhoncus ullamcorper pretium. Etiam et viverra neque, aliquam imperdiet velit. Nam a scelerisque justo, id tristique diam. Aenean ut vestibulum velit,
-                                        vel ornare augue. Nullam eu est malesuada.</p>
-                                </div>
-                                <div class="tab-pane wizard-ctn" id="tab3">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus purus sapien, cursus et egestas at, volutpat sed dolor. Aliquam sollicitudin dui ac euismod hendrerit. Phasellus quis lobortis dolor. Sed massa massa, sagittis nec fermentum eu, volutpat non lectus. Nullam vitae tristique nunc. Aenean vel placerat augue. Aliquam pharetra mauris neque, sitan amet egestas risus semper non. Proin egestas egestas ex sed gravida. Suspendisse commodo nisl sit amet risus volutpat volutpat. Phasellus vitae turpis a elit tinciduntansan ornare. Praesent non libero quis libero scelerisque eleifend. Ut eleifend laoreet vulputate.</p>
-                                    <p class="wizard-mg-ctn">Duis eu eros vitae risus sollicitudin blandit in non nisi. Phasellus rhoncus ullamcorper pretium. Etiam et viverra neque, aliquam imperdiet velit. Nam a scelerisque justo, id tristique diam. Aenean ut vestibulum velit,
-                                        vel ornare augue. Nullam eu est malesuada, vehicula ex in, maximus massa. Sed sit amet massa venenatis, tristique orci sed, eleifend arcu.</p>
-                                </div>
-                                <div class="tab-pane wizard-ctn" id="tab4">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus purus sapien, cursus et egestas at, volutpat sed dolor. Aliquam sollicitudin dui ac euismod hendrerit. Phasellus quis lobortis dolor. Sed massa massa, sagittis nec fermentum eu, volutpat non lectus. Nullam vitae tristique nunc. Aenean vel placerat augue. Aliquam pharetra mauris neque, sitan amet egestas risus semper non. Proin egestas egestas ex sed gravida. Suspendisse commodo nisl sit amet risus volutpat volutpat. Phasellus vitae turpis a elit tinciduntansan ornare. Praesent non libero quis libero scelerisque eleifend. Ut eleifend laoreet vulputate.</p>
-                                    <p class="wizard-mg-ctn">Duis eu eros vitae risus sollicitudin blandit in non nisi. Phasellus rhoncus ullamcorper pretium. Etiam et viverra neque, aliquam imperdiet velit. Nam a scelerisque justo, id tristique diam. Aenean ut vestibulum velit,
-                                        vel ornare augue. Nullam eu est malesuada, vehicula ex in, maximus massa. Sed sit amet massa venenatis, tristique orci sed, eleifend arcu.</p>
-                                </div>
-                                <div class="tab-pane wizard-ctn" id="tab5">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus purus sapien, cursus et egestas at, volutpat sed dolor. Aliquam sollicitudin dui ac euismod hendrerit. Phasellus quis lobortis dolor. Sed massa massa, sagittis nec fermentum eu, volutpat non lectus. Nullam vitae tristique nunc. Aenean vel placerat augue. Aliquam pharetra mauris neque, sitan amet egestas risus semper non. Proin egestas egestas ex sed gravida. Suspendisse commodo nisl sit amet risus volutpat volutpat. Phasellus vitae turpis a elit tinciduntansan ornare. Praesent non libero quis libero scelerisque eleifend. Ut eleifend laoreet vulputate.</p>
-                                    <p class="wizard-mg-ctn">Duis eu eros vitae risus sollicitudin blandit in non nisi. Phasellus rhoncus ullamcorper pretium. Etiam et viverra neque, aliquam imperdiet velit. Nam a scelerisque justo, id tristique diam. Aenean ut vestibulum velit,
-                                        vel ornare augue. Nullam eu est malesuada, vehicula ex in, maximus massa. Sed sit amet massa venenatis, tristique orci sed, eleifend arcu.</p>
-                                </div>
-                                <div class="tab-pane wizard-ctn" id="tab6">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus purus sapien, cursus et egestas at, volutpat sed dolor. Aliquam sollicitudin dui ac euismod hendrerit. Phasellus quis lobortis dolor. Sed massa massa, sagittis nec fermentum eu, volutpat non lectus. Nullam vitae tristique nunc. Aenean vel placerat augue. Aliquam pharetra mauris neque, sitan amet egestas risus semper non. Proin egestas egestas ex sed gravida. Suspendisse commodo nisl sit amet risus volutpat volutpat. Phasellus vitae turpis a elit tinciduntansan ornare. Praesent non libero quis libero scelerisque eleifend. Ut eleifend laoreet vulputate.</p>
-                                    <p class="wizard-mg-ctn">Duis eu eros vitae risus sollicitudin blandit in non nisi. Phasellus rhoncus ullamcorper pretium. Etiam et viverra neque, aliquam imperdiet velit. Nam a scelerisque justo, id tristique diam. Aenean ut vestibulum velit.</p>
-                                </div>
-                                <div class="tab-pane wizard-ctn" id="tab7">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus purus sapien, cursus et egestas at, volutpat sed dolor. Aliquam sollicitudin dui ac euismod hendrerit. Phasellus quis lobortis dolor. Sed massa massa, sagittis nec fermentum eu, volutpat non lectus. Nullam vitae tristique nunc. Aenean vel placerat augue. Aliquam pharetra mauris neque, sitan amet egestas risus semper non. Proin egestas egestas ex sed gravida. Suspendisse commodo nisl sit amet risus volutpat volutpat. Phasellus vitae turpis a elit tinciduntansan ornare. Praesent non libero quis libero scelerisque eleifend. Ut eleifend laoreet vulputate.</p>
-                                    <p class="wizard-mg-ctn">Duis eu eros vitae risus sollicitudin blandit in non nisi. Phasellus rhoncus ullamcorper pretium. Etiam et viverra neque, aliquam imperdiet velit. Nam a scelerisque justo, id tristique diam. Aenean ut vestibulum velit,
-                                        vel ornare augue. Nullam eu est malesuada, vehicula ex in, maximus massa. Sed sit amet massa venenatis, tristique orci sed, eleifend arcu.</p>
-                                </div>
-                                <div class="wizard-action-pro">
-                                    <ul class="wizard-nav-ac">
-                                        <li><a class="button-first a-prevent" href="#"><i class="fa-solid fa-ellipsis"></i></a></li>
-                                        <li><a class="button-previous a-prevent" href="#"><i class="fa-solid fa-arrow-left"></i></a></li>
-                                        <li><a class="button-next a-prevent" href="#"><i class="fa-solid fa-angles-right"></i></a></li>
-                                        <li><a class="button-last a-prevent" href="#"><i class="fa-solid fa-ellipsis"></i></a></li>
-                                    </ul>
-                                </div>
+
+                            <!-- Navigation buttons -->
+                            <div class="wz-nav">
+                                <button type="button" class="btn btn-outline-secondary wz-btn-prev" disabled>
+                                    <i class="fa-solid fa-arrow-left me-2"></i>Previous
+                                </button>
+                                <button type="button" class="btn wz-btn-next">
+                                    Next<i class="fa-solid fa-arrow-right ms-2"></i>
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -653,7 +792,7 @@
     <!-- End Footer area-->
 
     <!-- ONLY VITE ENTRY POINT - Everything else bundled by Vite -->
-    <script type="module" src="/src/js/main.js"></script>
+    <script type="module" src="/src/js/pages/wizard.js"></script>
 
     <!-- Clean Navigation JavaScript -->
     <script>

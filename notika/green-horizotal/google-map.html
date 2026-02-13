@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-page-module="google-map">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -14,10 +14,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-
-    <!-- Mobile Menu CSS -->
-    <link rel="stylesheet" href="css/mobile-menu.css">
-
     <!-- Font Awesome and all other CSS imported via Vite -->
     <!-- ONLY Vite entry point - everything else bundled -->
 </head>
@@ -540,7 +536,7 @@
                                         <i class="fa-solid fa-pen-to-square"></i>
                                     </div>
                                     <div class="breadcomb-ctn">
-                                        <h2>Google Map</h2>
+                                        <h2>Interactive Maps</h2>
                                         <p>Welcome to Notika <span class="bread-ntd">Admin Template</span></p>
                                     </div>
                                 </div>
@@ -563,25 +559,29 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 col-md-6 col-sm-6 col-12">
-                    <div class="google-map-single">
-                        <div id="map2"></div>
+                    <div class="notika-shadow mg-t-30" style="border-radius:8px;overflow:hidden;">
+                        <div style="padding:15px 20px;background:#fff;"><h5 style="margin:0;font-size:16px;font-weight:600;">Street Map — London</h5><p style="margin:4px 0 0;font-size:13px;color:#666;">OpenStreetMap tiles with markers</p></div>
+                        <div id="map2" style="height:300px;"></div>
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-6 col-12">
-                    <div class="google-map-single sm-res-mg-t-30">
-                        <div id="googleMap"></div>
+                    <div class="notika-shadow mg-t-30" style="border-radius:8px;overflow:hidden;">
+                        <div style="padding:15px 20px;background:#fff;"><h5 style="margin:0;font-size:16px;font-weight:600;">Satellite View — Paris</h5><p style="margin:4px 0 0;font-size:13px;color:#666;">Esri World Imagery tiles</p></div>
+                        <div id="googleMap" style="height:300px;"></div>
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-lg-6 col-md-6 col-sm-6 col-12">
-                    <div class="google-map-single mg-t-30">
-                        <div id="map86"></div>
+                    <div class="notika-shadow mg-t-30" style="border-radius:8px;overflow:hidden;">
+                        <div style="padding:15px 20px;background:#fff;"><h5 style="margin:0;font-size:16px;font-weight:600;">Dark Theme — New York</h5><p style="margin:4px 0 0;font-size:13px;color:#666;">CartoDB dark tiles with glowing markers</p></div>
+                        <div id="map86" style="height:300px;"></div>
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-6 col-12">
-                    <div class="google-map-single mg-t-30">
-                        <div id="map7"></div>
+                    <div class="notika-shadow mg-t-30" style="border-radius:8px;overflow:hidden;">
+                        <div style="padding:15px 20px;background:#fff;"><h5 style="margin:0;font-size:16px;font-weight:600;">Data Markers — Tokyo</h5><p style="margin:4px 0 0;font-size:13px;color:#666;">Circle markers sized by visitor count</p></div>
+                        <div id="map7" style="height:300px;"></div>
                     </div>
                 </div>
             </div>
@@ -606,7 +606,7 @@
     <!-- End Footer area-->
 
     <!-- ONLY VITE ENTRY POINT - Everything else bundled by Vite -->
-    <script type="module" src="/src/js/main.js"></script>
+    <script type="module" src="/src/js/pages/google-map.js"></script>
 
     <!-- Clean Navigation JavaScript -->
     <script>

@@ -13,6 +13,8 @@
     border-bottom: 1px solid #e9ecef;
     box-shadow: 0 2px 4px rgba(0,0,0,0.04);
     margin-bottom: var(--notika-spacing-md); /* Keep perfect 24px gap after navigation */
+    position: relative;
+    z-index: 1085; /* Above BS5 popovers (1070) and tooltips (1080) */
 }
 
 /* Smaller gaps between content sections (not from navigation) */

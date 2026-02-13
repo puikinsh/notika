@@ -4,6 +4,20 @@
     max-width: 85vw;
 }
 
+/* Hamburger button: always visible below 992px, never shrinks */
+@media (max-width: 991.98px) {
+    [data-bs-target="#mobileNavOffcanvas"] {
+        display: flex !important;
+        flex-shrink: 0;
+    }
+
+    /* Prevent header nav icons from wrapping */
+    .notika-nav {
+        flex-wrap: nowrap;
+        overflow: hidden;
+    }
+}
+
 /* Hide offcanvas and hamburger menu completely on desktop */
 @media (min-width: 992px) {
     #mobileNavOffcanvas,

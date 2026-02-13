@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-page-module="image-cropper">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -14,10 +14,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-
-    <!-- Mobile Menu CSS -->
-    <link rel="stylesheet" href="css/mobile-menu.css">
-
     <!-- Font Awesome and all other CSS imported via Vite -->
     <!-- ONLY Vite entry point - everything else bundled -->
 </head>
@@ -559,50 +555,111 @@
     <!-- Breadcomb area End-->
 
     <!-- Image Cropper area Start-->
-    <div class="images-cropper-area">
+    <div class="cropper-area mg-t-30 mg-b-30">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-12 col-md-12 col-sm-12 col-12">
-                    <div class="image-cropper-wp">
-                        <div class="row">
-                            <div class="col-lg-6 col-md-6 col-sm-6 col-12">
-                                <div class="image-crop">
-                                    <img src="img/cropper/1.jpg" alt="">
-                                </div>
+            <div class="row g-4">
+                <!-- Main cropper canvas -->
+                <div class="col-lg-8">
+                    <div class="cropper-card">
+                        <div class="cropper-card-header">
+                            <h5><i class="fa-solid fa-crop-simple me-2"></i>Image Editor</h5>
+                            <div class="cropper-dimensions" id="cropInfo"></div>
+                        </div>
+                        <div class="cropper-canvas-wrap">
+                            <img src="img/cropper/1.jpg" alt="Sample image" id="cropperImage">
+                        </div>
+                        <!-- Toolbar -->
+                        <div class="cropper-toolbar">
+                            <div class="cropper-tool-group">
+                                <button type="button" class="cropper-tool" id="zoomIn" title="Zoom In">
+                                    <i class="fa-solid fa-magnifying-glass-plus"></i>
+                                </button>
+                                <button type="button" class="cropper-tool" id="zoomOut" title="Zoom Out">
+                                    <i class="fa-solid fa-magnifying-glass-minus"></i>
+                                </button>
                             </div>
-                            <div class="col-lg-6 col-md-6 col-sm-6 col-12">
-                                <div class="preview-img-pro-ad">
-                                    <div class="maincrop-img">
-                                        <div class="image-crp-int">
-                                            <h4>Preview image</h4>
-                                            <div class="img-preview img-preview-custom"></div>
-                                        </div>
-                                        <div class="image-crp-img">
-                                            <h4>Comon method</h4>
-                                            <p>You can upload new image to crop.</p>
-                                            <div class="btn-group images-cropper-pro">
-                                                <label title="Upload image file" for="inputImage" class="btn btn-primary img-cropper-cp">
-														<input type="file" accept="image/*" name="file" id="inputImage" class="hide"> Upload new image
-													</label>
-                                                <label title="Donload image" id="download" class="btn btn-primary">Download</label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="cp-img-anal">
-                                        <h4>Other method</h4>
-                                        <p>
-                                            You may set cropper options with <code>$(image}).cropper(options)</code>
-                                        </p>
-                                        <div class="btn-group images-action-pro">
-                                            <button class="btn btn-white" id="zoomIn" type="button">Zoom In</button>
-                                            <button class="btn btn-white" id="zoomOut" type="button">Zoom Out</button>
-                                            <button class="btn btn-white" id="rotateLeft" type="button">Rotate Left</button>
-                                            <button class="btn btn-white" id="rotateRight" type="button">Rotate Right</button>
-                                            <button class="btn btn-warning img-cropper-cp-t" id="setDrag" type="button">New crop</button>
-                                        </div>
-                                    </div>
-                                </div>
+                            <div class="cropper-tool-divider"></div>
+                            <div class="cropper-tool-group">
+                                <button type="button" class="cropper-tool" id="rotateLeft" title="Rotate Left">
+                                    <i class="fa-solid fa-rotate-left"></i>
+                                </button>
+                                <button type="button" class="cropper-tool" id="rotateRight" title="Rotate Right">
+                                    <i class="fa-solid fa-rotate-right"></i>
+                                </button>
                             </div>
+                            <div class="cropper-tool-divider"></div>
+                            <div class="cropper-tool-group">
+                                <button type="button" class="cropper-tool" id="flipH" title="Flip Horizontal">
+                                    <i class="fa-solid fa-left-right"></i>
+                                </button>
+                                <button type="button" class="cropper-tool" id="flipV" title="Flip Vertical">
+                                    <i class="fa-solid fa-up-down"></i>
+                                </button>
+                            </div>
+                            <div class="cropper-tool-divider"></div>
+                            <div class="cropper-tool-group">
+                                <button type="button" class="cropper-tool" id="resetCrop" title="Reset">
+                                    <i class="fa-solid fa-arrow-rotate-left"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <div class="col-lg-4">
+                    <!-- Preview -->
+                    <div class="cropper-card">
+                        <div class="cropper-card-header">
+                            <h5>Preview</h5>
+                        </div>
+                        <div class="cropper-preview-wrap">
+                            <cropper-viewer selection="cropper-selection"></cropper-viewer>
+                        </div>
+                    </div>
+
+                    <!-- Aspect Ratio -->
+                    <div class="cropper-card mt-4">
+                        <div class="cropper-card-header">
+                            <h5>Aspect Ratio</h5>
+                        </div>
+                        <div class="cropper-card-body">
+                            <div class="cropper-ratio-grid">
+                                <button type="button" class="cropper-ratio active" data-ratio="NaN">
+                                    <i class="fa-solid fa-expand"></i>
+                                    <span>Free</span>
+                                </button>
+                                <button type="button" class="cropper-ratio" data-ratio="1">
+                                    <i class="fa-solid fa-square"></i>
+                                    <span>1:1</span>
+                                </button>
+                                <button type="button" class="cropper-ratio" data-ratio="1.7778">
+                                    <i class="fa-solid fa-rectangle-wide fa-fw"></i>
+                                    <span>16:9</span>
+                                </button>
+                                <button type="button" class="cropper-ratio" data-ratio="1.3333">
+                                    <i class="fa-solid fa-image"></i>
+                                    <span>4:3</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Actions -->
+                    <div class="cropper-card mt-4">
+                        <div class="cropper-card-header">
+                            <h5>Actions</h5>
+                        </div>
+                        <div class="cropper-card-body">
+                            <label class="cropper-upload" for="inputImage">
+                                <i class="fa-solid fa-cloud-arrow-up"></i>
+                                <span>Upload New Image</span>
+                                <small>JPG, PNG, WebP, or GIF</small>
+                                <input type="file" accept="image/*" id="inputImage" class="d-none">
+                            </label>
+                            <button type="button" class="btn btn-success w-100 mt-3" id="download">
+                                <i class="fa-solid fa-download me-2"></i>Download Cropped Image
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -628,7 +685,7 @@
     <!-- End Footer area-->
 
     <!-- ONLY VITE ENTRY POINT - Everything else bundled by Vite -->
-    <script type="module" src="/src/js/main.js"></script>
+    <script type="module" src="/src/js/pages/image-cropper.js"></script>
 
     <!-- Clean Navigation JavaScript -->
     <script>

@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-page-module="code-editor">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -14,10 +14,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-
-    <!-- Mobile Menu CSS -->
-    <link rel="stylesheet" href="css/mobile-menu.css">
-
     <!-- Font Awesome and all other CSS imported via Vite -->
     <!-- ONLY Vite entry point - everything else bundled -->
 </head>
@@ -562,60 +558,16 @@
     <div class="code-editor-area">
         <div class="container">
             <div class="row">
-                <div class="col-lg-6 col-md-6 col-sm-6 col-12">
-                    <div class="nk-cd-ed-wp">
-                        <textarea id="code1">
-	<script>
-		$(document).ready(function() {
-			var usa_map = new Datamap({
-				element: document.getElementById("usa_map"),
-				responsive: true,
-				scope: 'usa',
-				fills: {
-					defaultFill: "#DBDAD6",
-					active: "#00c292"
-				},
-				geographyConfig: {
-					highlightFillColor: '#00c292',
-					highlightBorderWidth: 0
-				},
-				data: {
-					NE: { fillKey: "active" },
-					CA: { fillKey: "active" },
-					NY: { fillKey: "active" },
-				}
-			});
-		});
-	</script>
-							</textarea>
+                <div class="col-12">
+                    <div class="notika-shadow mg-t-30" style="border-radius:8px;overflow:hidden;">
+                        <div style="padding:15px 20px;background:#fff;"><h5 style="margin:0;font-size:16px;font-weight:600;">JavaScript Editor</h5><p style="margin:4px 0 0;font-size:13px;color:#666;">Dark theme with syntax highlighting</p></div>
+                        <div id="code1"></div>
                     </div>
                 </div>
-                <div class="col-lg-6 col-md-6 col-sm-6 col-12">
-                    <div class="nk-cd-ed-wp sm-res-mg-t-30">
-                        <textarea id="code2">
-	<script>
-		$(document).ready(function() {
-			var usa_map = new Datamap({
-				element: document.getElementById("usa_map"),
-				responsive: true,
-				scope: 'usa',
-				fills: {
-					defaultFill: "#DBDAD6",
-					active: "#00c292"
-				},
-				geographyConfig: {
-					highlightFillColor: '#00c292',
-					highlightBorderWidth: 0
-				},
-				data: {
-					NE: { fillKey: "active" },
-					CA: { fillKey: "active" },
-					NY: { fillKey: "active" },
-				}
-			});
-		});
-	</script>
-							</textarea>
+                <div class="col-12">
+                    <div class="notika-shadow mg-t-30" style="border-radius:8px;overflow:hidden;">
+                        <div style="padding:15px 20px;background:#fff;"><h5 style="margin:0;font-size:16px;font-weight:600;">HTML Editor</h5><p style="margin:4px 0 0;font-size:13px;color:#666;">Light theme with auto-completion</p></div>
+                        <div id="code2"></div>
                     </div>
                 </div>
             </div>
@@ -640,7 +592,7 @@
     <!-- End Footer area-->
 
     <!-- ONLY VITE ENTRY POINT - Everything else bundled by Vite -->
-    <script type="module" src="/src/js/main.js"></script>
+    <script type="module" src="/src/js/pages/code-editor.js"></script>
 
     <!-- Clean Navigation JavaScript -->
     <script>

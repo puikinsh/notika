@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-page-module="popovers">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -559,73 +559,182 @@
     <!-- Breadcomb area End-->
 
     <!-- Popovers area Start-->
-    <div class="popover-area">
+    <div class="popover-area mg-b-15">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-12 col-md-12 col-sm-12 col-12">
-                    <div class="popovers-list">
-                        <div class="popovers-hd">
-                            <h2>Popovers</h2>
-                            <p>Add small overlays of content, like those on the iPad, to any element for housing secondary information.</p>
-                        </div>
-                        <div class="popovers-sgn">
-                            <h4>Four options are available: top, right, bottom, and left aligned.</h4>
-                            <div class="popover-wp">
-                                <div class="popovers-pr-sg top">
-                                    <div class="popover-arrow"></div>
-                                    <h5>Popover Top</h5>
-                                    <p>Sed posuere consectetur est at lobortis crylia. Aenean eu leo quam. Pellentesque ornarefa sem lacinia quam venenatis.</p>
-                                </div>
-                                <div class="popovers-pr-sg right">
-                                    <div class="popover-arrow"></div>
-                                    <h5>Popover Right</h5>
-                                    <p>Sed posuere consectetur est at lobortis crylia. Aenean eu leo quam. Pellentesque ornarefa sem lacinia quam venenatis.</p>
-                                </div>
-                                <div class="popovers-pr-sg bottom popovers-pr-sg-mg-n">
-                                    <div class="popover-arrow"></div>
-                                    <h5>Popover Bottom</h5>
-                                    <p>Sed posuere consectetur est at lobortis crylia. Aenean eu leo quam. Pellentesque ornarefa sem lacinia quam venenatis.</p>
-                                </div>
-                                <div class="popovers-pr-sg left popovers-pr-sg-mg-n sm-res-mg-t-30 tb-res-mg-t-30 dk-res-mg-t-30">
-                                    <div class="popover-arrow"></div>
-                                    <h5>Popover Left</h5>
-                                    <p>Sed posuere consectetur est at lobortis crylia. Aenean eu leo quam. Pellentesque ornarefa sem lacinia quam venenatis.</p>
-                                </div>
+
+            <!-- Row 1: Directional Popovers + Trigger Methods -->
+            <div class="row pt-3">
+                <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                    <div class="recent-post-wrapper notika-shadow">
+                        <div class="recent-post-ctn">
+                            <div class="recent-post-title">
+                                <h2>Directional Popovers</h2>
+                                <p>Four placement options: top, right, bottom, and left. Click each button to see the popover appear.</p>
                             </div>
                         </div>
-                        <div class="popover-cl popover-ctn-mg mg-t-20">
-                            <h5>Popover on Click</h5>
-                            <div class="popover-cl-pro">
-                                <button class="btn btn-primary" data-bs-toggle="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." title="" data-original-title="Popover Title">Top
-									</button>
-                                <button class="btn btn-primary" data-bs-toggle="popover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." title="" data-original-title="Popover Title">Right
-									</button>
-                                <button class="btn btn-primary" data-bs-toggle="popover" data-placement="bottom" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." title="" data-original-title="Popover Title">Bottom
-									</button>
-                                <button class="btn btn-primary" data-bs-toggle="popover" data-placement="left" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." title="" data-original-title="Popover Title"> Left
-									</button>
+                        <div class="recent-post-items">
+                            <div class="d-flex flex-wrap gap-2">
+                                <button type="button" class="btn btn-primary" data-bs-toggle="popover" data-bs-placement="top" data-bs-title="Top Popover" data-bs-content="This popover appears above the trigger element. Use for non-critical supplementary information.">
+                                    <i class="fa-solid fa-arrow-up me-1"></i> Top
+                                </button>
+                                <button type="button" class="btn btn-info" data-bs-toggle="popover" data-bs-placement="right" data-bs-title="Right Popover" data-bs-content="This popover appears to the right. Ideal for inline help next to form fields or data cells.">
+                                    <i class="fa-solid fa-arrow-right me-1"></i> Right
+                                </button>
+                                <button type="button" class="btn btn-success" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-title="Bottom Popover" data-bs-content="This popover appears below the trigger. Works well for toolbar actions and navigation items.">
+                                    <i class="fa-solid fa-arrow-down me-1"></i> Bottom
+                                </button>
+                                <button type="button" class="btn btn-warning" data-bs-toggle="popover" data-bs-placement="left" data-bs-title="Left Popover" data-bs-content="This popover appears to the left. Useful when the trigger is near the right edge of the viewport.">
+                                    <i class="fa-solid fa-arrow-left me-1"></i> Left
+                                </button>
                             </div>
                         </div>
-                        <div class="popover-cl popover-ctn-mg mg-t-20">
-                            <h5>Popover on Hover</h5>
-                            <div class="popover-cl-pro">
-                                <button class="btn btn-primary" data-trigger="hover" data-bs-toggle="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." title="" data-original-title="Popover Title">Top
-									</button>
-                                <button class="btn btn-primary" data-trigger="hover" data-bs-toggle="popover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." title="" data-original-title="Popover Title">Right
-									</button>
-                                <button class="btn btn-primary" data-trigger="hover" data-bs-toggle="popover" data-placement="bottom" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." title="" data-original-title="Popover Title">Bottom
-									</button>
-                                <button class="btn btn-primary" data-trigger="hover" data-bs-toggle="popover" data-placement="left" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." title="" data-original-title="Popover Title">Left
-									</button>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                    <div class="recent-post-wrapper notika-shadow">
+                        <div class="recent-post-ctn">
+                            <div class="recent-post-title">
+                                <h2>Trigger Methods</h2>
+                                <p>Popovers support different trigger types: click (default), hover, and focus.</p>
+                            </div>
+                        </div>
+                        <div class="recent-post-items">
+                            <div class="d-flex flex-wrap gap-2">
+                                <button type="button" class="btn btn-primary" data-bs-toggle="popover" data-bs-title="Click Trigger" data-bs-content="This popover opens on click and closes when you click the button again or press Escape." data-bs-trigger="click">
+                                    <i class="fa-solid fa-hand-pointer me-1"></i> Click
+                                </button>
+                                <button type="button" class="btn btn-info" data-bs-toggle="popover" data-bs-title="Hover Trigger" data-bs-content="This popover shows on mouse hover and hides when the cursor leaves. Great for quick previews." data-bs-trigger="hover">
+                                    <i class="fa-solid fa-arrow-pointer me-1"></i> Hover
+                                </button>
+                                <button type="button" class="btn btn-success" data-bs-toggle="popover" data-bs-title="Focus Trigger" data-bs-content="This popover appears when the button receives focus (tab or click) and disappears on blur." data-bs-trigger="focus">
+                                    <i class="fa-solid fa-bullseye me-1"></i> Focus
+                                </button>
+                                <button type="button" class="btn btn-warning" data-bs-toggle="popover" data-bs-title="Hover + Focus" data-bs-content="This popover responds to both hover and focus events, making it accessible for keyboard and mouse users." data-bs-trigger="hover focus">
+                                    <i class="fa-solid fa-arrows-rotate me-1"></i> Hover + Focus
+                                </button>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+
+            <!-- Row 2: Dismissible Popovers + Rich HTML Content -->
+            <div class="row mt-4">
+                <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                    <div class="recent-post-wrapper notika-shadow">
+                        <div class="recent-post-ctn">
+                            <div class="recent-post-title">
+                                <h2>Dismissible Popovers</h2>
+                                <p>Click anywhere outside the popover to dismiss it. Uses <code>data-bs-trigger="focus"</code> on an <code>&lt;a&gt;</code> element.</p>
+                            </div>
+                        </div>
+                        <div class="recent-post-items">
+                            <div class="d-flex flex-wrap gap-2">
+                                <a tabindex="0" class="btn btn-danger" role="button" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-title="Dismissible Popover" data-bs-content="Click anywhere outside this popover to close it. No need to click the button again.">
+                                    <i class="fa-solid fa-xmark me-1"></i> Click to Dismiss
+                                </a>
+                                <a tabindex="0" class="btn btn-outline-danger" role="button" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-placement="bottom" data-bs-title="Delete Confirmation" data-bs-content="Are you sure you want to delete this item? This action cannot be undone. Click outside to cancel.">
+                                    <i class="fa-solid fa-trash me-1"></i> Confirm Delete
+                                </a>
+                                <a tabindex="0" class="btn btn-outline-warning" role="button" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-placement="right" data-bs-title="Unsaved Changes" data-bs-content="You have unsaved changes. Navigate away to discard or click Save to keep your work.">
+                                    <i class="fa-solid fa-triangle-exclamation me-1"></i> Unsaved Warning
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                    <div class="recent-post-wrapper notika-shadow">
+                        <div class="recent-post-ctn">
+                            <div class="recent-post-title">
+                                <h2>Rich HTML Content</h2>
+                                <p>Popovers can render HTML content using <code>data-bs-html="true"</code> for richer formatting.</p>
+                            </div>
+                        </div>
+                        <div class="recent-post-items">
+                            <div class="d-flex flex-wrap gap-2">
+                                <button type="button" class="btn btn-secondary" data-bs-toggle="popover" data-bs-html="true" data-bs-title="<i class='fa-solid fa-list me-1'></i> Feature List" data-bs-content="<ul class='mb-0 ps-3'><li>Responsive design</li><li>Dark mode support</li><li>RTL compatible</li><li>60+ components</li></ul>">
+                                    <i class="fa-solid fa-list me-1"></i> List Content
+                                </button>
+                                <button type="button" class="btn btn-outline-secondary" data-bs-toggle="popover" data-bs-html="true" data-bs-placement="bottom" data-bs-title="Server Status" data-bs-content="<div><span class='badge bg-success me-1'>Online</span> Primary Server<br><span class='badge bg-warning text-dark me-1'>Slow</span> CDN Edge<br><span class='badge bg-danger me-1'>Down</span> Backup Server</div>">
+                                    <i class="fa-solid fa-server me-1"></i> Status Badges
+                                </button>
+                                <button type="button" class="btn btn-dark" data-bs-toggle="popover" data-bs-html="true" data-bs-title="<strong>Quick Stats</strong>" data-bs-content="<div class='text-start'><div class='mb-1'><strong>Users:</strong> 12,847</div><div class='mb-1'><strong>Revenue:</strong> $48,290</div><div><strong>Growth:</strong> <span class='text-success'>+18.2%</span></div></div>">
+                                    <i class="fa-solid fa-chart-line me-1"></i> Stats Preview
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Row 3: Color Variants + Practical Examples -->
+            <div class="row mt-4">
+                <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                    <div class="recent-post-wrapper notika-shadow">
+                        <div class="recent-post-ctn">
+                            <div class="recent-post-title">
+                                <h2>Color Variants</h2>
+                                <p>Pair popovers with different button styles for contextual meaning and visual hierarchy.</p>
+                            </div>
+                        </div>
+                        <div class="recent-post-items">
+                            <div class="d-flex flex-wrap gap-2">
+                                <button type="button" class="btn btn-primary" data-bs-toggle="popover" data-bs-title="Primary Action" data-bs-content="Primary popovers draw attention to the most important action on the page." data-bs-trigger="hover focus">
+                                    Primary
+                                </button>
+                                <button type="button" class="btn btn-success" data-bs-toggle="popover" data-bs-title="Success Feedback" data-bs-content="Use success popovers to confirm completed actions or valid input states." data-bs-trigger="hover focus">
+                                    Success
+                                </button>
+                                <button type="button" class="btn btn-info" data-bs-toggle="popover" data-bs-title="Information Tip" data-bs-content="Info popovers provide additional context without interrupting the user's workflow." data-bs-trigger="hover focus">
+                                    Info
+                                </button>
+                                <button type="button" class="btn btn-warning" data-bs-toggle="popover" data-bs-title="Warning Notice" data-bs-content="Warning popovers alert users about potential issues or irreversible actions." data-bs-trigger="hover focus">
+                                    Warning
+                                </button>
+                                <button type="button" class="btn btn-danger" data-bs-toggle="popover" data-bs-title="Danger Alert" data-bs-content="Danger popovers indicate destructive actions that require careful consideration." data-bs-trigger="hover focus">
+                                    Danger
+                                </button>
+                                <button type="button" class="btn btn-dark" data-bs-toggle="popover" data-bs-title="Dark Popover" data-bs-content="Dark-themed buttons pair well with popovers for utility and secondary actions." data-bs-trigger="hover focus">
+                                    Dark
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                    <div class="recent-post-wrapper notika-shadow">
+                        <div class="recent-post-ctn">
+                            <div class="recent-post-title">
+                                <h2>Practical Examples</h2>
+                                <p>Real-world use cases showing popovers for help text, user previews, and status information.</p>
+                            </div>
+                        </div>
+                        <div class="recent-post-items">
+                            <div class="d-flex flex-wrap gap-2 align-items-center">
+                                <button type="button" class="btn btn-outline-primary" data-bs-toggle="popover" data-bs-html="true" data-bs-trigger="hover focus" data-bs-title="<i class='fa-solid fa-circle-question me-1'></i> Password Requirements" data-bs-content="<ul class='mb-0 ps-3 small'><li>At least 8 characters</li><li>One uppercase letter</li><li>One number or symbol</li><li>No spaces allowed</li></ul>">
+                                    <i class="fa-solid fa-circle-question me-1"></i> Help Tooltip
+                                </button>
+                                <button type="button" class="btn btn-outline-info" data-bs-toggle="popover" data-bs-html="true" data-bs-trigger="hover focus" data-bs-placement="bottom" data-bs-title="John Doe" data-bs-content="<div class='text-start small'><div class='mb-1'><i class='fa-solid fa-envelope me-1'></i> john@example.com</div><div class='mb-1'><i class='fa-solid fa-phone me-1'></i> +1 (555) 123-4567</div><div><i class='fa-solid fa-building me-1'></i> Engineering Team</div></div>">
+                                    <i class="fa-solid fa-user me-1"></i> User Card
+                                </button>
+                                <button type="button" class="btn btn-outline-success" data-bs-toggle="popover" data-bs-html="true" data-bs-trigger="hover focus" data-bs-title="<i class='fa-solid fa-signal me-1'></i> System Health" data-bs-content="<div class='text-start small'><div class='mb-1'>CPU: <strong>23%</strong></div><div class='mb-1'>Memory: <strong>4.2 / 8 GB</strong></div><div class='mb-1'>Disk: <strong>67% used</strong></div><div>Uptime: <strong>14d 6h 32m</strong></div></div>">
+                                    <i class="fa-solid fa-signal me-1"></i> System Status
+                                </button>
+                                <span class="d-inline-block" tabindex="0" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-title="Disabled Button" data-bs-content="This button is disabled because you don't have edit permissions for this resource.">
+                                    <button type="button" class="btn btn-outline-secondary" disabled>
+                                        <i class="fa-solid fa-lock me-1"></i> No Access
+                                    </button>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
     <!-- Popovers area End-->
-    <!-- Start Footer area-->
 
     <!-- Footer area Start-->
     <div class="footer-copyright-area">
@@ -642,52 +751,7 @@
     </div>
     <!-- End Footer area-->
 
-    <!-- ONLY VITE ENTRY POINT - Everything else bundled by Vite -->
-    <script type="module" src="/src/js/main.js"></script>
-
-    <!-- Clean Navigation JavaScript -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Search functionality
-            const searchInput = document.querySelector('.search-dropdown input');
-            if (searchInput) {
-                const searchTrigger = searchInput.closest('.dropdown').querySelector('[data-bs-toggle="dropdown"]');
-                if (searchTrigger) {
-                    searchTrigger.addEventListener('shown.bs.dropdown', function() {
-                        setTimeout(() => searchInput.focus(), 100);
-                    });
-                }
-
-                searchInput.addEventListener('keypress', function(e) {
-                    if (e.key === 'Enter' && this.value.trim()) {
-                        console.log('Searching for:', this.value);
-                    }
-                });
-            }
-
-            // Simple navbar dropdown enhancements
-            const navDropdowns = document.querySelectorAll('.notika-navbar .dropdown');
-
-            navDropdowns.forEach(dropdown => {
-                const toggle = dropdown.querySelector('.dropdown-toggle');
-
-                // Add subtle click feedback
-                if (toggle) {
-                    toggle.addEventListener('click', function(e) {
-                        // Don't navigate away, just toggle dropdown
-                        e.preventDefault();
-
-                        // Quick visual feedback
-                        this.style.transform = 'scale(0.98)';
-                        setTimeout(() => {
-                            this.style.transform = '';
-                        }, 100);
-                    });
-                }
-            });
-
-            console.log('✅ Stable navigation system initialized');
-        });
-    </script>
+    <!-- Page-specific module -->
+    <script type="module" src="/src/js/pages/popovers.js"></script>
 </body>
 </html>

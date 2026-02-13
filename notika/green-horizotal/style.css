@@ -2415,7 +2415,7 @@ hr {
 
 /* Inbox Toolbar */
 .inbox-toolbar {
-	padding: 10px 0;
+	padding: 10px 17px;
 	margin-bottom: 4px;
 	border-bottom: 1px solid #eee;
 }
@@ -4328,3 +4328,734 @@ body.box-layout {
 /*----------------------------------------*/
 .mCS-light-1.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{ background-color: #00c292; }
 .mCS-light-1.mCSB_scrollTools .mCSB_draggerRail{ background-color: #ccc; }
+
+/*----------------------------------------*/
+/*  60. Data table controls
+/*----------------------------------------*/
+.datatable-controls .row { align-items: center; }
+
+.datatable-footer .page-link {
+    color: #333;
+    border-color: #dee2e6;
+}
+.datatable-footer .page-item.active .page-link {
+    background: #00c292;
+    border-color: #00c292;
+    color: #fff;
+}
+.datatable-footer .page-link:hover {
+    background: #00c292;
+    border-color: #00c292;
+    color: #fff;
+}
+.datatable-footer .page-item.disabled .page-link {
+    color: #6c757d;
+    border-color: #dee2e6;
+}
+
+/*----------------------------------------*/
+/*  61.  View Email Modern CSS
+/*----------------------------------------*/
+.view-email-header {
+    padding: 20px 10px 16px;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 0;
+}
+.view-email-subject {
+    font-size: 20px;
+    font-weight: 600;
+    color: #222;
+    margin: 0 0 8px;
+    line-height: 1.3;
+}
+.view-email-date {
+    text-align: end;
+    font-size: 12px;
+    color: #888;
+    white-space: nowrap;
+}
+.view-email-sender {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 16px 10px;
+    border-bottom: 1px solid #f0f0f0;
+}
+.view-email-avatar {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #f0f0f0;
+}
+.view-email-sender-name {
+    font-weight: 600;
+    font-size: 14px;
+    color: #222;
+}
+.view-email-sender-actions {
+    display: flex;
+    gap: 6px;
+}
+.view-email-sender-actions .btn {
+    width: 34px;
+    height: 34px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 13px;
+    border-color: #e0e0e0;
+    color: #888;
+    transition: all 0.2s;
+}
+.view-email-sender-actions .btn:hover {
+    background: #00c292;
+    border-color: #00c292;
+    color: #fff;
+}
+.view-email-body {
+    padding: 24px 10px;
+    font-size: 14px;
+    line-height: 1.7;
+    color: #444;
+}
+.view-email-body p {
+    margin-bottom: 12px;
+}
+.view-email-body ul {
+    padding-left: 20px;
+    margin-bottom: 12px;
+}
+.view-email-body ul li {
+    margin-bottom: 6px;
+    color: #555;
+}
+.view-email-signature {
+    margin-top: 24px;
+    padding-top: 16px;
+    border-top: 1px solid #f0f0f0;
+}
+.view-email-attachments {
+    padding: 16px 10px;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+.view-email-attachments-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #888;
+    font-size: 13px;
+    margin-bottom: 12px;
+}
+.attachment-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 14px;
+    border: 1px solid #e8e8e8;
+    border-radius: 6px;
+    font-size: 13px;
+    color: #333;
+    text-decoration: none;
+    background: #fafafa;
+    transition: all 0.2s;
+}
+.attachment-chip:hover {
+    border-color: #00c292;
+    background: #f0fdf9;
+    color: #333;
+}
+.attachment-chip i {
+    font-size: 16px;
+}
+.attachment-chip small {
+    font-size: 11px;
+}
+.view-email-actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 16px 10px 4px;
+}
+.view-email-actions .btn {
+    font-size: 13px;
+    padding: 6px 14px;
+}
+.view-email-actions .btn-success {
+    background: #00c292;
+    border-color: #00c292;
+}
+.view-email-actions .btn-success:hover {
+    background: #00a97e;
+    border-color: #00a97e;
+}
+
+/*----------------------------------------*/
+/*  62.  Compose Email Modern CSS
+/*----------------------------------------*/
+.compose-header {
+    padding: 16px 10px;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 0;
+}
+.compose-header h4 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #222;
+}
+.compose-header h4 i {
+    color: #00c292;
+}
+.compose-form {
+    padding: 20px 10px 0;
+}
+.compose-field {
+    margin-bottom: 16px;
+}
+.compose-field-label {
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    color: #999;
+    margin-bottom: 6px;
+}
+.compose-field .form-control {
+    font-size: 14px;
+    border-color: #e0e0e0;
+    border-radius: 4px;
+    padding: 8px 12px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+.compose-field .form-control:focus {
+    border-color: #00c292;
+    box-shadow: 0 0 0 3px rgba(0, 194, 146, 0.1);
+}
+.compose-field-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+.compose-field-message {
+    margin-bottom: 0;
+}
+.compose-field-message textarea.form-control {
+    height: auto;
+    min-height: 250px;
+    resize: vertical;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-top: none;
+}
+.compose-toolbar {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    padding: 8px 10px;
+    border: 1px solid #e0e0e0;
+    border-bottom: none;
+    border-radius: 4px 4px 0 0;
+    background: #fafafa;
+}
+.compose-toolbar-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border: none;
+    background: none;
+    border-radius: 4px;
+    color: #666;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 0.15s;
+}
+.compose-toolbar-btn:hover {
+    background: #e8e8e8;
+    color: #333;
+}
+.compose-toolbar-divider {
+    width: 1px;
+    height: 20px;
+    background: #ddd;
+    margin: 0 6px;
+}
+.compose-attachments {
+    margin: 20px 0;
+}
+.compose-dropzone {
+    border: 2px dashed #d0d0d0;
+    border-radius: 8px;
+    padding: 30px 20px;
+    text-align: center;
+    background: #fafafa;
+    transition: all 0.2s;
+    position: relative;
+    cursor: pointer;
+}
+.compose-dropzone:hover {
+    border-color: #00c292;
+    background: #f0fdf9;
+}
+.compose-dropzone i {
+    font-size: 28px;
+    color: #00c292;
+    margin-bottom: 8px;
+    display: block;
+}
+.compose-dropzone p {
+    margin: 0 0 4px;
+    font-size: 14px;
+    color: #666;
+}
+.compose-dropzone p span {
+    color: #00c292;
+    font-weight: 500;
+}
+.compose-dropzone small {
+    font-size: 12px;
+    color: #999;
+}
+.compose-dropzone input[type="file"] {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    cursor: pointer;
+}
+.compose-actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 16px 10px 4px;
+    border-top: 1px solid #eee;
+}
+.compose-actions .btn {
+    font-size: 13px;
+    padding: 8px 18px;
+}
+.compose-actions .btn-success {
+    background: #00c292;
+    border-color: #00c292;
+}
+.compose-actions .btn-success:hover {
+    background: #00a97e;
+    border-color: #00a97e;
+}
+
+/* Responsive: email pages */
+@media (max-width: 767px) {
+    .view-email-subject {
+        font-size: 17px;
+    }
+    .view-email-date {
+        text-align: start;
+    }
+    .view-email-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .compose-field-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+    .compose-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .compose-actions .btn {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/*----------------------------------------*/
+/*  63.  Dialog Page Modern CSS
+/*----------------------------------------*/
+.dialog-area {
+    padding-bottom: 30px;
+}
+.dialog-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 30px 24px;
+    text-align: center;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    border: 1px solid rgba(0,0,0,0.06);
+    transition: all 0.2s ease;
+}
+.dialog-card:hover {
+    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+    transform: translateY(-2px);
+}
+.dialog-card-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    margin-bottom: 16px;
+}
+.dialog-card-icon--info { background: rgba(23,162,184,0.12); color: #17a2b8; }
+.dialog-card-icon--primary { background: rgba(0,123,255,0.12); color: #007bff; }
+.dialog-card-icon--success { background: rgba(0,194,146,0.12); color: #00c292; }
+.dialog-card-icon--warning { background: rgba(243,156,18,0.12); color: #f39c12; }
+.dialog-card-icon--danger { background: rgba(231,76,60,0.12); color: #e74c3c; }
+.dialog-card-icon--purple { background: rgba(171,140,228,0.12); color: #ab8ce4; }
+.dialog-card-icon--teal { background: rgba(1,192,200,0.12); color: #01c0c8; }
+.dialog-card-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #222;
+    margin-bottom: 8px;
+}
+.dialog-card-desc {
+    font-size: 13px;
+    color: #888;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    flex: 1;
+}
+.dialog-card .btn {
+    min-width: 100px;
+    font-size: 13px;
+    padding: 7px 20px;
+}
+
+/* Dialog Modal Styles */
+.dialog-modal-icon {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    margin: 0 auto 16px;
+}
+.dialog-icon--info { background: rgba(23,162,184,0.12); color: #17a2b8; }
+.dialog-icon--primary { background: rgba(0,123,255,0.12); color: #007bff; }
+.dialog-icon--success { background: rgba(0,194,146,0.12); color: #00c292; }
+.dialog-icon--warning { background: rgba(243,156,18,0.12); color: #f39c12; }
+.dialog-icon--danger { background: rgba(231,76,60,0.12); color: #e74c3c; }
+.dialog-icon--teal { background: rgba(1,192,200,0.12); color: #01c0c8; }
+.dialog-modal-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #222;
+    margin-bottom: 8px;
+}
+.dialog-modal-body {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.6;
+}
+.dialog-modal-body p {
+    margin-bottom: 6px;
+}
+.dialog-modal-image {
+    width: 100%;
+    max-height: 160px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+.dialog-input {
+    text-align: center;
+    margin-top: 8px;
+}
+
+/* Timer bar animation */
+.dialog-timer-bar {
+    height: 4px;
+    background: #eee;
+    border-radius: 8px 8px 0 0;
+    overflow: hidden;
+}
+.dialog-timer-fill {
+    height: 100%;
+    background: #01c0c8;
+    width: 100%;
+    transform-origin: left;
+}
+@keyframes dialogTimer {
+    from { width: 100%; }
+    to { width: 0%; }
+}
+
+/*----------------------------------------*/
+/*  64.  Wizard CSS
+/*----------------------------------------*/
+
+/* Step indicator row */
+.wz-steps {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    margin-bottom: 8px;
+    padding: 0 10px;
+}
+.wz-steps::before {
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: 40px;
+    right: 40px;
+    height: 2px;
+    background: #e0e0e0;
+    z-index: 0;
+}
+.wz-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+    flex: 1;
+}
+.wz-step-circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #e0e0e0;
+    color: #888;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    border: 3px solid #fff;
+    box-shadow: 0 0 0 2px #e0e0e0;
+}
+.wz-step.active .wz-step-circle {
+    background: #00c292;
+    color: #fff;
+    box-shadow: 0 0 0 2px #00c292, 0 0 12px rgba(0, 194, 146, 0.3);
+}
+.wz-step.completed .wz-step-circle {
+    background: #00c292;
+    color: #fff;
+    box-shadow: 0 0 0 2px #00c292;
+}
+.wz-step-label {
+    margin-top: 8px;
+    font-size: 13px;
+    color: #999;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+.wz-step.active .wz-step-label {
+    color: #00c292;
+    font-weight: 600;
+}
+.wz-step.completed .wz-step-label {
+    color: #00c292;
+}
+
+/* Progress bar under steps */
+.wz-progress {
+    height: 4px;
+    background: #e0e0e0;
+    border-radius: 2px;
+    margin: 0 10px 28px;
+    overflow: hidden;
+}
+.wz-progress-bar {
+    height: 100%;
+    background: #00c292;
+    border-radius: 2px;
+    width: 0%;
+    transition: width 0.4s ease;
+}
+
+/* Panels */
+.wz-panel {
+    display: none;
+    padding: 0 10px;
+}
+.wz-panel.active {
+    display: block;
+    animation: wzFadeIn 0.3s ease;
+}
+@keyframes wzFadeIn {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.wz-panel-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 4px;
+    color: #333;
+}
+.wz-panel-desc {
+    color: #888;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+/* Review section on step 4 */
+.wz-review-section {
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin-bottom: 12px;
+}
+.wz-review-section h6 {
+    font-size: 14px;
+    font-weight: 600;
+    color: #00c292;
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #e9ecef;
+}
+.wz-review-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 4px 0;
+    font-size: 14px;
+}
+.wz-review-label {
+    color: #888;
+}
+.wz-review-value {
+    color: #333;
+    font-weight: 500;
+}
+
+/* Navigation buttons */
+.wz-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10px 0;
+    margin-top: 24px;
+    border-top: 1px solid #eee;
+}
+.wz-btn-prev {
+    min-width: 130px;
+}
+.wz-btn-prev:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+.wz-btn-next {
+    min-width: 130px;
+    background: #00c292;
+    color: #fff;
+    border: none;
+}
+.wz-btn-next:hover {
+    background: #00a87d;
+    color: #fff;
+}
+.wz-btn-next.wz-btn-finish {
+    background: #00c292;
+}
+.wz-btn-next.wz-btn-finish:hover {
+    background: #00a87d;
+}
+
+/* Success state */
+.wz-success {
+    text-align: center;
+    padding: 40px 20px;
+}
+.wz-success-icon {
+    font-size: 64px;
+    color: #00c292;
+    margin-bottom: 16px;
+}
+.wz-success h4 {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #333;
+}
+.wz-success p {
+    color: #888;
+    font-size: 15px;
+}
+
+/* Responsive */
+@media (max-width: 575px) {
+    .wz-step-label {
+        font-size: 11px;
+    }
+    .wz-step-circle {
+        width: 34px;
+        height: 34px;
+        font-size: 13px;
+    }
+    .wz-steps::before {
+        top: 17px;
+        left: 30px;
+        right: 30px;
+    }
+    .wz-btn-prev,
+    .wz-btn-next {
+        min-width: 110px;
+        font-size: 14px;
+    }
+}
+
+/*----------------------------------------*/
+/*  65.  Dropdown Demo CSS
+/*----------------------------------------*/
+.dropdown-area {
+    padding-bottom: 30px;
+}
+.dd-demo-card {
+    background: #fff;
+    border-radius: 8px;
+    padding: 24px;
+    box-shadow: 0 1px 4px rgba(0,0,0,.06);
+}
+.dd-demo-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 4px;
+}
+.dd-demo-desc {
+    font-size: 13px;
+    color: #888;
+    margin-bottom: 16px;
+}
+
+/* Notification dot in dropdown */
+.dd-notif-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    margin-top: 6px;
+}
+
+/* Icon spacing in dropdown items */
+.dropdown-area .dropdown-item i {
+    width: 18px;
+    text-align: center;
+}
+
+/* Badge in dropdown item */
+.dropdown-area .dropdown-item .badge {
+    font-size: 10px;
+    padding: 3px 6px;
+}

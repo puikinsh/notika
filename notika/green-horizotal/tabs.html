@@ -7,14 +7,16 @@
     <meta name="description" content="Modern Notika Admin Template powered by Vite 7.1.5">
 
     <!-- Favicon -->
-    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/svg+xml" href="/logo/notika-icon.svg">
+    <link rel="alternate icon" href="/favicon.ico">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 
-    <!-- Essential Notika Template CSS -->
+    <!-- Mobile Menu CSS -->
+    <link rel="stylesheet" href="css/mobile-menu.css">
 
     <!-- Font Awesome and all other CSS imported via Vite -->
     <!-- ONLY Vite entry point - everything else bundled -->
@@ -524,7 +526,9 @@
         </div>
     </div>
     <!-- End Mobile Offcanvas Navigation -->
-<div class="breadcomb-area">
+
+    <!-- Breadcomb area Start-->
+    <div class="breadcomb-area">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-12">
@@ -555,94 +559,91 @@
     <!-- Breadcomb area End-->
 
     <!-- Tabs Content Area Start -->
-    <div class="tabs-info-area">
+    <div class="tabs-info-area mg-b-15">
         <div class="container">
-            <!-- Basic Tabs -->
-            <div class="row">
-                <div class="col-lg-12 col-md-12 col-sm-12 col-12">
-                    <div class="recent-post-wrapper notika-shadow mg-t-30">
+
+            <!-- Row 1: Basic Tabs + Pills Tabs -->
+            <div class="row pt-3">
+                <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                    <div class="recent-post-wrapper notika-shadow">
                         <div class="recent-post-ctn">
                             <div class="recent-post-title">
                                 <h2>Basic Tabs</h2>
-                                <p>Add quick, dynamic tab functionality to transition through panes of local content.</p>
+                                <p>Standard horizontal tabs using <code>.nav-tabs</code> for switching between content panes.</p>
                             </div>
                         </div>
                         <div class="recent-post-items">
                             <ul class="nav nav-tabs" id="basicTabs" role="tablist">
                                 <li class="nav-item" role="presentation">
-                                    <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Tab Menu 1</button>
+                                    <button class="nav-link active" id="basic-profile-tab" data-bs-toggle="tab" data-bs-target="#basic-profile" type="button" role="tab" aria-controls="basic-profile" aria-selected="true">Profile</button>
                                 </li>
                                 <li class="nav-item" role="presentation">
-                                    <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Tab Menu 2</button>
+                                    <button class="nav-link" id="basic-settings-tab" data-bs-toggle="tab" data-bs-target="#basic-settings" type="button" role="tab" aria-controls="basic-settings" aria-selected="false">Settings</button>
                                 </li>
                                 <li class="nav-item" role="presentation">
-                                    <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">Tab Menu 3</button>
+                                    <button class="nav-link" id="basic-activity-tab" data-bs-toggle="tab" data-bs-target="#basic-activity" type="button" role="tab" aria-controls="basic-activity" aria-selected="false">Activity</button>
                                 </li>
                             </ul>
                             <div class="tab-content" id="basicTabsContent">
-                                <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                <div class="tab-pane fade show active" id="basic-profile" role="tabpanel" aria-labelledby="basic-profile-tab">
                                     <div class="tab-ctn">
-                                        <p>Duis arcu tortor, suscipit eget, imperdiet nec, imperdiet iaculis, ipsum. Vestibulum purus quam, scelerisque ut, mollis sed, nonummy id, metus. Nulla sit amet est. Praesent ac the massa at ligula laoreet iaculis. Vivamus aliquet elit ac nisl. Nulla porta dolor. Cras dapibus. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.</p>
-                                        <p class="tab-mg-b-0">In hac habitasse platea dictumst. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Nam eget dui. In ac felis quis tortor malesuadan of pretium. Phasellus consectetuer vestibulum elit. Duis lobortis massa imperdiet quam. Pellentesque commodo eros a enim. Vestibulum ante ipsum primis in faucibus orci the luctus et ultrices posuere cubilia Curae; In ac dui quis mi consectetuer lacinia. Phasellus a est. Pellentesque commodo eros a enim. Cras ultricies mi eu turpis hendrerit of fringilla. Donec mollis hendrerit risus. Vestibulum turpis sem, aliquet eget, lobortis pellentesque, rutrum eu, nisl. Praesent egestas neque eu enim. In hac habitasse plat.</p>
+                                        <p>Manage your personal profile information including your name, email address, and contact preferences. Keep your details up to date to ensure seamless communication across the platform.</p>
+                                        <p class="tab-mg-b-0">Your profile is visible to team members and administrators. You can control visibility settings from the privacy section in your account preferences.</p>
                                     </div>
                                 </div>
-                                <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                                <div class="tab-pane fade" id="basic-settings" role="tabpanel" aria-labelledby="basic-settings-tab">
                                     <div class="tab-ctn">
-                                        <p>Vestibulum purus quam, scelerisque ut, mollis sed, nonummy id, metus. Duis arcu tortor, suscipit eget, imperdiet nec, imperdiet iaculis, ipsum. Nulla sit amet est. Praesent ac the massa at ligula laoreet iaculis. Vivamus aliquet elit ac nisl. Nulla porta dolor. Cras dapibus. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.</p>
-                                        <p class="tab-mg-b-0">Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. In hac habitasse platea dictumst. Nam eget dui. In ac felis quis tortor malesuadan of pretium. Phasellus consectetuer vestibulum elit. Duis lobortis massa imperdiet quam. Pellentesque commodo eros a enim. Vestibulum ante ipsum primis in faucibus orci the luctus et ultrices posuere cubilia Curae; In ac dui quis mi consectetuer lacinia. Phasellus a est. Pellentesque commodo eros a enim. Cras ultricies mi eu turpis hendrerit of fringilla. Donec mollis hendrerit risus. Vestibulum turpis sem, aliquet eget, lobortis pellentesque, rutrum eu, nisl. Praesent egestas neque eu enim. In hac habitasse plat.</p>
+                                        <p>Configure your account settings including notification preferences, language options, and display themes. Changes are applied immediately and synced across all your devices.</p>
+                                        <p class="tab-mg-b-0">For security settings such as two-factor authentication and password changes, visit the dedicated Security page from your account menu.</p>
                                     </div>
                                 </div>
-                                <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+                                <div class="tab-pane fade" id="basic-activity" role="tabpanel" aria-labelledby="basic-activity-tab">
                                     <div class="tab-ctn">
-                                        <p>Praesent ac the massa at ligula laoreet iaculis. Duis arcu tortor, suscipit eget, imperdiet nec, imperdiet iaculis, ipsum. Vestibulum purus quam, scelerisque ut, mollis sed, nonummy id, metus. Nulla sit amet est. Vivamus aliquet elit ac nisl. Nulla porta dolor. Cras dapibus. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.</p>
-                                        <p class="tab-mg-b-0">Nam eget dui. In ac felis quis tortor malesuadan of pretium. In hac habitasse platea dictumst. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Phasellus consectetuer vestibulum elit. Duis lobortis massa imperdiet quam. Pellentesque commodo eros a enim. Vestibulum ante ipsum primis in faucibus orci the luctus et ultrices posuere cubilia Curae; In ac dui quis mi consectetuer lacinia. Phasellus a est. Pellentesque commodo eros a enim. Cras ultricies mi eu turpis hendrerit of fringilla. Donec mollis hendrerit risus. Vestibulum turpis sem, aliquet eget, lobortis pellentesque, rutrum eu, nisl. Praesent egestas neque eu enim. In hac habitasse plat.</p>
+                                        <p>View your recent activity log including login history, file changes, and system interactions. Activity records are retained for 90 days and can be exported in CSV format.</p>
+                                        <p class="tab-mg-b-0">Unusual activity will be flagged automatically. If you notice any unauthorized access, contact your system administrator immediately.</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-
-            <!-- Tabs Right Aligned -->
-            <div class="row">
-                <div class="col-lg-12 col-md-12 col-sm-12 col-12">
-                    <div class="recent-post-wrapper notika-shadow mg-t-30">
+                <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                    <div class="recent-post-wrapper notika-shadow">
                         <div class="recent-post-ctn">
                             <div class="recent-post-title">
-                                <h2>Tabs Right Aligned</h2>
-                                <p>Simply include the class <code>.justify-content-end</code> to align the tab header to right side.</p>
+                                <h2>Pills Tabs</h2>
+                                <p>Rounded pill-style navigation using <code>.nav-pills</code> for a softer, modern look.</p>
                             </div>
                         </div>
                         <div class="recent-post-items">
-                            <ul class="nav nav-tabs justify-content-end" id="rightTabs" role="tablist">
+                            <ul class="nav nav-pills" id="pillsTabs" role="tablist">
                                 <li class="nav-item" role="presentation">
-                                    <button class="nav-link active" id="right-home-tab" data-bs-toggle="tab" data-bs-target="#right-home" type="button" role="tab" aria-controls="right-home" aria-selected="true">Tab Menu 1</button>
+                                    <button class="nav-link active" id="pills-overview-tab" data-bs-toggle="pill" data-bs-target="#pills-overview" type="button" role="tab" aria-controls="pills-overview" aria-selected="true">Overview</button>
                                 </li>
                                 <li class="nav-item" role="presentation">
-                                    <button class="nav-link" id="right-profile-tab" data-bs-toggle="tab" data-bs-target="#right-profile" type="button" role="tab" aria-controls="right-profile" aria-selected="false">Tab Menu 2</button>
+                                    <button class="nav-link" id="pills-reports-tab" data-bs-toggle="pill" data-bs-target="#pills-reports" type="button" role="tab" aria-controls="pills-reports" aria-selected="false">Reports</button>
                                 </li>
                                 <li class="nav-item" role="presentation">
-                                    <button class="nav-link" id="right-contact-tab" data-bs-toggle="tab" data-bs-target="#right-contact" type="button" role="tab" aria-controls="right-contact" aria-selected="false">Tab Menu 3</button>
+                                    <button class="nav-link" id="pills-analytics-tab" data-bs-toggle="pill" data-bs-target="#pills-analytics" type="button" role="tab" aria-controls="pills-analytics" aria-selected="false">Analytics</button>
                                 </li>
                             </ul>
-                            <div class="tab-content" id="rightTabsContent">
-                                <div class="tab-pane fade show active" id="right-home" role="tabpanel" aria-labelledby="right-home-tab">
+                            <div class="tab-content" id="pillsTabsContent">
+                                <div class="tab-pane fade show active" id="pills-overview" role="tabpanel" aria-labelledby="pills-overview-tab">
                                     <div class="tab-ctn">
-                                        <p>Duis arcu tortor, suscipit eget, imperdiet nec, imperdiet iaculis, ipsum. Vestibulum purus quam, scelerisque ut, mollis sed, nonummy id, metus. Nulla sit amet est. Praesent ac the massa at ligula laoreet iaculis. Vivamus aliquet elit ac nisl. Nulla porta dolor. Cras dapibus. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.</p>
-                                        <p class="tab-mg-b-0">In hac habitasse platea dictumst. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Nam eget dui. In ac felis quis tortor malesuadan of pretium. Phasellus consectetuer vestibulum elit. Duis lobortis massa imperdiet quam. Pellentesque commodo eros a enim. Vestibulum ante ipsum primis in faucibus orci the luctus et ultrices posuere cubilia Curae; In ac dui quis mi consectetuer lacinia. Phasellus a est. Pellentesque commodo eros a enim. Cras ultricies mi eu turpis hendrerit of fringilla. Donec mollis hendrerit risus. Vestibulum turpis sem, aliquet eget, lobortis pellentesque, rutrum eu, nisl. Praesent egestas neque eu enim. In hac habitasse plat.</p>
+                                        <p>Dashboard overview shows key performance indicators at a glance. Monitor real-time metrics including active users, server uptime, and revenue trends all from one centralized view.</p>
+                                        <p class="tab-mg-b-0">Widgets can be customized and rearranged to match your preferred workflow. Drag and drop to reorder, or use the settings panel to toggle visibility.</p>
                                     </div>
                                 </div>
-                                <div class="tab-pane fade" id="right-profile" role="tabpanel" aria-labelledby="right-profile-tab">
+                                <div class="tab-pane fade" id="pills-reports" role="tabpanel" aria-labelledby="pills-reports-tab">
                                     <div class="tab-ctn">
-                                        <p>Vestibulum purus quam, scelerisque ut, mollis sed, nonummy id, metus. Duis arcu tortor, suscipit eget, imperdiet nec, imperdiet iaculis, ipsum. Nulla sit amet est. Praesent ac the massa at ligula laoreet iaculis. Vivamus aliquet elit ac nisl. Nulla porta dolor. Cras dapibus. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.</p>
-                                        <p class="tab-mg-b-0">Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. In hac habitasse platea dictumst. Nam eget dui. In ac felis quis tortor malesuadan of pretium. Phasellus consectetuer vestibulum elit. Duis lobortis massa imperdiet quam. Pellentesque commodo eros a enim. Vestibulum ante ipsum primis in faucibus orci the luctus et ultrices posuere cubilia Curae; In ac dui quis mi consectetuer lacinia. Phasellus a est. Pellentesque commodo eros a enim. Cras ultricies mi eu turpis hendrerit of fringilla. Donec mollis hendrerit risus. Vestibulum turpis sem, aliquet eget, lobortis pellentesque, rutrum eu, nisl. Praesent egestas neque eu enim. In hac habitasse plat.</p>
+                                        <p>Generate and schedule detailed reports covering user engagement, financial summaries, and operational metrics. Reports can be exported as PDF, Excel, or shared via email.</p>
+                                        <p class="tab-mg-b-0">Automated reports run weekly and monthly. Configure custom report schedules from the Reports Configuration page.</p>
                                     </div>
                                 </div>
-                                <div class="tab-pane fade" id="right-contact" role="tabpanel" aria-labelledby="right-contact-tab">
+                                <div class="tab-pane fade" id="pills-analytics" role="tabpanel" aria-labelledby="pills-analytics-tab">
                                     <div class="tab-ctn">
-                                        <p>Praesent ac the massa at ligula laoreet iaculis. Duis arcu tortor, suscipit eget, imperdiet nec, imperdiet iaculis, ipsum. Vestibulum purus quam, scelerisque ut, mollis sed, nonummy id, metus. Nulla sit amet est. Vivamus aliquet elit ac nisl. Nulla porta dolor. Cras dapibus. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.</p>
-                                        <p class="tab-mg-b-0">Nam eget dui. In ac felis quis tortor malesuadan of pretium. In hac habitasse platea dictumst. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Phasellus consectetuer vestibulum elit. Duis lobortis massa imperdiet quam. Pellentesque commodo eros a enim. Vestibulum ante ipsum primis in faucibus orci the luctus et ultrices posuere cubilia Curae; In ac dui quis mi consectetuer lacinia. Phasellus a est. Pellentesque commodo eros a enim. Cras ultricies mi eu turpis hendrerit of fringilla. Donec mollis hendrerit risus. Vestibulum turpis sem, aliquet eget, lobortis pellentesque, rutrum eu, nisl. Praesent egestas neque eu enim. In hac habitasse plat.</p>
+                                        <p>Deep-dive analytics with interactive charts and data visualizations. Filter by date range, user segments, or custom dimensions to uncover actionable insights.</p>
+                                        <p class="tab-mg-b-0">Analytics data refreshes every 15 minutes. Historical data is available for the past 12 months with full export capabilities.</p>
                                     </div>
                                 </div>
                             </div>
@@ -651,83 +652,150 @@
                 </div>
             </div>
 
-            <!-- Tabs With Animations -->
-            <div class="row">
-                <div class="col-lg-12 col-md-12 col-sm-12 col-12">
-                    <div class="recent-post-wrapper notika-shadow mg-t-30">
+            <!-- Row 2: Icon Tabs + Justified Tabs -->
+            <div class="row mt-4">
+                <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                    <div class="recent-post-wrapper notika-shadow">
                         <div class="recent-post-ctn">
                             <div class="recent-post-title">
-                                <h2>Tabs With Animations</h2>
-                                <p>Add smooth animation effects when switching between tab panes.</p>
+                                <h2>Tabs with Icons</h2>
+                                <p>Enhance tab labels with Font Awesome icons for better visual identification.</p>
                             </div>
                         </div>
                         <div class="recent-post-items">
-                            <div class="row">
-                                <div class="col-lg-6">
-                                    <h5 class="mb-3">Slide Animation</h5>
-                                    <ul class="nav nav-tabs justify-content-center" id="slideTabs" role="tablist">
-                                        <li class="nav-item" role="presentation">
-                                            <button class="nav-link active" id="slide-home-tab" data-bs-toggle="tab" data-bs-target="#slide-home" type="button" role="tab" aria-controls="slide-home" aria-selected="true">Tab Menu 1</button>
-                                        </li>
-                                        <li class="nav-item" role="presentation">
-                                            <button class="nav-link" id="slide-profile-tab" data-bs-toggle="tab" data-bs-target="#slide-profile" type="button" role="tab" aria-controls="slide-profile" aria-selected="false">Tab Menu 2</button>
-                                        </li>
-                                        <li class="nav-item" role="presentation">
-                                            <button class="nav-link" id="slide-contact-tab" data-bs-toggle="tab" data-bs-target="#slide-contact" type="button" role="tab" aria-controls="slide-contact" aria-selected="false">Tab Menu 3</button>
-                                        </li>
-                                    </ul>
-                                    <div class="tab-content animated-tabs" id="slideTabsContent" data-animation="slide">
-                                        <div class="tab-pane fade show active" id="slide-home" role="tabpanel" aria-labelledby="slide-home-tab">
-                                            <div class="tab-ctn">
-                                                <p>Duis arcu tortor, suscipit eget, imperdiet nec, imperdiet iaculis, ipsum. Vestibulum of purus quam, scelerisque ut, mollis sed, nonummy id, metus. Nulla sit amet este. Praesent ac massa at ligula laoreet iaculis. Vivamus aliquet elit ac nisl. Nulla theportan dolor. Cras dapibus. Aliquam lorem ante, dapibus in, viverra quy, crydesfeugiat a, tellus.</p>
-                                                <p class="tab-mg-b-0">In hac habitasse platea dictumst. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Nam eget dui. In ac felis quis tortor malesuada pretium. Phasellus consectetuer vestibulum elit. Duis lobortis massantesan imperdiet quam. Pellentesque commodo eros a enim.</p>
-                                            </div>
-                                        </div>
-                                        <div class="tab-pane fade" id="slide-profile" role="tabpanel" aria-labelledby="slide-profile-tab">
-                                            <div class="tab-ctn">
-                                                <p>Vestibulum purus quam, scelerisque ut, mollis sed, nonummy id, metus. Duis arcu tortor, suscipit eget, imperdiet nec, imperdiet iaculis, ipsum. Nulla sit amet est. Praesent ac the massa at ligula laoreet iaculis. Vivamus aliquet elit ac nisl. Nulla porta dolor. Cras dapibus. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.</p>
-                                                <p class="tab-mg-b-0">Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. In hac habitasse platea dictumst. Nam eget dui. In ac felis quis tortor malesuada pretium. Phasellus consectetuer vestibulum elit. Duis lobortis massantesan imperdiet quam. Pellentesque commodo eros a enim.</p>
-                                            </div>
-                                        </div>
-                                        <div class="tab-pane fade" id="slide-contact" role="tabpanel" aria-labelledby="slide-contact-tab">
-                                            <div class="tab-ctn">
-                                                <p>Praesent ac the massa at ligula laoreet iaculis. Duis arcu tortor, suscipit eget, imperdiet nec, imperdiet iaculis, ipsum. Vestibulum purus quam, scelerisque ut, mollis sed, nonummy id, metus. Nulla sit amet est. Vivamus aliquet elit ac nisl. Nulla porta dolor. Cras dapibus. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.</p>
-                                                <p class="tab-mg-b-0">Nam eget dui. In ac felis quis tortor malesuadan of pretium. In hac habitasse platea dictumst. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Phasellus consectetuer vestibulum elit. Duis lobortis massantesan imperdiet quam. Pellentesque commodo eros a enim.</p>
-                                            </div>
-                                        </div>
+                            <ul class="nav nav-tabs" id="iconTabs" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link active" id="icon-home-tab" data-bs-toggle="tab" data-bs-target="#icon-home" type="button" role="tab" aria-controls="icon-home" aria-selected="true"><i class="fa-solid fa-house me-1"></i> Home</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="icon-user-tab" data-bs-toggle="tab" data-bs-target="#icon-user" type="button" role="tab" aria-controls="icon-user" aria-selected="false"><i class="fa-solid fa-user me-1"></i> Users</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="icon-gear-tab" data-bs-toggle="tab" data-bs-target="#icon-gear" type="button" role="tab" aria-controls="icon-gear" aria-selected="false"><i class="fa-solid fa-gear me-1"></i> Config</button>
+                                </li>
+                            </ul>
+                            <div class="tab-content" id="iconTabsContent">
+                                <div class="tab-pane fade show active" id="icon-home" role="tabpanel" aria-labelledby="icon-home-tab">
+                                    <div class="tab-ctn">
+                                        <p>Your home dashboard displays a personalized summary of tasks, notifications, and recent updates. Quick-access shortcuts let you jump to frequently used sections.</p>
+                                        <p class="tab-mg-b-0">The home view adapts based on your role and recent activity patterns for a tailored experience.</p>
                                     </div>
                                 </div>
-                                <div class="col-lg-6">
-                                    <h5 class="mb-3">Fade Animation</h5>
-                                    <ul class="nav nav-tabs justify-content-center" id="fadeTabs" role="tablist">
-                                        <li class="nav-item" role="presentation">
-                                            <button class="nav-link active" id="fade-home-tab" data-bs-toggle="tab" data-bs-target="#fade-home" type="button" role="tab" aria-controls="fade-home" aria-selected="true">Tab Menu 1</button>
-                                        </li>
-                                        <li class="nav-item" role="presentation">
-                                            <button class="nav-link" id="fade-profile-tab" data-bs-toggle="tab" data-bs-target="#fade-profile" type="button" role="tab" aria-controls="fade-profile" aria-selected="false">Tab Menu 2</button>
-                                        </li>
-                                        <li class="nav-item" role="presentation">
-                                            <button class="nav-link" id="fade-contact-tab" data-bs-toggle="tab" data-bs-target="#fade-contact" type="button" role="tab" aria-controls="fade-contact" aria-selected="false">Tab Menu 3</button>
-                                        </li>
-                                    </ul>
-                                    <div class="tab-content animated-tabs" id="fadeTabsContent" data-animation="fade-scale">
-                                        <div class="tab-pane fade show active" id="fade-home" role="tabpanel" aria-labelledby="fade-home-tab">
-                                            <div class="tab-ctn">
-                                                <p>Duis arcu tortor, suscipit eget, imperdiet nec, imperdiet iaculis, ipsum. Vestibulum of purus quam, scelerisque ut, mollis sed, nonummy id, metus. Nulla sit amet este. Praesent ac massa at ligula laoreet iaculis. Vivamus aliquet elit ac nisl. Nulla theportan dolor. Cras dapibus. Aliquam lorem ante, dapibus in, viverra quy, crydesfeugiat a, tellus.</p>
-                                                <p class="tab-mg-b-0">In hac habitasse platea dictumst. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Nam eget dui. In ac felis quis tortor malesuada pretium. Phasellus consectetuer vestibulum elit. Duis lobortis massantesan imperdiet quam. Pellentesque commodo eros a enim.</p>
-                                            </div>
+                                <div class="tab-pane fade" id="icon-user" role="tabpanel" aria-labelledby="icon-user-tab">
+                                    <div class="tab-ctn">
+                                        <p>Manage team members, roles, and permissions from the user management panel. Invite new users, assign groups, and monitor account status in real time.</p>
+                                        <p class="tab-mg-b-0">Bulk operations are available for managing large teams. Use CSV import for onboarding multiple users at once.</p>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="icon-gear" role="tabpanel" aria-labelledby="icon-gear-tab">
+                                    <div class="tab-ctn">
+                                        <p>System configuration options for administrators. Adjust global settings, manage integrations, and configure API access tokens securely.</p>
+                                        <p class="tab-mg-b-0">All configuration changes are logged in the audit trail. Use version comparison to review setting changes over time.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                    <div class="recent-post-wrapper notika-shadow">
+                        <div class="recent-post-ctn">
+                            <div class="recent-post-title">
+                                <h2>Justified Tabs</h2>
+                                <p>Use <code>.nav-fill</code> to make tabs stretch to fill the full available width.</p>
+                            </div>
+                        </div>
+                        <div class="recent-post-items">
+                            <ul class="nav nav-tabs nav-fill" id="justifiedTabs" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link active" id="just-first-tab" data-bs-toggle="tab" data-bs-target="#just-first" type="button" role="tab" aria-controls="just-first" aria-selected="true">First</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="just-second-tab" data-bs-toggle="tab" data-bs-target="#just-second" type="button" role="tab" aria-controls="just-second" aria-selected="false">Second</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="just-third-tab" data-bs-toggle="tab" data-bs-target="#just-third" type="button" role="tab" aria-controls="just-third" aria-selected="false">Third</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="just-fourth-tab" data-bs-toggle="tab" data-bs-target="#just-fourth" type="button" role="tab" aria-controls="just-fourth" aria-selected="false">Fourth</button>
+                                </li>
+                            </ul>
+                            <div class="tab-content" id="justifiedTabsContent">
+                                <div class="tab-pane fade show active" id="just-first" role="tabpanel" aria-labelledby="just-first-tab">
+                                    <div class="tab-ctn">
+                                        <p>Justified tabs distribute space equally across all items. This works well when you have a known number of tabs and want a balanced layout.</p>
+                                        <p class="tab-mg-b-0">Each tab takes an equal portion of the available horizontal space regardless of label length.</p>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="just-second" role="tabpanel" aria-labelledby="just-second-tab">
+                                    <div class="tab-ctn">
+                                        <p>The second tab demonstrates how content transitions smoothly between panes. Bootstrap 5 handles the show/hide animation natively with CSS transitions.</p>
+                                        <p class="tab-mg-b-0">Use the <code>.fade</code> class on tab panes to enable the built-in fade transition effect.</p>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="just-third" role="tabpanel" aria-labelledby="just-third-tab">
+                                    <div class="tab-ctn">
+                                        <p>Tabs can contain any HTML content including forms, tables, charts, and media. The tab container adapts its height to fit the active pane content.</p>
+                                        <p class="tab-mg-b-0">For performance-sensitive content, consider lazy-loading tab panes that contain heavy elements.</p>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="just-fourth" role="tabpanel" aria-labelledby="just-fourth-tab">
+                                    <div class="tab-ctn">
+                                        <p>Four or more tabs work best with justified layout to prevent horizontal scrolling on smaller screens. On mobile, tabs will stack naturally.</p>
+                                        <p class="tab-mg-b-0">Consider using a dropdown menu for overflow tabs on narrow viewports.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Row 3: Vertical Tabs (full width) -->
+            <div class="row mt-4">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                    <div class="recent-post-wrapper notika-shadow">
+                        <div class="recent-post-ctn">
+                            <div class="recent-post-title">
+                                <h2>Vertical Tabs</h2>
+                                <p>Side navigation layout using <code>.flex-column</code> pills with content on the right.</p>
+                            </div>
+                        </div>
+                        <div class="recent-post-items">
+                            <div class="d-flex align-items-start">
+                                <div class="nav flex-column nav-pills me-4" id="verticalTabs" role="tablist" aria-orientation="vertical" style="min-width: 160px;">
+                                    <button class="nav-link active text-start" id="vert-dashboard-tab" data-bs-toggle="pill" data-bs-target="#vert-dashboard" type="button" role="tab" aria-controls="vert-dashboard" aria-selected="true"><i class="fa-solid fa-gauge me-2"></i>Dashboard</button>
+                                    <button class="nav-link text-start" id="vert-orders-tab" data-bs-toggle="pill" data-bs-target="#vert-orders" type="button" role="tab" aria-controls="vert-orders" aria-selected="false"><i class="fa-solid fa-cart-shopping me-2"></i>Orders</button>
+                                    <button class="nav-link text-start" id="vert-products-tab" data-bs-toggle="pill" data-bs-target="#vert-products" type="button" role="tab" aria-controls="vert-products" aria-selected="false"><i class="fa-solid fa-box me-2"></i>Products</button>
+                                    <button class="nav-link text-start" id="vert-customers-tab" data-bs-toggle="pill" data-bs-target="#vert-customers" type="button" role="tab" aria-controls="vert-customers" aria-selected="false"><i class="fa-solid fa-users me-2"></i>Customers</button>
+                                </div>
+                                <div class="tab-content flex-grow-1" id="verticalTabsContent">
+                                    <div class="tab-pane fade show active" id="vert-dashboard" role="tabpanel" aria-labelledby="vert-dashboard-tab">
+                                        <div class="tab-ctn" style="margin-top: 0;">
+                                            <h5>Dashboard Overview</h5>
+                                            <p>The main dashboard provides a comprehensive view of your store's performance. Track sales, revenue, and visitor metrics through interactive charts and summary cards.</p>
+                                            <p class="tab-mg-b-0">Real-time data updates every 30 seconds. Use the date range picker to compare performance across different periods.</p>
                                         </div>
-                                        <div class="tab-pane fade" id="fade-profile" role="tabpanel" aria-labelledby="fade-profile-tab">
-                                            <div class="tab-ctn">
-                                                <p>Vestibulum purus quam, scelerisque ut, mollis sed, nonummy id, metus. Duis arcu tortor, suscipit eget, imperdiet nec, imperdiet iaculis, ipsum. Nulla sit amet est. Praesent ac the massa at ligula laoreet iaculis. Vivamus aliquet elit ac nisl. Nulla porta dolor. Cras dapibus. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.</p>
-                                                <p class="tab-mg-b-0">Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. In hac habitasse platea dictumst. Nam eget dui. In ac felis quis tortor malesuada pretium. Phasellus consectetuer vestibulum elit. Duis lobortis massantesan imperdiet quam. Pellentesque commodo eros a enim.</p>
-                                            </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="vert-orders" role="tabpanel" aria-labelledby="vert-orders-tab">
+                                        <div class="tab-ctn" style="margin-top: 0;">
+                                            <h5>Order Management</h5>
+                                            <p>View and manage all customer orders from a single interface. Filter by status (pending, processing, shipped, delivered) and search by order ID or customer name.</p>
+                                            <p class="tab-mg-b-0">Bulk actions allow you to update shipping status, print invoices, or send tracking notifications for multiple orders simultaneously.</p>
                                         </div>
-                                        <div class="tab-pane fade" id="fade-contact" role="tabpanel" aria-labelledby="fade-contact-tab">
-                                            <div class="tab-ctn">
-                                                <p>Praesent ac the massa at ligula laoreet iaculis. Duis arcu tortor, suscipit eget, imperdiet nec, imperdiet iaculis, ipsum. Vestibulum purus quam, scelerisque ut, mollis sed, nonummy id, metus. Nulla sit amet est. Vivamus aliquet elit ac nisl. Nulla porta dolor. Cras dapibus. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.</p>
-                                                <p class="tab-mg-b-0">Nam eget dui. In ac felis quis tortor malesuadan of pretium. In hac habitasse platea dictumst. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Phasellus consectetuer vestibulum elit. Duis lobortis massantesan imperdiet quam. Pellentesque commodo eros a enim.</p>
-                                            </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="vert-products" role="tabpanel" aria-labelledby="vert-products-tab">
+                                        <div class="tab-ctn" style="margin-top: 0;">
+                                            <h5>Product Catalog</h5>
+                                            <p>Manage your product inventory, pricing, and descriptions. Add new products with drag-and-drop image uploads and rich text descriptions.</p>
+                                            <p class="tab-mg-b-0">Inventory levels are tracked automatically. Low-stock alerts are sent when products fall below the configured threshold.</p>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="vert-customers" role="tabpanel" aria-labelledby="vert-customers-tab">
+                                        <div class="tab-ctn" style="margin-top: 0;">
+                                            <h5>Customer Directory</h5>
+                                            <p>Access detailed customer profiles including purchase history, communication preferences, and loyalty points. Segment customers for targeted marketing campaigns.</p>
+                                            <p class="tab-mg-b-0">Customer data complies with GDPR requirements. Export or delete customer records from the privacy management section.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -736,6 +804,163 @@
                     </div>
                 </div>
             </div>
+
+            <!-- Row 4: Color Scheme Tabs + Animated Tabs -->
+            <div class="row mt-4">
+                <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                    <div class="recent-post-wrapper notika-shadow">
+                        <div class="recent-post-ctn">
+                            <div class="recent-post-title">
+                                <h2>Color Scheme Tabs</h2>
+                                <p>Apply Notika brand colors using <code>data-tab-color</code> attribute on the nav element.</p>
+                            </div>
+                        </div>
+                        <div class="recent-post-items">
+                            <div class="mb-4">
+                                <h6 class="text-muted mb-2">Green (Primary)</h6>
+                                <ul class="nav nav-tabs" id="greenTabs" data-tab-color="nk-green" role="tablist">
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link active" id="green-1-tab" data-bs-toggle="tab" data-bs-target="#green-1" type="button" role="tab" aria-selected="true">Tab One</button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link" id="green-2-tab" data-bs-toggle="tab" data-bs-target="#green-2" type="button" role="tab" aria-selected="false">Tab Two</button>
+                                    </li>
+                                </ul>
+                                <div class="tab-content">
+                                    <div class="tab-pane fade show active" id="green-1" role="tabpanel"><div class="tab-ctn"><p class="tab-mg-b-0">Content styled with the primary green accent color (#00c292).</p></div></div>
+                                    <div class="tab-pane fade" id="green-2" role="tabpanel"><div class="tab-ctn"><p class="tab-mg-b-0">Second pane with consistent green theme applied to active tab indicator.</p></div></div>
+                                </div>
+                            </div>
+                            <div class="mb-4">
+                                <h6 class="text-muted mb-2">Blue (Info)</h6>
+                                <ul class="nav nav-tabs" id="blueTabs" data-tab-color="nk-blue" role="tablist">
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link active" id="blue-1-tab" data-bs-toggle="tab" data-bs-target="#blue-1" type="button" role="tab" aria-selected="true">Tab One</button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link" id="blue-2-tab" data-bs-toggle="tab" data-bs-target="#blue-2" type="button" role="tab" aria-selected="false">Tab Two</button>
+                                    </li>
+                                </ul>
+                                <div class="tab-content">
+                                    <div class="tab-pane fade show active" id="blue-1" role="tabpanel"><div class="tab-ctn"><p class="tab-mg-b-0">Content styled with the info blue accent color (#03a9f3).</p></div></div>
+                                    <div class="tab-pane fade" id="blue-2" role="tabpanel"><div class="tab-ctn"><p class="tab-mg-b-0">Second pane with consistent blue theme applied to active tab indicator.</p></div></div>
+                                </div>
+                            </div>
+                            <div class="mb-4">
+                                <h6 class="text-muted mb-2">Amber (Warning)</h6>
+                                <ul class="nav nav-tabs" id="amberTabs" data-tab-color="nk-amber" role="tablist">
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link active" id="amber-1-tab" data-bs-toggle="tab" data-bs-target="#amber-1" type="button" role="tab" aria-selected="true">Tab One</button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link" id="amber-2-tab" data-bs-toggle="tab" data-bs-target="#amber-2" type="button" role="tab" aria-selected="false">Tab Two</button>
+                                    </li>
+                                </ul>
+                                <div class="tab-content">
+                                    <div class="tab-pane fade show active" id="amber-1" role="tabpanel"><div class="tab-ctn"><p class="tab-mg-b-0">Content styled with the warning amber accent color (#ff9800).</p></div></div>
+                                    <div class="tab-pane fade" id="amber-2" role="tabpanel"><div class="tab-ctn"><p class="tab-mg-b-0">Second pane with consistent amber theme applied to active tab indicator.</p></div></div>
+                                </div>
+                            </div>
+                            <div>
+                                <h6 class="text-muted mb-2">Pink (Danger)</h6>
+                                <ul class="nav nav-tabs" id="pinkTabs" data-tab-color="nk-pink" role="tablist">
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link active" id="pink-1-tab" data-bs-toggle="tab" data-bs-target="#pink-1" type="button" role="tab" aria-selected="true">Tab One</button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link" id="pink-2-tab" data-bs-toggle="tab" data-bs-target="#pink-2" type="button" role="tab" aria-selected="false">Tab Two</button>
+                                    </li>
+                                </ul>
+                                <div class="tab-content">
+                                    <div class="tab-pane fade show active" id="pink-1" role="tabpanel"><div class="tab-ctn"><p class="tab-mg-b-0">Content styled with the danger pink accent color (#e91e63).</p></div></div>
+                                    <div class="tab-pane fade" id="pink-2" role="tabpanel"><div class="tab-ctn"><p class="tab-mg-b-0">Second pane with consistent pink theme applied to active tab indicator.</p></div></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                    <div class="recent-post-wrapper notika-shadow">
+                        <div class="recent-post-ctn">
+                            <div class="recent-post-title">
+                                <h2>Animated Tabs</h2>
+                                <p>Add smooth animation effects using the <code>data-animation</code> attribute on tab content.</p>
+                            </div>
+                        </div>
+                        <div class="recent-post-items">
+                            <div class="mb-4">
+                                <h6 class="text-muted mb-2">Slide Animation</h6>
+                                <ul class="nav nav-tabs" id="slideTabs" role="tablist">
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link active" id="slide-inbox-tab" data-bs-toggle="tab" data-bs-target="#slide-inbox" type="button" role="tab" aria-selected="true">Inbox</button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link" id="slide-sent-tab" data-bs-toggle="tab" data-bs-target="#slide-sent" type="button" role="tab" aria-selected="false">Sent</button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link" id="slide-drafts-tab" data-bs-toggle="tab" data-bs-target="#slide-drafts" type="button" role="tab" aria-selected="false">Drafts</button>
+                                    </li>
+                                </ul>
+                                <div class="tab-content animated-tabs" id="slideTabsContent" data-animation="slide">
+                                    <div class="tab-pane fade show active" id="slide-inbox" role="tabpanel" aria-labelledby="slide-inbox-tab">
+                                        <div class="tab-ctn">
+                                            <p>Your inbox contains 12 unread messages. Recent emails from team leads require attention before end of day.</p>
+                                            <p class="tab-mg-b-0">Use filters and labels to organize incoming messages efficiently.</p>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="slide-sent" role="tabpanel" aria-labelledby="slide-sent-tab">
+                                        <div class="tab-ctn">
+                                            <p>Sent folder shows all outgoing messages from the past 30 days. Track read receipts and delivery confirmations here.</p>
+                                            <p class="tab-mg-b-0">Messages older than 30 days are archived automatically.</p>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="slide-drafts" role="tabpanel" aria-labelledby="slide-drafts-tab">
+                                        <div class="tab-ctn">
+                                            <p>You have 3 saved drafts. Drafts are auto-saved every 60 seconds while composing to prevent data loss.</p>
+                                            <p class="tab-mg-b-0">Drafts sync across devices so you can start on desktop and finish on mobile.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <h6 class="text-muted mb-2">Fade &amp; Scale Animation</h6>
+                                <ul class="nav nav-tabs" id="fadeTabs" role="tablist">
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link active" id="fade-tasks-tab" data-bs-toggle="tab" data-bs-target="#fade-tasks" type="button" role="tab" aria-selected="true">Tasks</button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link" id="fade-notes-tab" data-bs-toggle="tab" data-bs-target="#fade-notes" type="button" role="tab" aria-selected="false">Notes</button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link" id="fade-files-tab" data-bs-toggle="tab" data-bs-target="#fade-files" type="button" role="tab" aria-selected="false">Files</button>
+                                    </li>
+                                </ul>
+                                <div class="tab-content animated-tabs" id="fadeTabsContent" data-animation="fade-scale">
+                                    <div class="tab-pane fade show active" id="fade-tasks" role="tabpanel" aria-labelledby="fade-tasks-tab">
+                                        <div class="tab-ctn">
+                                            <p>Active tasks for this sprint: 8 in progress, 3 pending review. Use the kanban board for drag-and-drop task management.</p>
+                                            <p class="tab-mg-b-0">Overdue tasks are highlighted in red on the timeline view.</p>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="fade-notes" role="tabpanel" aria-labelledby="fade-notes-tab">
+                                        <div class="tab-ctn">
+                                            <p>Shared notes and meeting minutes from the team. Use markdown formatting for rich text, and @mention teammates to notify them.</p>
+                                            <p class="tab-mg-b-0">Notes support real-time collaborative editing with up to 10 simultaneous users.</p>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="fade-files" role="tabpanel" aria-labelledby="fade-files-tab">
+                                        <div class="tab-ctn">
+                                            <p>Project files organized by category. Upload documents, images, and spreadsheets with drag-and-drop. Maximum file size: 25MB.</p>
+                                            <p class="tab-mg-b-0">Version history is maintained for all uploaded files. Restore previous versions from the file detail view.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
     <!-- Tabs Content Area End -->

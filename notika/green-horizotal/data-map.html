@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-page-module="data-map">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -14,10 +14,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-
-    <!-- Mobile Menu CSS -->
-    <link rel="stylesheet" href="css/mobile-menu.css">
-
     <!-- Font Awesome and all other CSS imported via Vite -->
     <!-- ONLY Vite entry point - everything else bundled -->
 </head>
@@ -563,25 +559,29 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 col-md-6 col-sm-6 col-12">
-                    <div class="data-map-single">
-                        <div id="basic_map"></div>
+                    <div class="notika-shadow mg-t-30" style="border-radius:8px;overflow:hidden;">
+                        <div style="padding:15px 20px;background:#fff;"><h5 style="margin:0;font-size:16px;font-weight:600;">Global Visitors</h5><p style="margin:4px 0 0;font-size:13px;color:#666;">Bubble size represents visitor volume</p></div>
+                        <div id="basic_map" style="height:300px;"></div>
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-6 col-12">
-                    <div class="data-map-single sm-res-mg-t-30">
-                        <div id="selected_map"></div>
+                    <div class="notika-shadow mg-t-30" style="border-radius:8px;overflow:hidden;">
+                        <div style="padding:15px 20px;background:#fff;"><h5 style="margin:0;font-size:16px;font-weight:600;">European Revenue</h5><p style="margin:4px 0 0;font-size:13px;color:#666;">Revenue data by major European city</p></div>
+                        <div id="selected_map" style="height:300px;"></div>
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-lg-6 col-md-6 col-sm-6 col-12">
-                    <div class="data-map-single mg-t-30">
-                        <div id="usa_map"></div>
+                    <div class="notika-shadow mg-t-30" style="border-radius:8px;overflow:hidden;">
+                        <div style="padding:15px 20px;background:#fff;"><h5 style="margin:0;font-size:16px;font-weight:600;">USA Active Users</h5><p style="margin:4px 0 0;font-size:13px;color:#666;">City-level user distribution with labels</p></div>
+                        <div id="usa_map" style="height:300px;"></div>
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-6 col-12">
-                    <div class="data-map-single mg-t-30">
-                        <div id="arc_map"></div>
+                    <div class="notika-shadow mg-t-30" style="border-radius:8px;overflow:hidden;">
+                        <div style="padding:15px 20px;background:#fff;"><h5 style="margin:0;font-size:16px;font-weight:600;">Data Flow Connections</h5><p style="margin:4px 0 0;font-size:13px;color:#666;">Traffic flow from HQ to global offices</p></div>
+                        <div id="arc_map" style="height:300px;"></div>
                     </div>
                 </div>
             </div>
@@ -606,7 +606,7 @@
     <!-- End Footer area-->
 
     <!-- ONLY VITE ENTRY POINT - Everything else bundled by Vite -->
-    <script type="module" src="/src/js/main.js"></script>
+    <script type="module" src="/src/js/pages/data-map.js"></script>
 
     <!-- Clean Navigation JavaScript -->
     <script>

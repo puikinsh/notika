@@ -1,3 +1,7 @@
+/**
+ * Tabs Page - Modern Vite Implementation
+ */
+
 import { NotikaApp } from '../main.js'
 
 class NotikaTabs extends NotikaApp {
@@ -9,6 +13,7 @@ class NotikaTabs extends NotikaApp {
         super.init()
         this.removeAllScrollbarRules()
         this.initAnimatedTabs()
+        this.initColorTabs()
         this.initTabAccessibility()
         this.initTooltips()
         console.log('✅ Notika Tabs initialized')
@@ -19,26 +24,64 @@ class NotikaTabs extends NotikaApp {
 
         animatedTabContainers.forEach(container => {
             const animation = container.dataset.animation || 'fade'
-            const tabPanes = container.querySelectorAll('.tab-pane')
-
-            // Find the parent tabs
             const parentId = container.id.replace('Content', '')
             const tabButtons = document.querySelectorAll(`#${parentId} button[data-bs-toggle="tab"]`)
 
             tabButtons.forEach(button => {
                 button.addEventListener('shown.bs.tab', (event) => {
                     const targetPane = document.querySelector(event.target.dataset.bsTarget)
+                    if (!targetPane) return
 
-                    if (targetPane && animation === 'slide') {
-                        targetPane.style.animation = 'slideInLeft 0.3s ease-out'
-                        setTimeout(() => {
-                            targetPane.style.animation = ''
-                        }, 300)
-                    } else if (targetPane && animation === 'fade-scale') {
-                        targetPane.style.animation = 'fadeInScale 0.3s ease-out'
-                        setTimeout(() => {
-                            targetPane.style.animation = ''
-                        }, 300)
+                    if (animation === 'slide') {
+                        targetPane.style.animation = 'nk-slideInLeft 0.3s ease-out'
+                    } else if (animation === 'fade-scale') {
+                        targetPane.style.animation = 'nk-fadeInScale 0.3s ease-out'
+                    }
+
+                    setTimeout(() => {
+                        targetPane.style.animation = ''
+                    }, 300)
+                })
+            })
+        })
+    }
+
+    initColorTabs() {
+        const colorMap = {
+            'nk-green': '#00c292',
+            'nk-blue': '#03a9f3',
+            'nk-amber': '#ff9800',
+            'nk-pink': '#e91e63'
+        }
+
+        document.querySelectorAll('[data-tab-color]').forEach(nav => {
+            const color = colorMap[nav.dataset.tabColor]
+            if (!color) return
+
+            const applyColor = () => {
+                nav.querySelectorAll('.nav-link').forEach(link => {
+                    if (link.classList.contains('active')) {
+                        link.style.color = color
+                        link.style.borderBottomColor = color
+                    } else {
+                        link.style.color = ''
+                        link.style.borderBottomColor = ''
+                    }
+                })
+            }
+
+            applyColor()
+
+            nav.querySelectorAll('.nav-link').forEach(link => {
+                link.addEventListener('shown.bs.tab', applyColor)
+                link.addEventListener('mouseenter', function () {
+                    if (!this.classList.contains('active')) {
+                        this.style.backgroundColor = color + '0D'
+                    }
+                })
+                link.addEventListener('mouseleave', function () {
+                    if (!this.classList.contains('active')) {
+                        this.style.backgroundColor = ''
                     }
                 })
             })
@@ -46,7 +89,6 @@ class NotikaTabs extends NotikaApp {
     }
 
     initTabAccessibility() {
-        // Add keyboard navigation to tabs
         const tabLists = document.querySelectorAll('[role="tablist"]')
 
         tabLists.forEach(tabList => {
@@ -85,7 +127,6 @@ class NotikaTabs extends NotikaApp {
     }
 
     initTooltips() {
-        // Initialize Bootstrap tooltips
         const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
         tooltipTriggerList.forEach(tooltipTriggerEl => {
             new bootstrap.Tooltip(tooltipTriggerEl)
@@ -93,7 +134,6 @@ class NotikaTabs extends NotikaApp {
     }
 
     removeAllScrollbarRules() {
-        // Remove custom scrollbar styles to restore native scrollbars
         const styleSheets = document.styleSheets
         for (let i = 0; i < styleSheets.length; i++) {
             try {
@@ -112,111 +152,30 @@ class NotikaTabs extends NotikaApp {
                     }
                 }
             } catch (e) {
-                // Some stylesheets may not be accessible due to CORS
                 continue
             }
         }
     }
 }
 
-// Add custom animations via CSS
+// Minimal CSS for animations and tab theming
 const style = document.createElement('style')
 style.textContent = `
-    @keyframes slideInLeft {
-        from {
-            opacity: 0;
-            transform: translateX(-20px);
-        }
-        to {
-            opacity: 1;
-            transform: translateX(0);
-        }
+    @keyframes nk-slideInLeft {
+        from { opacity: 0; transform: translateX(-20px); }
+        to { opacity: 1; transform: translateX(0); }
     }
-
-    @keyframes fadeInScale {
-        from {
-            opacity: 0;
-            transform: scale(0.95);
-        }
-        to {
-            opacity: 1;
-            transform: scale(1);
-        }
+    @keyframes nk-fadeInScale {
+        from { opacity: 0; transform: scale(0.95); }
+        to { opacity: 1; transform: scale(1); }
     }
-
-    .tab-pane {
-        will-change: opacity, transform;
-    }
-
-    .nav-tabs .nav-link {
-        transition: all 0.3s ease;
-        position: relative;
-        overflow: hidden;
-    }
-
-    .nav-tabs .nav-link:hover {
-        background-color: rgba(0, 194, 146, 0.05);
-    }
-
-    .nav-tabs .nav-link.active {
-        color: #00c292;
-        border-bottom: 2px solid #00c292;
-    }
-
-    .nav-tabs .nav-link:focus-visible {
-        outline: 2px solid #00c292;
-        outline-offset: -2px;
-    }
-
-    .tab-ctn {
-        padding: 20px 0;
-    }
-
-    .tab-mg-b-0 {
-        margin-bottom: 0 !important;
-    }
-
-    /* Custom tab styles */
-    .nav-tabs {
-        border-bottom: 1px solid #dee2e6;
-        margin-bottom: 20px;
-    }
-
-    .nav-tabs .nav-item {
-        margin-bottom: -1px;
-    }
-
-    .nav-tabs .nav-link {
-        border: 1px solid transparent;
-        border-top-left-radius: 0.25rem;
-        border-top-right-radius: 0.25rem;
-        padding: 0.5rem 1rem;
-    }
-
-    .nav-tabs .nav-link.active,
-    .nav-tabs .nav-item.show .nav-link {
-        color: #00c292;
-        background-color: #fff;
-        border-color: #dee2e6 #dee2e6 #fff;
-    }
-
-    /* Right aligned tabs */
-    .nav-tabs.justify-content-end {
-        border-bottom: 1px solid #dee2e6;
-    }
-
-    /* Center aligned tabs */
-    .nav-tabs.justify-content-center {
-        border-bottom: 1px solid #dee2e6;
-    }
-
-    /* Responsive adjustments */
-    @media (max-width: 768px) {
-        .nav-tabs .nav-link {
-            padding: 0.5rem 0.75rem;
-            font-size: 14px;
-        }
-    }
+    .tab-pane { will-change: opacity, transform; }
+    .nav-tabs .nav-link.active { color: #00c292; border-bottom-color: #00c292; }
+    .nav-tabs .nav-link:hover { background-color: rgba(0, 194, 146, 0.05); }
+    .nav-tabs .nav-link:focus-visible { outline: 2px solid #00c292; outline-offset: -2px; }
+    .nav-pills .nav-link.active { background-color: #00c292; }
+    .nav-pills .nav-link:hover:not(.active) { background-color: rgba(0, 194, 146, 0.08); }
+    .nav-pills .nav-link:focus-visible { outline: 2px solid #00c292; outline-offset: -2px; }
 `
 document.head.appendChild(style)
 

@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-page-module="dialog">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -559,97 +559,108 @@
     <!-- Breadcomb area End-->
 
     <!-- Dialog area Start-->
-    <div class="dialog-area">
+    <div class="dialog-area mg-b-15">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-6 col-md-6 col-sm-6 col-12">
-                    <div class="dialog-inner">
-                        <div class="contact-hd dialog-hd">
-                            <h2>Basic Dialog Example</h2>
-                            <p>A beautiful replacement for Javascript's boring dialog Alert</p>
+            <div class="row g-4 pt-3">
+                <!-- Basic Alert -->
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="dialog-card">
+                        <div class="dialog-card-icon dialog-card-icon--info">
+                            <i class="fa-solid fa-circle-info"></i>
                         </div>
-                        <div class="dialog-pro dialog">
-                            <button class="btn btn-info" id="sa-basic">Click me</button>
-                        </div>
+                        <h5 class="dialog-card-title">Basic Alert</h5>
+                        <p class="dialog-card-desc">A simple informational dialog with a single action button.</p>
+                        <button class="btn btn-info" id="sa-basic">Try it</button>
                     </div>
                 </div>
-                <div class="col-lg-6 col-md-6 col-sm-6 col-12">
-                    <div class="dialog-inner sm-res-mg-t-30">
-                        <div class="contact-hd dialog-hd">
-                            <h2>Dialog title with a text under</h2>
-                            <p>A beautiful replacement for Javascript's boring dialog Alert</p>
+
+                <!-- Title with Text -->
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="dialog-card">
+                        <div class="dialog-card-icon dialog-card-icon--primary">
+                            <i class="fa-solid fa-heading"></i>
                         </div>
-                        <div class="dialog-pro dialog">
-                            <button class="btn btn-info" id="sa-title">Click me</button>
-                        </div>
+                        <h5 class="dialog-card-title">Title with Text</h5>
+                        <p class="dialog-card-desc">A dialog with a bold title and descriptive text underneath.</p>
+                        <button class="btn btn-primary" id="sa-title">Try it</button>
                     </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-6 col-md-6 col-sm-6 col-12">
-                    <div class="dialog-inner mg-t-30">
-                        <div class="contact-hd dialog-hd">
-                            <h2>Dialog success message!</h2>
-                            <p>A beautiful replacement for Javascript's boring dialog Alert</p>
+
+                <!-- Success Message -->
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="dialog-card">
+                        <div class="dialog-card-icon dialog-card-icon--success">
+                            <i class="fa-solid fa-circle-check"></i>
                         </div>
-                        <div class="dialog-pro dialog">
-                            <button class="btn btn-info" id="sa-success">Click me</button>
-                        </div>
+                        <h5 class="dialog-card-title">Success Message</h5>
+                        <p class="dialog-card-desc">A confirmation dialog indicating a successful operation.</p>
+                        <button class="btn btn-success" id="sa-success">Try it</button>
                     </div>
                 </div>
-                <div class="col-lg-6 col-md-6 col-sm-6 col-12">
-                    <div class="dialog-inner mg-t-30">
-                        <div class="contact-hd dialog-hd">
-                            <h2>Dialog warning message</h2>
-                            <p>A warning message, with a function attached to the "Confirm"-button...</p>
+
+                <!-- Warning / Confirm -->
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="dialog-card">
+                        <div class="dialog-card-icon dialog-card-icon--warning">
+                            <i class="fa-solid fa-triangle-exclamation"></i>
                         </div>
-                        <div class="dialog-pro dialog">
-                            <button class="btn btn-info" id="sa-warning">Click me</button>
-                        </div>
+                        <h5 class="dialog-card-title">Warning Confirm</h5>
+                        <p class="dialog-card-desc">A warning with Confirm and Cancel buttons that trigger callbacks.</p>
+                        <button class="btn btn-warning" id="sa-warning">Try it</button>
                     </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-6 col-md-6 col-sm-6 col-12">
-                    <div class="dialog-inner mg-t-30">
-                        <div class="contact-hd dialog-hd">
-                            <h2>Dialog passing a parameter</h2>
-                            <p>By passing a parameter, you can execute something else for "Cancel".</p>
+
+                <!-- Parameter Passing -->
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="dialog-card">
+                        <div class="dialog-card-icon dialog-card-icon--danger">
+                            <i class="fa-solid fa-code-branch"></i>
                         </div>
-                        <div class="dialog-pro dialog">
-                            <button class="btn btn-info" id="sa-params">Click me</button>
-                        </div>
+                        <h5 class="dialog-card-title">Cancel Callback</h5>
+                        <p class="dialog-card-desc">Execute different actions based on whether the user confirms or cancels.</p>
+                        <button class="btn btn-danger" id="sa-params">Try it</button>
                     </div>
                 </div>
-                <div class="col-lg-6 col-md-6 col-sm-6 col-12">
-                    <div class="dialog-inner mg-t-30">
-                        <div class="contact-hd dialog-hd">
-                            <h2>Dialog Image Header</h2>
-                            <p>A message with custom Image Header</p>
+
+                <!-- Image Header -->
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="dialog-card">
+                        <div class="dialog-card-icon dialog-card-icon--purple">
+                            <i class="fa-solid fa-image"></i>
                         </div>
-                        <div class="dialog-pro dialog">
-                            <button class="btn btn-info" id="sa-image">Click me</button>
-                        </div>
+                        <h5 class="dialog-card-title">Image Header</h5>
+                        <p class="dialog-card-desc">A dialog with a custom image displayed in the header area.</p>
+                        <button class="btn btn-secondary" id="sa-image">Try it</button>
                     </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12 col-md-12 col-sm-12 col-12">
-                    <div class="dialog-inner mg-t-30">
-                        <div class="contact-hd dialog-hd">
-                            <h2>Dialog auto close timer</h2>
-                            <p>A message with auto close timer.</p>
+
+                <!-- Auto Close Timer -->
+                <div class="col-lg-6 col-md-6 col-12">
+                    <div class="dialog-card">
+                        <div class="dialog-card-icon dialog-card-icon--teal">
+                            <i class="fa-solid fa-clock"></i>
                         </div>
-                        <div class="dialog-pro dialog">
-                            <button class="btn btn-info" id="sa-close">Click me</button>
+                        <h5 class="dialog-card-title">Auto Close Timer</h5>
+                        <p class="dialog-card-desc">This dialog automatically closes after a countdown timer expires.</p>
+                        <button class="btn btn-outline-dark" id="sa-close">Try it</button>
+                    </div>
+                </div>
+
+                <!-- Input Dialog -->
+                <div class="col-lg-6 col-md-6 col-12">
+                    <div class="dialog-card">
+                        <div class="dialog-card-icon dialog-card-icon--info">
+                            <i class="fa-solid fa-keyboard"></i>
                         </div>
+                        <h5 class="dialog-card-title">Input Prompt</h5>
+                        <p class="dialog-card-desc">A dialog with a text input field that captures user input.</p>
+                        <button class="btn btn-outline-info" id="sa-input">Try it</button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <!-- Dialog area End-->
-    <!-- Start Footer area-->
 
     <!-- Footer area Start-->
     <div class="footer-copyright-area">
@@ -666,52 +677,7 @@
     </div>
     <!-- End Footer area-->
 
-    <!-- ONLY VITE ENTRY POINT - Everything else bundled by Vite -->
-    <script type="module" src="/src/js/main.js"></script>
-
-    <!-- Clean Navigation JavaScript -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Search functionality
-            const searchInput = document.querySelector('.search-dropdown input');
-            if (searchInput) {
-                const searchTrigger = searchInput.closest('.dropdown').querySelector('[data-bs-toggle="dropdown"]');
-                if (searchTrigger) {
-                    searchTrigger.addEventListener('shown.bs.dropdown', function() {
-                        setTimeout(() => searchInput.focus(), 100);
-                    });
-                }
-
-                searchInput.addEventListener('keypress', function(e) {
-                    if (e.key === 'Enter' && this.value.trim()) {
-                        console.log('Searching for:', this.value);
-                    }
-                });
-            }
-
-            // Simple navbar dropdown enhancements
-            const navDropdowns = document.querySelectorAll('.notika-navbar .dropdown');
-
-            navDropdowns.forEach(dropdown => {
-                const toggle = dropdown.querySelector('.dropdown-toggle');
-
-                // Add subtle click feedback
-                if (toggle) {
-                    toggle.addEventListener('click', function(e) {
-                        // Don't navigate away, just toggle dropdown
-                        e.preventDefault();
-
-                        // Quick visual feedback
-                        this.style.transform = 'scale(0.98)';
-                        setTimeout(() => {
-                            this.style.transform = '';
-                        }, 100);
-                    });
-                }
-            });
-
-            console.log('✅ Stable navigation system initialized');
-        });
-    </script>
+    <!-- Page-specific module -->
+    <script type="module" src="/src/js/pages/dialog.js"></script>
 </body>
 </html>
