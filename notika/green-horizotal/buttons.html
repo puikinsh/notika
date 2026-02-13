@@ -10,13 +10,11 @@
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
 
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700,900" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 
     <!-- Essential Notika Template CSS -->
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/notika-custom-icon.css">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="css/responsive.css">
 </head>
 
 <body>
@@ -43,12 +41,12 @@
                         <!-- Search -->
                         <div class="dropdown">
                             <button class="notika-nav-link" type="button" data-bs-toggle="dropdown" data-bs-auto-close="outside">
-                                <i class="notika-icon notika-search"></i>
+                                <i class="fa-solid fa-magnifying-glass"></i>
                             </button>
                             <div class="dropdown-menu dropdown-menu-end notika-dropdown search-dropdown">
                                 <div class="search-input-group">
                                     <input type="text" placeholder="Search anything..." class="form-control">
-                                    <i class="notika-icon notika-search search-icon"></i>
+                                    <i class="fa-solid fa-magnifying-glass search-icon"></i>
                                 </div>
                             </div>
                         </div>
@@ -56,7 +54,7 @@
                         <!-- Messages -->
                         <div class="dropdown">
                             <button class="notika-nav-link position-relative" type="button" data-bs-toggle="dropdown">
-                                <i class="notika-icon notika-mail"></i>
+                                <i class="fa-solid fa-envelope"></i>
                                 <span class="notika-badge">5</span>
                             </button>
                             <div class="dropdown-menu dropdown-menu-end notika-dropdown">
@@ -95,7 +93,7 @@
                         <!-- Notifications -->
                         <div class="dropdown">
                             <button class="notika-nav-link position-relative" type="button" data-bs-toggle="dropdown">
-                                <i class="notika-icon notika-alarm"></i>
+                                <i class="fa-solid fa-bell"></i>
                                 <span class="notika-badge">3</span>
                             </button>
                             <div class="dropdown-menu dropdown-menu-end notika-dropdown">
@@ -105,7 +103,7 @@
                                 <div class="notika-dropdown-body">
                                     <a class="notika-dropdown-item" href="notification.html">
                                         <div class="bg-success text-white rounded-circle d-flex align-items-center justify-content-center" style="width: 35px; height: 35px; margin-right: 12px;">
-                                            <i class="notika-icon notika-success" style="font-size: 14px;"></i>
+                                            <i class="fa-solid fa-circle-check" style="font-size: 14px;"></i>
                                         </div>
                                         <div class="notika-dropdown-content">
                                             <h6>Task Completed</h6>
@@ -114,7 +112,7 @@
                                     </a>
                                     <a class="notika-dropdown-item" href="notification.html">
                                         <div class="bg-warning text-white rounded-circle d-flex align-items-center justify-content-center" style="width: 35px; height: 35px; margin-right: 12px;">
-                                            <i class="notika-icon notika-alarm" style="font-size: 14px;"></i>
+                                            <i class="fa-solid fa-bell" style="font-size: 14px;"></i>
                                         </div>
                                         <div class="notika-dropdown-content">
                                             <h6>Server Alert</h6>
@@ -123,7 +121,7 @@
                                     </a>
                                     <a class="notika-dropdown-item" href="notification.html">
                                         <div class="bg-info text-white rounded-circle d-flex align-items-center justify-content-center" style="width: 35px; height: 35px; margin-right: 12px;">
-                                            <i class="notika-icon notika-chat" style="font-size: 14px;"></i>
+                                            <i class="fa-solid fa-message" style="font-size: 14px;"></i>
                                         </div>
                                         <div class="notika-dropdown-content">
                                             <h6>New Message</h6>
@@ -140,7 +138,7 @@
                         <!-- Tasks - Desktop Only -->
                         <div class="dropdown d-none d-lg-block">
                             <button class="notika-nav-link position-relative" type="button" data-bs-toggle="dropdown">
-                                <i class="notika-icon notika-todo"></i>
+                                <i class="fa-solid fa-list-check"></i>
                                 <span class="notika-badge">2</span>
                             </button>
                             <div class="dropdown-menu dropdown-menu-end notika-dropdown" style="min-width: 280px;">
@@ -185,7 +183,7 @@
                         <!-- Chat -->
                         <div class="dropdown">
                             <button class="notika-nav-link" type="button" data-bs-toggle="dropdown">
-                                <i class="notika-icon notika-chat"></i>
+                                <i class="fa-solid fa-message"></i>
                             </button>
                             <div class="dropdown-menu dropdown-menu-end notika-dropdown">
                                 <div class="notika-dropdown-header">
@@ -229,7 +227,7 @@
 
                         <!-- Mobile Menu Toggle -->
                         <button class="notika-nav-link d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileNavOffcanvas" aria-controls="mobileNavOffcanvas">
-                            <i class="notika-icon notika-menus"></i>
+                            <i class="fa-solid fa-bars"></i>
                         </button>
                     </div>
                 </div>
@@ -246,8 +244,8 @@
 
                     <!-- Home Dropdown -->
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <i class="notika-icon notika-house"></i>
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa-solid fa-house"></i>
                             <span>Home</span>
                         </a>
                         <ul class="dropdown-menu">
@@ -264,7 +262,7 @@
                     <!-- Email Dropdown -->
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <i class="notika-icon notika-mail"></i>
+                            <i class="fa-solid fa-envelope"></i>
                             <span>Email</span>
                         </a>
                         <ul class="dropdown-menu">
@@ -277,7 +275,7 @@
                     <!-- Interface Dropdown -->
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <i class="notika-icon notika-edit"></i>
+                            <i class="fa-solid fa-pen-to-square"></i>
                             <span>Interface</span>
                         </a>
                         <ul class="dropdown-menu">
@@ -293,7 +291,7 @@
                     <!-- Charts Dropdown -->
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <i class="notika-icon notika-bar-chart"></i>
+                            <i class="fa-solid fa-chart-column"></i>
                             <span>Charts</span>
                         </a>
                         <ul class="dropdown-menu">
@@ -307,7 +305,7 @@
                     <!-- Tables Dropdown -->
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <i class="notika-icon notika-windows"></i>
+                            <i class="fa-solid fa-table-columns"></i>
                             <span>Tables</span>
                         </a>
                         <ul class="dropdown-menu">
@@ -319,7 +317,7 @@
                     <!-- Forms Dropdown -->
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <i class="notika-icon notika-form"></i>
+                            <i class="fa-solid fa-file-lines"></i>
                             <span>Forms</span>
                         </a>
                         <ul class="dropdown-menu">
@@ -331,8 +329,8 @@
 
                     <!-- Components Dropdown -->
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <i class="notika-icon notika-app"></i>
+                        <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa-solid fa-cube"></i>
                             <span>Components</span>
                         </a>
                         <ul class="dropdown-menu">
@@ -352,7 +350,7 @@
                     <!-- Pages Dropdown -->
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <i class="notika-icon notika-more"></i>
+                            <i class="fa-solid fa-ellipsis"></i>
                             <span>Pages</span>
                         </a>
                         <ul class="dropdown-menu">
@@ -386,8 +384,8 @@
                 <!-- Home Section -->
                 <div class="nav-item border-bottom">
                     <a class="nav-link d-flex align-items-center justify-content-between px-3 py-2" data-bs-toggle="collapse" href="#mobileHomeMenu" role="button" aria-expanded="false">
-                        <span><i class="notika-icon notika-house me-2"></i> Home</span>
-                        <i class="fa fa-chevron-down small"></i>
+                        <span><i class="fa-solid fa-house me-2"></i> Home</span>
+                        <i class="fa-solid fa-chevron-down small"></i>
                     </a>
                     <div class="collapse" id="mobileHomeMenu">
                         <div class="nav flex-column ps-4">
@@ -404,8 +402,8 @@
                 <!-- Email Section -->
                 <div class="nav-item border-bottom">
                     <a class="nav-link d-flex align-items-center justify-content-between px-3 py-2" data-bs-toggle="collapse" href="#mobileEmailMenu" role="button" aria-expanded="false">
-                        <span><i class="notika-icon notika-mail me-2"></i> Email</span>
-                        <i class="fa fa-chevron-down small"></i>
+                        <span><i class="fa-solid fa-envelope me-2"></i> Email</span>
+                        <i class="fa-solid fa-chevron-down small"></i>
                     </a>
                     <div class="collapse" id="mobileEmailMenu">
                         <div class="nav flex-column ps-4">
@@ -419,8 +417,8 @@
                 <!-- Interface Section -->
                 <div class="nav-item border-bottom">
                     <a class="nav-link d-flex align-items-center justify-content-between px-3 py-2" data-bs-toggle="collapse" href="#mobileInterfaceMenu" role="button" aria-expanded="false">
-                        <span><i class="notika-icon notika-edit me-2"></i> Interface</span>
-                        <i class="fa fa-chevron-down small"></i>
+                        <span><i class="fa-solid fa-pen-to-square me-2"></i> Interface</span>
+                        <i class="fa-solid fa-chevron-down small"></i>
                     </a>
                     <div class="collapse" id="mobileInterfaceMenu">
                         <div class="nav flex-column ps-4">
@@ -437,8 +435,8 @@
                 <!-- Charts Section -->
                 <div class="nav-item border-bottom">
                     <a class="nav-link d-flex align-items-center justify-content-between px-3 py-2" data-bs-toggle="collapse" href="#mobileChartsMenu" role="button" aria-expanded="false">
-                        <span><i class="notika-icon notika-bar-chart me-2"></i> Charts</span>
-                        <i class="fa fa-chevron-down small"></i>
+                        <span><i class="fa-solid fa-chart-column me-2"></i> Charts</span>
+                        <i class="fa-solid fa-chevron-down small"></i>
                     </a>
                     <div class="collapse" id="mobileChartsMenu">
                         <div class="nav flex-column ps-4">
@@ -453,8 +451,8 @@
                 <!-- Tables Section -->
                 <div class="nav-item border-bottom">
                     <a class="nav-link d-flex align-items-center justify-content-between px-3 py-2" data-bs-toggle="collapse" href="#mobileTablesMenu" role="button" aria-expanded="false">
-                        <span><i class="notika-icon notika-windows me-2"></i> Tables</span>
-                        <i class="fa fa-chevron-down small"></i>
+                        <span><i class="fa-solid fa-table-columns me-2"></i> Tables</span>
+                        <i class="fa-solid fa-chevron-down small"></i>
                     </a>
                     <div class="collapse" id="mobileTablesMenu">
                         <div class="nav flex-column ps-4">
@@ -467,8 +465,8 @@
                 <!-- Forms Section -->
                 <div class="nav-item border-bottom">
                     <a class="nav-link d-flex align-items-center justify-content-between px-3 py-2" data-bs-toggle="collapse" href="#mobileFormsMenu" role="button" aria-expanded="false">
-                        <span><i class="notika-icon notika-form me-2"></i> Forms</span>
-                        <i class="fa fa-chevron-down small"></i>
+                        <span><i class="fa-solid fa-file-lines me-2"></i> Forms</span>
+                        <i class="fa-solid fa-chevron-down small"></i>
                     </a>
                     <div class="collapse" id="mobileFormsMenu">
                         <div class="nav flex-column ps-4">
@@ -482,8 +480,8 @@
                 <!-- Components Section -->
                 <div class="nav-item border-bottom">
                     <a class="nav-link d-flex align-items-center justify-content-between px-3 py-2" data-bs-toggle="collapse" href="#mobileComponentsMenu" role="button" aria-expanded="false">
-                        <span><i class="notika-icon notika-app me-2"></i> Components</span>
-                        <i class="fa fa-chevron-down small"></i>
+                        <span><i class="fa-solid fa-cube me-2"></i> Components</span>
+                        <i class="fa-solid fa-chevron-down small"></i>
                     </a>
                     <div class="collapse" id="mobileComponentsMenu">
                         <div class="nav flex-column ps-4">
@@ -504,8 +502,8 @@
                 <!-- Pages Section -->
                 <div class="nav-item border-bottom">
                     <a class="nav-link d-flex align-items-center justify-content-between px-3 py-2" data-bs-toggle="collapse" href="#mobilePagesMenu" role="button" aria-expanded="false">
-                        <span><i class="notika-icon notika-more me-2"></i> Pages</span>
-                        <i class="fa fa-chevron-down small"></i>
+                        <span><i class="fa-solid fa-ellipsis me-2"></i> Pages</span>
+                        <i class="fa-solid fa-chevron-down small"></i>
                     </a>
                     <div class="collapse" id="mobilePagesMenu">
                         <div class="nav flex-column ps-4">
@@ -532,7 +530,7 @@
                             <div class="col-lg-6 col-md-6 col-sm-6 col-12">
                                 <div class="breadcomb-wp">
                                     <div class="breadcomb-icon">
-                                        <i class="notika-icon notika-app"></i>
+                                        <i class="fa-solid fa-cube"></i>
                                     </div>
                                     <div class="breadcomb-ctn">
                                         <h2>Buttons</h2>
@@ -542,7 +540,7 @@
                             </div>
                             <div class="col-lg-6 col-md-6 col-sm-6 col-12">
                                 <div class="breadcomb-report">
-                                    <button data-bs-toggle="tooltip" data-placement="left" title="Download Report" class="btn"><i class="notika-icon notika-sent"></i></button>
+                                    <button data-bs-toggle="tooltip" data-placement="left" title="Download Report" class="btn"><i class="fa-solid fa-paper-plane"></i></button>
                                 </div>
                             </div>
                         </div>
@@ -709,84 +707,84 @@
                         </div>
                         <div class="recent-post-items">
                             <div class="button-icon-btn">
-                                <button class="btn btn-default btn-icon-notika waves-effect"><i class="notika-icon notika-house"></i> Home</button>
-                                <button class="btn btn-default btn-icon-notika waves-effect"><i class="notika-icon notika-search"></i> Search</button>
-                                <button class="btn btn-default btn-icon-notika waves-effect"><i class="notika-icon notika-menu"></i> More</button>
-                                <button class="btn btn-default btn-icon-notika waves-effect"><i class="notika-icon notika-right-arrow"></i> Forward</button>
-                                <button class="btn btn-default btn-icon-notika waves-effect"><i class="notika-icon notika-left-arrow"></i> Back</button>
-                                <button class="btn btn-default btn-icon-notika waves-effect"><i class="notika-icon notika-refresh"></i> Sync</button>
-                                <button class="btn btn-default btn-icon-notika waves-effect"><i class="notika-icon notika-checked"></i> Check</button>
-                                <button class="btn btn-default btn-icon-notika waves-effect"><i class="notika-icon notika-close"></i> Close</button>
-                                <button class="btn btn-default btn-icon-notika waves-effect"><i class="notika-icon notika-menus"></i> Menu</button>
-                                <button class="btn btn-default btn-icon-notika waves-effect"><i class="notika-icon notika-star"></i> Apps</button>
-                                <button class="btn btn-default btn-icon-notika waves-effect"><i class="notika-icon notika-down-arrow"></i> Done</button>
-                                <button class="btn btn-default btn-icon-notika waves-effect"><i class="notika-icon notika-up-arrow"></i> Up</button>
-                                <button class="btn btn-default btn-icon-notika waves-effect"><i class="notika-icon notika-next"></i> Get</button>
-                                <button class="btn btn-default btn-icon-notika waves-effect"><i class="notika-icon notika-phone"></i> Call</button>
+                                <button class="btn btn-default btn-icon-notika waves-effect"><i class="fa-solid fa-house"></i> Home</button>
+                                <button class="btn btn-default btn-icon-notika waves-effect"><i class="fa-solid fa-magnifying-glass"></i> Search</button>
+                                <button class="btn btn-default btn-icon-notika waves-effect"><i class="fa-solid fa-bars"></i> More</button>
+                                <button class="btn btn-default btn-icon-notika waves-effect"><i class="fa-solid fa-chevron-right"></i> Forward</button>
+                                <button class="btn btn-default btn-icon-notika waves-effect"><i class="fa-solid fa-chevron-left"></i> Back</button>
+                                <button class="btn btn-default btn-icon-notika waves-effect"><i class="fa-solid fa-arrows-rotate"></i> Sync</button>
+                                <button class="btn btn-default btn-icon-notika waves-effect"><i class="fa-solid fa-check"></i> Check</button>
+                                <button class="btn btn-default btn-icon-notika waves-effect"><i class="fa-solid fa-xmark"></i> Close</button>
+                                <button class="btn btn-default btn-icon-notika waves-effect"><i class="fa-solid fa-bars"></i> Menu</button>
+                                <button class="btn btn-default btn-icon-notika waves-effect"><i class="fa-solid fa-star"></i> Apps</button>
+                                <button class="btn btn-default btn-icon-notika waves-effect"><i class="fa-solid fa-chevron-down"></i> Done</button>
+                                <button class="btn btn-default btn-icon-notika waves-effect"><i class="fa-solid fa-chevron-up"></i> Up</button>
+                                <button class="btn btn-default btn-icon-notika waves-effect"><i class="fa-solid fa-chevron-right"></i> Get</button>
+                                <button class="btn btn-default btn-icon-notika waves-effect"><i class="fa-solid fa-phone"></i> Call</button>
                             </div>
                             <div class="button-icon-btn mg-t-30 butt-mg-t-20">
-                                <button class="btn btn-default btn-icon-notika waves-effect waves-circle"><i class="notika-icon notika-house"></i></button>
-                                <button class="btn btn-default btn-icon-notika waves-effect waves-circle"><i class="notika-icon notika-search"></i></button>
-                                <button class="btn btn-default btn-icon-notika waves-effect waves-circle"><i class="notika-icon notika-menu"></i></button>
-                                <button class="btn btn-default btn-icon-notika waves-effect waves-circle"><i class="notika-icon notika-right-arrow"></i></button>
-                                <button class="btn btn-default btn-icon-notika waves-effect waves-circle"><i class="notika-icon notika-left-arrow"></i></button>
-                                <button class="btn btn-default btn-icon-notika waves-effect waves-circle"><i class="notika-icon notika-refresh"></i></button>
-                                <button class="btn btn-default btn-icon-notika waves-effect waves-circle"><i class="notika-icon notika-checked"></i></button>
-                                <button class="btn btn-default btn-icon-notika waves-effect waves-circle"><i class="notika-icon notika-close"></i></button>
-                                <button class="btn btn-default btn-icon-notika waves-effect waves-circle"><i class="notika-icon notika-menus"></i></button>
-                                <button class="btn btn-default btn-icon-notika waves-effect waves-circle"><i class="notika-icon notika-star"></i></button>
-                                <button class="btn btn-default btn-icon-notika waves-effect waves-circle"><i class="notika-icon notika-down-arrow"></i></button>
-                                <button class="btn btn-default btn-icon-notika waves-effect waves-circle"><i class="notika-icon notika-up-arrow"></i></button>
-                                <button class="btn btn-default btn-icon-notika waves-effect waves-circle"><i class="notika-icon notika-next"></i></button>
-                                <button class="btn btn-default btn-icon-notika waves-effect waves-circle"><i class="notika-icon notika-phone"></i></button>
+                                <button class="btn btn-default btn-icon-notika waves-effect waves-circle"><i class="fa-solid fa-house"></i></button>
+                                <button class="btn btn-default btn-icon-notika waves-effect waves-circle"><i class="fa-solid fa-magnifying-glass"></i></button>
+                                <button class="btn btn-default btn-icon-notika waves-effect waves-circle"><i class="fa-solid fa-bars"></i></button>
+                                <button class="btn btn-default btn-icon-notika waves-effect waves-circle"><i class="fa-solid fa-chevron-right"></i></button>
+                                <button class="btn btn-default btn-icon-notika waves-effect waves-circle"><i class="fa-solid fa-chevron-left"></i></button>
+                                <button class="btn btn-default btn-icon-notika waves-effect waves-circle"><i class="fa-solid fa-arrows-rotate"></i></button>
+                                <button class="btn btn-default btn-icon-notika waves-effect waves-circle"><i class="fa-solid fa-check"></i></button>
+                                <button class="btn btn-default btn-icon-notika waves-effect waves-circle"><i class="fa-solid fa-xmark"></i></button>
+                                <button class="btn btn-default btn-icon-notika waves-effect waves-circle"><i class="fa-solid fa-bars"></i></button>
+                                <button class="btn btn-default btn-icon-notika waves-effect waves-circle"><i class="fa-solid fa-star"></i></button>
+                                <button class="btn btn-default btn-icon-notika waves-effect waves-circle"><i class="fa-solid fa-chevron-down"></i></button>
+                                <button class="btn btn-default btn-icon-notika waves-effect waves-circle"><i class="fa-solid fa-chevron-up"></i></button>
+                                <button class="btn btn-default btn-icon-notika waves-effect waves-circle"><i class="fa-solid fa-chevron-right"></i></button>
+                                <button class="btn btn-default btn-icon-notika waves-effect waves-circle"><i class="fa-solid fa-phone"></i></button>
                             </div>
                             <div class="button-icon-btn sm-res-mg-t-30">
-                                <button class="btn btn-primary primary-icon-notika waves-effect waves-circle"><i class="notika-icon notika-house"></i></button>
-                                <button class="btn btn-info info-icon-notika waves-effect waves-circle"><i class="notika-icon notika-search"></i></button>
-                                <button class="btn btn-success success-icon-notika waves-effect waves-circle"><i class="notika-icon notika-menu"></i></button>
-                                <button class="btn btn-warning warning-icon-notika waves-effect waves-circle"><i class="notika-icon notika-right-arrow"></i></button>
-                                <button class="btn btn-danger danger-icon-notika waves-effect waves-circle"><i class="notika-icon notika-left-arrow"></i></button>
-                                <button class="btn btn-teal teal-icon-notika waves-effect waves-circle"><i class="notika-icon notika-refresh"></i></button>
-                                <button class="btn btn-orange orange-icon-notika waves-effect waves-circle"><i class="notika-icon notika-checked"></i></button>
-                                <button class="btn btn-cyan cyan-icon-notika waves-effect waves-circle"><i class="notika-icon notika-close"></i></button>
-                                <button class="btn btn-lightgreen lightgreen-icon-notika waves-effect waves-circle"><i class="notika-icon notika-menus"></i></button>
-                                <button class="btn btn-lime lime-icon-notika waves-effect waves-circle"><i class="notika-icon notika-star"></i></button>
-                                <button class="btn btn-amber amber-icon-notika waves-effect waves-circle"><i class="notika-icon notika-down-arrow"></i></button>
-                                <button class="btn btn-gray gray-icon-notika waves-effect waves-circle"><i class="notika-icon notika-up-arrow"></i></button>
-                                <button class="btn btn-lightblue lightblue-icon-notika waves-effect waves-circle"><i class="notika-icon notika-next"></i></button>
-                                <button class="btn btn-deeporange deeporange-icon-notika waves-effect waves-circle"><i class="notika-icon notika-phone"></i></button>
+                                <button class="btn btn-primary primary-icon-notika waves-effect waves-circle"><i class="fa-solid fa-house"></i></button>
+                                <button class="btn btn-info info-icon-notika waves-effect waves-circle"><i class="fa-solid fa-magnifying-glass"></i></button>
+                                <button class="btn btn-success success-icon-notika waves-effect waves-circle"><i class="fa-solid fa-bars"></i></button>
+                                <button class="btn btn-warning warning-icon-notika waves-effect waves-circle"><i class="fa-solid fa-chevron-right"></i></button>
+                                <button class="btn btn-danger danger-icon-notika waves-effect waves-circle"><i class="fa-solid fa-chevron-left"></i></button>
+                                <button class="btn btn-teal teal-icon-notika waves-effect waves-circle"><i class="fa-solid fa-arrows-rotate"></i></button>
+                                <button class="btn btn-orange orange-icon-notika waves-effect waves-circle"><i class="fa-solid fa-check"></i></button>
+                                <button class="btn btn-cyan cyan-icon-notika waves-effect waves-circle"><i class="fa-solid fa-xmark"></i></button>
+                                <button class="btn btn-lightgreen lightgreen-icon-notika waves-effect waves-circle"><i class="fa-solid fa-bars"></i></button>
+                                <button class="btn btn-lime lime-icon-notika waves-effect waves-circle"><i class="fa-solid fa-star"></i></button>
+                                <button class="btn btn-amber amber-icon-notika waves-effect waves-circle"><i class="fa-solid fa-chevron-down"></i></button>
+                                <button class="btn btn-gray gray-icon-notika waves-effect waves-circle"><i class="fa-solid fa-chevron-up"></i></button>
+                                <button class="btn btn-lightblue lightblue-icon-notika waves-effect waves-circle"><i class="fa-solid fa-chevron-right"></i></button>
+                                <button class="btn btn-deeporange deeporange-icon-notika waves-effect waves-circle"><i class="fa-solid fa-phone"></i></button>
                             </div>
                             <div class="button-icon-btn button-icon-btn-rd mg-t-30 butt-mg-t-20">
-                                <button class="btn btn-default btn-icon-notika waves-effect waves-circle"><i class="notika-icon notika-house"></i></button>
-                                <button class="btn btn-default btn-icon-notika waves-effect waves-circle"><i class="notika-icon notika-search"></i></button>
-                                <button class="btn btn-default btn-icon-notika waves-effect waves-circle"><i class="notika-icon notika-menu"></i></button>
-                                <button class="btn btn-default btn-icon-notika waves-effect waves-circle"><i class="notika-icon notika-right-arrow"></i></button>
-                                <button class="btn btn-default btn-icon-notika waves-effect waves-circle"><i class="notika-icon notika-left-arrow"></i></button>
-                                <button class="btn btn-default btn-icon-notika waves-effect waves-circle"><i class="notika-icon notika-refresh"></i></button>
-                                <button class="btn btn-default btn-icon-notika waves-effect waves-circle"><i class="notika-icon notika-checked"></i></button>
-                                <button class="btn btn-default btn-icon-notika waves-effect waves-circle"><i class="notika-icon notika-close"></i></button>
-                                <button class="btn btn-default btn-icon-notika waves-effect waves-circle"><i class="notika-icon notika-menus"></i></button>
-                                <button class="btn btn-default btn-icon-notika waves-effect waves-circle"><i class="notika-icon notika-star"></i></button>
-                                <button class="btn btn-default btn-icon-notika waves-effect waves-circle"><i class="notika-icon notika-down-arrow"></i></button>
-                                <button class="btn btn-default btn-icon-notika waves-effect waves-circle"><i class="notika-icon notika-up-arrow"></i></button>
-                                <button class="btn btn-default btn-icon-notika waves-effect waves-circle"><i class="notika-icon notika-next"></i></button>
-                                <button class="btn btn-default btn-icon-notika waves-effect waves-circle"><i class="notika-icon notika-phone"></i></button>
+                                <button class="btn btn-default btn-icon-notika waves-effect waves-circle"><i class="fa-solid fa-house"></i></button>
+                                <button class="btn btn-default btn-icon-notika waves-effect waves-circle"><i class="fa-solid fa-magnifying-glass"></i></button>
+                                <button class="btn btn-default btn-icon-notika waves-effect waves-circle"><i class="fa-solid fa-bars"></i></button>
+                                <button class="btn btn-default btn-icon-notika waves-effect waves-circle"><i class="fa-solid fa-chevron-right"></i></button>
+                                <button class="btn btn-default btn-icon-notika waves-effect waves-circle"><i class="fa-solid fa-chevron-left"></i></button>
+                                <button class="btn btn-default btn-icon-notika waves-effect waves-circle"><i class="fa-solid fa-arrows-rotate"></i></button>
+                                <button class="btn btn-default btn-icon-notika waves-effect waves-circle"><i class="fa-solid fa-check"></i></button>
+                                <button class="btn btn-default btn-icon-notika waves-effect waves-circle"><i class="fa-solid fa-xmark"></i></button>
+                                <button class="btn btn-default btn-icon-notika waves-effect waves-circle"><i class="fa-solid fa-bars"></i></button>
+                                <button class="btn btn-default btn-icon-notika waves-effect waves-circle"><i class="fa-solid fa-star"></i></button>
+                                <button class="btn btn-default btn-icon-notika waves-effect waves-circle"><i class="fa-solid fa-chevron-down"></i></button>
+                                <button class="btn btn-default btn-icon-notika waves-effect waves-circle"><i class="fa-solid fa-chevron-up"></i></button>
+                                <button class="btn btn-default btn-icon-notika waves-effect waves-circle"><i class="fa-solid fa-chevron-right"></i></button>
+                                <button class="btn btn-default btn-icon-notika waves-effect waves-circle"><i class="fa-solid fa-phone"></i></button>
                             </div>
                             <div class="button-icon-btn button-icon-btn-cl sm-res-mg-t-30">
-                                <button class="btn btn-primary primary-icon-notika btn-reco-mg btn-button-mg waves-effect waves-circle"><i class="notika-icon notika-house"></i></button>
-                                <button class="btn btn-info info-icon-notika btn-reco-mg btn-button-mg waves-effect waves-circle"><i class="notika-icon notika-search"></i></button>
-                                <button class="btn btn-success success-icon-notika btn-reco-mg btn-button-mg waves-effect waves-circle"><i class="notika-icon notika-menu"></i></button>
-                                <button class="btn btn-warning warning-icon-notika btn-reco-mg btn-button-mg waves-effect waves-circle"><i class="notika-icon notika-right-arrow"></i></button>
-                                <button class="btn btn-danger danger-icon-notika btn-reco-mg btn-button-mg waves-effect waves-circle"><i class="notika-icon notika-left-arrow"></i></button>
-                                <button class="btn btn-teal teal-icon-notika btn-reco-mg btn-button-mg waves-effect waves-circle"><i class="notika-icon notika-refresh"></i></button>
-                                <button class="btn btn-orange orange-icon-notika btn-reco-mg btn-button-mg waves-effect waves-circle"><i class="notika-icon notika-checked"></i></button>
-                                <button class="btn btn-cyan cyan-icon-notika btn-reco-mg btn-button-mg waves-effect waves-circle"><i class="notika-icon notika-close"></i></button>
-                                <button class="btn btn-lightgreen lightgreen-icon-notika btn-reco-mg btn-button-mg waves-effect waves-circle"><i class="notika-icon notika-menus"></i></button>
-                                <button class="btn btn-lime lime-icon-notika btn-reco-mg btn-button-mg waves-effect waves-circle"><i class="notika-icon notika-star"></i></button>
-                                <button class="btn btn-amber amber-icon-notika btn-reco-mg btn-button-mg waves-effect waves-circle"><i class="notika-icon notika-down-arrow"></i></button>
-                                <button class="btn btn-gray gray-icon-notika btn-reco-mg btn-button-mg waves-effect waves-circle"><i class="notika-icon notika-up-arrow"></i></button>
-                                <button class="btn btn-lightblue lightblue-icon-notika btn-reco-mg btn-button-mg waves-effect waves-circle"><i class="notika-icon notika-next"></i></button>
-                                <button class="btn btn-deeporange deeporange-icon-notika btn-reco-mg btn-button-mg waves-effect waves-circle"><i class="notika-icon notika-phone"></i></button>
+                                <button class="btn btn-primary primary-icon-notika btn-reco-mg btn-button-mg waves-effect waves-circle"><i class="fa-solid fa-house"></i></button>
+                                <button class="btn btn-info info-icon-notika btn-reco-mg btn-button-mg waves-effect waves-circle"><i class="fa-solid fa-magnifying-glass"></i></button>
+                                <button class="btn btn-success success-icon-notika btn-reco-mg btn-button-mg waves-effect waves-circle"><i class="fa-solid fa-bars"></i></button>
+                                <button class="btn btn-warning warning-icon-notika btn-reco-mg btn-button-mg waves-effect waves-circle"><i class="fa-solid fa-chevron-right"></i></button>
+                                <button class="btn btn-danger danger-icon-notika btn-reco-mg btn-button-mg waves-effect waves-circle"><i class="fa-solid fa-chevron-left"></i></button>
+                                <button class="btn btn-teal teal-icon-notika btn-reco-mg btn-button-mg waves-effect waves-circle"><i class="fa-solid fa-arrows-rotate"></i></button>
+                                <button class="btn btn-orange orange-icon-notika btn-reco-mg btn-button-mg waves-effect waves-circle"><i class="fa-solid fa-check"></i></button>
+                                <button class="btn btn-cyan cyan-icon-notika btn-reco-mg btn-button-mg waves-effect waves-circle"><i class="fa-solid fa-xmark"></i></button>
+                                <button class="btn btn-lightgreen lightgreen-icon-notika btn-reco-mg btn-button-mg waves-effect waves-circle"><i class="fa-solid fa-bars"></i></button>
+                                <button class="btn btn-lime lime-icon-notika btn-reco-mg btn-button-mg waves-effect waves-circle"><i class="fa-solid fa-star"></i></button>
+                                <button class="btn btn-amber amber-icon-notika btn-reco-mg btn-button-mg waves-effect waves-circle"><i class="fa-solid fa-chevron-down"></i></button>
+                                <button class="btn btn-gray gray-icon-notika btn-reco-mg btn-button-mg waves-effect waves-circle"><i class="fa-solid fa-chevron-up"></i></button>
+                                <button class="btn btn-lightblue lightblue-icon-notika btn-reco-mg btn-button-mg waves-effect waves-circle"><i class="fa-solid fa-chevron-right"></i></button>
+                                <button class="btn btn-deeporange deeporange-icon-notika btn-reco-mg btn-button-mg waves-effect waves-circle"><i class="fa-solid fa-phone"></i></button>
                             </div>
                         </div>
                     </div>

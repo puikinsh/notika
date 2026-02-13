@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-page-module="typography">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,7 +10,9 @@
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
     
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700,900" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     
     <!-- Font Awesome and all other CSS imported via Vite -->
     <!-- ONLY Vite entry point - everything else bundled -->
@@ -40,12 +42,12 @@
                         <!-- Search -->
                         <div class="dropdown">
                             <button class="notika-nav-link" type="button" data-bs-toggle="dropdown" data-bs-auto-close="outside">
-                                <i class="notika-icon notika-search"></i>
+                                <i class="fa-solid fa-magnifying-glass"></i>
                             </button>
                             <div class="dropdown-menu dropdown-menu-end notika-dropdown search-dropdown">
                                 <div class="search-input-group">
                                     <input type="text" placeholder="Search anything..." class="form-control">
-                                    <i class="notika-icon notika-search search-icon"></i>
+                                    <i class="fa-solid fa-magnifying-glass search-icon"></i>
                                 </div>
                             </div>
                         </div>
@@ -53,7 +55,7 @@
                         <!-- Messages -->
                         <div class="dropdown">
                             <button class="notika-nav-link position-relative" type="button" data-bs-toggle="dropdown">
-                                <i class="notika-icon notika-mail"></i>
+                                <i class="fa-solid fa-envelope"></i>
                                 <span class="notika-badge">5</span>
                             </button>
                             <div class="dropdown-menu dropdown-menu-end notika-dropdown">
@@ -92,7 +94,7 @@
                         <!-- Notifications -->
                         <div class="dropdown">
                             <button class="notika-nav-link position-relative" type="button" data-bs-toggle="dropdown">
-                                <i class="notika-icon notika-alarm"></i>
+                                <i class="fa-solid fa-bell"></i>
                                 <span class="notika-badge">3</span>
                             </button>
                             <div class="dropdown-menu dropdown-menu-end notika-dropdown">
@@ -102,7 +104,7 @@
                                 <div class="notika-dropdown-body">
                                     <a class="notika-dropdown-item" href="notification.html">
                                         <div class="bg-success text-white rounded-circle d-flex align-items-center justify-content-center" style="width: 35px; height: 35px; margin-right: 12px;">
-                                            <i class="notika-icon notika-success" style="font-size: 14px;"></i>
+                                            <i class="fa-solid fa-circle-check" style="font-size: 14px;"></i>
                                         </div>
                                         <div class="notika-dropdown-content">
                                             <h6>Task Completed</h6>
@@ -111,7 +113,7 @@
                                     </a>
                                     <a class="notika-dropdown-item" href="notification.html">
                                         <div class="bg-warning text-white rounded-circle d-flex align-items-center justify-content-center" style="width: 35px; height: 35px; margin-right: 12px;">
-                                            <i class="notika-icon notika-alarm" style="font-size: 14px;"></i>
+                                            <i class="fa-solid fa-bell" style="font-size: 14px;"></i>
                                         </div>
                                         <div class="notika-dropdown-content">
                                             <h6>Server Alert</h6>
@@ -120,7 +122,7 @@
                                     </a>
                                     <a class="notika-dropdown-item" href="notification.html">
                                         <div class="bg-info text-white rounded-circle d-flex align-items-center justify-content-center" style="width: 35px; height: 35px; margin-right: 12px;">
-                                            <i class="notika-icon notika-chat" style="font-size: 14px;"></i>
+                                            <i class="fa-solid fa-message" style="font-size: 14px;"></i>
                                         </div>
                                         <div class="notika-dropdown-content">
                                             <h6>New Message</h6>
@@ -137,7 +139,7 @@
                         <!-- Tasks - Desktop Only -->
                         <div class="dropdown d-none d-lg-block">
                             <button class="notika-nav-link position-relative" type="button" data-bs-toggle="dropdown">
-                                <i class="notika-icon notika-todo"></i>
+                                <i class="fa-solid fa-list-check"></i>
                                 <span class="notika-badge">2</span>
                             </button>
                             <div class="dropdown-menu dropdown-menu-end notika-dropdown" style="min-width: 280px;">
@@ -182,7 +184,7 @@
                         <!-- Chat -->
                         <div class="dropdown">
                             <button class="notika-nav-link" type="button" data-bs-toggle="dropdown">
-                                <i class="notika-icon notika-chat"></i>
+                                <i class="fa-solid fa-message"></i>
                             </button>
                             <div class="dropdown-menu dropdown-menu-end notika-dropdown">
                                 <div class="notika-dropdown-header">
@@ -226,7 +228,7 @@
 
                         <!-- Mobile Menu Toggle -->
                         <button class="notika-nav-link d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileNavOffcanvas" aria-controls="mobileNavOffcanvas">
-                            <i class="notika-icon notika-menus"></i>
+                            <i class="fa-solid fa-bars"></i>
                         </button>
                     </div>
                 </div>
@@ -243,8 +245,8 @@
 
                     <!-- Home Dropdown -->
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <i class="notika-icon notika-house"></i>
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa-solid fa-house"></i>
                             <span>Home</span>
                         </a>
                         <ul class="dropdown-menu">
@@ -261,7 +263,7 @@
                     <!-- Email Dropdown -->
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <i class="notika-icon notika-mail"></i>
+                            <i class="fa-solid fa-envelope"></i>
                             <span>Email</span>
                         </a>
                         <ul class="dropdown-menu">
@@ -274,7 +276,7 @@
                     <!-- Interface Dropdown -->
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <i class="notika-icon notika-edit"></i>
+                            <i class="fa-solid fa-pen-to-square"></i>
                             <span>Interface</span>
                         </a>
                         <ul class="dropdown-menu">
@@ -290,7 +292,7 @@
                     <!-- Charts Dropdown -->
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <i class="notika-icon notika-bar-chart"></i>
+                            <i class="fa-solid fa-chart-column"></i>
                             <span>Charts</span>
                         </a>
                         <ul class="dropdown-menu">
@@ -304,7 +306,7 @@
                     <!-- Tables Dropdown -->
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <i class="notika-icon notika-windows"></i>
+                            <i class="fa-solid fa-table-columns"></i>
                             <span>Tables</span>
                         </a>
                         <ul class="dropdown-menu">
@@ -316,7 +318,7 @@
                     <!-- Forms Dropdown -->
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <i class="notika-icon notika-form"></i>
+                            <i class="fa-solid fa-file-lines"></i>
                             <span>Forms</span>
                         </a>
                         <ul class="dropdown-menu">
@@ -329,7 +331,7 @@
                     <!-- Components Dropdown -->
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <i class="notika-icon notika-app"></i>
+                            <i class="fa-solid fa-cube"></i>
                             <span>Components</span>
                         </a>
                         <ul class="dropdown-menu">
@@ -348,8 +350,8 @@
 
                     <!-- Pages Dropdown -->
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <i class="notika-icon notika-more"></i>
+                        <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa-solid fa-ellipsis"></i>
                             <span>Pages</span>
                         </a>
                         <ul class="dropdown-menu">
@@ -383,8 +385,8 @@
                 <!-- Home Section -->
                 <div class="nav-item border-bottom">
                     <a class="nav-link d-flex align-items-center justify-content-between px-3 py-2" data-bs-toggle="collapse" href="#mobileHomeMenu" role="button" aria-expanded="false">
-                        <span><i class="notika-icon notika-house me-2"></i> Home</span>
-                        <i class="fa fa-chevron-down small"></i>
+                        <span><i class="fa-solid fa-house me-2"></i> Home</span>
+                        <i class="fa-solid fa-chevron-down small"></i>
                     </a>
                     <div class="collapse" id="mobileHomeMenu">
                         <div class="nav flex-column ps-4">
@@ -401,8 +403,8 @@
                 <!-- Email Section -->
                 <div class="nav-item border-bottom">
                     <a class="nav-link d-flex align-items-center justify-content-between px-3 py-2" data-bs-toggle="collapse" href="#mobileEmailMenu" role="button" aria-expanded="false">
-                        <span><i class="notika-icon notika-mail me-2"></i> Email</span>
-                        <i class="fa fa-chevron-down small"></i>
+                        <span><i class="fa-solid fa-envelope me-2"></i> Email</span>
+                        <i class="fa-solid fa-chevron-down small"></i>
                     </a>
                     <div class="collapse" id="mobileEmailMenu">
                         <div class="nav flex-column ps-4">
@@ -416,8 +418,8 @@
                 <!-- Interface Section -->
                 <div class="nav-item border-bottom">
                     <a class="nav-link d-flex align-items-center justify-content-between px-3 py-2" data-bs-toggle="collapse" href="#mobileInterfaceMenu" role="button" aria-expanded="false">
-                        <span><i class="notika-icon notika-edit me-2"></i> Interface</span>
-                        <i class="fa fa-chevron-down small"></i>
+                        <span><i class="fa-solid fa-pen-to-square me-2"></i> Interface</span>
+                        <i class="fa-solid fa-chevron-down small"></i>
                     </a>
                     <div class="collapse" id="mobileInterfaceMenu">
                         <div class="nav flex-column ps-4">
@@ -434,8 +436,8 @@
                 <!-- Charts Section -->
                 <div class="nav-item border-bottom">
                     <a class="nav-link d-flex align-items-center justify-content-between px-3 py-2" data-bs-toggle="collapse" href="#mobileChartsMenu" role="button" aria-expanded="false">
-                        <span><i class="notika-icon notika-bar-chart me-2"></i> Charts</span>
-                        <i class="fa fa-chevron-down small"></i>
+                        <span><i class="fa-solid fa-chart-column me-2"></i> Charts</span>
+                        <i class="fa-solid fa-chevron-down small"></i>
                     </a>
                     <div class="collapse" id="mobileChartsMenu">
                         <div class="nav flex-column ps-4">
@@ -450,8 +452,8 @@
                 <!-- Tables Section -->
                 <div class="nav-item border-bottom">
                     <a class="nav-link d-flex align-items-center justify-content-between px-3 py-2" data-bs-toggle="collapse" href="#mobileTablesMenu" role="button" aria-expanded="false">
-                        <span><i class="notika-icon notika-windows me-2"></i> Tables</span>
-                        <i class="fa fa-chevron-down small"></i>
+                        <span><i class="fa-solid fa-table-columns me-2"></i> Tables</span>
+                        <i class="fa-solid fa-chevron-down small"></i>
                     </a>
                     <div class="collapse" id="mobileTablesMenu">
                         <div class="nav flex-column ps-4">
@@ -464,8 +466,8 @@
                 <!-- Forms Section -->
                 <div class="nav-item border-bottom">
                     <a class="nav-link d-flex align-items-center justify-content-between px-3 py-2" data-bs-toggle="collapse" href="#mobileFormsMenu" role="button" aria-expanded="false">
-                        <span><i class="notika-icon notika-form me-2"></i> Forms</span>
-                        <i class="fa fa-chevron-down small"></i>
+                        <span><i class="fa-solid fa-file-lines me-2"></i> Forms</span>
+                        <i class="fa-solid fa-chevron-down small"></i>
                     </a>
                     <div class="collapse" id="mobileFormsMenu">
                         <div class="nav flex-column ps-4">
@@ -479,8 +481,8 @@
                 <!-- Components Section -->
                 <div class="nav-item border-bottom">
                     <a class="nav-link d-flex align-items-center justify-content-between px-3 py-2" data-bs-toggle="collapse" href="#mobileComponentsMenu" role="button" aria-expanded="false">
-                        <span><i class="notika-icon notika-app me-2"></i> Components</span>
-                        <i class="fa fa-chevron-down small"></i>
+                        <span><i class="fa-solid fa-cube me-2"></i> Components</span>
+                        <i class="fa-solid fa-chevron-down small"></i>
                     </a>
                     <div class="collapse" id="mobileComponentsMenu">
                         <div class="nav flex-column ps-4">
@@ -501,8 +503,8 @@
                 <!-- Pages Section -->
                 <div class="nav-item border-bottom">
                     <a class="nav-link d-flex align-items-center justify-content-between px-3 py-2" data-bs-toggle="collapse" href="#mobilePagesMenu" role="button" aria-expanded="false">
-                        <span><i class="notika-icon notika-more me-2"></i> Pages</span>
-                        <i class="fa fa-chevron-down small"></i>
+                        <span><i class="fa-solid fa-ellipsis me-2"></i> Pages</span>
+                        <i class="fa-solid fa-chevron-down small"></i>
                     </a>
                     <div class="collapse" id="mobilePagesMenu">
                         <div class="nav flex-column ps-4">
@@ -633,7 +635,7 @@
                 <!-- Home Dropdown -->
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        <i class="notika-icon notika-house"></i>
+                        <i class="fa-solid fa-house"></i>
                         <span>Home</span>
                     </a>
                     <ul class="dropdown-menu">
@@ -650,7 +652,7 @@
                 <!-- Email Dropdown -->
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        <i class="notika-icon notika-mail"></i>
+                        <i class="fa-solid fa-envelope"></i>
                         <span>Email</span>
                     </a>
                     <ul class="dropdown-menu">
@@ -663,7 +665,7 @@
                 <!-- Interface Dropdown -->
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        <i class="notika-icon notika-edit"></i>
+                        <i class="fa-solid fa-pen-to-square"></i>
                         <span>Interface</span>
                     </a>
                     <ul class="dropdown-menu">
@@ -679,7 +681,7 @@
                 <!-- Charts Dropdown -->
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        <i class="notika-icon notika-bar-chart"></i>
+                        <i class="fa-solid fa-chart-column"></i>
                         <span>Charts</span>
                     </a>
                     <ul class="dropdown-menu">
@@ -693,7 +695,7 @@
                 <!-- Tables Dropdown -->
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        <i class="notika-icon notika-windows"></i>
+                        <i class="fa-solid fa-table-columns"></i>
                         <span>Tables</span>
                     </a>
                     <ul class="dropdown-menu">
@@ -705,7 +707,7 @@
                 <!-- Forms Dropdown -->
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        <i class="notika-icon notika-form"></i>
+                        <i class="fa-solid fa-file-lines"></i>
                         <span>Forms</span>
                     </a>
                     <ul class="dropdown-menu">
@@ -718,7 +720,7 @@
                 <!-- Components Dropdown -->
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        <i class="notika-icon notika-app"></i>
+                        <i class="fa-solid fa-cube"></i>
                         <span>Components</span>
                     </a>
                     <ul class="dropdown-menu">
@@ -738,7 +740,7 @@
                 <!-- Pages Dropdown -->
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        <i class="notika-icon notika-support"></i>
+                        <i class="fa-solid fa-headset"></i>
                         <span>Pages</span>
                     </a>
                     <ul class="dropdown-menu">
@@ -766,7 +768,7 @@
                             <div class="col-lg-6 col-md-6 col-sm-6 col-12">
                                 <div class="breadcomb-wp">
                                     <div class="breadcomb-icon">
-                                        <i class="notika-icon notika-edit"></i>
+                                        <i class="fa-solid fa-pen-to-square"></i>
                                     </div>
                                     <div class="breadcomb-ctn">
                                         <h2>Typography</h2>
@@ -776,7 +778,7 @@
                             </div>
                             <div class="col-lg-6 col-md-6 col-sm-6 col-3">
                                 <div class="breadcomb-report">
-                                    <button data-bs-toggle="tooltip" data-placement="left" title="Download Report" class="btn"><i class="notika-icon notika-sent"></i></button>
+                                    <button data-bs-toggle="tooltip" data-placement="left" title="Download Report" class="btn"><i class="fa-solid fa-paper-plane"></i></button>
                                 </div>
                             </div>
                         </div>
@@ -1039,18 +1041,18 @@
                                     <div class="tpgp-al-cl mg-t-20">
                                         <h3>Custom 1</h3>
                                         <ul class="tpgp-ctm-angle">
-                                            <li><i class="notika-icon notika-next-pro"></i> Lorem ipsum dolor sit amet</li>
-                                            <li><i class="notika-icon notika-next-pro"></i> Consectetur adipiscing elit</li>
-                                            <li><i class="notika-icon notika-next-pro"></i> Integer molestie lorem at massa</li>
-                                            <li><i class="notika-icon notika-next-pro"></i> Facilisis in pretium nisl aliquet</li>
-                                            <li><i class="notika-icon notika-next-pro"></i> Nulla volutpat aliquam velit</li>
-                                            <li><i class="notika-icon notika-next-pro"></i> Phasellus iaculis neque</li>
-                                            <li><i class="notika-icon notika-next-pro"></i> Purus sodales ultricies</li>
-                                            <li><i class="notika-icon notika-next-pro"></i> Vestibulum laoreet porttitor sem</li>
-                                            <li><i class="notika-icon notika-next-pro"></i> Ac tristique libero volutpat at</li>
-                                            <li><i class="notika-icon notika-next-pro"></i> Faucibus porta lacus fringilla vel</li>
-                                            <li><i class="notika-icon notika-next-pro"></i> Aenean sit amet erat nunc</li>
-                                            <li><i class="notika-icon notika-next-pro"></i> Eget porttitor lorem</li>
+                                            <li><i class="fa-solid fa-angles-right"></i> Lorem ipsum dolor sit amet</li>
+                                            <li><i class="fa-solid fa-angles-right"></i> Consectetur adipiscing elit</li>
+                                            <li><i class="fa-solid fa-angles-right"></i> Integer molestie lorem at massa</li>
+                                            <li><i class="fa-solid fa-angles-right"></i> Facilisis in pretium nisl aliquet</li>
+                                            <li><i class="fa-solid fa-angles-right"></i> Nulla volutpat aliquam velit</li>
+                                            <li><i class="fa-solid fa-angles-right"></i> Phasellus iaculis neque</li>
+                                            <li><i class="fa-solid fa-angles-right"></i> Purus sodales ultricies</li>
+                                            <li><i class="fa-solid fa-angles-right"></i> Vestibulum laoreet porttitor sem</li>
+                                            <li><i class="fa-solid fa-angles-right"></i> Ac tristique libero volutpat at</li>
+                                            <li><i class="fa-solid fa-angles-right"></i> Faucibus porta lacus fringilla vel</li>
+                                            <li><i class="fa-solid fa-angles-right"></i> Aenean sit amet erat nunc</li>
+                                            <li><i class="fa-solid fa-angles-right"></i> Eget porttitor lorem</li>
                                         </ul>
                                     </div>
                                 </div>
@@ -1075,18 +1077,18 @@
                                     <div class="tpgp-al-cl mg-t-20">
                                         <h3>Custom 2</h3>
                                         <ul class="tpgp-ctm-angle">
-                                            <li><i class="notika-icon notika-checked"></i> Lorem ipsum dolor sit amet</li>
-                                            <li><i class="notika-icon notika-checked"></i> Consectetur adipiscing elit</li>
-                                            <li><i class="notika-icon notika-checked"></i> Integer molestie lorem at massa</li>
-                                            <li><i class="notika-icon notika-checked"></i> Facilisis in pretium nisl aliquet</li>
-                                            <li><i class="notika-icon notika-checked"></i> Nulla volutpat aliquam velit</li>
-                                            <li><i class="notika-icon notika-checked"></i> Phasellus iaculis neque</li>
-                                            <li><i class="notika-icon notika-checked"></i> Purus sodales ultricies</li>
-                                            <li><i class="notika-icon notika-checked"></i> Vestibulum laoreet porttitor sem</li>
-                                            <li><i class="notika-icon notika-checked"></i> Ac tristique libero volutpat at</li>
-                                            <li><i class="notika-icon notika-checked"></i> Faucibus porta lacus fringilla vel</li>
-                                            <li><i class="notika-icon notika-checked"></i> Aenean sit amet erat nunc</li>
-                                            <li><i class="notika-icon notika-checked"></i> Eget porttitor lorem</li>
+                                            <li><i class="fa-solid fa-check"></i> Lorem ipsum dolor sit amet</li>
+                                            <li><i class="fa-solid fa-check"></i> Consectetur adipiscing elit</li>
+                                            <li><i class="fa-solid fa-check"></i> Integer molestie lorem at massa</li>
+                                            <li><i class="fa-solid fa-check"></i> Facilisis in pretium nisl aliquet</li>
+                                            <li><i class="fa-solid fa-check"></i> Nulla volutpat aliquam velit</li>
+                                            <li><i class="fa-solid fa-check"></i> Phasellus iaculis neque</li>
+                                            <li><i class="fa-solid fa-check"></i> Purus sodales ultricies</li>
+                                            <li><i class="fa-solid fa-check"></i> Vestibulum laoreet porttitor sem</li>
+                                            <li><i class="fa-solid fa-check"></i> Ac tristique libero volutpat at</li>
+                                            <li><i class="fa-solid fa-check"></i> Faucibus porta lacus fringilla vel</li>
+                                            <li><i class="fa-solid fa-check"></i> Aenean sit amet erat nunc</li>
+                                            <li><i class="fa-solid fa-check"></i> Eget porttitor lorem</li>
                                         </ul>
                                     </div>
                                 </div>
@@ -1111,18 +1113,18 @@
                                     <div class="tpgp-al-cl mg-t-20">
                                         <h3>Custom 3</h3>
                                         <ul class="tpgp-ctm-angle">
-                                            <li><i class="notika-icon notika-star"></i> Lorem ipsum dolor sit amet</li>
-                                            <li><i class="notika-icon notika-star"></i> Consectetur adipiscing elit</li>
-                                            <li><i class="notika-icon notika-star"></i> Integer molestie lorem at massa</li>
-                                            <li><i class="notika-icon notika-star"></i> Facilisis in pretium nisl aliquet</li>
-                                            <li><i class="notika-icon notika-star"></i> Nulla volutpat aliquam velit</li>
-                                            <li><i class="notika-icon notika-star"></i> Phasellus iaculis neque</li>
-                                            <li><i class="notika-icon notika-star"></i> Purus sodales ultricies</li>
-                                            <li><i class="notika-icon notika-star"></i> Vestibulum laoreet porttitor sem</li>
-                                            <li><i class="notika-icon notika-star"></i> Ac tristique libero volutpat at</li>
-                                            <li><i class="notika-icon notika-star"></i> Faucibus porta lacus fringilla vel</li>
-                                            <li><i class="notika-icon notika-star"></i> Aenean sit amet erat nunc</li>
-                                            <li><i class="notika-icon notika-star"></i> Eget porttitor lorem</li>
+                                            <li><i class="fa-solid fa-star"></i> Lorem ipsum dolor sit amet</li>
+                                            <li><i class="fa-solid fa-star"></i> Consectetur adipiscing elit</li>
+                                            <li><i class="fa-solid fa-star"></i> Integer molestie lorem at massa</li>
+                                            <li><i class="fa-solid fa-star"></i> Facilisis in pretium nisl aliquet</li>
+                                            <li><i class="fa-solid fa-star"></i> Nulla volutpat aliquam velit</li>
+                                            <li><i class="fa-solid fa-star"></i> Phasellus iaculis neque</li>
+                                            <li><i class="fa-solid fa-star"></i> Purus sodales ultricies</li>
+                                            <li><i class="fa-solid fa-star"></i> Vestibulum laoreet porttitor sem</li>
+                                            <li><i class="fa-solid fa-star"></i> Ac tristique libero volutpat at</li>
+                                            <li><i class="fa-solid fa-star"></i> Faucibus porta lacus fringilla vel</li>
+                                            <li><i class="fa-solid fa-star"></i> Aenean sit amet erat nunc</li>
+                                            <li><i class="fa-solid fa-star"></i> Eget porttitor lorem</li>
                                         </ul>
                                     </div>
                                 </div>

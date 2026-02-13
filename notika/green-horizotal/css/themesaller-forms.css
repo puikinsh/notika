@@ -5,9 +5,7 @@
 -------------------------------------------------- 
 */
 
-/* Roboto google font import 
---------------------------------------- */
-@import url(http://fonts.googleapis.com/css?family=Roboto:400,300);
+/* Roboto loaded via HTML <link> tags - removed redundant @import */
 
 html, body{
 	border: 0;

@@ -10,58 +10,9 @@ import 'leaflet/dist/leaflet.css'
 
 // Note: Notika template CSS files are loaded via <link> tags in HTML head for better compatibility
 
-// Font Awesome - Tree-shakable approach (only icons we use)
+// Font Awesome 7.2 - Tree-shakable approach (only icons we use)
 import { library, dom } from '@fortawesome/fontawesome-svg-core'
-import { 
-  faHouse,
-  faMagnifyingGlass, 
-  faEnvelope,
-  faBell,
-  faMessage,
-  faBars,
-  faPenToSquare,
-  faChartColumn,
-  faTable,
-  faFileLines,
-  faCube,
-  faHeadset,
-  faGear,
-  faBolt,
-  faArrowRotateRight,
-  faPalette,
-  faChartLine,
-  faFontAwesome,
-  faUsers,
-  faGlobe,
-  faListCheck,
-  faArchive,
-  faClock,
-  faPlus,
-  faTrashCan,
-  faComments,
-  faPaperPlane,
-  faMicrochip,
-  faMemory,
-  faHdd,
-  faWifi,
-  faMousePointer,
-  faArrowTrendUp,
-  faArrowTrendDown,
-  faShieldHalved,
-  faChevronDown
-} from '@fortawesome/free-solid-svg-icons'
-import { 
-  faBootstrap, 
-  faGoogle, 
-  faMicrosoft, 
-  faGithub, 
-  faStackOverflow, 
-  faReddit, 
-  faLinkedin 
-} from '@fortawesome/free-brands-svg-icons'
-
-// Add only the icons we use to the library
-library.add(
+import {
   faHouse,
   faMagnifyingGlass,
   faEnvelope,
@@ -80,7 +31,6 @@ library.add(
   faPalette,
   faChartLine,
   faFontAwesome,
-  faBootstrap,
   faUsers,
   faGlobe,
   faListCheck,
@@ -99,12 +49,80 @@ library.add(
   faArrowTrendDown,
   faShieldHalved,
   faChevronDown,
+  faArrowRight,
+  faCircleCheck,
+  faArrowLeft,
+  faCalendar,
+  faCheck,
+  faXmark,
+  faCloud,
+  faCreditCard,
+  faDollarSign,
+  faCircle,
+  faFilePen,
+  faEye,
+  faFile,
+  faChartPie,
+  faFlag,
+  faLocationDot,
+  faChevronLeft,
+  faMap,
+  faMinus,
+  faEllipsis,
+  faChevronRight,
+  faAnglesRight,
+  faPaperclip,
+  faPhone,
+  faImage,
+  faPrint,
+  faTag,
+  faArrowsRotate,
+  faShareNodes,
+  faStar,
+  faFileInvoiceDollar,
+  faPlane,
+  faChevronUp,
+  faTableColumns,
+  faAngleLeft,
+  faAngleRight,
+  faAnglesLeft,
+  faSort,
+  faSortUp,
+  faSortDown
+} from '@fortawesome/free-solid-svg-icons'
+import {
+  faBootstrap,
   faGoogle,
   faMicrosoft,
   faGithub,
   faStackOverflow,
   faReddit,
-  faLinkedin
+  faLinkedin,
+  faFacebook,
+  faPinterest,
+  faXTwitter,
+  faSkype
+} from '@fortawesome/free-brands-svg-icons'
+
+// Add all icons to the library
+library.add(
+  faHouse, faMagnifyingGlass, faEnvelope, faBell, faMessage, faBars,
+  faPenToSquare, faChartColumn, faTable, faFileLines, faCube, faHeadset,
+  faGear, faBolt, faArrowRotateRight, faPalette, faChartLine, faFontAwesome,
+  faUsers, faGlobe, faListCheck, faArchive, faClock, faPlus, faTrashCan,
+  faComments, faPaperPlane, faMicrochip, faMemory, faHdd, faWifi,
+  faMousePointer, faArrowTrendUp, faArrowTrendDown, faShieldHalved,
+  faChevronDown, faArrowRight, faCircleCheck, faArrowLeft, faCalendar,
+  faCheck, faXmark, faCloud, faCreditCard, faDollarSign, faCircle,
+  faFilePen, faEye, faFile, faChartPie, faFlag, faLocationDot,
+  faChevronLeft, faMap, faMinus, faEllipsis, faChevronRight, faAnglesRight,
+  faPaperclip, faPhone, faImage, faPrint, faTag, faArrowsRotate,
+  faShareNodes, faStar, faFileInvoiceDollar, faPlane, faChevronUp,
+  faTableColumns, faAngleLeft, faAngleRight, faAnglesLeft, faSort,
+  faSortUp, faSortDown,
+  // Brands
+  faBootstrap, faGoogle, faMicrosoft, faGithub, faStackOverflow,
+  faReddit, faLinkedin, faFacebook, faPinterest, faXTwitter, faSkype
 )
 
 // Replace any <i> tags with SVG automatically
@@ -117,7 +135,7 @@ import '../../css/owl.transitions.css'
 import '../../css/meanmenu/meanmenu.min.css'
 // Removed animate.css v3.4.0 (656 redundant vendor prefixes from 2015)
 import '../../css/reset.css'
-import '../../css/notika-custom-icon.css'
+import '../css/dashboard-widgets.css'
 import '../../css/wave/waves.min.css'
 import '../../css/main.css'
 import '../../style.css'
@@ -180,10 +198,7 @@ class NotikaApp {
         bundleStatus.style.color = '#00c292'
       }
 
-      // Add modern Font Awesome icons where appropriate
-      this.updateIconsToLatestFA()
-
-      console.log('🎉 Notika Template fully modernized with Font Awesome 7.0.1 (tree-shaken) + Vite bundling!')
+      console.log('🎉 Notika Template fully modernized with Font Awesome 7.2 (tree-shaken) + Vite bundling!')
 
     } catch (error) {
       console.error('❌ Initialization error:', error)
@@ -1006,822 +1021,13 @@ class NotikaApp {
         this.handleAction(action, e.target)
       }
     })
-    
+
+    // Remove webkit scrollbar CSS rules to restore native scrollbars
+    this.removeAllScrollbarRules()
+
     console.log('✅ Modern event handling setup complete')
   }
 
-  updateIconsToLatestFA() {
-    // Map old/generic icons to modern Font Awesome 7.x classes
-    const iconMappings = {
-      'fa-search': 'fa-solid fa-magnifying-glass', // Updated in FA6+
-      'fa-home': 'fa-solid fa-house', // Updated in FA6+
-      'fa-envelope': 'fa-solid fa-envelope',
-      'fa-chart-bar': 'fa-solid fa-chart-column', // Updated in FA6+
-      'fa-bell': 'fa-solid fa-bell',
-      'fa-user': 'fa-solid fa-user',
-      'fa-cog': 'fa-solid fa-gear', // Updated in FA6+
-      'fa-bars': 'fa-solid fa-bars'
-    }
-
-    // Add Font Awesome fallbacks for any missing Notika icons
-    const notikaToFA = {
-      'notika-search': 'fa-solid fa-magnifying-glass',
-      'notika-house': 'fa-solid fa-house', 
-      'notika-mail': 'fa-solid fa-envelope',
-      'notika-alarm': 'fa-solid fa-bell',
-      'notika-chat': 'fa-solid fa-message', // New in FA6+
-      'notika-menus': 'fa-solid fa-bars',
-      'notika-edit': 'fa-solid fa-pen-to-square', // Updated in FA6+
-      'notika-bar-chart': 'fa-solid fa-chart-column',
-      'notika-windows': 'fa-solid fa-table',
-      'notika-form': 'fa-solid fa-file-lines', // Updated in FA6+
-      'notika-app': 'fa-solid fa-cube',
-      'notika-support': 'fa-solid fa-headset'
-    }
-
-    // Add FA alternatives as fallbacks (not replacing Notika icons)
-    Object.keys(notikaToFA).forEach(notikaClass => {
-      const elements = document.querySelectorAll(`.${notikaClass}`)
-      elements.forEach(element => {
-        // Add FA class as fallback, don't replace Notika
-        element.setAttribute('data-fa-fallback', notikaToFA[notikaClass])
-        
-        // Add a fallback span for Font Awesome if Notika icons fail to load
-        if (!element.getAttribute('data-fa-added')) {
-          const faSpan = document.createElement('span')
-          faSpan.className = notikaToFA[notikaClass]
-          faSpan.style.display = 'none'
-          faSpan.setAttribute('data-fa-backup', 'true')
-          element.parentNode.insertBefore(faSpan, element.nextSibling)
-          element.setAttribute('data-fa-added', 'true')
-        }
-      })
-    })
-
-    // Add styles for new dashboard widgets to match Notika design
-    const dashboardStyles = `
-
-      /* GLOBAL WIDGET SPACING FIX - Add small margin below widget headers */
-      .recent-post-wrapper .recent-post-title {
-        margin-bottom: 8px !important;
-      }
-
-      .recent-post-wrapper .recent-post-items,
-      .recent-post-wrapper .analytics-chart-container {
-        padding-top: 8px !important;
-      }
-
-      /* Ensure consistent spacing for all modernized cards */
-      .form-element-wrapper,
-      .chart-wrapper {
-        padding-top: 25px !important;
-      }
-
-      /* Dashboard pages need proper top spacing after navigation */
-      .notika-status-area {
-        margin-top: 30px !important;
-      }
-
-      .sale-statistic-area,
-      .notika-email-post-area {
-        margin-top: 20px !important;
-      }
-
-      /* REMOVE ALL INTERFERENCE with Resource Allocation chart */
-      #resource-allocation-chart {
-        all: unset !important;
-        display: block !important;
-        width: auto !important;
-        height: auto !important;
-      }
-
-      /* Force sparkline charts to fill their containers properly */
-      .sparkline-bar-stats1,
-      .sparkline-bar-stats2,
-      .sparkline-bar-stats3,
-      .sparkline-bar-stats4 {
-        width: 100% !important;
-        height: 60px !important;
-        background: transparent !important;
-        padding: 10px !important;
-        display: block !important;
-      }
-
-      .sparkline-bar-stats1 canvas,
-      .sparkline-bar-stats2 canvas,
-      .sparkline-bar-stats3 canvas,
-      .sparkline-bar-stats4 canvas {
-        width: 100% !important;
-        height: 60px !important;
-        display: block !important;
-      }
-
-      /* Proper Chart Container Sizing - Good Aspect Ratios */
-      .analytics-chart-container {
-        width: 100%;
-        position: relative;
-      }
-      
-      .analytics-chart-container canvas {
-        width: 100% !important;
-        max-width: none !important;
-        display: block !important;
-        height: auto !important;
-        min-height: 400px !important;
-      }
-
-      /* Perfect card heights - fit content without scrolling */
-      .recent-post-wrapper {
-        height: auto !important;
-        min-height: auto !important;
-      }
-
-      .recent-post-items {
-        height: auto !important;
-        min-height: auto !important;
-        padding: 20px !important;
-        overflow: visible !important;
-      }
-
-      /* Chart containers sized to fit content perfectly */
-      .analytics-chart-container {
-        height: auto !important;
-        min-height: auto !important;
-        padding: 15px !important;
-        overflow: visible !important;
-      }
-
-      /* Remove any max-height constraints that cause scrolling */
-      .recent-post-wrapper,
-      .recent-post-items,
-      .analytics-chart-container {
-        max-height: none !important;
-        overflow: visible !important;
-      }
-
-      /* Fix Date Picker overlapping - aggressive containment */
-      .recent-post-wrapper {
-        position: relative !important;
-        overflow: visible !important;
-      }
-
-      /* Specifically target the Date Picker card */
-      .recent-post-wrapper:has(input[type="date"]),
-      .recent-post-wrapper:has(input[type="datetime-local"]) {
-        overflow: hidden !important;
-        clip-path: inset(0 round 8px) !important;
-        contain: layout style paint !important;
-        isolation: isolate !important;
-      }
-
-      .recent-post-wrapper:has(input[type="date"]) .recent-post-items,
-      .recent-post-wrapper:has(input[type="datetime-local"]) .recent-post-items {
-        overflow: hidden !important;
-        position: relative !important;
-        z-index: 1 !important;
-        border-radius: 8px !important;
-      }
-
-      /* Date picker specific fixes */
-      input[type="date"]::-webkit-calendar-picker-indicator {
-        cursor: pointer;
-      }
-
-      /* Ensure date inputs fit properly in their containers */
-      input[type="date"],
-      input[type="datetime-local"],
-      input[type="color"] {
-        height: 45px !important;
-        width: 100% !important;
-        position: relative !important;
-        z-index: 1 !important;
-      }
-
-      /* Force date picker popup to stay within viewport */
-      input[type="date"]::-webkit-datetime-edit,
-      input[type="date"]::-webkit-calendar-picker-indicator {
-        position: relative !important;
-      }
-      
-      /* Chart containers with proper proportions */
-      #visit-server-time,
-      #dynamic-chart, 
-      #visit-over-time {
-        width: 100% !important;
-        position: relative !important;
-      }
-      
-      /* Remove any fixed width constraints */
-      .visitor-sv-tm-ch,
-      .visitor-st-ch,
-      .flot-chart {
-        width: 100% !important;
-        max-width: none !important;
-        position: relative !important;
-      }
-      
-      .notification-icon {
-        width: 35px;
-        height: 35px;
-        margin-right: 12px;
-      }
-      
-      .notification-icon i {
-        font-size: 14px;
-      }
-      
-      .task-dropdown {
-        min-width: 280px;
-      }
-      
-      .progress-bar-85 {
-        width: 85%;
-      }
-      
-      .progress-bar-65 {
-        width: 65%;
-      }
-      
-      .progress-bar-95 {
-        width: 95%;
-      }
-      
-      .widget-padding {
-        padding: 0 30px 30px 30px;
-      }
-      
-      /* Fix Bootstrap Dropdown Positioning Issues */
-      .notika-header {
-        position: relative !important;
-        z-index: 1050 !important;
-      }
-      
-      .notika-nav {
-        position: relative !important;
-      }
-      
-      .notika-nav .dropdown {
-        position: static !important;
-      }
-      
-      .notika-nav .dropdown-menu {
-        position: absolute !important;
-        z-index: 1055 !important;
-        margin-top: 0 !important;
-        transform: translate3d(0px, 18px, 0px) !important;
-        top: auto !important;
-        left: auto !important;
-      }
-      
-      .notika-nav .dropdown-menu.dropdown-menu-end {
-        right: 0 !important;
-        left: auto !important;
-        transform: translate3d(-20px, 18px, 0px) !important;
-      }
-      
-      /* Ensure dropdown triggers have proper positioning context */
-      .notika-nav-link {
-        position: relative !important;
-        transform: none !important;
-        display: flex !important;
-        align-items: center !important;
-        justify-content: center !important;
-      }
-      
-      /* Prevent any CSS from interfering with dropdown positioning */
-      .notika-nav .dropdown:hover,
-      .notika-nav .dropdown.show {
-        transform: none !important;
-      }
-      
-      /* Let original Notika CSS handle widget styling - no overrides needed */
-      /* Just add our reusable components */
-      
-      /* Chat and Todo Input Styling - consistent design */
-      .input-group .btn {
-        border-left: 1px solid #dee2e6;
-        white-space: nowrap;
-        min-width: auto;
-        padding: 0.5rem 1rem;
-      }
-      
-      .input-group .btn i {
-        font-size: 14px;
-      }
-      
-      .notika-chat-btn,
-      #todo-btn-submit {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 0.5rem;
-        font-weight: 500;
-        border-radius: 0 0.375rem 0.375rem 0;
-      }
-      
-      /* Override original style.css misalignment */
-      .btn.notika-chat-btn {
-        top: 0 !important;
-        position: static !important;
-      }
-      
-      /* System Overview Widget Styling */
-      .system-overview-area {
-        padding: 0;
-      }
-      
-      .system-performance-inner,
-      .activity-overview-inner {
-        background: #fff;
-        border-radius: 8px;
-        border: 1px solid #e9ecef;
-        height: 100%;
-      }
-      
-      .system-perf-content,
-      .activity-over-content {
-        padding: 30px 30px 30px;
-      }
-      
-      /* Performance Metrics Grid */
-      .perf-metrics-grid {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
-        margin-bottom: 30px;
-      }
-      
-      .perf-metric-card {
-        display: flex;
-        align-items: center;
-        padding: 20px;
-        background: #f8f9fa;
-        border-radius: 8px;
-        border-left: 4px solid #00c292;
-        transition: all 0.3s ease;
-      }
-      
-      .perf-metric-card:hover {
-        background: #fff;
-        box-shadow: 0 4px 12px rgba(0,194,146,0.1);
-        transform: translateY(-2px);
-      }
-      
-      .metric-icon {
-        width: 50px;
-        height: 50px;
-        background: #00c292;
-        border-radius: 12px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-right: 15px;
-      }
-      
-      .metric-icon i,
-      .metric-icon svg,
-      .metric-icon .fa-solid {
-        font-size: 20px;
-        color: white !important;
-        fill: white !important;
-      }
-      
-      .metric-content {
-        flex: 1;
-        margin-right: 15px;
-      }
-      
-      .metric-content h4 {
-        font-size: 24px;
-        font-weight: 700;
-        color: #333;
-        margin: 0 0 5px 0;
-      }
-      
-      .metric-content p {
-        font-size: 14px;
-        color: #666;
-        margin: 0 0 5px 0;
-      }
-      
-      .metric-trend {
-        font-size: 12px;
-        font-weight: 600;
-        padding: 2px 6px;
-        border-radius: 4px;
-      }
-      
-      .metric-trend.positive {
-        color: #00c292;
-        background: rgba(0, 194, 146, 0.1);
-      }
-      
-      .metric-trend.negative {
-        color: #ff6b6b;
-        background: rgba(255, 107, 107, 0.1);
-      }
-      
-      .metric-trend.neutral {
-        color: #666;
-        background: rgba(102, 102, 102, 0.1);
-      }
-      
-      .metric-chart {
-        width: 60px;
-        height: 30px;
-      }
-      
-      /* System Status Row */
-      .system-status-row {
-        display: flex;
-        gap: 25px;
-        padding: 20px;
-        background: #f8f9fa;
-        border-radius: 8px;
-        flex-wrap: wrap;
-      }
-      
-      .status-indicator {
-        display: flex;
-        align-items: center;
-        font-size: 14px;
-        color: #666;
-      }
-      
-      .status-dot {
-        width: 8px;
-        height: 8px;
-        border-radius: 50%;
-        margin-right: 8px;
-      }
-      
-      .status-dot.status-online {
-        background: #00c292;
-        box-shadow: 0 0 0 2px rgba(0, 194, 146, 0.2);
-      }
-      
-      .status-dot.status-warning {
-        background: #ffc107;
-        box-shadow: 0 0 0 2px rgba(255, 193, 7, 0.2);
-      }
-      
-      .status-dot.status-offline {
-        background: #ff6b6b;
-        box-shadow: 0 0 0 2px rgba(255, 107, 107, 0.2);
-      }
-      
-      /* Additional Metrics Section */
-      .system-additional-metrics {
-        margin-top: 30px;
-        display: flex;
-        flex-direction: column;
-        gap: 25px;
-      }
-      
-      .additional-metric-row {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 20px;
-      }
-      
-      .additional-metric-item {
-        text-align: center;
-        padding: 20px;
-        background: #fff;
-        border: 1px solid #e9ecef;
-        border-radius: 8px;
-        transition: all 0.3s ease;
-      }
-      
-      .additional-metric-item:hover {
-        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-        transform: translateY(-2px);
-      }
-      
-      .additional-metric-item .metric-label {
-        font-size: 13px;
-        color: #666;
-        margin-bottom: 8px;
-        text-transform: uppercase;
-        font-weight: 500;
-      }
-      
-      .additional-metric-item .metric-value {
-        display: flex;
-        align-items: baseline;
-        justify-content: center;
-        gap: 4px;
-        margin-bottom: 8px;
-      }
-      
-      .additional-metric-item .metric-number {
-        font-size: 24px;
-        font-weight: 700;
-        color: #333;
-      }
-      
-      .additional-metric-item .metric-unit {
-        font-size: 14px;
-        color: #666;
-      }
-      
-      .additional-metric-item .metric-trend {
-        font-size: 12px;
-      }
-      
-      /* Server Uptime Section */
-      .server-uptime-section {
-        background: #f8f9fa;
-        border-radius: 8px;
-        padding: 25px;
-        border: 1px solid #e9ecef;
-      }
-      
-      .uptime-header {
-        display: flex;
-        justify-content: between;
-        align-items: center;
-        margin-bottom: 20px;
-        padding-bottom: 15px;
-        border-bottom: 1px solid #dee2e6;
-      }
-      
-      .uptime-header h4 {
-        font-size: 16px;
-        font-weight: 600;
-        color: #333;
-        margin: 0;
-        flex: 1;
-      }
-      
-      .uptime-value {
-        font-size: 24px;
-        font-weight: 700;
-        color: #00c292;
-      }
-      
-      .uptime-details {
-        display: flex;
-        justify-content: space-between;
-        gap: 20px;
-      }
-      
-      .uptime-item {
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        flex: 1;
-      }
-      
-      .uptime-label {
-        font-size: 12px;
-        color: #666;
-        margin-bottom: 5px;
-        text-transform: uppercase;
-        font-weight: 500;
-      }
-      
-      .uptime-time {
-        font-size: 14px;
-        font-weight: 600;
-        color: #333;
-      }
-      
-      /* Responsive adjustments for new content */
-      @media (max-width: 768px) {
-        .additional-metric-row {
-          grid-template-columns: 1fr;
-          gap: 15px;
-        }
-        
-        .uptime-details {
-          flex-direction: column;
-          gap: 15px;
-        }
-        
-        .uptime-item {
-          text-align: left;
-        }
-      }
-      
-      /* Activity Overview Styling */
-      .activity-chart-container {
-        margin-bottom: 30px;
-        width: 100%;
-        padding: 0;
-      }
-      
-      .activity-chart {
-        width: 100% !important;
-        height: 250px !important;
-        max-width: none !important;
-      }
-      
-      #user-activity-chart {
-        width: 100% !important;
-        height: 250px !important;
-      }
-      
-      #user-activity-chart canvas {
-        width: 100% !important;
-        height: 250px !important;
-        max-width: none !important;
-      }
-      
-      .activity-stats-list {
-        display: flex;
-        flex-direction: column;
-        gap: 15px;
-      }
-      
-      .activity-stat-row {
-        display: flex;
-        align-items: center;
-        padding: 15px;
-        background: #f8f9fa;
-        border-radius: 8px;
-        transition: all 0.3s ease;
-      }
-      
-      .activity-stat-row:hover {
-        background: #fff;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-      }
-      
-      .stat-icon {
-        width: 40px;
-        height: 40px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-right: 15px;
-      }
-      
-      .stat-icon i {
-        font-size: 18px;
-      }
-      
-      .stat-info {
-        flex: 1;
-      }
-      
-      .stat-info h5 {
-        font-size: 18px;
-        font-weight: 600;
-        color: #333;
-        margin: 0 0 2px 0;
-      }
-      
-      .stat-info p {
-        font-size: 13px;
-        color: #666;
-        margin: 0;
-      }
-      
-      .stat-change {
-        font-size: 12px;
-        font-weight: 600;
-        padding: 4px 8px;
-        border-radius: 4px;
-      }
-      
-      .stat-change.positive {
-        color: #00c292;
-        background: rgba(0, 194, 146, 0.1);
-      }
-      
-      .stat-change.negative {
-        color: #ff6b6b;
-        background: rgba(255, 107, 107, 0.1);
-      }
-      
-      /* Responsive Design */
-      @media (max-width: 768px) {
-        .perf-metrics-grid {
-          grid-template-columns: 1fr;
-          gap: 15px;
-        }
-        
-        .system-status-row {
-          flex-direction: column;
-          gap: 15px;
-        }
-        
-        .activity-chart {
-          width: 150px;
-          height: 150px;
-        }
-      }
-      
-      /* Recent Posts Widget - Consistent Spacing Fix */
-      .recent-post-wrapper {
-        min-height: 520px;
-        max-height: 580px;
-      }
-      
-      .recent-post-items {
-        max-height: 420px;
-        overflow-y: auto;
-        padding: 0 30px 30px 30px;
-      }
-      
-      .recent-post-signle {
-        margin: 0;
-        padding: 15px 0;
-        border-bottom: 1px solid #f0f0f0;
-      }
-      
-      .recent-post-signle:first-child {
-        padding-top: 15px;
-      }
-      
-      .recent-post-signle:last-child {
-        border-bottom: none;
-        padding-bottom: 15px;
-      }
-      
-      /* Fix the "View All" item styling */
-      .recent-post-signle .rc-ps-vw {
-        padding: 15px 0;
-        text-align: center;
-      }
-      
-      .recent-post-line {
-        margin: 0;
-      }
-      
-      /* Consistent post flex layout */
-      .recent-post-flex {
-        display: flex;
-        align-items: center;
-        padding: 0;
-        margin: 0;
-      }
-      
-      .recent-post-img {
-        margin-right: 15px;
-        flex-shrink: 0;
-      }
-      
-      .recent-post-img img {
-        width: 45px;
-        height: 45px;
-        border-radius: 50%;
-        object-fit: cover;
-      }
-      
-      .recent-post-it-ctn {
-        flex: 1;
-      }
-      
-      .recent-post-it-ctn h2 {
-        font-size: 14px;
-        font-weight: 600;
-        color: #333;
-        margin: 0 0 5px 0;
-      }
-      
-      .recent-post-it-ctn p {
-        font-size: 13px;
-        color: #666;
-        margin: 0;
-        line-height: 1.4;
-      }
-      
-      /* Email Statistics and Recent Items height consistency */
-      .email-statis-inner,
-      .recent-items-wp {
-        min-height: 520px;
-      }
-      
-      /* Responsive adjustments */
-      @media (max-width: 768px) {
-        .server-stats-item {
-          flex-direction: column;
-          text-align: center;
-          gap: 10px;
-        }
-        
-        .server-stats-icon {
-          margin-right: 0;
-          margin-bottom: 10px;
-        }
-        
-        .server-stats-graph {
-          width: 100%;
-        }
-      }
-    `
-    
-    const styleSheet = document.createElement('style')
-    styleSheet.textContent = dashboardStyles
-    document.head.appendChild(styleSheet)
-
-    // Remove all webkit scrollbar CSS rules to restore native scrollbars
-    this.removeAllScrollbarRules()
-    
-    console.log('✅ Font Awesome 7.0.1 icons ready (tree-shaken, only used icons bundled)')
-  }
   
   removeAllScrollbarRules() {
     // Remove all ::-webkit-scrollbar related CSS rules from all stylesheets

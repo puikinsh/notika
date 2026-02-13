@@ -36,11 +36,11 @@ export default defineConfig({
             [pageName.replace('-vite', '')]: true
           },
           // Breadcrumb icon based on section
-          breadcrumbIcon: pageName.includes('tabs') ? 'notika-app' :
-                          pageName.includes('form') ? 'notika-form' :
-                          pageName.includes('chart') ? 'notika-bar-chart' :
-                          pageName.includes('table') ? 'notika-windows' :
-                          'notika-house'
+          breadcrumbIcon: pageName.includes('tabs') ? 'fa-solid fa-cube' :
+                          pageName.includes('form') ? 'fa-solid fa-file-lines' :
+                          pageName.includes('chart') ? 'fa-solid fa-chart-column' :
+                          pageName.includes('table') ? 'fa-solid fa-table-columns' :
+                          'fa-solid fa-house'
         }
       }
     })

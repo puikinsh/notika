@@ -159,7 +159,7 @@ class DataTablePage extends NotikaApp {
   sortData(column) {
     // Update sort icons
     document.querySelectorAll('.sortable i').forEach(icon => {
-      icon.className = 'fa fa-sort text-muted'
+      icon.className = 'fa-solid fa-sort text-muted'
     })
 
     if (this.sortColumn === column) {
@@ -172,7 +172,7 @@ class DataTablePage extends NotikaApp {
     // Update the icon for the current column
     const currentHeader = document.querySelector(`[data-column="${column}"] i`)
     if (currentHeader) {
-      currentHeader.className = this.sortOrder === 'asc' ? 'fa fa-sort-up text-primary' : 'fa fa-sort-down text-primary'
+      currentHeader.className = this.sortOrder === 'asc' ? 'fa-solid fa-sort-up text-primary' : 'fa-solid fa-sort-down text-primary'
     }
 
     // Sort the data
@@ -219,7 +219,7 @@ class DataTablePage extends NotikaApp {
       tbody.innerHTML = `
         <tr>
           <td colspan="6" class="text-center py-4 text-muted">
-            <i class="fa fa-search mb-2 d-block" style="font-size: 2rem;"></i>
+            <i class="fa-solid fa-magnifying-glass mb-2 d-block" style="font-size: 2rem;"></i>
             No matching records found
           </td>
         </tr>
