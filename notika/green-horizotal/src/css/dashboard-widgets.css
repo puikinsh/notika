@@ -71,31 +71,11 @@
   width: 100% !important;
   max-width: none !important;
   display: block !important;
-  height: auto !important;
-  min-height: 400px !important;
 }
 
-/* Perfect card heights - fit content without scrolling */
-.recent-post-wrapper {
+/* Analytics chart containers - let JS control chart heights */
+.analytics-chart-container .flot-chart {
   height: auto !important;
-  min-height: auto !important;
-  position: relative !important;
-  overflow: visible !important;
-}
-
-.recent-post-items {
-  height: auto !important;
-  min-height: auto !important;
-  padding: 20px !important;
-  overflow: visible !important;
-}
-
-/* Remove any max-height constraints that cause scrolling */
-.recent-post-wrapper,
-.recent-post-items,
-.analytics-chart-container {
-  max-height: none !important;
-  overflow: visible !important;
 }
 
 /* Fix Date Picker overlapping - aggressive containment */
@@ -656,14 +636,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 /* Recent Posts Widget - Consistent Spacing Fix */
-.recent-post-wrapper {
-  min-height: 520px;
-  max-height: 580px;
-}
-
 .recent-post-items {
-  max-height: 420px;
-  overflow-y: auto;
   padding: 0 30px 30px 30px;
 }
 

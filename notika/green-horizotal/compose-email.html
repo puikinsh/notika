@@ -569,7 +569,7 @@
                         </div>
                         <div class="inbox-status">
                             <ul class="inbox-st-nav inbox-ft">
-                                <li><a href="#"><i class="fa-solid fa-envelope"></i> Inbox<span class="pull-right">12</span></a></li>
+                                <li><a href="#"><i class="fa-solid fa-envelope"></i> Inbox<span class="float-end">12</span></a></li>
                                 <li><a href="#"><i class="fa-solid fa-paper-plane"></i> Sent</a></li>
                                 <li><a href="#"><i class="fa-solid fa-file-pen"></i> Draft</a></li>
                                 <li><a href="#"><i class="fa-solid fa-trash-can"></i> Trash</a></li>
@@ -607,12 +607,12 @@
                         <div class="cmp-int mg-t-20">
                             <div class="row">
                                 <div class="col-lg-1 col-md-2 col-sm-2 col-12">
-                                    <div class="cmp-int-lb cmp-int-lb1 text-right">
+                                    <div class="cmp-int-lb cmp-int-lb1 text-end">
                                         <span>To: </span>
                                     </div>
                                 </div>
                                 <div class="col-lg-11 col-md-10 col-sm-10 col-12">
-                                    <div class="form-group">
+                                    <div class="mb-3">
                                         <div class="nk-int-st cmp-int-in cmp-email-over">
                                             <input type="email" class="form-control" placeholder="example@email.com" />
                                         </div>
@@ -621,12 +621,12 @@
                             </div>
                             <div class="row">
                                 <div class="col-lg-1 col-md-2 col-sm-2 col-12">
-                                    <div class="cmp-int-lb cmp-int-lb1 text-right">
+                                    <div class="cmp-int-lb cmp-int-lb1 text-end">
                                         <span>Cc: </span>
                                     </div>
                                 </div>
                                 <div class="col-lg-11 col-md-10 col-sm-10 col-12">
-                                    <div class="form-group">
+                                    <div class="mb-3">
                                         <div class="nk-int-st cmp-int-in cmp-email-over">
                                             <input type="email" class="form-control" placeholder="" />
                                         </div>
@@ -635,12 +635,12 @@
                             </div>
                             <div class="row">
                                 <div class="col-lg-1 col-md-2 col-sm-2 col-12">
-                                    <div class="cmp-int-lb text-right">
+                                    <div class="cmp-int-lb text-end">
                                         <span>Subject: </span>
                                     </div>
                                 </div>
                                 <div class="col-lg-11 col-md-10 col-sm-10 col-12">
-                                    <div class="form-group cmp-em-mg">
+                                    <div class="mb-3 cmp-em-mg">
                                         <div class="nk-int-st cmp-int-in cmp-email-over">
                                             <input type="text" class="form-control" placeholder="" />
                                         </div>
@@ -658,23 +658,20 @@
                             </div>
                         </div>
                         <div class="multiupload-sys">
-                            <div id="dropzone" class="dropmail">
-                                <form action="/upload" class="dropzone dropzone-custom needsclick" id="demo-upload">
-                                    <div class="dz-message needsclick download-custom">
-                                        <i class="fa-solid fa-cloud" aria-hidden="true"></i>
-                                        <h2>Drop files here or click to upload.</h2>
-                                        <p><span class="note needsclick">(This is just a demo dropzone. Selected files are <strong>not</strong> actually uploaded.)</span>
-                                        </p>
-                                    </div>
-                                </form>
+                            <div class="dropmail">
+                                <div class="download-custom text-center p-4" style="border: 2px dashed #00c292; border-radius: 4px;">
+                                    <i class="fa-solid fa-cloud" aria-hidden="true"></i>
+                                    <h2>Attach files</h2>
+                                    <input type="file" class="form-control mt-2" multiple>
+                                </div>
                             </div>
                         </div>
-                        <div class="vw-ml-action-ls text-right mg-t-20">
+                        <div class="vw-ml-action-ls text-end mg-t-20">
                             <div class="btn-group ib-btn-gp active-hook nk-email-inbox">
-                                <button class="btn btn-default btn-sm waves-effect"><i class="fa-solid fa-chevron-right"></i> Reply</button>
-                                <button class="btn btn-default btn-sm waves-effect"><i class="fa-solid fa-chevron-right"></i> Forward</button>
-                                <button class="btn btn-default btn-sm waves-effect"><i class="fa-solid fa-chevron-down"></i> Print</button>
-                                <button class="btn btn-default btn-sm waves-effect"><i class="fa-solid fa-trash-can"></i> Remove</button>
+                                <button class="btn btn-light btn-sm waves-effect"><i class="fa-solid fa-chevron-right"></i> Reply</button>
+                                <button class="btn btn-light btn-sm waves-effect"><i class="fa-solid fa-chevron-right"></i> Forward</button>
+                                <button class="btn btn-light btn-sm waves-effect"><i class="fa-solid fa-chevron-down"></i> Print</button>
+                                <button class="btn btn-light btn-sm waves-effect"><i class="fa-solid fa-trash-can"></i> Remove</button>
                             </div>
                         </div>
                     </div>

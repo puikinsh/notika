@@ -275,7 +275,7 @@
 		max-width: 255px;
 		margin: 0 auto;
 	}
-	.header-top-menu.pull-left {
+	.header-top-menu.float-start {
 		float: unset !important;
 	}
 	.rtl-layout .navbar-nav > li > a {
@@ -408,7 +408,7 @@
 	.all-content-wrapper.mini-sidebar-ctn {
 		margin-left: 0px;
 	}
-	.header-top-menu.pull-left {
+	.header-top-menu.float-start {
 		float: unset !important;
 	}
 	.rtl-layout .logo-area.logo-left {

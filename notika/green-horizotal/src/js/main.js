@@ -389,12 +389,12 @@ class NotikaApp {
     // Initialize Bootstrap 5.3.8 components (Vite bundled)
     const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
     tooltipTriggerList.forEach(tooltipTriggerEl => {
-      new Tooltip(tooltipTriggerEl)
+      new bootstrap.Tooltip(tooltipTriggerEl)
     })
     
     const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
     popoverTriggerList.forEach(popoverTriggerEl => {
-      new Popover(popoverTriggerEl)
+      new bootstrap.Popover(popoverTriggerEl)
     })
     
     // Initialize counter animations
