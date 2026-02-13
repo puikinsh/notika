@@ -23,7 +23,7 @@
     "bootstrap": "^5.3.8",
     "chart.js": "^4.5.1",
     "codemirror": "^6.0.2",
-    "cropperjs": "^1.6.2",
+    "cropperjs": "^2.1.0",
     "dayjs": "^1.11.19",
     "flatpickr": "^4.6.13",
     "leaflet": "^1.9.4",

@@ -1,5 +1,5 @@
 /**
- * Image Cropper Page → Cropper.js v2
+ * Image Cropper Page → Cropper.js v2.1.0
  * Uses web components API: cropper-canvas, cropper-image, cropper-selection, cropper-viewer
  */
 
@@ -16,7 +16,7 @@ class ImageCropperPage extends NotikaApp {
   async init() {
     await super.init()
     this.injectStyles()
-    this.initCropper()
+    await this.initCropper()
   }
 
   injectStyles() {
@@ -55,6 +55,7 @@ class ImageCropperPage extends NotikaApp {
       .cropper-canvas-wrap {
         background: #1a1a2e;
         min-height: 420px;
+        position: relative;
       }
       .cropper-canvas-wrap cropper-canvas {
         height: 500px;
@@ -151,55 +152,68 @@ class ImageCropperPage extends NotikaApp {
       .cropper-upload span { font-size: 14px; font-weight: 500; }
       .cropper-upload small { font-size: 11px; color: #999; }
 
-      /* Kill global animations on cropper page controls */
+      /* Disable ALL animations/ripple on cropper page controls */
       .cropper-area .cropper-tool,
       .cropper-area .cropper-ratio,
       .cropper-area .cropper-upload,
       .cropper-area .btn,
       .cropper-area .cropper-tool *,
       .cropper-area .cropper-ratio *,
-      .cropper-area .cropper-upload * {
+      .cropper-area .cropper-upload *,
+      .cropper-area .btn * {
         animation: none !important;
       }
     `
     document.head.appendChild(css)
   }
 
-  initCropper() {
+  async initCropper() {
     const image = document.getElementById('cropperImage')
     if (!image) return
 
-    // v2: new Cropper(element) generates <cropper-canvas> with web components
+    // v2: new Cropper(element, { container }) generates web components
+    // and inserts <cropper-canvas> into the container
     this.cropper = new Cropper(image, {
       container: '.cropper-canvas-wrap'
     })
 
-    // Get references to the web component elements
+    // Get references to the web component elements (queried from container)
     const cropperImage = this.cropper.getCropperImage()
     const selection = this.cropper.getCropperSelection()
 
-    // Wait for the image to be ready, then center it
-    cropperImage?.$ready(() => {
-      cropperImage.$center('contain')
+    if (!cropperImage || !selection) return
+
+    // Wait for the image to be fully loaded, then center it
+    await cropperImage.$ready()
+    cropperImage.$center('contain')
+
+    // Create the viewer AFTER the cropper components exist in DOM
+    // (the viewer's connectedCallback queries for <cropper-selection>)
+    this.createViewer()
+
+    // Track selection changes for crop info display
+    selection.addEventListener('change', (e) => {
+      this.updateCropInfo(e.detail)
     })
-
-    // Wire up the preview viewer
-    const viewerEl = document.querySelector('cropper-viewer')
-    if (viewerEl && selection) {
-      viewerEl.setAttribute('selection', 'cropper-selection')
-    }
-
-    // Track selection changes for crop info
-    if (selection) {
-      selection.addEventListener('change', (e) => {
-        this.updateCropInfo(e.detail)
-      })
-    }
 
     this.initToolbar(cropperImage, selection)
     this.initAspectRatio(selection)
     this.initUpload(image)
     this.initDownload(selection)
+  }
+
+  createViewer() {
+    const previewWrap = document.querySelector('.cropper-preview-wrap')
+    if (!previewWrap) return
+
+    // Clear any existing content
+    previewWrap.innerHTML = ''
+
+    // Create viewer dynamically so connectedCallback finds <cropper-selection>
+    const viewer = document.createElement('cropper-viewer')
+    viewer.setAttribute('selection', 'cropper-selection')
+    viewer.setAttribute('resize', 'vertical')
+    previewWrap.appendChild(viewer)
   }
 
   updateCropInfo(data) {
@@ -208,7 +222,7 @@ class ImageCropperPage extends NotikaApp {
     const w = Math.round(data.width || 0)
     const h = Math.round(data.height || 0)
     if (w > 0 && h > 0) {
-      info.textContent = `${w} × ${h} px`
+      info.textContent = `${w} \u00d7 ${h} px`
     }
   }
 
@@ -218,15 +232,23 @@ class ImageCropperPage extends NotikaApp {
       if (el) el.addEventListener('click', (e) => { e.preventDefault(); fn() })
     }
 
-    bind('zoomIn', () => cropperImage?.$zoom(0.1))
-    bind('zoomOut', () => cropperImage?.$zoom(-0.1))
-    bind('rotateLeft', () => cropperImage?.$rotate('-90deg'))
-    bind('rotateRight', () => cropperImage?.$rotate('90deg'))
-    bind('flipH', () => cropperImage?.$scale(-1, 1))
-    bind('flipV', () => cropperImage?.$scale(1, -1))
+    // $zoom: positive → zoom in, negative → zoom out
+    bind('zoomIn', () => cropperImage.$zoom(0.1))
+    bind('zoomOut', () => cropperImage.$zoom(-0.1))
+
+    // $rotate: accepts strings like '90deg' via toAngleInRadian()
+    bind('rotateLeft', () => cropperImage.$rotate('-90deg'))
+    bind('rotateRight', () => cropperImage.$rotate('90deg'))
+
+    // $scale: multiplies current transform matrix → toggles flip
+    bind('flipH', () => cropperImage.$scale(-1, 1))
+    bind('flipV', () => cropperImage.$scale(1, -1))
+
+    // Reset: restore identity transform + recenter, reset selection
     bind('resetCrop', () => {
-      cropperImage?.$center('contain')
-      selection?.$reset()
+      cropperImage.$resetTransform()
+      cropperImage.$center('contain')
+      selection.$reset()
     })
   }
 
@@ -237,9 +259,7 @@ class ImageCropperPage extends NotikaApp {
         buttons.forEach(b => b.classList.remove('active'))
         btn.classList.add('active')
         const val = parseFloat(btn.dataset.ratio)
-        if (selection) {
-          selection.aspectRatio = isNaN(val) ? NaN : val
-        }
+        selection.aspectRatio = isNaN(val) ? NaN : val
       })
     })
   }
@@ -254,11 +274,12 @@ class ImageCropperPage extends NotikaApp {
 
       const reader = new FileReader()
       reader.onload = (ev) => {
-        // Destroy old cropper
+        // Destroy old cropper and clean up
         this.cropper?.destroy()
 
         // Update the original image src and re-init
         originalImage.src = ev.target.result
+        originalImage.style.display = ''
         originalImage.addEventListener('load', () => {
           this.initCropper()
         }, { once: true })
@@ -273,7 +294,6 @@ class ImageCropperPage extends NotikaApp {
 
     btn.addEventListener('click', async (e) => {
       e.preventDefault()
-      if (!selection) return
 
       try {
         const canvas = await selection.$toCanvas({

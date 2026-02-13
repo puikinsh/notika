@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-**Notika** is a modernized admin dashboard template. Originally a Bootstrap 3 template from Colorlib, now running Vite 7.2.4 + Bootstrap 5.3.8 + ES6 modules.
+**Notika** is a modernized admin dashboard template. Originally a Bootstrap 3 template from Colorlib, now running Vite 7.3.1 + Bootstrap 5.3.8 + ES6 modules. No jQuery.
 
 ## Commands
 
@@ -20,99 +20,144 @@ npm run type-check # TypeScript checking
 
 **Vite root**: `./notika/green-horizotal` (not project root). The `vite.config.js` lives at the project root but sets `root: './notika/green-horizotal'`.
 
-```
+```text
 notika/green-horizotal/
 ├── src/js/
-│   ├── main.js           # NotikaApp class - main entry point
-│   ├── modules/          # Reusable ES6 modules (charts.js, ui.js)
-│   └── pages/            # Page-specific JS (analytics.js, tabs.js, etc.)
+│   ├── main.js           # NotikaApp class - imports ALL CSS, main entry point
+│   ├── modules/          # Shared modules (charts.js, ui.js)
+│   └── pages/            # 31 page-specific modules extending NotikaApp
 ├── src/css/modern.scss   # Modern SCSS styles
 ├── src/partials/         # Handlebars partials (header.hbs, navbar.hbs, footer.hbs, breadcrumb.hbs)
-├── css/                  # Original Notika CSS (kept for compatibility, imported by main.js)
-├── *.html                # Template pages
-└── img/                  # Images (serves as Vite publicDir)
+├── css/                  # Template CSS (navbar-stable, mobile-menu, responsive, widgets)
+├── *.html                # 41 template pages
+└── img/                  # Images (Vite publicDir)
 ```
 
-### Two types of HTML pages
+### How pages work
 
-1. **Standalone pages** (e.g., `index.html`) — contain inline HTML, load `main.js` directly via `<script type="module">`. `NotikaApp` auto-initializes on DOMContentLoaded.
-2. **Handlebars pages** (e.g., `tabs-hbs.html`) — use `{{> header}}`, `{{> navbar}}`, `{{> breadcrumb}}` partials. Set `data-page-module` on `<html>` to suppress `NotikaApp` auto-init and load a page-specific module instead.
+**Pages with custom logic** set `<html data-page-module="pagename">` and load a single script:
 
-### Page-specific modules pattern
+```html
+<script type="module" src="/src/js/pages/pagename.js"></script>
+```
 
-Pages with custom logic extend `NotikaApp`:
+The page module imports and extends `NotikaApp`. The `data-page-module` attribute prevents `NotikaApp` from auto-initializing (checked at `main.js:1181`).
+
+**Pages without custom logic** omit `data-page-module` and load `main.js` directly, which auto-initializes `NotikaApp`.
+
+### Page module pattern
 
 ```javascript
 import { NotikaApp } from '../main.js'
+
 class MyPage extends NotikaApp {
   async init() {
     await super.init()
     // page-specific setup
   }
 }
-```
 
-The page HTML sets `<html data-page-module="pagename">` to prevent double initialization, and uses `<script type="module" src="/src/js/pages/pagename.js">` as its entry point.
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', () => {
+    window.myPage = new MyPage()
+    window.myPage.init()
+  })
+} else {
+  window.myPage = new MyPage()
+  window.myPage.init()
+}
+
+export { MyPage }
+```
 
 ### Shared modules
 
-- `modules/charts.js` — `NotikaCharts` class wrapping Chart.js. Stores instances in a `Map` for later access/refresh/destroy.
-- `modules/ui.js` — `NotikaUI` class for Bootstrap component init, counter animations (IntersectionObserver), toast notifications, hover/ripple effects.
+- `modules/charts.js` — `NotikaCharts` class wrapping Chart.js. Stores instances in a `Map` for access/refresh/destroy.
+- `modules/ui.js` — `NotikaUI` class for Bootstrap component init, counter animations (IntersectionObserver), toast notifications.
+
+### CSS loading
+
+All CSS is imported through `main.js` via Vite — both library CSS (Bootstrap, AOS, Leaflet) and template CSS files. Pages should NOT have `<link>` tags for CSS that Vite already bundles. The only `<link>` tags in `<head>` should be for Google Fonts and favicon.
+
+### Standardized HTML head
+
+```html
+<html lang="en" data-page-module="pagename">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Page Title | Notika - Modern Vite Template</title>
+    <meta name="description" content="...">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome and all other CSS imported via Vite -->
+</head>
+```
 
 ## Key Entry Points
 
-**Main application**: `src/js/main.js`
-- Imports all CSS (Bootstrap, AOS, Leaflet, original Notika CSS files, modern SCSS) through Vite
-- Registers Chart.js components globally, sets `window.bootstrap` and `window.Notika`
-- Font Awesome: tree-shaken via `@fortawesome/fontawesome-svg-core` + `dom.watch()`
-- Notika custom icon font (`notika-custom-icon.css`) coexists with Font Awesome; FA provides fallbacks
+**Main application**: `notika/green-horizotal/src/js/main.js`
+
+- Imports all CSS through Vite (Bootstrap, AOS, Leaflet, template CSS, modern SCSS)
+- Registers Chart.js components globally, sets `window.bootstrap`
+- Font Awesome 7.2: tree-shaken via `library.add()` + `dom.watch()`
+- `NotikaApp` class handles: charts, UI init, AOS animations, mobile menu, scrollbar cleanup
 
 **Build config**: `vite.config.js`
-- Multi-page app: each page registered in `rollupOptions.input`
+
+- Multi-page app: all 41 pages in `rollupOptions.input`
 - Manual chunks: `vendor` (Bootstrap), `charts` (Chart.js), `ui` (Swiper, AOS)
-- Handlebars plugin provides page context (title, active nav flags, breadcrumb icons) computed from the page filename
+- Handlebars plugin computes page context (title, nav active flags, breadcrumb icons) from filename
 - SCSS uses `api: 'modern-compiler'`; PostCSS runs autoprefixer + cssnano
 - Build target: `es2022`, output to `../../dist` (project root `dist/`)
 
-## Stack
-
-- **Vite** 7.3.1 with ES6 modules
-- **Bootstrap** 5.3.8 (CSS framework)
-- **Chart.js** 4.5.1 (data visualization)
-- **Font Awesome** 7.2.0 (tree-shaken icons - only import used icons to `library`)
-- **Swiper** 12.1.0 (carousels), **Leaflet** 1.9.4 (maps), **AOS** 2.3.4 (animations), **Dayjs** 1.11.19
-- **Sonner** 2.0.7 (toast notifications), **Tom Select** 2.5.1 (enhanced selects), **noUiSlider** 15.8.1, **Flatpickr** 4.6.13
-
 ## Adding New Pages
 
-1. Create `notika/green-horizotal/newpage.html`
+1. Create `notika/green-horizotal/newpage.html` using the standardized head pattern above
 2. Add entry to `vite.config.js` → `rollupOptions.input`
-3. For standalone: add `<script type="module" src="/src/js/main.js"></script>`
-4. For pages with custom logic: set `<html data-page-module="newpage">`, create `src/js/pages/newpage.js` extending `NotikaApp`, and use that as the script entry
+3. Create `src/js/pages/newpage.js` extending `NotikaApp`
+4. Set `<html data-page-module="newpage">` and load the page module script
 
 ## Adding Font Awesome Icons
 
-Icons are tree-shaken. To add new icons, import and add them to the library in `main.js`:
+Icons are tree-shaken. To use a new icon:
 
-```javascript
-import { faNewIcon } from '@fortawesome/free-solid-svg-icons'
-library.add(faNewIcon)
-```
+1. Import it in `main.js`: `import { faNewIcon } from '@fortawesome/free-solid-svg-icons'`
+2. Add to `library.add(...)` call
+3. Use in HTML: `<i class="fa-solid fa-new-icon"></i>`
 
 Both `free-solid-svg-icons` and `free-brands-svg-icons` packages are available.
 
+## Navigation
+
+**Desktop** (>=992px): Horizontal dropdown navbar (`.notika-navbar.d-none.d-lg-block`).
+
+**Mobile** (<992px): Offcanvas menu (`#mobileNavOffcanvas`) via hamburger button (`.d-lg-none`). Forcefully hidden on desktop via CSS (`mobile-menu.css`) and JS (`preventMobileMenuOnDesktop()`).
+
+**Header icons**: Search, Messages, Notifications, Chat always visible. Tasks is desktop-only (`d-none d-lg-block`).
+
+## Brand Colors and Design
+
+- Primary green: `#00c292`
+- Card shadows: `0 2px 8px rgba(0,0,0,0.1)`, hover: `0 4px 16px rgba(0,0,0,0.15)`
+- Spacing: CSS custom properties `--notika-spacing-xs` (8px) through `--notika-spacing-lg` (32px)
+
 ## Known Quirks
 
-- Mobile offcanvas menu (`#mobileNavOffcanvas`) disabled programmatically on desktop (≥992px) via `show.bs.offcanvas` event prevention
-- Webkit scrollbar CSS rules removed at runtime (`removeAllScrollbarRules()`) to restore native scrollbars
-- Date picker inputs use `contain: layout style paint` and `clip-path` CSS to prevent calendar popup overflow
-- Bootstrap dropdowns need specific positioning context in header area (see `.notika-nav .dropdown` styles injected by `main.js`)
-- Collapse animation in mobile menu uses `transition: none` to prevent flash, replaced with simple show/hide
+- Mobile offcanvas disabled on desktop (>=992px) via `show.bs.offcanvas` event prevention and CSS `display: none !important`
+- Webkit scrollbar rules removed at runtime (`removeAllScrollbarRules()`) to restore native scrollbars
+- Collapse animation in mobile menu uses `transition: none` to prevent flash
+- Bootstrap dropdowns in header need specific positioning context (styles injected by `main.js`)
+- `css/responsive.css` contains legacy Bootstrap 3 rules being gradually cleaned up — avoid adding new rules there
 
-## File Organization
+## Stack
 
-- **Active source**: `notika/green-horizotal/` (Vite root)
-- **Original CSS/JS**: `css/` and `js/` directories inside the template root (imported by `main.js` via relative paths like `../../css/main.css`)
+- **Vite** 7.3.1, **Bootstrap** 5.3.8, **Chart.js** 4.5.1, **Font Awesome** 7.2.0
+- **Swiper** 12.1.0, **Leaflet** 1.9.4, **AOS** 2.3.4, **Day.js** 1.11.19
+- **Sonner** 2.0.7, **Tom Select** 2.5.1, **noUiSlider** 15.8.1, **Flatpickr** 4.6.13
+- **CodeMirror** 6.x, **Cropper.js** 2.1.0
 
 ## License
 

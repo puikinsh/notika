@@ -163,49 +163,6 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   padding: 0 30px 30px 30px;
 }
 
-/* Fix Bootstrap Dropdown Positioning Issues */
-.notika-header {
-  position: relative !important;
-  z-index: 1050 !important;
-}
-
-.notika-nav {
-  position: relative !important;
-}
-
-.notika-nav .dropdown {
-  position: static !important;
-}
-
-.notika-nav .dropdown-menu {
-  position: absolute !important;
-  z-index: 1055 !important;
-  margin-top: 0 !important;
-  transform: translate3d(0px, 18px, 0px) !important;
-  top: auto !important;
-  left: auto !important;
-}
-
-.notika-nav .dropdown-menu.dropdown-menu-end {
-  right: 0 !important;
-  left: auto !important;
-  transform: translate3d(-20px, 18px, 0px) !important;
-}
-
-/* Ensure dropdown triggers have proper positioning context */
-.notika-nav-link {
-  position: relative !important;
-  transform: none !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-}
-
-/* Prevent any CSS from interfering with dropdown positioning */
-.notika-nav .dropdown:hover,
-.notika-nav .dropdown.show {
-  transform: none !important;
-}
 
 /* Chat and Todo Input Styling - consistent design */
 .input-group .btn {
