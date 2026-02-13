@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 214">
+  <defs>
+    <linearGradient id="bg3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#fce4ec;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f8bbd0;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="500" height="214" rx="12" fill="url(#bg3)"/>
+  <!-- UI Components mockup -->
+  <!-- Toggle switches -->
+  <rect x="30" y="25" width="210" height="70" rx="8" fill="white" opacity="0.9"/>
+  <rect x="45" y="38" width="50" height="6" rx="3" fill="#e91e63" opacity="0.5"/>
+  <rect x="155" y="35" width="36" height="18" rx="9" fill="#00c292"/>
+  <circle cx="173" cy="44" r="7" fill="white"/>
+  <rect x="45" y="55" width="70" height="5" rx="2.5" fill="#e0e0e0"/>
+  <rect x="155" y="55" width="36" height="18" rx="9" fill="#ccc"/>
+  <circle cx="164" cy="64" r="7" fill="white"/>
+  <rect x="45" y="75" width="55" height="5" rx="2.5" fill="#e0e0e0"/>
+  <rect x="155" y="72" width="36" height="18" rx="9" fill="#00c292"/>
+  <circle cx="173" cy="81" r="7" fill="white"/>
+  <!-- Doughnut chart -->
+  <circle cx="370" cy="65" r="42" fill="none" stroke="#e91e63" stroke-width="12" stroke-dasharray="75 189" stroke-dashoffset="0" opacity="0.8"/>
+  <circle cx="370" cy="65" r="42" fill="none" stroke="#03a9f3" stroke-width="12" stroke-dasharray="50 214" stroke-dashoffset="-75" opacity="0.8"/>
+  <circle cx="370" cy="65" r="42" fill="none" stroke="#ffc107" stroke-width="12" stroke-dasharray="40 224" stroke-dashoffset="-125" opacity="0.8"/>
+  <circle cx="370" cy="65" r="42" fill="none" stroke="#00c292" stroke-width="12" stroke-dasharray="99 165" stroke-dashoffset="-165" opacity="0.8"/>
+  <text x="370" y="70" font-family="Roboto,sans-serif" font-size="16" font-weight="700" fill="#333" text-anchor="middle">78%</text>
+  <!-- Bottom cards -->
+  <rect x="30" y="120" width="135" height="70" rx="8" fill="white" opacity="0.9"/>
+  <rect x="42" y="133" width="16" height="16" rx="4" fill="#e91e63" opacity="0.2"/>
+  <rect x="42" y="133" width="16" height="16" rx="4" fill="none" stroke="#e91e63" stroke-width="1.5"/>
+  <rect x="65" y="135" width="80" height="5" rx="2.5" fill="#333" opacity="0.7"/>
+  <rect x="65" y="146" width="55" height="4" rx="2" fill="#999"/>
+  <!-- Progress bar -->
+  <rect x="42" y="162" width="110" height="6" rx="3" fill="#f0f0f0"/>
+  <rect x="42" y="162" width="82" height="6" rx="3" fill="#e91e63" opacity="0.7"/>
+  <text x="42" y="180" font-family="Roboto,sans-serif" font-size="9" fill="#999">75% complete</text>
+  <rect x="180" y="120" width="135" height="70" rx="8" fill="white" opacity="0.9"/>
+  <rect x="192" y="133" width="16" height="16" rx="4" fill="#03a9f3" opacity="0.2"/>
+  <rect x="192" y="133" width="16" height="16" rx="4" fill="none" stroke="#03a9f3" stroke-width="1.5"/>
+  <rect x="215" y="135" width="80" height="5" rx="2.5" fill="#333" opacity="0.7"/>
+  <rect x="215" y="146" width="55" height="4" rx="2" fill="#999"/>
+  <!-- Progress bar -->
+  <rect x="192" y="162" width="110" height="6" rx="3" fill="#f0f0f0"/>
+  <rect x="192" y="162" width="55" height="6" rx="3" fill="#03a9f3" opacity="0.7"/>
+  <text x="192" y="180" font-family="Roboto,sans-serif" font-size="9" fill="#999">50% complete</text>
+  <!-- Notification badge -->
+  <rect x="330" y="130" width="140" height="55" rx="8" fill="white" opacity="0.9"/>
+  <circle cx="352" cy="152" r="12" fill="#ff6b6b" opacity="0.15"/>
+  <text x="352" y="157" font-family="Roboto,sans-serif" font-size="12" font-weight="700" fill="#ff6b6b" text-anchor="middle">3</text>
+  <rect x="375" y="143" width="75" height="5" rx="2.5" fill="#333" opacity="0.7"/>
+  <rect x="375" y="155" width="50" height="4" rx="2" fill="#999"/>
+</svg>

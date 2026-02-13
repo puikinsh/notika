@@ -38,11 +38,11 @@
                         </a>
                     </div>
                 </div>
-                
+
                 <!-- Navigation Section -->
                 <div class="col-lg-8 col-6">
                     <div class="notika-nav justify-content-end d-flex align-items-center gap-2 gap-lg-3">
-                        
+
                         <!-- Search -->
                         <div class="dropdown">
                             <button class="notika-nav-link" type="button" data-bs-toggle="dropdown" data-bs-auto-close="outside">
@@ -55,7 +55,7 @@
                                 </div>
                             </div>
                         </div>
-                        
+
                         <!-- Messages -->
                         <div class="dropdown">
                             <button class="notika-nav-link position-relative" type="button" data-bs-toggle="dropdown">
@@ -94,7 +94,7 @@
                                 </div>
                             </div>
                         </div>
-                        
+
                         <!-- Notifications -->
                         <div class="dropdown">
                             <button class="notika-nav-link position-relative" type="button" data-bs-toggle="dropdown">
@@ -139,7 +139,7 @@
                                 </div>
                             </div>
                         </div>
-                        
+
                         <!-- Tasks - Desktop Only -->
                         <div class="dropdown d-none d-lg-block">
                             <button class="notika-nav-link position-relative" type="button" data-bs-toggle="dropdown">
@@ -184,7 +184,7 @@
                                 </div>
                             </div>
                         </div>
-                        
+
                         <!-- Chat -->
                         <div class="dropdown">
                             <button class="notika-nav-link" type="button" data-bs-toggle="dropdown">
@@ -562,152 +562,257 @@
     <div class="inbox-area">
         <div class="container">
             <div class="row">
-                <div class="col-lg-3 col-md-3 col-sm-3 col-12">
+                <div class="col-lg-3 col-md-4 col-12">
                     <div class="inbox-left-sd">
-						<div class="compose-ml">
-                            <a class="btn" href="#">Compose</a>
+                        <div class="compose-ml">
+                            <a class="btn" href="compose-email.html"><i class="fa-solid fa-pen"></i> Compose</a>
                         </div>
                         <div class="inbox-status">
                             <ul class="inbox-st-nav inbox-ft">
-                                <li><a href="#"><i class="fa-solid fa-envelope"></i> Inbox<span class="float-end">12</span></a></li>
+                                <li class="active"><a href="#"><i class="fa-solid fa-inbox"></i> Inbox<span class="badge bg-success float-end">12</span></a></li>
                                 <li><a href="#"><i class="fa-solid fa-paper-plane"></i> Sent</a></li>
-                                <li><a href="#"><i class="fa-solid fa-file-pen"></i> Draft</a></li>
+                                <li><a href="#"><i class="fa-solid fa-file-pen"></i> Drafts<span class="badge bg-secondary float-end">3</span></a></li>
+                                <li><a href="#"><i class="fa-solid fa-star"></i> Starred</a></li>
                                 <li><a href="#"><i class="fa-solid fa-trash-can"></i> Trash</a></li>
                             </ul>
                         </div>
                         <hr>
                         <div class="inbox-status">
+                            <h6 class="inbox-sidebar-label">Labels</h6>
                             <ul class="inbox-st-nav">
-                                <li><a href="#"><i class="fa-solid fa-plane"></i> Travel</a></li>
-                                <li><a href="#"><i class="fa-solid fa-chart-pie"></i> Finance</a></li>
-                                <li><a href="#"><i class="fa-solid fa-share-nodes"></i> Social</a></li>
-                                <li><a href="#"><i class="fa-solid fa-tag"></i> Promos</a></li>
-                                <li><a href="#"><i class="fa-solid fa-flag"></i> Updates</a></li>
+                                <li><a href="#"><i class="fa-solid fa-circle" style="color: #ab8ce4; font-size: 10px;"></i> Finance</a></li>
+                                <li><a href="#"><i class="fa-solid fa-circle" style="color: #01c0c8; font-size: 10px;"></i> Social</a></li>
+                                <li><a href="#"><i class="fa-solid fa-circle" style="color: #f39c12; font-size: 10px;"></i> Travel</a></li>
+                                <li><a href="#"><i class="fa-solid fa-circle" style="color: #e74c3c; font-size: 10px;"></i> Promos</a></li>
+                                <li><a href="#"><i class="fa-solid fa-circle" style="color: #00c292; font-size: 10px;"></i> Updates</a></li>
                             </ul>
                         </div>
                         <hr>
                         <div class="inbox-status">
+                            <h6 class="inbox-sidebar-label">Quick Links</h6>
                             <ul class="inbox-st-nav inbox-nav-mg">
                                 <li><a href="#"><i class="fa-solid fa-circle-check"></i> Forum</a></li>
                                 <li><a href="#"><i class="fa-solid fa-message"></i> Chat</a></li>
-                                <li><a href="#"><i class="fa-solid fa-star"></i> Work</a></li>
                                 <li><a href="#"><i class="fa-solid fa-gear"></i> Settings</a></li>
                                 <li><a href="#"><i class="fa-solid fa-headset"></i> Support</a></li>
                             </ul>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-9 col-md-9 col-sm-9 col-12">
+                <div class="col-lg-9 col-md-8 col-12">
                     <div class="inbox-text-list sm-res-mg-t-30">
-                        <div class="mb-3">
-                            <div class="nk-int-st search-input search-overt">
-                                <input type="text" class="form-control" placeholder="Search email..." />
-                                <button class="btn search-ib">Search</button>
+                        <!-- Search Bar -->
+                        <div class="inbox-search-bar">
+                            <div class="input-group">
+                                <span class="input-group-text"><i class="fa-solid fa-magnifying-glass"></i></span>
+                                <input type="text" class="form-control" placeholder="Search emails by sender, subject, or keyword...">
                             </div>
                         </div>
-                        <div class="inbox-btn-st-ls btn-toolbar">
-                            <div class="btn-group ib-btn-gp active-hook nk-email-inbox">
-                                <button class="btn btn-light btn-sm"><i class="fa-solid fa-arrows-rotate"></i> Refresh</button>
-                                <button class="btn btn-light btn-sm"><i class="fa-solid fa-chevron-right"></i></button>
-                                <button class="btn btn-light btn-sm"><i class="fa-solid fa-chevron-down"></i></button>
-                                <button class="btn btn-light btn-sm"><i class="fa-solid fa-trash-can"></i></button>
-                                <button class="btn btn-light btn-sm"><i class="fa-solid fa-check"></i></button>
-                                <button class="btn btn-light btn-sm"><i class="fa-solid fa-tag"></i></button>
-                            </div>
-                            <div class="btn-group ib-btn-gp active-hook nk-act nk-email-inbox">
-                                <button class="btn btn-light btn-sm"><i class="fa-solid fa-chevron-left"></i></button>
-                                <button class="btn btn-light btn-sm"><i class="fa-solid fa-chevron-right"></i></button>
+
+                        <!-- Toolbar -->
+                        <div class="inbox-toolbar">
+                            <div class="d-flex align-items-center justify-content-between flex-wrap gap-2">
+                                <div class="d-flex align-items-center gap-2">
+                                    <div class="form-check mb-0">
+                                        <input class="form-check-input" type="checkbox" id="selectAll">
+                                    </div>
+                                    <div class="btn-group btn-group-sm">
+                                        <button class="btn btn-light" title="Refresh"><i class="fa-solid fa-arrows-rotate"></i></button>
+                                        <button class="btn btn-light" title="Archive"><i class="fa-solid fa-box-archive"></i></button>
+                                        <button class="btn btn-light" title="Delete"><i class="fa-solid fa-trash-can"></i></button>
+                                        <button class="btn btn-light" title="Mark as read"><i class="fa-solid fa-envelope-open"></i></button>
+                                        <button class="btn btn-light" title="Labels"><i class="fa-solid fa-tag"></i></button>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-center gap-2">
+                                    <span class="text-muted small">1&ndash;8 of 24</span>
+                                    <div class="btn-group btn-group-sm">
+                                        <button class="btn btn-light" disabled title="Newer"><i class="fa-solid fa-chevron-left"></i></button>
+                                        <button class="btn btn-light" title="Older"><i class="fa-solid fa-chevron-right"></i></button>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="table-responsive">
-                            <table class="table table-hover table-inbox">
-                                <tbody>
-                                    <tr class="unread">
-                                        <td class="">
-                                            <label><input type="checkbox" checked="" class="form-check-input"></label>
-                                        </td>
-                                        <td><a href="#">Jeremy Massey</a></td>
-                                        <td><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a>
-                                        </td>
-                                        <td><i class="fa-solid fa-paperclip"></i></td>
-                                        <td class="text-end mail-date">Tue, Nov 25</td>
-                                    </tr>
-                                    <tr class="active">
-                                        <td class="">
-                                            <label><input type="checkbox" class="form-check-input"></label>
-                                        </td>
-                                        <td><a href="#">Marshall Horne</a></td>
-                                        <td><a href="#">Praesent nec nisl sed neque ornare maximus at ac enim.</a>
-                                        </td>
-                                        <td></td>
-                                        <td class="text-end mail-date">Wed, Jan 13</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="">
-                                            <label><input type="checkbox" class="form-check-input"></label>
-                                        </td>
-                                        <td><a href="#">Grant Franco</a> <span class="label label-warning">Finance</span></td>
-                                        <td><a href="#">Etiam maximus tellus a turpis tempor mollis.</a></td>
-                                        <td></td>
-                                        <td class="text-end mail-date">Mon, Oct 19</td>
-                                    </tr>
-                                    <tr class="unread active">
-                                        <td class="">
-                                            <label><input type="checkbox" class="form-check-input"></label>
-                                        </td>
-                                        <td><a href="#">Ferdinand Meadows</a></td>
-                                        <td><a href="#">Aenean hendrerit ligula eget augue gravida semper.</a></td>
-                                        <td><i class="fa-solid fa-paperclip"></i></td>
-                                        <td class="text-end mail-date">Sat, Aug 29</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="">
-                                            <label><input type="checkbox" checked="" class="form-check-input"></label>
-                                        </td>
-                                        <td><a href="#">Ivor Rios</a> <span class="label label-info">Social</span>
-                                        </td>
-                                        <td><a href="#">Sed quis augue in nunc venenatis finibus.</a></td>
-                                        <td><i class="fa-solid fa-paperclip"></i></td>
-                                        <td class="text-end mail-date">Sat, Dec 12</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="">
-                                            <label><input type="checkbox" class="form-check-input"></label>
-                                        </td>
-                                        <td><a href="#">Maxwell Murphy</a></td>
-                                        <td><a href="#">Quisque eu tortor quis justo viverra cursus.</a></td>
-                                        <td></td>
-                                        <td class="text-end mail-date">Sun, May 17</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="">
-                                            <label><input type="checkbox" class="form-check-input"></label>
-                                        </td>
-                                        <td><a href="#">Henry Patterson</a></td>
-                                        <td><a href="#">Aliquam nec justo interdum, ornare mi non, elementum lacus.</a></td>
-                                        <td><i class="fa-solid fa-paperclip"></i></td>
-                                        <td class="text-end mail-date">Thu, Aug 06</td>
-                                    </tr>
-									<tr>
-                                        <td class="">
-                                            <label><input type="checkbox" class="form-check-input"></label>
-                                        </td>
-                                        <td><a href="#">Maxwell Murphy</a></td>
-                                        <td><a href="#">Quisque eu tortor quis justo viverra cursus.</a></td>
-                                        <td></td>
-                                        <td class="text-end mail-date">Sun, May 17</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                            <div class="pagination-inbox">
-                                <ul class="wizard-nav-ac">
-                                    <li><a class="btn" href="#"><i class="fa-solid fa-arrow-left"></i></a></li>
-                                    <li class="active"><a class="btn" href="#">1</a></li>
-                                    <li><a class="btn" href="#">2</a></li>
-                                    <li><a class="btn" href="#">3</a></li>
-                                    <li><a class="btn" href="#"><i class="fa-solid fa-angles-right"></i></a></li>
+
+                        <!-- Email List -->
+                        <div class="inbox-email-list">
+                            <!-- Email 1 - Unread -->
+                            <a href="view-email.html" class="inbox-email-item unread">
+                                <div class="email-select">
+                                    <input type="checkbox" class="form-check-input" onclick="event.stopPropagation()">
+                                </div>
+                                <div class="email-star" onclick="event.preventDefault(); this.classList.toggle('starred')">
+                                    <i class="fa-star fa-regular"></i>
+                                </div>
+                                <div class="email-sender">Jeremy Massey</div>
+                                <div class="email-content">
+                                    <span class="email-subject">Project kickoff meeting tomorrow</span>
+                                    <span class="email-preview"> &ndash; Hi team, just a reminder that we have our project kickoff meeting scheduled for tomorrow at 10 AM...</span>
+                                </div>
+                                <div class="email-meta">
+                                    <span class="email-attachment"><i class="fa-solid fa-paperclip"></i></span>
+                                    <span class="email-date">10:45 AM</span>
+                                </div>
+                            </a>
+
+                            <!-- Email 2 - Unread, Starred -->
+                            <a href="view-email.html" class="inbox-email-item unread">
+                                <div class="email-select">
+                                    <input type="checkbox" class="form-check-input" onclick="event.stopPropagation()">
+                                </div>
+                                <div class="email-star starred" onclick="event.preventDefault(); this.classList.toggle('starred')">
+                                    <i class="fa-star fa-regular"></i>
+                                </div>
+                                <div class="email-sender">
+                                    Sarah Wilson
+                                    <span class="badge bg-finance">Finance</span>
+                                </div>
+                                <div class="email-content">
+                                    <span class="email-subject">Q4 Budget report attached</span>
+                                    <span class="email-preview"> &ndash; Please find the Q4 budget report attached. Let me know if the numbers align with your department's projections...</span>
+                                </div>
+                                <div class="email-meta">
+                                    <span class="email-attachment"><i class="fa-solid fa-paperclip"></i></span>
+                                    <span class="email-date">9:32 AM</span>
+                                </div>
+                            </a>
+
+                            <!-- Email 3 - Read -->
+                            <a href="view-email.html" class="inbox-email-item">
+                                <div class="email-select">
+                                    <input type="checkbox" class="form-check-input" onclick="event.stopPropagation()">
+                                </div>
+                                <div class="email-star" onclick="event.preventDefault(); this.classList.toggle('starred')">
+                                    <i class="fa-star fa-regular"></i>
+                                </div>
+                                <div class="email-sender">
+                                    Grant Franco
+                                    <span class="badge bg-social">Social</span>
+                                </div>
+                                <div class="email-content">
+                                    <span class="email-subject">Team lunch this Friday</span>
+                                    <span class="email-preview"> &ndash; Hey everyone! I'm organizing a team lunch this Friday at the new Italian place downtown. RSVP by Wednesday please...</span>
+                                </div>
+                                <div class="email-meta">
+                                    <span class="email-date">Yesterday</span>
+                                </div>
+                            </a>
+
+                            <!-- Email 4 - Unread -->
+                            <a href="view-email.html" class="inbox-email-item unread">
+                                <div class="email-select">
+                                    <input type="checkbox" class="form-check-input" onclick="event.stopPropagation()">
+                                </div>
+                                <div class="email-star" onclick="event.preventDefault(); this.classList.toggle('starred')">
+                                    <i class="fa-star fa-regular"></i>
+                                </div>
+                                <div class="email-sender">Ferdinand Meadows</div>
+                                <div class="email-content">
+                                    <span class="email-subject">New design mockups ready for review</span>
+                                    <span class="email-preview"> &ndash; I've uploaded the latest design mockups to Figma. The dashboard and profile sections have been completely reworked...</span>
+                                </div>
+                                <div class="email-meta">
+                                    <span class="email-attachment"><i class="fa-solid fa-paperclip"></i></span>
+                                    <span class="email-date">Yesterday</span>
+                                </div>
+                            </a>
+
+                            <!-- Email 5 - Read, Starred -->
+                            <a href="view-email.html" class="inbox-email-item">
+                                <div class="email-select">
+                                    <input type="checkbox" class="form-check-input" onclick="event.stopPropagation()">
+                                </div>
+                                <div class="email-star starred" onclick="event.preventDefault(); this.classList.toggle('starred')">
+                                    <i class="fa-star fa-regular"></i>
+                                </div>
+                                <div class="email-sender">
+                                    Ivor Rios
+                                    <span class="badge bg-travel">Travel</span>
+                                </div>
+                                <div class="email-content">
+                                    <span class="email-subject">Conference travel arrangements confirmed</span>
+                                    <span class="email-preview"> &ndash; Your flights and hotel for the DevConf 2025 conference have been booked. Departure on March 15, returning March 18...</span>
+                                </div>
+                                <div class="email-meta">
+                                    <span class="email-attachment"><i class="fa-solid fa-paperclip"></i></span>
+                                    <span class="email-date">Feb 10</span>
+                                </div>
+                            </a>
+
+                            <!-- Email 6 - Read -->
+                            <a href="view-email.html" class="inbox-email-item">
+                                <div class="email-select">
+                                    <input type="checkbox" class="form-check-input" onclick="event.stopPropagation()">
+                                </div>
+                                <div class="email-star" onclick="event.preventDefault(); this.classList.toggle('starred')">
+                                    <i class="fa-star fa-regular"></i>
+                                </div>
+                                <div class="email-sender">Maxwell Murphy</div>
+                                <div class="email-content">
+                                    <span class="email-subject">Re: API integration progress update</span>
+                                    <span class="email-preview"> &ndash; Good news! The payment gateway integration is now at 85% completion. We resolved the webhook validation issue...</span>
+                                </div>
+                                <div class="email-meta">
+                                    <span class="email-date">Feb 9</span>
+                                </div>
+                            </a>
+
+                            <!-- Email 7 - Read -->
+                            <a href="view-email.html" class="inbox-email-item">
+                                <div class="email-select">
+                                    <input type="checkbox" class="form-check-input" onclick="event.stopPropagation()">
+                                </div>
+                                <div class="email-star" onclick="event.preventDefault(); this.classList.toggle('starred')">
+                                    <i class="fa-star fa-regular"></i>
+                                </div>
+                                <div class="email-sender">Henry Patterson</div>
+                                <div class="email-content">
+                                    <span class="email-subject">Server maintenance scheduled for Sunday</span>
+                                    <span class="email-preview"> &ndash; We'll be performing scheduled maintenance on the production servers this Sunday from 2 AM to 6 AM EST...</span>
+                                </div>
+                                <div class="email-meta">
+                                    <span class="email-attachment"><i class="fa-solid fa-paperclip"></i></span>
+                                    <span class="email-date">Feb 8</span>
+                                </div>
+                            </a>
+
+                            <!-- Email 8 - Read -->
+                            <a href="view-email.html" class="inbox-email-item">
+                                <div class="email-select">
+                                    <input type="checkbox" class="form-check-input" onclick="event.stopPropagation()">
+                                </div>
+                                <div class="email-star" onclick="event.preventDefault(); this.classList.toggle('starred')">
+                                    <i class="fa-star fa-regular"></i>
+                                </div>
+                                <div class="email-sender">
+                                    Lisa Chen
+                                    <span class="badge bg-promo">Promo</span>
+                                </div>
+                                <div class="email-content">
+                                    <span class="email-subject">New employee onboarding checklist</span>
+                                    <span class="email-preview"> &ndash; Hi, please complete the onboarding checklist before your first week. This includes setting up your dev environment...</span>
+                                </div>
+                                <div class="email-meta">
+                                    <span class="email-date">Feb 7</span>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- Pagination -->
+                        <div class="inbox-pagination">
+                            <nav aria-label="Email pagination">
+                                <ul class="pagination pagination-sm justify-content-center mb-0">
+                                    <li class="page-item disabled">
+                                        <a class="page-link" href="#" aria-label="Previous"><i class="fa-solid fa-chevron-left"></i></a>
+                                    </li>
+                                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="#" aria-label="Next"><i class="fa-solid fa-chevron-right"></i></a>
+                                    </li>
                                 </ul>
-                            </div>
+                            </nav>
                         </div>
                     </div>
                 </div>
@@ -715,7 +820,6 @@
         </div>
     </div>
     <!-- Inbox area End-->
-    <!-- Start Footer area-->
 
     <!-- Footer area Start-->
     <div class="footer-copyright-area">
@@ -723,8 +827,7 @@
             <div class="row">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-12">
                     <div class="footer-copy-right">
-                        <p>Copyright © 2025
-. All rights reserved. Template by <a href="https://colorlib.com">Colorlib</a>.</p>
+                        <p>Copyright &copy; 2025. All rights reserved. Template by <a href="https://colorlib.com">Colorlib</a>.</p>
                     </div>
                 </div>
             </div>
@@ -776,7 +879,15 @@
                 }
             });
 
-            console.log('✅ Stable navigation system initialized');
+            // Select all checkbox
+            const selectAll = document.getElementById('selectAll');
+            if (selectAll) {
+                selectAll.addEventListener('change', function() {
+                    document.querySelectorAll('.inbox-email-list .form-check-input').forEach(cb => {
+                        cb.checked = this.checked;
+                    });
+                });
+            }
         });
     </script>
 </body>

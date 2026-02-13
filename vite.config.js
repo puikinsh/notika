@@ -71,7 +71,8 @@ export default defineConfig({
         notification: resolve(process.cwd(), 'notika/green-horizotal/notification.html'),
         'data-table': resolve(process.cwd(), 'notika/green-horizotal/data-table.html'),
         tabs: resolve(process.cwd(), 'notika/green-horizotal/tabs.html'),
-        'tabs-hbs': resolve(process.cwd(), 'notika/green-horizotal/tabs-hbs.html')
+        'tabs-hbs': resolve(process.cwd(), 'notika/green-horizotal/tabs-hbs.html'),
+        animations: resolve(process.cwd(), 'notika/green-horizotal/animations.html')
       },
       output: {
         manualChunks: {

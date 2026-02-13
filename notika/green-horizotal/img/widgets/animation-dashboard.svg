@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 214">
+  <defs>
+    <linearGradient id="bg1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#e8f5e9;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#c8e6c9;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="bar1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#00c292;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#009e76;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="500" height="214" rx="12" fill="url(#bg1)"/>
+  <!-- Mini dashboard card -->
+  <rect x="30" y="25" width="200" height="80" rx="8" fill="white" opacity="0.9"/>
+  <rect x="45" y="40" width="60" height="8" rx="4" fill="#00c292"/>
+  <rect x="45" y="55" width="90" height="6" rx="3" fill="#e0e0e0"/>
+  <text x="45" y="85" font-family="Roboto,sans-serif" font-size="22" font-weight="700" fill="#333">2,847</text>
+  <circle cx="200" cy="55" r="18" fill="url(#bar1)" opacity="0.2"/>
+  <path d="M193 55 L198 60 L208 50" stroke="#00c292" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Chart bars -->
+  <rect x="270" y="85" width="24" height="50" rx="4" fill="#00c292" opacity="0.7"/>
+  <rect x="302" y="60" width="24" height="75" rx="4" fill="#00c292" opacity="0.85"/>
+  <rect x="334" y="40" width="24" height="95" rx="4" fill="#00c292"/>
+  <rect x="366" y="70" width="24" height="65" rx="4" fill="#00c292" opacity="0.6"/>
+  <rect x="398" y="50" width="24" height="85" rx="4" fill="#00c292" opacity="0.9"/>
+  <!-- Chart baseline -->
+  <line x1="260" y1="140" x2="432" y2="140" stroke="#009e76" stroke-width="1.5" opacity="0.3"/>
+  <!-- Bottom metrics -->
+  <rect x="30" y="125" width="120" height="60" rx="8" fill="white" opacity="0.9"/>
+  <circle cx="55" cy="155" r="14" fill="#03a9f3" opacity="0.15"/>
+  <path d="M49 155 L55 148 L61 155" stroke="#03a9f3" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <rect x="78" y="145" width="55" height="6" rx="3" fill="#03a9f3" opacity="0.6"/>
+  <rect x="78" y="158" width="40" height="5" rx="2.5" fill="#e0e0e0"/>
+  <rect x="170" y="125" width="120" height="60" rx="8" fill="white" opacity="0.9"/>
+  <circle cx="195" cy="155" r="14" fill="#ff6b6b" opacity="0.15"/>
+  <path d="M189 152 L195 158 L201 152" stroke="#ff6b6b" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <rect x="218" y="145" width="55" height="6" rx="3" fill="#ff6b6b" opacity="0.6"/>
+  <rect x="218" y="158" width="40" height="5" rx="2.5" fill="#e0e0e0"/>
+  <!-- Decorative dots -->
+  <circle cx="440" cy="170" r="3" fill="#00c292" opacity="0.4"/>
+  <circle cx="455" cy="170" r="3" fill="#00c292" opacity="0.6"/>
+  <circle cx="470" cy="170" r="3" fill="#00c292" opacity="0.8"/>
+</svg>
