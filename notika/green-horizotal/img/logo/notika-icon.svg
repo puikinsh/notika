@@ -1,0 +1,7 @@
+<svg width="30" height="30" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background for the brand mark -->
+  <rect x="0" y="0" width="30" height="30" rx="6" fill="#00c292"/>
+
+  <!-- Modern 'N' icon -->
+  <text x="15" y="21" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="18" font-weight="bold">N</text>
+</svg>

@@ -1,0 +1,54 @@
+/* Email Statistics Widget Spacing Fix */
+/* Ensures consistent padding all around, especially bottom spacing */
+
+.email-statis-inner {
+    overflow: hidden; /* Clean card boundaries */
+}
+
+.email-statis-inner .email-ctn-round {
+    padding: 0; /* Reset container */
+}
+
+.email-statis-inner .email-rdn-hd {
+    padding: 16px 24px !important; /* Consistent header padding */
+    background: #f8f9fa !important;
+    border-bottom: 1px solid #e9ecef !important;
+    margin: 0 !important;
+}
+
+.email-statis-inner .email-statis-wrap {
+    padding: 24px 24px 32px 24px !important; /* Extra bottom padding for charts */
+}
+
+/* Email chart groups proper spacing */
+.email-round-gp {
+    margin-top: 16px;
+    margin-bottom: 8px; /* Space below chart group */
+}
+
+.email-round-pro {
+    margin-bottom: 12px; /* Space between chart items */
+    padding: 8px; /* Internal padding for charts */
+}
+
+.email-round-pro:last-child {
+    margin-bottom: 0; /* Clean last item */
+}
+
+/* Chart elements spacing */
+.email-signle-gp {
+    margin-bottom: 6px; /* Space below chart elements */
+    text-align: center; /* Center align charts */
+}
+
+.email-ctn-nock {
+    margin-bottom: 4px; /* Space below labels */
+    text-align: center; /* Center align labels */
+}
+
+.email-ctn-nock p {
+    font-size: 12px;
+    color: #6c757d;
+    margin: 0;
+    font-weight: 500;
+}

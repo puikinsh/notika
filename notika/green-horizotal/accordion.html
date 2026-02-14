@@ -1,608 +1,543 @@
 <!doctype html>
-<html class="no-js" lang="">
-
+<html lang="en">
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Accordion | Notika - Notika Admin Template</title>
-    <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- favicon
-		============================================ -->
-    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
-    <!-- Google Fonts
-		============================================ -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700,900" rel="stylesheet">
-    <!-- Bootstrap CSS
-		============================================ -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <!-- font awesome CSS
-		============================================ -->
-    <link rel="stylesheet" href="css/font-awesome.min.css">
-    <!-- owl.carousel CSS
-		============================================ -->
-    <link rel="stylesheet" href="css/owl.carousel.css">
-    <link rel="stylesheet" href="css/owl.theme.css">
-    <link rel="stylesheet" href="css/owl.transitions.css">
-    <!-- meanmenu CSS
-		============================================ -->
-    <link rel="stylesheet" href="css/meanmenu/meanmenu.min.css">
-    <!-- animate CSS
-		============================================ -->
-    <link rel="stylesheet" href="css/animate.css">
-    <!-- normalize CSS
-		============================================ -->
-    <link rel="stylesheet" href="css/normalize.css">
-	<!-- wave CSS
-		============================================ -->
-    <link rel="stylesheet" href="css/wave/waves.min.css">
-    <link rel="stylesheet" href="css/wave/button.css">
-    <!-- mCustomScrollbar CSS
-		============================================ -->
-    <link rel="stylesheet" href="css/scrollbar/jquery.mCustomScrollbar.min.css">
-    <!-- jvectormap CSS
-		============================================ -->
-    <link rel="stylesheet" href="css/jvectormap/jquery-jvectormap-2.0.3.css">
-    <!-- Notika icon CSS
-		============================================ -->
-    <link rel="stylesheet" href="css/notika-custom-icon.css">
-    <!-- main CSS
-		============================================ -->
-    <link rel="stylesheet" href="css/main.css">
-    <!-- style CSS
-		============================================ -->
-    <link rel="stylesheet" href="style.css">
-    <!-- responsive CSS
-		============================================ -->
-    <link rel="stylesheet" href="css/responsive.css">
-    <!-- modernizr JS
-		============================================ -->
-    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+    <title>Accordions | Notika - Modern Vite Template</title>
+    <meta name="description" content="Modern Notika Admin Template powered by Vite 7.1.5">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/logo/notika-icon.svg">
+    <link rel="alternate icon" href="/favicon.ico">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Mobile Menu CSS -->
+    <link rel="stylesheet" href="css/mobile-menu.css">
+
+    <!-- Font Awesome and all other CSS imported via Vite -->
+    <!-- ONLY Vite entry point - everything else bundled -->
 </head>
 
 <body>
-    <!--[if lt IE 8]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-    <!-- Start Header Top Area -->
-    <div class="header-top-area">
+    <!-- Modern Bootstrap 5 Header -->
+    <header class="notika-header">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                    <div class="logo-area">
-                        <a href="#"><img src="img/logo/logo.png" alt="" /></a>
+            <div class="row align-items-center">
+                <!-- Logo Section -->
+                <div class="col-lg-4 col-6">
+                    <div class="notika-brand">
+                        <a href="index.html">
+                            <!-- Desktop Logo (768px and up) -->
+                            <img src="/logo/notika-logo-horizontal.svg" alt="Notika" class="d-none d-md-block" style="height: 40px;">
+                            <!-- Mobile Logo (below 768px) -->
+                            <img src="/logo/notika-icon.svg" alt="Notika" class="d-md-none" style="height: 35px; width: 35px;">
+                        </a>
                     </div>
                 </div>
-                <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
-                    <div class="header-top-menu">
-                        <ul class="nav navbar-nav notika-top-nav">
-                            <li class="nav-item dropdown">
-                                <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle"><span><i class="notika-icon notika-search"></i></span></a>
-                                <div role="menu" class="dropdown-menu search-dd animated flipInX">
-                                    <div class="search-input">
-                                        <i class="notika-icon notika-left-arrow"></i>
-                                        <input type="text" />
-                                    </div>
+                
+                <!-- Navigation Section -->
+                <div class="col-lg-8 col-6">
+                    <div class="notika-nav justify-content-end d-flex align-items-center gap-2 gap-lg-3">
+                        
+                        <!-- Search -->
+                        <div class="dropdown">
+                            <button class="notika-nav-link" type="button" data-bs-toggle="dropdown" data-bs-auto-close="outside">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-end notika-dropdown search-dropdown">
+                                <div class="search-input-group">
+                                    <input type="text" placeholder="Search anything..." class="form-control">
+                                    <i class="fa-solid fa-magnifying-glass search-icon"></i>
                                 </div>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle"><span><i class="notika-icon notika-mail"></i></span></a>
-                                <div role="menu" class="dropdown-menu message-dd animated zoomIn">
-                                    <div class="hd-mg-tt">
-                                        <h2>Messages</h2>
-                                    </div>
-                                    <div class="hd-message-info">
-                                        <a href="#">
-                                            <div class="hd-message-sn">
-                                                <div class="hd-message-img">
-                                                    <img src="img/post/1.jpg" alt="" />
-                                                </div>
-                                                <div class="hd-mg-ctn">
-                                                    <h3>David Belle</h3>
-                                                    <p>Cum sociis natoque penatibus et magnis dis parturient montes</p>
-                                                </div>
-                                            </div>
-                                        </a>
-                                        <a href="#">
-                                            <div class="hd-message-sn">
-                                                <div class="hd-message-img">
-                                                    <img src="img/post/2.jpg" alt="" />
-                                                </div>
-                                                <div class="hd-mg-ctn">
-                                                    <h3>Jonathan Morris</h3>
-                                                    <p>Cum sociis natoque penatibus et magnis dis parturient montes</p>
-                                                </div>
-                                            </div>
-                                        </a>
-                                        <a href="#">
-                                            <div class="hd-message-sn">
-                                                <div class="hd-message-img">
-                                                    <img src="img/post/4.jpg" alt="" />
-                                                </div>
-                                                <div class="hd-mg-ctn">
-                                                    <h3>Fredric Mitchell</h3>
-                                                    <p>Cum sociis natoque penatibus et magnis dis parturient montes</p>
-                                                </div>
-                                            </div>
-                                        </a>
-                                        <a href="#">
-                                            <div class="hd-message-sn">
-                                                <div class="hd-message-img">
-                                                    <img src="img/post/1.jpg" alt="" />
-                                                </div>
-                                                <div class="hd-mg-ctn">
-                                                    <h3>David Belle</h3>
-                                                    <p>Cum sociis natoque penatibus et magnis dis parturient montes</p>
-                                                </div>
-                                            </div>
-                                        </a>
-                                        <a href="#">
-                                            <div class="hd-message-sn">
-                                                <div class="hd-message-img">
-                                                    <img src="img/post/2.jpg" alt="" />
-                                                </div>
-                                                <div class="hd-mg-ctn">
-                                                    <h3>Glenn Jecobs</h3>
-                                                    <p>Cum sociis natoque penatibus et magnis dis parturient montes</p>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="hd-mg-va">
-                                        <a href="#">View All</a>
-                                    </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Messages -->
+                        <div class="dropdown">
+                            <button class="notika-nav-link position-relative" type="button" data-bs-toggle="dropdown">
+                                <i class="fa-solid fa-envelope"></i>
+                                <span class="notika-badge">5</span>
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-end notika-dropdown">
+                                <div class="notika-dropdown-header">
+                                    Messages
                                 </div>
-                            </li>
-                            <li class="nav-item nc-al"><a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle"><span><i class="notika-icon notika-alarm"></i></span><div class="spinner4 spinner-4"></div><div class="ntd-ctn"><span>3</span></div></a>
-                                <div role="menu" class="dropdown-menu message-dd notification-dd animated zoomIn">
-                                    <div class="hd-mg-tt">
-                                        <h2>Notification</h2>
-                                    </div>
-                                    <div class="hd-message-info">
-                                        <a href="#">
-                                            <div class="hd-message-sn">
-                                                <div class="hd-message-img">
-                                                    <img src="img/post/1.jpg" alt="" />
-                                                </div>
-                                                <div class="hd-mg-ctn">
-                                                    <h3>David Belle</h3>
-                                                    <p>Cum sociis natoque penatibus et magnis dis parturient montes</p>
-                                                </div>
-                                            </div>
-                                        </a>
-                                        <a href="#">
-                                            <div class="hd-message-sn">
-                                                <div class="hd-message-img">
-                                                    <img src="img/post/2.jpg" alt="" />
-                                                </div>
-                                                <div class="hd-mg-ctn">
-                                                    <h3>Jonathan Morris</h3>
-                                                    <p>Cum sociis natoque penatibus et magnis dis parturient montes</p>
-                                                </div>
-                                            </div>
-                                        </a>
-                                        <a href="#">
-                                            <div class="hd-message-sn">
-                                                <div class="hd-message-img">
-                                                    <img src="img/post/4.jpg" alt="" />
-                                                </div>
-                                                <div class="hd-mg-ctn">
-                                                    <h3>Fredric Mitchell</h3>
-                                                    <p>Cum sociis natoque penatibus et magnis dis parturient montes</p>
-                                                </div>
-                                            </div>
-                                        </a>
-                                        <a href="#">
-                                            <div class="hd-message-sn">
-                                                <div class="hd-message-img">
-                                                    <img src="img/post/1.jpg" alt="" />
-                                                </div>
-                                                <div class="hd-mg-ctn">
-                                                    <h3>David Belle</h3>
-                                                    <p>Cum sociis natoque penatibus et magnis dis parturient montes</p>
-                                                </div>
-                                            </div>
-                                        </a>
-                                        <a href="#">
-                                            <div class="hd-message-sn">
-                                                <div class="hd-message-img">
-                                                    <img src="img/post/2.jpg" alt="" />
-                                                </div>
-                                                <div class="hd-mg-ctn">
-                                                    <h3>Glenn Jecobs</h3>
-                                                    <p>Cum sociis natoque penatibus et magnis dis parturient montes</p>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="hd-mg-va">
-                                        <a href="#">View All</a>
-                                    </div>
+                                <div class="notika-dropdown-body">
+                                    <a class="notika-dropdown-item" href="view-email.html">
+                                        <img src="/post/1.jpg" alt="User">
+                                        <div class="notika-dropdown-content">
+                                            <h6>David Belle</h6>
+                                            <p>Hey! How's the project going? Need any help?</p>
+                                        </div>
+                                    </a>
+                                    <a class="notika-dropdown-item" href="view-email.html">
+                                        <img src="/post/2.jpg" alt="User">
+                                        <div class="notika-dropdown-content">
+                                            <h6>Sarah Wilson</h6>
+                                            <p>The new design looks amazing!</p>
+                                        </div>
+                                    </a>
+                                    <a class="notika-dropdown-item" href="view-email.html">
+                                        <img src="/post/4.jpg" alt="User">
+                                        <div class="notika-dropdown-content">
+                                            <h6>Mike Johnson</h6>
+                                            <p>Thanks for the quick dashboard fix!</p>
+                                        </div>
+                                    </a>
                                 </div>
-                            </li>
-                            <li class="nav-item"><a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle"><span><i class="notika-icon notika-menus"></i></span><div class="spinner4 spinner-4"></div><div class="ntd-ctn"><span>2</span></div></a>
-                                <div role="menu" class="dropdown-menu message-dd task-dd animated zoomIn">
-                                    <div class="hd-mg-tt">
-                                        <h2>Tasks</h2>
-                                    </div>
-                                    <div class="hd-message-info hd-task-info">
-                                        <div class="skill">
+                                <div class="notika-dropdown-footer">
+                                    <a href="inbox.html">View All Messages</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Notifications -->
+                        <div class="dropdown">
+                            <button class="notika-nav-link position-relative" type="button" data-bs-toggle="dropdown">
+                                <i class="fa-solid fa-bell"></i>
+                                <span class="notika-badge">3</span>
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-end notika-dropdown">
+                                <div class="notika-dropdown-header">
+                                    Notifications
+                                </div>
+                                <div class="notika-dropdown-body">
+                                    <a class="notika-dropdown-item" href="notification.html">
+                                        <div class="bg-success text-white rounded-circle d-flex align-items-center justify-content-center" style="width: 35px; height: 35px; margin-right: 12px;">
+                                            <i class="fa-solid fa-circle-check" style="font-size: 14px;"></i>
+                                        </div>
+                                        <div class="notika-dropdown-content">
+                                            <h6>Task Completed</h6>
+                                            <p>Bootstrap 5 migration completed successfully.</p>
+                                        </div>
+                                    </a>
+                                    <a class="notika-dropdown-item" href="notification.html">
+                                        <div class="bg-warning text-white rounded-circle d-flex align-items-center justify-content-center" style="width: 35px; height: 35px; margin-right: 12px;">
+                                            <i class="fa-solid fa-bell" style="font-size: 14px;"></i>
+                                        </div>
+                                        <div class="notika-dropdown-content">
+                                            <h6>Server Alert</h6>
+                                            <p>Response time higher than usual.</p>
+                                        </div>
+                                    </a>
+                                    <a class="notika-dropdown-item" href="notification.html">
+                                        <div class="bg-info text-white rounded-circle d-flex align-items-center justify-content-center" style="width: 35px; height: 35px; margin-right: 12px;">
+                                            <i class="fa-solid fa-message" style="font-size: 14px;"></i>
+                                        </div>
+                                        <div class="notika-dropdown-content">
+                                            <h6>New Message</h6>
+                                            <p>You have 2 unread messages.</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="notika-dropdown-footer">
+                                    <a href="notification.html">View All Notifications</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Tasks - Desktop Only -->
+                        <div class="dropdown d-none d-lg-block">
+                            <button class="notika-nav-link position-relative" type="button" data-bs-toggle="dropdown">
+                                <i class="fa-solid fa-list-check"></i>
+                                <span class="notika-badge">2</span>
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-end notika-dropdown" style="min-width: 280px;">
+                                <div class="notika-dropdown-header">
+                                    Active Tasks
+                                </div>
+                                <div class="notika-dropdown-body">
+                                    <div class="task-item px-3">
+                                        <div class="task-title">Website Redesign</div>
+                                        <div class="task-progress">
                                             <div class="progress">
-                                                <div class="lead-content">
-                                                    <p>HTML5 Validation Report</p>
-                                                </div>
-                                                <div class="progress-bar wow fadeInLeft" data-progress="95%" style="width: 95%;" data-wow-duration="1.5s" data-wow-delay="1.2s"> <span>95%</span>
-                                                </div>
+                                                <div class="progress-bar" style="width: 85%"></div>
                                             </div>
-                                            <div class="progress">
-                                                <div class="lead-content">
-                                                    <p>Google Chrome Extension</p>
-                                                </div>
-                                                <div class="progress-bar wow fadeInLeft" data-progress="85%" style="width: 85%;" data-wow-duration="1.5s" data-wow-delay="1.2s"><span>85%</span> </div>
-                                            </div>
-                                            <div class="progress">
-                                                <div class="lead-content">
-                                                    <p>Social Internet Projects</p>
-                                                </div>
-                                                <div class="progress-bar wow fadeInLeft" data-progress="75%" style="width: 75%;" data-wow-duration="1.5s" data-wow-delay="1.2s"><span>75%</span> </div>
-                                            </div>
-                                            <div class="progress">
-                                                <div class="lead-content">
-                                                    <p>Bootstrap Admin</p>
-                                                </div>
-                                                <div class="progress-bar wow fadeInLeft" data-progress="65%" style="width: 65%;" data-wow-duration="1.5s" data-wow-delay="1.2s"><span>65%</span> </div>
-                                            </div>
-                                            <div class="progress progress-bt">
-                                                <div class="lead-content">
-                                                    <p>Youtube App</p>
-                                                </div>
-                                                <div class="progress-bar wow fadeInLeft" data-progress="55%" style="width: 55%;" data-wow-duration="1.5s" data-wow-delay="1.2s"><span>55%</span> </div>
-                                            </div>
+                                            <small class="text-muted">85% Complete</small>
                                         </div>
                                     </div>
-                                    <div class="hd-mg-va">
-                                        <a href="#">View All</a>
+                                    <div class="task-item px-3">
+                                        <div class="task-title">API Integration</div>
+                                        <div class="task-progress">
+                                            <div class="progress">
+                                                <div class="progress-bar" style="width: 65%"></div>
+                                            </div>
+                                            <small class="text-muted">65% Complete</small>
+                                        </div>
+                                    </div>
+                                    <div class="task-item px-3">
+                                        <div class="task-title">Database Optimization</div>
+                                        <div class="task-progress">
+                                            <div class="progress">
+                                                <div class="progress-bar" style="width: 95%"></div>
+                                            </div>
+                                            <small class="text-muted">95% Complete</small>
+                                        </div>
                                     </div>
                                 </div>
-                            </li>
-                            <li class="nav-item"><a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle"><span><i class="notika-icon notika-chat"></i></span></a>
-                                <div role="menu" class="dropdown-menu message-dd chat-dd animated zoomIn">
-                                    <div class="hd-mg-tt">
-                                        <h2>Chat</h2>
-                                    </div>
-                                    <div class="search-people">
-                                        <i class="notika-icon notika-left-arrow"></i>
-                                        <input type="text" placeholder="Search People" />
-                                    </div>
-                                    <div class="hd-message-info">
-                                        <a href="#">
-                                            <div class="hd-message-sn">
-                                                <div class="hd-message-img chat-img">
-                                                    <img src="img/post/1.jpg" alt="" />
-                                                    <div class="chat-avaible"><i class="notika-icon notika-dot"></i></div>
-                                                </div>
-                                                <div class="hd-mg-ctn">
-                                                    <h3>David Belle</h3>
-                                                    <p>Available</p>
-                                                </div>
-                                            </div>
-                                        </a>
-                                        <a href="#">
-                                            <div class="hd-message-sn">
-                                                <div class="hd-message-img chat-img">
-                                                    <img src="img/post/2.jpg" alt="" />
-                                                </div>
-                                                <div class="hd-mg-ctn">
-                                                    <h3>Jonathan Morris</h3>
-                                                    <p>Last seen 3 hours ago</p>
-                                                </div>
-                                            </div>
-                                        </a>
-                                        <a href="#">
-                                            <div class="hd-message-sn">
-                                                <div class="hd-message-img chat-img">
-                                                    <img src="img/post/4.jpg" alt="" />
-                                                </div>
-                                                <div class="hd-mg-ctn">
-                                                    <h3>Fredric Mitchell</h3>
-                                                    <p>Last seen 2 minutes ago</p>
-                                                </div>
-                                            </div>
-                                        </a>
-                                        <a href="#">
-                                            <div class="hd-message-sn">
-                                                <div class="hd-message-img chat-img">
-                                                    <img src="img/post/1.jpg" alt="" />
-                                                    <div class="chat-avaible"><i class="notika-icon notika-dot"></i></div>
-                                                </div>
-                                                <div class="hd-mg-ctn">
-                                                    <h3>David Belle</h3>
-                                                    <p>Available</p>
-                                                </div>
-                                            </div>
-                                        </a>
-                                        <a href="#">
-                                            <div class="hd-message-sn">
-                                                <div class="hd-message-img chat-img">
-                                                    <img src="img/post/2.jpg" alt="" />
-                                                    <div class="chat-avaible"><i class="notika-icon notika-dot"></i></div>
-                                                </div>
-                                                <div class="hd-mg-ctn">
-                                                    <h3>Glenn Jecobs</h3>
-                                                    <p>Available</p>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="hd-mg-va">
-                                        <a href="#">View All</a>
-                                    </div>
+                                <div class="notika-dropdown-footer">
+                                    <a href="widgets.html">View All Tasks</a>
                                 </div>
-                            </li>
+                            </div>
+                        </div>
+                        
+                        <!-- Chat -->
+                        <div class="dropdown">
+                            <button class="notika-nav-link" type="button" data-bs-toggle="dropdown">
+                                <i class="fa-solid fa-message"></i>
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-end notika-dropdown">
+                                <div class="notika-dropdown-header">
+                                    Team Chat
+                                </div>
+                                <div class="notika-dropdown-body">
+                                    <a class="notika-dropdown-item" href="compose-email.html">
+                                        <div style="position: relative;">
+                                            <img src="/post/1.jpg" alt="User">
+                                            <div class="chat-status"></div>
+                                        </div>
+                                        <div class="notika-dropdown-content">
+                                            <h6>John Doe</h6>
+                                            <p>Online - Available</p>
+                                        </div>
+                                    </a>
+                                    <a class="notika-dropdown-item" href="compose-email.html">
+                                        <div style="position: relative;">
+                                            <img src="/post/2.jpg" alt="User">
+                                        </div>
+                                        <div class="notika-dropdown-content">
+                                            <h6>Sarah Smith</h6>
+                                            <p>Last seen 2 hours ago</p>
+                                        </div>
+                                    </a>
+                                    <a class="notika-dropdown-item" href="compose-email.html">
+                                        <div style="position: relative;">
+                                            <img src="/post/4.jpg" alt="User">
+                                        </div>
+                                        <div class="notika-dropdown-content">
+                                            <h6>Mike Johnson</h6>
+                                            <p>Away - Back in 10 min</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="notika-dropdown-footer">
+                                    <a href="compose-email.html">Open Chat</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Mobile Menu Toggle -->
+                        <button class="notika-nav-link d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileNavOffcanvas" aria-controls="mobileNavOffcanvas">
+                            <i class="fa-solid fa-bars"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- End Modern Header -->
+
+    <!-- Desktop Navigation -->
+    <nav class="navbar navbar-expand-lg notika-navbar d-none d-lg-block">
+        <div class="container">
+            <div class="navbar-collapse">
+                <ul class="navbar-nav w-100 justify-content-center">
+
+                    <!-- Home Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa-solid fa-house"></i>
+                            <span>Home</span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="index.html">Dashboard One</a></li>
+                            <li><a class="dropdown-item" href="index-2.html">Dashboard Two</a></li>
+                            <li><a class="dropdown-item" href="index-3.html">Dashboard Three</a></li>
+                            <li><a class="dropdown-item" href="index-4.html">Dashboard Four</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="analytics.html">Analytics</a></li>
+                            <li><a class="dropdown-item" href="widgets.html">Widgets</a></li>
                         </ul>
-                    </div>
-                </div>
+                    </li>
+
+                    <!-- Email Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa-solid fa-envelope"></i>
+                            <span>Email</span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="inbox.html">Inbox</a></li>
+                            <li><a class="dropdown-item" href="view-email.html">View Email</a></li>
+                            <li><a class="dropdown-item" href="compose-email.html">Compose Email</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Interface Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa-solid fa-pen-to-square"></i>
+                            <span>Interface</span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="animations.html">Animations</a></li>
+                            <li><a class="dropdown-item" href="google-map.html">Google Map</a></li>
+                            <li><a class="dropdown-item" href="data-map.html">Data Maps</a></li>
+                            <li><a class="dropdown-item" href="code-editor.html">Code Editor</a></li>
+                            <li><a class="dropdown-item" href="image-cropper.html">Images Cropper</a></li>
+                            <li><a class="dropdown-item" href="wizard.html">Wizard</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Charts Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa-solid fa-chart-column"></i>
+                            <span>Charts</span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="flot-charts.html">Flot Charts</a></li>
+                            <li><a class="dropdown-item" href="bar-charts.html">Bar Charts</a></li>
+                            <li><a class="dropdown-item" href="line-charts.html">Line Charts</a></li>
+                            <li><a class="dropdown-item" href="area-charts.html">Area Charts</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Tables Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa-solid fa-table-columns"></i>
+                            <span>Tables</span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="normal-table.html">Normal Table</a></li>
+                            <li><a class="dropdown-item" href="data-table.html">Data Table</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Forms Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa-solid fa-file-lines"></i>
+                            <span>Forms</span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="form-elements.html">Form Elements</a></li>
+                            <li><a class="dropdown-item" href="form-components.html">Form Components</a></li>
+                            <li><a class="dropdown-item" href="form-examples.html">Form Examples</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Components Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa-solid fa-cube"></i>
+                            <span>Components</span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="notification.html">Notifications</a></li>
+                            <li><a class="dropdown-item" href="alert.html">Alerts</a></li>
+                            <li><a class="dropdown-item" href="modals.html">Modals</a></li>
+                            <li><a class="dropdown-item" href="buttons.html">Buttons</a></li>
+                            <li><a class="dropdown-item" href="tabs.html">Tabs</a></li>
+                            <li><a class="dropdown-item" href="accordion.html">Accordion</a></li>
+                            <li><a class="dropdown-item" href="dialog.html">Dialogs</a></li>
+                            <li><a class="dropdown-item" href="popovers.html">Popovers</a></li>
+                            <li><a class="dropdown-item" href="tooltips.html">Tooltips</a></li>
+                            <li><a class="dropdown-item" href="dropdown.html">Dropdowns</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Pages Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa-solid fa-ellipsis"></i>
+                            <span>Pages</span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="contact.html">Contact</a></li>
+                            <li><a class="dropdown-item" href="invoice.html">Invoice</a></li>
+                            <li><a class="dropdown-item" href="typography.html">Typography</a></li>
+                            <li><a class="dropdown-item" href="color.html">Color</a></li>
+                            <li><a class="dropdown-item" href="login-register.html">Login Register</a></li>
+                            <li><a class="dropdown-item" href="404.html">404 Page</a></li>
+                        </ul>
+                    </li>
+
+                </ul>
             </div>
         </div>
-    </div>
-    <!-- End Header Top Area -->
-    <!-- Mobile Menu start -->
-    <div class="mobile-menu-area">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <div class="mobile-menu">
-                        <nav id="dropdown">
-                            <ul class="mobile-menu-nav">
-                                <li><a data-toggle="collapse" data-target="#Charts" href="#">Home</a>
-                                    <ul class="collapse dropdown-header-top">
-                                        <li><a href="index.html">Dashboard One</a></li>
-                                        <li><a href="index-2.html">Dashboard Two</a></li>
-                                        <li><a href="index-3.html">Dashboard Three</a></li>
-                                        <li><a href="index-4.html">Dashboard Four</a></li>
-                                        <li><a href="analytics.html">Analytics</a></li>
-                                        <li><a href="widgets.html">Widgets</a></li>
-                                    </ul>
-                                </li>
-                                <li><a data-toggle="collapse" data-target="#demoevent" href="#">Email</a>
-                                    <ul id="demoevent" class="collapse dropdown-header-top">
-                                        <li><a href="inbox.html">Inbox</a></li>
-                                        <li><a href="view-email.html">View Email</a></li>
-                                        <li><a href="compose-email.html">Compose Email</a></li>
-                                    </ul>
-                                </li>
-                                <li><a data-toggle="collapse" data-target="#democrou" href="#">Interface</a>
-                                    <ul id="democrou" class="collapse dropdown-header-top">
-                                        <li><a href="animations.html">Animations</a></li>
-                                        <li><a href="google-map.html">Google Map</a></li>
-                                        <li><a href="data-map.html">Data Maps</a></li>
-                                        <li><a href="code-editor.html">Code Editor</a></li>
-                                        <li><a href="image-cropper.html">Images Cropper</a></li>
-                                        <li><a href="wizard.html">Wizard</a></li>
-                                    </ul>
-                                </li>
-                                <li><a data-toggle="collapse" data-target="#demolibra" href="#">Charts</a>
-                                    <ul id="demolibra" class="collapse dropdown-header-top">
-                                        <li><a href="flot-charts.html">Flot Charts</a></li>
-                                        <li><a href="bar-charts.html">Bar Charts</a></li>
-                                        <li><a href="line-charts.html">Line Charts</a></li>
-                                        <li><a href="area-charts.html">Area Charts</a></li>
-                                    </ul>
-                                </li>
-                                <li><a data-toggle="collapse" data-target="#demodepart" href="#">Tables</a>
-                                    <ul id="demodepart" class="collapse dropdown-header-top">
-                                        <li><a href="normal-table.html">Normal Table</a></li>
-                                        <li><a href="data-table.html">Data Table</a></li>
-                                    </ul>
-                                </li>
-                                <li><a data-toggle="collapse" data-target="#demo" href="#">Forms</a>
-                                    <ul id="demo" class="collapse dropdown-header-top">
-                                        <li><a href="form-elements.html">Form Elements</a></li>
-                                        <li><a href="form-components.html">Form Components</a></li>
-                                        <li><a href="form-examples.html">Form Examples</a></li>
-                                    </ul>
-                                </li>
-                                <li><a data-toggle="collapse" data-target="#Miscellaneousmob" href="#">App views</a>
-                                    <ul id="Miscellaneousmob" class="collapse dropdown-header-top">
-                                        <li><a href="notification.html">Notifications</a>
-                                        </li>
-                                        <li><a href="alert.html">Alerts</a>
-                                        </li>
-                                        <li><a href="modals.html">Modals</a>
-                                        </li>
-                                        <li><a href="buttons.html">Buttons</a>
-                                        </li>
-                                        <li><a href="tabs.html">Tabs</a>
-                                        </li>
-                                        <li><a href="accordion.html">Accordion</a>
-                                        </li>
-                                        <li><a href="dialog.html">Dialogs</a>
-                                        </li>
-                                        <li><a href="popovers.html">Popovers</a>
-                                        </li>
-                                        <li><a href="tooltips.html">Tooltips</a>
-                                        </li>
-                                        <li><a href="dropdown.html">Dropdowns</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li><a data-toggle="collapse" data-target="#Pagemob" href="#">Pages</a>
-                                    <ul id="Pagemob" class="collapse dropdown-header-top">
-                                        <li><a href="contact.html">Contact</a>
-                                        </li>
-                                        <li><a href="invoice.html">Invoice</a>
-                                        </li>
-                                        <li><a href="typography.html">Typography</a>
-                                        </li>
-                                        <li><a href="color.html">Color</a>
-                                        </li>
-                                        <li><a href="login-register.html">Login Register</a>
-                                        </li>
-                                        <li><a href="404.html">404 Page</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </nav>
-                    </div>
-                </div>
-            </div>
+    </nav>
+    <!-- End Desktop Navigation -->
+
+    <!-- Mobile Offcanvas Navigation -->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="mobileNavOffcanvas" aria-labelledby="mobileNavOffcanvasLabel">
+        <div class="offcanvas-header border-bottom">
+            <h5 class="offcanvas-title" id="mobileNavOffcanvasLabel">
+                <img src="/logo/notika-logo-horizontal.svg" alt="Notika" style="height: 30px;">
+            </h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
-    </div>
-    <!-- Mobile Menu end -->
-    <!-- Main Menu area start-->
-    <div class="main-menu-area mg-tb-40">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <ul class="nav nav-tabs notika-menu-wrap menu-it-icon-pro">
-                        <li><a data-toggle="tab" href="#Home"><i class="notika-icon notika-house"></i> Home</a>
-                        </li>
-                        <li><a data-toggle="tab" href="#mailbox"><i class="notika-icon notika-mail"></i> Email</a>
-                        </li>
-                        <li><a data-toggle="tab" href="#Interface"><i class="notika-icon notika-edit"></i> Interface</a>
-                        </li>
-                        <li><a data-toggle="tab" href="#Charts"><i class="notika-icon notika-bar-chart"></i> Charts</a>
-                        </li>
-                        <li><a data-toggle="tab" href="#Tables"><i class="notika-icon notika-windows"></i> Tables</a>
-                        </li>
-                        <li><a data-toggle="tab" href="#Forms"><i class="notika-icon notika-form"></i> Forms</a>
-                        </li>
-                        <li class="active"><a data-toggle="tab" href="#Appviews"><i class="notika-icon notika-app"></i> App views</a>
-                        </li>
-                        <li><a data-toggle="tab" href="#Page"><i class="notika-icon notika-support"></i> Pages</a>
-                        </li>
-                    </ul>
-                    <div class="tab-content custom-menu-content">
-                        <div id="Home" class="tab-pane in notika-tab-menu-bg animated flipInX">
-                            <ul class="notika-main-menu-dropdown">
-                                <li><a href="index.html">Dashboard One</a>
-                                </li>
-                                <li><a href="index-2.html">Dashboard Two</a>
-                                </li>
-                                <li><a href="index-3.html">Dashboard Three</a>
-                                </li>
-                                <li><a href="index-4.html">Dashboard Four</a>
-                                </li>
-                                <li><a href="analytics.html">Analytics</a>
-                                </li>
-                                <li><a href="widgets.html">Widgets</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div id="mailbox" class="tab-pane notika-tab-menu-bg animated flipInX">
-                            <ul class="notika-main-menu-dropdown">
-                                <li><a href="inbox.html">Inbox</a>
-                                </li>
-                                <li><a href="view-email.html">View Email</a>
-                                </li>
-                                <li><a href="compose-email.html">Compose Email</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div id="Interface" class="tab-pane notika-tab-menu-bg animated flipInX">
-                            <ul class="notika-main-menu-dropdown">
-                                <li><a href="animations.html">Animations</a>
-                                </li>
-                                <li><a href="google-map.html">Google Map</a>
-                                </li>
-                                <li><a href="data-map.html">Data Maps</a>
-                                </li>
-                                <li><a href="code-editor.html">Code Editor</a>
-                                </li>
-                                <li><a href="image-cropper.html">Images Cropper</a>
-                                </li>
-                                <li><a href="wizard.html">Wizard</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div id="Charts" class="tab-pane notika-tab-menu-bg animated flipInX">
-                            <ul class="notika-main-menu-dropdown">
-                                <li><a href="flot-charts.html">Flot Charts</a>
-                                </li>
-                                <li><a href="bar-charts.html">Bar Charts</a>
-                                </li>
-                                <li><a href="line-charts.html">Line Charts</a>
-                                </li>
-                                <li><a href="area-charts.html">Area Charts</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div id="Tables" class="tab-pane notika-tab-menu-bg animated flipInX">
-                            <ul class="notika-main-menu-dropdown">
-                                <li><a href="normal-table.html">Normal Table</a>
-                                </li>
-                                <li><a href="data-table.html">Data Table</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div id="Forms" class="tab-pane notika-tab-menu-bg animated flipInX">
-                            <ul class="notika-main-menu-dropdown">
-                                <li><a href="form-elements.html">Form Elements</a>
-                                </li>
-                                <li><a href="form-components.html">Form Components</a>
-                                </li>
-                                <li><a href="form-examples.html">Form Examples</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div id="Appviews" class="tab-pane active notika-tab-menu-bg animated flipInX">
-                            <ul class="notika-main-menu-dropdown">
-                                <li><a href="notification.html">Notifications</a>
-                                </li>
-                                <li><a href="alert.html">Alerts</a>
-                                </li>
-                                <li><a href="modals.html">Modals</a>
-                                </li>
-                                <li><a href="buttons.html">Buttons</a>
-                                </li>
-                                <li><a href="tabs.html">Tabs</a>
-                                </li>
-                                <li><a href="accordion.html">Accordion</a>
-                                </li>
-                                <li><a href="dialog.html">Dialogs</a>
-                                </li>
-                                <li><a href="popovers.html">Popovers</a>
-                                </li>
-                                <li><a href="tooltips.html">Tooltips</a>
-                                </li>
-                                <li><a href="dropdown.html">Dropdowns</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div id="Page" class="tab-pane notika-tab-menu-bg animated flipInX">
-                            <ul class="notika-main-menu-dropdown">
-                                <li><a href="contact.html">Contact</a>
-                                </li>
-                                <li><a href="invoice.html">Invoice</a>
-                                </li>
-                                <li><a href="typography.html">Typography</a>
-                                </li>
-                                <li><a href="color.html">Color</a>
-                                </li>
-                                <li><a href="login-register.html">Login Register</a>
-                                </li>
-                                <li><a href="404.html">404 Page</a>
-                                </li>
-                            </ul>
+        <div class="offcanvas-body p-0">
+            <!-- Mobile Menu List -->
+            <nav class="navbar-nav flex-column">
+
+                <!-- Home Section -->
+                <div class="nav-item border-bottom">
+                    <a class="nav-link d-flex align-items-center justify-content-between px-3 py-2" data-bs-toggle="collapse" href="#mobileHomeMenu" role="button" aria-expanded="false">
+                        <span><i class="fa-solid fa-house me-2"></i> Home</span>
+                        <i class="fa-solid fa-chevron-down small"></i>
+                    </a>
+                    <div class="collapse" id="mobileHomeMenu">
+                        <div class="nav flex-column ps-4">
+                            <a class="nav-link py-1" href="index.html">Dashboard One</a>
+                            <a class="nav-link py-1" href="index-2.html">Dashboard Two</a>
+                            <a class="nav-link py-1" href="index-3.html">Dashboard Three</a>
+                            <a class="nav-link py-1" href="index-4.html">Dashboard Four</a>
+                            <a class="nav-link py-1" href="analytics.html">Analytics</a>
+                            <a class="nav-link py-1" href="widgets.html">Widgets</a>
                         </div>
                     </div>
                 </div>
-            </div>
+
+                <!-- Email Section -->
+                <div class="nav-item border-bottom">
+                    <a class="nav-link d-flex align-items-center justify-content-between px-3 py-2" data-bs-toggle="collapse" href="#mobileEmailMenu" role="button" aria-expanded="false">
+                        <span><i class="fa-solid fa-envelope me-2"></i> Email</span>
+                        <i class="fa-solid fa-chevron-down small"></i>
+                    </a>
+                    <div class="collapse" id="mobileEmailMenu">
+                        <div class="nav flex-column ps-4">
+                            <a class="nav-link py-1" href="inbox.html">Inbox</a>
+                            <a class="nav-link py-1" href="view-email.html">View Email</a>
+                            <a class="nav-link py-1" href="compose-email.html">Compose Email</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Interface Section -->
+                <div class="nav-item border-bottom">
+                    <a class="nav-link d-flex align-items-center justify-content-between px-3 py-2" data-bs-toggle="collapse" href="#mobileInterfaceMenu" role="button" aria-expanded="false">
+                        <span><i class="fa-solid fa-pen-to-square me-2"></i> Interface</span>
+                        <i class="fa-solid fa-chevron-down small"></i>
+                    </a>
+                    <div class="collapse" id="mobileInterfaceMenu">
+                        <div class="nav flex-column ps-4">
+                            <a class="nav-link py-1" href="animations.html">Animations</a>
+                            <a class="nav-link py-1" href="google-map.html">Google Map</a>
+                            <a class="nav-link py-1" href="data-map.html">Data Maps</a>
+                            <a class="nav-link py-1" href="code-editor.html">Code Editor</a>
+                            <a class="nav-link py-1" href="image-cropper.html">Images Cropper</a>
+                            <a class="nav-link py-1" href="wizard.html">Wizard</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Charts Section -->
+                <div class="nav-item border-bottom">
+                    <a class="nav-link d-flex align-items-center justify-content-between px-3 py-2" data-bs-toggle="collapse" href="#mobileChartsMenu" role="button" aria-expanded="false">
+                        <span><i class="fa-solid fa-chart-column me-2"></i> Charts</span>
+                        <i class="fa-solid fa-chevron-down small"></i>
+                    </a>
+                    <div class="collapse" id="mobileChartsMenu">
+                        <div class="nav flex-column ps-4">
+                            <a class="nav-link py-1" href="flot-charts.html">Flot Charts</a>
+                            <a class="nav-link py-1" href="bar-charts.html">Bar Charts</a>
+                            <a class="nav-link py-1" href="line-charts.html">Line Charts</a>
+                            <a class="nav-link py-1" href="area-charts.html">Area Charts</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tables Section -->
+                <div class="nav-item border-bottom">
+                    <a class="nav-link d-flex align-items-center justify-content-between px-3 py-2" data-bs-toggle="collapse" href="#mobileTablesMenu" role="button" aria-expanded="false">
+                        <span><i class="fa-solid fa-table-columns me-2"></i> Tables</span>
+                        <i class="fa-solid fa-chevron-down small"></i>
+                    </a>
+                    <div class="collapse" id="mobileTablesMenu">
+                        <div class="nav flex-column ps-4">
+                            <a class="nav-link py-1" href="normal-table.html">Normal Table</a>
+                            <a class="nav-link py-1" href="data-table.html">Data Table</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Forms Section -->
+                <div class="nav-item border-bottom">
+                    <a class="nav-link d-flex align-items-center justify-content-between px-3 py-2" data-bs-toggle="collapse" href="#mobileFormsMenu" role="button" aria-expanded="false">
+                        <span><i class="fa-solid fa-file-lines me-2"></i> Forms</span>
+                        <i class="fa-solid fa-chevron-down small"></i>
+                    </a>
+                    <div class="collapse" id="mobileFormsMenu">
+                        <div class="nav flex-column ps-4">
+                            <a class="nav-link py-1" href="form-elements.html">Form Elements</a>
+                            <a class="nav-link py-1" href="form-components.html">Form Components</a>
+                            <a class="nav-link py-1" href="form-examples.html">Form Examples</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Components Section -->
+                <div class="nav-item border-bottom">
+                    <a class="nav-link d-flex align-items-center justify-content-between px-3 py-2" data-bs-toggle="collapse" href="#mobileComponentsMenu" role="button" aria-expanded="false">
+                        <span><i class="fa-solid fa-cube me-2"></i> Components</span>
+                        <i class="fa-solid fa-chevron-down small"></i>
+                    </a>
+                    <div class="collapse" id="mobileComponentsMenu">
+                        <div class="nav flex-column ps-4">
+                            <a class="nav-link py-1" href="notification.html">Notifications</a>
+                            <a class="nav-link py-1" href="alert.html">Alerts</a>
+                            <a class="nav-link py-1" href="modals.html">Modals</a>
+                            <a class="nav-link py-1" href="buttons.html">Buttons</a>
+                            <a class="nav-link py-1" href="tabs.html">Tabs</a>
+                            <a class="nav-link py-1" href="accordion.html">Accordion</a>
+                            <a class="nav-link py-1" href="dialog.html">Dialogs</a>
+                            <a class="nav-link py-1" href="popovers.html">Popovers</a>
+                            <a class="nav-link py-1" href="tooltips.html">Tooltips</a>
+                            <a class="nav-link py-1" href="dropdown.html">Dropdowns</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pages Section -->
+                <div class="nav-item border-bottom">
+                    <a class="nav-link d-flex align-items-center justify-content-between px-3 py-2" data-bs-toggle="collapse" href="#mobilePagesMenu" role="button" aria-expanded="false">
+                        <span><i class="fa-solid fa-ellipsis me-2"></i> Pages</span>
+                        <i class="fa-solid fa-chevron-down small"></i>
+                    </a>
+                    <div class="collapse" id="mobilePagesMenu">
+                        <div class="nav flex-column ps-4">
+                            <a class="nav-link py-1" href="contact.html">Contact</a>
+                            <a class="nav-link py-1" href="invoice.html">Invoice</a>
+                            <a class="nav-link py-1" href="typography.html">Typography</a>
+                            <a class="nav-link py-1" href="color.html">Color</a>
+                            <a class="nav-link py-1" href="login-register.html">Login Register</a>
+                            <a class="nav-link py-1" href="404.html">404 Page</a>
+                        </div>
+                    </div>
+                </div>
+
+            </nav>
         </div>
     </div>
-    <!-- Main Menu area End-->
+    <!-- End Mobile Offcanvas Navigation -->
+
     <!-- Breadcomb area Start-->
     <div class="breadcomb-area">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-12">
                     <div class="breadcomb-list">
                         <div class="row">
-                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-12">
                                 <div class="breadcomb-wp">
                                     <div class="breadcomb-icon">
-                                        <i class="notika-icon notika-app"></i>
+                                        <i class="fa-solid fa-cube"></i>
                                     </div>
                                     <div class="breadcomb-ctn">
                                         <h2>Accordions</h2>
@@ -610,9 +545,9 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-3">
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-3">
                                 <div class="breadcomb-report">
-                                    <button data-toggle="tooltip" data-placement="left" title="Download Report" class="btn"><i class="notika-icon notika-sent"></i></button>
+                                    <button data-bs-toggle="tooltip" data-bs-placement="left" title="Download Report" class="btn"><i class="fa-solid fa-paper-plane"></i></button>
                                 </div>
                             </div>
                         </div>
@@ -622,207 +557,106 @@
         </div>
     </div>
     <!-- Breadcomb area End-->
-    <!-- Accordion area start-->
-    <div class="accordion-area">
+
+    <!-- Accordion Content Area Start -->
+    <div class="accordion-area mg-b-15">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <div class="accordion-wn-wp">
-                        <div class="accordion-hd">
-                            <h2>Accordion Color Schemes</h2>
-                            <p>Make sure to give the available color in accordion collapse's data-attribute <code>'data-collase-color'</code></p>
+
+            <!-- Row 1: Basic Accordion + Always Open -->
+            <div class="row pt-3">
+                <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                    <div class="recent-post-wrapper notika-shadow">
+                        <div class="recent-post-ctn">
+                            <div class="recent-post-title">
+                                <h2>Basic Accordion</h2>
+                                <p>Standard Bootstrap 5 accordion with exclusive toggle — only one item open at a time.</p>
+                            </div>
                         </div>
-                        <div class="row">
-                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                <div class="accordion-stn">
-                                    <div class="panel-group" data-collapse-color="nk-green" id="accordionGreen" role="tablist" aria-multiselectable="true">
-                                        <div class="panel panel-collapse notika-accrodion-cus">
-                                            <div class="panel-heading" role="tab">
-                                                <h4 class="panel-title">
-                                                    <a data-toggle="collapse" data-parent="#accordionGreen" href="#accordionGreen-one" aria-expanded="true">
-															Collapse Green #1
-														</a>
-                                                </h4>
-                                            </div>
-                                            <div id="accordionGreen-one" class="collapse in" role="tabpanel">
-                                                <div class="panel-body">
-                                                    <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry cry then richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf msr noontemporem, sunt aliqua put a bird on it squid single-origin coffee nullassumendan shoreditch et.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="panel panel-collapse notika-accrodion-cus">
-                                            <div class="panel-heading" role="tab">
-                                                <h4 class="panel-title">
-                                                    <a class="collapsed" data-toggle="collapse" data-parent="#accordionGreen" href="#accordionGreen-two" aria-expanded="false">
-															Collapse Green #2
-														</a>
-                                                </h4>
-                                            </div>
-                                            <div id="accordionGreen-two" class="collapse" role="tabpanel">
-                                                <div class="panel-body">
-                                                    <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry cry then richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf msr noontemporem, sunt aliqua put a bird on it squid single-origin coffee nullassumendan shoreditch et.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="panel panel-collapse notika-accrodion-cus">
-                                            <div class="panel-heading" role="tab">
-                                                <h4 class="panel-title">
-                                                    <a class="collapsed" data-toggle="collapse" data-parent="#accordionGreen" href="#accordionGreen-three" aria-expanded="false">
-															Collapse Green #3
-														</a>
-                                                </h4>
-                                            </div>
-                                            <div id="accordionGreen-three" class="collapse" role="tabpanel">
-                                                <div class="panel-body">
-                                                    <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry cry then richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf msr noontemporem, sunt aliqua put a bird on it squid single-origin coffee nullassumendan shoreditch et.</p>
-                                                </div>
-                                            </div>
+                        <div class="recent-post-items">
+                            <div class="accordion" id="basicAccordion">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#basic-1" aria-expanded="true" aria-controls="basic-1">
+                                            How do I create an account?
+                                        </button>
+                                    </h2>
+                                    <div id="basic-1" class="accordion-collapse collapse show" data-bs-parent="#basicAccordion">
+                                        <div class="accordion-body">
+                                            Click the "Sign Up" button in the top navigation bar, then fill in your name, email address, and a secure password. You'll receive a confirmation email within minutes — click the link to verify your account and start using the platform immediately.
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                <div class="accordion-stn sm-res-mg-t-30">
-                                    <div class="panel-group" data-collapse-color="nk-red" id="accordionRed" role="tablist" aria-multiselectable="true">
-                                        <div class="panel panel-collapse notika-accrodion-cus">
-                                            <div class="panel-heading" role="tab">
-                                                <h4 class="panel-title">
-                                                    <a data-toggle="collapse" data-parent="#accordionRed" href="#accordionRed-one" aria-expanded="true">
-															Collapse Red #1
-														</a>
-                                                </h4>
-                                            </div>
-                                            <div id="accordionRed-one" class="collapse in" role="tabpanel">
-                                                <div class="panel-body">
-                                                    <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry cry then richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf msr noontemporem, sunt aliqua put a bird on it squid single-origin coffee nullassumendan shoreditch et.</p>
-                                                </div>
-                                            </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#basic-2" aria-expanded="false" aria-controls="basic-2">
+                                            What payment methods are accepted?
+                                        </button>
+                                    </h2>
+                                    <div id="basic-2" class="accordion-collapse collapse" data-bs-parent="#basicAccordion">
+                                        <div class="accordion-body">
+                                            We accept all major credit cards (Visa, MasterCard, American Express), PayPal, and bank transfers. Enterprise clients can also pay via invoice with NET-30 terms. All transactions are encrypted with 256-bit SSL.
                                         </div>
-                                        <div class="panel panel-collapse notika-accrodion-cus">
-                                            <div class="panel-heading" role="tab">
-                                                <h4 class="panel-title">
-                                                    <a class="collapsed" data-toggle="collapse" data-parent="#accordionRed" href="#accordionRed-two" aria-expanded="false">
-															Collapse Red #2
-														</a>
-                                                </h4>
-                                            </div>
-                                            <div id="accordionRed-two" class="collapse" role="tabpanel">
-                                                <div class="panel-body">
-                                                    <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry cry then richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf msr noontemporem, sunt aliqua put a bird on it squid single-origin coffee nullassumendan shoreditch et.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="panel panel-collapse notika-accrodion-cus">
-                                            <div class="panel-heading" role="tab">
-                                                <h4 class="panel-title">
-                                                    <a class="collapsed" data-toggle="collapse" data-parent="#accordionRed" href="#accordionRed-three" aria-expanded="false">
-															Collapse Red #3
-														</a>
-                                                </h4>
-                                            </div>
-                                            <div id="accordionRed-three" class="collapse" role="tabpanel">
-                                                <div class="panel-body">
-                                                    <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry cry then richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf msr noontemporem, sunt aliqua put a bird on it squid single-origin coffee nullassumendan shoreditch et.</p>
-                                                </div>
-                                            </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#basic-3" aria-expanded="false" aria-controls="basic-3">
+                                            Can I cancel my subscription?
+                                        </button>
+                                    </h2>
+                                    <div id="basic-3" class="accordion-collapse collapse" data-bs-parent="#basicAccordion">
+                                        <div class="accordion-body">
+                                            Yes, you can cancel anytime from your Account Settings page. Your access continues until the end of the current billing period. No cancellation fees apply, and your data is retained for 30 days in case you decide to reactivate.
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                <div class="accordion-stn mg-t-30">
-                                    <div class="panel-group" data-collapse-color="nk-pink" id="accordionPink" role="tablist" aria-multiselectable="true">
-                                        <div class="panel panel-collapse notika-accrodion-cus">
-                                            <div class="panel-heading" role="tab">
-                                                <h4 class="panel-title">
-                                                    <a data-toggle="collapse" data-parent="#accordionPink" href="#accordionPink-one" aria-expanded="true">
-															Collapse Pink #1
-														</a>
-                                                </h4>
-                                            </div>
-                                            <div id="accordionPink-one" class="collapse in" role="tabpanel">
-                                                <div class="panel-body">
-                                                    <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry cry then richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf msr noontemporem, sunt aliqua put a bird on it squid single-origin coffee nullassumendan shoreditch et.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="panel panel-collapse notika-accrodion-cus">
-                                            <div class="panel-heading" role="tab">
-                                                <h4 class="panel-title">
-                                                    <a class="collapsed" data-toggle="collapse" data-parent="#accordionPink" href="#accordionPink-two" aria-expanded="false">
-															Collapse Pink #2
-														</a>
-                                                </h4>
-                                            </div>
-                                            <div id="accordionPink-two" class="collapse" role="tabpanel">
-                                                <div class="panel-body">
-                                                    <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry cry then richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf msr noontemporem, sunt aliqua put a bird on it squid single-origin coffee nullassumendan shoreditch et.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="panel panel-collapse notika-accrodion-cus">
-                                            <div class="panel-heading" role="tab">
-                                                <h4 class="panel-title">
-                                                    <a class="collapsed" data-toggle="collapse" data-parent="#accordionPink" href="#accordionPink-three" aria-expanded="false">
-															Collapse Pink #3
-														</a>
-                                                </h4>
-                                            </div>
-                                            <div id="accordionPink-three" class="collapse" role="tabpanel">
-                                                <div class="panel-body">
-                                                    <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry cry then richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf msr noontemporem, sunt aliqua put a bird on it squid single-origin coffee nullassumendan shoreditch et.</p>
-                                                </div>
-                                            </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                    <div class="recent-post-wrapper notika-shadow">
+                        <div class="recent-post-ctn">
+                            <div class="recent-post-title">
+                                <h2>Always Open</h2>
+                                <p>Remove <code>data-bs-parent</code> to allow multiple items to remain expanded simultaneously.</p>
+                            </div>
+                        </div>
+                        <div class="recent-post-items">
+                            <div class="accordion" id="alwaysOpenAccordion">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#open-1" aria-expanded="true" aria-controls="open-1">
+                                            Server Requirements
+                                        </button>
+                                    </h2>
+                                    <div id="open-1" class="accordion-collapse collapse show">
+                                        <div class="accordion-body">
+                                            Minimum requirements include Node.js 18+, 2GB RAM, and 10GB storage. For production environments, we recommend 4GB RAM with SSD storage and a reverse proxy such as Nginx for optimal performance.
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                <div class="accordion-stn mg-t-30">
-                                    <div class="panel-group" data-collapse-color="nk-purple" id="accordionPurple" role="tablist" aria-multiselectable="true">
-                                        <div class="panel panel-collapse notika-accrodion-cus">
-                                            <div class="panel-heading" role="tab">
-                                                <h4 class="panel-title">
-                                                    <a data-toggle="collapse" data-parent="#accordionPurple" href="#accordionPurple-one" aria-expanded="true">
-															Collapse Purple #1
-														</a>
-                                                </h4>
-                                            </div>
-                                            <div id="accordionPurple-one" class="collapse in" role="tabpanel">
-                                                <div class="panel-body">
-                                                    <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry cry then richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf msr noontemporem, sunt aliqua put a bird on it squid single-origin coffee nullassumendan shoreditch et.</p>
-                                                </div>
-                                            </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#open-2" aria-expanded="false" aria-controls="open-2">
+                                            Database Configuration
+                                        </button>
+                                    </h2>
+                                    <div id="open-2" class="accordion-collapse collapse">
+                                        <div class="accordion-body">
+                                            PostgreSQL 14+ or MySQL 8+ are supported. Configure your connection string in the <code>.env</code> file. Connection pooling is enabled by default with a maximum of 20 concurrent connections.
                                         </div>
-                                        <div class="panel panel-collapse notika-accrodion-cus">
-                                            <div class="panel-heading" role="tab">
-                                                <h4 class="panel-title">
-                                                    <a class="collapsed" data-toggle="collapse" data-parent="#accordionPurple" href="#accordionPurple-two" aria-expanded="false">
-															Collapse Purple #2
-														</a>
-                                                </h4>
-                                            </div>
-                                            <div id="accordionPurple-two" class="collapse" role="tabpanel">
-                                                <div class="panel-body">
-                                                    <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry cry then richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf msr noontemporem, sunt aliqua put a bird on it squid single-origin coffee nullassumendan shoreditch et.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="panel panel-collapse notika-accrodion-cus">
-                                            <div class="panel-heading" role="tab">
-                                                <h4 class="panel-title">
-                                                    <a class="collapsed" data-toggle="collapse" data-parent="#accordionPurple" href="#accordionPurple-three" aria-expanded="false">
-															Collapse Purple #3
-														</a>
-                                                </h4>
-                                            </div>
-                                            <div id="accordionPurple-three" class="collapse" role="tabpanel">
-                                                <div class="panel-body">
-                                                    <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry cry then richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf msr noontemporem, sunt aliqua put a bird on it squid single-origin coffee nullassumendan shoreditch et.</p>
-                                                </div>
-                                            </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#open-3" aria-expanded="false" aria-controls="open-3">
+                                            Environment Variables
+                                        </button>
+                                    </h2>
+                                    <div id="open-3" class="accordion-collapse collapse">
+                                        <div class="accordion-body">
+                                            Copy <code>.env.example</code> to <code>.env</code> and fill in the required values. Critical variables include <code>DATABASE_URL</code>, <code>JWT_SECRET</code>, and <code>SMTP_HOST</code>. Optional variables control logging level, cache TTL, and rate limits.
                                         </div>
                                     </div>
                                 </div>
@@ -831,106 +665,102 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <div class="accordion-wn-wp mg-t-30">
-                        <div class="accordion-hd">
-                            <h2>Accordion With animations</h2>
-                            <p>You may add optional animation classes to animate the tab panes when switching. Please refer the Animations page to get all the available classes <a target="_blank" href="https://daneden.github.io/animate.css/">Click Here</a>.</p>
+
+            <!-- Row 2: Flush Accordion + Accordion with Icons -->
+            <div class="row mt-4">
+                <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                    <div class="recent-post-wrapper notika-shadow">
+                        <div class="recent-post-ctn">
+                            <div class="recent-post-title">
+                                <h2>Flush Accordion</h2>
+                                <p>Use <code>.accordion-flush</code> to remove outer borders and rounded corners for a cleaner look.</p>
+                            </div>
                         </div>
-                        <div class="row">
-                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                <div class="accordion-stn">
-                                    <div class="panel-group" data-collapse-color="nk-indigo" id="accordionIndigo" role="tablist" aria-multiselectable="true">
-                                        <div class="panel panel-collapse notika-accrodion-cus">
-                                            <div class="panel-heading" role="tab">
-                                                <h4 class="panel-title">
-                                                    <a data-toggle="collapse" data-parent="#accordionIndigo" href="#accordionIndigo-one" aria-expanded="true">
-															Collapse Indigo #1
-														</a>
-                                                </h4>
-                                            </div>
-                                            <div id="accordionIndigo-one" class="collapse animated zoomInLeft in" role="tabpanel">
-                                                <div class="panel-body">
-                                                    <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry cry then richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf msr noontemporem, sunt aliqua put a bird on it squid single-origin coffee nullassumendan shoreditch et.</p>
-                                                </div>
-                                            </div>
+                        <div class="recent-post-items">
+                            <div class="accordion accordion-flush" id="flushAccordion">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#flush-1" aria-expanded="true" aria-controls="flush-1">
+                                            Privacy Policy
+                                        </button>
+                                    </h2>
+                                    <div id="flush-1" class="accordion-collapse collapse show" data-bs-parent="#flushAccordion">
+                                        <div class="accordion-body">
+                                            We collect only the data necessary to provide our services. Personal information is never sold to third parties. You may request a full export or deletion of your data at any time through the Privacy Dashboard.
                                         </div>
-                                        <div class="panel panel-collapse notika-accrodion-cus">
-                                            <div class="panel-heading" role="tab">
-                                                <h4 class="panel-title">
-                                                    <a class="collapsed" data-toggle="collapse" data-parent="#accordionIndigo" href="#accordionIndigo-two" aria-expanded="false">
-															Collapse Indigo #2
-														</a>
-                                                </h4>
-                                            </div>
-                                            <div id="accordionIndigo-two" class="collapse animated zoomInLeft" role="tabpanel">
-                                                <div class="panel-body">
-                                                    <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry cry then richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf msr noontemporem, sunt aliqua put a bird on it squid single-origin coffee nullassumendan shoreditch et.</p>
-                                                </div>
-                                            </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-2" aria-expanded="false" aria-controls="flush-2">
+                                            Terms of Service
+                                        </button>
+                                    </h2>
+                                    <div id="flush-2" class="accordion-collapse collapse" data-bs-parent="#flushAccordion">
+                                        <div class="accordion-body">
+                                            By using our platform you agree to these terms. Accounts must be registered with accurate information. You retain ownership of all content you upload, and grant us a limited license to host and serve that content to authorized users.
                                         </div>
-                                        <div class="panel panel-collapse notika-accrodion-cus">
-                                            <div class="panel-heading" role="tab">
-                                                <h4 class="panel-title">
-                                                    <a class="collapsed" data-toggle="collapse" data-parent="#accordionIndigo" href="#accordionIndigo-three" aria-expanded="false">
-															Collapse Indigo #3
-														</a>
-                                                </h4>
-                                            </div>
-                                            <div id="accordionIndigo-three" class="collapse animated zoomInLeft" role="tabpanel">
-                                                <div class="panel-body">
-                                                    <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry cry then richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf msr noontemporem, sunt aliqua put a bird on it squid single-origin coffee nullassumendan shoreditch et.</p>
-                                                </div>
-                                            </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-3" aria-expanded="false" aria-controls="flush-3">
+                                            Cookie Policy
+                                        </button>
+                                    </h2>
+                                    <div id="flush-3" class="accordion-collapse collapse" data-bs-parent="#flushAccordion">
+                                        <div class="accordion-body">
+                                            Essential cookies are required for authentication and security. Analytics cookies help us improve the user experience and can be disabled in your browser settings. We do not use cookies for advertising purposes.
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                <div class="accordion-stn sm-res-mg-t-30">
-                                    <div class="panel-group" data-collapse-color="nk-blue" id="accordionBlue" role="tablist" aria-multiselectable="true">
-                                        <div class="panel panel-collapse notika-accrodion-cus">
-                                            <div class="panel-heading" role="tab">
-                                                <h4 class="panel-title">
-                                                    <a data-toggle="collapse" data-parent="#accordionBlue" href="#accordionBlue-one" aria-expanded="true">
-															Collapse Blue #1
-														</a>
-                                                </h4>
-                                            </div>
-                                            <div id="accordionBlue-one" class="collapse animated flipInX in" role="tabpanel">
-                                                <div class="panel-body">
-                                                    <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry cry then richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf msr noontemporem, sunt aliqua put a bird on it squid single-origin coffee nullassumendan shoreditch et.</p>
-                                                </div>
-                                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                    <div class="recent-post-wrapper notika-shadow">
+                        <div class="recent-post-ctn">
+                            <div class="recent-post-title">
+                                <h2>Accordion with Icons</h2>
+                                <p>Add Font Awesome icons to accordion buttons for better visual identification of each section.</p>
+                            </div>
+                        </div>
+                        <div class="recent-post-items">
+                            <div class="accordion" id="iconAccordion">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#icon-1" aria-expanded="true" aria-controls="icon-1">
+                                            <i class="fa-solid fa-shield-halved me-2"></i> Security Settings
+                                        </button>
+                                    </h2>
+                                    <div id="icon-1" class="accordion-collapse collapse show" data-bs-parent="#iconAccordion">
+                                        <div class="accordion-body">
+                                            Enable two-factor authentication for an extra layer of security. Choose between SMS codes, authenticator apps, or hardware security keys. Sessions expire after 24 hours of inactivity by default.
                                         </div>
-                                        <div class="panel panel-collapse notika-accrodion-cus">
-                                            <div class="panel-heading" role="tab">
-                                                <h4 class="panel-title">
-                                                    <a class="collapsed" data-toggle="collapse" data-parent="#accordionBlue" href="#accordionBlue-two" aria-expanded="false">
-															Collapse Blue #2
-														</a>
-                                                </h4>
-                                            </div>
-                                            <div id="accordionBlue-two" class="collapse animated flipInX" role="tabpanel">
-                                                <div class="panel-body">
-                                                    <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry cry then richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf msr noontemporem, sunt aliqua put a bird on it squid single-origin coffee nullassumendan shoreditch et.</p>
-                                                </div>
-                                            </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#icon-2" aria-expanded="false" aria-controls="icon-2">
+                                            <i class="fa-solid fa-bell me-2"></i> Notification Preferences
+                                        </button>
+                                    </h2>
+                                    <div id="icon-2" class="accordion-collapse collapse" data-bs-parent="#iconAccordion">
+                                        <div class="accordion-body">
+                                            Customize which notifications you receive via email, push, or in-app alerts. Set quiet hours to pause non-critical notifications. Team mentions and direct messages bypass quiet hours by default.
                                         </div>
-                                        <div class="panel panel-collapse notika-accrodion-cus">
-                                            <div class="panel-heading" role="tab">
-                                                <h4 class="panel-title">
-                                                    <a class="collapsed" data-toggle="collapse" data-parent="#accordionBlue" href="#accordionBlue-three" aria-expanded="false">
-															Collapse Blue #3
-														</a>
-                                                </h4>
-                                            </div>
-                                            <div id="accordionBlue-three" class="collapse animated flipInX" role="tabpanel">
-                                                <div class="panel-body">
-                                                    <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry cry then richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf msr noontemporem, sunt aliqua put a bird on it squid single-origin coffee nullassumendan shoreditch et.</p>
-                                                </div>
-                                            </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#icon-3" aria-expanded="false" aria-controls="icon-3">
+                                            <i class="fa-solid fa-palette me-2"></i> Display & Theme
+                                        </button>
+                                    </h2>
+                                    <div id="icon-3" class="accordion-collapse collapse" data-bs-parent="#iconAccordion">
+                                        <div class="accordion-body">
+                                            Switch between light, dark, and system-default themes. Adjust font size, sidebar density, and color accent preferences. Theme settings sync across all your devices automatically.
                                         </div>
                                     </div>
                                 </div>
@@ -939,16 +769,309 @@
                     </div>
                 </div>
             </div>
+
+            <!-- Row 3: Color Accent Accordions -->
+            <div class="row mt-4">
+                <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                    <div class="recent-post-wrapper notika-shadow">
+                        <div class="recent-post-ctn">
+                            <div class="recent-post-title">
+                                <h2>Green & Blue Accents</h2>
+                                <p>Standard BS5 accordions with colored left-border accents using inline <code>border-left</code> styles.</p>
+                            </div>
+                        </div>
+                        <div class="recent-post-items">
+                            <h6 class="text-muted mb-2">Green (Primary)</h6>
+                            <div class="accordion mb-4" id="greenAccordion">
+                                <div class="accordion-item" style="border-left: 3px solid #00c292;">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#green-1" aria-expanded="true" aria-controls="green-1">
+                                            Project Overview
+                                        </button>
+                                    </h2>
+                                    <div id="green-1" class="accordion-collapse collapse show" data-bs-parent="#greenAccordion">
+                                        <div class="accordion-body">
+                                            The project dashboard provides a high-level summary of milestones, team velocity, and upcoming deadlines. Use the timeline view to track progress across sprints.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item" style="border-left: 3px solid #00c292;">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#green-2" aria-expanded="false" aria-controls="green-2">
+                                            Team Members
+                                        </button>
+                                    </h2>
+                                    <div id="green-2" class="accordion-collapse collapse" data-bs-parent="#greenAccordion">
+                                        <div class="accordion-body">
+                                            Manage team assignments, track individual workloads, and review contribution history. Invite new members via email or generate a shareable team link.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <h6 class="text-muted mb-2">Blue (Info)</h6>
+                            <div class="accordion" id="blueAccordion">
+                                <div class="accordion-item" style="border-left: 3px solid #03a9f3;">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#blue-1" aria-expanded="true" aria-controls="blue-1">
+                                            API Documentation
+                                        </button>
+                                    </h2>
+                                    <div id="blue-1" class="accordion-collapse collapse show" data-bs-parent="#blueAccordion">
+                                        <div class="accordion-body">
+                                            RESTful API endpoints follow OpenAPI 3.0 spec. Authentication uses Bearer tokens with configurable expiry. Rate limits are 1000 requests per minute for standard plans.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item" style="border-left: 3px solid #03a9f3;">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#blue-2" aria-expanded="false" aria-controls="blue-2">
+                                            Webhooks
+                                        </button>
+                                    </h2>
+                                    <div id="blue-2" class="accordion-collapse collapse" data-bs-parent="#blueAccordion">
+                                        <div class="accordion-body">
+                                            Configure webhook endpoints to receive real-time event notifications. Payloads are signed with HMAC-SHA256 for verification. Failed deliveries are retried 3 times with exponential backoff.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                    <div class="recent-post-wrapper notika-shadow">
+                        <div class="recent-post-ctn">
+                            <div class="recent-post-title">
+                                <h2>Pink & Purple Accents</h2>
+                                <p>Same colored left-border pattern with danger and accent theme colors.</p>
+                            </div>
+                        </div>
+                        <div class="recent-post-items">
+                            <h6 class="text-muted mb-2">Pink (Danger)</h6>
+                            <div class="accordion mb-4" id="pinkAccordion">
+                                <div class="accordion-item" style="border-left: 3px solid #e91e63;">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#pink-1" aria-expanded="true" aria-controls="pink-1">
+                                            Error Handling
+                                        </button>
+                                    </h2>
+                                    <div id="pink-1" class="accordion-collapse collapse show" data-bs-parent="#pinkAccordion">
+                                        <div class="accordion-body">
+                                            All API errors return standardized JSON responses with error codes, human-readable messages, and documentation links. Use the error code for programmatic handling.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item" style="border-left: 3px solid #e91e63;">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#pink-2" aria-expanded="false" aria-controls="pink-2">
+                                            Incident Response
+                                        </button>
+                                    </h2>
+                                    <div id="pink-2" class="accordion-collapse collapse" data-bs-parent="#pinkAccordion">
+                                        <div class="accordion-body">
+                                            Critical incidents trigger automatic alerts to on-call engineers via PagerDuty. Status updates are posted to the public status page within 15 minutes of detection.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <h6 class="text-muted mb-2">Purple (Accent)</h6>
+                            <div class="accordion" id="purpleAccordion">
+                                <div class="accordion-item" style="border-left: 3px solid #9c27b0;">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#purple-1" aria-expanded="true" aria-controls="purple-1">
+                                            Custom Branding
+                                        </button>
+                                    </h2>
+                                    <div id="purple-1" class="accordion-collapse collapse show" data-bs-parent="#purpleAccordion">
+                                        <div class="accordion-body">
+                                            Upload your logo, set brand colors, and customize the login page. White-label options are available on Enterprise plans with custom domain support.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item" style="border-left: 3px solid #9c27b0;">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#purple-2" aria-expanded="false" aria-controls="purple-2">
+                                            Email Templates
+                                        </button>
+                                    </h2>
+                                    <div id="purple-2" class="accordion-collapse collapse" data-bs-parent="#purpleAccordion">
+                                        <div class="accordion-body">
+                                            Customize transactional email templates with your branding. Use the visual editor for layout changes or edit the HTML directly. Preview across email clients before publishing.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Row 4: Nested Accordion -->
+            <div class="row mt-4">
+                <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                    <div class="recent-post-wrapper notika-shadow">
+                        <div class="recent-post-ctn">
+                            <div class="recent-post-title">
+                                <h2>Nested Accordion</h2>
+                                <p>Accordion items containing child accordions for hierarchical content organization.</p>
+                            </div>
+                        </div>
+                        <div class="recent-post-items">
+                            <div class="accordion" id="nestedAccordion">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#nested-1" aria-expanded="true" aria-controls="nested-1">
+                                            Frontend Technologies
+                                        </button>
+                                    </h2>
+                                    <div id="nested-1" class="accordion-collapse collapse show" data-bs-parent="#nestedAccordion">
+                                        <div class="accordion-body">
+                                            <div class="accordion" id="nestedInner1">
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header">
+                                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#inner-1a" aria-expanded="true" aria-controls="inner-1a">
+                                                            HTML & CSS
+                                                        </button>
+                                                    </h2>
+                                                    <div id="inner-1a" class="accordion-collapse collapse show" data-bs-parent="#nestedInner1">
+                                                        <div class="accordion-body">
+                                                            Semantic HTML5 with Bootstrap 5.3 utility classes. Custom SCSS partials for component-specific styling. CSS custom properties for theming support.
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header">
+                                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#inner-1b" aria-expanded="false" aria-controls="inner-1b">
+                                                            JavaScript
+                                                        </button>
+                                                    </h2>
+                                                    <div id="inner-1b" class="accordion-collapse collapse" data-bs-parent="#nestedInner1">
+                                                        <div class="accordion-body">
+                                                            ES6+ modules bundled with Vite. Chart.js for data visualization. Vanilla JS for DOM interactions — no jQuery dependency.
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#nested-2" aria-expanded="false" aria-controls="nested-2">
+                                            Backend Technologies
+                                        </button>
+                                    </h2>
+                                    <div id="nested-2" class="accordion-collapse collapse" data-bs-parent="#nestedAccordion">
+                                        <div class="accordion-body">
+                                            <div class="accordion" id="nestedInner2">
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header">
+                                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#inner-2a" aria-expanded="true" aria-controls="inner-2a">
+                                                            API Layer
+                                                        </button>
+                                                    </h2>
+                                                    <div id="inner-2a" class="accordion-collapse collapse show" data-bs-parent="#nestedInner2">
+                                                        <div class="accordion-body">
+                                                            RESTful endpoints built with Express.js. Request validation via Joi schemas. Rate limiting and CORS configured per route group.
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header">
+                                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#inner-2b" aria-expanded="false" aria-controls="inner-2b">
+                                                            Database
+                                                        </button>
+                                                    </h2>
+                                                    <div id="inner-2b" class="accordion-collapse collapse" data-bs-parent="#nestedInner2">
+                                                        <div class="accordion-body">
+                                                            PostgreSQL with Prisma ORM for type-safe queries. Redis for session storage and caching. Migrations managed via version-controlled schema files.
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#nested-3" aria-expanded="false" aria-controls="nested-3">
+                                            DevOps & Infrastructure
+                                        </button>
+                                    </h2>
+                                    <div id="nested-3" class="accordion-collapse collapse" data-bs-parent="#nestedAccordion">
+                                        <div class="accordion-body">
+                                            Docker containers orchestrated with Kubernetes. GitHub Actions for CI/CD. Terraform for infrastructure-as-code provisioning across AWS regions.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                    <div class="recent-post-wrapper notika-shadow">
+                        <div class="recent-post-ctn">
+                            <div class="recent-post-title">
+                                <h2>Disabled & Contextual States</h2>
+                                <p>Accordion items can be disabled or styled with contextual background colors for status indicators.</p>
+                            </div>
+                        </div>
+                        <div class="recent-post-items">
+                            <div class="accordion" id="statesAccordion">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#state-1" aria-expanded="true" aria-controls="state-1">
+                                            <i class="fa-solid fa-circle-check me-2 text-success"></i> Deployment Complete
+                                        </button>
+                                    </h2>
+                                    <div id="state-1" class="accordion-collapse collapse show" data-bs-parent="#statesAccordion">
+                                        <div class="accordion-body">
+                                            Version 2.4.1 deployed successfully to all production servers. All health checks passed. Rollback snapshot created automatically.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#state-2" aria-expanded="false" aria-controls="state-2">
+                                            <i class="fa-solid fa-triangle-exclamation me-2 text-warning"></i> Pending Review
+                                        </button>
+                                    </h2>
+                                    <div id="state-2" class="accordion-collapse collapse" data-bs-parent="#statesAccordion">
+                                        <div class="accordion-body">
+                                            Database migration script requires manual review before execution. The schema change affects 3 tables and adds 2 new indexes. Estimated downtime: 45 seconds.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#state-3" aria-expanded="false" aria-controls="state-3" disabled aria-disabled="true">
+                                            <i class="fa-solid fa-lock me-2 text-muted"></i> Restricted Access
+                                        </button>
+                                    </h2>
+                                    <div id="state-3" class="accordion-collapse collapse" data-bs-parent="#statesAccordion">
+                                        <div class="accordion-body">
+                                            This section requires elevated permissions. Contact your administrator to request access.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
-    <!-- Accordion area End-->
+    <!-- Accordion Content Area End -->
     <!-- Start Footer area-->
+
+    <!-- Footer area Start-->
     <div class="footer-copyright-area">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-12">
                     <div class="footer-copy-right">
-                        <p>Copyright © 2018 
+                        <p>Copyright © 2026
 . All rights reserved. Template by <a href="https://colorlib.com">Colorlib</a>.</p>
                     </div>
                 </div>
@@ -956,68 +1079,8 @@
         </div>
     </div>
     <!-- End Footer area-->
-    <!-- jquery
-		============================================ -->
-    <script src="js/vendor/jquery-1.12.4.min.js"></script>
-    <!-- bootstrap JS
-		============================================ -->
-    <script src="js/bootstrap.min.js"></script>
-    <!-- wow JS
-		============================================ -->
-    <script src="js/wow.min.js"></script>
-    <!-- price-slider JS
-		============================================ -->
-    <script src="js/jquery-price-slider.js"></script>
-    <!-- owl.carousel JS
-		============================================ -->
-    <script src="js/owl.carousel.min.js"></script>
-    <!-- scrollUp JS
-		============================================ -->
-    <script src="js/jquery.scrollUp.min.js"></script>
-    <!-- meanmenu JS
-		============================================ -->
-    <script src="js/meanmenu/jquery.meanmenu.js"></script>
-    <!-- counterup JS
-		============================================ -->
-    <script src="js/counterup/jquery.counterup.min.js"></script>
-    <script src="js/counterup/waypoints.min.js"></script>
-    <script src="js/counterup/counterup-active.js"></script>
-    <!-- mCustomScrollbar JS
-		============================================ -->
-    <script src="js/scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
-    <!-- sparkline JS
-		============================================ -->
-    <script src="js/sparkline/jquery.sparkline.min.js"></script>
-    <script src="js/sparkline/sparkline-active.js"></script>
-    <!-- flot JS
-		============================================ -->
-    <script src="js/flot/jquery.flot.js"></script>
-    <script src="js/flot/jquery.flot.resize.js"></script>
-    <script src="js/flot/flot-active.js"></script>
-    <!-- knob JS
-		============================================ -->
-    <script src="js/knob/jquery.knob.js"></script>
-    <script src="js/knob/jquery.appear.js"></script>
-    <script src="js/knob/knob-active.js"></script>
-    <!--  Chat JS
-		============================================ -->
-    <script src="js/chat/jquery.chat.js"></script>
-    <!--  todo JS
-		============================================ -->
-    <script src="js/todo/jquery.todo.js"></script>
-	<!--  wave JS
-		============================================ -->
-    <script src="js/wave/waves.min.js"></script>
-    <script src="js/wave/wave-active.js"></script>
-    <!-- plugins JS
-		============================================ -->
-    <script src="js/plugins.js"></script>
-    <!-- main JS
-		============================================ -->
-    <script src="js/main.js"></script>
-    <!-- tawk chat JS
-		============================================ -->
-    <script src="js/tawk-chat.js"></script>
-</body>
 
+    <!-- ONLY VITE ENTRY POINT - Everything else bundled by Vite -->
+    <script type="module" src="/src/js/main.js"></script>
+</body>
 </html>

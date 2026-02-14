@@ -1,0 +1,241 @@
+/**
+ * Modern Notika Styles
+ * Using SCSS with modern CSS features
+ */
+
+// CSS Custom Properties (Variables)
+:root {
+  // Colors
+  --notika-primary: #00c292;
+  --notika-secondary: #03a9f3;
+  --notika-success: #00c292;
+  --notika-warning: #ff9800;
+  --notika-danger: #e91e63;
+  --notika-info: #03a9f3;
+  --notika-light: #f8f9fa;
+  --notika-dark: #343a40;
+  
+  // Spacing
+  --notika-spacer: 1rem;
+  --notika-spacer-lg: 2rem;
+  --notika-spacer-sm: 0.5rem;
+  
+  // Typography
+  --notika-font-family: 'Roboto', system-ui, -apple-system, sans-serif;
+  --notika-font-size-base: 1rem;
+  --notika-line-height-base: 1.5;
+  
+  // Borders
+  --notika-border-radius: 0.375rem;
+  --notika-border-radius-lg: 0.5rem;
+  --notika-border-width: 1px;
+  
+  // Shadows
+  --notika-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  --notika-shadow-sm: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  --notika-shadow-lg: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+  
+  // Transitions
+  --notika-transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --notika-transition-fast: all 0.15s ease-out;
+  
+  // Z-index scale
+  --notika-z-dropdown: 1000;
+  --notika-z-sticky: 1020;
+  --notika-z-fixed: 1030;
+  --notika-z-modal-backdrop: 1040;
+  --notika-z-modal: 1050;
+  --notika-z-popover: 1060;
+  --notika-z-tooltip: 1070;
+  --notika-z-toast: 1080;
+}
+
+// Dark theme support
+:root[data-theme="dark"] {
+  --notika-light: #343a40;
+  --notika-dark: #f8f9fa;
+}
+
+// Modern animations with hardware acceleration
+@keyframes ripple {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    transform: translate3d(0, 30px, 0);
+    opacity: 0;
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInScale {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+// Modern utility classes
+.animate-slide-up {
+  animation: slideInUp 0.6s var(--notika-transition);
+}
+
+.animate-fade-scale {
+  animation: fadeInScale 0.4s var(--notika-transition);
+}
+
+// Modern card improvements
+.notika-shadow {
+  box-shadow: var(--notika-shadow);
+  transition: var(--notika-transition);
+  border-radius: var(--notika-border-radius);
+  
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--notika-shadow-lg);
+  }
+}
+
+// Modern button improvements
+.btn {
+  border-radius: var(--notika-border-radius);
+  transition: var(--notika-transition);
+  position: relative;
+  overflow: hidden;
+  
+  &:focus-visible {
+    outline: 2px solid var(--notika-primary);
+    outline-offset: 2px;
+  }
+}
+
+// Modern navigation improvements
+.notika-nav-link {
+  transition: var(--notika-transition-fast);
+  border-radius: var(--notika-border-radius);
+  
+  &:hover {
+    background-color: rgba(var(--notika-primary), 0.1);
+    transform: translateY(-1px);
+  }
+  
+  &:focus-visible {
+    outline: 2px solid var(--notika-primary);
+    outline-offset: 2px;
+  }
+}
+
+// Modern dropdown improvements
+.dropdown-menu {
+  border: none;
+  box-shadow: var(--notika-shadow-lg);
+  border-radius: var(--notika-border-radius-lg);
+}
+
+// Modern form improvements
+.form-control {
+  border-radius: var(--notika-border-radius);
+  transition: var(--notika-transition-fast);
+  
+  &:focus {
+    border-color: var(--notika-primary);
+    box-shadow: 0 0 0 0.2rem rgba(var(--notika-primary), 0.25);
+  }
+}
+
+// Modern chart containers
+.chart-container {
+  position: relative;
+  height: 300px;
+  
+  canvas {
+    border-radius: var(--notika-border-radius);
+  }
+}
+
+// Modern responsive utilities
+@container (min-width: 768px) {
+  .container-query-md {
+    display: block;
+  }
+}
+
+// Accessibility improvements
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+// Focus improvements for better accessibility
+:focus-visible {
+  outline: 2px solid var(--notika-primary);
+  outline-offset: 2px;
+  border-radius: var(--notika-border-radius);
+}
+
+// Modern scrollbar (Webkit browsers)
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--notika-light);
+  border-radius: var(--notika-border-radius);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--notika-primary);
+  border-radius: var(--notika-border-radius);
+  
+  &:hover {
+    background: color-mix(in srgb, var(--notika-primary) 80%, black);
+  }
+}
+
+// Modern loading states
+.loading {
+  position: relative;
+  pointer-events: none;
+  
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    margin: -10px 0 0 -10px;
+    border: 2px solid var(--notika-primary);
+    border-radius: 50%;
+    border-top-color: transparent;
+    animation: spin 0.8s linear infinite;
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+// Modern toast notifications positioning
+.toast-container {
+  z-index: var(--notika-z-toast);
+}

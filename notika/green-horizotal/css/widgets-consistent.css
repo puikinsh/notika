@@ -1,0 +1,434 @@
+/* Consistent Widget System - All Headers Full Width, Uniform Spacing */
+
+:root {
+    --widget-padding: 24px;
+    --widget-header-padding: 20px 24px;
+    --widget-content-padding: 24px;
+    --widget-radius: 12px;
+    --widget-header-bg: #f8f9fa;
+    --widget-border: 1px solid rgba(0,0,0,0.06);
+    --widget-shadow: 0 2px 8px rgba(0,0,0,0.1); /* Match header navigation shadow */
+    --widget-shadow-hover: 0 4px 16px rgba(0,0,0,0.15); /* Subtle hover enhancement */
+}
+
+/* Reset all widget containers to consistent base */
+.sale-statistic-inner,
+.statistic-right-area,
+.email-statis-inner,
+.recent-post-wrapper,
+.recent-items-wp,
+.realtime-wrap,
+.add-todo-list,
+.notika-chat-list {
+    background: #fff;
+    border-radius: var(--widget-radius);
+    box-shadow: var(--widget-shadow);
+    border: var(--widget-border);
+    padding: 0;
+    margin-bottom: 0;
+    overflow: hidden;
+    transition: all 0.2s ease;
+}
+
+/* Special handling for status widgets - Clean, no padding design */
+.notika-status-area .wb-traffic-inner {
+    background: #fff;
+    border-radius: var(--widget-radius);
+    box-shadow: var(--widget-shadow);
+    border: var(--widget-border);
+    display: flex !important;
+    align-items: stretch !important;
+    justify-content: space-between !important;
+    padding: 0 !important;
+    margin-bottom: 0;
+    transition: all 0.2s ease;
+    height: 120px !important;
+    overflow: hidden;
+}
+
+/* Left content area - takes most space */
+.notika-status-area .website-traffic-ctn {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.notika-status-area .website-traffic-ctn h2 {
+    margin: 0 0 6px 0;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1;
+    color: #fff !important;
+}
+
+.notika-status-area .website-traffic-ctn p {
+    margin: 0;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.95) !important;
+    line-height: 1.3;
+}
+
+/* Sparkline area - right side with background */
+.notika-status-area .sparkline-bar-stats1,
+.notika-status-area .sparkline-bar-stats2,
+.notika-status-area .sparkline-bar-stats3,
+.notika-status-area .sparkline-bar-stats4 {
+    width: 120px !important;
+    height: 120px !important;
+    padding: 30px 20px !important;
+    margin: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-shrink: 0;
+    background: rgba(0, 194, 146, 0.05);
+    border-left: 1px solid rgba(0, 194, 146, 0.1);
+}
+
+.notika-status-area .sparkline-bar-stats1 canvas,
+.notika-status-area .sparkline-bar-stats2 canvas,
+.notika-status-area .sparkline-bar-stats3 canvas,
+.notika-status-area .sparkline-bar-stats4 canvas {
+    width: 70px !important;
+    height: 50px !important;
+}
+
+/* Different sparkline background colors */
+.notika-status-area .sparkline-bar-stats2 {
+    background: rgba(3, 169, 243, 0.05);
+    border-left-color: rgba(3, 169, 243, 0.1);
+}
+
+.notika-status-area .sparkline-bar-stats3 {
+    background: rgba(255, 193, 7, 0.05);
+    border-left-color: rgba(255, 193, 7, 0.1);
+}
+
+.notika-status-area .sparkline-bar-stats4 {
+    background: rgba(233, 30, 99, 0.05);
+    border-left-color: rgba(233, 30, 99, 0.1);
+}
+
+.notika-status-area .wb-traffic-inner:hover,
+.sale-statistic-inner:hover,
+.statistic-right-area:hover,
+.email-statis-inner:hover,
+.recent-post-wrapper:hover,
+.recent-items-wp:hover,
+.realtime-wrap:hover,
+.add-todo-list:hover,
+.notika-chat-list:hover {
+    box-shadow: var(--widget-shadow-hover);
+    transform: translateY(-2px);
+}
+
+/* FORCE ALL HEADERS TO FULL WIDTH - CONSISTENT STRUCTURE */
+
+/* Method 1: Reset all existing header containers */
+.curved-inner-pro,
+.email-ctn-round,
+.recent-post-ctn,
+.rc-it-ltd,
+.realtime-ctn {
+    padding: 0;
+    margin: 0;
+    background: none;
+}
+
+/* Method 2: Create consistent full-width headers */
+.curved-ctn,
+.past-day-statis,
+.email-rdn-hd,
+.recent-post-title,
+.recent-items-title,
+.realtime-title {
+    width: 100% !important;
+    padding: var(--widget-header-padding) !important;
+    background: var(--widget-header-bg) !important;
+    border-bottom: 1px solid #e9ecef !important;
+    margin: 0 !important;
+}
+
+/* Consistent header typography */
+.curved-ctn h2,
+.past-day-statis h2,
+.email-rdn-hd h2,
+.recent-post-title h2,
+.recent-items-title h2,
+.realtime-title h2 {
+    font-size: 18px !important;
+    font-weight: 600 !important;
+    color: #2c3e50 !important;
+    margin: 0 !important;
+    line-height: 1.3 !important;
+}
+
+/* Headers with descriptions */
+.curved-ctn p,
+.past-day-statis p {
+    font-size: 14px !important;
+    color: #6c757d !important;
+    margin: 8px 0 0 0 !important;
+    line-height: 1.4 !important;
+}
+
+/* Headers without descriptions - adjust padding to remove extra space */
+.email-rdn-hd,
+.recent-post-title,
+.recent-items-title,
+.realtime-title {
+    padding: 16px 24px 16px 24px !important; /* Equal top/bottom padding */
+}
+
+/* Headers with descriptions - keep extra bottom space */
+.curved-ctn,
+.past-day-statis {
+    padding: 20px 24px 20px 24px !important; /* More space for description */
+}
+
+/* Widget content areas - consistent padding */
+.flot-chart-sts,
+.flot-chart,
+.email-statis-wrap,
+.past-statistic-an,
+.recent-post-items,
+.recent-items-inn,
+.realtime-visitor-ctn,
+.realtime-map,
+.realtime-country-ctn,
+.card-box,
+.todoapp,
+.chat-conversation,
+.widgets-chat-scrollbar {
+    padding: var(--widget-content-padding);
+    margin: 0;
+}
+
+/* Statistics widgets special handling - Match Notika brand colors */
+.website-traffic-ctn {
+    padding: var(--widget-header-padding);
+    background: linear-gradient(135deg, #00c292 0%, #00a085 100%);
+    color: white;
+    text-align: center;
+    border-bottom: none;
+}
+
+/* Individual card color variations using brand palette */
+.col-lg-3:nth-child(1) .website-traffic-ctn {
+    background: linear-gradient(135deg, #00c292 0%, #00a085 100%); /* Primary green */
+}
+
+.col-lg-3:nth-child(2) .website-traffic-ctn {
+    background: linear-gradient(135deg, #00a085 0%, #008f72 100%); /* Darker green */
+}
+
+.col-lg-3:nth-child(3) .website-traffic-ctn {
+    background: linear-gradient(135deg, #28a745 0%, #20c997 100%); /* Success green */
+}
+
+.col-lg-3:nth-child(4) .website-traffic-ctn {
+    background: linear-gradient(135deg, #17a2b8 0%, #138496 100%); /* Complementary teal */
+}
+
+.website-traffic-ctn h2 {
+    font-size: 28px;
+    font-weight: 700;
+    color: white;
+    margin: 0 0 4px 0;
+}
+
+.website-traffic-ctn p {
+    font-size: 13px;
+    color: rgba(255,255,255,0.9);
+    margin: 0;
+}
+
+/* Chart areas consistent - Larger charts for better space utilization */
+.sparkline-bar-stats1,
+.sparkline-bar-stats2, 
+.sparkline-bar-stats3,
+.sparkline-bar-stats4 {
+    padding: 20px var(--widget-content-padding) 24px var(--widget-content-padding);
+    text-align: center;
+    min-height: 80px; /* Increased from 50px to 80px */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Make the actual chart canvases larger */
+.sparkline-bar-stats1 canvas,
+.sparkline-bar-stats2 canvas,
+.sparkline-bar-stats3 canvas,
+.sparkline-bar-stats4 canvas {
+    width: 80px !important; /* Increased from default smaller size */
+    height: 50px !important; /* Increased height for better visibility */
+    max-width: 100%;
+}
+
+/* Table styling consistency */
+.table-inner {
+    margin: 0;
+}
+
+.table-inner th {
+    background: #f8f9fa;
+    border-bottom: 2px solid #dee2e6;
+    padding: 12px 16px;
+    font-weight: 600;
+    font-size: 13px;
+    color: #495057;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.table-inner td {
+    padding: 12px 16px;
+    border-bottom: 1px solid #f8f9fa;
+    font-size: 14px;
+    vertical-align: middle;
+}
+
+.table-inner tbody tr:hover {
+    background: #f8f9fa;
+}
+
+/* List items consistency */
+.recent-post-signle,
+.conversation-list li {
+    padding: 16px var(--widget-content-padding);
+    border-bottom: 1px solid #f8f9fa;
+    transition: all 0.15s ease;
+}
+
+.recent-post-signle:hover,
+.conversation-list li:hover {
+    background: #f8f9fa;
+}
+
+.recent-post-signle:last-child,
+.conversation-list li:last-child {
+    border-bottom: none;
+}
+
+/* Remove inconsistent spacing classes */
+.sm-res-mg-t-30,
+.tb-res-mg-t-30,
+.dk-res-mg-t-30,
+.sm-res-mg-t-0,
+.mg-tb-30,
+.tb-res-ds-n,
+.dk-res-ds,
+.sm-res-ds-n {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* Progress bars modern styling */
+.progress {
+    height: 8px;
+    border-radius: 4px;
+    background: #f1f2f6;
+    overflow: hidden;
+    margin: 8px 0;
+}
+
+.progress-bar {
+    background: linear-gradient(90deg, #00c292, #00a085);
+    border-radius: 4px;
+}
+
+/* Forms inside widgets */
+.form-control {
+    border: 2px solid #e9ecef;
+    border-radius: 6px;
+    padding: 10px 12px;
+    font-size: 14px;
+}
+
+.form-control:focus {
+    border-color: #00c292;
+    box-shadow: 0 0 0 3px rgba(0, 194, 146, 0.1);
+}
+
+/* Buttons consistency */
+.btn {
+    border-radius: 6px;
+    font-weight: 500;
+    padding: 8px 16px;
+    font-size: 14px;
+}
+
+.btn-primary {
+    background: #00c292;
+    border-color: #00c292;
+}
+
+.btn-primary:hover {
+    background: #00a085;
+    border-color: #00a085;
+    transform: translateY(-1px);
+}
+
+/* Mobile responsive widgets */
+@media (max-width: 768px) {
+    :root {
+        --widget-padding: 16px;
+        --widget-header-padding: 16px;
+        --widget-content-padding: 16px;
+    }
+    
+    .curved-ctn h2,
+    .past-day-statis h2,
+    .email-rdn-hd h2,
+    .recent-post-title h2,
+    .recent-items-title h2,
+    .realtime-title h2 {
+        font-size: 16px !important;
+    }
+    
+    .website-traffic-ctn h2 {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 576px) {
+    :root {
+        --widget-padding: 12px;
+        --widget-header-padding: 12px;
+        --widget-content-padding: 12px;
+    }
+    
+    .website-traffic-ctn h2 {
+        font-size: 20px;
+    }
+}
+
+/* Email Statistics Widget Specific Fixes */
+.email-statis-inner .email-statis-wrap {
+    padding: var(--widget-content-padding) !important;
+    padding-bottom: calc(var(--widget-content-padding) + 12px) !important; /* Extra bottom space */
+}
+
+.email-round-gp {
+    margin-bottom: 16px !important; /* Add space below chart groups */
+    padding-bottom: 8px !important; /* Extra padding at bottom */
+}
+
+.email-round-pro {
+    margin-bottom: 12px !important; /* Space between individual chart items */
+}
+
+.email-round-pro:last-child {
+    margin-bottom: 0 !important; /* Remove margin from last chart item */
+}
+
+.email-signle-gp {
+    margin-bottom: 8px !important; /* Space below chart elements */
+}
+
+.email-ctn-nock {
+    margin-bottom: 8px !important; /* Space below chart labels */
+}

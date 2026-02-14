@@ -1,0 +1,13 @@
+<svg width="120" height="40" viewBox="0 0 120 40" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circle for the 'N' -->
+  <circle cx="20" cy="20" r="18" fill="#00c292" stroke="#00a085" stroke-width="2"/>
+  
+  <!-- Stylized 'N' in the circle -->
+  <text x="20" y="28" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="20" font-weight="bold">N</text>
+  
+  <!-- Main "otika" text -->
+  <text x="45" y="18" fill="#333333" font-family="Arial, sans-serif" font-size="18" font-weight="600">otika</text>
+  
+  <!-- Subtle subtitle -->
+  <text x="45" y="30" fill="#666666" font-family="Arial, sans-serif" font-size="10">ADMIN TEMPLATE</text>
+</svg>
