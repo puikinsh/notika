@@ -18,90 +18,197 @@
 </head>
 
 <body>
-    <!-- Login Register area Start-->
-    <div class="login-content">
-        <!-- Login -->
-        <div class="nk-block toggled" id="l-login">
-            <div class="nk-form">
-                <div class="input-group">
-                    <span class="input-group-text nk-ic-st-pro"><i class="fa-solid fa-headset"></i></span>
-                    <div class="nk-int-st">
-                        <input type="text" class="form-control" placeholder="Username">
+    <div class="nk-auth-wrapper">
+        <!-- Left branding panel -->
+        <div class="nk-auth-brand">
+            <div class="nk-auth-brand-inner">
+                <div class="nk-auth-logo">
+                    <img src="/logo/notika-logo-horizontal-white.svg" alt="Notika" height="40">
+                </div>
+                <h1>Welcome to Notika</h1>
+                <p>Modern admin dashboard template built with Bootstrap 5 and Vite.</p>
+                <div class="nk-auth-features">
+                    <div class="nk-auth-feature">
+                        <i class="fa-solid fa-shield-halved"></i>
+                        <span>Secure Authentication</span>
+                    </div>
+                    <div class="nk-auth-feature">
+                        <i class="fa-solid fa-chart-line"></i>
+                        <span>Real-time Analytics</span>
+                    </div>
+                    <div class="nk-auth-feature">
+                        <i class="fa-solid fa-bolt"></i>
+                        <span>Lightning Fast</span>
                     </div>
                 </div>
-                <div class="input-group mg-t-15">
-                    <span class="input-group-text nk-ic-st-pro"><i class="fa-solid fa-pen-to-square"></i></span>
-                    <div class="nk-int-st">
-                        <input type="password" class="form-control" placeholder="Password">
-                    </div>
-                </div>
-                <div class="fm-checkbox">
-                    <label><input type="checkbox" class="form-check-input"> Keep me signed in</label>
-                </div>
-                <a href="#l-register" data-ma-action="nk-login-switch" data-ma-block="#l-register" class="btn btn-login btn-success btn-float"><i class="fa-solid fa-chevron-right right-arrow-ant"></i></a>
-            </div>
-
-            <div class="nk-navigation nk-lg-ic">
-                <a href="#" data-ma-action="nk-login-switch" data-ma-block="#l-register"><i class="fa-solid fa-plus"></i> <span>Register</span></a>
-                <a href="#" data-ma-action="nk-login-switch" data-ma-block="#l-forget-password"><i>?</i> <span>Forgot Password</span></a>
             </div>
         </div>
 
-        <!-- Register -->
-        <div class="nk-block" id="l-register">
-            <div class="nk-form">
-                <div class="input-group">
-                    <span class="input-group-text nk-ic-st-pro"><i class="fa-solid fa-headset"></i></span>
-                    <div class="nk-int-st">
-                        <input type="text" class="form-control" placeholder="Username">
-                    </div>
+        <!-- Right form panel -->
+        <div class="nk-auth-form-panel">
+            <!-- Login -->
+            <div class="nk-auth-card toggled" id="l-login">
+                <div class="nk-auth-card-header">
+                    <h2>Sign In</h2>
+                    <p>Enter your credentials to access your account</p>
                 </div>
 
-                <div class="input-group mg-t-15">
-                    <span class="input-group-text nk-ic-st-pro"><i class="fa-solid fa-envelope"></i></span>
-                    <div class="nk-int-st">
-                        <input type="text" class="form-control" placeholder="Email Address">
+                <form class="nk-auth-form" id="loginForm" novalidate>
+                    <div class="mb-3">
+                        <label for="loginUsername" class="form-label">Username or Email</label>
+                        <div class="input-group">
+                            <span class="input-group-text"><i class="fa-solid fa-user"></i></span>
+                            <input type="text" class="form-control" id="loginUsername" name="username" placeholder="Enter your username" required autocomplete="username">
+                        </div>
+                        <div class="invalid-feedback">Please enter your username or email.</div>
                     </div>
+
+                    <div class="mb-3">
+                        <label for="loginPassword" class="form-label">Password</label>
+                        <div class="input-group">
+                            <span class="input-group-text"><i class="fa-solid fa-lock"></i></span>
+                            <input type="password" class="form-control" id="loginPassword" name="password" placeholder="Enter your password" required autocomplete="current-password">
+                            <button type="button" class="input-group-text nk-toggle-password" aria-label="Toggle password visibility" data-target="loginPassword">
+                                <i class="fa-solid fa-eye"></i>
+                            </button>
+                        </div>
+                        <div class="invalid-feedback">Please enter your password.</div>
+                    </div>
+
+                    <div class="d-flex justify-content-between align-items-center mb-4">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="rememberMe" name="remember">
+                            <label class="form-check-label" for="rememberMe">Keep me signed in</label>
+                        </div>
+                        <a href="#" class="nk-auth-link" data-auth-switch="#l-forget-password">Forgot password?</a>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary w-100 nk-auth-btn">
+                        <i class="fa-solid fa-arrow-right-to-bracket me-2"></i>Sign In
+                    </button>
+                </form>
+
+                <div class="nk-auth-divider">
+                    <span>or continue with</span>
                 </div>
 
-                <div class="input-group mg-t-15">
-                    <span class="input-group-text nk-ic-st-pro"><i class="fa-solid fa-pen-to-square"></i></span>
-                    <div class="nk-int-st">
-                        <input type="password" class="form-control" placeholder="Password">
-                    </div>
+                <div class="nk-auth-social">
+                    <button type="button" class="btn btn-outline-secondary">
+                        <i class="fa-brands fa-google"></i>
+                    </button>
+                    <button type="button" class="btn btn-outline-secondary">
+                        <i class="fa-brands fa-github"></i>
+                    </button>
+                    <button type="button" class="btn btn-outline-secondary">
+                        <i class="fa-brands fa-microsoft"></i>
+                    </button>
                 </div>
 
-                <a href="#l-login" data-ma-action="nk-login-switch" data-ma-block="#l-login" class="btn btn-login btn-success btn-float"><i class="fa-solid fa-chevron-right"></i></a>
+                <div class="nk-auth-footer">
+                    <p>Don't have an account? <a href="#" data-auth-switch="#l-register">Create one</a></p>
+                </div>
             </div>
 
-            <div class="nk-navigation rg-ic-stl">
-                <a href="#" data-ma-action="nk-login-switch" data-ma-block="#l-login"><i class="fa-solid fa-chevron-right"></i> <span>Sign in</span></a>
-                <a href="" data-ma-action="nk-login-switch" data-ma-block="#l-forget-password"><i>?</i> <span>Forgot Password</span></a>
-            </div>
-        </div>
-
-        <!-- Forgot Password -->
-        <div class="nk-block" id="l-forget-password">
-            <div class="nk-form">
-                <p class="text-start">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eu risus. Curabitur commodo lorem fringilla enim feugiat commodo sed ac lacus.</p>
-
-                <div class="input-group">
-                    <span class="input-group-text nk-ic-st-pro"><i class="fa-solid fa-envelope"></i></span>
-                    <div class="nk-int-st">
-                        <input type="text" class="form-control" placeholder="Email Address">
-                    </div>
+            <!-- Register -->
+            <div class="nk-auth-card" id="l-register">
+                <div class="nk-auth-card-header">
+                    <h2>Create Account</h2>
+                    <p>Fill in the details to get started</p>
                 </div>
 
-                <a href="#l-login" data-ma-action="nk-login-switch" data-ma-block="#l-login" class="btn btn-login btn-success btn-float"><i class="fa-solid fa-chevron-right"></i></a>
+                <form class="nk-auth-form" id="registerForm" novalidate>
+                    <div class="mb-3">
+                        <label for="regUsername" class="form-label">Username</label>
+                        <div class="input-group">
+                            <span class="input-group-text"><i class="fa-solid fa-user"></i></span>
+                            <input type="text" class="form-control" id="regUsername" name="username" placeholder="Choose a username" required autocomplete="username">
+                        </div>
+                        <div class="invalid-feedback">Please choose a username.</div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="regEmail" class="form-label">Email Address</label>
+                        <div class="input-group">
+                            <span class="input-group-text"><i class="fa-solid fa-envelope"></i></span>
+                            <input type="email" class="form-control" id="regEmail" name="email" placeholder="Enter your email" required autocomplete="email">
+                        </div>
+                        <div class="invalid-feedback">Please enter a valid email address.</div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="regPassword" class="form-label">Password</label>
+                        <div class="input-group">
+                            <span class="input-group-text"><i class="fa-solid fa-lock"></i></span>
+                            <input type="password" class="form-control" id="regPassword" name="password" placeholder="Create a password" required minlength="8" autocomplete="new-password">
+                            <button type="button" class="input-group-text nk-toggle-password" aria-label="Toggle password visibility" data-target="regPassword">
+                                <i class="fa-solid fa-eye"></i>
+                            </button>
+                        </div>
+                        <div class="invalid-feedback">Password must be at least 8 characters.</div>
+                    </div>
+
+                    <div class="form-check mb-4">
+                        <input class="form-check-input" type="checkbox" id="agreeTerms" name="terms" required>
+                        <label class="form-check-label" for="agreeTerms">
+                            I agree to the <a href="#" class="nk-auth-link">Terms of Service</a> and <a href="#" class="nk-auth-link">Privacy Policy</a>
+                        </label>
+                        <div class="invalid-feedback">You must agree to the terms.</div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary w-100 nk-auth-btn">
+                        <i class="fa-solid fa-user-plus me-2"></i>Create Account
+                    </button>
+                </form>
+
+                <div class="nk-auth-divider">
+                    <span>or continue with</span>
+                </div>
+
+                <div class="nk-auth-social">
+                    <button type="button" class="btn btn-outline-secondary">
+                        <i class="fa-brands fa-google"></i>
+                    </button>
+                    <button type="button" class="btn btn-outline-secondary">
+                        <i class="fa-brands fa-github"></i>
+                    </button>
+                    <button type="button" class="btn btn-outline-secondary">
+                        <i class="fa-brands fa-microsoft"></i>
+                    </button>
+                </div>
+
+                <div class="nk-auth-footer">
+                    <p>Already have an account? <a href="#" data-auth-switch="#l-login">Sign in</a></p>
+                </div>
             </div>
 
-            <div class="nk-navigation nk-lg-ic rg-ic-stl">
-                <a href="" data-ma-action="nk-login-switch" data-ma-block="#l-login"><i class="fa-solid fa-chevron-right"></i> <span>Sign in</span></a>
-                <a href="" data-ma-action="nk-login-switch" data-ma-block="#l-register"><i class="fa-solid fa-plus"></i> <span>Register</span></a>
+            <!-- Forgot Password -->
+            <div class="nk-auth-card" id="l-forget-password">
+                <div class="nk-auth-card-header">
+                    <h2>Reset Password</h2>
+                    <p>Enter the email associated with your account and we'll send a link to reset your password.</p>
+                </div>
+
+                <form class="nk-auth-form" id="forgotForm" novalidate>
+                    <div class="mb-4">
+                        <label for="forgotEmail" class="form-label">Email Address</label>
+                        <div class="input-group">
+                            <span class="input-group-text"><i class="fa-solid fa-envelope"></i></span>
+                            <input type="email" class="form-control" id="forgotEmail" name="email" placeholder="Enter your email" required autocomplete="email">
+                        </div>
+                        <div class="invalid-feedback">Please enter a valid email address.</div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary w-100 nk-auth-btn">
+                        <i class="fa-solid fa-paper-plane me-2"></i>Send Reset Link
+                    </button>
+                </form>
+
+                <div class="nk-auth-footer mt-4">
+                    <p>Remember your password? <a href="#" data-auth-switch="#l-login">Back to Sign In</a></p>
+                </div>
             </div>
         </div>
     </div>
-    <!-- Login Register area End-->
 
     <!-- ONLY VITE ENTRY POINT - Everything else bundled by Vite -->
     <script type="module" src="/src/js/pages/login-register.js"></script>

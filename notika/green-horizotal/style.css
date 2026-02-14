@@ -3299,169 +3299,423 @@ textarea.auto-size {
 /*----------------------------------------*/
 /*  38.  Login Register CSS
 /*----------------------------------------*/
-.login-content, .error-page-area{
-    min-height:100vh;
-    text-align:center;
-    background-color:#00c292;
+
+/* Auth wrapper - split layout */
+.nk-auth-wrapper {
+    display: flex;
+    min-height: 100vh;
 }
-.login-content:before, .error-page-area:before{
-    content:'';
-    height:100vh;
-    width:1px;
+
+/* Left branding panel */
+.nk-auth-brand {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 480px;
+    flex-shrink: 0;
+    background: linear-gradient(135deg, #00c292 0%, #009b75 50%, #007a5c 100%);
+    color: #fff;
+    padding: 3rem;
+    position: relative;
+    overflow: hidden;
 }
-.nk-block, .error-page-wrap{
-    max-width:500px;
-    padding:20px 0;
-    width:80%;
-    position:relative;
-	margin: 0 auto;
+
+.nk-auth-brand::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(255,255,255,0.08) 0%, transparent 70%);
+    pointer-events: none;
 }
-.nk-navigation a, .nk-navigation a i{
-    vertical-align:top;
-    display:inline-block;
+
+.nk-auth-brand::after {
+    content: '';
+    position: absolute;
+    bottom: -30%;
+    left: -30%;
+    width: 80%;
+    height: 80%;
+    background: radial-gradient(circle, rgba(255,255,255,0.05) 0%, transparent 70%);
+    pointer-events: none;
 }
-.nk-block:not(.toggled){
-    display:none;
+
+.nk-auth-brand-inner {
+    position: relative;
+    z-index: 1;
+    max-width: 360px;
 }
-.nk-block.toggled{
-    -webkit-animation-name:rollIn;
-    animation-name:rollIn;
-    -webkit-animation-duration:.9s;
-    animation-duration:.9s;
-    -webkit-animation-fill-mode:both;
-    animation-fill-mode:both;
-    z-index:10;
+
+.nk-auth-logo {
+    margin-bottom: 2rem;
 }
-.nk-block:not(.lc-block-alt) .nk-form{
-    padding:40px;
+
+.nk-auth-brand h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    color: #fff;
 }
-.nk-block:not(.lc-block-alt) .btn-login{
-    top:50%;
-    margin-top:-50px;
-    right:-25px;
+
+.nk-auth-brand p {
+    font-size: 1rem;
+    opacity: 0.85;
+    line-height: 1.6;
+    margin-bottom: 2.5rem;
 }
-.nk-form, .error-page-wrap{
-    background:#fff;
-    box-shadow:0 1px 1px rgba(0,0,0,.1);
-    border-radius:2px;
+
+.nk-auth-features {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
 }
-.nk-navigation{
-    margin-top:15px;
+
+.nk-auth-feature {
+    display: flex;
+    align-items: center;
+    gap: 0.875rem;
+    font-size: 0.9375rem;
+    opacity: 0.9;
 }
-.nk-navigation a,.nk-navigation a span{
-    -webkit-transition:width;
-    -o-transition:width;
-    transition:width;
-    -webkit-transition-duration:.2s;
-    transition-duration:.2s;
+
+.nk-auth-feature i,
+.nk-auth-feature svg {
+    width: 20px;
+    text-align: center;
+    font-size: 1.125rem;
+    opacity: 0.85;
 }
-.nk-navigation a{
-    color:#fff;
-    background:rgba(255,255,255,.2);
-    margin:0 1px;
-    width:30px;
-    height:30px;
-    border-radius:20px;
-    white-space:nowrap;
-    text-align:left;
+
+/* Right form panel */
+.nk-auth-form-panel {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    background: #f8f9fa;
+    overflow-y: auto;
 }
-.nk-navigation a i{
-    width:30px;
-    font-style:normal;
-    font-size:16px;
-    text-align:center;
-    line-height:30px;
-}
-.nk-lg-ic .notika-plus-symbol{
-    font-size:12px;
-}
-.nk-navigation a span{
-    width:0;
-    overflow:hidden;
-    display:inline-block;
-    line-height:29px;
-    margin-left:-3px;
-}
-.nk-navigation a:hover span{
-    width:100%;
-}
-.nk-navigation a[data-ma-block="#l-register"]:hover{
-    width:95px;
-}
-.nk-navigation a[data-ma-block="#l-forget-password"]:hover{
-    width:147px;
-}
-.nk-navigation a[data-ma-block="#l-login"]:hover{
-    width:85px;
-}
-.lc-block-alt .nk-form{
-    padding:70px 35px 60px;
-}
-.lc-block-alt .btn-login{
-    bottom:0;
-    left:50%;
-    margin-left:-25px;
-}
-.lcb-user{
-    width:100px;
-    height:100px;
-    border-radius:50%;
-    border:5px solid #fff;
-    position:absolute;
-    top:-35px;
-    left:50%;
-    margin-left:-50px;
-    box-shadow:0 -4px 10px rgba(0,0,0,.18);
-}
-.input-group-text.nk-ic-st-pro {
-    border: 0px solid #ccc;
+
+/* Auth cards (login, register, forgot) */
+.nk-auth-card {
+    width: 100%;
+    max-width: 440px;
     background: #fff;
-    font-size: 20px;
+    border-radius: 12px;
+    padding: 2.5rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06), 0 4px 16px rgba(0,0,0,0.04);
 }
-.nk-block .fm-checkbox {
-    margin: 15px 0 0 41px;
-    text-align: left;
+
+.nk-auth-card:not(.toggled) {
+    display: none;
 }
-.btn-float{
-    width:50px;
-    height:50px;
-    border-radius:50%;
-    line-height:46px!important;
+
+.nk-auth-card.toggled {
+    display: block;
+    animation: authFadeIn 0.3s ease-out;
 }
-.btn-float:not(.m-btn){
-    position:absolute!important;
+
+@keyframes authFadeIn {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
 }
-.btn-login.btn-float i{
-    font-size:20px;
+
+.nk-auth-card-header {
+    margin-bottom: 1.75rem;
 }
-.btn-float:not(.bgm-white):not(.bgm-gray)>i{
-    color:#fff;
+
+.nk-auth-card-header h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1a1a2e;
+    margin-bottom: 0.375rem;
 }
-.btn-login.btn-success, .images-cropper-pro .btn, .images-action-pro .btn, .notika-todo-btn .btn, .btn.notika-add-todo, .btn.notika-chat-btn{
-	background-color: #00c292;
+
+.nk-auth-card-header p {
+    font-size: 0.875rem;
+    color: #6c757d;
+    margin-bottom: 0;
+    line-height: 1.5;
+}
+
+/* Form elements */
+.nk-auth-form .form-label {
+    font-size: 0.8125rem;
+    font-weight: 500;
+    color: #495057;
+    margin-bottom: 0.375rem;
+}
+
+.nk-auth-form .input-group-text {
+    background: #f8f9fa;
+    border-color: #dee2e6;
+    color: #6c757d;
+    padding: 0.5rem 0.75rem;
+}
+
+.nk-auth-form .input-group-text i,
+.nk-auth-form .input-group-text svg {
+    width: 16px;
+    text-align: center;
+}
+
+.nk-auth-form .form-control {
+    border-color: #dee2e6;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.875rem;
+}
+
+.nk-auth-form .form-control:focus {
     border-color: #00c292;
-	border:0px solid #ccc;
-	outline:none;
-	box-shadow:none;
+    box-shadow: 0 0 0 0.2rem rgba(0, 194, 146, 0.15);
 }
-.btn-login.btn-success:hover, .btn-login.btn-success:focus, .btn-login.btn-success:active, .images-cropper-pro .btn:hover, .images-cropper-pro .btn:focus, .images-cropper-pro .btn:active, .images-action-pro .btn:hover, .images-action-pro .btn:focus, .images-action-pro .btn:active, .notika-todo-btn .btn:hover, .notika-todo-btn .btn:focus, .notika-todo-btn .btn:active, .btn.notika-add-todo:hover, .btn.notika-add-todo:focus, .btn.notika-add-todo:active, .btn.notika-chat-btn:hover, .btn.notika-chat-btn:focus, .btn.notika-chat-btn:active{
-	background-color: #00c292;
+
+.nk-auth-form .input-group:focus-within .input-group-text {
     border-color: #00c292;
-	border:0px solid #ccc;
-	outline:none;
-	box-shadow:none;
+    color: #00c292;
 }
-.rg-ic-stl .notika-right-arrow{
-	font-size: 14px;
+
+.nk-auth-form .form-check-input:checked {
+    background-color: #00c292;
+    border-color: #00c292;
 }
-.nk-block, .login-content:before, .error-page-wrap, .error-page-area:before{
+
+.nk-auth-form .form-check-input:focus {
+    border-color: #00c292;
+    box-shadow: 0 0 0 0.2rem rgba(0, 194, 146, 0.15);
+}
+
+.nk-auth-form .form-check-label {
+    font-size: 0.8125rem;
+    color: #495057;
+}
+
+.nk-auth-form .invalid-feedback {
+    font-size: 0.75rem;
+}
+
+/* Password toggle button */
+.nk-toggle-password {
+    cursor: pointer;
+    border-left: 0;
+    transition: color 0.2s;
+}
+
+.nk-toggle-password:hover {
+    color: #00c292;
+}
+
+/* Primary auth button */
+.nk-auth-btn {
+    background: #00c292;
+    border-color: #00c292;
+    font-weight: 500;
+    padding: 0.625rem 1.5rem;
+    font-size: 0.9375rem;
+    border-radius: 8px;
+    transition: all 0.2s;
+}
+
+.nk-auth-btn:hover,
+.nk-auth-btn:focus {
+    background: #00a67c;
+    border-color: #00a67c;
+    box-shadow: 0 4px 12px rgba(0, 194, 146, 0.3);
+}
+
+.nk-auth-btn:active {
+    background: #009b75;
+    border-color: #009b75;
+}
+
+/* Auth link */
+.nk-auth-link {
+    color: #00c292;
+    text-decoration: none;
+    font-size: 0.8125rem;
+    font-weight: 500;
+}
+
+.nk-auth-link:hover {
+    color: #00a67c;
+    text-decoration: underline;
+}
+
+/* Divider */
+.nk-auth-divider {
+    display: flex;
+    align-items: center;
+    margin: 1.5rem 0;
+    color: #adb5bd;
+    font-size: 0.8125rem;
+}
+
+.nk-auth-divider::before,
+.nk-auth-divider::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: #dee2e6;
+}
+
+.nk-auth-divider span {
+    padding: 0 1rem;
+    white-space: nowrap;
+}
+
+/* Social login buttons */
+.nk-auth-social {
+    display: flex;
+    gap: 0.75rem;
+    justify-content: center;
+}
+
+.nk-auth-social .btn {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    border-color: #dee2e6;
+    color: #495057;
+    font-size: 1.125rem;
+    transition: all 0.2s;
+}
+
+.nk-auth-social .btn:hover {
+    border-color: #00c292;
+    color: #00c292;
+    background: rgba(0, 194, 146, 0.05);
+}
+
+/* Footer link */
+.nk-auth-footer {
+    margin-top: 1.5rem;
+    text-align: center;
+}
+
+.nk-auth-footer p {
+    font-size: 0.8125rem;
+    color: #6c757d;
+    margin-bottom: 0;
+}
+
+.nk-auth-footer a {
+    color: #00c292;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.nk-auth-footer a:hover {
+    color: #00a67c;
+    text-decoration: underline;
+}
+
+/* Form validation states */
+.nk-auth-form .was-validated .form-control:invalid,
+.nk-auth-form .form-control.is-invalid {
+    border-color: #dc3545;
+}
+
+.nk-auth-form .was-validated .input-group:has(.form-control:invalid) .input-group-text {
+    border-color: #dc3545;
+    color: #dc3545;
+}
+
+/* Responsive: stack on smaller screens */
+@media (max-width: 991.98px) {
+    .nk-auth-wrapper {
+        flex-direction: column;
+    }
+
+    .nk-auth-brand {
+        width: 100%;
+        padding: 2rem 1.5rem;
+    }
+
+    .nk-auth-brand h1 {
+        font-size: 1.5rem;
+    }
+
+    .nk-auth-features {
+        display: none;
+    }
+
+    .nk-auth-brand p {
+        margin-bottom: 0;
+    }
+
+    .nk-auth-form-panel {
+        padding: 1.5rem;
+    }
+
+    .nk-auth-card {
+        padding: 1.75rem;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .nk-auth-brand {
+        padding: 1.5rem 1rem;
+    }
+
+    .nk-auth-card {
+        padding: 1.5rem;
+        border-radius: 8px;
+    }
+
+    .nk-auth-card-header h2 {
+        font-size: 1.25rem;
+    }
+}
+
+/* Keep error page styles separate */
+.error-page-area {
+    min-height: 100vh;
+    text-align: center;
+    background-color: #00c292;
+}
+
+.error-page-area::before {
+    content: '';
+    height: 100vh;
+    width: 1px;
     vertical-align: middle;
     display: inline-block;
 }
-.nk-form p{
-	font-size:14px;
-	color:#333;
-	line-height:24px;
+
+.error-page-wrap {
+    max-width: 500px;
+    padding: 20px 0;
+    width: 80%;
+    position: relative;
+    margin: 0 auto;
+    background: #fff;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+    border-radius: 2px;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+/* Shared button styles used elsewhere */
+.images-cropper-pro .btn, .images-action-pro .btn, .notika-todo-btn .btn, .btn.notika-add-todo, .btn.notika-chat-btn {
+    background-color: #00c292;
+    border-color: #00c292;
+    border: 0px solid #ccc;
+    outline: none;
+    box-shadow: none;
+}
+
+.images-cropper-pro .btn:hover, .images-cropper-pro .btn:focus, .images-cropper-pro .btn:active, .images-action-pro .btn:hover, .images-action-pro .btn:focus, .images-action-pro .btn:active, .notika-todo-btn .btn:hover, .notika-todo-btn .btn:focus, .notika-todo-btn .btn:active, .btn.notika-add-todo:hover, .btn.notika-add-todo:focus, .btn.notika-add-todo:active, .btn.notika-chat-btn:hover, .btn.notika-chat-btn:focus, .btn.notika-chat-btn:active {
+    background-color: #00c292;
+    border-color: #00c292;
+    border: 0px solid #ccc;
+    outline: none;
+    box-shadow: none;
 }
 /*----------------------------------------*/
 /*  39.  Invoice CSS

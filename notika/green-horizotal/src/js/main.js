@@ -116,7 +116,10 @@ import {
   faSquare,
   faCloudArrowUp,
   faDownload,
-  faDisplay
+  faDisplay,
+  faLock,
+  faEyeSlash,
+  faUserPlus
 } from '@fortawesome/free-solid-svg-icons'
 import {
   faBootstrap,
@@ -153,7 +156,7 @@ library.add(
   faUser, faLink, faArrowRightFromBracket, faArrowRightToBracket, faBoxArchive,
   faCropSimple, faMagnifyingGlassPlus, faMagnifyingGlassMinus,
   faRotateLeft, faRotateRight, faLeftRight, faUpDown, faArrowRotateLeft,
-  faExpand, faSquare, faCloudArrowUp, faDownload, faDisplay,
+  faExpand, faSquare, faCloudArrowUp, faDownload, faDisplay, faLock, faEyeSlash, faUserPlus,
   // Brands
   faBootstrap, faGoogle, faMicrosoft, faGithub, faStackOverflow,
   faReddit, faLinkedin, faFacebook, faPinterest, faXTwitter, faSkype

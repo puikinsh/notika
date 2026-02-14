@@ -1,0 +1,13 @@
+<svg width="140" height="35" viewBox="0 0 140 35" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background for the brand mark -->
+  <rect x="0" y="5" width="25" height="25" rx="6" fill="rgba(255,255,255,0.2)"/>
+
+  <!-- Modern 'N' icon -->
+  <text x="12.5" y="23" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="16" font-weight="bold">N</text>
+
+  <!-- Main brand text -->
+  <text x="35" y="18" fill="#ffffff" font-family="Arial, sans-serif" font-size="16" font-weight="700">Notika</text>
+
+  <!-- Tagline -->
+  <text x="35" y="28" fill="rgba(255,255,255,0.7)" font-family="Arial, sans-serif" font-size="8" letter-spacing="1px">ADMIN DASHBOARD</text>
+</svg>
