@@ -1,0 +1,2364 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentation | Notika - Admin Dashboard Template</title>
+    <meta name="description" content="Complete documentation for the Notika green-themed Bootstrap 5 admin dashboard template powered by Vite.">
+    <meta name="author" content="Colorlib">
+    <link rel="shortcut icon" type="image/x-icon" href="../notika/green-horizotal/favicon.ico">
+
+    <!-- Google Fonts: Inter + JetBrains Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap 5.3.8 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-lP8Nk7BhkNzL0QDXU/iael1RgSRiQ9VpCMH+PeSmmLXbcz0kiMWS/MqZdBx0EP7" crossorigin="anonymous">
+
+    <!-- Bootstrap Icons 1.13 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" rel="stylesheet">
+
+    <!-- Highlight.js for code blocks -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.11.1/build/styles/github.min.css">
+
+    <style>
+        :root {
+            --sidebar-width: 280px;
+            --sidebar-bg: #0a1628;
+            --sidebar-hover: #122240;
+            --sidebar-active: #00c292;
+            --sidebar-text: #94a3b8;
+            --sidebar-text-active: #ffffff;
+            --accent: #00c292;
+            --accent-light: #00d9a3;
+            --accent-dark: #00a67c;
+            --content-bg: #f8fafc;
+            --card-bg: #ffffff;
+            --heading-color: #0f172a;
+            --text-color: #334155;
+            --text-muted: #64748b;
+            --border-color: #e2e8f0;
+            --code-bg: #f1f5f9;
+            --tree-line: #cbd5e1;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            font-size: 0.9375rem;
+            line-height: 1.7;
+            color: var(--text-color);
+            background-color: var(--content-bg);
+        }
+
+        /* Sidebar */
+        .doc-sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: var(--sidebar-width);
+            height: 100vh;
+            background: var(--sidebar-bg);
+            display: flex;
+            flex-direction: column;
+            z-index: 1000;
+            transition: transform 0.3s ease;
+        }
+
+        .sidebar-header {
+            padding: 1.5rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        .sidebar-brand {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            text-decoration: none;
+        }
+
+        .sidebar-brand .brand-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--accent), var(--accent-light));
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.125rem;
+            color: #fff;
+        }
+
+        .sidebar-brand .brand-text {
+            color: #fff;
+            font-weight: 600;
+            font-size: 1.0625rem;
+            letter-spacing: -0.01em;
+        }
+
+        .sidebar-brand .brand-version {
+            display: block;
+            font-size: 0.6875rem;
+            font-weight: 400;
+            color: var(--sidebar-text);
+            letter-spacing: 0;
+        }
+
+        .sidebar-nav {
+            flex: 1;
+            overflow-y: auto;
+            padding: 1rem 0;
+        }
+
+        .sidebar-nav::-webkit-scrollbar {
+            width: 4px;
+        }
+
+        .sidebar-nav::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+
+        .nav-group-label {
+            padding: 1rem 1.5rem 0.375rem;
+            font-size: 0.6875rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: rgba(148, 163, 184, 0.5);
+        }
+
+        .nav-item {
+            margin: 0 0.75rem 0.125rem;
+        }
+
+        .nav-link {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 0.625rem 0.875rem;
+            color: var(--sidebar-text);
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 0.875rem;
+            font-weight: 500;
+            transition: all 0.15s ease;
+        }
+
+        .nav-link:hover {
+            color: #e2e8f0;
+            background: var(--sidebar-hover);
+        }
+
+        .nav-link.active {
+            color: var(--sidebar-text-active);
+            background: var(--sidebar-active);
+        }
+
+        .nav-link i {
+            font-size: 1.125rem;
+            width: 1.25rem;
+            text-align: center;
+        }
+
+        .sidebar-footer {
+            padding: 1rem 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        .sidebar-footer p {
+            color: var(--sidebar-text);
+            font-size: 0.75rem;
+            margin: 0;
+        }
+
+        .sidebar-footer a {
+            color: var(--accent-light);
+            text-decoration: none;
+        }
+
+        .sidebar-footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Main Content */
+        .doc-main {
+            margin-left: var(--sidebar-width);
+            min-height: 100vh;
+        }
+
+        .doc-content {
+            max-width: 860px;
+            margin: 0 auto;
+            padding: 3rem 2.5rem;
+        }
+
+        /* Sections */
+        .doc-section {
+            display: none;
+        }
+
+        .doc-section.active {
+            display: block;
+            animation: fadeIn 0.25s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(8px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Typography */
+        .doc-section h1 {
+            font-size: 1.875rem;
+            font-weight: 700;
+            color: var(--heading-color);
+            letter-spacing: -0.02em;
+            margin-bottom: 0.5rem;
+        }
+
+        .doc-section h2 {
+            font-size: 1.375rem;
+            font-weight: 600;
+            color: var(--heading-color);
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .doc-section h3 {
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: var(--heading-color);
+            margin-top: 2rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .lead {
+            font-size: 1.0625rem;
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+        }
+
+        /* Info Cards */
+        .info-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .info-card .card-label {
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--text-muted);
+            margin-bottom: 0.75rem;
+        }
+
+        .meta-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 1rem;
+        }
+
+        .meta-item {
+            display: flex;
+            flex-direction: column;
+            gap: 0.125rem;
+        }
+
+        .meta-item .label {
+            font-size: 0.75rem;
+            font-weight: 500;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+        }
+
+        .meta-item .value {
+            font-size: 0.9375rem;
+            font-weight: 500;
+            color: var(--heading-color);
+        }
+
+        .meta-item .value a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        .meta-item .value a:hover {
+            text-decoration: underline;
+        }
+
+        /* Code Blocks */
+        pre {
+            background: var(--code-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            padding: 1.25rem;
+            margin: 1.25rem 0;
+            overflow-x: auto;
+            font-size: 0.8125rem;
+            line-height: 1.7;
+        }
+
+        pre code {
+            font-family: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', monospace;
+            font-size: 0.8125rem;
+        }
+
+        code:not(pre code) {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8125rem;
+            background: var(--code-bg);
+            padding: 0.15em 0.4em;
+            border-radius: 4px;
+            color: #0e7c5f;
+        }
+
+        /* File Tree */
+        .file-tree {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 1.25rem;
+            margin: 1.25rem 0;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8125rem;
+            line-height: 1.8;
+        }
+
+        .file-tree ul {
+            list-style: none;
+            padding-left: 1.5rem;
+            margin: 0;
+        }
+
+        .file-tree > ul {
+            padding-left: 0;
+        }
+
+        .file-tree li {
+            position: relative;
+            color: var(--text-color);
+        }
+
+        .file-tree li::before {
+            content: '';
+            position: absolute;
+            left: -1rem;
+            top: 0;
+            width: 0.75rem;
+            height: 100%;
+            border-left: 1px solid var(--tree-line);
+        }
+
+        .file-tree li::after {
+            content: '';
+            position: absolute;
+            left: -1rem;
+            top: 0.9rem;
+            width: 0.75rem;
+            border-top: 1px solid var(--tree-line);
+        }
+
+        .file-tree li:last-child::before {
+            height: 0.9rem;
+        }
+
+        .file-tree > ul > li::before,
+        .file-tree > ul > li::after {
+            display: none;
+        }
+
+        .file-tree .tree-icon {
+            margin-right: 0.375rem;
+            font-style: normal;
+        }
+
+        .file-tree .folder > span {
+            cursor: pointer;
+            font-weight: 500;
+            color: var(--heading-color);
+        }
+
+        .file-tree .folder > span:hover {
+            color: var(--accent);
+        }
+
+        .file-tree .folder.collapsed > ul {
+            display: none;
+        }
+
+        .file-tree .file {
+            color: var(--text-muted);
+        }
+
+        .file-tree .count {
+            color: var(--text-muted);
+            font-size: 0.75rem;
+            font-weight: 400;
+        }
+
+        /* Plugin Table */
+        .plugin-table {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            overflow: hidden;
+            margin: 1.25rem 0;
+        }
+
+        .plugin-table table {
+            margin: 0;
+        }
+
+        .plugin-table thead th {
+            background: var(--code-bg);
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            color: var(--text-muted);
+            border-bottom: 1px solid var(--border-color);
+            padding: 0.875rem 1rem;
+        }
+
+        .plugin-table tbody td {
+            padding: 0.75rem 1rem;
+            font-size: 0.875rem;
+            vertical-align: middle;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .plugin-table tbody tr:last-child td {
+            border-bottom: none;
+        }
+
+        .plugin-table tbody tr:hover {
+            background: var(--code-bg);
+        }
+
+        .plugin-table .plugin-name {
+            font-weight: 600;
+            color: var(--heading-color);
+            white-space: nowrap;
+        }
+
+        .plugin-table a {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .plugin-table a:hover {
+            text-decoration: underline;
+        }
+
+        /* Credit list */
+        .credit-list {
+            list-style: none;
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 0.5rem;
+        }
+
+        .credit-list li {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 0.625rem 1rem;
+        }
+
+        .credit-list li a {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.875rem;
+        }
+
+        .credit-list li a:hover {
+            text-decoration: underline;
+        }
+
+        /* Page catalog cards */
+        .page-category {
+            margin-bottom: 2rem;
+        }
+
+        .page-category h3 {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .page-category h3 .badge {
+            font-size: 0.6875rem;
+            font-weight: 600;
+            padding: 0.2rem 0.5rem;
+            border-radius: 6px;
+            background: var(--accent);
+            color: #fff;
+        }
+
+        .page-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 0.5rem;
+        }
+
+        .page-grid a {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 0.75rem;
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            color: var(--text-color);
+            text-decoration: none;
+            font-size: 0.8125rem;
+            font-weight: 500;
+            transition: border-color 0.15s, box-shadow 0.15s;
+        }
+
+        .page-grid a:hover {
+            border-color: var(--accent);
+            box-shadow: 0 0 0 1px var(--accent);
+            color: var(--accent);
+        }
+
+        .page-grid a i {
+            font-size: 1rem;
+            color: var(--text-muted);
+        }
+
+        .page-grid a:hover i {
+            color: var(--accent);
+        }
+
+        /* Func list for JS architecture */
+        .func-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .func-list li {
+            display: flex;
+            gap: 1rem;
+            padding: 0.625rem 0;
+            border-bottom: 1px solid var(--border-color);
+            font-size: 0.875rem;
+        }
+
+        .func-list li:last-child {
+            border-bottom: none;
+        }
+
+        .func-list .func-name {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8125rem;
+            font-weight: 500;
+            color: var(--accent);
+            white-space: nowrap;
+            min-width: 220px;
+        }
+
+        .func-list .func-desc {
+            color: var(--text-muted);
+        }
+
+        /* Step list */
+        .step-list {
+            counter-reset: step;
+            list-style: none;
+            padding: 0;
+        }
+
+        .step-list li {
+            counter-increment: step;
+            position: relative;
+            padding: 0.75rem 0 0.75rem 3rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .step-list li:last-child {
+            border-bottom: none;
+        }
+
+        .step-list li::before {
+            content: counter(step);
+            position: absolute;
+            left: 0;
+            top: 0.75rem;
+            width: 2rem;
+            height: 2rem;
+            background: var(--accent);
+            color: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            font-size: 0.8125rem;
+        }
+
+        /* Tip/note boxes */
+        .tip-box {
+            background: rgba(0, 194, 146, 0.08);
+            border: 1px solid rgba(0, 194, 146, 0.25);
+            border-radius: 10px;
+            padding: 1rem 1.25rem;
+            margin: 1.25rem 0;
+            font-size: 0.875rem;
+        }
+
+        .tip-box strong {
+            color: var(--accent-dark);
+        }
+
+        .warn-box {
+            background: rgba(255, 152, 0, 0.08);
+            border: 1px solid rgba(255, 152, 0, 0.25);
+            border-radius: 10px;
+            padding: 1rem 1.25rem;
+            margin: 1.25rem 0;
+            font-size: 0.875rem;
+        }
+
+        .warn-box strong {
+            color: #e65100;
+        }
+
+        /* Support section */
+        .support-card {
+            background: linear-gradient(135deg, var(--sidebar-bg), #0d2b3e);
+            color: #fff;
+            border-radius: 16px;
+            padding: 2.5rem;
+            text-align: center;
+            margin-top: 1.5rem;
+        }
+
+        .support-card h3 {
+            color: #fff;
+            margin-top: 0;
+            font-size: 1.25rem;
+        }
+
+        .support-card p {
+            color: #94a3b8;
+            margin-bottom: 1.5rem;
+        }
+
+        .support-card .btn {
+            background: var(--accent);
+            color: #fff;
+            border: none;
+            padding: 0.625rem 1.75rem;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.875rem;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: background 0.15s ease;
+        }
+
+        .support-card .btn:hover {
+            background: var(--accent-light);
+        }
+
+        /* Mobile toggle */
+        .mobile-toggle {
+            display: none;
+            position: fixed;
+            top: 1rem;
+            left: 1rem;
+            z-index: 1100;
+            background: var(--sidebar-bg);
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            width: 44px;
+            height: 44px;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+            cursor: pointer;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        .overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+        }
+
+        .overlay.show {
+            display: block;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .mobile-toggle {
+                display: flex;
+            }
+
+            .doc-sidebar {
+                transform: translateX(-100%);
+            }
+
+            .doc-sidebar.open {
+                transform: translateX(0);
+            }
+
+            .doc-main {
+                margin-left: 0;
+            }
+
+            .doc-content {
+                padding: 4.5rem 1.25rem 2rem;
+            }
+
+            .meta-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .credit-list {
+                grid-template-columns: 1fr;
+            }
+
+            .page-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .func-list li {
+                flex-direction: column;
+                gap: 0.25rem;
+            }
+
+            .func-list .func-name {
+                min-width: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Mobile Menu Toggle -->
+    <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation">
+        <i class="bi bi-list"></i>
+    </button>
+    <div class="overlay" id="overlay"></div>
+
+    <!-- Sidebar -->
+    <aside class="doc-sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <a href="#" class="sidebar-brand">
+                <div class="brand-icon">N</div>
+                <div>
+                    <span class="brand-text">Notika</span>
+                    <span class="brand-version">Documentation v2.0</span>
+                </div>
+            </a>
+        </div>
+
+        <nav class="sidebar-nav">
+            <div class="nav-group-label">Overview</div>
+            <div class="nav-item">
+                <a href="#welcome" class="nav-link active" data-section="welcome">
+                    <i class="bi bi-house-door"></i> Welcome
+                </a>
+            </div>
+            <div class="nav-item">
+                <a href="#getting-started" class="nav-link" data-section="getting-started">
+                    <i class="bi bi-rocket-takeoff"></i> Getting Started
+                </a>
+            </div>
+            <div class="nav-item">
+                <a href="#pages" class="nav-link" data-section="pages">
+                    <i class="bi bi-files"></i> Page Catalog
+                </a>
+            </div>
+
+            <div class="nav-group-label">Structure</div>
+            <div class="nav-item">
+                <a href="#file-structure" class="nav-link" data-section="file-structure">
+                    <i class="bi bi-folder2-open"></i> File Structure
+                </a>
+            </div>
+            <div class="nav-item">
+                <a href="#html-structure" class="nav-link" data-section="html-structure">
+                    <i class="bi bi-code-slash"></i> HTML Structure
+                </a>
+            </div>
+
+            <div class="nav-group-label">Development</div>
+            <div class="nav-item">
+                <a href="#architecture" class="nav-link" data-section="architecture">
+                    <i class="bi bi-diagram-3"></i> Architecture
+                </a>
+            </div>
+            <div class="nav-item">
+                <a href="#javascript" class="nav-link" data-section="javascript">
+                    <i class="bi bi-braces"></i> JavaScript
+                </a>
+            </div>
+            <div class="nav-item">
+                <a href="#css-styling" class="nav-link" data-section="css-styling">
+                    <i class="bi bi-palette"></i> CSS &amp; Styling
+                </a>
+            </div>
+            <div class="nav-item">
+                <a href="#build-system" class="nav-link" data-section="build-system">
+                    <i class="bi bi-gear"></i> Build System
+                </a>
+            </div>
+
+            <div class="nav-group-label">Reference</div>
+            <div class="nav-item">
+                <a href="#libraries" class="nav-link" data-section="libraries">
+                    <i class="bi bi-puzzle"></i> Libraries
+                </a>
+            </div>
+            <div class="nav-item">
+                <a href="#customization" class="nav-link" data-section="customization">
+                    <i class="bi bi-sliders"></i> Customization
+                </a>
+            </div>
+            <div class="nav-item">
+                <a href="#credits" class="nav-link" data-section="credits">
+                    <i class="bi bi-bookmark-star"></i> Credits
+                </a>
+            </div>
+            <div class="nav-item">
+                <a href="#support" class="nav-link" data-section="support">
+                    <i class="bi bi-chat-dots"></i> Support
+                </a>
+            </div>
+        </nav>
+
+        <div class="sidebar-footer">
+            <p>&copy; 2026 <a href="https://colorlib.com/wp/templates/">Colorlib</a>. All rights reserved.</p>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="doc-main">
+        <div class="doc-content">
+
+            <!-- ============================================================ -->
+            <!-- WELCOME -->
+            <!-- ============================================================ -->
+            <section id="welcome" class="doc-section active">
+                <h1>Notika Admin Template</h1>
+                <p class="lead">A green-themed Bootstrap 5 admin dashboard with 41 pages &mdash; dashboards, analytics, charts, forms, tables, email, and UI components. Powered by Vite 7.3 with ES6 modules and zero jQuery.</p>
+
+                <div class="info-card">
+                    <div class="card-label">Template Info</div>
+                    <div class="meta-grid">
+                        <div class="meta-item">
+                            <span class="label">Author</span>
+                            <span class="value"><a href="https://colorlib.com/wp/templates/">Colorlib</a></span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="label">License</span>
+                            <span class="value">MIT</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="label">HTML Pages</span>
+                            <span class="value">41</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="label">Build System</span>
+                            <span class="value">Vite 7.3.1</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <div class="card-label">Technology Stack</div>
+                    <div class="meta-grid">
+                        <div class="meta-item">
+                            <span class="label">CSS Framework</span>
+                            <span class="value">Bootstrap 5.3.8</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="label">JavaScript</span>
+                            <span class="value">ES6 Modules (no jQuery)</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="label">Icons</span>
+                            <span class="value">Font Awesome 7.2</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="label">Charts</span>
+                            <span class="value">Chart.js 4.5</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="label">Font</span>
+                            <span class="value">Google Fonts Roboto</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="label">Animations</span>
+                            <span class="value">AOS 2.3</span>
+                        </div>
+                    </div>
+                </div>
+
+                <h2>What's Included</h2>
+                <div class="meta-grid" style="margin-top:1rem">
+                    <div class="info-card" style="margin-bottom:0">
+                        <div style="font-size:1.5rem;font-weight:700;color:var(--accent)">5</div>
+                        <div style="font-size:0.8125rem;color:var(--text-muted)">Dashboard layouts</div>
+                    </div>
+                    <div class="info-card" style="margin-bottom:0">
+                        <div style="font-size:1.5rem;font-weight:700;color:var(--accent)">4</div>
+                        <div style="font-size:0.8125rem;color:var(--text-muted)">Chart pages</div>
+                    </div>
+                    <div class="info-card" style="margin-bottom:0">
+                        <div style="font-size:1.5rem;font-weight:700;color:var(--accent)">10</div>
+                        <div style="font-size:0.8125rem;color:var(--text-muted)">UI component pages</div>
+                    </div>
+                    <div class="info-card" style="margin-bottom:0">
+                        <div style="font-size:1.5rem;font-weight:700;color:var(--accent)">6</div>
+                        <div style="font-size:0.8125rem;color:var(--text-muted)">Interface pages</div>
+                    </div>
+                    <div class="info-card" style="margin-bottom:0">
+                        <div style="font-size:1.5rem;font-weight:700;color:var(--accent)">3</div>
+                        <div style="font-size:0.8125rem;color:var(--text-muted)">Form pages</div>
+                    </div>
+                    <div class="info-card" style="margin-bottom:0">
+                        <div style="font-size:1.5rem;font-weight:700;color:var(--accent)">31</div>
+                        <div style="font-size:0.8125rem;color:var(--text-muted)">Page JS modules</div>
+                    </div>
+                </div>
+
+                <h2>Theme Colors</h2>
+                <p>Notika uses a clean green accent on a white background:</p>
+                <div class="d-flex gap-3 flex-wrap mt-3">
+                    <div class="d-flex align-items-center gap-2">
+                        <div style="width:32px;height:32px;border-radius:6px;background:#00c292;border:1px solid var(--border-color)"></div>
+                        <div>
+                            <div style="font-weight:600;font-size:0.8125rem">#00c292</div>
+                            <div style="font-size:0.75rem;color:var(--text-muted)">Primary green</div>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center gap-2">
+                        <div style="width:32px;height:32px;border-radius:6px;background:#03a9f3;border:1px solid var(--border-color)"></div>
+                        <div>
+                            <div style="font-weight:600;font-size:0.8125rem">#03a9f3</div>
+                            <div style="font-size:0.75rem;color:var(--text-muted)">Info / secondary</div>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center gap-2">
+                        <div style="width:32px;height:32px;border-radius:6px;background:#ff9800;border:1px solid var(--border-color)"></div>
+                        <div>
+                            <div style="font-weight:600;font-size:0.8125rem">#ff9800</div>
+                            <div style="font-size:0.75rem;color:var(--text-muted)">Warning</div>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center gap-2">
+                        <div style="width:32px;height:32px;border-radius:6px;background:#e91e63;border:1px solid var(--border-color)"></div>
+                        <div>
+                            <div style="font-weight:600;font-size:0.8125rem">#e91e63</div>
+                            <div style="font-size:0.75rem;color:var(--text-muted)">Danger</div>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center gap-2">
+                        <div style="width:32px;height:32px;border-radius:6px;background:#f8f9fa;border:1px solid var(--border-color)"></div>
+                        <div>
+                            <div style="font-weight:600;font-size:0.8125rem">#f8f9fa</div>
+                            <div style="font-size:0.75rem;color:var(--text-muted)">Background</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ============================================================ -->
+            <!-- GETTING STARTED -->
+            <!-- ============================================================ -->
+            <section id="getting-started" class="doc-section">
+                <h1>Getting Started</h1>
+                <p class="lead">Notika uses Vite as its build system. You need Node.js installed to run the dev server and build for production.</p>
+
+                <h2>Prerequisites</h2>
+                <div class="info-card">
+                    <div class="meta-grid">
+                        <div class="meta-item">
+                            <span class="label">Node.js</span>
+                            <span class="value">18+ (LTS recommended)</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="label">npm</span>
+                            <span class="value">9+ (comes with Node)</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="label">Git</span>
+                            <span class="value">Any modern version</span>
+                        </div>
+                    </div>
+                </div>
+
+                <h2>Installation</h2>
+                <ol class="step-list">
+                    <li>
+                        <strong>Clone the repository</strong>
+                        <pre><code class="language-bash">git clone https://github.com/nicdev/notika.git
+cd notika</code></pre>
+                    </li>
+                    <li>
+                        <strong>Install dependencies</strong>
+                        <pre><code class="language-bash">npm install</code></pre>
+                        <p>This installs all npm packages listed in <code>package.json</code> (Bootstrap, Chart.js, Vite, etc.).</p>
+                    </li>
+                    <li>
+                        <strong>Start the dev server</strong>
+                        <pre><code class="language-bash">npm run dev</code></pre>
+                        <p>Opens the template at <code>http://localhost:3100</code> with hot module replacement (HMR). Any changes to HTML, JS, or SCSS files reflect instantly.</p>
+                    </li>
+                    <li>
+                        <strong>Build for production</strong>
+                        <pre><code class="language-bash">npm run build</code></pre>
+                        <p>Outputs optimized files to <code>dist/</code> with minified CSS/JS, code-split chunks, and sourcemaps.</p>
+                    </li>
+                </ol>
+
+                <h2>Available Commands</h2>
+                <div class="plugin-table">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Command</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="plugin-name"><code>npm run dev</code></td>
+                                <td>Start Vite dev server with HMR on port 3100</td>
+                            </tr>
+                            <tr>
+                                <td class="plugin-name"><code>npm run build</code></td>
+                                <td>Production build to <code>dist/</code> directory</td>
+                            </tr>
+                            <tr>
+                                <td class="plugin-name"><code>npm run preview</code></td>
+                                <td>Preview production build locally on port 4173</td>
+                            </tr>
+                            <tr>
+                                <td class="plugin-name"><code>npm run lint</code></td>
+                                <td>Run ESLint to check code quality</td>
+                            </tr>
+                            <tr>
+                                <td class="plugin-name"><code>npm run type-check</code></td>
+                                <td>Run TypeScript type checking</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="tip-box">
+                    <strong>Tip:</strong> The dev server opens automatically in your browser. Use <code>Ctrl+C</code> to stop it. Changes to SCSS files trigger instant recompilation and injection without a full page reload.
+                </div>
+            </section>
+
+            <!-- ============================================================ -->
+            <!-- PAGE CATALOG -->
+            <!-- ============================================================ -->
+            <section id="pages" class="doc-section">
+                <h1>Page Catalog</h1>
+                <p class="lead">All 41 pages organized by category. Each page uses the shared horizontal navigation layout except auth and error pages.</p>
+
+                <div class="page-category">
+                    <h3><i class="bi bi-speedometer2"></i> Dashboards <span class="badge">5</span></h3>
+                    <div class="page-grid">
+                        <a href="../notika/green-horizotal/index.html"><i class="bi bi-graph-up"></i> Dashboard One</a>
+                        <a href="../notika/green-horizotal/index-2.html"><i class="bi bi-graph-up-arrow"></i> Dashboard Two</a>
+                        <a href="../notika/green-horizotal/index-3.html"><i class="bi bi-share"></i> Social Media</a>
+                        <a href="../notika/green-horizotal/index-4.html"><i class="bi bi-kanban"></i> Projects</a>
+                        <a href="../notika/green-horizotal/analytics.html"><i class="bi bi-pie-chart"></i> Analytics</a>
+                    </div>
+                    <p style="margin-top:0.5rem;font-size:0.8125rem;color:var(--text-muted)">Feature Chart.js charts, counter animations, widget cards, and data visualizations.</p>
+                </div>
+
+                <div class="page-category">
+                    <h3><i class="bi bi-envelope"></i> Email <span class="badge">3</span></h3>
+                    <div class="page-grid">
+                        <a href="../notika/green-horizotal/inbox.html"><i class="bi bi-inbox"></i> Inbox</a>
+                        <a href="../notika/green-horizotal/view-email.html"><i class="bi bi-envelope-open"></i> View Email</a>
+                        <a href="../notika/green-horizotal/compose-email.html"><i class="bi bi-pencil"></i> Compose Email</a>
+                    </div>
+                </div>
+
+                <div class="page-category">
+                    <h3><i class="bi bi-bar-chart"></i> Charts <span class="badge">4</span></h3>
+                    <div class="page-grid">
+                        <a href="../notika/green-horizotal/bar-charts.html"><i class="bi bi-bar-chart-fill"></i> Bar Charts</a>
+                        <a href="../notika/green-horizotal/line-charts.html"><i class="bi bi-graph-up-arrow"></i> Line Charts</a>
+                        <a href="../notika/green-horizotal/area-charts.html"><i class="bi bi-graph-up"></i> Area Charts</a>
+                        <a href="../notika/green-horizotal/flot-charts.html"><i class="bi bi-pie-chart-fill"></i> Flot Charts</a>
+                    </div>
+                    <p style="margin-top:0.5rem;font-size:0.8125rem;color:var(--text-muted)">Powered by Chart.js 4.5 with bar, line, area, doughnut, and mixed chart types.</p>
+                </div>
+
+                <div class="page-category">
+                    <h3><i class="bi bi-input-cursor-text"></i> Forms <span class="badge">3</span></h3>
+                    <div class="page-grid">
+                        <a href="../notika/green-horizotal/form-elements.html"><i class="bi bi-ui-checks"></i> Form Elements</a>
+                        <a href="../notika/green-horizotal/form-components.html"><i class="bi bi-sliders"></i> Form Components</a>
+                        <a href="../notika/green-horizotal/form-examples.html"><i class="bi bi-file-earmark-text"></i> Form Examples</a>
+                    </div>
+                </div>
+
+                <div class="page-category">
+                    <h3><i class="bi bi-table"></i> Tables <span class="badge">2</span></h3>
+                    <div class="page-grid">
+                        <a href="../notika/green-horizotal/normal-table.html"><i class="bi bi-table"></i> Normal Table</a>
+                        <a href="../notika/green-horizotal/data-table.html"><i class="bi bi-funnel"></i> Data Table</a>
+                    </div>
+                </div>
+
+                <div class="page-category">
+                    <h3><i class="bi bi-grid-1x2"></i> UI Components <span class="badge">10</span></h3>
+                    <div class="page-grid">
+                        <a href="../notika/green-horizotal/tabs.html"><i class="bi bi-segmented-nav"></i> Tabs</a>
+                        <a href="../notika/green-horizotal/accordion.html"><i class="bi bi-arrows-collapse"></i> Accordion</a>
+                        <a href="../notika/green-horizotal/alert.html"><i class="bi bi-exclamation-triangle"></i> Alerts</a>
+                        <a href="../notika/green-horizotal/buttons.html"><i class="bi bi-hand-index"></i> Buttons</a>
+                        <a href="../notika/green-horizotal/modals.html"><i class="bi bi-window-stack"></i> Modals</a>
+                        <a href="../notika/green-horizotal/notification.html"><i class="bi bi-bell"></i> Notifications</a>
+                        <a href="../notika/green-horizotal/dialog.html"><i class="bi bi-chat-square"></i> Dialogs</a>
+                        <a href="../notika/green-horizotal/dropdown.html"><i class="bi bi-caret-down-square"></i> Dropdowns</a>
+                        <a href="../notika/green-horizotal/popovers.html"><i class="bi bi-chat-left-dots"></i> Popovers</a>
+                        <a href="../notika/green-horizotal/tooltips.html"><i class="bi bi-cursor"></i> Tooltips</a>
+                    </div>
+                </div>
+
+                <div class="page-category">
+                    <h3><i class="bi bi-code-square"></i> Interface <span class="badge">6</span></h3>
+                    <div class="page-grid">
+                        <a href="../notika/green-horizotal/animations.html"><i class="bi bi-play-circle"></i> Animations</a>
+                        <a href="../notika/green-horizotal/google-map.html"><i class="bi bi-geo-alt"></i> Google Map</a>
+                        <a href="../notika/green-horizotal/data-map.html"><i class="bi bi-map"></i> Data Maps</a>
+                        <a href="../notika/green-horizotal/code-editor.html"><i class="bi bi-braces"></i> Code Editor</a>
+                        <a href="../notika/green-horizotal/image-cropper.html"><i class="bi bi-crop"></i> Image Cropper</a>
+                        <a href="../notika/green-horizotal/wizard.html"><i class="bi bi-list-check"></i> Wizard</a>
+                    </div>
+                    <p style="margin-top:0.5rem;font-size:0.8125rem;color:var(--text-muted)">Code Editor uses CodeMirror 6, Image Cropper uses Cropper.js 2, Maps use Leaflet 1.9.</p>
+                </div>
+
+                <div class="page-category">
+                    <h3><i class="bi bi-collection"></i> Miscellaneous <span class="badge">5</span></h3>
+                    <div class="page-grid">
+                        <a href="../notika/green-horizotal/widgets.html"><i class="bi bi-grid-3x3-gap"></i> Widgets</a>
+                        <a href="../notika/green-horizotal/contact.html"><i class="bi bi-person-lines-fill"></i> Contact</a>
+                        <a href="../notika/green-horizotal/invoice.html"><i class="bi bi-receipt"></i> Invoice</a>
+                        <a href="../notika/green-horizotal/typography.html"><i class="bi bi-type"></i> Typography</a>
+                        <a href="../notika/green-horizotal/color.html"><i class="bi bi-palette2"></i> Colors</a>
+                    </div>
+                </div>
+
+                <div class="page-category">
+                    <h3><i class="bi bi-shield-lock"></i> Auth &amp; Error <span class="badge">2</span></h3>
+                    <div class="page-grid">
+                        <a href="../notika/green-horizotal/login-register.html"><i class="bi bi-box-arrow-in-right"></i> Login / Register</a>
+                        <a href="../notika/green-horizotal/404.html"><i class="bi bi-exclamation-circle"></i> 404 Error</a>
+                    </div>
+                    <p style="margin-top:0.5rem;font-size:0.8125rem;color:var(--text-muted)">These pages use a minimal layout without the header and navigation.</p>
+                </div>
+            </section>
+
+            <!-- ============================================================ -->
+            <!-- FILE STRUCTURE -->
+            <!-- ============================================================ -->
+            <section id="file-structure" class="doc-section">
+                <h1>File Structure</h1>
+                <p class="lead">The Vite root is <code>notika/green-horizotal/</code> (not the project root). The <code>vite.config.js</code> lives at the project root.</p>
+
+                <div class="file-tree" id="fileTree">
+                    <ul>
+                        <li class="folder">
+                            <span><i class="tree-icon bi bi-folder-fill text-warning"></i> notika/ <span class="count">&mdash; project root</span></span>
+                            <ul>
+                                <li class="file"><i class="tree-icon bi bi-filetype-json text-success"></i> package.json <span class="count">&mdash; dependencies and scripts</span></li>
+                                <li class="file"><i class="tree-icon bi bi-filetype-js text-success"></i> vite.config.js <span class="count">&mdash; Vite build config (multi-page, Handlebars, chunks)</span></li>
+                                <li class="folder">
+                                    <span><i class="tree-icon bi bi-folder-fill text-warning"></i> notika/green-horizotal/ <span class="count">&mdash; Vite root</span></span>
+                                    <ul>
+                                        <li class="file"><i class="tree-icon bi bi-filetype-css text-primary"></i> style.css <span class="count">&mdash; main theme (4,400+ lines, BS5 overrides)</span></li>
+                                        <li class="file"><i class="tree-icon bi bi-filetype-html text-danger"></i> *.html <span class="count">(41 pages)</span></li>
+                                        <li class="folder">
+                                            <span><i class="tree-icon bi bi-folder-fill text-warning"></i> src/js/ <span class="count">&mdash; ES6 modules</span></span>
+                                            <ul>
+                                                <li class="file"><i class="tree-icon bi bi-filetype-js text-success"></i> main.js <span class="count">&mdash; NotikaApp class, CSS imports, entry point (~1,185 lines)</span></li>
+                                                <li class="folder">
+                                                    <span><i class="tree-icon bi bi-folder-fill text-warning"></i> modules/ <span class="count">&mdash; shared modules</span></span>
+                                                    <ul>
+                                                        <li class="file"><i class="tree-icon bi bi-filetype-js text-success"></i> charts.js <span class="count">&mdash; NotikaCharts (Chart.js wrapper, instance Map)</span></li>
+                                                        <li class="file"><i class="tree-icon bi bi-filetype-js text-success"></i> ui.js <span class="count">&mdash; NotikaUI (Bootstrap init, counters, toasts)</span></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="folder collapsed">
+                                                    <span><i class="tree-icon bi bi-folder-fill text-warning"></i> pages/ <span class="count">(31 page modules extending NotikaApp)</span></span>
+                                                    <ul>
+                                                        <li class="file"><i class="tree-icon bi bi-filetype-js text-success"></i> analytics.js, animations.js, area-charts.js, bar-charts.js, ...</li>
+                                                        <li class="file"><i class="tree-icon bi bi-filetype-js text-success"></i> data-table.js, form-components.js, form-elements.js, ...</li>
+                                                        <li class="file"><i class="tree-icon bi bi-filetype-js text-success"></i> tabs.js, widgets.js, wizard.js, ...</li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="folder collapsed">
+                                            <span><i class="tree-icon bi bi-folder-fill text-warning"></i> src/css/ <span class="count">&mdash; source styles</span></span>
+                                            <ul>
+                                                <li class="file"><i class="tree-icon bi bi-filetype-scss text-danger"></i> modern.scss <span class="count">&mdash; modern SCSS with CSS custom properties</span></li>
+                                                <li class="file"><i class="tree-icon bi bi-filetype-css text-primary"></i> dashboard-widgets.css <span class="count">&mdash; widget layout styles</span></li>
+                                            </ul>
+                                        </li>
+                                        <li class="folder collapsed">
+                                            <span><i class="tree-icon bi bi-folder-fill text-warning"></i> src/partials/ <span class="count">&mdash; Handlebars templates</span></span>
+                                            <ul>
+                                                <li class="file"><i class="tree-icon bi bi-file-earmark-code text-info"></i> header.hbs <span class="count">&mdash; top header with search, messages, notifications</span></li>
+                                                <li class="file"><i class="tree-icon bi bi-file-earmark-code text-info"></i> navbar.hbs <span class="count">&mdash; horizontal dropdown navigation</span></li>
+                                                <li class="file"><i class="tree-icon bi bi-file-earmark-code text-info"></i> footer.hbs <span class="count">&mdash; page footer</span></li>
+                                                <li class="file"><i class="tree-icon bi bi-file-earmark-code text-info"></i> breadcrumb.hbs <span class="count">&mdash; dynamic breadcrumb with icons</span></li>
+                                            </ul>
+                                        </li>
+                                        <li class="folder collapsed">
+                                            <span><i class="tree-icon bi bi-folder-fill text-warning"></i> css/ <span class="count">&mdash; component CSS</span></span>
+                                            <ul>
+                                                <li class="file"><i class="tree-icon bi bi-filetype-css text-primary"></i> header-modern-clean.css <span class="count">&mdash; header styling</span></li>
+                                                <li class="file"><i class="tree-icon bi bi-filetype-css text-primary"></i> navbar-stable.css <span class="count">&mdash; horizontal navigation</span></li>
+                                                <li class="file"><i class="tree-icon bi bi-filetype-css text-primary"></i> mobile-menu.css <span class="count">&mdash; offcanvas mobile menu</span></li>
+                                                <li class="file"><i class="tree-icon bi bi-filetype-css text-primary"></i> responsive.css <span class="count">&mdash; responsive breakpoints</span></li>
+                                                <li class="file"><i class="tree-icon bi bi-filetype-css text-primary"></i> widgets-consistent.css <span class="count">&mdash; widget spacing</span></li>
+                                            </ul>
+                                        </li>
+                                        <li class="folder collapsed">
+                                            <span><i class="tree-icon bi bi-folder-fill text-warning"></i> img/ <span class="count">&mdash; images (Vite publicDir)</span></span>
+                                            <ul>
+                                                <li class="file"><i class="tree-icon bi bi-folder text-warning"></i> logo/ <span class="count">&mdash; SVG logos (horizontal, dark, icon)</span></li>
+                                                <li class="file"><i class="tree-icon bi bi-folder text-warning"></i> post/, country/, cropper/, blog/, dialog/, widgets/</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="folder collapsed">
+                                    <span><i class="tree-icon bi bi-folder-fill text-warning"></i> dist/ <span class="count">&mdash; production build output</span></span>
+                                    <ul>
+                                        <li class="file"><i class="tree-icon bi bi-file-earmark"></i> Optimized HTML, CSS, JS with code-split chunks</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+                <h2>Key Files</h2>
+                <div class="info-card">
+                    <table class="table table-borderless mb-0" style="font-size: 0.875rem;">
+                        <tbody>
+                            <tr>
+                                <td style="width:35%;font-weight:600;color:var(--heading-color)"><code>vite.config.js</code></td>
+                                <td>Build configuration &mdash; multi-page input, Handlebars plugin, manual chunks, SCSS compilation, PostCSS</td>
+                            </tr>
+                            <tr>
+                                <td style="font-weight:600;color:var(--heading-color)"><code>src/js/main.js</code></td>
+                                <td>NotikaApp class (~1,185 lines) &mdash; imports all CSS, registers Font Awesome icons, initializes navigation, mobile menu, AOS, charts</td>
+                            </tr>
+                            <tr>
+                                <td style="font-weight:600;color:var(--heading-color)"><code>src/js/modules/charts.js</code></td>
+                                <td>NotikaCharts class &mdash; Chart.js wrapper storing instances in a Map for access, refresh, and destroy</td>
+                            </tr>
+                            <tr>
+                                <td style="font-weight:600;color:var(--heading-color)"><code>src/js/modules/ui.js</code></td>
+                                <td>NotikaUI class &mdash; Bootstrap component init, counter animations via IntersectionObserver, toast notifications</td>
+                            </tr>
+                            <tr>
+                                <td style="font-weight:600;color:var(--heading-color)"><code>style.css</code></td>
+                                <td>Main theme (4,400+ lines) &mdash; Bootstrap 5 overrides, component styles, layout rules</td>
+                            </tr>
+                            <tr>
+                                <td style="font-weight:600;color:var(--heading-color)"><code>src/css/modern.scss</code></td>
+                                <td>Modern SCSS with CSS custom properties for spacing, card shadows, and design tokens</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- ============================================================ -->
+            <!-- HTML STRUCTURE -->
+            <!-- ============================================================ -->
+            <section id="html-structure" class="doc-section">
+                <h1>HTML Structure</h1>
+                <p class="lead">All pages use a horizontal navigation layout with shared Handlebars partials for the header, navbar, footer, and breadcrumb.</p>
+
+                <h2>Standardized Head</h2>
+                <p>Every page uses this consistent <code>&lt;head&gt;</code> structure. CSS is imported through Vite (no <code>&lt;link&gt;</code> tags for libraries):</p>
+                <pre><code class="language-html">&lt;html lang="en" data-page-module="pagename"&gt;
+&lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+    &lt;title&gt;Page Title | Notika - Modern Vite Template&lt;/title&gt;
+    &lt;meta name="description" content="..."&gt;
+
+    &lt;!-- Favicon --&gt;
+    &lt;link rel="icon" type="image/svg+xml" href="/logo/notika-icon.svg"&gt;
+    &lt;link rel="alternate icon" href="/favicon.ico"&gt;
+
+    &lt;!-- Google Fonts (only external CSS link needed) --&gt;
+    &lt;link rel="preconnect" href="https://fonts.googleapis.com"&gt;
+    &lt;link rel="preconnect" href="https://fonts.gstatic.com" crossorigin&gt;
+    &lt;link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&amp;display=swap" rel="stylesheet"&gt;
+
+    &lt;!-- All other CSS imported via Vite in main.js --&gt;
+&lt;/head&gt;</code></pre>
+
+                <div class="tip-box">
+                    <strong>Important:</strong> Do not add <code>&lt;link&gt;</code> tags for Bootstrap, Font Awesome, AOS, or other libraries. They are all imported through <code>main.js</code> and bundled by Vite.
+                </div>
+
+                <h2>Standard Page Layout</h2>
+                <p>Dashboard pages use this structure with Handlebars partials:</p>
+                <pre><code class="language-html">&lt;body&gt;
+    &lt;!-- Header with logo, search, notifications --&gt;
+    {{> header}}
+
+    &lt;!-- Horizontal dropdown navbar --&gt;
+    {{> navbar}}
+
+    &lt;!-- Breadcrumb --&gt;
+    {{> breadcrumb}}
+
+    &lt;!-- Page Content --&gt;
+    &lt;div class="all-content-wrapper mg-b-15"&gt;
+        &lt;div class="container"&gt;
+            &lt;div class="row pt-3"&gt;
+                &lt;div class="col-lg-12"&gt;
+                    &lt;!-- Your content here --&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;!-- Footer --&gt;
+    {{> footer}}
+
+    &lt;!-- Page module script --&gt;
+    &lt;script type="module" src="/src/js/pages/pagename.js"&gt;&lt;/script&gt;
+&lt;/body&gt;</code></pre>
+
+                <h2>Handlebars Partials</h2>
+                <p>Four shared partials live in <code>src/partials/</code> and are injected at build time:</p>
+                <div class="plugin-table">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Partial</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="plugin-name">header.hbs</td>
+                                <td>Top header bar with logo, search dropdown, message/notification/chat icons with badge counts</td>
+                            </tr>
+                            <tr>
+                                <td class="plugin-name">navbar.hbs</td>
+                                <td>Horizontal dropdown navigation with 8 menu groups (Home, Email, Interface, Charts, Tables, Forms, Components, Pages)</td>
+                            </tr>
+                            <tr>
+                                <td class="plugin-name">breadcrumb.hbs</td>
+                                <td>Dynamic breadcrumb with section-based icons (computed from filename in vite.config.js)</td>
+                            </tr>
+                            <tr>
+                                <td class="plugin-name">footer.hbs</td>
+                                <td>Page footer with copyright and year (dynamic via Handlebars context)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h2>Navigation Structure</h2>
+                <p>The template uses two navigation modes based on viewport width:</p>
+                <div class="info-card">
+                    <table class="table table-borderless mb-0" style="font-size: 0.875rem;">
+                        <tbody>
+                            <tr>
+                                <td style="width:30%;font-weight:600;color:var(--heading-color)">Desktop (&ge;992px)</td>
+                                <td>Horizontal dropdown navbar (<code>.notika-navbar.d-none.d-lg-block</code>) with 8 menu groups and Bootstrap 5 dropdowns</td>
+                            </tr>
+                            <tr>
+                                <td style="font-weight:600;color:var(--heading-color)">Mobile (&lt;992px)</td>
+                                <td>Offcanvas menu (<code>#mobileNavOffcanvas</code>) triggered by a hamburger button (<code>.d-lg-none</code>), forcefully hidden on desktop via CSS and JS</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h2>Card Pattern</h2>
+                <p>Content cards follow this consistent structure:</p>
+                <pre><code class="language-html">&lt;div class="recent-post-wrapper notika-shadow"&gt;
+    &lt;div class="recent-post-ctn"&gt;
+        &lt;div class="recent-post-title"&gt;
+            &lt;h2&gt;Card Title&lt;/h2&gt;
+        &lt;/div&gt;
+        &lt;div class="recent-post-items"&gt;
+            &lt;!-- Card body content --&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            </section>
+
+            <!-- ============================================================ -->
+            <!-- ARCHITECTURE -->
+            <!-- ============================================================ -->
+            <section id="architecture" class="doc-section">
+                <h1>Architecture</h1>
+                <p class="lead">Notika uses a class-based ES6 module architecture with inheritance. A base <code>NotikaApp</code> class handles shared initialization, and page-specific modules extend it.</p>
+
+                <h2>Class Hierarchy</h2>
+                <pre><code class="language-text">NotikaApp (main.js)
+ ├── NotikaCharts (modules/charts.js)    — Chart.js wrapper
+ ├── NotikaUI (modules/ui.js)            — Bootstrap components, counters, toasts
+ │
+ └── Page Modules (pages/*.js)           — 31 modules extending NotikaApp
+      ├── AnalyticsPage
+      ├── BarChartsPage
+      ├── DataTablePage
+      ├── TabsPage
+      └── ... (28 more)</code></pre>
+
+                <h2>How Pages Work</h2>
+                <p>There are two types of pages:</p>
+
+                <h3>Pages with custom logic</h3>
+                <p>These set <code>data-page-module</code> on <code>&lt;html&gt;</code> and load a page-specific script. This prevents <code>NotikaApp</code> from auto-initializing:</p>
+                <pre><code class="language-html">&lt;html lang="en" data-page-module="analytics"&gt;
+...
+&lt;script type="module" src="/src/js/pages/analytics.js"&gt;&lt;/script&gt;</code></pre>
+
+                <h3>Pages without custom logic</h3>
+                <p>These omit <code>data-page-module</code> and load <code>main.js</code> directly. NotikaApp auto-initializes at the bottom of <code>main.js</code>:</p>
+                <pre><code class="language-html">&lt;html lang="en"&gt;
+...
+&lt;script type="module" src="/src/js/main.js"&gt;&lt;/script&gt;</code></pre>
+
+                <h2>Page Module Pattern</h2>
+                <p>Every page module follows this structure:</p>
+                <pre><code class="language-javascript">import { NotikaApp } from '../main.js'
+
+class MyPage extends NotikaApp {
+  async init() {
+    await super.init()  // Initialize shared features
+    // Page-specific setup here
+    this.initCustomChart()
+    this.initSpecialWidget()
+  }
+
+  initCustomChart() {
+    const el = document.getElementById('my-chart')
+    if (!el) return  // Guard clause
+    // Chart initialization...
+  }
+}
+
+// Instantiate when DOM is ready
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', () => {
+    window.myPage = new MyPage()
+    window.myPage.init()
+  })
+} else {
+  window.myPage = new MyPage()
+  window.myPage.init()
+}
+
+export { MyPage }</code></pre>
+
+                <h2>Shared Modules</h2>
+                <div class="plugin-table">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Module</th>
+                                <th>Class</th>
+                                <th>Responsibility</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="plugin-name">modules/charts.js</td>
+                                <td><code>NotikaCharts</code></td>
+                                <td>Wraps Chart.js — stores instances in a <code>Map</code>, manages color palette, handles initialization of sales/items/sparkline/knob charts, provides access/refresh/destroy methods</td>
+                            </tr>
+                            <tr>
+                                <td class="plugin-name">modules/ui.js</td>
+                                <td><code>NotikaUI</code></td>
+                                <td>Bootstrap component initialization (tooltips, popovers), counter animations using <code>IntersectionObserver</code> + <code>requestAnimationFrame</code>, toast notification system</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h2>CSS Loading Strategy</h2>
+                <p>All CSS is imported through <code>main.js</code> via Vite. This means:</p>
+                <ul>
+                    <li>No <code>&lt;link&gt;</code> tags needed for any library CSS</li>
+                    <li>Vite bundles, minifies, and code-splits CSS automatically</li>
+                    <li>Only Google Fonts and mobile menu CSS use traditional <code>&lt;link&gt;</code> tags</li>
+                </ul>
+                <pre><code class="language-javascript">// In main.js — CSS imports (order matters)
+import 'bootstrap/dist/css/bootstrap.css'
+import 'aos/dist/aos.css'
+import 'leaflet/dist/leaflet.css'
+import 'swiper/css'
+import '../../css/header-modern-clean.css'
+import '../../css/navbar-stable.css'
+import '../../css/responsive.css'
+import '../../css/widgets-consistent.css'
+import '../../style.css'
+import '../css/modern.scss'
+import '../css/dashboard-widgets.css'</code></pre>
+            </section>
+
+            <!-- ============================================================ -->
+            <!-- JAVASCRIPT -->
+            <!-- ============================================================ -->
+            <section id="javascript" class="doc-section">
+                <h1>JavaScript</h1>
+                <p class="lead">All JavaScript is vanilla ES6 modules &mdash; no jQuery. The main entry point registers Font Awesome icons, imports CSS, and initializes the <code>NotikaApp</code> class.</p>
+
+                <h2>Design Principles</h2>
+                <ul>
+                    <li><strong>One function per feature</strong> &mdash; <code>initMobileMenu()</code>, <code>initScrollbarCleanup()</code>, etc.</li>
+                    <li><strong>Guard clauses</strong> &mdash; every function starts with <code>if (!el) return</code> to skip gracefully on pages where elements don't exist</li>
+                    <li><strong>No global state</strong> &mdash; library instances are scoped within their init function or class</li>
+                    <li><strong>Modern APIs</strong> &mdash; <code>IntersectionObserver</code>, <code>requestAnimationFrame</code>, <code>classList</code>, <code>querySelectorAll</code></li>
+                    <li><strong>AOS initialized outside DOMContentLoaded</strong> &mdash; scripts are at the body bottom, so AOS must run immediately</li>
+                </ul>
+
+                <h2>Font Awesome Tree-Shaking</h2>
+                <p>Icons are explicitly imported and registered. Only imported icons are bundled:</p>
+                <pre><code class="language-javascript">// In main.js
+import { library, dom } from '@fortawesome/fontawesome-svg-core'
+import { faHouse, faEnvelope, faBell, faChartColumn, ... }
+  from '@fortawesome/free-solid-svg-icons'
+import { faGithub, faTwitter, ... }
+  from '@fortawesome/free-brands-svg-icons'
+
+library.add(faHouse, faEnvelope, faBell, faChartColumn, ...)
+dom.watch()  // Converts &lt;i&gt; tags to SVGs</code></pre>
+                <p>To use a new icon:</p>
+                <ol>
+                    <li>Import it: <code>import { faNewIcon } from '@fortawesome/free-solid-svg-icons'</code></li>
+                    <li>Register it: add to <code>library.add(...)</code></li>
+                    <li>Use in HTML: <code>&lt;i class="fa-solid fa-new-icon"&gt;&lt;/i&gt;</code></li>
+                </ol>
+
+                <h2>NotikaApp Class Methods</h2>
+                <div class="info-card" style="padding:0.75rem 1.25rem">
+                    <ul class="func-list">
+                        <li>
+                            <span class="func-name">async init()</span>
+                            <span class="func-desc">Main initialization &mdash; calls all sub-initializers in order</span>
+                        </li>
+                        <li>
+                            <span class="func-name">initCharts()</span>
+                            <span class="func-desc">Creates NotikaCharts instance, initializes Chart.js charts</span>
+                        </li>
+                        <li>
+                            <span class="func-name">initUI()</span>
+                            <span class="func-desc">Creates NotikaUI instance for Bootstrap components and counters</span>
+                        </li>
+                        <li>
+                            <span class="func-name">initAOS()</span>
+                            <span class="func-desc">Scroll-reveal animations via AOS (initialized outside DOMContentLoaded)</span>
+                        </li>
+                        <li>
+                            <span class="func-name">initMobileMenu()</span>
+                            <span class="func-desc">Offcanvas mobile navigation with prevention on desktop</span>
+                        </li>
+                        <li>
+                            <span class="func-name">preventMobileMenuOnDesktop()</span>
+                            <span class="func-desc">Blocks offcanvas show event on &ge;992px viewports</span>
+                        </li>
+                        <li>
+                            <span class="func-name">removeAllScrollbarRules()</span>
+                            <span class="func-desc">Strips webkit scrollbar CSS rules to restore native scrollbars</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <h2>Auto-Initialization</h2>
+                <p>At the bottom of <code>main.js</code>, the app checks for <code>data-page-module</code>. If absent, it auto-initializes:</p>
+                <pre><code class="language-javascript">// At bottom of main.js (line ~1181)
+if (!document.documentElement.dataset.pageModule) {
+  const app = new NotikaApp()
+  app.init()
+}</code></pre>
+                <p>Page modules that set <code>data-page-module</code> handle their own initialization by extending <code>NotikaApp</code> and calling <code>super.init()</code>.</p>
+
+                <h2>Chart.js Registration</h2>
+                <p>Chart.js components are registered globally in <code>main.js</code> so all page modules can use them:</p>
+                <pre><code class="language-javascript">import { Chart, registerables } from 'chart.js'
+Chart.register(...registerables)
+window.bootstrap = bootstrap  // Also exposed globally</code></pre>
+            </section>
+
+            <!-- ============================================================ -->
+            <!-- CSS & STYLING -->
+            <!-- ============================================================ -->
+            <section id="css-styling" class="doc-section">
+                <h1>CSS &amp; Styling</h1>
+                <p class="lead">CSS is loaded through Vite imports in <code>main.js</code>. The template uses a mix of compiled CSS files and modern SCSS with CSS custom properties.</p>
+
+                <h2>CSS Architecture</h2>
+                <div class="plugin-table">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>File</th>
+                                <th>Purpose</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="plugin-name">style.css</td>
+                                <td>Main theme (4,400+ lines) &mdash; all Bootstrap 5 overrides, component styles, layout, cards, forms</td>
+                            </tr>
+                            <tr>
+                                <td class="plugin-name">src/css/modern.scss</td>
+                                <td>Modern SCSS with CSS custom properties (<code>--notika-spacing-*</code>), card shadows, design tokens</td>
+                            </tr>
+                            <tr>
+                                <td class="plugin-name">css/header-modern-clean.css</td>
+                                <td>Header bar styling &mdash; <code>.notika-header</code>, dropdown menus, icon badges</td>
+                            </tr>
+                            <tr>
+                                <td class="plugin-name">css/navbar-stable.css</td>
+                                <td>Horizontal dropdown navigation &mdash; <code>.notika-navbar</code>, active states, transitions</td>
+                            </tr>
+                            <tr>
+                                <td class="plugin-name">css/mobile-menu.css</td>
+                                <td>Offcanvas mobile menu &mdash; responsive toggle, forced hiding on desktop</td>
+                            </tr>
+                            <tr>
+                                <td class="plugin-name">css/responsive.css</td>
+                                <td>Legacy responsive breakpoints (being gradually cleaned up)</td>
+                            </tr>
+                            <tr>
+                                <td class="plugin-name">css/widgets-consistent.css</td>
+                                <td>Widget card spacing and grid layout consistency</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h2>CSS Custom Properties</h2>
+                <p>Spacing and design tokens use CSS custom properties defined in <code>modern.scss</code>:</p>
+                <pre><code class="language-css">:root {
+    --notika-spacing-xs: 8px;
+    --notika-spacing-sm: 16px;
+    --notika-spacing-md: 24px;
+    --notika-spacing-lg: 32px;
+}</code></pre>
+
+                <h2>Card Shadows</h2>
+                <pre><code class="language-css">/* Default card shadow */
+.notika-shadow {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Hover state */
+.notika-shadow:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}</code></pre>
+
+                <h2>Z-Index Layers</h2>
+                <div class="info-card">
+                    <table class="table table-borderless mb-0" style="font-size: 0.875rem;">
+                        <tbody>
+                            <tr>
+                                <td style="width:30%;font-weight:600;color:var(--heading-color)">Header</td>
+                                <td><code>z-index: 1090</code> (header-modern-clean.css)</td>
+                            </tr>
+                            <tr>
+                                <td style="font-weight:600;color:var(--heading-color)">Navbar</td>
+                                <td><code>z-index: 1085</code> (navbar-stable.css)</td>
+                            </tr>
+                            <tr>
+                                <td style="font-weight:600;color:var(--heading-color)">Mobile Offcanvas</td>
+                                <td><code>z-index: 1045</code> (Bootstrap default)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h2>SCSS Compilation</h2>
+                <p>SCSS uses the modern compiler API via Vite, with PostCSS for autoprefixer and cssnano:</p>
+                <pre><code class="language-javascript">// In vite.config.js
+css: {
+  preprocessorOptions: {
+    scss: { api: 'modern-compiler' }
+  },
+  postcss: {
+    plugins: [autoprefixer(), cssnano({ preset: 'default' })]
+  }
+}</code></pre>
+            </section>
+
+            <!-- ============================================================ -->
+            <!-- BUILD SYSTEM -->
+            <!-- ============================================================ -->
+            <section id="build-system" class="doc-section">
+                <h1>Build System</h1>
+                <p class="lead">Notika uses Vite 7.3.1 as its build tool. The config lives at the project root but sets <code>root</code> to <code>./notika/green-horizotal</code>.</p>
+
+                <h2>Multi-Page Setup</h2>
+                <p>All 41 HTML pages are listed as separate entry points in <code>rollupOptions.input</code>. This ensures each page gets its own optimized bundle:</p>
+                <pre><code class="language-javascript">// vite.config.js
+build: {
+  outDir: '../../dist',
+  rollupOptions: {
+    input: {
+      main: resolve(cwd, 'notika/green-horizotal/index.html'),
+      analytics: resolve(cwd, 'notika/green-horizotal/analytics.html'),
+      'index-2': resolve(cwd, 'notika/green-horizotal/index-2.html'),
+      // ... 38 more pages
+    }
+  }
+}</code></pre>
+
+                <h2>Code Splitting</h2>
+                <p>Vite automatically code-splits, plus three manual chunks for better caching:</p>
+                <div class="info-card">
+                    <table class="table table-borderless mb-0" style="font-size: 0.875rem;">
+                        <tbody>
+                            <tr>
+                                <td style="width:30%;font-weight:600;color:var(--heading-color)"><code>vendor</code></td>
+                                <td>Bootstrap CSS and JS &mdash; cached separately since it rarely changes</td>
+                            </tr>
+                            <tr>
+                                <td style="font-weight:600;color:var(--heading-color)"><code>charts</code></td>
+                                <td>Chart.js &mdash; only loaded on pages with charts</td>
+                            </tr>
+                            <tr>
+                                <td style="font-weight:600;color:var(--heading-color)"><code>ui</code></td>
+                                <td>Swiper + AOS &mdash; carousel and animation libraries</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h2>Handlebars Plugin</h2>
+                <p>The <code>vite-plugin-handlebars</code> plugin provides template partials and dynamic context computed from the filename:</p>
+                <pre><code class="language-javascript">plugins: [
+  handlebars({
+    partialDirectory: resolve(cwd, 'notika/green-horizotal/src/partials'),
+    context: (pagePath) => {
+      const pageName = pagePath.split('/').pop()?.replace('.html', '')
+      return {
+        pageTitle: pageName.charAt(0).toUpperCase() + pageName.slice(1),
+        year: new Date().getFullYear(),
+        isHome: ['index', 'analytics', 'widgets'].some(p => pageName.includes(p)),
+        isCharts: ['bar-charts', 'line-charts', ...].some(p => pageName.includes(p)),
+        // ... more nav active flags
+        breadcrumbIcon: pageName.includes('chart') ? 'fa-solid fa-chart-column' : '...'
+      }
+    }
+  })
+]</code></pre>
+
+                <h2>Dev Server</h2>
+                <div class="info-card">
+                    <div class="meta-grid">
+                        <div class="meta-item">
+                            <span class="label">Port</span>
+                            <span class="value">3100</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="label">HMR</span>
+                            <span class="value">Enabled</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="label">Auto Open</span>
+                            <span class="value">Yes</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="label">CORS</span>
+                            <span class="value">Enabled</span>
+                        </div>
+                    </div>
+                </div>
+
+                <h2>Production Build</h2>
+                <div class="info-card">
+                    <div class="meta-grid">
+                        <div class="meta-item">
+                            <span class="label">Output</span>
+                            <span class="value">dist/ (project root)</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="label">Target</span>
+                            <span class="value">ES2022</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="label">Minifier</span>
+                            <span class="value">esbuild</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="label">Sourcemaps</span>
+                            <span class="value">Yes</span>
+                        </div>
+                    </div>
+                </div>
+
+                <h2>Path Aliases</h2>
+                <pre><code class="language-javascript">resolve: {
+  alias: {
+    '@': resolve(cwd, './src'),
+    '@css': resolve(cwd, './notika/green-horizotal/css'),
+    '@js': resolve(cwd, './notika/green-horizotal/js'),
+    '@img': resolve(cwd, './notika/green-horizotal/img')
+  }
+}</code></pre>
+            </section>
+
+            <!-- ============================================================ -->
+            <!-- LIBRARIES & DEPENDENCIES -->
+            <!-- ============================================================ -->
+            <section id="libraries" class="doc-section">
+                <h1>Libraries &amp; Dependencies</h1>
+                <p class="lead">All libraries are bundled via Vite from npm packages. No CDN links, no local vendor files. This section lists every dependency and its purpose.</p>
+
+                <h2>Core Stack</h2>
+                <div class="plugin-table">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Library</th>
+                                <th>Version</th>
+                                <th>Purpose</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="plugin-name"><a href="https://vite.dev/">Vite</a></td>
+                                <td>7.3.1</td>
+                                <td>Build system with HMR, code splitting, SCSS, multi-page support</td>
+                            </tr>
+                            <tr>
+                                <td class="plugin-name"><a href="https://getbootstrap.com/docs/5.3/">Bootstrap</a></td>
+                                <td>5.3.8</td>
+                                <td>CSS framework + JS components (dropdowns, modals, tooltips, offcanvas)</td>
+                            </tr>
+                            <tr>
+                                <td class="plugin-name"><a href="https://fontawesome.com/">Font Awesome</a></td>
+                                <td>7.2.0</td>
+                                <td>Tree-shaken SVG icons (solid + brand packages)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h2>Charts &amp; Maps</h2>
+                <div class="plugin-table">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Library</th>
+                                <th>Version</th>
+                                <th>Used On</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="plugin-name"><a href="https://www.chartjs.org/">Chart.js</a></td>
+                                <td>4.5.1</td>
+                                <td>All dashboards and chart pages &mdash; bar, line, area, doughnut, sparkline</td>
+                            </tr>
+                            <tr>
+                                <td class="plugin-name"><a href="https://leafletjs.com/">Leaflet</a></td>
+                                <td>1.9.4</td>
+                                <td>Google Map and Data Maps pages &mdash; interactive tile-based maps</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h2>UI &amp; Animation</h2>
+                <div class="plugin-table">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Library</th>
+                                <th>Version</th>
+                                <th>Purpose</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="plugin-name"><a href="https://swiperjs.com/">Swiper</a></td>
+                                <td>12.1.0</td>
+                                <td>Touch-enabled carousel slider for dashboards</td>
+                            </tr>
+                            <tr>
+                                <td class="plugin-name"><a href="https://michalsnik.github.io/aos/">AOS</a></td>
+                                <td>2.3.4</td>
+                                <td>Scroll-reveal animations (fade, slide, zoom effects)</td>
+                            </tr>
+                            <tr>
+                                <td class="plugin-name"><a href="https://animate.style/">Animate.css</a></td>
+                                <td>4.1.1</td>
+                                <td>CSS animation library for the Animations page</td>
+                            </tr>
+                            <tr>
+                                <td class="plugin-name"><a href="https://day.js.org/">Day.js</a></td>
+                                <td>1.11.19</td>
+                                <td>Lightweight date formatting and manipulation</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h2>Editors &amp; Media</h2>
+                <div class="plugin-table">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Library</th>
+                                <th>Version</th>
+                                <th>Purpose</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="plugin-name"><a href="https://codemirror.net/">CodeMirror</a></td>
+                                <td>6.x</td>
+                                <td>In-browser code editor with HTML and JS language support, One Dark theme</td>
+                            </tr>
+                            <tr>
+                                <td class="plugin-name"><a href="https://fengyuanchen.github.io/cropperjs/">Cropper.js</a></td>
+                                <td>2.1.0</td>
+                                <td>Image cropping and manipulation on the Image Cropper page</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h2>Dev Dependencies</h2>
+                <div class="plugin-table">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Library</th>
+                                <th>Version</th>
+                                <th>Purpose</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="plugin-name">Sass</td>
+                                <td>1.97.3</td>
+                                <td>SCSS compilation with modern compiler API</td>
+                            </tr>
+                            <tr>
+                                <td class="plugin-name">PostCSS</td>
+                                <td>8.5.6</td>
+                                <td>CSS processing pipeline</td>
+                            </tr>
+                            <tr>
+                                <td class="plugin-name">Autoprefixer</td>
+                                <td>10.4.24</td>
+                                <td>Automatic vendor prefixes for cross-browser support</td>
+                            </tr>
+                            <tr>
+                                <td class="plugin-name">cssnano</td>
+                                <td>7.1.2</td>
+                                <td>CSS minification for production builds</td>
+                            </tr>
+                            <tr>
+                                <td class="plugin-name">TypeScript</td>
+                                <td>5.9.3</td>
+                                <td>Type checking (optional, via <code>npm run type-check</code>)</td>
+                            </tr>
+                            <tr>
+                                <td class="plugin-name">ESLint</td>
+                                <td>10.0.0</td>
+                                <td>Code linting (via <code>npm run lint</code>)</td>
+                            </tr>
+                            <tr>
+                                <td class="plugin-name">Prettier</td>
+                                <td>3.8.1</td>
+                                <td>Code formatting</td>
+                            </tr>
+                            <tr>
+                                <td class="plugin-name">vite-plugin-handlebars</td>
+                                <td>2.0.0</td>
+                                <td>Handlebars template partials and dynamic context</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- ============================================================ -->
+            <!-- CUSTOMIZATION -->
+            <!-- ============================================================ -->
+            <section id="customization" class="doc-section">
+                <h1>Customization</h1>
+                <p class="lead">How to modify the template's appearance and behavior to match your project requirements.</p>
+
+                <h2>Changing Theme Colors</h2>
+                <p>The primary green color (<code>#00c292</code>) is used throughout the template. To change it, search and replace in these files:</p>
+                <pre><code class="language-css">/* style.css — Primary accent color */
+/* Search for #00c292 and replace globally */
+
+/* src/js/modules/charts.js — Chart colors */
+this.colors = {
+  primary: '#00c292',    /* Change this */
+  secondary: '#03a9f3',
+  success: '#00c292',
+  warning: '#ff9800',
+  danger: '#e91e63',
+  info: '#03a9f3'
+}</code></pre>
+
+                <h2>Adding a New Page</h2>
+                <ol class="step-list">
+                    <li>
+                        <strong>Create the HTML file</strong>
+                        <p>Copy an existing page (e.g. <code>tabs.html</code>) to <code>notika/green-horizotal/newpage.html</code>. Update the <code>&lt;title&gt;</code> and content.</p>
+                    </li>
+                    <li>
+                        <strong>Register in Vite config</strong>
+                        <p>Add the page to <code>rollupOptions.input</code> in <code>vite.config.js</code>:</p>
+                        <pre><code class="language-javascript">newpage: resolve(process.cwd(), 'notika/green-horizotal/newpage.html'),</code></pre>
+                    </li>
+                    <li>
+                        <strong>Create a page module (optional)</strong>
+                        <p>If the page needs custom JavaScript, create <code>src/js/pages/newpage.js</code>:</p>
+                        <pre><code class="language-javascript">import { NotikaApp } from '../main.js'
+
+class NewPage extends NotikaApp {
+  async init() {
+    await super.init()
+    // Custom logic here
+  }
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', () => {
+    window.newPage = new NewPage()
+    window.newPage.init()
+  })
+} else {
+  window.newPage = new NewPage()
+  window.newPage.init()
+}
+
+export { NewPage }</code></pre>
+                    </li>
+                    <li>
+                        <strong>Set the data attribute and script</strong>
+                        <p>In your HTML, set <code>data-page-module</code> and load the page script:</p>
+                        <pre><code class="language-html">&lt;html lang="en" data-page-module="newpage"&gt;
+...
+&lt;script type="module" src="/src/js/pages/newpage.js"&gt;&lt;/script&gt;</code></pre>
+                    </li>
+                </ol>
+
+                <h2>Adding Font Awesome Icons</h2>
+                <p>Icons are tree-shaken, so only imported icons are bundled. To add a new icon:</p>
+                <pre><code class="language-javascript">// 1. Import in main.js
+import { faNewIcon } from '@fortawesome/free-solid-svg-icons'
+
+// 2. Add to library.add() call
+library.add(faHouse, faEnvelope, faBell, faNewIcon, ...)
+
+// 3. Use in HTML
+&lt;i class="fa-solid fa-new-icon"&gt;&lt;/i&gt;</code></pre>
+
+                <div class="tip-box">
+                    <strong>Tip:</strong> Both <code>@fortawesome/free-solid-svg-icons</code> and <code>@fortawesome/free-brands-svg-icons</code> packages are available. Browse all icons at <a href="https://fontawesome.com/search?o=r&m=free" style="color:var(--accent)">fontawesome.com</a>.
+                </div>
+
+                <h2>Adding Charts</h2>
+                <p>Chart.js is globally registered. Add a canvas element and initialize:</p>
+                <pre><code class="language-html">&lt;!-- 1. Add a canvas --&gt;
+&lt;canvas id="myChart"&gt;&lt;/canvas&gt;
+
+&lt;!-- 2. Initialize in your page module --&gt;</code></pre>
+                <pre><code class="language-javascript">// In your page module's init()
+initMyChart() {
+  const canvas = document.getElementById('myChart')
+  if (!canvas) return
+
+  new Chart(canvas, {
+    type: 'bar',
+    data: {
+      labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'],
+      datasets: [{
+        label: 'Sales',
+        data: [30, 40, 35, 50, 49],
+        backgroundColor: '#00c292'
+      }]
+    },
+    options: {
+      responsive: true,
+      plugins: { legend: { display: false } }
+    }
+  })
+}</code></pre>
+
+                <h2>Modifying the Navigation</h2>
+                <p>The navigation is defined in <code>src/partials/navbar.hbs</code>. To add a new menu item:</p>
+                <pre><code class="language-html">&lt;!-- In navbar.hbs --&gt;
+&lt;li class="nav-item dropdown"&gt;
+    &lt;a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"&gt;
+        &lt;i class="fa-solid fa-star"&gt;&lt;/i&gt;
+        &lt;span&gt;New Section&lt;/span&gt;
+    &lt;/a&gt;
+    &lt;ul class="dropdown-menu"&gt;
+        &lt;li&gt;&lt;a class="dropdown-item" href="newpage.html"&gt;New Page&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/li&gt;</code></pre>
+                <p>Don't forget to add a corresponding active-state flag in <code>vite.config.js</code>'s context function.</p>
+
+                <h2>Responsive Breakpoints</h2>
+                <div class="info-card">
+                    <table class="table table-borderless mb-0" style="font-size: 0.875rem;">
+                        <tbody>
+                            <tr>
+                                <td style="width:30%;font-weight:600;color:var(--heading-color)">992px and above</td>
+                                <td>Full horizontal navbar with dropdowns, desktop header layout</td>
+                            </tr>
+                            <tr>
+                                <td style="font-weight:600;color:var(--heading-color)">Below 992px</td>
+                                <td>Offcanvas mobile menu, hamburger toggle, simplified header</td>
+                            </tr>
+                            <tr>
+                                <td style="font-weight:600;color:var(--heading-color)">Below 768px</td>
+                                <td>Single-column layout, cards stack vertically, compact icon logo</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h2>Spacing Convention</h2>
+                <p>The template follows a consistent spacing pattern:</p>
+                <ul>
+                    <li><code>mg-b-15</code> on the main content wrapper</li>
+                    <li><code>pt-3</code> on the first <code>.row</code> inside content</li>
+                    <li><code>mt-4</code> on subsequent rows</li>
+                    <li>CSS custom properties for reusable spacing: <code>--notika-spacing-xs</code> (8px) through <code>--notika-spacing-lg</code> (32px)</li>
+                </ul>
+            </section>
+
+            <!-- ============================================================ -->
+            <!-- CREDITS -->
+            <!-- ============================================================ -->
+            <section id="credits" class="doc-section">
+                <h1>Sources &amp; Credits</h1>
+                <p class="lead">Third-party libraries and resources used in this template.</p>
+
+                <h3>Framework &amp; Build</h3>
+                <ul class="credit-list">
+                    <li><a href="https://vite.dev/">Vite 7.3</a></li>
+                    <li><a href="https://getbootstrap.com/docs/5.3/">Bootstrap 5.3.8</a></li>
+                    <li><a href="https://fontawesome.com/">Font Awesome 7.2</a></li>
+                    <li><a href="https://fonts.google.com/specimen/Roboto">Google Fonts &mdash; Roboto</a></li>
+                </ul>
+
+                <h3>Charts &amp; Maps</h3>
+                <ul class="credit-list">
+                    <li><a href="https://www.chartjs.org/">Chart.js 4.5</a></li>
+                    <li><a href="https://leafletjs.com/">Leaflet 1.9</a></li>
+                </ul>
+
+                <h3>UI &amp; Animation</h3>
+                <ul class="credit-list">
+                    <li><a href="https://swiperjs.com/">Swiper 12</a></li>
+                    <li><a href="https://michalsnik.github.io/aos/">AOS (Animate On Scroll)</a></li>
+                    <li><a href="https://animate.style/">Animate.css</a></li>
+                    <li><a href="https://day.js.org/">Day.js</a></li>
+                </ul>
+
+                <h3>Editors &amp; Media</h3>
+                <ul class="credit-list">
+                    <li><a href="https://codemirror.net/">CodeMirror 6</a></li>
+                    <li><a href="https://fengyuanchen.github.io/cropperjs/">Cropper.js 2</a></li>
+                </ul>
+
+                <h3>Build Tools</h3>
+                <ul class="credit-list">
+                    <li><a href="https://sass-lang.com/">Sass</a></li>
+                    <li><a href="https://postcss.org/">PostCSS</a></li>
+                    <li><a href="https://github.com/postcss/autoprefixer">Autoprefixer</a></li>
+                    <li><a href="https://cssnano.github.io/cssnano/">cssnano</a></li>
+                    <li><a href="https://www.typescriptlang.org/">TypeScript</a></li>
+                    <li><a href="https://eslint.org/">ESLint</a></li>
+                </ul>
+            </section>
+
+            <!-- ============================================================ -->
+            <!-- SUPPORT -->
+            <!-- ============================================================ -->
+            <section id="support" class="doc-section">
+                <h1>Support</h1>
+                <p class="lead">Thank you for using Notika. If you have any questions or run into issues, we're here to help.</p>
+
+                <h2>Browser Support</h2>
+                <div class="info-card">
+                    <div class="meta-grid">
+                        <div class="meta-item">
+                            <span class="label">Chrome</span>
+                            <span class="value">&ge; 90</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="label">Firefox</span>
+                            <span class="value">&ge; 88</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="label">Safari</span>
+                            <span class="value">&ge; 14</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="label">Edge</span>
+                            <span class="value">&ge; 90</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="label">Opera</span>
+                            <span class="value">&ge; 76</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="warn-box">
+                    <strong>Note:</strong> Internet Explorer is not supported. The template uses ES2022 features and CSS custom properties that require modern browsers.
+                </div>
+
+                <div class="support-card">
+                    <h3>Need Help?</h3>
+                    <p>Our support team is happy to assist with questions about setup, customization, or troubleshooting.</p>
+                    <a href="https://colorlib.com/wp/templates/" class="btn">
+                        <i class="bi bi-envelope"></i> Contact Colorlib
+                    </a>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Bootstrap 5.3.8 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-JrMDOYiGRcJPaFOGFOmhOK/5sHvbVv6r65gJGV0kqOKEeJkIms7Hhym2/aA8g/p" crossorigin="anonymous"></script>
+
+    <!-- Highlight.js -->
+    <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.11.1/build/highlight.min.js"></script>
+
+    <script>
+        (function () {
+            'use strict';
+
+            // Navigation
+            var navLinks = document.querySelectorAll('.nav-link[data-section]');
+            var sections = document.querySelectorAll('.doc-section');
+
+            function showSection(sectionId) {
+                sections.forEach(function (s) { s.classList.remove('active'); });
+                navLinks.forEach(function (l) { l.classList.remove('active'); });
+
+                var target = document.getElementById(sectionId);
+                var link = document.querySelector('.nav-link[data-section="' + sectionId + '"]');
+
+                if (target) target.classList.add('active');
+                if (link) link.classList.add('active');
+
+                // Highlight code blocks in newly shown section
+                if (target) {
+                    target.querySelectorAll('pre code:not(.hljs)').forEach(function (block) {
+                        hljs.highlightElement(block);
+                    });
+                }
+
+                // Close mobile sidebar
+                document.getElementById('sidebar').classList.remove('open');
+                document.getElementById('overlay').classList.remove('show');
+
+                // Scroll to top
+                window.scrollTo(0, 0);
+
+                // Update URL hash without scrolling
+                if (history.replaceState) {
+                    history.replaceState(null, null, '#' + sectionId);
+                }
+            }
+
+            navLinks.forEach(function (link) {
+                link.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    showSection(this.getAttribute('data-section'));
+                });
+            });
+
+            // Handle direct URL hash navigation
+            if (window.location.hash) {
+                var hashSection = window.location.hash.substring(1);
+                var matchingLink = document.querySelector('.nav-link[data-section="' + hashSection + '"]');
+                if (matchingLink) {
+                    showSection(hashSection);
+                }
+            }
+
+            // Mobile toggle
+            var mobileToggle = document.getElementById('mobileToggle');
+            var sidebar = document.getElementById('sidebar');
+            var overlay = document.getElementById('overlay');
+
+            mobileToggle.addEventListener('click', function () {
+                sidebar.classList.toggle('open');
+                overlay.classList.toggle('show');
+            });
+
+            overlay.addEventListener('click', function () {
+                sidebar.classList.remove('open');
+                overlay.classList.remove('show');
+            });
+
+            // File tree toggle
+            document.querySelectorAll('.file-tree .folder > span').forEach(function (span) {
+                span.addEventListener('click', function () {
+                    this.parentElement.classList.toggle('collapsed');
+                });
+            });
+
+            // Initial highlight
+            document.querySelectorAll('.doc-section.active pre code').forEach(function (block) {
+                hljs.highlightElement(block);
+            });
+        })();
+    </script>
+</body>
+
+</html>
