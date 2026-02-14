@@ -311,11 +311,20 @@ class SocialMediaDashboardPage extends NotikaApp {
 
     // Platform switching functionality
     this.initPlatformSwitching()
+
+    window.addEventListener('beforeunload', () => this.destroy())
+  }
+
+  destroy() {
+    if (this.metricsInterval) {
+      clearInterval(this.metricsInterval)
+      this.metricsInterval = null
+    }
   }
 
   startMetricsUpdates() {
     // Simulate real-time metric updates
-    setInterval(() => {
+    this.metricsInterval = setInterval(() => {
       const counters = document.querySelectorAll('.counter')
       counters.forEach(counter => {
         const currentValue = parseFloat(counter.textContent)

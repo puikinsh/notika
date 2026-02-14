@@ -25,13 +25,8 @@
     "codemirror": "^6.0.2",
     "cropperjs": "^2.1.0",
     "dayjs": "^1.11.19",
-    "flatpickr": "^4.6.13",
     "leaflet": "^1.9.4",
-    "nouislider": "^15.8.1",
-    "overlayscrollbars": "^2.14.0",
-    "sonner": "^2.0.7",
-    "swiper": "^12.1.0",
-    "tom-select": "^2.5.1"
+    "swiper": "^12.1.0"
   },
   "devDependencies": {
     "@types/node": "^25.2.3",
@@ -40,11 +35,9 @@
     "eslint": "^10.0.0",
     "postcss": "^8.5.6",
     "prettier": "^3.8.1",
-    "rollup-plugin-copy": "^3.5.0",
     "sass": "^1.97.3",
     "typescript": "^5.9.3",
     "vite": "^7.3.1",
-    "vite-plugin-eslint": "^1.8.1",
     "vite-plugin-handlebars": "^2.0.0"
   },
   "browserslist": [

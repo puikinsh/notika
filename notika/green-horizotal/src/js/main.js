@@ -121,19 +121,9 @@ import {
   faEyeSlash,
   faUserPlus
 } from '@fortawesome/free-solid-svg-icons'
-import {
-  faBootstrap,
-  faGoogle,
-  faMicrosoft,
-  faGithub,
-  faStackOverflow,
-  faReddit,
-  faLinkedin,
-  faFacebook,
-  faPinterest,
-  faXTwitter,
-  faSkype
-} from '@fortawesome/free-brands-svg-icons'
+// Brand icons removed - none currently used in HTML
+// Import individual brand icons here when needed:
+// import { faGithub } from '@fortawesome/free-brands-svg-icons'
 
 // Add all icons to the library
 library.add(
@@ -156,10 +146,7 @@ library.add(
   faUser, faLink, faArrowRightFromBracket, faArrowRightToBracket, faBoxArchive,
   faCropSimple, faMagnifyingGlassPlus, faMagnifyingGlassMinus,
   faRotateLeft, faRotateRight, faLeftRight, faUpDown, faArrowRotateLeft,
-  faExpand, faSquare, faCloudArrowUp, faDownload, faDisplay, faLock, faEyeSlash, faUserPlus,
-  // Brands
-  faBootstrap, faGoogle, faMicrosoft, faGithub, faStackOverflow,
-  faReddit, faLinkedin, faFacebook, faPinterest, faXTwitter, faSkype
+  faExpand, faSquare, faCloudArrowUp, faDownload, faDisplay, faLock, faEyeSlash, faUserPlus
 )
 
 // Replace any <i> tags with SVG automatically
@@ -167,14 +154,8 @@ dom.watch()
 
 // Import ALL original Notika CSS files through Vite (in order from HTML)
 import '../../css/swiper.min.css'
-import '../../css/owl.theme.css'
-import '../../css/owl.transitions.css'
-import '../../css/meanmenu/meanmenu.min.css'
-// Removed animate.css v3.4.0 (656 redundant vendor prefixes from 2015)
-import '../../css/reset.css'
 import '../css/dashboard-widgets.css'
 import '../../css/wave/waves.min.css'
-import '../../css/main.css'
 import '../../style.css'
 import '../../css/responsive.css'
 import '../../css/header-modern-clean.css'
@@ -191,7 +172,6 @@ import '../css/modern.scss'
 import { Chart, registerables } from 'chart.js'
 import * as bootstrap from 'bootstrap'
 import AOS from 'aos'
-import { toast } from 'sonner'
 import L from 'leaflet'
 
 // Register Chart.js components
@@ -1050,19 +1030,28 @@ class NotikaApp {
   }
   
   setupModernFeatures() {
-    // Set up modern event handling
-    document.addEventListener('click', (e) => {
-      const action = e.target.dataset.action
-      if (action) {
-        e.preventDefault()
-        this.handleAction(action, e.target)
+    // Search dropdown auto-focus
+    const searchInput = document.querySelector('.search-dropdown input')
+    if (searchInput) {
+      const searchTrigger = searchInput.closest('.dropdown')?.querySelector('[data-bs-toggle="dropdown"]')
+      if (searchTrigger) {
+        searchTrigger.addEventListener('shown.bs.dropdown', () => {
+          setTimeout(() => searchInput.focus(), 100)
+        })
       }
+    }
+
+    // Navbar dropdown click feedback
+    document.querySelectorAll('.notika-navbar .dropdown-toggle').forEach(toggle => {
+      toggle.addEventListener('click', function (e) {
+        e.preventDefault()
+        this.style.transform = 'scale(0.98)'
+        setTimeout(() => { this.style.transform = '' }, 100)
+      })
     })
 
     // Remove webkit scrollbar CSS rules to restore native scrollbars
     this.removeAllScrollbarRules()
-
-    console.log('✅ Modern event handling setup complete')
   }
 
   
@@ -1108,23 +1097,6 @@ class NotikaApp {
     console.log('✅ All webkit scrollbar CSS rules removed - native scrollbars restored')
   }
   
-  handleAction(action, element) {
-    switch (action) {
-      case 'show-toast':
-        toast.success('🎉 Sonner 2.0.7 toast working via Vite bundling!')
-        break
-      case 'refresh-charts':
-        toast.info('🔄 Charts refreshed!')
-        break
-      case 'toggle-theme':
-        document.documentElement.classList.toggle('dark-theme')
-        toast.info('🌙 Theme toggled!')
-        break
-      default:
-        console.log('Unknown action:', action)
-    }
-  }
-
   preventMobileMenuOnDesktop() {
     // Prevent mobile offcanvas menu from opening on desktop
     const offcanvasElement = document.getElementById('mobileNavOffcanvas')

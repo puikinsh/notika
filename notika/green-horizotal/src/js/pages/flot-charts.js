@@ -253,6 +253,15 @@ class FlotChartsPage extends NotikaApp {
 
       chart.update('none')
     }, 2000)
+
+    window.addEventListener('beforeunload', () => this.destroy())
+  }
+
+  destroy() {
+    if (this.dynamicInterval) {
+      clearInterval(this.dynamicInterval)
+      this.dynamicInterval = null
+    }
   }
 }
 

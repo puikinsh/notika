@@ -826,23 +826,6 @@
     <!-- End Footer area-->
 
     <!-- Vite JavaScript Entry Point -->
-    <script type="module" src="src/js/pages/form-elements.js"></script>
-
-    <!-- Navigation Enhancement Script -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const navLinks = document.querySelectorAll('.nav-link');
-            navLinks.forEach(link => {
-                link.addEventListener('click', function() {
-                    this.style.transform = 'scale(0.98)';
-                    setTimeout(() => {
-                        this.style.transform = '';
-                    }, 100);
-                });
-            }
-
-            console.log('✅ Form Elements page navigation initialized');
-        });
-    </script>
+    <script type="module" src="/src/js/pages/form-elements.js"></script>
 </body>
 </html>

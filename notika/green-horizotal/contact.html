@@ -863,50 +863,5 @@
 
     <!-- ONLY VITE ENTRY POINT - Everything else bundled by Vite -->
     <script type="module" src="/src/js/pages/contact.js"></script>
-
-    <!-- Clean Navigation JavaScript -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Search functionality
-            const searchInput = document.querySelector('.search-dropdown input');
-            if (searchInput) {
-                const searchTrigger = searchInput.closest('.dropdown').querySelector('[data-bs-toggle="dropdown"]');
-                if (searchTrigger) {
-                    searchTrigger.addEventListener('shown.bs.dropdown', function() {
-                        setTimeout(() => searchInput.focus(), 100);
-                    });
-                }
-
-                searchInput.addEventListener('keypress', function(e) {
-                    if (e.key === 'Enter' && this.value.trim()) {
-                        console.log('Searching for:', this.value);
-                    }
-                });
-            }
-
-            // Simple navbar dropdown enhancements
-            const navDropdowns = document.querySelectorAll('.notika-navbar .dropdown');
-
-            navDropdowns.forEach(dropdown => {
-                const toggle = dropdown.querySelector('.dropdown-toggle');
-
-                // Add subtle click feedback
-                if (toggle) {
-                    toggle.addEventListener('click', function(e) {
-                        // Don't navigate away, just toggle dropdown
-                        e.preventDefault();
-
-                        // Quick visual feedback
-                        this.style.transform = 'scale(0.98)';
-                        setTimeout(() => {
-                            this.style.transform = '';
-                        }, 100);
-                    });
-                }
-            });
-
-            console.log('✅ Stable navigation system initialized');
-        });
-    </script>
 </body>
 </html>

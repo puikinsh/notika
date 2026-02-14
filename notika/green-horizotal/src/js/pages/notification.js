@@ -303,7 +303,7 @@ class NotificationPage extends NotikaApp {
     ]
 
     let index = 0
-    setInterval(() => {
+    this.demoInterval = setInterval(() => {
       const msg = demoMessages[index % demoMessages.length]
       this.showNotification({
         ...msg,
@@ -313,6 +313,15 @@ class NotificationPage extends NotikaApp {
       })
       index++
     }, 10000) // Show a notification every 10 seconds
+
+    window.addEventListener('beforeunload', () => this.destroy())
+  }
+
+  destroy() {
+    if (this.demoInterval) {
+      clearInterval(this.demoInterval)
+      this.demoInterval = null
+    }
   }
 }
 
