@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -11,9 +11,6 @@
     <link rel="alternate icon" href="/favicon.ico">
 
     <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 
     <!-- Mobile Menu CSS -->
     <link rel="stylesheet" href="css/mobile-menu.css">
@@ -43,8 +40,8 @@
 
                         <!-- Search -->
                         <div class="dropdown">
-                            <button class="notika-nav-link" type="button" data-bs-toggle="dropdown" data-bs-auto-close="outside">
-                                <i class="fa-solid fa-magnifying-glass"></i>
+                            <button class="notika-nav-link" type="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-label="Search">
+                                <i aria-hidden="true" class="fa-solid fa-magnifying-glass"></i>
                             </button>
                             <div class="dropdown-menu dropdown-menu-end notika-dropdown search-dropdown">
                                 <div class="search-input-group">
@@ -166,8 +163,8 @@
 
                         <!-- Chat -->
                         <div class="dropdown">
-                            <button class="notika-nav-link" type="button" data-bs-toggle="dropdown">
-                                <i class="fa-solid fa-message"></i>
+                            <button class="notika-nav-link" type="button" data-bs-toggle="dropdown" aria-label="Messages">
+                                <i aria-hidden="true" class="fa-solid fa-message"></i>
                             </button>
                             <div class="dropdown-menu dropdown-menu-end notika-dropdown">
                                 <div class="notika-dropdown-header">Team Chat</div>
@@ -197,8 +194,8 @@
                         </div>
 
                         <!-- Mobile Menu Toggle -->
-                        <button class="notika-nav-link d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileNavOffcanvas" aria-controls="mobileNavOffcanvas">
-                            <i class="fa-solid fa-bars"></i>
+                        <button class="notika-nav-link d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileNavOffcanvas" aria-controls="mobileNavOffcanvas" aria-label="Toggle navigation">
+                            <i aria-hidden="true" class="fa-solid fa-bars"></i>
                         </button>
                     </div>
                 </div>
@@ -208,7 +205,7 @@
     <!-- End Modern Header -->
 
     <!-- Desktop Navigation -->
-    <nav class="navbar navbar-expand-lg notika-navbar d-none d-lg-block">
+    <nav class="navbar navbar-expand-lg notika-navbar d-none d-lg-block" aria-label="Main navigation">
         <div class="container">
             <div class="navbar-collapse">
                 <ul class="navbar-nav w-100 justify-content-center">
@@ -308,7 +305,7 @@
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <div class="offcanvas-body p-0">
-            <nav class="navbar-nav flex-column">
+            <nav class="navbar-nav flex-column" aria-label="Sidebar navigation">
                 <div class="nav-item border-bottom">
                     <a class="nav-link d-flex align-items-center justify-content-between px-3 py-2" data-bs-toggle="collapse" href="#mobileHomeMenu" role="button" aria-expanded="false"><span><i class="fa-solid fa-house me-2"></i> Home</span><i class="fa-solid fa-chevron-down small"></i></a>
                     <div class="collapse" id="mobileHomeMenu"><div class="nav flex-column ps-4"><a class="nav-link py-1" href="index.html">Dashboard One</a><a class="nav-link py-1" href="index-2.html">Dashboard Two</a><a class="nav-link py-1" href="index-3.html">Dashboard Three</a><a class="nav-link py-1" href="index-4.html">Dashboard Four</a><a class="nav-link py-1" href="analytics.html">Analytics</a><a class="nav-link py-1" href="widgets.html">Widgets</a></div></div>
@@ -366,7 +363,7 @@
                             </div>
                             <div class="col-lg-6 col-md-6 col-sm-6 col-3">
                                 <div class="breadcomb-report">
-                                    <button data-bs-toggle="tooltip" data-bs-placement="left" title="Download Report" class="btn"><i class="fa-solid fa-paper-plane"></i></button>
+                                    <button type="button" data-bs-toggle="tooltip" data-bs-placement="left" title="Download Report" class="btn" aria-label="Download Report"><i aria-hidden="true" class="fa-solid fa-paper-plane"></i></button>
                                 </div>
                             </div>
                         </div>
@@ -447,9 +444,9 @@
                                 </div>
                             </div>
                             <div class="view-email-sender-actions">
-                                <button class="btn btn-sm btn-outline-secondary" title="Star"><i class="fa-regular fa-star"></i></button>
-                                <button class="btn btn-sm btn-outline-secondary" title="Archive"><i class="fa-solid fa-box-archive"></i></button>
-                                <button class="btn btn-sm btn-outline-secondary" title="Delete"><i class="fa-solid fa-trash-can"></i></button>
+                                <button type="button" class="btn btn-sm btn-outline-secondary" title="Star" aria-label="Star"><i aria-hidden="true" class="fa-regular fa-star"></i></button>
+                                <button type="button" class="btn btn-sm btn-outline-secondary" title="Archive" aria-label="Archive"><i aria-hidden="true" class="fa-solid fa-box-archive"></i></button>
+                                <button type="button" class="btn btn-sm btn-outline-secondary" title="Delete" aria-label="Delete"><i aria-hidden="true" class="fa-solid fa-trash-can"></i></button>
                             </div>
                         </div>
 
@@ -501,7 +498,7 @@
                                 <a href="compose-email.html" class="btn btn-outline-secondary"><i class="fa-solid fa-share"></i> Forward</a>
                             </div>
                             <div class="d-flex gap-2 flex-wrap">
-                                <button class="btn btn-outline-secondary"><i class="fa-solid fa-print"></i> Print</button>
+                                <button type="button" class="btn btn-outline-secondary"><i class="fa-solid fa-print"></i> Print</button>
                                 <a href="inbox.html" class="btn btn-outline-secondary"><i class="fa-solid fa-arrow-left"></i> Back to Inbox</a>
                             </div>
                         </div>

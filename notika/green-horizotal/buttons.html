@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en" data-page-module="buttons">
 <head>
     <meta charset="utf-8">
@@ -10,9 +10,6 @@
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
 
     <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 
     <!-- Essential Notika Template CSS -->
 </head>
@@ -33,15 +30,15 @@
                         </a>
                     </div>
                 </div>
-                
+
                 <!-- Navigation Section -->
                 <div class="col-lg-8 col-6">
                     <div class="notika-nav justify-content-end d-flex align-items-center gap-2 gap-lg-3">
-                        
+
                         <!-- Search -->
                         <div class="dropdown">
-                            <button class="notika-nav-link" type="button" data-bs-toggle="dropdown" data-bs-auto-close="outside">
-                                <i class="fa-solid fa-magnifying-glass"></i>
+                            <button class="notika-nav-link" type="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-label="Search">
+                                <i aria-hidden="true" class="fa-solid fa-magnifying-glass"></i>
                             </button>
                             <div class="dropdown-menu dropdown-menu-end notika-dropdown search-dropdown">
                                 <div class="search-input-group">
@@ -50,7 +47,7 @@
                                 </div>
                             </div>
                         </div>
-                        
+
                         <!-- Messages -->
                         <div class="dropdown">
                             <button class="notika-nav-link position-relative" type="button" data-bs-toggle="dropdown">
@@ -89,7 +86,7 @@
                                 </div>
                             </div>
                         </div>
-                        
+
                         <!-- Notifications -->
                         <div class="dropdown">
                             <button class="notika-nav-link position-relative" type="button" data-bs-toggle="dropdown">
@@ -134,7 +131,7 @@
                                 </div>
                             </div>
                         </div>
-                        
+
                         <!-- Tasks - Desktop Only -->
                         <div class="dropdown d-none d-lg-block">
                             <button class="notika-nav-link position-relative" type="button" data-bs-toggle="dropdown">
@@ -179,11 +176,11 @@
                                 </div>
                             </div>
                         </div>
-                        
+
                         <!-- Chat -->
                         <div class="dropdown">
-                            <button class="notika-nav-link" type="button" data-bs-toggle="dropdown">
-                                <i class="fa-solid fa-message"></i>
+                            <button class="notika-nav-link" type="button" data-bs-toggle="dropdown" aria-label="Messages">
+                                <i aria-hidden="true" class="fa-solid fa-message"></i>
                             </button>
                             <div class="dropdown-menu dropdown-menu-end notika-dropdown">
                                 <div class="notika-dropdown-header">
@@ -226,8 +223,8 @@
                         </div>
 
                         <!-- Mobile Menu Toggle -->
-                        <button class="notika-nav-link d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileNavOffcanvas" aria-controls="mobileNavOffcanvas">
-                            <i class="fa-solid fa-bars"></i>
+                        <button class="notika-nav-link d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileNavOffcanvas" aria-controls="mobileNavOffcanvas" aria-label="Toggle navigation">
+                            <i aria-hidden="true" class="fa-solid fa-bars"></i>
                         </button>
                     </div>
                 </div>
@@ -237,7 +234,7 @@
     <!-- End Modern Header -->
 
     <!-- Desktop Navigation -->
-    <nav class="navbar navbar-expand-lg notika-navbar d-none d-lg-block">
+    <nav class="navbar navbar-expand-lg notika-navbar d-none d-lg-block" aria-label="Main navigation">
         <div class="container">
             <div class="navbar-collapse">
                 <ul class="navbar-nav w-100 justify-content-center">
@@ -379,7 +376,7 @@
         </div>
         <div class="offcanvas-body p-0">
             <!-- Mobile Menu List -->
-            <nav class="navbar-nav flex-column">
+            <nav class="navbar-nav flex-column" aria-label="Sidebar navigation">
 
                 <!-- Home Section -->
                 <div class="nav-item border-bottom">
@@ -540,7 +537,7 @@
                             </div>
                             <div class="col-lg-6 col-md-6 col-sm-6 col-12">
                                 <div class="breadcomb-report">
-                                    <button data-bs-toggle="tooltip" data-placement="left" title="Download Report" class="btn"><i class="fa-solid fa-paper-plane"></i></button>
+                                    <button type="button" data-bs-toggle="tooltip" data-placement="left" title="Download Report" class="btn" aria-label="Download Report"><i aria-hidden="true" class="fa-solid fa-paper-plane"></i></button>
                                 </div>
                             </div>
                         </div>
@@ -565,12 +562,12 @@
                         </div>
                         <div class="recent-post-items">
                             <div class="btn-list">
-                                <button class="btn btn-light notika-btn-light">Default</button>
-                                <button class="btn btn-info notika-btn-info">Info</button>
-                                <button class="btn btn-primary notika-btn-primary">Primary</button>
-                                <button class="btn btn-success notika-btn-success">Success</button>
-                                <button class="btn btn-warning notika-btn-warning">Warning</button>
-                                <button class="btn btn-danger notika-btn-danger">Danger</button>
+                                <button type="button" class="btn btn-light notika-btn-light">Default</button>
+                                <button type="button" class="btn btn-info notika-btn-info">Info</button>
+                                <button type="button" class="btn btn-primary notika-btn-primary">Primary</button>
+                                <button type="button" class="btn btn-success notika-btn-success">Success</button>
+                                <button type="button" class="btn btn-warning notika-btn-warning">Warning</button>
+                                <button type="button" class="btn btn-danger notika-btn-danger">Danger</button>
                             </div>
                         </div>
                     </div>
@@ -585,12 +582,12 @@
                         </div>
                         <div class="recent-post-items">
                             <div class="btn-list">
-                                <button class="btn btn-light notika-btn-light" disabled="disabled">Default</button>
-                                <button class="btn btn-info notika-btn-info" disabled="disabled">Info</button>
-                                <button class="btn btn-primary notika-btn-primary" disabled="disabled">Primary</button>
-                                <button class="btn btn-success notika-btn-success" disabled="disabled">Success</button>
-                                <button class="btn btn-warning notika-btn-warning" disabled="disabled">Warning</button>
-                                <button class="btn btn-danger notika-btn-danger" disabled="disabled">Danger</button>
+                                <button type="button" class="btn btn-light notika-btn-light" disabled>Default</button>
+                                <button type="button" class="btn btn-info notika-btn-info" disabled>Info</button>
+                                <button type="button" class="btn btn-primary notika-btn-primary" disabled>Primary</button>
+                                <button type="button" class="btn btn-success notika-btn-success" disabled>Success</button>
+                                <button type="button" class="btn btn-warning notika-btn-warning" disabled>Warning</button>
+                                <button type="button" class="btn btn-danger notika-btn-danger" disabled>Danger</button>
                             </div>
                         </div>
                     </div>
@@ -607,10 +604,10 @@
                         </div>
                         <div class="recent-post-items">
                             <div class="btn-list">
-                                <button class="btn btn-primary notika-btn-primary btn-lg">Large</button>
-                                <button class="btn btn-primary notika-btn-primary">Default</button>
-                                <button class="btn btn-primary notika-btn-primary btn-sm">Small</button>
-                                <button class="btn btn-primary notika-btn-primary btn-xs">Extra Small</button>
+                                <button type="button" class="btn btn-primary notika-btn-primary btn-lg">Large</button>
+                                <button type="button" class="btn btn-primary notika-btn-primary">Default</button>
+                                <button type="button" class="btn btn-primary notika-btn-primary btn-sm">Small</button>
+                                <button type="button" class="btn btn-primary notika-btn-primary btn-xs">Extra Small</button>
                             </div>
                         </div>
                     </div>
@@ -673,24 +670,24 @@
                         </div>
                         <div class="recent-post-items">
                             <div class="material-design-btn">
-                                <button class="btn notika-btn-cyan">Cyan</button>
-                                <button class="btn notika-btn-teal">Teal</button>
-                                <button class="btn notika-btn-amber">Amber</button>
-                                <button class="btn notika-btn-orange">Orange</button>
-                                <button class="btn notika-btn-deeporange">Deep Orange</button>
-                                <button class="btn notika-btn-red">Red</button>
-                                <button class="btn notika-btn-pink">Pink</button>
-                                <button class="btn notika-btn-lightblue">Light Blue</button>
-                                <button class="btn notika-btn-blue">Blue</button>
-                                <button class="btn notika-btn-indigo btn-reco-mg btn-button-mg">Indigo</button>
-                                <button class="btn notika-btn-lime btn-reco-mg btn-button-mg">Lime</button>
-                                <button class="btn notika-btn-lightgreen btn-reco-mg btn-button-mg">Light Green</button>
-                                <button class="btn notika-btn-green btn-reco-mg btn-button-mg">Green</button>
-                                <button class="btn notika-btn-purple btn-reco-mg btn-button-mg">Purple</button>
-                                <button class="btn notika-btn-deeppurple btn-reco-mg btn-button-mg">Deep Purple</button>
-                                <button class="btn notika-btn-gray btn-reco-mg btn-button-mg">Gray</button>
-                                <button class="btn notika-btn-bluegray btn-reco-mg btn-button-mg">Blue Gray</button>
-                                <button class="btn notika-btn-black btn-reco-mg btn-button-mg">Black</button>
+                                <button type="button" class="btn notika-btn-cyan">Cyan</button>
+                                <button type="button" class="btn notika-btn-teal">Teal</button>
+                                <button type="button" class="btn notika-btn-amber">Amber</button>
+                                <button type="button" class="btn notika-btn-orange">Orange</button>
+                                <button type="button" class="btn notika-btn-deeporange">Deep Orange</button>
+                                <button type="button" class="btn notika-btn-red">Red</button>
+                                <button type="button" class="btn notika-btn-pink">Pink</button>
+                                <button type="button" class="btn notika-btn-lightblue">Light Blue</button>
+                                <button type="button" class="btn notika-btn-blue">Blue</button>
+                                <button type="button" class="btn notika-btn-indigo btn-reco-mg btn-button-mg">Indigo</button>
+                                <button type="button" class="btn notika-btn-lime btn-reco-mg btn-button-mg">Lime</button>
+                                <button type="button" class="btn notika-btn-lightgreen btn-reco-mg btn-button-mg">Light Green</button>
+                                <button type="button" class="btn notika-btn-green btn-reco-mg btn-button-mg">Green</button>
+                                <button type="button" class="btn notika-btn-purple btn-reco-mg btn-button-mg">Purple</button>
+                                <button type="button" class="btn notika-btn-deeppurple btn-reco-mg btn-button-mg">Deep Purple</button>
+                                <button type="button" class="btn notika-btn-gray btn-reco-mg btn-button-mg">Gray</button>
+                                <button type="button" class="btn notika-btn-bluegray btn-reco-mg btn-button-mg">Blue Gray</button>
+                                <button type="button" class="btn notika-btn-black btn-reco-mg btn-button-mg">Black</button>
                             </div>
                         </div>
                     </div>
@@ -707,84 +704,84 @@
                         </div>
                         <div class="recent-post-items">
                             <div class="button-icon-btn">
-                                <button class="btn btn-light btn-icon-notika waves-effect"><i class="fa-solid fa-house"></i> Home</button>
-                                <button class="btn btn-light btn-icon-notika waves-effect"><i class="fa-solid fa-magnifying-glass"></i> Search</button>
-                                <button class="btn btn-light btn-icon-notika waves-effect"><i class="fa-solid fa-bars"></i> More</button>
-                                <button class="btn btn-light btn-icon-notika waves-effect"><i class="fa-solid fa-chevron-right"></i> Forward</button>
-                                <button class="btn btn-light btn-icon-notika waves-effect"><i class="fa-solid fa-chevron-left"></i> Back</button>
-                                <button class="btn btn-light btn-icon-notika waves-effect"><i class="fa-solid fa-arrows-rotate"></i> Sync</button>
-                                <button class="btn btn-light btn-icon-notika waves-effect"><i class="fa-solid fa-check"></i> Check</button>
-                                <button class="btn btn-light btn-icon-notika waves-effect"><i class="fa-solid fa-xmark"></i> Close</button>
-                                <button class="btn btn-light btn-icon-notika waves-effect"><i class="fa-solid fa-bars"></i> Menu</button>
-                                <button class="btn btn-light btn-icon-notika waves-effect"><i class="fa-solid fa-star"></i> Apps</button>
-                                <button class="btn btn-light btn-icon-notika waves-effect"><i class="fa-solid fa-chevron-down"></i> Done</button>
-                                <button class="btn btn-light btn-icon-notika waves-effect"><i class="fa-solid fa-chevron-up"></i> Up</button>
-                                <button class="btn btn-light btn-icon-notika waves-effect"><i class="fa-solid fa-chevron-right"></i> Get</button>
-                                <button class="btn btn-light btn-icon-notika waves-effect"><i class="fa-solid fa-phone"></i> Call</button>
+                                <button type="button" class="btn btn-light btn-icon-notika waves-effect"><i class="fa-solid fa-house"></i> Home</button>
+                                <button type="button" class="btn btn-light btn-icon-notika waves-effect"><i class="fa-solid fa-magnifying-glass"></i> Search</button>
+                                <button type="button" class="btn btn-light btn-icon-notika waves-effect"><i class="fa-solid fa-bars"></i> More</button>
+                                <button type="button" class="btn btn-light btn-icon-notika waves-effect"><i class="fa-solid fa-chevron-right"></i> Forward</button>
+                                <button type="button" class="btn btn-light btn-icon-notika waves-effect"><i class="fa-solid fa-chevron-left"></i> Back</button>
+                                <button type="button" class="btn btn-light btn-icon-notika waves-effect"><i class="fa-solid fa-arrows-rotate"></i> Sync</button>
+                                <button type="button" class="btn btn-light btn-icon-notika waves-effect"><i class="fa-solid fa-check"></i> Check</button>
+                                <button type="button" class="btn btn-light btn-icon-notika waves-effect"><i class="fa-solid fa-xmark"></i> Close</button>
+                                <button type="button" class="btn btn-light btn-icon-notika waves-effect"><i class="fa-solid fa-bars"></i> Menu</button>
+                                <button type="button" class="btn btn-light btn-icon-notika waves-effect"><i class="fa-solid fa-star"></i> Apps</button>
+                                <button type="button" class="btn btn-light btn-icon-notika waves-effect"><i class="fa-solid fa-chevron-down"></i> Done</button>
+                                <button type="button" class="btn btn-light btn-icon-notika waves-effect"><i class="fa-solid fa-chevron-up"></i> Up</button>
+                                <button type="button" class="btn btn-light btn-icon-notika waves-effect"><i class="fa-solid fa-chevron-right"></i> Get</button>
+                                <button type="button" class="btn btn-light btn-icon-notika waves-effect"><i class="fa-solid fa-phone"></i> Call</button>
                             </div>
                             <div class="button-icon-btn mg-t-30 butt-mg-t-20">
-                                <button class="btn btn-light btn-icon-notika waves-effect waves-circle"><i class="fa-solid fa-house"></i></button>
-                                <button class="btn btn-light btn-icon-notika waves-effect waves-circle"><i class="fa-solid fa-magnifying-glass"></i></button>
-                                <button class="btn btn-light btn-icon-notika waves-effect waves-circle"><i class="fa-solid fa-bars"></i></button>
-                                <button class="btn btn-light btn-icon-notika waves-effect waves-circle"><i class="fa-solid fa-chevron-right"></i></button>
-                                <button class="btn btn-light btn-icon-notika waves-effect waves-circle"><i class="fa-solid fa-chevron-left"></i></button>
-                                <button class="btn btn-light btn-icon-notika waves-effect waves-circle"><i class="fa-solid fa-arrows-rotate"></i></button>
-                                <button class="btn btn-light btn-icon-notika waves-effect waves-circle"><i class="fa-solid fa-check"></i></button>
-                                <button class="btn btn-light btn-icon-notika waves-effect waves-circle"><i class="fa-solid fa-xmark"></i></button>
-                                <button class="btn btn-light btn-icon-notika waves-effect waves-circle"><i class="fa-solid fa-bars"></i></button>
-                                <button class="btn btn-light btn-icon-notika waves-effect waves-circle"><i class="fa-solid fa-star"></i></button>
-                                <button class="btn btn-light btn-icon-notika waves-effect waves-circle"><i class="fa-solid fa-chevron-down"></i></button>
-                                <button class="btn btn-light btn-icon-notika waves-effect waves-circle"><i class="fa-solid fa-chevron-up"></i></button>
-                                <button class="btn btn-light btn-icon-notika waves-effect waves-circle"><i class="fa-solid fa-chevron-right"></i></button>
-                                <button class="btn btn-light btn-icon-notika waves-effect waves-circle"><i class="fa-solid fa-phone"></i></button>
+                                <button type="button" class="btn btn-light btn-icon-notika waves-effect waves-circle" aria-label="Home"><i aria-hidden="true" class="fa-solid fa-house"></i></button>
+                                <button type="button" class="btn btn-light btn-icon-notika waves-effect waves-circle" aria-label="Search"><i aria-hidden="true" class="fa-solid fa-magnifying-glass"></i></button>
+                                <button type="button" class="btn btn-light btn-icon-notika waves-effect waves-circle" aria-label="Toggle navigation"><i aria-hidden="true" class="fa-solid fa-bars"></i></button>
+                                <button type="button" class="btn btn-light btn-icon-notika waves-effect waves-circle" aria-label="Next"><i aria-hidden="true" class="fa-solid fa-chevron-right"></i></button>
+                                <button type="button" class="btn btn-light btn-icon-notika waves-effect waves-circle" aria-label="Previous"><i aria-hidden="true" class="fa-solid fa-chevron-left"></i></button>
+                                <button type="button" class="btn btn-light btn-icon-notika waves-effect waves-circle" aria-label="Arrows rotate"><i aria-hidden="true" class="fa-solid fa-arrows-rotate"></i></button>
+                                <button type="button" class="btn btn-light btn-icon-notika waves-effect waves-circle" aria-label="Confirm"><i aria-hidden="true" class="fa-solid fa-check"></i></button>
+                                <button type="button" class="btn btn-light btn-icon-notika waves-effect waves-circle" aria-label="Close"><i aria-hidden="true" class="fa-solid fa-xmark"></i></button>
+                                <button type="button" class="btn btn-light btn-icon-notika waves-effect waves-circle" aria-label="Toggle navigation"><i aria-hidden="true" class="fa-solid fa-bars"></i></button>
+                                <button type="button" class="btn btn-light btn-icon-notika waves-effect waves-circle" aria-label="Favourite"><i aria-hidden="true" class="fa-solid fa-star"></i></button>
+                                <button type="button" class="btn btn-light btn-icon-notika waves-effect waves-circle" aria-label="Expand"><i aria-hidden="true" class="fa-solid fa-chevron-down"></i></button>
+                                <button type="button" class="btn btn-light btn-icon-notika waves-effect waves-circle" aria-label="Collapse"><i aria-hidden="true" class="fa-solid fa-chevron-up"></i></button>
+                                <button type="button" class="btn btn-light btn-icon-notika waves-effect waves-circle" aria-label="Next"><i aria-hidden="true" class="fa-solid fa-chevron-right"></i></button>
+                                <button type="button" class="btn btn-light btn-icon-notika waves-effect waves-circle" aria-label="Call"><i aria-hidden="true" class="fa-solid fa-phone"></i></button>
                             </div>
                             <div class="button-icon-btn sm-res-mg-t-30">
-                                <button class="btn btn-primary primary-icon-notika waves-effect waves-circle"><i class="fa-solid fa-house"></i></button>
-                                <button class="btn btn-info info-icon-notika waves-effect waves-circle"><i class="fa-solid fa-magnifying-glass"></i></button>
-                                <button class="btn btn-success success-icon-notika waves-effect waves-circle"><i class="fa-solid fa-bars"></i></button>
-                                <button class="btn btn-warning warning-icon-notika waves-effect waves-circle"><i class="fa-solid fa-chevron-right"></i></button>
-                                <button class="btn btn-danger danger-icon-notika waves-effect waves-circle"><i class="fa-solid fa-chevron-left"></i></button>
-                                <button class="btn btn-teal teal-icon-notika waves-effect waves-circle"><i class="fa-solid fa-arrows-rotate"></i></button>
-                                <button class="btn btn-orange orange-icon-notika waves-effect waves-circle"><i class="fa-solid fa-check"></i></button>
-                                <button class="btn btn-cyan cyan-icon-notika waves-effect waves-circle"><i class="fa-solid fa-xmark"></i></button>
-                                <button class="btn btn-lightgreen lightgreen-icon-notika waves-effect waves-circle"><i class="fa-solid fa-bars"></i></button>
-                                <button class="btn btn-lime lime-icon-notika waves-effect waves-circle"><i class="fa-solid fa-star"></i></button>
-                                <button class="btn btn-amber amber-icon-notika waves-effect waves-circle"><i class="fa-solid fa-chevron-down"></i></button>
-                                <button class="btn btn-gray gray-icon-notika waves-effect waves-circle"><i class="fa-solid fa-chevron-up"></i></button>
-                                <button class="btn btn-lightblue lightblue-icon-notika waves-effect waves-circle"><i class="fa-solid fa-chevron-right"></i></button>
-                                <button class="btn btn-deeporange deeporange-icon-notika waves-effect waves-circle"><i class="fa-solid fa-phone"></i></button>
+                                <button type="button" class="btn btn-primary primary-icon-notika waves-effect waves-circle" aria-label="Home"><i aria-hidden="true" class="fa-solid fa-house"></i></button>
+                                <button type="button" class="btn btn-info info-icon-notika waves-effect waves-circle" aria-label="Search"><i aria-hidden="true" class="fa-solid fa-magnifying-glass"></i></button>
+                                <button type="button" class="btn btn-success success-icon-notika waves-effect waves-circle" aria-label="Toggle navigation"><i aria-hidden="true" class="fa-solid fa-bars"></i></button>
+                                <button type="button" class="btn btn-warning warning-icon-notika waves-effect waves-circle" aria-label="Next"><i aria-hidden="true" class="fa-solid fa-chevron-right"></i></button>
+                                <button type="button" class="btn btn-danger danger-icon-notika waves-effect waves-circle" aria-label="Previous"><i aria-hidden="true" class="fa-solid fa-chevron-left"></i></button>
+                                <button type="button" class="btn btn-teal teal-icon-notika waves-effect waves-circle" aria-label="Arrows rotate"><i aria-hidden="true" class="fa-solid fa-arrows-rotate"></i></button>
+                                <button type="button" class="btn btn-orange orange-icon-notika waves-effect waves-circle" aria-label="Confirm"><i aria-hidden="true" class="fa-solid fa-check"></i></button>
+                                <button type="button" class="btn btn-cyan cyan-icon-notika waves-effect waves-circle" aria-label="Close"><i aria-hidden="true" class="fa-solid fa-xmark"></i></button>
+                                <button type="button" class="btn btn-lightgreen lightgreen-icon-notika waves-effect waves-circle" aria-label="Toggle navigation"><i aria-hidden="true" class="fa-solid fa-bars"></i></button>
+                                <button type="button" class="btn btn-lime lime-icon-notika waves-effect waves-circle" aria-label="Favourite"><i aria-hidden="true" class="fa-solid fa-star"></i></button>
+                                <button type="button" class="btn btn-amber amber-icon-notika waves-effect waves-circle" aria-label="Expand"><i aria-hidden="true" class="fa-solid fa-chevron-down"></i></button>
+                                <button type="button" class="btn btn-gray gray-icon-notika waves-effect waves-circle" aria-label="Collapse"><i aria-hidden="true" class="fa-solid fa-chevron-up"></i></button>
+                                <button type="button" class="btn btn-lightblue lightblue-icon-notika waves-effect waves-circle" aria-label="Next"><i aria-hidden="true" class="fa-solid fa-chevron-right"></i></button>
+                                <button type="button" class="btn btn-deeporange deeporange-icon-notika waves-effect waves-circle" aria-label="Call"><i aria-hidden="true" class="fa-solid fa-phone"></i></button>
                             </div>
                             <div class="button-icon-btn button-icon-btn-rd mg-t-30 butt-mg-t-20">
-                                <button class="btn btn-light btn-icon-notika waves-effect waves-circle"><i class="fa-solid fa-house"></i></button>
-                                <button class="btn btn-light btn-icon-notika waves-effect waves-circle"><i class="fa-solid fa-magnifying-glass"></i></button>
-                                <button class="btn btn-light btn-icon-notika waves-effect waves-circle"><i class="fa-solid fa-bars"></i></button>
-                                <button class="btn btn-light btn-icon-notika waves-effect waves-circle"><i class="fa-solid fa-chevron-right"></i></button>
-                                <button class="btn btn-light btn-icon-notika waves-effect waves-circle"><i class="fa-solid fa-chevron-left"></i></button>
-                                <button class="btn btn-light btn-icon-notika waves-effect waves-circle"><i class="fa-solid fa-arrows-rotate"></i></button>
-                                <button class="btn btn-light btn-icon-notika waves-effect waves-circle"><i class="fa-solid fa-check"></i></button>
-                                <button class="btn btn-light btn-icon-notika waves-effect waves-circle"><i class="fa-solid fa-xmark"></i></button>
-                                <button class="btn btn-light btn-icon-notika waves-effect waves-circle"><i class="fa-solid fa-bars"></i></button>
-                                <button class="btn btn-light btn-icon-notika waves-effect waves-circle"><i class="fa-solid fa-star"></i></button>
-                                <button class="btn btn-light btn-icon-notika waves-effect waves-circle"><i class="fa-solid fa-chevron-down"></i></button>
-                                <button class="btn btn-light btn-icon-notika waves-effect waves-circle"><i class="fa-solid fa-chevron-up"></i></button>
-                                <button class="btn btn-light btn-icon-notika waves-effect waves-circle"><i class="fa-solid fa-chevron-right"></i></button>
-                                <button class="btn btn-light btn-icon-notika waves-effect waves-circle"><i class="fa-solid fa-phone"></i></button>
+                                <button type="button" class="btn btn-light btn-icon-notika waves-effect waves-circle" aria-label="Home"><i aria-hidden="true" class="fa-solid fa-house"></i></button>
+                                <button type="button" class="btn btn-light btn-icon-notika waves-effect waves-circle" aria-label="Search"><i aria-hidden="true" class="fa-solid fa-magnifying-glass"></i></button>
+                                <button type="button" class="btn btn-light btn-icon-notika waves-effect waves-circle" aria-label="Toggle navigation"><i aria-hidden="true" class="fa-solid fa-bars"></i></button>
+                                <button type="button" class="btn btn-light btn-icon-notika waves-effect waves-circle" aria-label="Next"><i aria-hidden="true" class="fa-solid fa-chevron-right"></i></button>
+                                <button type="button" class="btn btn-light btn-icon-notika waves-effect waves-circle" aria-label="Previous"><i aria-hidden="true" class="fa-solid fa-chevron-left"></i></button>
+                                <button type="button" class="btn btn-light btn-icon-notika waves-effect waves-circle" aria-label="Arrows rotate"><i aria-hidden="true" class="fa-solid fa-arrows-rotate"></i></button>
+                                <button type="button" class="btn btn-light btn-icon-notika waves-effect waves-circle" aria-label="Confirm"><i aria-hidden="true" class="fa-solid fa-check"></i></button>
+                                <button type="button" class="btn btn-light btn-icon-notika waves-effect waves-circle" aria-label="Close"><i aria-hidden="true" class="fa-solid fa-xmark"></i></button>
+                                <button type="button" class="btn btn-light btn-icon-notika waves-effect waves-circle" aria-label="Toggle navigation"><i aria-hidden="true" class="fa-solid fa-bars"></i></button>
+                                <button type="button" class="btn btn-light btn-icon-notika waves-effect waves-circle" aria-label="Favourite"><i aria-hidden="true" class="fa-solid fa-star"></i></button>
+                                <button type="button" class="btn btn-light btn-icon-notika waves-effect waves-circle" aria-label="Expand"><i aria-hidden="true" class="fa-solid fa-chevron-down"></i></button>
+                                <button type="button" class="btn btn-light btn-icon-notika waves-effect waves-circle" aria-label="Collapse"><i aria-hidden="true" class="fa-solid fa-chevron-up"></i></button>
+                                <button type="button" class="btn btn-light btn-icon-notika waves-effect waves-circle" aria-label="Next"><i aria-hidden="true" class="fa-solid fa-chevron-right"></i></button>
+                                <button type="button" class="btn btn-light btn-icon-notika waves-effect waves-circle" aria-label="Call"><i aria-hidden="true" class="fa-solid fa-phone"></i></button>
                             </div>
                             <div class="button-icon-btn button-icon-btn-cl sm-res-mg-t-30">
-                                <button class="btn btn-primary primary-icon-notika btn-reco-mg btn-button-mg waves-effect waves-circle"><i class="fa-solid fa-house"></i></button>
-                                <button class="btn btn-info info-icon-notika btn-reco-mg btn-button-mg waves-effect waves-circle"><i class="fa-solid fa-magnifying-glass"></i></button>
-                                <button class="btn btn-success success-icon-notika btn-reco-mg btn-button-mg waves-effect waves-circle"><i class="fa-solid fa-bars"></i></button>
-                                <button class="btn btn-warning warning-icon-notika btn-reco-mg btn-button-mg waves-effect waves-circle"><i class="fa-solid fa-chevron-right"></i></button>
-                                <button class="btn btn-danger danger-icon-notika btn-reco-mg btn-button-mg waves-effect waves-circle"><i class="fa-solid fa-chevron-left"></i></button>
-                                <button class="btn btn-teal teal-icon-notika btn-reco-mg btn-button-mg waves-effect waves-circle"><i class="fa-solid fa-arrows-rotate"></i></button>
-                                <button class="btn btn-orange orange-icon-notika btn-reco-mg btn-button-mg waves-effect waves-circle"><i class="fa-solid fa-check"></i></button>
-                                <button class="btn btn-cyan cyan-icon-notika btn-reco-mg btn-button-mg waves-effect waves-circle"><i class="fa-solid fa-xmark"></i></button>
-                                <button class="btn btn-lightgreen lightgreen-icon-notika btn-reco-mg btn-button-mg waves-effect waves-circle"><i class="fa-solid fa-bars"></i></button>
-                                <button class="btn btn-lime lime-icon-notika btn-reco-mg btn-button-mg waves-effect waves-circle"><i class="fa-solid fa-star"></i></button>
-                                <button class="btn btn-amber amber-icon-notika btn-reco-mg btn-button-mg waves-effect waves-circle"><i class="fa-solid fa-chevron-down"></i></button>
-                                <button class="btn btn-gray gray-icon-notika btn-reco-mg btn-button-mg waves-effect waves-circle"><i class="fa-solid fa-chevron-up"></i></button>
-                                <button class="btn btn-lightblue lightblue-icon-notika btn-reco-mg btn-button-mg waves-effect waves-circle"><i class="fa-solid fa-chevron-right"></i></button>
-                                <button class="btn btn-deeporange deeporange-icon-notika btn-reco-mg btn-button-mg waves-effect waves-circle"><i class="fa-solid fa-phone"></i></button>
+                                <button type="button" class="btn btn-primary primary-icon-notika btn-reco-mg btn-button-mg waves-effect waves-circle" aria-label="Home"><i aria-hidden="true" class="fa-solid fa-house"></i></button>
+                                <button type="button" class="btn btn-info info-icon-notika btn-reco-mg btn-button-mg waves-effect waves-circle" aria-label="Search"><i aria-hidden="true" class="fa-solid fa-magnifying-glass"></i></button>
+                                <button type="button" class="btn btn-success success-icon-notika btn-reco-mg btn-button-mg waves-effect waves-circle" aria-label="Toggle navigation"><i aria-hidden="true" class="fa-solid fa-bars"></i></button>
+                                <button type="button" class="btn btn-warning warning-icon-notika btn-reco-mg btn-button-mg waves-effect waves-circle" aria-label="Next"><i aria-hidden="true" class="fa-solid fa-chevron-right"></i></button>
+                                <button type="button" class="btn btn-danger danger-icon-notika btn-reco-mg btn-button-mg waves-effect waves-circle" aria-label="Previous"><i aria-hidden="true" class="fa-solid fa-chevron-left"></i></button>
+                                <button type="button" class="btn btn-teal teal-icon-notika btn-reco-mg btn-button-mg waves-effect waves-circle" aria-label="Arrows rotate"><i aria-hidden="true" class="fa-solid fa-arrows-rotate"></i></button>
+                                <button type="button" class="btn btn-orange orange-icon-notika btn-reco-mg btn-button-mg waves-effect waves-circle" aria-label="Confirm"><i aria-hidden="true" class="fa-solid fa-check"></i></button>
+                                <button type="button" class="btn btn-cyan cyan-icon-notika btn-reco-mg btn-button-mg waves-effect waves-circle" aria-label="Close"><i aria-hidden="true" class="fa-solid fa-xmark"></i></button>
+                                <button type="button" class="btn btn-lightgreen lightgreen-icon-notika btn-reco-mg btn-button-mg waves-effect waves-circle" aria-label="Toggle navigation"><i aria-hidden="true" class="fa-solid fa-bars"></i></button>
+                                <button type="button" class="btn btn-lime lime-icon-notika btn-reco-mg btn-button-mg waves-effect waves-circle" aria-label="Favourite"><i aria-hidden="true" class="fa-solid fa-star"></i></button>
+                                <button type="button" class="btn btn-amber amber-icon-notika btn-reco-mg btn-button-mg waves-effect waves-circle" aria-label="Expand"><i aria-hidden="true" class="fa-solid fa-chevron-down"></i></button>
+                                <button type="button" class="btn btn-gray gray-icon-notika btn-reco-mg btn-button-mg waves-effect waves-circle" aria-label="Collapse"><i aria-hidden="true" class="fa-solid fa-chevron-up"></i></button>
+                                <button type="button" class="btn btn-lightblue lightblue-icon-notika btn-reco-mg btn-button-mg waves-effect waves-circle" aria-label="Next"><i aria-hidden="true" class="fa-solid fa-chevron-right"></i></button>
+                                <button type="button" class="btn btn-deeporange deeporange-icon-notika btn-reco-mg btn-button-mg waves-effect waves-circle" aria-label="Call"><i aria-hidden="true" class="fa-solid fa-phone"></i></button>
                             </div>
                         </div>
                     </div>

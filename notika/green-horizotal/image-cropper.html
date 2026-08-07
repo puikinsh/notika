@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en" data-page-module="image-cropper">
 <head>
     <meta charset="utf-8">
@@ -11,9 +11,6 @@
     <link rel="alternate icon" href="/favicon.ico">
 
     <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <!-- Font Awesome and all other CSS imported via Vite -->
     <!-- ONLY Vite entry point - everything else bundled -->
 </head>
@@ -34,15 +31,15 @@
                         </a>
                     </div>
                 </div>
-                
+
                 <!-- Navigation Section -->
                 <div class="col-lg-8 col-6">
                     <div class="notika-nav justify-content-end d-flex align-items-center gap-2 gap-lg-3">
-                        
+
                         <!-- Search -->
                         <div class="dropdown">
-                            <button class="notika-nav-link" type="button" data-bs-toggle="dropdown" data-bs-auto-close="outside">
-                                <i class="fa-solid fa-magnifying-glass"></i>
+                            <button class="notika-nav-link" type="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-label="Search">
+                                <i aria-hidden="true" class="fa-solid fa-magnifying-glass"></i>
                             </button>
                             <div class="dropdown-menu dropdown-menu-end notika-dropdown search-dropdown">
                                 <div class="search-input-group">
@@ -51,7 +48,7 @@
                                 </div>
                             </div>
                         </div>
-                        
+
                         <!-- Messages -->
                         <div class="dropdown">
                             <button class="notika-nav-link position-relative" type="button" data-bs-toggle="dropdown">
@@ -90,7 +87,7 @@
                                 </div>
                             </div>
                         </div>
-                        
+
                         <!-- Notifications -->
                         <div class="dropdown">
                             <button class="notika-nav-link position-relative" type="button" data-bs-toggle="dropdown">
@@ -135,7 +132,7 @@
                                 </div>
                             </div>
                         </div>
-                        
+
                         <!-- Tasks - Desktop Only -->
                         <div class="dropdown d-none d-lg-block">
                             <button class="notika-nav-link position-relative" type="button" data-bs-toggle="dropdown">
@@ -180,11 +177,11 @@
                                 </div>
                             </div>
                         </div>
-                        
+
                         <!-- Chat -->
                         <div class="dropdown">
-                            <button class="notika-nav-link" type="button" data-bs-toggle="dropdown">
-                                <i class="fa-solid fa-message"></i>
+                            <button class="notika-nav-link" type="button" data-bs-toggle="dropdown" aria-label="Messages">
+                                <i aria-hidden="true" class="fa-solid fa-message"></i>
                             </button>
                             <div class="dropdown-menu dropdown-menu-end notika-dropdown">
                                 <div class="notika-dropdown-header">
@@ -227,8 +224,8 @@
                         </div>
 
                         <!-- Mobile Menu Toggle -->
-                        <button class="notika-nav-link d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileNavOffcanvas" aria-controls="mobileNavOffcanvas">
-                            <i class="fa-solid fa-bars"></i>
+                        <button class="notika-nav-link d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileNavOffcanvas" aria-controls="mobileNavOffcanvas" aria-label="Toggle navigation">
+                            <i aria-hidden="true" class="fa-solid fa-bars"></i>
                         </button>
                     </div>
                 </div>
@@ -238,7 +235,7 @@
     <!-- End Modern Header -->
 
     <!-- Desktop Navigation -->
-    <nav class="navbar navbar-expand-lg notika-navbar d-none d-lg-block">
+    <nav class="navbar navbar-expand-lg notika-navbar d-none d-lg-block" aria-label="Main navigation">
         <div class="container">
             <div class="navbar-collapse">
                 <ul class="navbar-nav w-100 justify-content-center">
@@ -380,7 +377,7 @@
         </div>
         <div class="offcanvas-body p-0">
             <!-- Mobile Menu List -->
-            <nav class="navbar-nav flex-column">
+            <nav class="navbar-nav flex-column" aria-label="Sidebar navigation">
 
                 <!-- Home Section -->
                 <div class="nav-item border-bottom">
@@ -543,7 +540,7 @@
                             </div>
                             <div class="col-lg-6 col-md-6 col-sm-6 col-3">
                                 <div class="breadcomb-report">
-                                    <button data-bs-toggle="tooltip" data-bs-placement="left" title="Download Report" class="btn"><i class="fa-solid fa-paper-plane"></i></button>
+                                    <button type="button" data-bs-toggle="tooltip" data-bs-placement="left" title="Download Report" class="btn" aria-label="Download Report"><i aria-hidden="true" class="fa-solid fa-paper-plane"></i></button>
                                 </div>
                             </div>
                         </div>
@@ -571,35 +568,35 @@
                         <!-- Toolbar -->
                         <div class="cropper-toolbar">
                             <div class="cropper-tool-group">
-                                <button type="button" class="cropper-tool" id="zoomIn" title="Zoom In">
-                                    <i class="fa-solid fa-magnifying-glass-plus"></i>
+                                <button type="button" class="cropper-tool" id="zoomIn" title="Zoom In" aria-label="Zoom In">
+                                    <i aria-hidden="true" class="fa-solid fa-magnifying-glass-plus"></i>
                                 </button>
-                                <button type="button" class="cropper-tool" id="zoomOut" title="Zoom Out">
-                                    <i class="fa-solid fa-magnifying-glass-minus"></i>
-                                </button>
-                            </div>
-                            <div class="cropper-tool-divider"></div>
-                            <div class="cropper-tool-group">
-                                <button type="button" class="cropper-tool" id="rotateLeft" title="Rotate Left">
-                                    <i class="fa-solid fa-rotate-left"></i>
-                                </button>
-                                <button type="button" class="cropper-tool" id="rotateRight" title="Rotate Right">
-                                    <i class="fa-solid fa-rotate-right"></i>
+                                <button type="button" class="cropper-tool" id="zoomOut" title="Zoom Out" aria-label="Zoom Out">
+                                    <i aria-hidden="true" class="fa-solid fa-magnifying-glass-minus"></i>
                                 </button>
                             </div>
                             <div class="cropper-tool-divider"></div>
                             <div class="cropper-tool-group">
-                                <button type="button" class="cropper-tool" id="flipH" title="Flip Horizontal">
-                                    <i class="fa-solid fa-left-right"></i>
+                                <button type="button" class="cropper-tool" id="rotateLeft" title="Rotate Left" aria-label="Rotate Left">
+                                    <i aria-hidden="true" class="fa-solid fa-rotate-left"></i>
                                 </button>
-                                <button type="button" class="cropper-tool" id="flipV" title="Flip Vertical">
-                                    <i class="fa-solid fa-up-down"></i>
+                                <button type="button" class="cropper-tool" id="rotateRight" title="Rotate Right" aria-label="Rotate Right">
+                                    <i aria-hidden="true" class="fa-solid fa-rotate-right"></i>
                                 </button>
                             </div>
                             <div class="cropper-tool-divider"></div>
                             <div class="cropper-tool-group">
-                                <button type="button" class="cropper-tool" id="resetCrop" title="Reset">
-                                    <i class="fa-solid fa-arrow-rotate-left"></i>
+                                <button type="button" class="cropper-tool" id="flipH" title="Flip Horizontal" aria-label="Flip Horizontal">
+                                    <i aria-hidden="true" class="fa-solid fa-left-right"></i>
+                                </button>
+                                <button type="button" class="cropper-tool" id="flipV" title="Flip Vertical" aria-label="Flip Vertical">
+                                    <i aria-hidden="true" class="fa-solid fa-up-down"></i>
+                                </button>
+                            </div>
+                            <div class="cropper-tool-divider"></div>
+                            <div class="cropper-tool-group">
+                                <button type="button" class="cropper-tool" id="resetCrop" title="Reset" aria-label="Reset">
+                                    <i aria-hidden="true" class="fa-solid fa-arrow-rotate-left"></i>
                                 </button>
                             </div>
                         </div>
@@ -651,7 +648,7 @@
                             <h5>Actions</h5>
                         </div>
                         <div class="cropper-card-body">
-                            <label class="cropper-upload" for="inputImage">
+                            <label class="cropper-upload">
                                 <i class="fa-solid fa-cloud-arrow-up"></i>
                                 <span>Upload New Image</span>
                                 <small>JPG, PNG, WebP, or GIF</small>

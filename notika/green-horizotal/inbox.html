@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -11,9 +11,6 @@
     <link rel="alternate icon" href="/favicon.ico">
 
     <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 
     <!-- Mobile Menu CSS -->
     <link rel="stylesheet" href="css/mobile-menu.css">
@@ -45,8 +42,8 @@
 
                         <!-- Search -->
                         <div class="dropdown">
-                            <button class="notika-nav-link" type="button" data-bs-toggle="dropdown" data-bs-auto-close="outside">
-                                <i class="fa-solid fa-magnifying-glass"></i>
+                            <button class="notika-nav-link" type="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-label="Search">
+                                <i aria-hidden="true" class="fa-solid fa-magnifying-glass"></i>
                             </button>
                             <div class="dropdown-menu dropdown-menu-end notika-dropdown search-dropdown">
                                 <div class="search-input-group">
@@ -187,8 +184,8 @@
 
                         <!-- Chat -->
                         <div class="dropdown">
-                            <button class="notika-nav-link" type="button" data-bs-toggle="dropdown">
-                                <i class="fa-solid fa-message"></i>
+                            <button class="notika-nav-link" type="button" data-bs-toggle="dropdown" aria-label="Message">
+                                <i aria-hidden="true" class="fa-solid fa-message"></i>
                             </button>
                             <div class="dropdown-menu dropdown-menu-end notika-dropdown">
                                 <div class="notika-dropdown-header">
@@ -231,8 +228,8 @@
                         </div>
 
                         <!-- Mobile Menu Toggle -->
-                        <button class="notika-nav-link d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileNavOffcanvas" aria-controls="mobileNavOffcanvas">
-                            <i class="fa-solid fa-bars"></i>
+                        <button class="notika-nav-link d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileNavOffcanvas" aria-controls="mobileNavOffcanvas" aria-label="Toggle navigation">
+                            <i aria-hidden="true" class="fa-solid fa-bars"></i>
                         </button>
                     </div>
                 </div>
@@ -242,7 +239,7 @@
     <!-- End Modern Header -->
 
     <!-- Desktop Navigation -->
-    <nav class="navbar navbar-expand-lg notika-navbar d-none d-lg-block">
+    <nav class="navbar navbar-expand-lg notika-navbar d-none d-lg-block" aria-label="Main navigation">
         <div class="container">
             <div class="navbar-collapse">
                 <ul class="navbar-nav w-100 justify-content-center">
@@ -384,7 +381,7 @@
         </div>
         <div class="offcanvas-body p-0">
             <!-- Mobile Menu List -->
-            <nav class="navbar-nav flex-column">
+            <nav class="navbar-nav flex-column" aria-label="Sidebar navigation">
 
                 <!-- Home Section -->
                 <div class="nav-item border-bottom">
@@ -547,7 +544,7 @@
                             </div>
                             <div class="col-lg-6 col-md-6 col-sm-6 col-3">
                                 <div class="breadcomb-report">
-                                    <button data-bs-toggle="tooltip" data-bs-placement="left" title="Download Report" class="btn"><i class="fa-solid fa-paper-plane"></i></button>
+                                    <button type="button" data-bs-toggle="tooltip" data-bs-placement="left" title="Download Report" class="btn" aria-label="Download Report"><i aria-hidden="true" class="fa-solid fa-paper-plane"></i></button>
                                 </div>
                             </div>
                         </div>
@@ -617,18 +614,18 @@
                                         <input class="form-check-input" type="checkbox" id="selectAll">
                                     </div>
                                     <div class="btn-group btn-group-sm">
-                                        <button class="btn btn-light" title="Refresh"><i class="fa-solid fa-arrows-rotate"></i></button>
-                                        <button class="btn btn-light" title="Archive"><i class="fa-solid fa-box-archive"></i></button>
-                                        <button class="btn btn-light" title="Delete"><i class="fa-solid fa-trash-can"></i></button>
-                                        <button class="btn btn-light" title="Mark as read"><i class="fa-solid fa-envelope-open"></i></button>
-                                        <button class="btn btn-light" title="Labels"><i class="fa-solid fa-tag"></i></button>
+                                        <button type="button" class="btn btn-light" title="Refresh" aria-label="Refresh"><i aria-hidden="true" class="fa-solid fa-arrows-rotate"></i></button>
+                                        <button type="button" class="btn btn-light" title="Archive" aria-label="Archive"><i aria-hidden="true" class="fa-solid fa-box-archive"></i></button>
+                                        <button type="button" class="btn btn-light" title="Delete" aria-label="Delete"><i aria-hidden="true" class="fa-solid fa-trash-can"></i></button>
+                                        <button type="button" class="btn btn-light" title="Mark as read" aria-label="Mark as read"><i aria-hidden="true" class="fa-solid fa-envelope-open"></i></button>
+                                        <button type="button" class="btn btn-light" title="Labels" aria-label="Labels"><i aria-hidden="true" class="fa-solid fa-tag"></i></button>
                                     </div>
                                 </div>
                                 <div class="d-flex align-items-center gap-2">
                                     <span class="text-muted small">1&ndash;8 of 24</span>
                                     <div class="btn-group btn-group-sm">
-                                        <button class="btn btn-light" disabled title="Newer"><i class="fa-solid fa-chevron-left"></i></button>
-                                        <button class="btn btn-light" title="Older"><i class="fa-solid fa-chevron-right"></i></button>
+                                        <button type="button" class="btn btn-light" disabled title="Newer" aria-label="Newer"><i aria-hidden="true" class="fa-solid fa-chevron-left"></i></button>
+                                        <button type="button" class="btn btn-light" title="Older" aria-label="Older"><i aria-hidden="true" class="fa-solid fa-chevron-right"></i></button>
                                     </div>
                                 </div>
                             </div>
@@ -637,7 +634,7 @@
                         <!-- Email List -->
                         <div class="inbox-email-list">
                             <!-- Email 1 - Unread -->
-                            <a href="view-email.html" class="inbox-email-item unread">
+                            <div class="inbox-email-item unread" data-href="view-email.html">
                                 <div class="email-select">
                                     <input type="checkbox" class="form-check-input" onclick="event.stopPropagation()">
                                 </div>
@@ -646,17 +643,17 @@
                                 </div>
                                 <div class="email-sender">Jeremy Massey</div>
                                 <div class="email-content">
-                                    <span class="email-subject">Project kickoff meeting tomorrow</span>
+                                    <a class="email-subject" href="view-email.html">Project kickoff meeting tomorrow</a>
                                     <span class="email-preview"> &ndash; Hi team, just a reminder that we have our project kickoff meeting scheduled for tomorrow at 10 AM...</span>
                                 </div>
                                 <div class="email-meta">
                                     <span class="email-attachment"><i class="fa-solid fa-paperclip"></i></span>
                                     <span class="email-date">10:45 AM</span>
                                 </div>
-                            </a>
+                            </div>
 
                             <!-- Email 2 - Unread, Starred -->
-                            <a href="view-email.html" class="inbox-email-item unread">
+                            <div class="inbox-email-item unread" data-href="view-email.html">
                                 <div class="email-select">
                                     <input type="checkbox" class="form-check-input" onclick="event.stopPropagation()">
                                 </div>
@@ -668,17 +665,17 @@
                                     <span class="badge bg-finance">Finance</span>
                                 </div>
                                 <div class="email-content">
-                                    <span class="email-subject">Q4 Budget report attached</span>
+                                    <a class="email-subject" href="view-email.html">Q4 Budget report attached</a>
                                     <span class="email-preview"> &ndash; Please find the Q4 budget report attached. Let me know if the numbers align with your department's projections...</span>
                                 </div>
                                 <div class="email-meta">
                                     <span class="email-attachment"><i class="fa-solid fa-paperclip"></i></span>
                                     <span class="email-date">9:32 AM</span>
                                 </div>
-                            </a>
+                            </div>
 
                             <!-- Email 3 - Read -->
-                            <a href="view-email.html" class="inbox-email-item">
+                            <div class="inbox-email-item" data-href="view-email.html">
                                 <div class="email-select">
                                     <input type="checkbox" class="form-check-input" onclick="event.stopPropagation()">
                                 </div>
@@ -690,16 +687,16 @@
                                     <span class="badge bg-social">Social</span>
                                 </div>
                                 <div class="email-content">
-                                    <span class="email-subject">Team lunch this Friday</span>
+                                    <a class="email-subject" href="view-email.html">Team lunch this Friday</a>
                                     <span class="email-preview"> &ndash; Hey everyone! I'm organizing a team lunch this Friday at the new Italian place downtown. RSVP by Wednesday please...</span>
                                 </div>
                                 <div class="email-meta">
                                     <span class="email-date">Yesterday</span>
                                 </div>
-                            </a>
+                            </div>
 
                             <!-- Email 4 - Unread -->
-                            <a href="view-email.html" class="inbox-email-item unread">
+                            <div class="inbox-email-item unread" data-href="view-email.html">
                                 <div class="email-select">
                                     <input type="checkbox" class="form-check-input" onclick="event.stopPropagation()">
                                 </div>
@@ -708,17 +705,17 @@
                                 </div>
                                 <div class="email-sender">Ferdinand Meadows</div>
                                 <div class="email-content">
-                                    <span class="email-subject">New design mockups ready for review</span>
+                                    <a class="email-subject" href="view-email.html">New design mockups ready for review</a>
                                     <span class="email-preview"> &ndash; I've uploaded the latest design mockups to Figma. The dashboard and profile sections have been completely reworked...</span>
                                 </div>
                                 <div class="email-meta">
                                     <span class="email-attachment"><i class="fa-solid fa-paperclip"></i></span>
                                     <span class="email-date">Yesterday</span>
                                 </div>
-                            </a>
+                            </div>
 
                             <!-- Email 5 - Read, Starred -->
-                            <a href="view-email.html" class="inbox-email-item">
+                            <div class="inbox-email-item" data-href="view-email.html">
                                 <div class="email-select">
                                     <input type="checkbox" class="form-check-input" onclick="event.stopPropagation()">
                                 </div>
@@ -730,17 +727,17 @@
                                     <span class="badge bg-travel">Travel</span>
                                 </div>
                                 <div class="email-content">
-                                    <span class="email-subject">Conference travel arrangements confirmed</span>
+                                    <a class="email-subject" href="view-email.html">Conference travel arrangements confirmed</a>
                                     <span class="email-preview"> &ndash; Your flights and hotel for the DevConf 2025 conference have been booked. Departure on March 15, returning March 18...</span>
                                 </div>
                                 <div class="email-meta">
                                     <span class="email-attachment"><i class="fa-solid fa-paperclip"></i></span>
                                     <span class="email-date">Feb 10</span>
                                 </div>
-                            </a>
+                            </div>
 
                             <!-- Email 6 - Read -->
-                            <a href="view-email.html" class="inbox-email-item">
+                            <div class="inbox-email-item" data-href="view-email.html">
                                 <div class="email-select">
                                     <input type="checkbox" class="form-check-input" onclick="event.stopPropagation()">
                                 </div>
@@ -749,16 +746,16 @@
                                 </div>
                                 <div class="email-sender">Maxwell Murphy</div>
                                 <div class="email-content">
-                                    <span class="email-subject">Re: API integration progress update</span>
+                                    <a class="email-subject" href="view-email.html">Re: API integration progress update</a>
                                     <span class="email-preview"> &ndash; Good news! The payment gateway integration is now at 85% completion. We resolved the webhook validation issue...</span>
                                 </div>
                                 <div class="email-meta">
                                     <span class="email-date">Feb 9</span>
                                 </div>
-                            </a>
+                            </div>
 
                             <!-- Email 7 - Read -->
-                            <a href="view-email.html" class="inbox-email-item">
+                            <div class="inbox-email-item" data-href="view-email.html">
                                 <div class="email-select">
                                     <input type="checkbox" class="form-check-input" onclick="event.stopPropagation()">
                                 </div>
@@ -767,17 +764,17 @@
                                 </div>
                                 <div class="email-sender">Henry Patterson</div>
                                 <div class="email-content">
-                                    <span class="email-subject">Server maintenance scheduled for Sunday</span>
+                                    <a class="email-subject" href="view-email.html">Server maintenance scheduled for Sunday</a>
                                     <span class="email-preview"> &ndash; We'll be performing scheduled maintenance on the production servers this Sunday from 2 AM to 6 AM EST...</span>
                                 </div>
                                 <div class="email-meta">
                                     <span class="email-attachment"><i class="fa-solid fa-paperclip"></i></span>
                                     <span class="email-date">Feb 8</span>
                                 </div>
-                            </a>
+                            </div>
 
                             <!-- Email 8 - Read -->
-                            <a href="view-email.html" class="inbox-email-item">
+                            <div class="inbox-email-item" data-href="view-email.html">
                                 <div class="email-select">
                                     <input type="checkbox" class="form-check-input" onclick="event.stopPropagation()">
                                 </div>
@@ -789,13 +786,13 @@
                                     <span class="badge bg-promo">Promo</span>
                                 </div>
                                 <div class="email-content">
-                                    <span class="email-subject">New employee onboarding checklist</span>
+                                    <a class="email-subject" href="view-email.html">New employee onboarding checklist</a>
                                     <span class="email-preview"> &ndash; Hi, please complete the onboarding checklist before your first week. This includes setting up your dev environment...</span>
                                 </div>
                                 <div class="email-meta">
                                     <span class="email-date">Feb 7</span>
                                 </div>
-                            </a>
+                            </div>
                         </div>
 
                         <!-- Pagination -->

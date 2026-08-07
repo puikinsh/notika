@@ -1,23 +1,20 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Dashboard One | Notika - Modern Vite Template</title>
     <meta name="description" content="Modern Notika Admin Template powered by Vite 7.1.5">
-    
+
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="/logo/notika-icon.svg">
     <link rel="alternate icon" href="/favicon.ico">
-    
+
     <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 
     <!-- Mobile Menu CSS -->
     <link rel="stylesheet" href="css/mobile-menu.css">
-    
+
     <!-- Font Awesome and all other CSS imported via Vite -->
     <!-- ONLY Vite entry point - everything else bundled -->
 </head>
@@ -38,15 +35,15 @@
                         </a>
                     </div>
                 </div>
-                
+
                 <!-- Navigation Section -->
                 <div class="col-lg-8 col-6">
                     <div class="notika-nav justify-content-end d-flex align-items-center gap-2 gap-lg-3">
-                        
+
                         <!-- Search -->
                         <div class="dropdown">
-                            <button class="notika-nav-link" type="button" data-bs-toggle="dropdown" data-bs-auto-close="outside">
-                                <i class="fa-solid fa-magnifying-glass"></i>
+                            <button class="notika-nav-link" type="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-label="Search">
+                                <i aria-hidden="true" class="fa-solid fa-magnifying-glass"></i>
                             </button>
                             <div class="dropdown-menu dropdown-menu-end notika-dropdown search-dropdown">
                                 <div class="search-input-group">
@@ -55,7 +52,7 @@
                                 </div>
                             </div>
                         </div>
-                        
+
                         <!-- Messages -->
                         <div class="dropdown">
                             <button class="notika-nav-link position-relative" type="button" data-bs-toggle="dropdown">
@@ -94,7 +91,7 @@
                                 </div>
                             </div>
                         </div>
-                        
+
                         <!-- Notifications -->
                         <div class="dropdown">
                             <button class="notika-nav-link position-relative" type="button" data-bs-toggle="dropdown">
@@ -139,7 +136,7 @@
                                 </div>
                             </div>
                         </div>
-                        
+
                         <!-- Tasks - Desktop Only -->
                         <div class="dropdown d-none d-lg-block">
                             <button class="notika-nav-link position-relative" type="button" data-bs-toggle="dropdown">
@@ -184,11 +181,11 @@
                                 </div>
                             </div>
                         </div>
-                        
+
                         <!-- Chat -->
                         <div class="dropdown">
-                            <button class="notika-nav-link" type="button" data-bs-toggle="dropdown">
-                                <i class="fa-solid fa-message"></i>
+                            <button class="notika-nav-link" type="button" data-bs-toggle="dropdown" aria-label="Messages">
+                                <i aria-hidden="true" class="fa-solid fa-message"></i>
                             </button>
                             <div class="dropdown-menu dropdown-menu-end notika-dropdown">
                                 <div class="notika-dropdown-header">
@@ -231,8 +228,8 @@
                         </div>
 
                         <!-- Mobile Menu Toggle -->
-                        <button class="notika-nav-link d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileNavOffcanvas" aria-controls="mobileNavOffcanvas">
-                            <i class="fa-solid fa-bars"></i>
+                        <button class="notika-nav-link d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileNavOffcanvas" aria-controls="mobileNavOffcanvas" aria-label="Toggle navigation">
+                            <i aria-hidden="true" class="fa-solid fa-bars"></i>
                         </button>
                     </div>
                 </div>
@@ -242,7 +239,7 @@
     <!-- End Modern Header -->
 
     <!-- Desktop Navigation -->
-    <nav class="navbar navbar-expand-lg notika-navbar d-none d-lg-block">
+    <nav class="navbar navbar-expand-lg notika-navbar d-none d-lg-block" aria-label="Main navigation">
         <div class="container">
             <div class="navbar-collapse">
                 <ul class="navbar-nav w-100 justify-content-center">
@@ -384,7 +381,7 @@
         </div>
         <div class="offcanvas-body p-0">
             <!-- Mobile Menu List -->
-            <nav class="navbar-nav flex-column">
+            <nav class="navbar-nav flex-column" aria-label="Sidebar navigation">
 
                 <!-- Home Section -->
                 <div class="nav-item border-bottom">
@@ -638,7 +635,7 @@
 							</div>
                             <div class="email-statis-wrap">
                                 <div class="email-round-nock">
-                                    <input type="text" class="knob" value="0" data-rel="55" data-linecap="round" data-width="130" data-bgcolor="#E4E4E4" data-fgcolor="#00c292" data-thickness=".10" data-readonly="true">
+                                    <input type="text" class="knob" value="0" data-rel="55" data-linecap="round" data-width="130" data-bgcolor="#E4E4E4" data-fgcolor="#00c292" data-thickness=".10" data-readonly>
                                 </div>
                                 <div class="email-ctn-nock">
                                     <p>Total Emails Sent</p>
@@ -647,7 +644,7 @@
                             <div class="email-round-gp">
                                 <div class="email-round-pro">
                                     <div class="email-signle-gp">
-                                        <input type="text" class="knob" value="0" data-rel="75" data-linecap="round" data-width="90" data-bgcolor="#E4E4E4" data-fgcolor="#00c292" data-thickness=".10" data-readonly="true" disabled>
+                                        <input type="text" class="knob" value="0" data-rel="75" data-linecap="round" data-width="90" data-bgcolor="#E4E4E4" data-fgcolor="#00c292" data-thickness=".10" data-readonly disabled>
                                     </div>
                                     <div class="email-ctn-nock">
                                         <p>Bounce Rate</p>
@@ -655,7 +652,7 @@
                                 </div>
                                 <div class="email-round-pro">
                                     <div class="email-signle-gp">
-                                        <input type="text" class="knob" value="0" data-rel="35" data-linecap="round" data-width="90" data-bgcolor="#E4E4E4" data-fgcolor="#00c292" data-thickness=".10" data-readonly="true" disabled>
+                                        <input type="text" class="knob" value="0" data-rel="35" data-linecap="round" data-width="90" data-bgcolor="#E4E4E4" data-fgcolor="#00c292" data-thickness=".10" data-readonly disabled>
                                     </div>
                                     <div class="email-ctn-nock">
                                         <p>Total Opened</p>
@@ -663,7 +660,7 @@
                                 </div>
                                 <div class="email-round-pro sm-res-ds-n lg-res-mg-bl">
                                     <div class="email-signle-gp">
-                                        <input type="text" class="knob" value="0" data-rel="45" data-linecap="round" data-width="90" data-bgcolor="#E4E4E4" data-fgcolor="#00c292" data-thickness=".10" data-readonly="true" disabled>
+                                        <input type="text" class="knob" value="0" data-rel="45" data-linecap="round" data-width="90" data-bgcolor="#E4E4E4" data-fgcolor="#00c292" data-thickness=".10" data-readonly disabled>
                                     </div>
                                     <div class="email-ctn-nock">
                                         <p>Total Ignored</p>
@@ -685,7 +682,7 @@
                                 <a href="#">
                                     <div class="recent-post-flex">
                                         <div class="recent-post-img">
-                                            <img src="/post/2.jpg" alt="" />
+                                            <img src="/post/2.jpg" alt="">
                                         </div>
                                         <div class="recent-post-it-ctn">
                                             <h2>Smith</h2>
@@ -698,7 +695,7 @@
                                 <a href="#">
                                     <div class="recent-post-flex rct-pt-mg">
                                         <div class="recent-post-img">
-                                            <img src="/post/1.jpg" alt="" />
+                                            <img src="/post/1.jpg" alt="">
                                         </div>
                                         <div class="recent-post-it-ctn">
                                             <h2>John Deo</h2>
@@ -711,7 +708,7 @@
                                 <a href="#">
                                     <div class="recent-post-flex rct-pt-mg">
                                         <div class="recent-post-img">
-                                            <img src="/post/4.jpg" alt="" />
+                                            <img src="/post/4.jpg" alt="">
                                         </div>
                                         <div class="recent-post-it-ctn">
                                             <h2>Malika</h2>
@@ -724,7 +721,7 @@
                                 <a href="#">
                                     <div class="recent-post-flex rct-pt-mg">
                                         <div class="recent-post-img">
-                                            <img src="/post/2.jpg" alt="" />
+                                            <img src="/post/2.jpg" alt="">
                                         </div>
                                         <div class="recent-post-it-ctn">
                                             <h2>Smith</h2>
@@ -737,7 +734,7 @@
                                 <a href="#">
                                     <div class="recent-post-flex rct-pt-mg">
                                         <div class="recent-post-img">
-                                            <img src="/post/1.jpg" alt="" />
+                                            <img src="/post/1.jpg" alt="">
                                         </div>
                                         <div class="recent-post-it-ctn">
                                             <h2>John Deo</h2>
@@ -839,16 +836,16 @@
                                     </div>
                                 </div>
                             </div>
-                            
+
                             <!-- World Map -->
                             <div class="world-map-container mb-4" style="height: 160px; background: #f8f9fa; border-radius: 8px; position: relative;">
                                 <div id="world-map" style="height: 100%; width: 100%;"></div>
                             </div>
-                            
+
                             <!-- Recent Activity -->
                             <div class="recent-visitors">
                                 <h6 class="text-muted mb-3">Recent Activity</h6>
-                                
+
                                 <div class="visitor-item d-flex align-items-center mb-3 p-2 border rounded">
                                     <img src="/country/1.png" alt="US" class="me-2" style="width: 20px; height: 15px;">
                                     <div class="flex-grow-1">
@@ -859,7 +856,7 @@
                                         <div class="small text-muted">Firefox • Mac OSX</div>
                                     </div>
                                 </div>
-                                
+
                                 <div class="visitor-item d-flex align-items-center mb-3 p-2 border rounded">
                                     <img src="/country/2.png" alt="AU" class="me-2" style="width: 20px; height: 15px;">
                                     <div class="flex-grow-1">
@@ -870,7 +867,7 @@
                                         <div class="small text-muted">Chrome • Windows</div>
                                     </div>
                                 </div>
-                                
+
                                 <div class="visitor-item d-flex align-items-center p-2 border rounded">
                                     <img src="/country/3.png" alt="BR" class="me-2" style="width: 20px; height: 15px;">
                                     <div class="flex-grow-1">
@@ -895,7 +892,7 @@
                         <div class="card-box d-flex flex-column">
                             <!-- Todo Controls -->
                             <div class="d-flex justify-content-end align-items-center mb-3">
-                                <button class="btn btn-outline-secondary btn-sm" id="btn-archive">
+                                <button type="button" class="btn btn-outline-secondary btn-sm" id="btn-archive">
                                     <i class="fa-solid fa-archive me-1"></i>Archive
                                 </button>
                             </div>
@@ -911,12 +908,12 @@
                                     </div>
                                 </div>
                             </div>
-                            
+
                             <!-- Todo List -->
                             <div class="flex-grow-1" style="max-height: 350px; overflow-y: auto;">
                                 <ul class="list-group list-group-flush" id="todo-list"></ul>
                             </div>
-                            
+
                             <!-- Add Todo Form -->
                             <div class="mt-auto pt-3 border-top">
                                 <div class="input-group">
@@ -926,7 +923,7 @@
                                     </button>
                                 </div>
                             </div>
-                            
+
                         </div>
                     </div>
                 </div>
@@ -954,7 +951,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    
+
                                     <!-- Message 2 -->
                                     <div class="d-flex mb-3 justify-content-end">
                                         <div class="me-2 text-end">
@@ -968,7 +965,7 @@
                                         </div>
                                         <img src="/post/2.jpg" alt="You" class="rounded-circle" style="width: 35px; height: 35px; object-fit: cover;">
                                     </div>
-                                    
+
                                     <!-- Message 3 -->
                                     <div class="d-flex mb-3">
                                         <img src="/post/1.jpg" alt="John" class="rounded-circle me-2" style="width: 35px; height: 35px; object-fit: cover;">
@@ -982,7 +979,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    
+
                                     <!-- Message 4 -->
                                     <div class="d-flex mb-3 justify-content-end">
                                         <div class="me-2 text-end">
@@ -996,7 +993,7 @@
                                         </div>
                                         <img src="/post/2.jpg" alt="You" class="rounded-circle" style="width: 35px; height: 35px; object-fit: cover;">
                                     </div>
-                                    
+
                                     <!-- Message 5 -->
                                     <div class="d-flex mb-3">
                                         <img src="/post/4.jpg" alt="Sarah" class="rounded-circle me-2" style="width: 35px; height: 35px; object-fit: cover;">
@@ -1010,7 +1007,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    
+
                                     <!-- Message 6 -->
                                     <div class="d-flex mb-3 justify-content-end">
                                         <div class="me-2 text-end">
@@ -1024,7 +1021,7 @@
                                         </div>
                                         <img src="/post/2.jpg" alt="You" class="rounded-circle" style="width: 35px; height: 35px; object-fit: cover;">
                                     </div>
-                                    
+
                                     <!-- Message 7 -->
                                     <div class="d-flex mb-3">
                                         <img src="/post/1.jpg" alt="John" class="rounded-circle me-2" style="width: 35px; height: 35px; object-fit: cover;">
@@ -1040,19 +1037,19 @@
                                     </div>
                                 </div>
                             </div>
-                            
+
                             <!-- Chat Input -->
                             <div class="p-3 border-top bg-light" style="margin-top: 20px;">
                                 <div class="d-flex gap-2 align-items-end">
                                     <div class="flex-grow-1">
                                         <input type="text" class="form-control chat-input border-0 shadow-sm" placeholder="Type your message..." aria-label="Chat message" style="border-radius: 20px; padding: 12px 16px;">
                                     </div>
-                                    <button class="btn btn-primary notika-chat-btn d-flex align-items-center justify-content-center" type="button" style="width: 44px; height: 44px; border-radius: 50%; padding: 0; border: none;">
-                                        <i class="fa-solid fa-paper-plane" style="font-size: 16px;"></i>
+                                    <button class="btn btn-primary notika-chat-btn d-flex align-items-center justify-content-center" type="button" style="width: 44px; height: 44px; border-radius: 50%; padding: 0; border: none;" aria-label="Paper plane">
+                                        <i aria-hidden="true" class="fa-solid fa-paper-plane" style="font-size: 16px;"></i>
                                     </button>
                                 </div>
                             </div>
-                            
+
                         </div>
                     </div>
                 </div>
@@ -1088,7 +1085,7 @@
                                         <div class="stats-cpu-line"></div>
                                     </div>
                                 </div>
-                                
+
                                 <div class="perf-metric-card">
                                     <div class="metric-icon">
                                         <i class="fa-solid fa-memory"></i>
@@ -1102,7 +1099,7 @@
                                         <div class="stats-memory-bar"></div>
                                     </div>
                                 </div>
-                                
+
                                 <div class="perf-metric-card">
                                     <div class="metric-icon">
                                         <i class="fa-solid fa-hdd"></i>
@@ -1116,7 +1113,7 @@
                                         <div class="stats-disk-area"></div>
                                     </div>
                                 </div>
-                                
+
                                 <div class="perf-metric-card">
                                     <div class="metric-icon">
                                         <i class="fa-solid fa-wifi"></i>
@@ -1131,7 +1128,7 @@
                                     </div>
                                 </div>
                             </div>
-                            
+
                             <!-- System Status Indicators -->
                             <div class="system-status-row">
                                 <div class="status-indicator">
@@ -1151,7 +1148,7 @@
                                     <span>Storage: Normal</span>
                                 </div>
                             </div>
-                            
+
                             <!-- Additional Performance Data -->
                             <div class="system-additional-metrics">
                                 <div class="additional-metric-row">
@@ -1163,7 +1160,7 @@
                                         </div>
                                         <div class="metric-trend positive">↓ -12ms</div>
                                     </div>
-                                    
+
                                     <div class="additional-metric-item">
                                         <div class="metric-label">Requests/sec</div>
                                         <div class="metric-value">
@@ -1172,7 +1169,7 @@
                                         </div>
                                         <div class="metric-trend positive">↗ +23</div>
                                     </div>
-                                    
+
                                     <div class="additional-metric-item">
                                         <div class="metric-label">Error Rate</div>
                                         <div class="metric-value">
@@ -1182,7 +1179,7 @@
                                         <div class="metric-trend positive">↓ -0.03%</div>
                                     </div>
                                 </div>
-                                
+
                                 <div class="server-uptime-section">
                                     <div class="uptime-header">
                                         <h4>System Uptime</h4>
@@ -1207,7 +1204,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="col-lg-4 col-md-4 col-sm-12 col-12">
                     <div class="activity-overview-inner notika-shadow mg-t-30">
                         <div class="curved-inner-pro">
@@ -1221,7 +1218,7 @@
                             <div class="activity-chart-container">
                                 <div id="user-activity-chart" class="activity-chart"></div>
                             </div>
-                            
+
                             <!-- Activity Stats -->
                             <div class="activity-stats-list">
                                 <div class="activity-stat-row">
@@ -1234,7 +1231,7 @@
                                     </div>
                                     <div class="stat-change positive">+12%</div>
                                 </div>
-                                
+
                                 <div class="activity-stat-row">
                                     <div class="stat-icon">
                                         <i class="fa-solid fa-mouse-pointer" style="color: #03a9f3;"></i>
@@ -1245,7 +1242,7 @@
                                     </div>
                                     <div class="stat-change positive">+8%</div>
                                 </div>
-                                
+
                                 <div class="activity-stat-row">
                                     <div class="stat-icon">
                                         <i class="fa-solid fa-clock" style="color: #ffc107;"></i>
@@ -1256,7 +1253,7 @@
                                     </div>
                                     <div class="stat-change negative">-3%</div>
                                 </div>
-                                
+
                                 <div class="activity-stat-row">
                                     <div class="stat-icon">
                                         <i class="fa-solid fa-chart-line" style="color: #e91e63;"></i>
@@ -1282,7 +1279,7 @@
             <div class="row">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-12">
                     <div class="footer-copy-right">
-                        <p>Copyright © 2026 
+                        <p>Copyright © 2026
 . All rights reserved. Template by <a href="https://colorlib.com">Colorlib</a>.</p>
                     </div>
                 </div>

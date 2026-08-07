@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en" data-page-module="dialog">
 <head>
     <meta charset="utf-8">
@@ -11,9 +11,6 @@
     <link rel="alternate icon" href="/favicon.ico">
 
     <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 
     <!-- Mobile Menu CSS -->
     <link rel="stylesheet" href="css/mobile-menu.css">
@@ -38,15 +35,15 @@
                         </a>
                     </div>
                 </div>
-                
+
                 <!-- Navigation Section -->
                 <div class="col-lg-8 col-6">
                     <div class="notika-nav justify-content-end d-flex align-items-center gap-2 gap-lg-3">
-                        
+
                         <!-- Search -->
                         <div class="dropdown">
-                            <button class="notika-nav-link" type="button" data-bs-toggle="dropdown" data-bs-auto-close="outside">
-                                <i class="fa-solid fa-magnifying-glass"></i>
+                            <button class="notika-nav-link" type="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-label="Search">
+                                <i aria-hidden="true" class="fa-solid fa-magnifying-glass"></i>
                             </button>
                             <div class="dropdown-menu dropdown-menu-end notika-dropdown search-dropdown">
                                 <div class="search-input-group">
@@ -55,7 +52,7 @@
                                 </div>
                             </div>
                         </div>
-                        
+
                         <!-- Messages -->
                         <div class="dropdown">
                             <button class="notika-nav-link position-relative" type="button" data-bs-toggle="dropdown">
@@ -94,7 +91,7 @@
                                 </div>
                             </div>
                         </div>
-                        
+
                         <!-- Notifications -->
                         <div class="dropdown">
                             <button class="notika-nav-link position-relative" type="button" data-bs-toggle="dropdown">
@@ -139,7 +136,7 @@
                                 </div>
                             </div>
                         </div>
-                        
+
                         <!-- Tasks - Desktop Only -->
                         <div class="dropdown d-none d-lg-block">
                             <button class="notika-nav-link position-relative" type="button" data-bs-toggle="dropdown">
@@ -184,11 +181,11 @@
                                 </div>
                             </div>
                         </div>
-                        
+
                         <!-- Chat -->
                         <div class="dropdown">
-                            <button class="notika-nav-link" type="button" data-bs-toggle="dropdown">
-                                <i class="fa-solid fa-message"></i>
+                            <button class="notika-nav-link" type="button" data-bs-toggle="dropdown" aria-label="Messages">
+                                <i aria-hidden="true" class="fa-solid fa-message"></i>
                             </button>
                             <div class="dropdown-menu dropdown-menu-end notika-dropdown">
                                 <div class="notika-dropdown-header">
@@ -231,8 +228,8 @@
                         </div>
 
                         <!-- Mobile Menu Toggle -->
-                        <button class="notika-nav-link d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileNavOffcanvas" aria-controls="mobileNavOffcanvas">
-                            <i class="fa-solid fa-bars"></i>
+                        <button class="notika-nav-link d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileNavOffcanvas" aria-controls="mobileNavOffcanvas" aria-label="Toggle navigation">
+                            <i aria-hidden="true" class="fa-solid fa-bars"></i>
                         </button>
                     </div>
                 </div>
@@ -242,7 +239,7 @@
     <!-- End Modern Header -->
 
     <!-- Desktop Navigation -->
-    <nav class="navbar navbar-expand-lg notika-navbar d-none d-lg-block">
+    <nav class="navbar navbar-expand-lg notika-navbar d-none d-lg-block" aria-label="Main navigation">
         <div class="container">
             <div class="navbar-collapse">
                 <ul class="navbar-nav w-100 justify-content-center">
@@ -384,7 +381,7 @@
         </div>
         <div class="offcanvas-body p-0">
             <!-- Mobile Menu List -->
-            <nav class="navbar-nav flex-column">
+            <nav class="navbar-nav flex-column" aria-label="Sidebar navigation">
 
                 <!-- Home Section -->
                 <div class="nav-item border-bottom">
@@ -547,7 +544,7 @@
                             </div>
                             <div class="col-lg-6 col-md-6 col-sm-6 col-3">
                                 <div class="breadcomb-report">
-                                    <button data-bs-toggle="tooltip" data-bs-placement="left" title="Download Report" class="btn"><i class="fa-solid fa-paper-plane"></i></button>
+                                    <button type="button" data-bs-toggle="tooltip" data-bs-placement="left" title="Download Report" class="btn" aria-label="Download Report"><i aria-hidden="true" class="fa-solid fa-paper-plane"></i></button>
                                 </div>
                             </div>
                         </div>
@@ -570,7 +567,7 @@
                         </div>
                         <h5 class="dialog-card-title">Basic Alert</h5>
                         <p class="dialog-card-desc">A simple informational dialog with a single action button.</p>
-                        <button class="btn btn-info" id="sa-basic">Try it</button>
+                        <button type="button" class="btn btn-info" id="sa-basic">Try it</button>
                     </div>
                 </div>
 
@@ -582,7 +579,7 @@
                         </div>
                         <h5 class="dialog-card-title">Title with Text</h5>
                         <p class="dialog-card-desc">A dialog with a bold title and descriptive text underneath.</p>
-                        <button class="btn btn-primary" id="sa-title">Try it</button>
+                        <button type="button" class="btn btn-primary" id="sa-title">Try it</button>
                     </div>
                 </div>
 
@@ -594,7 +591,7 @@
                         </div>
                         <h5 class="dialog-card-title">Success Message</h5>
                         <p class="dialog-card-desc">A confirmation dialog indicating a successful operation.</p>
-                        <button class="btn btn-success" id="sa-success">Try it</button>
+                        <button type="button" class="btn btn-success" id="sa-success">Try it</button>
                     </div>
                 </div>
 
@@ -606,7 +603,7 @@
                         </div>
                         <h5 class="dialog-card-title">Warning Confirm</h5>
                         <p class="dialog-card-desc">A warning with Confirm and Cancel buttons that trigger callbacks.</p>
-                        <button class="btn btn-warning" id="sa-warning">Try it</button>
+                        <button type="button" class="btn btn-warning" id="sa-warning">Try it</button>
                     </div>
                 </div>
 
@@ -618,7 +615,7 @@
                         </div>
                         <h5 class="dialog-card-title">Cancel Callback</h5>
                         <p class="dialog-card-desc">Execute different actions based on whether the user confirms or cancels.</p>
-                        <button class="btn btn-danger" id="sa-params">Try it</button>
+                        <button type="button" class="btn btn-danger" id="sa-params">Try it</button>
                     </div>
                 </div>
 
@@ -630,7 +627,7 @@
                         </div>
                         <h5 class="dialog-card-title">Image Header</h5>
                         <p class="dialog-card-desc">A dialog with a custom image displayed in the header area.</p>
-                        <button class="btn btn-secondary" id="sa-image">Try it</button>
+                        <button type="button" class="btn btn-secondary" id="sa-image">Try it</button>
                     </div>
                 </div>
 
@@ -642,7 +639,7 @@
                         </div>
                         <h5 class="dialog-card-title">Auto Close Timer</h5>
                         <p class="dialog-card-desc">This dialog automatically closes after a countdown timer expires.</p>
-                        <button class="btn btn-outline-dark" id="sa-close">Try it</button>
+                        <button type="button" class="btn btn-outline-dark" id="sa-close">Try it</button>
                     </div>
                 </div>
 
@@ -654,7 +651,7 @@
                         </div>
                         <h5 class="dialog-card-title">Input Prompt</h5>
                         <p class="dialog-card-desc">A dialog with a text input field that captures user input.</p>
-                        <button class="btn btn-outline-info" id="sa-input">Try it</button>
+                        <button type="button" class="btn btn-outline-info" id="sa-input">Try it</button>
                     </div>
                 </div>
             </div>
