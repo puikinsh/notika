@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en" data-page-module="animations">
 <head>
     <meta charset="utf-8">
@@ -11,9 +11,6 @@
     <link rel="alternate icon" href="/favicon.ico">
 
     <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 
     <!-- Font Awesome and all other CSS imported via Vite -->
     <!-- ONLY Vite entry point - everything else bundled -->
@@ -35,15 +32,15 @@
                         </a>
                     </div>
                 </div>
-                
+
                 <!-- Navigation Section -->
                 <div class="col-lg-8 col-6">
                     <div class="notika-nav justify-content-end d-flex align-items-center gap-2 gap-lg-3">
-                        
+
                         <!-- Search -->
                         <div class="dropdown">
-                            <button class="notika-nav-link" type="button" data-bs-toggle="dropdown" data-bs-auto-close="outside">
-                                <i class="fa-solid fa-magnifying-glass"></i>
+                            <button class="notika-nav-link" type="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-label="Search">
+                                <i aria-hidden="true" class="fa-solid fa-magnifying-glass"></i>
                             </button>
                             <div class="dropdown-menu dropdown-menu-end notika-dropdown search-dropdown">
                                 <div class="search-input-group">
@@ -52,7 +49,7 @@
                                 </div>
                             </div>
                         </div>
-                        
+
                         <!-- Messages -->
                         <div class="dropdown">
                             <button class="notika-nav-link position-relative" type="button" data-bs-toggle="dropdown">
@@ -91,7 +88,7 @@
                                 </div>
                             </div>
                         </div>
-                        
+
                         <!-- Notifications -->
                         <div class="dropdown">
                             <button class="notika-nav-link position-relative" type="button" data-bs-toggle="dropdown">
@@ -136,7 +133,7 @@
                                 </div>
                             </div>
                         </div>
-                        
+
                         <!-- Tasks - Desktop Only -->
                         <div class="dropdown d-none d-lg-block">
                             <button class="notika-nav-link position-relative" type="button" data-bs-toggle="dropdown">
@@ -181,11 +178,11 @@
                                 </div>
                             </div>
                         </div>
-                        
+
                         <!-- Chat -->
                         <div class="dropdown">
-                            <button class="notika-nav-link" type="button" data-bs-toggle="dropdown">
-                                <i class="fa-solid fa-message"></i>
+                            <button class="notika-nav-link" type="button" data-bs-toggle="dropdown" aria-label="Messages">
+                                <i aria-hidden="true" class="fa-solid fa-message"></i>
                             </button>
                             <div class="dropdown-menu dropdown-menu-end notika-dropdown">
                                 <div class="notika-dropdown-header">
@@ -228,8 +225,8 @@
                         </div>
 
                         <!-- Mobile Menu Toggle -->
-                        <button class="notika-nav-link d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileNavOffcanvas" aria-controls="mobileNavOffcanvas">
-                            <i class="fa-solid fa-bars"></i>
+                        <button class="notika-nav-link d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileNavOffcanvas" aria-controls="mobileNavOffcanvas" aria-label="Toggle navigation">
+                            <i aria-hidden="true" class="fa-solid fa-bars"></i>
                         </button>
                     </div>
                 </div>
@@ -239,7 +236,7 @@
     <!-- End Modern Header -->
 
     <!-- Desktop Navigation -->
-    <nav class="navbar navbar-expand-lg notika-navbar d-none d-lg-block">
+    <nav class="navbar navbar-expand-lg notika-navbar d-none d-lg-block" aria-label="Main navigation">
         <div class="container">
             <div class="navbar-collapse">
                 <ul class="navbar-nav w-100 justify-content-center">
@@ -381,7 +378,7 @@
         </div>
         <div class="offcanvas-body p-0">
             <!-- Mobile Menu List -->
-            <nav class="navbar-nav flex-column">
+            <nav class="navbar-nav flex-column" aria-label="Sidebar navigation">
 
                 <!-- Home Section -->
                 <div class="nav-item border-bottom">
@@ -544,7 +541,7 @@
                             </div>
                             <div class="col-lg-6 col-md-6 col-sm-6 col-3">
                                 <div class="breadcomb-report">
-                                    <button data-bs-toggle="tooltip" data-bs-placement="left" title="Download Report" class="btn"><i class="fa-solid fa-paper-plane"></i></button>
+                                    <button type="button" data-bs-toggle="tooltip" data-bs-placement="left" title="Download Report" class="btn" aria-label="Download Report"><i aria-hidden="true" class="fa-solid fa-paper-plane"></i></button>
                                 </div>
                             </div>
                         </div>
@@ -566,30 +563,30 @@
                             <p>Click on the buttons below to start the animation action in image.</p>
                         </div>
                         <div class="animation-img mg-b-15">
-                            <img class="animate-one" src="img/widgets/animation-dashboard.svg" alt="" />
+                            <img class="animate-one" src="img/widgets/animation-dashboard.svg" alt="">
                         </div>
                         <div class="animation-action">
                             <div class="row">
                                 <div class="col-lg-6">
                                     <div class="animation-btn">
-                                        <button class="btn ant-nk-st bounce-ac">bounce</button>
+                                        <button type="button" class="btn ant-nk-st bounce-ac">bounce</button>
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="animation-btn sm-res-mg-t-10 tb-res-mg-t-10 dk-res-mg-t-10">
-                                        <button class="btn ant-nk-st flash-ac">flash</button>
+                                        <button type="button" class="btn ant-nk-st flash-ac">flash</button>
                                     </div>
                                 </div>
                             </div>
                             <div class="row mg-t-10">
                                 <div class="col-lg-6">
                                     <div class="animation-btn">
-                                        <button class="btn ant-nk-st pulse-ac">pulse</button>
+                                        <button type="button" class="btn ant-nk-st pulse-ac">pulse</button>
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="animation-btn sm-res-mg-t-10 tb-res-mg-t-10 dk-res-mg-t-10">
-                                        <button class="btn ant-nk-st rubberBand-ac">rubberBand</button>
+                                        <button type="button" class="btn ant-nk-st rubberBand-ac">rubberBand</button>
                                     </div>
                                 </div>
                             </div>
@@ -603,30 +600,30 @@
                             <p>Click on the buttons below to start the animation action in image.</p>
                         </div>
                         <div class="animation-img mg-b-15">
-                            <img class="animate-two" src="img/widgets/animation-analytics.svg" alt="" />
+                            <img class="animate-two" src="img/widgets/animation-analytics.svg" alt="">
                         </div>
                         <div class="animation-action">
                             <div class="row">
                                 <div class="col-lg-6">
                                     <div class="animation-btn">
-                                        <button class="btn ant-nk-st bounceIn-ac">bounceIn</button>
+                                        <button type="button" class="btn ant-nk-st bounceIn-ac">bounceIn</button>
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="animation-btn sm-res-mg-t-10 tb-res-mg-t-10 dk-res-mg-t-10">
-                                        <button class="btn ant-nk-st bounceInDown-ac">bounceInDown</button>
+                                        <button type="button" class="btn ant-nk-st bounceInDown-ac">bounceInDown</button>
                                     </div>
                                 </div>
                             </div>
                             <div class="row mg-t-10">
                                 <div class="col-lg-6">
                                     <div class="animation-btn">
-                                        <button class="btn ant-nk-st bounceInLeft-ac">bounceInLeft</button>
+                                        <button type="button" class="btn ant-nk-st bounceInLeft-ac">bounceInLeft</button>
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="animation-btn sm-res-mg-t-10 tb-res-mg-t-10 dk-res-mg-t-10">
-                                        <button class="btn ant-nk-st bounceInUp-ac">bounceInRight</button>
+                                        <button type="button" class="btn ant-nk-st bounceInUp-ac">bounceInRight</button>
                                     </div>
                                 </div>
                             </div>
@@ -640,30 +637,30 @@
                             <p>Click on the buttons below to start the animation action in image.</p>
                         </div>
                         <div class="animation-img mg-b-15">
-                            <img class="animate-three" src="img/widgets/animation-ui.svg" alt="" />
+                            <img class="animate-three" src="img/widgets/animation-ui.svg" alt="">
                         </div>
                         <div class="animation-action">
                             <div class="row">
                                 <div class="col-lg-6">
                                     <div class="animation-btn">
-                                        <button class="btn ant-nk-st bounceOut-ac">bounceOut</button>
+                                        <button type="button" class="btn ant-nk-st bounceOut-ac">bounceOut</button>
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="animation-btn sm-res-mg-t-10 tb-res-mg-t-10 dk-res-mg-t-10">
-                                        <button class="btn ant-nk-st bounceOutDown-ac">bounceOutDown</button>
+                                        <button type="button" class="btn ant-nk-st bounceOutDown-ac">bounceOutDown</button>
                                     </div>
                                 </div>
                             </div>
                             <div class="row mg-t-10">
                                 <div class="col-lg-6">
                                     <div class="animation-btn">
-                                        <button class="btn ant-nk-st bounceOutLeft-ac">bounceOutLeft</button>
+                                        <button type="button" class="btn ant-nk-st bounceOutLeft-ac">bounceOutLeft</button>
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="animation-btn sm-res-mg-t-10 tb-res-mg-t-10 dk-res-mg-t-10">
-                                        <button class="btn ant-nk-st bounceOutRight-ac">bounceOutRight</button>
+                                        <button type="button" class="btn ant-nk-st bounceOutRight-ac">bounceOutRight</button>
                                     </div>
                                 </div>
                             </div>
@@ -679,30 +676,30 @@
                             <p>Click on the buttons below to start the animation action in image.</p>
                         </div>
                         <div class="animation-img mg-b-15">
-                            <img class="animate-four" src="img/widgets/animation-dashboard.svg" alt="" />
+                            <img class="animate-four" src="img/widgets/animation-dashboard.svg" alt="">
                         </div>
                         <div class="animation-action">
                             <div class="row">
                                 <div class="col-lg-6">
                                     <div class="animation-btn">
-                                        <button class="btn ant-nk-st fadeIn-ac">fadeIn</button>
+                                        <button type="button" class="btn ant-nk-st fadeIn-ac">fadeIn</button>
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="animation-btn sm-res-mg-t-10 tb-res-mg-t-10 dk-res-mg-t-10">
-                                        <button class="btn ant-nk-st fadeInDown-ac">fadeInDown</button>
+                                        <button type="button" class="btn ant-nk-st fadeInDown-ac">fadeInDown</button>
                                     </div>
                                 </div>
                             </div>
                             <div class="row mg-t-10">
                                 <div class="col-lg-6">
                                     <div class="animation-btn">
-                                        <button class="btn ant-nk-st fadeInDownBig-ac">fadeInDownBig</button>
+                                        <button type="button" class="btn ant-nk-st fadeInDownBig-ac">fadeInDownBig</button>
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="animation-btn sm-res-mg-t-10 tb-res-mg-t-10 dk-res-mg-t-10">
-                                        <button class="btn ant-nk-st fadeInLeft-ac">fadeInLeft</button>
+                                        <button type="button" class="btn ant-nk-st fadeInLeft-ac">fadeInLeft</button>
                                     </div>
                                 </div>
                             </div>
@@ -716,30 +713,30 @@
                             <p>Click on the buttons below to start the animation action in image.</p>
                         </div>
                         <div class="animation-img mg-b-15">
-                            <img class="animate-five" src="img/widgets/animation-analytics.svg" alt="" />
+                            <img class="animate-five" src="img/widgets/animation-analytics.svg" alt="">
                         </div>
                         <div class="animation-action">
                             <div class="row">
                                 <div class="col-lg-6">
                                     <div class="animation-btn">
-                                        <button class="btn ant-nk-st fadeOut-ac">fadeOut</button>
+                                        <button type="button" class="btn ant-nk-st fadeOut-ac">fadeOut</button>
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="animation-btn sm-res-mg-t-10 tb-res-mg-t-10 dk-res-mg-t-10">
-                                        <button class="btn ant-nk-st fadeOutDown-ac">fadeOutDown</button>
+                                        <button type="button" class="btn ant-nk-st fadeOutDown-ac">fadeOutDown</button>
                                     </div>
                                 </div>
                             </div>
                             <div class="row mg-t-10">
                                 <div class="col-lg-6">
                                     <div class="animation-btn">
-                                        <button class="btn ant-nk-st fadeOutDownBig-ac">fadeOutDownBig</button>
+                                        <button type="button" class="btn ant-nk-st fadeOutDownBig-ac">fadeOutDownBig</button>
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="animation-btn sm-res-mg-t-10 tb-res-mg-t-10 dk-res-mg-t-10">
-                                        <button class="btn ant-nk-st fadeOutLeft-ac">fadeOutLeft</button>
+                                        <button type="button" class="btn ant-nk-st fadeOutLeft-ac">fadeOutLeft</button>
                                     </div>
                                 </div>
                             </div>
@@ -753,30 +750,30 @@
                             <p>Click on the buttons below to start the animation action in image.</p>
                         </div>
                         <div class="animation-img mg-b-15">
-                            <img class="animate-six" src="img/widgets/animation-ui.svg" alt="" />
+                            <img class="animate-six" src="img/widgets/animation-ui.svg" alt="">
                         </div>
                         <div class="animation-action">
                             <div class="row">
                                 <div class="col-lg-6">
                                     <div class="animation-btn">
-                                        <button class="btn ant-nk-st flip-ac">flip</button>
+                                        <button type="button" class="btn ant-nk-st flip-ac">flip</button>
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="animation-btn sm-res-mg-t-10 tb-res-mg-t-10 dk-res-mg-t-10">
-                                        <button class="btn ant-nk-st flipInX-ac">flipInX</button>
+                                        <button type="button" class="btn ant-nk-st flipInX-ac">flipInX</button>
                                     </div>
                                 </div>
                             </div>
                             <div class="row mg-t-10">
                                 <div class="col-lg-6">
                                     <div class="animation-btn">
-                                        <button class="btn ant-nk-st flipInY-ac">flipInY</button>
+                                        <button type="button" class="btn ant-nk-st flipInY-ac">flipInY</button>
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="animation-btn sm-res-mg-t-10 tb-res-mg-t-10 dk-res-mg-t-10">
-                                        <button class="btn ant-nk-st flipOutX-ac">flipOutX</button>
+                                        <button type="button" class="btn ant-nk-st flipOutX-ac">flipOutX</button>
                                     </div>
                                 </div>
                             </div>
@@ -792,30 +789,30 @@
                             <p>Click on the buttons below to start the animation action in image.</p>
                         </div>
                         <div class="animation-img mg-b-15">
-                            <img class="animate-seven" src="img/widgets/animation-dashboard.svg" alt="" />
+                            <img class="animate-seven" src="img/widgets/animation-dashboard.svg" alt="">
                         </div>
                         <div class="animation-action">
                             <div class="row">
                                 <div class="col-lg-6">
                                     <div class="animation-btn">
-                                        <button class="btn ant-nk-st slideInUp-ac">slideInUp</button>
+                                        <button type="button" class="btn ant-nk-st slideInUp-ac">slideInUp</button>
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="animation-btn sm-res-mg-t-10 tb-res-mg-t-10 dk-res-mg-t-10">
-                                        <button class="btn ant-nk-st slideInDown-ac">slideInDown</button>
+                                        <button type="button" class="btn ant-nk-st slideInDown-ac">slideInDown</button>
                                     </div>
                                 </div>
                             </div>
                             <div class="row mg-t-10">
                                 <div class="col-lg-6">
                                     <div class="animation-btn">
-                                        <button class="btn ant-nk-st slideInLeft-ac">slideInLeft</button>
+                                        <button type="button" class="btn ant-nk-st slideInLeft-ac">slideInLeft</button>
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="animation-btn sm-res-mg-t-10 tb-res-mg-t-10 dk-res-mg-t-10">
-                                        <button class="btn ant-nk-st slideInRight-ac">slideInRight</button>
+                                        <button type="button" class="btn ant-nk-st slideInRight-ac">slideInRight</button>
                                     </div>
                                 </div>
                             </div>
@@ -829,30 +826,30 @@
                             <p>Click on the buttons below to start the animation action in image.</p>
                         </div>
                         <div class="animation-img mg-b-15">
-                            <img class="animate-eight" src="img/widgets/animation-analytics.svg" alt="" />
+                            <img class="animate-eight" src="img/widgets/animation-analytics.svg" alt="">
                         </div>
                         <div class="animation-action">
                             <div class="row">
                                 <div class="col-lg-6">
                                     <div class="animation-btn">
-                                        <button class="btn ant-nk-st rotateIn-ac">rotateIn</button>
+                                        <button type="button" class="btn ant-nk-st rotateIn-ac">rotateIn</button>
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="animation-btn sm-res-mg-t-10 tb-res-mg-t-10 dk-res-mg-t-10">
-                                        <button class="btn ant-nk-st rotateInDownLeft-ac">rotateInDownLeft</button>
+                                        <button type="button" class="btn ant-nk-st rotateInDownLeft-ac">rotateInDownLeft</button>
                                     </div>
                                 </div>
                             </div>
                             <div class="row mg-t-10">
                                 <div class="col-lg-6">
                                     <div class="animation-btn">
-                                        <button class="btn ant-nk-st rotateInDownRight-ac">rotateInDownRight</button>
+                                        <button type="button" class="btn ant-nk-st rotateInDownRight-ac">rotateInDownRight</button>
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="animation-btn sm-res-mg-t-10 tb-res-mg-t-10 dk-res-mg-t-10">
-                                        <button class="btn ant-nk-st rotateInUpLeft-ac">rotateInUpLeft</button>
+                                        <button type="button" class="btn ant-nk-st rotateInUpLeft-ac">rotateInUpLeft</button>
                                     </div>
                                 </div>
                             </div>
@@ -866,30 +863,30 @@
                             <p>Click on the buttons below to start the animation action in image.</p>
                         </div>
                         <div class="animation-img mg-b-15">
-                            <img class="animate-nine" src="img/widgets/animation-ui.svg" alt="" />
+                            <img class="animate-nine" src="img/widgets/animation-ui.svg" alt="">
                         </div>
                         <div class="animation-action">
                             <div class="row">
                                 <div class="col-lg-6">
                                     <div class="animation-btn">
-                                        <button class="btn ant-nk-st rotateOut-ac">rotateOut</button>
+                                        <button type="button" class="btn ant-nk-st rotateOut-ac">rotateOut</button>
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="animation-btn sm-res-mg-t-10 tb-res-mg-t-10 dk-res-mg-t-10">
-                                        <button class="btn ant-nk-st rotateOutDownLeft-ac">rotateOutDownLeft</button>
+                                        <button type="button" class="btn ant-nk-st rotateOutDownLeft-ac">rotateOutDownLeft</button>
                                     </div>
                                 </div>
                             </div>
                             <div class="row mg-t-10">
                                 <div class="col-lg-6">
                                     <div class="animation-btn">
-                                        <button class="btn ant-nk-st rotateOutDownRight-ac">rotateOutDownRight</button>
+                                        <button type="button" class="btn ant-nk-st rotateOutDownRight-ac">rotateOutDownRight</button>
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="animation-btn sm-res-mg-t-10 tb-res-mg-t-10 dk-res-mg-t-10">
-                                        <button class="btn ant-nk-st rotateOutUpLeft-ac">rotateOutUpLeft</button>
+                                        <button type="button" class="btn ant-nk-st rotateOutUpLeft-ac">rotateOutUpLeft</button>
                                     </div>
                                 </div>
                             </div>
@@ -905,30 +902,30 @@
                             <p>Click on the buttons below to start the animation action in image.</p>
                         </div>
                         <div class="animation-img mg-b-15">
-                            <img class="animate-ten" src="img/widgets/animation-dashboard.svg" alt="" />
+                            <img class="animate-ten" src="img/widgets/animation-dashboard.svg" alt="">
                         </div>
                         <div class="animation-action">
                             <div class="row">
                                 <div class="col-lg-6">
                                     <div class="animation-btn">
-                                        <button class="btn ant-nk-st slideOutUp-ac">slideOutUp</button>
+                                        <button type="button" class="btn ant-nk-st slideOutUp-ac">slideOutUp</button>
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="animation-btn sm-res-mg-t-10 tb-res-mg-t-10 dk-res-mg-t-10">
-                                        <button class="btn ant-nk-st slideOutDown-ac">slideOutDown</button>
+                                        <button type="button" class="btn ant-nk-st slideOutDown-ac">slideOutDown</button>
                                     </div>
                                 </div>
                             </div>
                             <div class="row mg-t-10">
                                 <div class="col-lg-6">
                                     <div class="animation-btn">
-                                        <button class="btn ant-nk-st slideOutLeft-ac">slideOutLeft</button>
+                                        <button type="button" class="btn ant-nk-st slideOutLeft-ac">slideOutLeft</button>
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="animation-btn sm-res-mg-t-10 tb-res-mg-t-10 dk-res-mg-t-10">
-                                        <button class="btn ant-nk-st slideOutRight-ac">slideOutRight</button>
+                                        <button type="button" class="btn ant-nk-st slideOutRight-ac">slideOutRight</button>
                                     </div>
                                 </div>
                             </div>
@@ -942,30 +939,30 @@
                             <p>Click on the buttons below to start the animation action in image.</p>
                         </div>
                         <div class="animation-img mg-b-15">
-                            <img class="animate-eleven" src="img/widgets/animation-analytics.svg" alt="" />
+                            <img class="animate-eleven" src="img/widgets/animation-analytics.svg" alt="">
                         </div>
                         <div class="animation-action">
                             <div class="row">
                                 <div class="col-lg-6">
                                     <div class="animation-btn">
-                                        <button class="btn ant-nk-st zoomIn-ac">zoomIn</button>
+                                        <button type="button" class="btn ant-nk-st zoomIn-ac">zoomIn</button>
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="animation-btn sm-res-mg-t-10 tb-res-mg-t-10 dk-res-mg-t-10">
-                                        <button class="btn ant-nk-st zoomInDown-ac">zoomInDown</button>
+                                        <button type="button" class="btn ant-nk-st zoomInDown-ac">zoomInDown</button>
                                     </div>
                                 </div>
                             </div>
                             <div class="row mg-t-10">
                                 <div class="col-lg-6">
                                     <div class="animation-btn">
-                                        <button class="btn ant-nk-st zoomInLeft-ac">zoomInLeft</button>
+                                        <button type="button" class="btn ant-nk-st zoomInLeft-ac">zoomInLeft</button>
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="animation-btn sm-res-mg-t-10 tb-res-mg-t-10 dk-res-mg-t-10">
-                                        <button class="btn ant-nk-st zoomInRight-ac">zoomInRight</button>
+                                        <button type="button" class="btn ant-nk-st zoomInRight-ac">zoomInRight</button>
                                     </div>
                                 </div>
                             </div>
@@ -979,30 +976,30 @@
                             <p>Click on the buttons below to start the animation action in image.</p>
                         </div>
                         <div class="animation-img mg-b-15">
-                            <img class="animate-twelve" src="img/widgets/animation-ui.svg" alt="" />
+                            <img class="animate-twelve" src="img/widgets/animation-ui.svg" alt="">
                         </div>
                         <div class="animation-action">
                             <div class="row">
                                 <div class="col-lg-6">
                                     <div class="animation-btn">
-                                        <button class="btn ant-nk-st zoomOut-ac">zoomOut</button>
+                                        <button type="button" class="btn ant-nk-st zoomOut-ac">zoomOut</button>
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="animation-btn sm-res-mg-t-10 tb-res-mg-t-10 dk-res-mg-t-10">
-                                        <button class="btn ant-nk-st zoomOutDown-ac">zoomOutDown</button>
+                                        <button type="button" class="btn ant-nk-st zoomOutDown-ac">zoomOutDown</button>
                                     </div>
                                 </div>
                             </div>
                             <div class="row mg-t-10">
                                 <div class="col-lg-6">
                                     <div class="animation-btn">
-                                        <button class="btn ant-nk-st zoomOutLeft-ac">zoomOutLeft</button>
+                                        <button type="button" class="btn ant-nk-st zoomOutLeft-ac">zoomOutLeft</button>
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="animation-btn sm-res-mg-t-10 tb-res-mg-t-10 dk-res-mg-t-10">
-                                        <button class="btn ant-nk-st zoomOutRight-ac">zoomOutRight</button>
+                                        <button type="button" class="btn ant-nk-st zoomOutRight-ac">zoomOutRight</button>
                                     </div>
                                 </div>
                             </div>

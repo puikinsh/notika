@@ -1,18 +1,15 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en" data-page-module="notification">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Notifications | Notika - Modern Vite Template</title>
     <meta name="description" content="Notification components with animations and toast messages for Notika Admin Template">
-    
+
     <!-- Favicon -->
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
-    
+
     <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 
     <!-- Essential Notika Template CSS -->
 
@@ -36,15 +33,15 @@
                         </a>
                     </div>
                 </div>
-                
+
                 <!-- Navigation Section -->
                 <div class="col-lg-8 col-6">
                     <div class="notika-nav justify-content-end d-flex align-items-center gap-2 gap-lg-3">
-                        
+
                         <!-- Search -->
                         <div class="dropdown">
-                            <button class="notika-nav-link" type="button" data-bs-toggle="dropdown" data-bs-auto-close="outside">
-                                <i class="fa-solid fa-magnifying-glass"></i>
+                            <button class="notika-nav-link" type="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-label="Search">
+                                <i aria-hidden="true" class="fa-solid fa-magnifying-glass"></i>
                             </button>
                             <div class="dropdown-menu dropdown-menu-end notika-dropdown search-dropdown">
                                 <div class="search-input-group">
@@ -53,7 +50,7 @@
                                 </div>
                             </div>
                         </div>
-                        
+
                         <!-- Messages -->
                         <div class="dropdown">
                             <button class="notika-nav-link position-relative" type="button" data-bs-toggle="dropdown">
@@ -92,7 +89,7 @@
                                 </div>
                             </div>
                         </div>
-                        
+
                         <!-- Notifications -->
                         <div class="dropdown">
                             <button class="notika-nav-link position-relative" type="button" data-bs-toggle="dropdown">
@@ -137,7 +134,7 @@
                                 </div>
                             </div>
                         </div>
-                        
+
                         <!-- Tasks - Desktop Only -->
                         <div class="dropdown d-none d-lg-block">
                             <button class="notika-nav-link position-relative" type="button" data-bs-toggle="dropdown">
@@ -182,11 +179,11 @@
                                 </div>
                             </div>
                         </div>
-                        
+
                         <!-- Chat -->
                         <div class="dropdown">
-                            <button class="notika-nav-link" type="button" data-bs-toggle="dropdown">
-                                <i class="fa-solid fa-message"></i>
+                            <button class="notika-nav-link" type="button" data-bs-toggle="dropdown" aria-label="Messages">
+                                <i aria-hidden="true" class="fa-solid fa-message"></i>
                             </button>
                             <div class="dropdown-menu dropdown-menu-end notika-dropdown">
                                 <div class="notika-dropdown-header">
@@ -229,8 +226,8 @@
                         </div>
 
                         <!-- Mobile Menu Toggle -->
-                        <button class="notika-nav-link d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileNavOffcanvas" aria-controls="mobileNavOffcanvas">
-                            <i class="fa-solid fa-bars"></i>
+                        <button class="notika-nav-link d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileNavOffcanvas" aria-controls="mobileNavOffcanvas" aria-label="Toggle navigation">
+                            <i aria-hidden="true" class="fa-solid fa-bars"></i>
                         </button>
                     </div>
                 </div>
@@ -240,7 +237,7 @@
     <!-- End Modern Header -->
 
     <!-- Desktop Navigation -->
-    <nav class="navbar navbar-expand-lg notika-navbar d-none d-lg-block">
+    <nav class="navbar navbar-expand-lg notika-navbar d-none d-lg-block" aria-label="Main navigation">
         <div class="container">
             <div class="navbar-collapse">
                 <ul class="navbar-nav w-100 justify-content-center">
@@ -382,7 +379,7 @@
         </div>
         <div class="offcanvas-body p-0">
             <!-- Mobile Menu List -->
-            <nav class="navbar-nav flex-column">
+            <nav class="navbar-nav flex-column" aria-label="Sidebar navigation">
 
                 <!-- Home Section -->
                 <div class="nav-item border-bottom">
@@ -532,7 +529,7 @@
                 <div class="col-lg-12 col-md-12 col-sm-12 col-12">
                     <div class="breadcomb-list">
                         <div class="row">
-                            <div class="col-lg-6 col-md-6  col-12">
+                            <div class="col-lg-6 col-md-6 col-12">
                                 <div class="breadcomb-wp">
                                     <div class="breadcomb-icon">
                                         <i class="fa-solid fa-bell"></i>
@@ -543,9 +540,9 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-6 col-md-6  col-3">
+                            <div class="col-lg-6 col-md-6 col-3">
                                 <div class="breadcomb-report">
-                                    <button data-bs-toggle="tooltip" data-placement="left" title="Download Report" class="btn"><i class="fa-solid fa-paper-plane"></i></button>
+                                    <button type="button" data-bs-toggle="tooltip" data-placement="left" title="Download Report" class="btn" aria-label="Download Report"><i aria-hidden="true" class="fa-solid fa-paper-plane"></i></button>
                                 </div>
                             </div>
                         </div>
@@ -573,12 +570,12 @@
                             <div class="notification-demo">
                             <h2>Notification Positions</h2>
                             <div class="btn-demo ntm-gp">
-                                <button class="btn btn-info waves-effect" data-notification-position="top-left">Top Left</button>
-                                <button class="btn btn-info waves-effect" data-notification-position="top-center">Top Center</button>
-                                <button class="btn btn-info waves-effect" data-notification-position="top-right">Top Right</button>
-                                <button class="btn btn-info waves-effect" data-notification-position="bottom-left">Bottom Left</button>
-                                <button class="btn btn-info waves-effect" data-notification-position="bottom-center">Bottom Center</button>
-                                <button class="btn btn-info waves-effect" data-notification-position="bottom-right">Bottom Right</button>
+                                <button type="button" class="btn btn-info waves-effect" data-notification-position="top-left">Top Left</button>
+                                <button type="button" class="btn btn-info waves-effect" data-notification-position="top-center">Top Center</button>
+                                <button type="button" class="btn btn-info waves-effect" data-notification-position="top-right">Top Right</button>
+                                <button type="button" class="btn btn-info waves-effect" data-notification-position="bottom-left">Bottom Left</button>
+                                <button type="button" class="btn btn-info waves-effect" data-notification-position="bottom-center">Bottom Center</button>
+                                <button type="button" class="btn btn-info waves-effect" data-notification-position="bottom-right">Bottom Right</button>
                             </div>
                         </div>
 
@@ -586,12 +583,12 @@
                         <div class="notification-demo mg-t-20">
                             <h2>Notification Types</h2>
                             <div class="btn-demo ntm-gp">
-                                <button class="btn btn-success waves-effect" data-notification-type="success">Success</button>
-                                <button class="btn btn-info waves-effect" data-notification-type="info">Info</button>
-                                <button class="btn btn-warning notika-btn-warning waves-effect" data-notification-type="warning">Warning</button>
-                                <button class="btn btn-danger waves-effect" data-notification-type="danger">Danger</button>
-                                <button class="btn btn-inverse waves-effect" data-notification-type="dark">Inverse</button>
-                                <button class="btn btn-primary waves-effect" data-notification-type="primary">Primary</button>
+                                <button type="button" class="btn btn-success waves-effect" data-notification-type="success">Success</button>
+                                <button type="button" class="btn btn-info waves-effect" data-notification-type="info">Info</button>
+                                <button type="button" class="btn btn-warning notika-btn-warning waves-effect" data-notification-type="warning">Warning</button>
+                                <button type="button" class="btn btn-danger waves-effect" data-notification-type="danger">Danger</button>
+                                <button type="button" class="btn btn-inverse waves-effect" data-notification-type="dark">Inverse</button>
+                                <button type="button" class="btn btn-primary waves-effect" data-notification-type="primary">Primary</button>
                             </div>
                         </div>
 
@@ -599,12 +596,12 @@
                         <div class="notification-demo animate-nt mg-t-20">
                             <h2>Animation Styles</h2>
                             <div class="btn-demo ntm-gp">
-                                <button class="btn btn-info waves-effect" data-notification-animation="fade">Fade In</button>
-                                <button class="btn btn-info waves-effect" data-notification-animation="slide">Slide In</button>
-                                <button class="btn btn-info waves-effect" data-notification-animation="bounce">Bounce In</button>
-                                <button class="btn btn-info waves-effect" data-notification-animation="flip">Flip In</button>
-                                <button class="btn btn-info waves-effect" data-notification-animation="rotate">Rotate In</button>
-                                <button class="btn btn-info waves-effect" data-notification-animation="zoom">Zoom In</button>
+                                <button type="button" class="btn btn-info waves-effect" data-notification-animation="fade">Fade In</button>
+                                <button type="button" class="btn btn-info waves-effect" data-notification-animation="slide">Slide In</button>
+                                <button type="button" class="btn btn-info waves-effect" data-notification-animation="bounce">Bounce In</button>
+                                <button type="button" class="btn btn-info waves-effect" data-notification-animation="flip">Flip In</button>
+                                <button type="button" class="btn btn-info waves-effect" data-notification-animation="rotate">Rotate In</button>
+                                <button type="button" class="btn btn-info waves-effect" data-notification-animation="zoom">Zoom In</button>
                             </div>
                             </div>
                         </div>
@@ -666,7 +663,7 @@
                                 <h6 class="mb-1">Task Completed</h6>
                                 <small class="text-muted">Your export has been processed successfully</small>
                             </div>
-                            <button class="btn btn-sm btn-success">View</button>
+                            <button type="button" class="btn btn-sm btn-success">View</button>
                         </div>
 
                         <!-- Custom notification with progress -->
@@ -698,8 +695,8 @@
                                 <div class="flex-grow-1">
                                     <h6 class="mb-1">System Update Available</h6>
                                     <p class="mb-2 small">Version 2.4.0 is ready to install</p>
-                                    <button class="btn btn-sm btn-warning me-2">Update Now</button>
-                                    <button class="btn btn-sm btn-outline-warning">Later</button>
+                                    <button type="button" class="btn btn-sm btn-warning me-2">Update Now</button>
+                                    <button type="button" class="btn btn-sm btn-outline-warning">Later</button>
                                 </div>
                             </div>
                         </div>
@@ -743,7 +740,7 @@
                             </div>
                         </div>
 
-                            <button class="btn btn-primary" id="triggerCustomNotification">
+                            <button type="button" class="btn btn-primary" id="triggerCustomNotification">
                                 <i class="fa-solid fa-bell me-2"></i>Show Custom Notification
                             </button>
                         </div>
@@ -760,7 +757,7 @@
             <div class="row">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-12">
                     <div class="footer-copy-right">
-                        <p>Copyright © 2026 
+                        <p>Copyright © 2026
 . All rights reserved. Template by <a href="https://colorlib.com">Colorlib</a>.</p>
                     </div>
                 </div>

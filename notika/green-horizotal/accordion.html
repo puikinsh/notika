@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -11,9 +11,6 @@
     <link rel="alternate icon" href="/favicon.ico">
 
     <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 
     <!-- Mobile Menu CSS -->
     <link rel="stylesheet" href="css/mobile-menu.css">
@@ -38,15 +35,15 @@
                         </a>
                     </div>
                 </div>
-                
+
                 <!-- Navigation Section -->
                 <div class="col-lg-8 col-6">
                     <div class="notika-nav justify-content-end d-flex align-items-center gap-2 gap-lg-3">
-                        
+
                         <!-- Search -->
                         <div class="dropdown">
-                            <button class="notika-nav-link" type="button" data-bs-toggle="dropdown" data-bs-auto-close="outside">
-                                <i class="fa-solid fa-magnifying-glass"></i>
+                            <button class="notika-nav-link" type="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-label="Search">
+                                <i aria-hidden="true" class="fa-solid fa-magnifying-glass"></i>
                             </button>
                             <div class="dropdown-menu dropdown-menu-end notika-dropdown search-dropdown">
                                 <div class="search-input-group">
@@ -55,7 +52,7 @@
                                 </div>
                             </div>
                         </div>
-                        
+
                         <!-- Messages -->
                         <div class="dropdown">
                             <button class="notika-nav-link position-relative" type="button" data-bs-toggle="dropdown">
@@ -94,7 +91,7 @@
                                 </div>
                             </div>
                         </div>
-                        
+
                         <!-- Notifications -->
                         <div class="dropdown">
                             <button class="notika-nav-link position-relative" type="button" data-bs-toggle="dropdown">
@@ -139,7 +136,7 @@
                                 </div>
                             </div>
                         </div>
-                        
+
                         <!-- Tasks - Desktop Only -->
                         <div class="dropdown d-none d-lg-block">
                             <button class="notika-nav-link position-relative" type="button" data-bs-toggle="dropdown">
@@ -184,11 +181,11 @@
                                 </div>
                             </div>
                         </div>
-                        
+
                         <!-- Chat -->
                         <div class="dropdown">
-                            <button class="notika-nav-link" type="button" data-bs-toggle="dropdown">
-                                <i class="fa-solid fa-message"></i>
+                            <button class="notika-nav-link" type="button" data-bs-toggle="dropdown" aria-label="Messages">
+                                <i aria-hidden="true" class="fa-solid fa-message"></i>
                             </button>
                             <div class="dropdown-menu dropdown-menu-end notika-dropdown">
                                 <div class="notika-dropdown-header">
@@ -231,8 +228,8 @@
                         </div>
 
                         <!-- Mobile Menu Toggle -->
-                        <button class="notika-nav-link d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileNavOffcanvas" aria-controls="mobileNavOffcanvas">
-                            <i class="fa-solid fa-bars"></i>
+                        <button class="notika-nav-link d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileNavOffcanvas" aria-controls="mobileNavOffcanvas" aria-label="Toggle navigation">
+                            <i aria-hidden="true" class="fa-solid fa-bars"></i>
                         </button>
                     </div>
                 </div>
@@ -242,7 +239,7 @@
     <!-- End Modern Header -->
 
     <!-- Desktop Navigation -->
-    <nav class="navbar navbar-expand-lg notika-navbar d-none d-lg-block">
+    <nav class="navbar navbar-expand-lg notika-navbar d-none d-lg-block" aria-label="Main navigation">
         <div class="container">
             <div class="navbar-collapse">
                 <ul class="navbar-nav w-100 justify-content-center">
@@ -384,7 +381,7 @@
         </div>
         <div class="offcanvas-body p-0">
             <!-- Mobile Menu List -->
-            <nav class="navbar-nav flex-column">
+            <nav class="navbar-nav flex-column" aria-label="Sidebar navigation">
 
                 <!-- Home Section -->
                 <div class="nav-item border-bottom">
@@ -547,7 +544,7 @@
                             </div>
                             <div class="col-lg-6 col-md-6 col-sm-6 col-3">
                                 <div class="breadcomb-report">
-                                    <button data-bs-toggle="tooltip" data-bs-placement="left" title="Download Report" class="btn"><i class="fa-solid fa-paper-plane"></i></button>
+                                    <button type="button" data-bs-toggle="tooltip" data-bs-placement="left" title="Download Report" class="btn" aria-label="Download Report"><i aria-hidden="true" class="fa-solid fa-paper-plane"></i></button>
                                 </div>
                             </div>
                         </div>
@@ -755,7 +752,7 @@
                                 <div class="accordion-item">
                                     <h2 class="accordion-header">
                                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#icon-3" aria-expanded="false" aria-controls="icon-3">
-                                            <i class="fa-solid fa-palette me-2"></i> Display & Theme
+                                            <i class="fa-solid fa-palette me-2"></i> Display &amp; Theme
                                         </button>
                                     </h2>
                                     <div id="icon-3" class="accordion-collapse collapse" data-bs-parent="#iconAccordion">
@@ -776,7 +773,7 @@
                     <div class="recent-post-wrapper notika-shadow">
                         <div class="recent-post-ctn">
                             <div class="recent-post-title">
-                                <h2>Green & Blue Accents</h2>
+                                <h2>Green &amp; Blue Accents</h2>
                                 <p>Standard BS5 accordions with colored left-border accents using inline <code>border-left</code> styles.</p>
                             </div>
                         </div>
@@ -842,7 +839,7 @@
                     <div class="recent-post-wrapper notika-shadow">
                         <div class="recent-post-ctn">
                             <div class="recent-post-title">
-                                <h2>Pink & Purple Accents</h2>
+                                <h2>Pink &amp; Purple Accents</h2>
                                 <p>Same colored left-border pattern with danger and accent theme colors.</p>
                             </div>
                         </div>
@@ -930,7 +927,7 @@
                                                 <div class="accordion-item">
                                                     <h2 class="accordion-header">
                                                         <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#inner-1a" aria-expanded="true" aria-controls="inner-1a">
-                                                            HTML & CSS
+                                                            HTML &amp; CSS
                                                         </button>
                                                     </h2>
                                                     <div id="inner-1a" class="accordion-collapse collapse show" data-bs-parent="#nestedInner1">
@@ -995,7 +992,7 @@
                                 <div class="accordion-item">
                                     <h2 class="accordion-header">
                                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#nested-3" aria-expanded="false" aria-controls="nested-3">
-                                            DevOps & Infrastructure
+                                            DevOps &amp; Infrastructure
                                         </button>
                                     </h2>
                                     <div id="nested-3" class="accordion-collapse collapse" data-bs-parent="#nestedAccordion">
@@ -1012,7 +1009,7 @@
                     <div class="recent-post-wrapper notika-shadow">
                         <div class="recent-post-ctn">
                             <div class="recent-post-title">
-                                <h2>Disabled & Contextual States</h2>
+                                <h2>Disabled &amp; Contextual States</h2>
                                 <p>Accordion items can be disabled or styled with contextual background colors for status indicators.</p>
                             </div>
                         </div>
@@ -1044,7 +1041,7 @@
                                 </div>
                                 <div class="accordion-item">
                                     <h2 class="accordion-header">
-                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#state-3" aria-expanded="false" aria-controls="state-3" disabled aria-disabled="true">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#state-3" aria-expanded="false" aria-controls="state-3" disabled aria-disabled>
                                             <i class="fa-solid fa-lock me-2 text-muted"></i> Restricted Access
                                         </button>
                                     </h2>
