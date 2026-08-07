@@ -2,6 +2,117 @@
 
 All notable changes to the Notika admin dashboard template.
 
+## [3.0.0] - 2026-08-07
+
+A security, performance and accessibility release. All 32 open Dependabot alerts
+are resolved, Google Fonts no longer loads from a third-party CDN, the per-page
+JavaScript payload is roughly halved, and the HTML validator now passes cleanly
+across all 41 pages. **Contains breaking changes — see below.**
+
+### ⚠️ Breaking Changes
+
+| Change | Notes |
+|--------|-------|
+| `npm run type-check` removed, `typescript` and `@types/node` uninstalled | The project has zero `.ts` files and no `tsconfig.json`, so `tsc --noEmit` only ever errored |
+| `swiper` removed | Nothing imported it. The stale local `css/swiper.min.css` import was dropped too |
+| `npm run lint` rewritten | ESLint 10 is flat-config only and removed `--ext`; the old script could not run at all |
+| Production source maps disabled | They exposed the original sources and added ~2 MB to `dist/` |
+| Build minifier switched to Oxc | Vite 8 no longer bundles esbuild for minification |
+| Inbox rows are `<div data-href>` rather than `<a>` | An `<a>` cannot legally contain the row's checkbox and star controls. The email subject is now the real link, and the row stays clickable |
+
+### 🔒 Security
+
+- **All 32 Dependabot alerts resolved** — handlebars, vite, immutable, postcss,
+  svgo, picomatch, brace-expansion, esbuild, flatted, rollup, minimatch and
+  swiper. `npm audit` reports **0 vulnerabilities**.
+- **Google Fonts is now self-hosted.** All 41 pages fetched Roboto from
+  `fonts.googleapis.com`/`fonts.gstatic.com` on every load — a third-party
+  request that leaks visitor IPs and has been ruled a GDPR violation in
+  Germany. Roboto now ships from `@fontsource/roboto`. No page loads any
+  third-party script, stylesheet or font.
+- Source maps are no longer published to `dist/`.
+- Reviewed every `innerHTML` sink: all three interpolate loop indices or
+  internal constants, never user input. No XSS issues found.
+
+### ⚡ Performance
+
+Per-page JavaScript dropped from roughly **88 kB to 45 kB gzipped**.
+
+- **Chart.js, Leaflet and AOS now load on demand** (`src/js/modules/lazy.js`).
+  All three were imported eagerly by `main.js`, so every one of the 41 pages
+  paid for them. In practice Chart.js is used on 7 pages, Leaflet on 3, and AOS
+  on **none** — no page carries a `data-aos` attribute, so it was initialising
+  and animating nothing.
+- Verified in a real browser: `buttons.html` and `typography.html` now load
+  **74 kB and 69 kB** of JavaScript with no chart, map or font requests at all.
+- Removed the unused `swiper.min.css` import from the shared bundle.
+
+### ♿ Accessibility
+
+`npm run lint:html` went from **1601 errors to 0**.
+
+- 261 icon-only buttons and links gained an `aria-label`, with their icons
+  marked `aria-hidden="true"`.
+- 232 buttons gained an explicit `type` (none were inside a `<form>`, so this
+  is hygiene rather than a live bug).
+- Both `<nav>` landmarks on every page gained distinct accessible names
+  ("Main navigation" / "Sidebar navigation") — 78 duplicate-landmark errors.
+- Fixed `<input>` nested inside `<a>` on the inbox (8 rows), a `<style>` block
+  inside `<body>`, `<footer>` inside `<blockquote>` reading as a landmark, a
+  redundant `for` attribute, and a `<form>` with no submit control.
+- 7 password fields gained `autocomplete`; 22 boolean attributes normalised;
+  17 duplicated class tokens removed; 12 raw ampersands encoded; 35
+  self-closed void elements and 284 trailing-whitespace errors cleaned up.
+
+### 🐛 Bug Fixes
+
+- **`npm run lint` was completely broken.** ESLint 10 dropped `--ext` and
+  requires flat config; there was no config file at all. Added
+  `eslint.config.js` with separate browser and Node scopes, then fixed the 10
+  real errors it surfaced.
+- **`npm run type-check` was broken** and has been removed (see above).
+- **`npm run build` broke under Vite 8** in two ways: Rolldown only accepts
+  `manualChunks` as a function, and Vite 8 no longer bundles esbuild for
+  minification.
+- **`tabs.js` called `new bootstrap.Tooltip()` on an undeclared global** with no
+  guard, so it threw if the global was not yet set. Both `tabs.js` and
+  `color.js` now import Bootstrap properly.
+- Fixed redundant regex escapes in `data-table.js` and `form-elements.js`, and
+  dead assignments in `form-examples.js` and `tabs.js`.
+- The 41 page entry points are now globbed rather than hand-maintained, so
+  adding a page no longer means remembering to register it in `vite.config.js`.
+- `vite.config.js` uses `import.meta.dirname` instead of `process.cwd()`, which
+  depended on the directory npm happened to be invoked from.
+
+### 📦 Dependencies
+
+Major upgrades: **Vite 7 → 8**, cssnano 7 → 8.
+
+| Package | Previous | Updated |
+|---------|----------|---------|
+| @fontsource/roboto | — | **5.2.8** (new — replaces the Google Fonts CDN) |
+| @fortawesome/* | 7.2.0 | 7.3.1 |
+| autoprefixer | 10.4.24 | 10.5.4 |
+| cropperjs | 2.1.0 | 2.1.1 |
+| cssnano | 7.1.2 | **8.0.4** |
+| dayjs | 1.11.19 | 1.11.21 |
+| eslint | 10.0.0 | 10.8.0 |
+| prettier | 3.8.1 | 3.9.6 |
+| sass | 1.97.3 | 1.102.0 |
+| vite | 7.3.1 | **8.2.1** |
+| vite-plugin-handlebars | 2.0.0 | 2.0.3 |
+
+**Removed:** `swiper`, `typescript`, `@types/node`.
+**Added:** `@fontsource/roboto`, `html-validate`, `@eslint/js`, `globals`, `glob`.
+
+### 🔧 Added
+
+- `eslint.config.js`, `.prettierrc` and `.htmlvalidate.json` — the project had
+  none of these, so two of its three npm scripts could not run.
+- `npm run lint:html` for HTML and accessibility validation.
+
+---
+
 ## [2.0.0] - 2026-02-14
 
 Complete modernization of the original Colorlib template. Every HTML page, stylesheet, and script has been rewritten or replaced. The project now uses a Vite build system with ES6 modules.

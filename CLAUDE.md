@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-**Notika** is a modernized admin dashboard template. Originally a Bootstrap 3 template from Colorlib, now running Vite 7.3.1 + Bootstrap 5.3.8 + ES6 modules. No jQuery.
+**Notika** is a modernized admin dashboard template. Originally a Bootstrap 3 template from Colorlib, now running Vite 8.2.1 + Bootstrap 5.3.8 + ES6 modules. No jQuery.
 
 ## Commands
 
@@ -12,8 +12,9 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 npm run dev        # Dev server with HMR (port 3100)
 npm run build      # Production build to dist/
 npm run preview    # Preview production build (port 4173)
-npm run lint       # ESLint
-npm run type-check # TypeScript checking
+npm run lint       # ESLint (flat config in eslint.config.js)
+npm run lint:html  # html-validate across all 41 pages
+npm run format     # Prettier
 ```
 
 ## Architecture
@@ -77,7 +78,7 @@ export { MyPage }
 
 ### CSS loading
 
-All CSS is imported through `main.js` via Vite — both library CSS (Bootstrap, AOS, Leaflet) and template CSS files. Pages should NOT have `<link>` tags for CSS that Vite already bundles. The only `<link>` tags in `<head>` should be for Google Fonts and favicon.
+All CSS is imported through `main.js` via Vite — both library CSS (Bootstrap, AOS, Leaflet) and template CSS files. Pages should NOT have `<link>` tags for CSS that Vite already bundles. Roboto is self-hosted via `@fontsource/roboto` (imported in `main.js`), so the only `<link>` tag in `<head>` should be the favicon. Do not reintroduce a Google Fonts CDN link — it is a third-party request and a GDPR concern.
 
 ### Standardized HTML head
 
@@ -108,7 +109,9 @@ All CSS is imported through `main.js` via Vite — both library CSS (Bootstrap, 
 **Build config**: `vite.config.js`
 
 - Multi-page app: all 41 pages in `rollupOptions.input`
-- Manual chunks: `vendor` (Bootstrap), `charts` (Chart.js), `ui` (Swiper, AOS)
+- Manual chunks: `vendor` (Bootstrap), `charts` (Chart.js). Vite 8 builds with Rolldown, so `manualChunks` must be a **function**, and minification uses Oxc rather than esbuild.
+- Page entry points are globbed from `notika/green-horizotal/*.html`; adding a page needs no config change.
+- Production source maps are off.
 - Handlebars plugin computes page context (title, nav active flags, breadcrumb icons) from filename
 - SCSS uses `api: 'modern-compiler'`; PostCSS runs autoprefixer + cssnano
 - Build target: `es2022`, output to `../../dist` (project root `dist/`)
@@ -155,7 +158,15 @@ Both `free-solid-svg-icons` and `free-brands-svg-icons` packages are available.
 ## Stack
 
 - **Vite** 7.3.1, **Bootstrap** 5.3.8, **Chart.js** 4.5.1, **Font Awesome** 7.2.0
-- **Swiper** 12.1.0, **Leaflet** 1.9.4, **AOS** 2.3.4, **Day.js** 1.11.19
+- **Leaflet** 1.9.4, **AOS** 2.3.4, **Day.js** 1.11.21
+
+### On-demand libraries
+
+Chart.js, Leaflet and AOS are **not** in the main bundle. `src/js/modules/lazy.js` exposes `loadChart()`, `loadLeaflet()` and `loadAOS()`; each caches its promise. Consumers in `main.js` check the DOM first and return before fetching, so a page with no canvas never downloads Chart.js. Keep that guard-before-await order when adding new consumers.
+
+### Accessibility
+
+`npm run lint:html` passes clean and enforces: icon-only controls carry an `aria-label` with `aria-hidden` icons; every `<button>` has an explicit `type`; both `<nav>` landmarks have distinct names; password inputs have `autocomplete`. Inbox rows are `<div data-href>`, not `<a>` — an anchor cannot contain their checkbox and star controls.
 - **Sonner** 2.0.7, **Tom Select** 2.5.1, **noUiSlider** 15.8.1, **Flatpickr** 4.6.13
 - **CodeMirror** 6.x, **Cropper.js** 2.1.0
 
