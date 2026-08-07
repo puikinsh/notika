@@ -1,3 +1,4 @@
+import * as bootstrap from 'bootstrap'
 import { NotikaApp } from '../main.js'
 import { NotikaUI } from '../modules/ui.js'
 
@@ -50,7 +51,7 @@ class ColorPage extends NotikaApp {
 
     initTooltips() {
         const tooltipElements = document.querySelectorAll('[data-bs-toggle="tooltip"]')
-        if (tooltipElements.length > 0 && window.bootstrap) {
+        if (tooltipElements.length > 0) {
             tooltipElements.forEach(element => {
                 new bootstrap.Tooltip(element)
             })

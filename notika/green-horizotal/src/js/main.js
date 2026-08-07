@@ -4,9 +4,14 @@
  */
 
 // Import ALL styles through Vite bundling
+// Self-hosted Roboto (was loaded from fonts.googleapis.com on every page,
+// which is a third-party request and a GDPR concern in the EU).
+import '@fontsource/roboto/300.css'
+import '@fontsource/roboto/400.css'
+import '@fontsource/roboto/500.css'
+import '@fontsource/roboto/700.css'
+
 import 'bootstrap/dist/css/bootstrap.min.css'
-import 'aos/dist/aos.css'
-import 'leaflet/dist/leaflet.css'
 
 // Note: Notika template CSS files are loaded via <link> tags in HTML head for better compatibility
 
@@ -153,7 +158,6 @@ library.add(
 dom.watch()
 
 // Import ALL original Notika CSS files through Vite (in order from HTML)
-import '../../css/swiper.min.css'
 import '../css/dashboard-widgets.css'
 import '../../css/wave/waves.min.css'
 import '../../style.css'
@@ -169,13 +173,9 @@ import '../../css/mobile-menu.css'
 import '../css/modern.scss'
 
 // Import ALL JavaScript through Vite bundling
-import { Chart, registerables } from 'chart.js'
 import * as bootstrap from 'bootstrap'
-import AOS from 'aos'
-import L from 'leaflet'
+import { loadChart, loadLeaflet, loadAOS } from './modules/lazy.js'
 
-// Register Chart.js components
-Chart.register(...registerables)
 
 // Make Bootstrap globally available
 window.bootstrap = bootstrap
@@ -202,9 +202,10 @@ class NotikaApp {
       console.log('✅ All CSS processed by Vite')
 
       // Initialize modern libraries properly
-      this.initializeCharts()
-      this.initializeUI()
-      this.initializeAnimations()
+      await this.initializeCharts()
+      await this.initializeUI()
+      this.initializeRowLinks()
+      await this.initializeAnimations()
       this.setupModernFeatures()
       this.preventMobileMenuOnDesktop()
 
@@ -222,7 +223,11 @@ class NotikaApp {
     }
   }
   
-  initializeCharts() {
+  async initializeCharts() {
+    // Nothing to draw on most pages, so do not pay for Chart.js there.
+    if (!document.querySelector('#curved-line-chart, #recent-items-chart, canvas')) return
+    const Chart = await loadChart()
+
     // Initialize main sales chart (curved-line-chart)
     const curvedChart = document.getElementById('curved-line-chart')
     if (curvedChart) {
@@ -304,13 +309,15 @@ class NotikaApp {
     }
     
     // Initialize sparkline charts from original data
-    this.initializeSparklines()
+    await this.initializeSparklines()
     
     // Initialize knob charts
     this.initializeKnobs()
   }
 
-  initializeSparklines() {
+  async initializeSparklines() {
+    if (!document.querySelector('[class*="sparkline-"]')) return
+    const Chart = await loadChart()
     // Map sparkline classes to their data from original
     const sparklineData = {
       'sparkline-bar-stats1': [9,4,8,6,5,6,4,8,3,5,9,5],
@@ -402,7 +409,19 @@ class NotikaApp {
     })
   }
   
-  initializeUI() {
+  initializeRowLinks() {
+    // Inbox rows are <div data-href> because an <a> cannot legally contain
+    // their checkbox and star controls. The subject inside each row is the
+    // real link; this just makes the whole row clickable too.
+    document.querySelectorAll('[data-href]').forEach((row) => {
+      row.addEventListener('click', (e) => {
+        if (e.target.closest('a, button, input, label, .email-star, .email-select')) return
+        window.location.href = row.dataset.href
+      })
+    })
+  }
+
+  async initializeUI() {
     // Initialize Bootstrap 5.3.8 components (Vite bundled)
     const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
     tooltipTriggerList.forEach(tooltipTriggerEl => {
@@ -424,13 +443,13 @@ class NotikaApp {
     this.initializeChat()
     
     // Initialize World Map
-    this.initializeWorldMap()
+    await this.initializeWorldMap()
     
     // Initialize Server Statistics
-    this.initializeServerStats()
+    await this.initializeServerStats()
     
     // Initialize User Activity Chart
-    this.initializeUserActivity()
+    await this.initializeUserActivity()
     
     console.log('✅ Bootstrap 5.3.8 components initialized via Vite bundling')
   }
@@ -623,9 +642,11 @@ class NotikaApp {
     console.log('✅ Chat widget initialized with interactive functionality')
   }
 
-  initializeWorldMap() {
+  async initializeWorldMap() {
     const worldMap = document.getElementById('world-map')
     if (!worldMap) return
+
+    const L = await loadLeaflet()
 
     // Clear any existing content
     worldMap.innerHTML = ''
@@ -809,7 +830,9 @@ class NotikaApp {
     console.log('✅ Real Leaflet world map initialized with', visitorData.length, 'visitor locations')
   }
 
-  initializeServerStats() {
+  async initializeServerStats() {
+    if (!document.querySelector('.stats-cpu-line, .stats-memory-bar, .stats-bandwidth-area')) return
+    const Chart = await loadChart()
     // Initialize server performance charts
     const serverStatsData = {
       'stats-cpu-line': { type: 'line', data: [65, 70, 68, 78, 75, 82, 78, 80], color: '#ff6b6b' },
@@ -855,9 +878,11 @@ class NotikaApp {
     console.log('✅ Server performance charts initialized')
   }
 
-  initializeUserActivity() {
+  async initializeUserActivity() {
     const userActivityChart = document.getElementById('user-activity-chart')
     if (!userActivityChart) return
+
+    const Chart = await loadChart()
 
     const canvas = document.createElement('canvas')
     canvas.style.width = '100%'
@@ -983,8 +1008,11 @@ class NotikaApp {
     console.log('✅ User activity timeline chart initialized (7-day trend)')
   }
   
-  initializeAnimations() {
-    // Initialize AOS (bundled by Vite)
+  async initializeAnimations() {
+    // AOS only matters if something on the page opts in.
+    if (!document.querySelector('[data-aos]')) return
+
+    const AOS = await loadAOS()
     AOS.init({
       duration: 800,
       easing: 'ease-in-out-cubic',

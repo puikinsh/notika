@@ -2,6 +2,7 @@
  * Tabs Page - Modern Vite Implementation
  */
 
+import * as bootstrap from 'bootstrap'
 import { NotikaApp } from '../main.js'
 
 class NotikaTabs extends NotikaApp {
@@ -96,7 +97,7 @@ class NotikaTabs extends NotikaApp {
 
             tabs.forEach((tab, index) => {
                 tab.addEventListener('keydown', (e) => {
-                    let newIndex = index
+                    let newIndex
 
                     switch(e.key) {
                         case 'ArrowLeft':

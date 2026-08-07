@@ -185,8 +185,8 @@ class DataTablePage extends NotikaApp {
         aValue = parseInt(aValue)
         bValue = parseInt(bValue)
       } else if (column === 'salary') {
-        aValue = parseInt(aValue.replace(/[\$,]/g, ''))
-        bValue = parseInt(bValue.replace(/[\$,]/g, ''))
+        aValue = parseInt(aValue.replace(/[$,]/g, ''))
+        bValue = parseInt(bValue.replace(/[$,]/g, ''))
       } else if (column === 'date') {
         aValue = new Date(aValue)
         bValue = new Date(bValue)

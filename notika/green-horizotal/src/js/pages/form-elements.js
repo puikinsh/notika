@@ -219,8 +219,8 @@ class FormElementsPage extends NotikaApp {
   }
 
   isValidPhone(phone) {
-    const phoneRegex = /^[\+]?[1-9][\d]{0,15}$/
-    return phoneRegex.test(phone.replace(/[\s\-\(\)]/g, ''))
+    const phoneRegex = /^\+?[1-9]\d{0,15}$/
+    return phoneRegex.test(phone.replace(/[\s\-()]/g, ''))
   }
 }
 
