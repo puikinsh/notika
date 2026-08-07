@@ -1,8 +1,22 @@
 import { defineConfig } from 'vite'
 import { resolve } from 'path'
+import { glob } from 'glob'
 import autoprefixer from 'autoprefixer'
 import cssnano from 'cssnano'
 import handlebars from 'vite-plugin-handlebars'
+
+// import.meta.dirname, not process.cwd(): Vite 8 resolves configs natively and
+// process.cwd() depends on where npm happens to be invoked from.
+const rootDir = import.meta.dirname
+const pagesDir = resolve(rootDir, 'notika/green-horizotal')
+
+// Every page in the template, discovered at build time. Adding an .html file
+// no longer means remembering to register it here.
+const pageInputs = Object.fromEntries(
+  glob
+    .sync('*.html', { cwd: pagesDir })
+    .map((file) => [file.replace(/\.html$/, ''), resolve(pagesDir, file)])
+)
 
 export default defineConfig({
   // Root directory where index.html is located
@@ -11,7 +25,7 @@ export default defineConfig({
   // Plugins
   plugins: [
     handlebars({
-      partialDirectory: resolve(process.cwd(), 'notika/green-horizotal/src/partials'),
+      partialDirectory: resolve(pagesDir, 'src/partials'),
       context: (pagePath) => {
         // Extract page name from path
         const pageName = pagePath.split('/').pop()?.replace('.html', '') || ''
@@ -51,60 +65,23 @@ export default defineConfig({
     outDir: '../../dist',
     emptyOutDir: true,
     rollupOptions: {
-      input: {
-        main: resolve(process.cwd(), 'notika/green-horizotal/index.html'),
-        analytics: resolve(process.cwd(), 'notika/green-horizotal/analytics.html'),
-        'index-2': resolve(process.cwd(), 'notika/green-horizotal/index-2.html'),
-        'index-3': resolve(process.cwd(), 'notika/green-horizotal/index-3.html'),
-        'index-4': resolve(process.cwd(), 'notika/green-horizotal/index-4.html'),
-        'bar-charts': resolve(process.cwd(), 'notika/green-horizotal/bar-charts.html'),
-        'line-charts': resolve(process.cwd(), 'notika/green-horizotal/line-charts.html'),
-        'area-charts': resolve(process.cwd(), 'notika/green-horizotal/area-charts.html'),
-        'form-elements': resolve(process.cwd(), 'notika/green-horizotal/form-elements.html'),
-        'form-components': resolve(process.cwd(), 'notika/green-horizotal/form-components.html'),
-        'form-examples': resolve(process.cwd(), 'notika/green-horizotal/form-examples.html'),
-        widgets: resolve(process.cwd(), 'notika/green-horizotal/widgets.html'),
-        buttons: resolve(process.cwd(), 'notika/green-horizotal/buttons.html'),
-        typography: resolve(process.cwd(), 'notika/green-horizotal/typography.html'),
-        color: resolve(process.cwd(), 'notika/green-horizotal/color.html'),
-        modals: resolve(process.cwd(), 'notika/green-horizotal/modals.html'),
-        notification: resolve(process.cwd(), 'notika/green-horizotal/notification.html'),
-        'data-table': resolve(process.cwd(), 'notika/green-horizotal/data-table.html'),
-        tabs: resolve(process.cwd(), 'notika/green-horizotal/tabs.html'),
-        'tabs-hbs': resolve(process.cwd(), 'notika/green-horizotal/tabs-hbs.html'),
-        animations: resolve(process.cwd(), 'notika/green-horizotal/animations.html'),
-        'google-map': resolve(process.cwd(), 'notika/green-horizotal/google-map.html'),
-        'data-map': resolve(process.cwd(), 'notika/green-horizotal/data-map.html'),
-        'code-editor': resolve(process.cwd(), 'notika/green-horizotal/code-editor.html'),
-        'image-cropper': resolve(process.cwd(), 'notika/green-horizotal/image-cropper.html'),
-        wizard: resolve(process.cwd(), 'notika/green-horizotal/wizard.html'),
-        'flot-charts': resolve(process.cwd(), 'notika/green-horizotal/flot-charts.html'),
-        accordion: resolve(process.cwd(), 'notika/green-horizotal/accordion.html'),
-        alert: resolve(process.cwd(), 'notika/green-horizotal/alert.html'),
-        'compose-email': resolve(process.cwd(), 'notika/green-horizotal/compose-email.html'),
-        contact: resolve(process.cwd(), 'notika/green-horizotal/contact.html'),
-        dialog: resolve(process.cwd(), 'notika/green-horizotal/dialog.html'),
-        dropdown: resolve(process.cwd(), 'notika/green-horizotal/dropdown.html'),
-        inbox: resolve(process.cwd(), 'notika/green-horizotal/inbox.html'),
-        invoice: resolve(process.cwd(), 'notika/green-horizotal/invoice.html'),
-        'login-register': resolve(process.cwd(), 'notika/green-horizotal/login-register.html'),
-        'normal-table': resolve(process.cwd(), 'notika/green-horizotal/normal-table.html'),
-        popovers: resolve(process.cwd(), 'notika/green-horizotal/popovers.html'),
-        tooltips: resolve(process.cwd(), 'notika/green-horizotal/tooltips.html'),
-        'view-email': resolve(process.cwd(), 'notika/green-horizotal/view-email.html'),
-        '404': resolve(process.cwd(), 'notika/green-horizotal/404.html')
-      },
+      input: pageInputs,
       output: {
-        manualChunks: {
-          vendor: ['bootstrap'],
-          charts: ['chart.js'],
-          ui: ['swiper', 'aos']
+        // Vite 8 builds with Rolldown, which only accepts a function here.
+        manualChunks(id) {
+          if (!id.includes('node_modules')) return
+          if (id.includes('bootstrap')) return 'vendor'
+          if (id.includes('chart.js')) return 'charts'
+          if (id.includes('swiper') || id.includes('aos')) return 'ui'
         }
       }
     },
     target: 'es2022',
-    minify: 'esbuild',
-    sourcemap: true,
+    // Vite 8 minifies with Oxc; it no longer bundles esbuild for this.
+    minify: 'oxc',
+    // Source maps are dev-only: shipping them exposed the original sources
+    // and added roughly 2 MB to dist/.
+    sourcemap: false,
     reportCompressedSize: true
   },
   
