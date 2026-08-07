@@ -239,3 +239,19 @@
 .toast-container {
   z-index: var(--notika-z-toast);
 }
+// Inbox rows are <div>, not <a>: an anchor cannot legally contain the row's
+// checkbox and star controls. The subject is the real focusable link, and
+// main.js makes the rest of the row clickable as a convenience.
+.inbox-email-item {
+  cursor: pointer;
+
+  .email-subject {
+    color: inherit;
+    text-decoration: none;
+
+    &:hover,
+    &:focus-visible {
+      text-decoration: underline;
+    }
+  }
+}

@@ -462,8 +462,8 @@ class FormExamplesPage extends NotikaApp {
       const indicator = document.createElement('div')
       indicator.className = 'password-strength mt-1'
 
-      let strengthText = ''
-      let strengthClass = ''
+      let strengthText
+      let strengthClass
 
       if (strength <= 2) {
         strengthText = 'Weak'
