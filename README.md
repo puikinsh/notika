@@ -1,6 +1,6 @@
 # Notika - Free Bootstrap Admin Dashboard Template
 
-**Notika** is a green-themed, fully responsive Bootstrap 5 Admin Dashboard Template. Originally built with Bootstrap 3 and jQuery by [Colorlib](https://colorlib.com), it has been completely modernized to **Bootstrap 5.3.8** with **Vite 7.3** and **zero jQuery** — all interactivity is ES6 module JavaScript with tree-shaken Font Awesome icons.
+**Notika** is a green-themed, fully responsive Bootstrap 5 Admin Dashboard Template. Originally built with Bootstrap 3 and jQuery by [Colorlib](https://colorlib.com), it has been completely modernized to **Bootstrap 5.3.8** with **Vite 8.2** and **zero jQuery** — all interactivity is ES6 module JavaScript with tree-shaken Font Awesome icons.
 
 Notika includes 41 ready-to-use pages covering dashboards, analytics, charts, forms, tables, email, UI components, and authentication screens. Uses a modern Vite build system with HMR, SCSS compilation, and optimized production bundles.
 
@@ -103,7 +103,9 @@ Level up your next project with a premium dashboard. The templates below from [D
 
 ### Core Features
 
-- **Vite 7.3 Build System**: HMR dev server, optimized production builds, code splitting
+- **Vite 8.2 Build System**: HMR dev server, optimized production builds, code splitting
+- **Self-hosted fonts**: no third-party CDN requests at all
+- **On-demand libraries**: Chart.js, Leaflet and AOS load only on pages that use them
 - **Bootstrap 5.3.8**: Latest CSS framework with JS bundle (includes Popper)
 - **Zero jQuery**: All JavaScript is ES6 modules with class-based architecture
 - **Tree-Shaken Icons**: Font Awesome 7.2 with only imported icons bundled
@@ -123,7 +125,6 @@ Level up your next project with a premium dashboard. The templates below from [D
 
 - **Font Awesome 7.2**: Tree-shaken SVG icon system (solid + brand icons)
 - **AOS**: Scroll-triggered entrance animations
-- **Swiper 12**: Touch-enabled carousel slider
 - **Bootstrap 5 Components**: Accordions, tabs, modals, dropdowns, popovers, tooltips, alerts
 
 ### Forms & Input
@@ -182,7 +183,6 @@ All libraries are bundled via Vite from npm packages — no CDN links, no local 
 | Bootstrap | 5.3.8 | CSS framework + JS bundle (includes Popper) |
 | Chart.js | 4.5.1 | Dashboard and page charts |
 | Font Awesome | 7.2.0 | Tree-shaken SVG icon system |
-| Swiper | 12.1.0 | Carousel slider |
 | Leaflet | 1.9.4 | Interactive maps |
 | AOS | 2.3.4 | Scroll animations |
 | Day.js | 1.11.19 | Date formatting and manipulation |
@@ -228,7 +228,8 @@ notika/
 - **Class Inheritance** — `NotikaApp` base class handles shared init; page modules extend it with `class MyPage extends NotikaApp`
 - **Handlebars Partials** — header, navbar, footer, and breadcrumb are shared `.hbs` templates with dynamic context (page title, nav active state, year)
 - **Font Awesome Tree-Shaking** — icons explicitly imported and added to `library.add()`, only used icons bundled
-- **Manual Chunks** — Vite splits vendor (Bootstrap), charts (Chart.js), and UI (Swiper, AOS) into separate cacheable chunks
+- **Manual Chunks** — Vite splits vendor (Bootstrap) and charts (Chart.js) into separate cacheable chunks
+- **On-Demand Loading** — Chart.js, Leaflet and AOS are fetched only when a page needs them, keeping the shared payload at ~45 kB gzipped
 - **CSS Architecture** — Bootstrap loaded via Vite, template CSS imported in order, modern SCSS compiled with `api: 'modern-compiler'`
 - **Horizontal Navigation** — desktop dropdown navbar (>=992px) with Bootstrap 5 offcanvas mobile menu (<992px)
 - **Green Theme** — primary `#00c292`, card shadows `0 2px 8px rgba(0,0,0,0.1)`, CSS custom properties for spacing
