@@ -1,6 +1,6 @@
 # Notika - Free Bootstrap Admin Dashboard Template
 
-**Notika** is a green-themed, fully responsive Bootstrap 5 Admin Dashboard Template. Originally built with Bootstrap 3 and jQuery by [Colorlib](https://colorlib.com), it has been completely modernized to **Bootstrap 5.3.8** with **Vite 8.2** and **zero jQuery** — all interactivity is ES6 module JavaScript with tree-shaken Font Awesome icons.
+**Notika** is a green-themed, fully responsive Bootstrap 5 Admin Dashboard Template. Originally built with Bootstrap 3 and jQuery by [Colorlib](https://colorlib.com), it has been completely modernized to **Bootstrap 5.3.9** with **Vite 8.2** and **zero jQuery** — all interactivity is ES6 module JavaScript with tree-shaken Font Awesome icons.
 
 Notika includes 41 ready-to-use pages covering dashboards, analytics, charts, forms, tables, email, UI components, and authentication screens. Uses a modern Vite build system with HMR, SCSS compilation, and optimized production bundles.
 
@@ -106,7 +106,7 @@ Level up your next project with a premium dashboard. The templates below from [D
 - **Vite 8.2 Build System**: HMR dev server, optimized production builds, code splitting
 - **Self-hosted fonts**: no third-party CDN requests at all
 - **On-demand libraries**: Chart.js, Leaflet and AOS load only on pages that use them
-- **Bootstrap 5.3.8**: Latest CSS framework with JS bundle (includes Popper)
+- **Bootstrap 5.3.9**: Latest CSS framework with JS bundle (includes Popper)
 - **Zero jQuery**: All JavaScript is ES6 modules with class-based architecture
 - **Tree-Shaken Icons**: Font Awesome 7.2 with only imported icons bundled
 - **SCSS Support**: Modern Sass compilation with PostCSS autoprefixer and cssnano
@@ -180,7 +180,7 @@ All libraries are bundled via Vite from npm packages — no CDN links, no local 
 | Library | Version | Purpose |
 | --- | --- | --- |
 | Vite | 7.3.1 | Build system with HMR, code splitting, SCSS |
-| Bootstrap | 5.3.8 | CSS framework + JS bundle (includes Popper) |
+| Bootstrap | 5.3.9 | CSS framework + JS bundle (includes Popper) |
 | Chart.js | 4.5.1 | Dashboard and page charts |
 | Font Awesome | 7.2.0 | Tree-shaken SVG icon system |
 | Leaflet | 1.9.4 | Interactive maps |

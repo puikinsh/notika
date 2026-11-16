@@ -1,5 +1,5 @@
 /**
- * Image Cropper Page → Cropper.js v2.1.0
+ * Image Cropper Page → Cropper.js v2.3
  * Uses web components API: cropper-canvas, cropper-image, cropper-selection, cropper-viewer
  */
 

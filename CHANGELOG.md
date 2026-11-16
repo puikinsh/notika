@@ -2,6 +2,25 @@
 
 All notable changes to the Notika admin dashboard template.
 
+## [3.0.1] - 2026-11-16
+
+A dependency refresh and maintenance release. Bootstrap moves to 5.3.9 and every
+other package to its latest release.
+
+### Changed
+
+- Bootstrap 5.3.8 to 5.3.9; Vite 8.3, cssnano 9, glob 14, Chart.js 4.6,
+  Cropper.js 2.3, Sass, ESLint, Prettier and html-validate updated.
+- `npm audit` reports 0 vulnerabilities (fast-uri and handlebars advisories fixed).
+
+### Fixed
+
+- Leaflet marker icons returned 404 on the Google Map page.
+- The documentation page's Bootstrap stylesheet SRI hash did not match the file,
+  so browsers blocked it. CDN pins (Bootstrap 5.3.9, bootstrap-icons 1.13.2,
+  highlight.js 11.12.0) are bumped with recomputed hashes.
+- Tab list items use `role="none"` to satisfy html-validate 11.21.
+
 ## [3.0.0] - 2026-08-07
 
 A security, performance and accessibility release. All 32 open Dependabot alerts

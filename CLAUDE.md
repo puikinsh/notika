@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-**Notika** is a modernized admin dashboard template. Originally a Bootstrap 3 template from Colorlib, now running Vite 8.2.1 + Bootstrap 5.3.8 + ES6 modules. No jQuery.
+**Notika** is a modernized admin dashboard template. Originally a Bootstrap 3 template from Colorlib, now running Vite 8.3.8 + Bootstrap 5.3.9 + ES6 modules. No jQuery.
 
 ## Commands
 
@@ -157,7 +157,7 @@ Both `free-solid-svg-icons` and `free-brands-svg-icons` packages are available.
 
 ## Stack
 
-- **Vite** 7.3.1, **Bootstrap** 5.3.8, **Chart.js** 4.5.1, **Font Awesome** 7.2.0
+- **Vite** 8.3.8, **Bootstrap** 5.3.9, **Chart.js** 4.6.1, **Font Awesome** 7.2.0
 - **Leaflet** 1.9.4, **AOS** 2.3.4, **Day.js** 1.11.21
 
 ### On-demand libraries

@@ -25,7 +25,7 @@ class AnalyticsPage extends NotikaApp {
     // Add search engine icon styling
     this.addSearchEngineStyles()
     
-    console.log('✅ Analytics page initialized with Vite 7.1.5')
+    console.log('✅ Analytics page initialized with Vite 8')
   }
   
   addSearchEngineStyles() {

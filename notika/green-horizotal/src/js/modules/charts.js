@@ -1,6 +1,6 @@
 /**
  * Modern Charts Module
- * Using Chart.js 4.5.0 with ES6 modules
+ * Using Chart.js 4.6 with ES6 modules
  */
 
 import { Chart } from 'chart.js'
