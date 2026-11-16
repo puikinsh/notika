@@ -1,6 +1,6 @@
 {
   "name": "notika-admin-template",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "Modern Notika Admin Template with Vite 8 build system",
   "type": "module",
   "scripts": {
