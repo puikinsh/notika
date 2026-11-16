@@ -4,6 +4,17 @@
 
 import { NotikaApp } from '../main.js'
 import L from 'leaflet'
+import markerIcon from 'leaflet/dist/images/marker-icon.png'
+import markerIcon2x from 'leaflet/dist/images/marker-icon-2x.png'
+import markerShadow from 'leaflet/dist/images/marker-shadow.png'
+
+// Leaflet resolves its default marker images relative to the page, which breaks
+// once bundled; point it at the hashed assets Vite emits.
+L.Icon.Default.mergeOptions({
+  iconUrl: markerIcon,
+  iconRetinaUrl: markerIcon2x,
+  shadowUrl: markerShadow
+})
 
 class GoogleMapPage extends NotikaApp {
   constructor() {
