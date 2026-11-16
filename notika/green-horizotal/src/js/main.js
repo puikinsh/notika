@@ -1,5 +1,5 @@
 /**
- * Modern Notika Template - Vite 7.1.5 Entry Point
+ * Modern Notika Template - Vite 8 Entry Point
  * PROPER ES6 modules with bundling - NO MORE LINE BY LINE INCLUDES!
  */
 
@@ -181,24 +181,24 @@ import { loadChart, loadLeaflet, loadAOS } from './modules/lazy.js'
 window.bootstrap = bootstrap
 
 /**
- * Modern Notika Application Class - Pure Vite 7.1.5 Architecture
+ * Modern Notika Application Class - Pure Vite 8 Architecture
  */
 class NotikaApp {
   constructor() {
     this.isViteBundled = true
     this.version = '2.0.0'
-    this.buildTool = 'Vite 7.1.5'
+    this.buildTool = 'Vite 8'
     
-    console.log('🚀 Initializing Notika with Vite 7.1.5 bundling...')
+    console.log('🚀 Initializing Notika with Vite 8 bundling...')
     this.init()
   }
   
   async init() {
     try {
       // Show we're using PROPER Vite bundling
-      console.log('✅ All dependencies bundled by Vite 7.1.5')
-      console.log('✅ Bootstrap 5.3.8 imported as module')
-      console.log('✅ Chart.js 4.5.0 imported as module')
+      console.log('✅ All dependencies bundled by Vite 8')
+      console.log('✅ Bootstrap 5.3.9 imported as module')
+      console.log('✅ Chart.js 4.6 imported as module')
       console.log('✅ All CSS processed by Vite')
 
       // Initialize modern libraries properly
@@ -212,7 +212,7 @@ class NotikaApp {
       // Update bundle status in demo
       const bundleStatus = document.getElementById('bundle-status')
       if (bundleStatus) {
-        bundleStatus.textContent = '✅ Properly bundled by Vite 7.1.5'
+        bundleStatus.textContent = '✅ Properly bundled by Vite 8'
         bundleStatus.style.color = '#00c292'
       }
 
@@ -422,7 +422,7 @@ class NotikaApp {
   }
 
   async initializeUI() {
-    // Initialize Bootstrap 5.3.8 components (Vite bundled)
+    // Initialize Bootstrap 5.3.9 components (Vite bundled)
     const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
     tooltipTriggerList.forEach(tooltipTriggerEl => {
       new bootstrap.Tooltip(tooltipTriggerEl)
@@ -451,7 +451,7 @@ class NotikaApp {
     // Initialize User Activity Chart
     await this.initializeUserActivity()
     
-    console.log('✅ Bootstrap 5.3.8 components initialized via Vite bundling')
+    console.log('✅ Bootstrap 5.3.9 components initialized via Vite bundling')
   }
 
   initializeTodo() {
@@ -1208,7 +1208,7 @@ if (!document.documentElement.hasAttribute('data-page-module')) {
 }
 
 // Log that we're properly using Vite bundling
-console.log('🔥 VITE 7.1.5 BUNDLING ACTIVE - All modules imported properly!')
+console.log('🔥 VITE 8 BUNDLING ACTIVE - All modules imported properly!')
 
 // Export for module use
 export { NotikaApp }
